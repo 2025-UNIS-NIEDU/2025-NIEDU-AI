@@ -13,12 +13,13 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 
 ### 🛠 Tech Stack  
 - **Language** · Python 3.11  
-- **Framework** · FastAPI · LangChain · LangGraph  
+- **Framework** · LangChain · LangGraph  
 - **Database** · ChromaDB (Topic-based RAG)  
 - **Clustering / Embedding** · KMeans · OpenAI *text-embedding-3-small*  
 - **LLM** · OpenAI GPT-4o  
-- **Infra / Tools** · Poetry · Docker  
+- **Infra** · Poetry  
 - **External APIs** · DeepSearch News API · Google CSE API  
+- **Backend Communication** · FastAPI (server-side)
 
 ---
 
@@ -32,7 +33,7 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 ---
 
 #### 🧠 N 단계 (Background Stage)
-- Google CSE API로 시의성 높은 데이터를 검색해 **배경지식 자동 구성**
+- Google Custom Search API 로 시의성 높은 데이터를 검색해 **배경지식 자동 구성**
 - LLM이 관련 개념·이슈를 구조적으로 정리하여 **이슈명·원인·결과·영향** 형태로 출력
 
 ---
