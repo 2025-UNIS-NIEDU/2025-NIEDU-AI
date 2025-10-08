@@ -11,14 +11,14 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 
 ---
 
-## 🛠 Tech Stack  
-Language: Python 3.11  
-Framework: FastAPI, LangChain, LangGraph  
-Database: ChromaDB (Topic-based RAG)  
-Clustering / Embedding: KMeans, OpenAI text-embedding-3-small  
-LLM: OpenAI GPT-4o  
-Infra / Tools: Poetry, Docker  
-External APIs: DeepSearch News API, Google CSE API  
+### 🛠 Tech Stack  
+- **Language** · Python 3.11  
+- **Framework** · FastAPI · LangChain · LangGraph  
+- **Database** · ChromaDB (Topic-based RAG)  
+- **Clustering / Embedding** · KMeans · OpenAI *text-embedding-3-small*  
+- **LLM** · OpenAI GPT-4o  
+- **Infra / Tools** · Poetry · Docker  
+- **External APIs** · DeepSearch News API · Google CSE API  
 
 ---
 
@@ -26,7 +26,7 @@ External APIs: DeepSearch News API, Google CSE API
 
 #### 🧩 코스 생성 및 번들링
 - 뉴스 본문을 **RAG 임베딩** 후 KMeans 알고리즘으로 **주제별 클러스터링**
-- 각 클러스터를 LLM이 분석해 **대표 코스명 및 키워드(소주제)**를 생성
+- 각 클러스터를 LLM이 분석해 **대표 코스명 생성 및 키워드(소주제) 분류 수행**
 - 코스 단위 데이터는 퀴즈 파이프라인으로 전달되어 후속 학습에 사용
 
 ---
