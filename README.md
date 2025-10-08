@@ -7,14 +7,13 @@
 본 레포지토리는 뉴스 데이터를 기반으로 시사 학습을 자동화하는  
 **End-to-End AI 학습 백엔드 파이프라인**을 구현합니다.  
 
-뉴스 수집 → 벡터 임베딩 → RAG 기반 구조화 → KMeans 클러스터링 →  
-LLM 기반 코스명·키워드 생성 → 단계별 퀴즈 생성까지의 전 과정을 자동화하였습니다.  
+뉴스 수집 → 벡터 임베딩 → RAG 기반 구조화 → KMeans 클러스터링 →  LLM 기반 코스명·키워드 생성 → 단계별 퀴즈 생성까지의 전 과정을 자동화하였습니다.  
 
 ---
 
 ### 🛠 Tech Stack  
 Language: Python 3.11  
-Framework: FastAPI, LangGraph, LangChain  
+Framework: FastAPI, LangChain, LangGraph  
 Database: ChromaDB (Topic-based RAG)  
 Clustering / Embedding: KMeans, OpenAI text-embedding-3-small  
 LLM: OpenAI GPT-4o  
