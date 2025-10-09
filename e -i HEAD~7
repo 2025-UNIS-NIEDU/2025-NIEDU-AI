@@ -1,0 +1,20 @@
+[33m49bab9a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update README.md
+[33m94af99b[m docs : Update README.md
+[33m9c98b60[m docs: Update README.md
+[33m8478ec0[m docs : Update README.md
+[33m60b19b8[m docs: Update README.md
+[33ma51283c[m docs: Update README.md
+[33mc63f3e9[m docs: update README.md
+[33m383bf95[m chore: remove unnecessary src/__init__.py
+[33m7bd2884[m chore: remove configs folder (merged settings.py into root)
+[33m680b475[m chore: remove local test run_pipeline.py
+[33m167685a[m chore: remove duplicate api.py and config.py
+[33mb7c9b8e[m docs: remove architecture.md
+[33m210113b[m docs: add README structure overview
+[33m317ed57[m Remove notebooks folder from repository
+[33m2b0f55a[m Add notebooks folder with Jupyter notebooks
+[33mc10a74f[m Restructure src into home/ and content/ modules
+[33m9471853[m Include poetry.lock in version control
+[33m5156ec3[m Add project structure with src, exclude data & notebooks
+[33m284c440[m update README
+[33m68408d9[m Initial commit
