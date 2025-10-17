@@ -113,7 +113,7 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
         ]
         joined_summary = "\n".join(summaries)
 
-        # === 1️⃣ Course Description 생성 ===
+        # === 1️. Course Description 생성 ===
         prompt_course = f"""
 출력은 반드시 JSON 형식으로 작성하세요.
 
@@ -157,7 +157,7 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
                 "courseDescription": "자동 생성 실패 → 기본 설명"
             }
 
-        # === 2️⃣ SubTopic 생성 (사전 정의된 후보만 선택) ===
+        # === 2️. SubTopic 생성 (사전 정의된 후보만 선택) ===
         defined_subtopics = TOPIC_SUBTOPICS[topic].split(" OR ")
         session_texts = "\n".join([n.get("content", "")[:200] for n in cluster_news])
 
@@ -193,7 +193,7 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
             print(f"[{topic} 클러스터 {cluster_id}] subTopic 실패: {e}")
             meta_sub = {"subTopic": [topic]}
 
-        # === 3️⃣ Keyword 생성 (코스명에 실제 포함된 단어만) ===
+        # === 3️. Keyword 생성 (코스명에 실제 포함된 단어만) ===
         prompt_kw = f"""
 출력은 반드시 JSON 형식으로 작성하세요.
 
@@ -224,7 +224,7 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
             print(f"[{topic} 클러스터 {cluster_id}] keyword 실패: {e}")
             meta_kw = {"keywords": []}
 
-        # === 4️⃣ 최종 course 데이터 구성 (정렬 고정)
+        # === 4️. 최종 course 데이터 구성 (정렬 고정)
         course_data = OrderedDict([
             ("courseId", cluster_id + 1),
             ("courseName", meta_course.get("courseName", f"{topic} {cluster_id+1}")),
@@ -235,14 +235,14 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
         ])
         output.append(course_data)
 
-    # === 5️⃣ output 정렬: courseId 기준
+    # === 5️. output 정렬: courseId 기준
     output_sorted = sorted(output, key=lambda x: x["courseId"])
 
-    # === 6️⃣ JSON 저장 (순서 유지)
+    # === 6️. JSON 저장 (순서 유지)
     output_file = COURSE_DIR / f"{topic}_{today}.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output_sorted, f, ensure_ascii=False, indent=2, sort_keys=False)
 
-    print(f"✅ {topic} → 코스 데이터 저장 완료: {output_file.resolve()}")
+    print(f"{topic} → 코스 데이터 저장 완료: {output_file.resolve()}")
 
-print("\n🎯 모든 토픽 코스 파일 생성 완료.")
+print("\n 모든 토픽 코스 파일 생성 완료.")

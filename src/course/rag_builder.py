@@ -32,13 +32,13 @@ def sort_session_keys(session: dict) -> dict:
         return session
 
     ordered = []
-    # 1️⃣ sessionId, topic 먼저 배치
+    # 1️. sessionId, topic 먼저 배치
     if "sessionId" in session:
         ordered.append(("sessionId", session["sessionId"]))
     if "topic" in session:
         ordered.append(("topic", session["topic"]))
 
-    # 2️⃣ 나머지 키 알파벳 순 정렬
+    # 2️. 나머지 키 알파벳 순 정렬
     remaining = sorted(
         [(k, v) for k, v in session.items() if k not in ("sessionId", "topic")],
         key=lambda x: x[0].lower()
@@ -77,7 +77,7 @@ for json_file in json_files:
 
     for i, item in enumerate(articles):
         try:
-            # ✅ 정렬 적용
+            # 정렬 적용
             ordered_item = sort_session_keys(item)
 
             # NoneType, list, dict 방지

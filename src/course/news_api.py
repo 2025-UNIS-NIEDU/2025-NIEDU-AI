@@ -54,13 +54,13 @@ def sort_session_keys(session: dict) -> dict:
         return session
 
     ordered = []
-    # 1️⃣ sessionId, topic 먼저
+    # 1️. sessionId, topic 먼저
     if "sessionId" in session:
         ordered.append(("sessionId", session["sessionId"]))
     if "topic" in session:
         ordered.append(("topic", session["topic"]))
 
-    # 2️⃣ 나머지 키 알파벳 순 정렬
+    # 2️. 나머지 키 알파벳 순 정렬
     remaining = sorted(
         [(k, v) for k, v in session.items() if k not in ("sessionId", "topic")],
         key=lambda x: x[0].lower()
@@ -98,15 +98,15 @@ def collect_articles_with_filter(topic: str, subTopic: str,
         for a in articles:
             content = (a.get("summary") or "").strip()
 
-            # 1️⃣ 내용이 너무 짧은 경우 제외
+            # 1️. 내용이 너무 짧은 경우 제외
             if len(content) < min_length:
                 continue
 
-            # 2️⃣ '...' 또는 '…'으로 끝나는 경우 제외 (요약 잘림)
+            # 2️. '...' 또는 '…'으로 끝나는 경우 제외 (요약 잘림)
             if content.endswith("...") or content.endswith("…"):
                 continue
 
-            # 3️⃣ 영어 위주 기사 제외 (한글 비율 30% 미만)
+            # 3️. 영어 위주 기사 제외 (한글 비율 30% 미만)
             if not is_mostly_korean(content):
                 continue
 
@@ -122,18 +122,18 @@ def collect_articles_with_filter(topic: str, subTopic: str,
                 "thumbnailImage": a.get("thumbnail_url")
             }
 
-            # ✅ 정렬 적용 (sessionId, topic → 나머지 ABC 순)
+            # 정렬 적용 (sessionId, topic → 나머지 ABC 순)
             session = sort_session_keys(session)
             collected.append(session)
 
-            # ✅ 목표 개수 도달 시 조기 종료
+            # 목표 개수 도달 시 조기 종료
             if len(collected) >= target_samples:
                 break
 
         page += 1
         time.sleep(1)
 
-    print(f"  ✅ {topic}: 총 {len(collected)}건 수집 완료 (필터링 후)")
+    print(f"  {topic}: 총 {len(collected)}건 수집 완료 (필터링 후)")
     return collected
 
 # === 토픽별 subTopic 정의 ===
