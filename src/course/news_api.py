@@ -47,22 +47,22 @@ def deepsearch_query(endpoint: str, subTopic: str, date_from: str, date_to: str,
     resp.raise_for_status()
     return resp.json()
 
-# === sessionId, topic 고정 + 나머지 알파벳 순 ===
+# === deepsearchId, topic 고정 + 나머지 알파벳 순 ===
 def sort_session_keys(session: dict) -> dict:
-    """sessionId → topic 고정, 나머지는 알파벳 순으로 정렬"""
+    """deepsearchId → topic 고정, 나머지는 알파벳 순으로 정렬"""
     if not isinstance(session, dict):
         return session
 
     ordered = []
-    # 1️. sessionId, topic 먼저
-    if "sessionId" in session:
-        ordered.append(("sessionId", session["sessionId"]))
+    # 1️. deepsearchId, topic 먼저
+    if "deepsearchId" in session:
+        ordered.append(("deepsearchId", session["deepsearchId"]))
     if "topic" in session:
         ordered.append(("topic", session["topic"]))
 
     # 2️. 나머지 키 알파벳 순 정렬
     remaining = sorted(
-        [(k, v) for k, v in session.items() if k not in ("sessionId", "topic")],
+        [(k, v) for k, v in session.items() if k not in ("deepsearchId", "topic")],
         key=lambda x: x[0].lower()
     )
 
@@ -72,7 +72,7 @@ def sort_session_keys(session: dict) -> dict:
 def collect_articles_with_filter(topic: str, subTopic: str,
                                  date_from: str, date_to: str,
                                  min_length: int = 300, target_samples: int = 100,
-                                 max_pages: int = 5):
+                                 max_pages: int = 10):
     """
     토픽별 기사 수집 (길이 + 잘림 + 영어 제외)
     """
@@ -111,7 +111,7 @@ def collect_articles_with_filter(topic: str, subTopic: str,
                 continue
 
             session = {
-                "sessionId": a.get("id"),
+                "deepsearchId": a.get("id"),
                 "topic": a.get("sections")[0] if isinstance(a.get("sections"), list) else a.get("sections"),
                 "author": a.get("author"),
                 "content": content,
@@ -122,7 +122,7 @@ def collect_articles_with_filter(topic: str, subTopic: str,
                 "thumbnailImage": a.get("thumbnail_url")
             }
 
-            # 정렬 적용 (sessionId, topic → 나머지 ABC 순)
+            # 정렬 적용 (deepsearchId, topic → 나머지 ABC 순)
             session = sort_session_keys(session)
             collected.append(session)
 
@@ -159,7 +159,7 @@ for topic, subTopic in TOPIC_SUBTOPICS.items():
             date_to,
             min_length=300,
             target_samples=100,
-            max_pages=5
+            max_pages=10
         )
 
         backup_file = BACKUP_DIR / f"{topic}_{today}.json"

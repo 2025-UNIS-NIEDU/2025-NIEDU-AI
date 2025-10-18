@@ -9,6 +9,7 @@ from sklearn.cluster import KMeans
 from openai import OpenAI
 from datetime import datetime
 from collections import OrderedDict
+from collections import Counter
 
 # === 날짜 ===
 today = datetime.now().strftime("%Y-%m-%d")
@@ -26,20 +27,26 @@ client = OpenAI(api_key=api_key)
 
 # === session 정렬 기준 함수 (RAG 동일)
 def sort_session_keys(session: dict) -> dict:
-    """sessionId → topic → 나머지 알파벳순 정렬"""
+    """sessionId(있을 경우) → deepsearchId → topic → 나머지 알파벳순 정렬"""
     if not isinstance(session, dict):
         return session
 
     ordered = []
+
+    # 1️⃣ 주요 키 순서대로 추가 (존재할 경우만)
     if "sessionId" in session:
         ordered.append(("sessionId", session["sessionId"]))
+    if "deepsearchId" in session:
+        ordered.append(("deepsearchId", session["deepsearchId"]))
     if "topic" in session:
         ordered.append(("topic", session["topic"]))
 
+    # 2️⃣ 나머지 키는 알파벳 순으로 정렬
     remaining = sorted(
-        [(k, v) for k, v in session.items() if k not in ("sessionId", "topic")],
+        [(k, v) for k, v in session.items() if k not in ("sessionId", "deepsearchId", "topic")],
         key=lambda x: x[0].lower()
     )
+
     return OrderedDict(ordered + remaining)
 
 # === 토픽 정의 ===
@@ -73,7 +80,7 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
     for doc, emb in zip(all_data["documents"], all_data["embeddings"]):
         try:
             parsed = json.loads(doc)
-            docs.append(sort_session_keys(parsed))  # ✅ RAG 정렬 재적용
+            docs.append(sort_session_keys(parsed))  # RAG 정렬 재적용
             embeddings.append(emb)
         except Exception:
             continue
@@ -85,27 +92,36 @@ for topic, subtopic_query in TOPIC_SUBTOPICS.items():
     X = np.array(embeddings)
     print(f"{topic} 뉴스 개수: {len(docs)}")
 
-    # === KMeans ===
-    # === KMeans: 코스 수 자동 조정 (코스당 세션 10~12개)
-    min_sessions_per_course = 10
-    max_sessions_per_course = 12
-    avg_target_sessions = (min_sessions_per_course + max_sessions_per_course) // 2
-
-    # 뉴스 개수에 따라 자동으로 n_clusters 결정
-    n_clusters = max(1, len(docs) // avg_target_sessions)
-    print(f"{topic} → 뉴스 {len(docs)}개 → {n_clusters}개 코스로 분할 예정")
-
+    # === 1. KMeans 기본 실행 ===
+    n_clusters = 10
     kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init="auto")
     labels = kmeans.fit_predict(X)
-    print(f"{topic} → {n_clusters}개 그룹으로 군집화 완료 (코스당 약 {len(docs)//n_clusters}개 세션 예상)")
 
+    # === 2. 클러스터 크기 분포 출력 ===
+    counts = Counter(labels)
+    print(f"[{topic}] 초기 클러스터 분포:", dict(counts))
+
+    # === 각 클러스터별 세션 수 출력
+    from collections import Counter
+    counts = Counter(labels)
+    print(f"\n[{topic}] 클러스터별 세션 수 분포:")
+    for cid, cnt in sorted(counts.items()):
+        print(f"  🟢 클러스터 {cid}: {cnt}개 세션")
+
+    # === 결과 리스트 초기화 ===
     output = []
 
+    # === 각 코스(cluster) 단위 처리 ===
     for cluster_id in range(n_clusters):
         cluster_news = [docs[i] for i, label in enumerate(labels) if label == cluster_id]
         if not cluster_news:
             continue
 
+        # 세션 ID 숫자 부여 (1부터 시작)
+        for idx, news in enumerate(cluster_news, start=1):
+            news["sessionId"] = idx
+            cluster_news[idx - 1] = sort_session_keys(news)
+            
         # === 세션 요약문 ===
         summaries = [
             f"- {news.get('headline', '')}: {news.get('content', '')[:150]}"
