@@ -25,22 +25,24 @@ embedding_fn = embedding_functions.OpenAIEmbeddingFunction(
     model_name="text-embedding-3-small"
 )
 
-# === deepsearchId, topic 고정 + 나머지는 알파벳 순 ===
+# === deepsearchId -> topic -> subTopic 고정 + 나머지는 알파벳 순 ===
 def sort_deepsearchId_keys(session: dict) -> dict:
     """deepsearchId → topic 고정, 나머지는 알파벳 순으로 정렬"""
     if not isinstance(session, dict):
         return session
 
     ordered = []
-    # 1️. deepsearchId, topic 먼저 배치
     if "deepsearchId" in session:
         ordered.append(("deepsearchId", session["deepsearchId"]))
     if "topic" in session:
         ordered.append(("topic", session["topic"]))
 
+    if "subTopic" in session:
+        ordered.append(("subTopic", session["subTopic"]))
+
     # 2️. 나머지 키 알파벳 순 정렬
     remaining = sorted(
-        [(k, v) for k, v in session.items() if k not in ("deepsearchId", "topic")],
+        [(k, v) for k, v in session.items() if k not in ("deepsearchId", "topic", "subTopic")],
         key=lambda x: x[0].lower()
     )
 
