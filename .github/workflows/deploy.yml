@@ -1,0 +1,64 @@
+name: Deploy FastAPI AI Server to EC2
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push Docker image to ECR
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.ECR_REPOSITORY }}:latest
+          cache-from: type=registry,ref=${{ secrets.ECR_REPOSITORY }}:buildcache
+          cache-to: type=registry,ref=${{ secrets.ECR_REPOSITORY }}:buildcache,mode=max
+
+      - name: SSH into EC2 and Deploy
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            echo "Logging in to ECR from EC2.."
+            aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
+            
+            echo "Generating .env file..."
+            cat <<EOF > .env
+            DATASOURCE_URL=${{ secrets.DATASOURCE_URL }}
+            DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }}
+            DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }}
+            EOF
+
+            echo "Stopping previous container..."
+            docker stop nie-ai || true && docker rm nie-ai || true
+
+            echo "Pulling latest image..."
+            docker pull ${{ secrets.ECR_REPOSITORY }}:latest
+
+            echo " Running new container..."
+            docker run -d \
+              --name nie-ai \
+              --env-file .env \
+              -p 8000:8000 \
+              ${{ secrets.ECR_REPOSITORY }}:latest
