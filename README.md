@@ -33,8 +33,10 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 ---
 
 ## 🧠 N 단계 (Background Stage)
-- Google Custom Search API 로 시의성 높은 데이터를 검색해 **배경지식 자동 구성**
-- LLM이 관련 개념·이슈를 구조적으로 정리하여 **이슈명·원인·결과·영향** 형태로 출력
+- 뉴스에 등장하는 **핵심 개념·전문용어**를 추출 및 정의
+- Google Custom Search API 기반으로 시의성 있는 **배경지식 카드** 자동 구성
+- LLM이 개념 간 관계를 정리하여 **“용어–이슈–결과–영향”** 형태로 출력
+→ 학습자의 **기본 이해도**에 맞춘 기초 정보 제공
 
 ---
 
@@ -45,8 +47,9 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 ---
 
 ## ✍️ E 단계 (Evaluation Stage)
-- 문장 완성·추론형 문제를 통한 **비정형 문해력 평가**
-- LLM이 **의미 일치도·문법 정확성 기준으로 채점 및 피드백 제공**
+- I단계 문제 중 일부를 변환하여 **비판적·확장적 사고형** 문제로 재구성
+- **문장 완성형·추론형** 등 고급 문해력 평가용 문제로 변환
+- LLM이 **의미 일치도·논리적 타당성** 기준으로 채점 및 피드백 생성
 
 ---
 
@@ -60,18 +63,30 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 
 ## 🧭 폴더 구조
 ```
-quiz/
-├── init.py
-├── background_n.py
-├── completion_e.py
-├── completion_feedback_e.py
-├── keyword_nie.py
-├── multi_ni.py
-├── ox_n.py
-├── reflection_ie.py
-├── select_session.py
-├── short_ie.py
-└── term_n.py
+src/
+├── course/                    # 코스(뉴스 묶음) 생성 및 관리 모듈
+│   ├── course_bundler.py      # 뉴스 세션을 코스로 묶는 핵심 로직
+│   ├── news_api.py            # DeepSearch 뉴스 API 호출 및 파싱
+│   ├── rag_builder.py         # 뉴스 RAG(Vector DB) 구축
+│   ├── run_economy.py         # 경제 카테고리 뉴스 코스 생성
+│   ├── run_politics.py        # 정치 카테고리 뉴스 코스 생성
+│   ├── run_society.py         # 사회 카테고리 뉴스 코스 생성
+│   ├── run_tech.py            # 기술 카테고리 뉴스 코스 생성
+│   ├── run_world.py           # 국제 카테고리 뉴스 코스 생성
+│   └── __init__.py
+│
+└── quiz/                      # 퀴즈 및 학습 단계별 문제 생성 모듈
+    ├── background_n.py        # N단계(기초) 배경지식 카드 생성
+    ├── completion_e.py        # E단계(고급) 문장 완성형 문제 생성
+    ├── completion_feedback_e.py # 사용자의 답변 피드백 생성
+    ├── keyword_nie.py         # 핵심 키워드 추출 및 용어 카드 생성
+    ├── multi_ni.py            # N/I 단계 객관식 문제 생성
+    ├── ox_n.py                # N단계 OX 문제 생성
+    ├── reflection_ie.py       # I/E 단계 회고형 질문 생성
+    ├── select_session.py      # 세션 선택 및 메타데이터 로드
+    ├── short_ie.py            # I/E 단계 단답형 문제 생성
+    ├── term_n.py              # N단계 전문 용어 카드 생성
+    └── __init__.py
 ---
 
 ## 🚀 Run  
