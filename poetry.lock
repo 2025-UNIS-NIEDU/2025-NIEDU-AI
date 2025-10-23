@@ -8209,27 +8209,30 @@ win32 = ["pywin32"]
 
 [[package]]
 name = "sentence-transformers"
-version = "3.0.1"
-description = "Multilingual text embeddings"
+version = "5.1.2"
+description = "Embeddings, Retrieval, and Reranking"
 optional = false
-python-versions = ">=3.8.0"
+python-versions = ">=3.9"
 files = [
-    {file = "sentence_transformers-3.0.1-py3-none-any.whl", hash = "sha256:01050cc4053c49b9f5b78f6980b5a72db3fd3a0abb9169b1792ac83875505ee6"},
-    {file = "sentence_transformers-3.0.1.tar.gz", hash = "sha256:8a3d2c537cc4d1014ccc20ac92be3d6135420a3bc60ae29a3a8a9b4bb35fbff6"},
+    {file = "sentence_transformers-5.1.2-py3-none-any.whl", hash = "sha256:724ce0ea62200f413f1a5059712aff66495bc4e815a1493f7f9bca242414c333"},
+    {file = "sentence_transformers-5.1.2.tar.gz", hash = "sha256:0f6c8bd916a78dc65b366feb8d22fd885efdb37432e7630020d113233af2b856"},
 ]
 
 [package.dependencies]
-huggingface-hub = ">=0.15.1"
-numpy = "*"
+huggingface-hub = ">=0.20.0"
 Pillow = "*"
 scikit-learn = "*"
 scipy = "*"
 torch = ">=1.11.0"
 tqdm = "*"
-transformers = ">=4.34.0,<5.0.0"
+transformers = ">=4.41.0,<5.0.0"
+typing_extensions = ">=4.5.0"
 
 [package.extras]
-dev = ["accelerate (>=0.20.3)", "datasets", "pre-commit", "pytest", "ruff (>=0.3.0)"]
+dev = ["accelerate (>=0.20.3)", "datasets", "peft", "pre-commit", "pytest", "pytest-cov"]
+onnx = ["optimum[onnxruntime] (>=1.23.1)"]
+onnx-gpu = ["optimum[onnxruntime-gpu] (>=1.23.1)"]
+openvino = ["optimum-intel[openvino] (>=1.20.0)"]
 train = ["accelerate (>=0.20.3)", "datasets"]
 
 [[package]]
@@ -10342,4 +10345,4 @@ cffi = ["cffi (>=1.17,<2.0)", "cffi (>=2.0.0b)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<3.13"
-content-hash = "09701246694c855852e0f1d786d0ce42cbd2fbde8c423139d2a2f055de3bc32c"
+content-hash = "18dcaf5505c8f12c5635e6fb16acdd5cbc93f410cf8fbf46ca294de0b54cd488"
