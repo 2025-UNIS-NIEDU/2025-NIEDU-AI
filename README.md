@@ -61,38 +61,49 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 
 ---
 
+```markdown
 ## 🧭 폴더 구조
 ```
+
 src/
-├── course/                    # 코스(뉴스 묶음) 생성 및 관리 모듈
-│   ├── course_bundler.py      # 뉴스 세션을 코스로 묶는 핵심 로직
-│   ├── news_api.py            # DeepSearch 뉴스 API 호출 및 파싱
-│   ├── rag_builder.py         # 뉴스 RAG(Vector DB) 구축
-│   ├── run_economy.py         # 경제 카테고리 뉴스 코스 생성
-│   ├── run_politics.py        # 정치 카테고리 뉴스 코스 생성
-│   ├── run_society.py         # 사회 카테고리 뉴스 코스 생성
-│   ├── run_tech.py            # 기술 카테고리 뉴스 코스 생성
-│   ├── run_world.py           # 국제 카테고리 뉴스 코스 생성
-│   └── __init__.py
+├── course/                         # 뉴스 코스(묶음) 생성 및 관리 모듈
+│   ├── course_bundler.py           # 세션을 코스로 묶는 핵심 로직
+│   ├── news_api.py                 # DeepSearch 뉴스 API 호출 및 파싱
+│   ├── rag_builder.py              # 뉴스 RAG(Vector DB) 구축
+│   ├── run_economy.py              # 경제 카테고리 뉴스 코스 생성
+│   ├── run_politics.py             # 정치 카테고리 뉴스 코스 생성
+│   ├── run_society.py              # 사회 카테고리 뉴스 코스 생성
+│   ├── run_tech.py                 # 기술 카테고리 뉴스 코스 생성
+│   ├── run_world.py                # 국제 카테고리 뉴스 코스 생성
+│   └── **init**.py
 │
-└── quiz/                      # 퀴즈 및 학습 단계별 문제 생성 모듈
-    ├── background_n.py        # N단계(기초) 배경지식 카드 생성
-    ├── completion_e.py        # E단계(고급) 문장 완성형 문제 생성
-    ├── completion_feedback_e.py # 사용자의 답변 피드백 생성
-    ├── keyword_nie.py         # 핵심 키워드 추출 및 용어 카드 생성
-    ├── multi_ni.py            # N/I 단계 객관식 문제 생성
-    ├── ox_n.py                # N단계 OX 문제 생성
-    ├── reflection_ie.py       # I/E 단계 회고형 질문 생성
-    ├── select_session.py      # 세션 선택 및 메타데이터 로드
-    ├── short_ie.py            # I/E 단계 단답형 문제 생성
-    ├── term_n.py              # N단계 전문 용어 카드 생성
-    └── __init__.py
+└── quiz/                           # 퀴즈 및 단계별 학습 문제 생성 모듈
+├── background_n.py             # N단계(기초) 배경지식 카드 생성
+├── completion_e.py             # E단계(고급) 문장 완성형 문제 생성
+├── completion_feedback_e.py    # 사용자 답변 피드백 생성
+├── keyword_nie.py              # 핵심 키워드 추출 및 용어 카드 생성
+├── multi_ni.py                 # N/I 단계 객관식 문제 생성
+├── ox_n.py                     # N단계 OX 문제 생성
+├── reflection_ie.py            # I/E 단계 회고형 질문 생성
+├── select_session.py           # 세션 선택 및 메타데이터 로드
+├── short_ie.py                 # I/E 단계 단답형 문제 생성
+├── term_n.py                   # N단계 전문 용어 카드 생성
+└── **init**.py
+
+````
+
 ---
 
-## 🚀 Run  
+## 🚀 실행 방법
 ```bash
 poetry install
-```
+poetry run python src/course/run_politics.py
+````
 
-📚 Part of the NIEdu project
-🔗 AI-Driven News Learning Backend (RAG + LLM Integration)
+---
+
+📚 **Part of the NIEdu Project**
+🔗 *AI-Driven News Learning Backend (RAG + LLM Integration)*
+
+```
+---
