@@ -40,10 +40,10 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            echo "Logging in to ECR from EC2."
+            echo "Logging in to ECR from EC2"
             aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
             
-            echo "Generating .env file.."
+            echo "Generating .env file"
             cat <<EOF > .env
             DATASOURCE_URL=${{ secrets.DATASOURCE_URL }}
             DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }}
