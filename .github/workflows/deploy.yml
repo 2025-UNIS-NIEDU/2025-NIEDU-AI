@@ -44,7 +44,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            echo "Logging in to ECR from EC2..."
+            echo "Logging in to ECR from EC2.."
             aws ecr get-login-password --region ap-northeast-2 | sudo docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
             
             echo "Generating .env file..."
