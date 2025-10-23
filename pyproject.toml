@@ -25,7 +25,7 @@ langchain-community = "0.*"
 langchain-openai = "0.*"
 
 # --- ML 핵심 ---
-torch = "2.6.0"  
+torch = "2.6.0"  # ✅ 반드시 본선 유지
 sentence-transformers = "3.0.1"
 huggingface-hub = "0.*"
 tiktoken = "0.*"
