@@ -1,12 +1,18 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+from src.service.ai_service import generate_quiz
+from src.config.settings import settings
 
-# FastAPI 앱 생성
-app = FastAPI()
+app = FastAPI(title="NIEdu AI Backend")
 
-# 서버가 살아있는지 확인하는 기본 API (Health Check)
-@app.get("/ai/health")
-def health_check():
-    return {"status": "AI server is running!"}
+class QuizRequest(BaseModel):
+    content: str
 
+@app.get("/")
+def root():
+    return {"message": "NIEdu AI running", "db": settings.DB_HOST}
 
-# 여기에 AI 모델을 로딩하고,실제 예측을 수행하는 API 엔드포인트들을 추가
+@app.post("/api/quiz")
+def quiz(req: QuizRequest):
+    quiz_text = generate_quiz(req.content)
+    return {"quiz": quiz_text}
