@@ -40,7 +40,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            echo "Logging in to ECR from EC2"
+            echo "Logging in to ECR from EC2.."
             aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
             
             echo "Generating .env file"
@@ -50,13 +50,13 @@ jobs:
             DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }}
             EOF
 
-            echo "Stopping previous container"
+            echo "Stopping previous container.."
             docker stop nie-ai || true && docker rm nie-ai || true
 
-            echo "Pulling latest image"
+            echo "Pulling latest image.."
             docker pull ${{ secrets.ECR_REPOSITORY }}:latest
 
-            echo " Running new container"
+            echo " Running new container.."
             docker run -d \
               --name nie-ai \
               --env-file .env \
