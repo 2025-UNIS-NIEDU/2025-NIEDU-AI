@@ -7,87 +7,65 @@ license = "MIT"
 readme = "README.md"
 package-mode = false
 
-# === 실제 서비스(배포 환경)에서 필요한 패키지 ===
+# === 실제 서비스(배포 환경) ===
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
 
-# --- LLM & LangChain Core ---
-langchain = "0.*"
+# --- Core ---
+openai = "1.61.1"
+python-dotenv = "1.*"
+chromadb = "0.*"
+pydantic = "2.11.5"
+pandas = "2.*"
+tqdm = "^4.67.1"
+
+# --- LangChain 최소 핵심 ---
 langchain-core = "0.*"
 langchain-community = "0.*"
 langchain-openai = "0.*"
-langchain-huggingface = "0.*"
-langchain-anthropic = "0.*"
-langchain-chroma = "0.*"
-langgraph = "0.*"
-langsmith = "0.*"
-langchainhub = "0.*"
-openai = "1.61.1"
-huggingface-hub = "0.*"
+
+# --- ML 핵심 ---
+torch = "2.6.0"  
 sentence-transformers = "3.0.1"
-transformers = "4.46.2"
+huggingface-hub = "0.*"
 tiktoken = "0.*"
-# --- VectorDB / DB / Infra ---
-chromadb = "0.*"
-redis = "5.*"
-neo4j = "^5.28.2"
-sqlalchemy = "2.*"
 
-# --- ML / DL / Embedding ---
-torch = "2.6.0"
-faiss-cpu = "1.*"
-scikit-learn = "1.*"
-fastembed = "^0.7.3"
-
-# --- Data Parsing / Processing ---
-pandas = "2.*"
-pdfplumber = "0.*"
-pypdf = "4.*"
-pymupdf = "1.*"
-pymupdf4llm = "0.*"
-docx2txt = "0.*"
-lxml = "5.*"
-unstructured = {version = "0.*", extras = ["all-docs"]}
-python-dotenv = "1.*"
-pydantic = "2.11.5"
-nest-asyncio = "1.*"
-
-# --- Utilities ---
-tqdm = "^4.67.1"
-tenacity = "8.*"
-rich = "^14.1.0"
-
-# --- Optional (AI Tools / External) ---
-deepl = "1.*"
-google-search-results = "2.*"
-google-api-python-client = "^2.183.0"
-google-genai = "^1.39.1"
-keybert = "0.8.5"
-beautifulsoup4 = "^4.13.5"
-
-# --- Others (Necessary for runtime) ---
-streamlit = "1.*"
-pinecone = "5.*"
-ragas = "0.*"
-autogen = "^0.9.9"
-pymilvus = "2.*"
-
-# ===개발·분석·테스트 전용(dev) ===
+# === 개발·분석·테스트 전용(dev) ===
 [tool.poetry.group.dev.dependencies]
-# --- 개발 환경 ---
-mypy = "1.*"
 pytest = "^8.2.0"
 black = "^24.4.2"
 isort = "^5.13.2"
+mypy = "1.*"
 
-# --- 시각화 / 노트북 환경 ---
+# --- 대용량 개발용 패키지 ---
+transformers = "4.46.2"
+faiss-cpu = "1.*"
+fastembed = "^0.7.3"
+unstructured = {version = "0.*", extras = ["all-docs"]}
+pymupdf = "1.*"
+pymupdf4llm = "0.*"
+pdfplumber = "0.*"
+pypdf = "4.*"
+streamlit = "1.*"
+autogen = "^0.9.9"
+ragas = "0.*"
+neo4j = "^5.28.2"
+pinecone = "5.*"
+pymilvus = "2.*"
+langgraph = "0.*"
+
+# --- 분석 / 시각화 ---
 jupyter = "1.*"
 notebook = "7.*"
 matplotlib = "3.*"
 seaborn = "0.*"
-
-# --- 디버깅 / 분석용 ---
 nbstripout = "^0.8.1"
+
+# --- 기타 유틸 ---
+tenacity = "8.*"
+rich = "^14.1.0"
+keybert = "0.8.5"
+beautifulsoup4 = "^4.13.5"
 grandalf = "0.*"
 rouge-score = "0.*"
 
