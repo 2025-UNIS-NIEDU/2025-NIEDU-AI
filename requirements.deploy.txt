@@ -1,0 +1,18 @@
+# === Minimal Deployment Dependencies ===
+python-dotenv>=1.0.0
+chromadb>=0.6.0,<1.0.0
+pydantic>=2.11.0,<3.0.0
+pandas>=2.0.0,<3.0.0
+tqdm>=4.67.0,<5.0.0
+
+# --- LangChain core (for RAG logic) ---
+langchain-core>=0.3.0,<1.0.0
+langchain-community>=0.3.0,<1.0.0
+langchain-openai>=0.3.0,<1.0.0
+
+# --- OpenAI client (used for LLM API) ---
+openai>=1.61.0,<2.0.0
+
+# --- Optional utility (logging, retry, formatting) ---
+tenacity>=8.0.0,<9.0.0
+rich>=14.0.0,<15.0.0
