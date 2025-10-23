@@ -9,7 +9,7 @@ package-mode = false
 
 # === 실제 서비스(배포 환경)에서 필요한 패키지 ===
 [tool.poetry.dependencies]
-python = ">=3.11,<3.13"
+python = ">=3.11,<3.14"
 
 # --- LLM & LangChain Core ---
 langchain = "0.*"
