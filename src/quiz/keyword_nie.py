@@ -17,12 +17,13 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 # === 세션 선택 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+coourse_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 코스: {coourse_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
@@ -140,8 +141,9 @@ def make_keyword_block(level, correct_list, distractors):
     answers_block = [{"text": c, "isCorrect": True, "explanation": None} for c in correct_two]
     answers_block += [{"text": d[0], "isCorrect": False, "explanation": None} for d in distractors[:3]]
     return {
+        "topic" : topic,
+        "coourseId": coourse_id,
         "sessionId": session_id,
-        "tags": tags,
         "contentType": "keyword",
         "level": level,
         "items": [{"question": None, "answers": answers_block}]
@@ -163,7 +165,7 @@ print(json.dumps(final_json, ensure_ascii=False, indent=2))
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = QUIZ_DIR / f"{tags}_keyword_nie_{today}.json"
+file_path = QUIZ_DIR / f"{topic}_{coourse_id}_{session_id}_keyword_nie_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_json, f, ensure_ascii=False, indent=2)
 

@@ -27,7 +27,6 @@ def sort_session_keys(session: dict) -> dict:
     """sessionId → topic → subTopic → 나머지 알파벳순 정렬"""
     if not isinstance(session, dict):
         return session
-
     ordered = []
     for k in ("sessionId", "topic", "subTopic"):
         if k in session:
@@ -38,22 +37,12 @@ def sort_session_keys(session: dict) -> dict:
     )
     return OrderedDict(ordered + remaining)
 
-# === 토픽 목록 ===
-TOPIC_SUBTOPICS = {
-    "politics": "대통령실 OR 국회 OR 정당 OR 북한 OR 국방 OR 외교 OR 법률",
-    "economy": "금융 OR 증권 OR 산업 OR 중소기업 OR 부동산 OR 물가 OR 무역",
-    "society": "사건 OR 교육 OR 노동 OR 환경 OR 의료 OR 복지 OR 젠더",
-    "world": "미국 OR 중국 OR 일본 OR 유럽 OR 중동 OR 아시아 OR 국제",
-    "tech": "인공지능 OR 반도체 OR 로봇 OR 디지털 OR 과학기술 OR 연구개발 OR 혁신"
-}
-
 # === 임베딩 함수 ===
 embedding_fn = embedding_functions.OpenAIEmbeddingFunction(
     api_key=api_key, model_name="text-embedding-3-small"
 )
 
-# === 메인 처리 ===
-for topic in TOPIC_SUBTOPICS.keys():
+def generate_course_for_topic(topic: str):
     print(f"\n[{topic}] ChromaDB 불러오는 중...")
 
     DB_DIR = BASE_DIR / "data" / "db" / topic
@@ -63,9 +52,8 @@ for topic in TOPIC_SUBTOPICS.keys():
     collections = chroma_client.list_collections()
     if not collections:
         print(f"[경고] {topic}: 컬렉션 없음. 스킵.")
-        continue
+        return
 
-    # v0.6.0 대응 (문자열 or dict)
     collection_name = (
         collections[0] if isinstance(collections[0], str)
         else collections[0].get("name", f"{topic}_news")
@@ -75,7 +63,7 @@ for topic in TOPIC_SUBTOPICS.keys():
         name=collection_name,
         embedding_function=embedding_fn
     )
-    print(f"📂 감지된 컬렉션: {collection_name}")
+    print(f"감지된 컬렉션: {collection_name}")
 
     # --- 데이터 불러오기 ---
     try:
@@ -83,11 +71,11 @@ for topic in TOPIC_SUBTOPICS.keys():
         metadatas = all_data.get("metadatas", [])
     except Exception as e:
         print(f"[오류] {topic} 데이터 로드 실패: {e}")
-        continue
+        return
 
     if not metadatas:
         print(f"{topic} — 불러온 문서 없음 (docs 비어있음)")
-        continue
+        return
 
     docs = []
     for meta in metadatas:
@@ -98,25 +86,23 @@ for topic in TOPIC_SUBTOPICS.keys():
 
     print(f"{topic} 뉴스 개수: {len(docs)}")
 
-    # --- 샘플 미리보기 ---
-    preview_docs = docs[:2]
-    if preview_docs:
-        print(f"샘플 문서 {len(preview_docs)}개 미리보기 ({topic}):")
-        for d in preview_docs:
-            print(f"  ├─ [{d.get('subTopic', '미지정')}] {d.get('headline', '')[:60]}...")
-        print("-" * 80)
-
     # --- subTopic별 그룹화 ---
     grouped_by_sub = defaultdict(list)
     for d in docs:
         subTopic = d.get("subTopic", "기타") or "기타"
         grouped_by_sub[subTopic].append(d)
 
+    # --- 9개 이상 문서가 포함된 subTopic만 필터링 ---
+    filtered_subtopics = {k: v for k, v in grouped_by_sub.items() if len(v) >= 9}
+
+    if not filtered_subtopics:
+        print(f"[{topic}] 10개 이상 문서가 포함된 subTopic 없음 → 스킵")
+        return
+    
     output = []
 
     # --- 각 subTopic 단위로 코스 생성 ---
-    for idx, (subTopic, group_news) in enumerate(grouped_by_sub.items(), start=1):
-        # 세션 ID 부여 및 정렬
+    for idx, (subTopic, group_news) in enumerate(filtered_subtopics.items(), start=1):
         for sid, news in enumerate(group_news, start=1):
             news["sessionId"] = sid
             group_news[sid - 1] = sort_session_keys(news)
@@ -126,7 +112,6 @@ for topic in TOPIC_SUBTOPICS.keys():
             filtered = {k: v for k, v in s.items() if k not in ("topic", "subTopic", "deepsearchId")}
             cleaned_sessions.append(sort_session_keys(filtered))    
 
-        # 뉴스 요약 결합
         summaries = [
             f"- {n.get('headline', '')}: {n.get('summary', '')[:400]}"
             for n in group_news
@@ -137,44 +122,67 @@ for topic in TOPIC_SUBTOPICS.keys():
         prompt_course = f"""
 출력은 반드시 JSON 형식으로 작성하세요.
 
-당신은 학습형 뉴스 콘텐츠를 기획하는 작가이자 에디터입니다.
-아래는 비슷한 주제의 뉴스 여러 개입니다.
-이 뉴스들의 흐름을 바탕으로, **가독성이 높고 자연스러운 코스 제목(courseName)**과
-짧지만 흐름이 보이는 **코스 설명(courseDescription)**을 함께 작성하세요.
-코스 설명은 80-100자 내외
+당신은 뉴스 기반 학습 콘텐츠를 기획하는 에디터입니다.
+아래 여러 뉴스 요약을 바탕으로 하나의 학습 코스로 묶으세요.
+
+규칙:
+1. courseName은 **최소 20자,25자 내외**로 **명사형으로 끝나는 구조**여야 하며, 문장처럼 끝나지 않습니다.  
+   - 문어체이되, 딱딱한 학술 표현은 피하고 부드러운 흐름을 유지하세요.  
+    + 문어체(글쓰기체)로 작성하되, 논문처럼 딱딱하지 않고 신문·칼럼처럼 자연스럽게 읽히게 하세요.
+   - 필요하다면 은유적/상징적인 문구를 사용하세요.
+2. courseName은 **동일 토픽 내의 다른 코스명과 단어가 중복되지 않게** 독창적으로 만드세요.
+   - 이미 사용된 단어(예: '금융', '시장', '정책')이 포함된 제목은 피합니다.
+3. courseDescription은 **90~110자 내외**로 **무엇을 중심으로 어떤 관점에서 학습하게 되는지**를 보여주세요.
+   - 단순 요약이 아닌, 학습자가 얻을 인사이트 중심으로 서술하세요.
+4. sub_tag는 **동일 토픽 내의 다른 코스들과 단어가 조금도 겹치지 않게 해주세요.**
+이 뉴스 그룹의 세부 주제를 2~3개 단어로 요약한 해시태그 형식으로 작성합니다.  
+   - 예: "#산업전환, #시장흐름, #정책방향"
 
 출력 형식(JSON):
 {{
   "courseName": string,
-  "courseDescription": string
+  "courseDescription": string,
+  "sub_tag": string
 }}
 
-뉴스 샘플 요약:
+[뉴스 요약 목록]
 {joined_summary}
 """
         try:
             resp_course = client.chat.completions.create(
-                model="gpt-4o",
+                model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt_course}],
                 response_format={"type": "json_object"}
             )
             meta_course = json.loads(resp_course.choices[0].message.content)
         except Exception as e:
-            print(f"[{topic}] {subTopic} course 생성 실패: {e}")
+            print(f"[{topic}] course 생성 실패: {e}")
             meta_course = {
                 "courseName": f"{topic}_{subTopic}",
-                "courseDescription": "자동 생성 실패 → 기본 설명"
+                "courseDescription": "자동 생성 실패 → 기본 설명",
+                "sub_tag": ""
             }
 
-        # --- 태그 ---
-        tags = [topic]
-        if subTopic:
-            tags.append(f"#{subTopic}")
+        tag_candidates = []
+        for k, v in meta_course.items():
+            if "tag" in k.lower():
+                if isinstance(v, list):
+                    tag_candidates.extend(v)
+                elif isinstance(v, str):
+                    tag_candidates.append(v)
 
-        # --- 최종 코스 구성 ---
+        clean_tags = sorted(set([t.strip() for t in tag_candidates if t.strip()]))
+        subTopics = []
+        for tag_str in clean_tags:
+            for token in tag_str.replace(",", " ").split():
+                clean_token = token.strip()
+                if clean_token and clean_token not in subTopics:
+                    subTopics.append(clean_token)
+
         course_data = OrderedDict([
             ("courseId", idx),
-            ("tags", tags),
+            ("topic", topic),
+            ("subTopics", subTopics),
             ("courseName", meta_course.get("courseName", f"{topic}_{subTopic}")),
             ("courseDescription", meta_course.get("courseDescription", "")),
             ("sessions", cleaned_sessions),
@@ -187,6 +195,4 @@ for topic in TOPIC_SUBTOPICS.keys():
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output_sorted, f, ensure_ascii=False, indent=2, sort_keys=False)
 
-    print(f"💾 {topic} → 코스 파일 저장 완료: {output_file.resolve()}")
-
-print("\n🎉 모든 토픽 코스 파일 생성 완료.")
+    print(f"{topic} → 코스 파일 저장 완료: {output_file.resolve()}")

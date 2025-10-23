@@ -18,12 +18,13 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 # === 2. 세션 불러오기 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 코스: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
@@ -128,8 +129,9 @@ else:
     answers = parsed if isinstance(parsed, list) else []
 
 background_card = {
+    "topic" : topic,
+    "courseId": course_id,
     "sessionId": session_id,
-    "tags": tags,
     "contentType": "background",
     "level": "n",
     "items": [
@@ -150,7 +152,7 @@ print(json.dumps(background_card, ensure_ascii=False, indent=2))
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = SAVE_DIR / f"{selected_session['tags']}_background_n_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_background_n_{today}.json"
 
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(background_card, f, ensure_ascii=False, indent=2)

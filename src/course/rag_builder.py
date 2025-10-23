@@ -108,8 +108,8 @@ for json_file in json_files:
             [DeepSearch ID] {clean_dict.get('deepsearchId', '')}
             """
 
-            docs.append(page_content.strip())  # 🔹 실제 임베딩에 사용
-            metas.append(clean_dict)           # 🔹 전체 메타데이터 저장
+            docs.append(page_content.strip())  # 실제 임베딩에 사용
+            metas.append(clean_dict)           # 전체 메타데이터 저장
             ids.append(f"{topic_name}_{i+1}")
 
         except Exception as e:
@@ -122,7 +122,7 @@ for json_file in json_files:
             print(f"{len(docs)}개 문서를 DB에 추가 완료 → {topic_db_path}")
             print(f"현재 컬렉션 문서 수: {collection.count()}")
 
-            # ✅ 추가된 데이터 샘플 1~2개만 확인
+            # 추가된 데이터 샘플 1~2개만 확인
             sample = collection.get(limit=2, include=["documents", "metadatas"])
             print(f"샘플 문서 2개 미리보기 ({topic_name}):")
             for idx, doc in enumerate(sample["documents"]):
@@ -154,4 +154,4 @@ for topic_dir in DB_ROOT.iterdir():
         print(f"{topic_dir.name}: subTopic 필드 확인 ({len(unique_subs)}개 고유값)")
         print(f"예시: {list(unique_subs)[:5]}")
 
-print("\n🎉 모든 토픽 DB 저장 및 검증이 완료되었습니다.")
+print("\n모든 토픽 DB 저장 및 검증이 완료되었습니다.")

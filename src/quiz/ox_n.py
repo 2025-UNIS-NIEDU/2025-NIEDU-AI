@@ -13,12 +13,13 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # === 세션 선택 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 태그: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
@@ -39,6 +40,7 @@ prompt_ox_n = f"""
 2. 뉴스 summary의 사실만 사용하고 새로운 정보나 예측은 금지합니다.
 3. 문항들은 서로 다른 내용을 다뤄야 합니다.
 4. 문장은 짧고 명확하게, '~했다' / '~아니다' 형태로 작성하세요.
+5. answer 'O', 'X' 다양하게
 5. 해설은 정답/오답 여부와 관계없이, 문항의 사실적 근거를 한 줄로 명확히 설명한다.
 6. 해설은 학습자에게 설명하듯 자연스럽게 작성, 50자 내외로.
 7. 출력은 아래 JSON 형식만으로 주세요:
@@ -79,8 +81,9 @@ for q in parsed_n:
     ox_items.append({"question": q["question"], "answers": [option_O, option_X]})
 
 result = {
+    "topic ": topic,
+    "courseId": course_id,
     "sessionId": session_id,
-    "tags" : tags,
     "contentType": "ox",
     "level": "n",
     "items": ox_items
@@ -102,7 +105,7 @@ for i, item in enumerate(result["items"], 1):
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = SAVE_DIR / f"{tags}_ox_n_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_ox_n_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(result, f, ensure_ascii=False, indent=2)
 

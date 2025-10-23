@@ -13,17 +13,18 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # === 세션 선택 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 태그: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
 # === 모델 설정 ===
-llm_i = ChatOpenAI(model="gpt-4o", temperature=0.3)
+llm_i = ChatOpenAI(model="gpt-5")
 llm_e = ChatOpenAI(model="gpt-5")
 
 # === I단계 문제 생성 ===
@@ -34,6 +35,7 @@ def generate_quiz_i(summary: str):
 
 🎯 목표:
 - 뉴스의 핵심 사실(숫자, 인물, 정책명 등)을 직접 확인할 수 있는 문제
+- 날짜, 연도, 수치, 통계, 인용문, 이름 등을 묻는 문제는 생성하지 마세요.
 
 ⚙️ 규칙:
 - 질문은 40자 이내, 한 문장
@@ -98,6 +100,8 @@ def generate_advanced_e(i_quiz, summary):
 - I단계의 정답(answer)은 그대로 유지
 - **독해 속도를 늦추되, 사실적 근거는 기사에 명시된 내용만 사용**
 - 질문은 최소 40자 이상
+- 날짜, 연도, 수치, 통계, 인용문, 이름 등을 묻는 문제는 생성하지 마세요.
+- 정답은 한 단어
 
 📘 질문 변환 예시:
 
@@ -106,9 +110,6 @@ def generate_advanced_e(i_quiz, summary):
 
 - "이 사건이 발생한 원인은?"  
   → "해당 사안이 초래된 배경 요인은 무엇인가?"
-
-- "발표가 이루어진 날짜는 언제인가?"  
-  → "공식 발표가 단행된 시점은 언제인가?"
 
 🧠 해설(explanation) 지침:
 - 해설은 단순히 ‘왜 정답인가’를 설명하는 수준을 넘어서야 함
@@ -188,22 +189,24 @@ today = datetime.now().strftime("%Y-%m-%d")
 
 final_result = [
     {
+        "topic" : topic,
+        "courseId": course_id,
         "sessionId": session_id,
-        "tags": tags,
         "contentType": "short",
         "level": "i",
         "items": remaining_i
     },
     {
+        "topic" : topic,
+        "courseId": course_id,
         "sessionId": session_id,
-        "tags": tags,
         "contentType": "short",
         "level": "e",
         "items": e_quiz
     }
 ]
 
-file_path = SAVE_DIR / f"{tags}_short_ie_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_short_ie_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_result, f, ensure_ascii=False, indent=2)
 

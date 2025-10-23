@@ -14,18 +14,19 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # === 세션 선택 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 코스: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
 # === 모델 설정 ===
-llm_n = ChatOpenAI(model="gpt-4o", temperature=0.3)  # N단계
-llm_i = ChatOpenAI(model="gpt-5")
+llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)  # N단계
+llm_i = ChatOpenAI(model="gpt-5") # I단계
 embedder = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
 # === N단계 문제 생성 ===
@@ -205,22 +206,24 @@ clean_n_quiz = strip_debug_info(n_quiz)
 # === 저장 ===
 final_result = [
     {
+        "topic" : topic,
+        "courseId": course_id,
         "sessionId": session_id,
-        "tags": tags,
         "contentType": "multi",
         "level": "n",
         "items": clean_n_quiz,
     },
     {
+        "topic" : topic,
+        "courseId": course_id,
         "sessionId": session_id,
-        "tags": tags,
         "contentType": "multi",
         "level": "i",
         "items": clean_i_quiz,
     },
 ]
 
-file_path = SAVE_DIR / f"{tags}_multi_ni_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_multi_ni_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_result, f, ensure_ascii=False, indent=2)
 

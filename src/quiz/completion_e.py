@@ -13,12 +13,13 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # === 세션 선택 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 코스: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
@@ -83,14 +84,15 @@ SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
 
 final_result = {
+    "topic" : topic,
+    "courseId": course_id,
     "sessionId": session_id,
-    "tags": tags,
     "contentType": "completion",
     "level": "e",
     "items": e_quiz,
 }
 
-file_path = SAVE_DIR / f"{tags}_completion_e_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_completion_e_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_result, f, ensure_ascii=False, indent=2)
 

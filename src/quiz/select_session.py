@@ -4,10 +4,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[2]
 COURSE_DIR = BASE_DIR / "data" / "course"
 
-def select_session(tag: str = None, course_id: int = None, session_id: int = None):
+
+def select_session(topic: str = None, sub_topic: str = None, course_id: int = None, session_id: int = None):
     """
-    [메인, #서브] 형태로 태그 세트를 선택하는 인터랙티브 세션 선택기
-    - tag: 예) 'politics' 또는 '#대통령실' (선택 시 자동 필터링)
+    [topic / subTopics] 기반 세션 선택기
+    - topic: 예) 'economy', 'politics'
+    - sub_topic: 예) '#산업혁신', '#기술트렌드'
     """
     # === 코스 파일 탐색 ===
     files = list(COURSE_DIR.glob(f"*.json"))
@@ -24,32 +26,58 @@ def select_session(tag: str = None, course_id: int = None, session_id: int = Non
         except Exception as e:
             print(f"[경고] {f.name} 읽기 실패: {e}")
 
-    # === 코스별 태그 세트 추출 ===
-    tag_sets = []
+    # === topic/subTopics 목록 추출 ===
+    topic_map = {}
     for c in all_courses:
-        tags = c.get("tags", [])
-        if tags:
-            tag_sets.append(tuple(tags))  # 튜플 형태로 저장 (중복 제거용)
-    unique_tag_sets = sorted(set(tag_sets))
+        t = c.get("topic", "미지정")
+        subs = c.get("subTopics", [])
+        topic_map.setdefault(t, set()).update(subs)
 
-    # === 선택 가능한 태그 세트 출력 ===
-    print("\n=== 선택 가능한 태그 세트 목록 ===")
-    for i, tags in enumerate(unique_tag_sets, 1):
-        formatted = ", ".join(tags)
-        print(f"{i}. [{formatted}]")
+    # === topic 선택 ===
+    print("\n=== 선택 가능한 토픽 목록 ===")
+    for i, t in enumerate(sorted(topic_map.keys()), 1):
+        print(f"{i}. {t}")
 
-    # === 세트 선택 ===
-    while True:
-        user_in = input("태그 세트 번호를 선택하세요: ").strip()
-        if user_in.isdigit() and 1 <= int(user_in) <= len(unique_tag_sets):
-            selected_tags = unique_tag_sets[int(user_in) - 1]
-            break
-        print("⚠️ 올바른 번호를 입력하세요 (예: 1, 2, 3...)")
+    if topic is None:
+        while True:
+            user_in = input("토픽 번호를 선택하세요: ").strip()
+            if user_in.isdigit() and 1 <= int(user_in) <= len(topic_map):
+                topic = sorted(topic_map.keys())[int(user_in) - 1]
+                break
+            print(" 올바른 번호를 입력하세요 (예: 1, 2, 3...) ")
 
-    # === 해당 태그 세트와 일치하는 코스 필터링 ===
-    filtered = [c for c in all_courses if tuple(c.get("tags", [])) == selected_tags]
+    # === 서브토픽 선택 ===
+    subtopics = sorted(topic_map.get(topic, []))
+    print(f"\n[{topic}] 관련 서브토픽:")
+    for i, s in enumerate(subtopics, 1):
+        print(f"{i}. {s}")
 
-    print(f"\n선택된 태그 세트: [{', '.join(selected_tags)}]")
+    if sub_topic is None and subtopics:
+        while True:
+            user_in = input("서브토픽 번호를 선택하세요 (없으면 Enter): ").strip()
+            if not user_in:
+                sub_topic = None
+                break
+            if user_in.isdigit() and 1 <= int(user_in) <= len(subtopics):
+                sub_topic = subtopics[int(user_in) - 1]
+                break
+            print(" 올바른 번호를 입력하세요 (예: 1, 2, 3...) ")
+
+    # === 해당 조건과 일치하는 코스 필터 ===
+    filtered = []
+    for c in all_courses:
+        if c.get("topic") != topic:
+            continue
+        if sub_topic and sub_topic not in c.get("subTopics", []):
+            continue
+        filtered.append(c)
+
+    if not filtered:
+        raise ValueError(f"'{topic}' 관련 코스를 찾을 수 없습니다.")
+
+    print(f"\n선택된 토픽: {topic}")
+    if sub_topic:
+        print(f"선택된 서브토픽: {sub_topic}")
     print("=== 코스 목록 ===")
     for c in filtered:
         print(f"- {c['courseId']}: {c['courseName']}")
@@ -62,6 +90,7 @@ def select_session(tag: str = None, course_id: int = None, session_id: int = Non
                 break
             except ValueError:
                 print("숫자만 입력하세요.")
+
     course = next((c for c in filtered if c["courseId"] == course_id), None)
     if not course:
         raise ValueError("해당 courseId를 찾을 수 없습니다.")
@@ -85,9 +114,10 @@ def select_session(tag: str = None, course_id: int = None, session_id: int = Non
     # === 메타데이터 추가 ===
     session["courseId"] = course["courseId"]
     session["courseName"] = course["courseName"]
-    session["tags"] = course["tags"]
+    session["topic"] = course["topic"]
+    session["subTopics"] = course.get("subTopics", [])
 
-    print(f"\n 선택된 세션: {session['headline']}")
+    print(f"\n선택된 세션: {session['headline']}")
     return session
 
 

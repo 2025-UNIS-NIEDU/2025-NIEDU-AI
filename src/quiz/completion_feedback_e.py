@@ -80,3 +80,32 @@ def evaluate_total(user_answer: str, reference_text: str) -> dict:
         "totalScore": total,
     }
     return feedback
+
+# 3. JSON 스키마 출력
+def print_feedback_structure_schema():
+    schema = {
+        "topic": "string",
+        "courseId": "string",
+        "sessionId": "string",
+        "contentType": "completionFeedback",
+        "level": "string",
+        "items": [
+            {
+                "question": "string",
+                "answers": [
+                    {
+                        "userAnswer": "string",
+                        "score": "int",
+                        "comment": "string"
+                    }
+                ]
+            }
+        ]
+    }
+
+    print(json.dumps(schema, ensure_ascii=False, indent=2))
+
+
+# 실행
+if __name__ == "__main__":
+    print_feedback_structure_schema()

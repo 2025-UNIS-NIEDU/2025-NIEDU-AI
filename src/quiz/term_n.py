@@ -16,12 +16,13 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 # === 2. 세션 선택 ===
 selected_session = select_session()
-tags = selected_session["tags"]            
+topic = selected_session["topic"]
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 태그: {tags}")
+print(f"\n선택된 코스: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
@@ -34,7 +35,7 @@ PROMPT_TEMPLATES = {
     "tech": "과학·기술 관련 기술명, 개념, 시스템, 연구용어 등 4개 추출",
 }
 
-topic_key = next((t for t in tags if t in PROMPT_TEMPLATES.keys()), None)
+topic_key = next((t for t in course_id if t in PROMPT_TEMPLATES.keys()), None)
 
 prompt = f"""
 당신은 뉴스 요약문에서 핵심 전문용어를 추출하고 표제어 형태로 정제하는 전문가입니다.
@@ -178,8 +179,9 @@ for term in terms:
 
 # === 8️. NIEdu 포맷 ===
 term_card = {
+    "topic" : topic,
+    "courseId": course_id,
     "sessionId": session_id,
-    "tags": tags,
     "contentType": "term",
     "level": "n",
     "items": [
@@ -196,7 +198,7 @@ print(json.dumps(term_card, ensure_ascii=False, indent=2))
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-save_path = QUIZ_DIR / f"{tags}_term_n_{today}.json"
+save_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_term_n_{today}.json"
 with open(save_path, "w", encoding="utf-8") as f:
     json.dump(term_card, f, ensure_ascii=False, indent=2)
 
