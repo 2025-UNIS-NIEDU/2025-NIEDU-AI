@@ -1,18 +1,20 @@
 import os, json, random, numpy as np
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer, util
 from langchain_openai import ChatOpenAI
+from langchain.prompts import load_prompt
+from langchain.prompts import ChatPromptTemplate
+import yaml
+from langchain.schema.runnable import RunnableMap, RunnableLambda
 from select_session import select_session
 
-# === 환경 변수 로드 ===
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-load_dotenv(ENV_PATH, override=True)
+# === 1️. 환경 변수 로드 ===
+load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# === 세션 선택 ===
+# === 2️. 세션 선택 ===
 selected_session = select_session()
 topic = selected_session["topic"]
 course_id = selected_session["courseId"]            
@@ -20,104 +22,36 @@ session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 코스: {course_id}")
-print(f"sessionId: {session_id}")
-print(f"제목: {headline}\n")
+print(f"\n=== 세션 정보 ===")
+print(f"코스 ID: {course_id}")
+print(f"Session ID: {session_id}")
+print(f"제목: {headline}")
+print(f"요약문: {summary[:200]}...\n")
 
-# === 모델 설정 ===
-llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)  # N단계
-llm_i = ChatOpenAI(model="gpt-5") # I단계
+# === 3️. 모델 & 임베더 설정 ===
+llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+llm_harder = ChatOpenAI(model="gpt-5")
 embedder = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
-# === N단계 문제 생성 ===
-def generate_quiz_n(summary: str):
-    prompt_n = f"""
-당신은 뉴스 기반 학습 퀴즈 생성 AI입니다.
-아래 뉴스 내용을 참고하여 **기초(N단계)** 다지선다 문제 5개를 만들어주세요.
+# === 4️. UTF-8 안전 YAML 로더 ===
+def load_utf8_prompt(path: str):
+    """UTF-8 안전하게 LangChain prompt YAML 로드"""
+    with open(path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
 
-🎯 목표:
-- 뉴스의 핵심 사실을 확인할 수 있는 문제 5개
-- 각 문제는 서로 다른 사실을 다뤄야 함
+    # LangChain YAML은 "_type"과 "template"이 반드시 존재해야 함
+    if "_type" not in data or "template" not in data:
+        raise ValueError(f"잘못된 YAML 구조: {path}")
 
-📘 규칙
-- level="n"
-- 질문 45자 내외
-- 선다 15자 내외, 명사/구 단위
-- 선다 중 1개만 정답
-- 뉴스 요약의 사실만 사용
-- 해설은 50자 이내, 모두 다르게 작성
-- 각 보기별 해설은 간결하고 모두 달라야 함
+    return ChatPromptTemplate.from_template(data["template"])
 
-출력은 반드시 유효한 JSON 형식만 사용하세요.
-📘 출력 형식(JSON 배열):
-[
-  {{
-    "question": "질문 내용",
-    "answers": [
-      {{"text": "선다1", "isCorrect": false, "explanation": "해설1"}},
-      {{"text": "선다2", "isCorrect": true, "explanation": "해설2"}},
-      {{"text": "선다3", "isCorrect": false, "explanation": "해설3"}},
-      {{"text": "선다4", "isCorrect": false, "explanation": "해설4"}}
-    ]
-  }}
-]
+prompt_fact_n = load_utf8_prompt("src/quiz/prompt/fact_n.yaml")
+prompt_inference_i = load_utf8_prompt("src/quiz/prompt/inference_i.yaml")
+prompt_harder_i = load_utf8_prompt("src/quiz/prompt/harder_i.yaml")
 
-뉴스 요약:
-{summary}
-"""
-    res = llm_n.invoke(prompt_n)
-    text = res.content.strip().replace("```json", "").replace("```", "")
-    return json.loads(text)
-
-def generate_quiz_i(n_quiz, summary):
-    prompt_i = f"""
-당신은 뉴스 학습용 퀴즈를 설계하는 전문가입니다.
-다음은 **N단계(기초)** 문제입니다.
-이를 바탕으로 **I단계(심화)** 문제를 만들어주세요.
-
-🎯 목표
-- 원문의 의미는 유지하되, 표현을 한층 더 정제하고 분석적으로 바꿉니다.
-- 단, E단계(확장·비판 단계)로 이어질 수 있도록, **이해력·추론력 중심의 중간 난이도**로 설계하세요.
-- 문장은 문어체를 사용하되, **지나치게 학술적이거나 추상적 표현은 피합니다.**
-- **질문은 기사 속 인과관계·핵심 논점·의미 변화를 중심으로 구성합니다.**
-- **선지의 단어 표현은 한 단계 고급화**하되, 15자 내외로 간결하게 유지.
-- **오답은 정답과 유사한 개념·시점·어휘**로 구성하되, 의미가 미묘하게 달라야 합니다.
-- **정답은 기사 근거를 기반으로, 오답은 자주 혼동되는 맥락**을 반영하세요.
-
-📘 세부 규칙
-- level: "i"
-- basedOn: 원본 질문
-- question: 최소 40자, 45자 내외, 문어체
-  (예: “~로 분석된다”, “~을 근거로 해석할 수 있다”)
-- answers: 4개 (1개 정답, 3개 오답)
-- 선지는 15자 내외, 명사/구 단위
-- 해설(explanation): 최소 40자, 50자 내외, 명료한 한 문장, 정답의 근거와 오답의 차이를 논리적으로 설명
-- 출력은 반드시 **유효한 JSON 배열** 형식으로만
-
-입력 데이터:
-N단계 문제:
-{json.dumps(n_quiz, ensure_ascii=False, indent=2)}
-
-뉴스 요약:
-{summary}
-
-출력은 반드시 아래 형식으로만 작성하세요.
-[
-  {{
-    "basedOn": "원본 질문",
-    "level": "i",
-    "question": "심화 문어체 질문",
-    "answers": [
-      {{"text": "선지1", "isCorrect": false, "explanation": "해설1"}},
-      {{"text": "선지2", "isCorrect": true, "explanation": "해설2"}},
-      {{"text": "선지3", "isCorrect": false, "explanation": "해설3"}},
-      {{"text": "선지4", "isCorrect": false, "explanation": "해설4"}}
-    ]
-  }}
-]
-"""
-
-    res = llm_i.invoke(prompt_i)
+# === 5️. JSON 파서 ===
+def parse_json_output(res):
     text = res.content.strip().replace("```json", "").replace("```", "")
     try:
         return json.loads(text)
@@ -125,107 +59,136 @@ N단계 문제:
         print("JSON 파싱 오류 — 원문 출력:\n", text)
         return []
 
-# === 검증 및 점수화 ===
-def validate_and_score(candidates, summary):
+parse_node = RunnableLambda(parse_json_output)
+
+# === 6️. 검증 (추론형 문제 전용) ===
+def validate_inference_simple(candidates, summary, embedder, q_threshold=0.3, a_threshold=0.6):
     validated = []
     for cand in candidates:
-        q = cand["question"]
-        correct = next((opt["text"] for opt in cand["answers"] if opt["isCorrect"]), None)
-        wrongs = [opt["text"] for opt in cand["answers"] if not opt["isCorrect"]]
-
-        if util.cos_sim(embedder.encode(q), embedder.encode(summary)).item() < 0.3:
-            cand["validation"] = "기사 근거 약함"
+        q = cand.get("question", "")
+        answers = cand.get("answers", [])
+        correct = next((a["text"] for a in answers if a.get("isCorrect")), None)
+        if not q or not correct:
+            cand["validation"] = "데이터 누락"
             continue
 
-        sims = [util.cos_sim(embedder.encode(correct), embedder.encode(w)).item() for w in wrongs]
-        mean_sim = np.mean(sims)
-        if mean_sim > 0.8:
-            cand["validation"] = f"오답 유사도 과다 ({mean_sim:.2f})"
-            continue
+        q_sim = util.cos_sim(embedder.encode(q), embedder.encode(summary)).item()
+        a_sim = util.cos_sim(embedder.encode(correct), embedder.encode(summary)).item()
+        score = round(q_sim * 0.4 + a_sim * 0.6, 2)
 
-        clarity = 1 if len(q) > 40 else 0.7
-        grounding = 1 if any(word in summary for word in correct.split()) else 0.7
-        diversity = 1 - mean_sim
-        score = round((clarity * 0.3 + grounding * 0.3 + diversity * 0.4), 2)
-        cand["score"] = score
-        cand["validation"] = "통과" if score >= 0.75 else "점수 낮음"
-        if score >= 0.75:
+        cand.update({
+            "question_sim": q_sim,
+            "answer_sim": a_sim,
+            "score": score,
+            "validation": "통과" if (q_sim >= q_threshold and a_sim >= a_threshold) else "근거 부족"
+        })
+
+        if cand["validation"] == "통과":
             validated.append(cand)
     return validated
 
-# === 보기 섞기 ===
-def shuffle_quiz_answers(quiz_list):
-    for quiz in quiz_list:
-        if "answers" in quiz:
-            random.shuffle(quiz["answers"])
-    return quiz_list
+# === 7️. RunnableMap 파이프라인 구성 ===
+quiz_pipeline = RunnableMap({
+    "fact_n": prompt_fact_n | llm_n | parse_node,
+    "inference_i": prompt_inference_i | llm_i | parse_node,
+    "harder_i": (
+        RunnableLambda(lambda x: {
+            "n_quiz": json.dumps(x["fact_n"], ensure_ascii=False, indent=2),
+            "summary": x["summary"]
+        })
+        | prompt_harder_i
+        | llm_harder
+        | parse_node
+    ),
+})
 
-# === 실행 ===
-print("=== 뉴스 요약문 ===")
-summary = selected_session["summary"]
-print(summary)
+# === 8️. 전체 실행 함수 ===
+def generate_all_quizzes(summary: str):
+    print("=== 퀴즈 생성 시작 ===")
 
-print("=== N단계 문제 생성 ===")
-n_quiz = generate_quiz_n(summary)
-print(json.dumps(n_quiz, ensure_ascii=False, indent=2))
+    # 1️. N단계 (사실형)
+    fact_n = (prompt_fact_n | llm_n | parse_node).invoke({"summary": summary})
+    print("N단계 완료")
 
-print("\n=== I단계 문제 생성 ===")
-i_quiz = generate_quiz_i(n_quiz, summary)
-print(json.dumps(i_quiz, ensure_ascii=False, indent=2))
+    # 2️. I단계 (추론형)
+    inference_i = (prompt_inference_i | llm_i | parse_node).invoke({"summary": summary})
+    print("I단계(추론형) 완료")
 
-print("\n=== 검증 및 점수 계산 ===")
-validated_quiz = validate_and_score(i_quiz, summary)
-print(json.dumps(validated_quiz, ensure_ascii=False, indent=2))
+    # 3️. 검증 (추론형 문제 유효성)
+    print("\n=== 추론형 검증 ===")
+    validated_i = validate_inference_simple(inference_i, summary, embedder)
+    print(f"검증 통과 수: {len(validated_i)} / {len(inference_i)}")
 
-print("\n=== 보기 순서 랜덤화 ===")
-shuffled_quiz = shuffle_quiz_answers(validated_quiz)
-print(json.dumps(shuffled_quiz, ensure_ascii=False, indent=2))
+    # 4️. I단계 (심화형) - 검증된 결과 + 기초 문제 활용
+    harder_input = {
+        "n_quiz": json.dumps(fact_n, ensure_ascii=False, indent=2),
+        "i_quiz": json.dumps(validated_i, ensure_ascii=False, indent=2),
+        "summary": summary,
+    }
+    harder_i = (prompt_harder_i | llm_harder | parse_node).invoke(harder_input)
+    print("I단계(심화형) 완료")
 
-# === 저장 ===
-SAVE_DIR = BASE_DIR / "data" / "quiz"
-SAVE_DIR.mkdir(parents=True, exist_ok=True)
-today = datetime.now().strftime("%Y-%m-%d")
+    return {
+        "fact_n": fact_n,
+        "inference_i": validated_i,
+        "harder_i": harder_i,
+    }
 
-def strip_debug_info(quiz_list):
-    clean_list = []
-    for q in quiz_list:
-        # validation, score, basedOn 등 디버그용 필드 제거
-        q_clean = {
-            "question": q.get("question"),
-            "answers": q.get("answers"),
-        }
-        # 해설 필드 유지 (있을 경우)
-        if "explanation" in q:
-            q_clean["explanation"] = q["explanation"]
-        clean_list.append(q_clean)
-    return clean_list
+# === 9. 출력 포맷 변환 ===
+def format_quiz_output(data, topic, course_id, session_id):
+    """
+    LangChain 생성 결과(fact_n, inference_i, harder_i)를
+    최종 표준 출력 포맷으로 변환.
+    """
+    formatted = []
 
-clean_i_quiz = strip_debug_info(i_quiz)
-clean_n_quiz = strip_debug_info(n_quiz)
-
-# === 저장 ===
-final_result = [
-    {
-        "topic" : topic,
+    # === N단계 ===
+    formatted.append({
+        "topic": topic,
         "courseId": course_id,
         "sessionId": session_id,
         "contentType": "multi",
         "level": "n",
-        "items": clean_n_quiz,
-    },
-    {
-        "topic" : topic,
+        "items": data.get("fact_n", [])
+    })
+
+    # === I단계 ===
+    i_items = data.get("inference_i") or data.get("harder_i", [])
+    cleaned_i = []
+
+    for item in i_items:
+        cleaned_i.append({
+            "question": item.get("question"),
+            "answers": item.get("answers"),
+        })
+
+    formatted.append({
+        "topic": topic,
         "courseId": course_id,
         "sessionId": session_id,
         "contentType": "multi",
         "level": "i",
-        "items": clean_i_quiz,
-    },
-]
+        "items": cleaned_i
+    })
 
-file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_multi_ni_{today}.json"
-with open(file_path, "w", encoding="utf-8") as f:
-    json.dump(final_result, f, ensure_ascii=False, indent=2)
+    return formatted
 
-print(f"\nN단계 + I단계 통합 저장 완료 → {file_path.resolve()}")
-print("=== 전체 완료 ===")
+# === 10. 저장 ===
+def save_quiz_json(data, topic, course_id, session_id):
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    SAVE_DIR = BASE_DIR / "data" / "quiz"
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_multi_ni_{today}.json"
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"\n 저장 완료: {file_path.resolve()}")
+
+# === 11. 실행 ===
+if __name__ == "__main__":
+    all_quizzes = generate_all_quizzes(summary)
+    formatted_output = format_quiz_output(all_quizzes, topic, course_id, session_id)
+    save_quiz_json(formatted_output, topic, course_id, session_id)
+    print("=== 전체 완료 ===")

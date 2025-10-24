@@ -1,14 +1,12 @@
 import os, json, random
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from select_session import select_session
 
 # === 환경 변수 로드 ===
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-load_dotenv(ENV_PATH, override=True)
+load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # === 세션 선택 ===
@@ -79,6 +77,7 @@ print("\n [E단계 생성 결과]")
 print(json.dumps(e_quiz, ensure_ascii=False, indent=2))
 
 # === 저장 ===
+BASE_DIR = Path(__file__).resolve().parents[2]
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")

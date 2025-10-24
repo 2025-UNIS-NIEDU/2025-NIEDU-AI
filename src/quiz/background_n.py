@@ -1,14 +1,12 @@
 import os, re, json, requests
 from openai import OpenAI
-from datetime import datetime
 from pathlib import Path
+from datetime import datetime
 from dotenv import load_dotenv
 from select_session import select_session   
 
 # === 1. 환경 변수 로드 ===
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-load_dotenv(ENV_PATH, override=True)
+load_dotenv(override=True)
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_CSE_API_KEY")
 GOOGLE_NEWS_ID = os.getenv("GOOGLE_CSE_CX_NEWS")
@@ -149,6 +147,7 @@ print("\n=== 변환된 NIEdu 포맷 ===")
 print(json.dumps(background_card, ensure_ascii=False, indent=2))
 
 # === 10. 저장 ===
+BASE_DIR = Path(__file__).resolve().parents[2]
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")

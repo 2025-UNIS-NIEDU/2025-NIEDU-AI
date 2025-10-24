@@ -1,15 +1,14 @@
 import os, json
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from select_session import select_session
 
 # 환경 변수 및 경로 설정
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-load_dotenv(ENV_PATH, override=True)
+load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+BASE_DIR = Path(__file__).resolve()[2]
 
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 today = datetime.now().strftime("%Y-%m-%d")
@@ -68,7 +67,7 @@ for q in [q.get("question") for q in e_items[:3]]:
     print("•", q)
 
 # 6️. LLM 설정
-llm = ChatOpenAI(model="gpt-4o", temperature=0.3)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
 
 # 7️. 회고형 문제 생성 함수
 def generate_reflection(level, quiz_items):

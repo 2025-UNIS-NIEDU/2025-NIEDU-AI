@@ -8,10 +8,8 @@ from keybert import KeyBERT
 from sentence_transformers import SentenceTransformer, util
 from select_session import select_session
 
-# === 환경 변수 ===
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-load_dotenv(ENV_PATH, override=True)
+# === 환경 변수 로드 ===
+load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
 
@@ -162,6 +160,7 @@ print(summary)
 print("\n=== 변환된 NIEdu 포맷 ===")
 print(json.dumps(final_json, ensure_ascii=False, indent=2))
 
+BASE_DIR = Path(__file__).resolve().parents[2]
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")

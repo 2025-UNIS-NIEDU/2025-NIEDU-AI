@@ -1,14 +1,11 @@
 import os, json, re
-from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from select_session import select_session
 
 # === 환경 변수 ===
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-load_dotenv(ENV_PATH, override=True)
+load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # === 세션 선택 ===
@@ -29,21 +26,20 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 # === 프롬프트 ===
 prompt_ox_n = f"""
 당신은 경제 뉴스 기반 학습용 퀴즈 생성 AI입니다.
-다음 뉴스 요약을 참고하여 **OX 퀴즈 5개 (전부 N단계)**를 만들어주세요.
+다음 뉴스 요약을 참고하여 **OX 퀴즈 5개 (N단계)**를 만들어주세요.
 
-🎯 목표:
-- 입문자도 쉽게 풀 수 있는 **기초 사실 확인형(N단계)** 문제여야 합니다.
-- 문장은 간결하고 명확해야 하며, 기사 내용 그대로 또는 직관적으로 판단 가능한 수준이어야 합니다.
+[목표]
+- 입문자도 쉽게 풀 수 있는 **기초 사실 확인형(N단계)** 문제를 만듭니다.
+- 문장은 간결하고 명확하게, 기사 내용만으로 판단 가능해야 합니다.
 
-규칙:
-1. 모든 문항은 명확하게 O 또는 X로 판단 가능한 문장이어야 합니다.
-2. 뉴스 summary의 사실만 사용하고 새로운 정보나 예측은 금지합니다.
-3. 문항들은 서로 다른 내용을 다뤄야 합니다.
-4. 문장은 짧고 명확하게, '~했다' / '~아니다' 형태로 작성하세요.
-5. answer 'O', 'X' 다양하게
-5. 해설은 정답/오답 여부와 관계없이, 문항의 사실적 근거를 한 줄로 명확히 설명한다.
-6. 해설은 학습자에게 설명하듯 자연스럽게 작성, 50자 내외로.
-7. 출력은 아래 JSON 형식만으로 주세요:
+[규칙]
+1. 모든 문항은 명확히 O 또는 X로 판단 가능한 문장으로 작성합니다.
+2. 뉴스 요약의 사실만 사용하며, 새로운 정보·추측·예측은 금지합니다.
+3. 각 문항은 서로 다른 사실을 다뤄야 합니다.
+4. 문장은 '~했다', '~아니다'처럼 단정형으로 씁니다.
+5. 정답(O/X)은 다양하게 섞습니다.
+6. 해설은 한 줄(50자 이내)로, 사실 근거를 명확히 설명합니다.
+7. 출력은 아래 JSON 형식만으로 반환합니다.
 
 출력 형식(JSON):
 [
@@ -102,6 +98,8 @@ for i, item in enumerate(result["items"], 1):
     else:
         print("정답 정보 없음\n")
 
+# === 파일 저장 ===
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
