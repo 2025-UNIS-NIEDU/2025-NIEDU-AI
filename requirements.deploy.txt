@@ -1,18 +1,30 @@
-# === Minimal Deployment Dependencies ===
-python-dotenv>=1.0.0
-chromadb>=0.6.0,<1.0.0
-pydantic>=2.11.0,<3.0.0
-pandas>=2.0.0,<3.0.0
-tqdm>=4.67.0,<5.0.0
+﻿# === API / Framework ===
+fastapi==0.115.0
+uvicorn==0.30.6
+pydantic==2.9.2
+pydantic-settings==2.6.1
 
-# --- LangChain core (for RAG logic) ---
-langchain-core>=0.3.0,<1.0.0
-langchain-community>=0.3.0,<1.0.0
-langchain-openai>=0.3.0,<1.0.0
+# === LLM / Embedding / NLP ===
+openai==1.67.0
+chromadb==0.5.20
+sentence-transformers==3.2.0
+torch==2.6.0+cpu
+torchvision==0.21.0+cpu
+torchaudio==2.6.0+cpu
+scikit-learn==1.7.2
+numpy==2.1.1
+keybert==0.8.5
+kiwipiepy==0.19.0
+kiwipiepy_model==0.19.0
 
-# --- OpenAI client (used for LLM API) ---
-openai>=1.61.0,<2.0.0
+# === LangChain ===
+langchain==0.3.21
+langchain-core==0.3.46
+langchain-openai==0.3.9
+langchain-text-splitters==0.3.7
 
-# --- Optional utility (logging, retry, formatting) ---
-tenacity>=8.0.0,<9.0.0
-rich>=14.0.0,<15.0.0
+# === Utility ===
+requests==2.32.3
+python-dotenv==1.0.1
+PyYAML==6.0.3
+tqdm==4.67.1
