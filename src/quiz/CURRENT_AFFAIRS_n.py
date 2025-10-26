@@ -66,28 +66,26 @@ prompt_background_n = f"""
 출력은 **JSON 형식**으로만 작성하고, 불필요한 설명은 하지 마세요.
 
 ⚙️ 항목별 규칙:
-1. **이슈명** (기사 주제·핵심 키워드): 40자 이내, 한 줄 요약
-2. **원인** (사건 발생 배경·원인 요인): 최소 100자 이상, 120자 이내 구체적으로
-3. **상황(타임라인)** (시점별 전개·주요 행위자): 최소 100자 이상, 120자 이내
-4. **결과** (단기적 결과·즉각적 변화): 최소 80자 이상, 100자 이내
-5. **영향** (장기적 사회·경제·정치적 함의): 최소 80자 이상, 100자 이내
+1. **issue** (기사 주제·핵심 키워드): 40자 이내, 한 줄 요약
+2. **cause** (사건 발생 배경·원인 요인): 최소 100자 이상, 120자 이내 구체적으로
+3. **circumstance** (시점별 전개·주요 행위자): 최소 100자 이상, 120자 이내
+4. **result** (단기적 결과·즉각적 변화): 최소 80자 이상, 100자 이내
+5. **effect** (장기적 사회·경제·정치적 함의): 최소 80자 이상, 100자 이내
 
 ⚙️ 작성 규칙:
 - text는 지정된 글자 수 범위 내에서 충분히 구체적이고 자연스러운 문장으로 작성
 - 각 항목은 중복 없이 구체적으로
-- 'sourceUrl'은 snippet 중 관련성 높은 기사 링크를 사용
 - **JSON만 출력**, 추가 설명 금지
 
 출력 예시:
 {{
-  "level": "N",
-  "currentAffair": [
-    {{"label": "이슈명", "text": "...", "sourceUrl": "..." }},
-    {{"label": "원인", "text": "...", "sourceUrl": "..." }},
-    {{"label": "상황(타임라인)", "text": "...", "sourceUrl": "..." }},
-    {{"label": "결과", "text": "...", "sourceUrl": "..." }},
-    {{"label": "영향", "text": "...", "sourceUrl": "..." }}
-  ]
+  "CURRENT_AFFAIRS": {{
+    "issue": "...",
+    "cause": "...",
+    "circumstance": "...",
+    "result": "...",
+    "effect": "..."
+  }}
 }}
 
 ---
@@ -107,53 +105,50 @@ resp = client.chat.completions.create(
 
 raw_output = resp.choices[0].message.content.strip()
 
-# === 8. JSON 파싱 및 NIEdu 포맷 감싸기 ===
+# === 8. JSON 파싱 ===
 try:
-    parsed = json.loads(re.sub(r"```json|```", "", raw_output))
+    cleaned = re.sub(r"```json|```", "", raw_output)
+    parsed = json.loads(cleaned)
 except json.JSONDecodeError:
-    print(" JSON 파싱 실패 — 원문 그대로 저장합니다.")
-    parsed = {"level": "N", "currentAffair": []}
-
-# LLM이 "currentAffair" 구조로 줬을 경우 보정
-if "currentAffair" in parsed:
-    answers = []
-    for b in parsed["currentAffair"]:
-        answers.append({
-            "label": b.get("label"),
-            "text": b.get("text"),
-        })
-else:
-    # 혹시 배열 형태로 바로 반환된 경우
-    answers = parsed if isinstance(parsed, list) else []
-
-background_card = {
-    "topic" : topic,
-    "courseId": course_id,
-    "sessionId": session_id,
-    "contentType": "background",
-    "level": "n",
-    "items": [
-        {
-            "question": None,
-            "answers": answers
+    print("JSON 파싱 실패 — 원문 그대로 저장합니다.")
+    parsed = {
+        "CURRENT_AFFAIRS": {
+            "issue": "",
+            "cause": "",
+            "circumstance": "",
+            "result": "",
+            "effect": ""
         }
-    ]
+    }
+
+# === 구조 검증 및 보정 ===
+affairs = parsed.get("CURRENT_AFFAIRS", {})
+answers = {
+    "issue": affairs.get("issue", ""),
+    "cause": affairs.get("cause", ""),
+    "circumstance": affairs.get("circumstance", ""),
+    "result": affairs.get("result", ""),
+    "effect": affairs.get("effect", "")
 }
 
-# === 9️. 결과 출력 및 저장 ===
-print("\n=== 뉴스 요약문 ===")
-print(summary)
-print("\n=== 변환된 NIEdu 포맷 ===")
-print(json.dumps(background_card, ensure_ascii=False, indent=2))
+# === 최종 출력 (NIEdu 통합 구조)
+wrapped_output = {
+    "topic": selected_session.get("topic"),
+    "courseId": selected_session.get("courseId"),
+    "sessionId": selected_session.get("sessionId"),
+    "contentType": "CURRENT_AFFAIRS",
+    "level": "n",
+    "items": [answers],
+}
 
-# === 10. 저장 ===
+# 저장 또는 출력
 BASE_DIR = Path(__file__).resolve().parents[2]
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_background_n_{today}.json"
 
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_CURRENT_AFFAIRS_n_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
-    json.dump(background_card, f, ensure_ascii=False, indent=2)
+    json.dump(wrapped_output, f, ensure_ascii=False, indent=2)
 
-print(f"\n 저장 완료: {file_path}")
+print(f"CURRENT_AFFAIRS 저장 완료: {file_path}")

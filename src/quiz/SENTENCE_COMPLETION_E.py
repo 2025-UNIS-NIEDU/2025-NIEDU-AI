@@ -49,8 +49,6 @@ def generate_sentence_completion_quiz(summary: str):
     "answers": [
       {{
         "text": "견제와 균형을 유지하는 제도적 장치가 필요하다고 말했다.",
-        "isCorrect": true,
-        "explanation" : null,
       }}
     ]
   }}
