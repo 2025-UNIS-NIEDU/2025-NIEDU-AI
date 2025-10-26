@@ -35,21 +35,20 @@ PROMPT_TEMPLATES = {
     "tech": "과학·기술 관련 기술명, 개념, 시스템, 연구용어 등 4개 추출",
 }
 
-topic_key = next((t for t in course_id if t in PROMPT_TEMPLATES.keys()), None)
+topic_key = next((t for t in PROMPT_TEMPLATES.keys() if t in topic.lower()), None)
 
 prompt = f"""
 당신은 뉴스 요약문에서 핵심 전문용어를 추출하고 표제어 형태로 정제하는 전문가입니다.
-아래 뉴스의 주제는 **{topic_key}**이며, 다음 기준에 따라 용어를 4개만 추출하세요.
+아래 뉴스의 주제는 **{topic_key}**이며, 다음 기준에 따라 용어를 최대 4개 추출하세요.
 
-🎯 추출 기준:
-- {PROMPT_TEMPLATES[topic_key]}
-- 실제 뉴스 요약문에 등장한 단어만 사용
-- 인명, 기관명, 지명, 기업명 제외
-- 상업적 목적과 연관된 단어 제외
-- 불필요한 수식어나 조사 제거 (예: ~추진, ~계획, ~논의 등)
-- 각 용어는 1~3단어의 명사 형태
-- 쉼표로 구분하여 출력 (예: 탄소중립, 전력시장, 재생에너지, 전기요금제)
-- 추가 설명이나 문장은 출력하지 말고, 쉼표로 구분된 단어만 출력하세요.
+[용어 선정 기준]
+1. {PROMPT_TEMPLATES[topic_key]} 와 밀접하게 연관된 **전문적·기술적 개념**일 것  
+2. 뉴스 요약문에 **직접 등장하거나 암시된 핵심 주제**일 것  
+3. 일상적인 일반어는 제외하고, 해당 주제(도메인) 내에서만 사용되는 전문어(예: 제도명, 정책명, 기술명, 지표명 등)를 중심으로 추출하세요.
+4. 각 용어는 1~3단어 이내의 **표제어 형태**로 정제  
+5. 불필요한 조사나 동사형(예: 추진, 논의, 강화)은 제거  
+6. 인명·기관명·지명·상표명은 제외  
+7. 의미 중복이 없도록 상호 구별되는 용어만 남김  
 
 [뉴스 요약문]
 {summary}
@@ -99,25 +98,26 @@ def fetch_definition(term):
     return term, snippet
 
 # === 5.5 용어 정의 완성 ===
-def complete_snippet(term, snippet):
+def complete_snippet(term, snippet, summary):
     prompt = f"""
-다음 문장은 '{term}'의 정의 일부로 보입니다.
+당신은 '{term}'의 개념을 뉴스 요약문 맥락에서 자연스럽고 정확하게 정의하는 전문가입니다.
 
-1️. 먼저, 주어진 문장을 **한글로만** 구성된 **완전한 문장**으로 자연스럽게 이어서 완성하세요.
-2️. 만약 원문이 지나치게 끊기거나, 이은 문장이 문법적으로나 의미상으로 말이 되지 않는다면
-   — 그때는 '{term}'의 정의를 **새롭게 한 문장으로 재작성**하세요.
-3️.불필요한 기호(..., ·, :, -, “”, 등)는 모두 제거하세요.
-4. 최대 80자 이내로 작성하세요.
+[뉴스 요약문]
+{summary}
 
-규칙:
-- 반드시 한 문장으로 작성
-- 문체는 사전식 정의체 (“~이다.”, “~를 의미한다.”, “~을 말한다.” 등)
-- 주어진 내용이 자연스럽게 끝나면 새로운 내용은 추가하지 말 것
-- 문장이 끝날 때 반드시 마침표로 종료
-- 영어나 숫자는 그대로 두되, 불필요한 영어 설명은 제거
-
-[입력 문장]
+[입력된 정의 후보]
 {snippet}
+
+[작성 규칙]
+1. 먼저 위 문장이 '{term}'의 정의로서 뉴스 요약문 맥락에 **적절한지** 판단하세요.
+2. 만약 문장이 맥락과 다르거나, 사실상 의미가 어긋나거나, 지나치게 일반적이면 — '{term}'의 정의를 **새롭게 작성**하세요.
+3. 자연스러운 경우에는 문법과 어투만 다듬어 완전한 문장으로 정리하세요.
+4. 문체는 사전식 정의체 (“~이다.”, “~을 의미한다.”, “~을 말한다.” 등)로 마무리합니다.
+5. 불필요한 영어·기호(…, :, ·, -, “”)는 모두 제거합니다.
+6. 한 문장, 60자 이내로만 작성합니다.
+7. 정의의 초점은 **이 뉴스에서의 의미**에 두세요 (사전 일반 정의가 아님).
+
+출력은 정의 문장 한 줄만 하세요.
 """
     res = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -125,8 +125,7 @@ def complete_snippet(term, snippet):
         temperature=0.0,
     )
 
-    completed = res.choices[0].message.content.strip()
-    return completed
+    return res.choices[0].message.content.strip()
 
 # === 6️. 예시 문장 + 비유 생성 ===
 def build_examples(term, news_text):
@@ -164,32 +163,42 @@ def build_examples(term, news_text):
         analogy = analogy[:117] + "…"
     return example, analogy
 
-# === 7️. 용어별 카드 생성 ===
+# === 7. LLM 결과 정리 ===
+llm_response = res.choices[0].message.content
+raw_terms = llm_response.strip()
+terms = re.split(r'[\n,]+|\d+\.\s*', raw_terms)
+terms = [t.strip() for t in terms if t.strip()]
+
+# === 8. 용어별 카드 생성 ===
 results = []
-for term in terms:
+for i, term in enumerate(terms, start=1):
     term, snippet = fetch_definition(term)
-    completed = complete_snippet(term, snippet) if snippet else None
+    completed = complete_snippet(term, snippet, summary) if snippet else None
     example, analogy = build_examples(term, summary)
+
     results.append({
-        "text": term,
-        "definition": completed or snippet,
-        "exampleSentence": example,
-        "analogy": analogy,
+        "termId": i,  
+        "name": term,
+        "definition": completed or snippet or "",
+        "exampleSentence": example or "",
+        "additionalExplanation": analogy or "",
     })
 
-# === 8️. NIEdu 포맷 ===
+# === 9. NIEdu 포맷 ===
 term_card = {
-    "topic" : topic,
+    "topic": topic,
     "courseId": course_id,
     "sessionId": session_id,
-    "contentType": "term",
+    "contentType": "TERMS_LEARNING",  
     "level": "n",
     "items": [
-        {"question": None, "answers": results}
+        {
+            "terms": results  
+        }
     ]
 }
 
-# === 9️. 결과 출력 및 저장 ===
+# === 10. 결과 출력 및 저장 ===
 print("\n=== 뉴스 요약문 ===")
 print(summary)
 print("\n=== 변환된 NIEdu 용어 카드 ===")
@@ -198,7 +207,7 @@ print(json.dumps(term_card, ensure_ascii=False, indent=2))
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-save_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_term_n_{today}.json"
+save_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_TERM_LEARNING_n_{today}.json"
 with open(save_path, "w", encoding="utf-8") as f:
     json.dump(term_card, f, ensure_ascii=False, indent=2)
 

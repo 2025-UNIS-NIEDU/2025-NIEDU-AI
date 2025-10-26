@@ -72,7 +72,7 @@ def sort_session_keys(session: dict) -> dict:
 def collect_articles_with_filter(topic: str, subTopic: str,
                                  date_from: str, date_to: str,
                                  seen_ids: set,
-                                 min_length: int = 250, target_samples: int = 10,
+                                 min_length: int = 250, target_samples: int = 70,
                                  max_pages: int = 50):
     """
     중복 제거 강화 버전
@@ -80,6 +80,14 @@ def collect_articles_with_filter(topic: str, subTopic: str,
     """
     endpoint = f"https://api-v2.deepsearch.com/v1/articles/{topic}"
     collected = []
+    seen_titles = set()
+
+    def normalize_title(title: str) -> str:
+        if not title:
+            return ""
+        title = re.sub(r"[^가-힣A-Za-z0-9 ]", "", title)
+        title = re.sub(r"\s+", " ", title).strip()
+        return title.lower()
 
     for page in range(1, max_pages + 1):
         print(f"  ↳ {topic}/{subTopic} | 페이지 {page} 호출 중...")
@@ -106,12 +114,20 @@ def collect_articles_with_filter(topic: str, subTopic: str,
 
         for a in articles:
             article_id = a.get("id")
+            title = (a.get("title") or "").strip()
+            norm_title = normalize_title(title)
 
-            # 전역 중복 필터링 (subTopic 간 중복 포함)
+            # === 1️. ID 중복 필터 ===
             if article_id in seen_ids:
-                print(f"⚠️ 중복 기사 스킵: {a.get('title')}")
+                print(f"중복 기사(ID): {title}")
                 continue
             seen_ids.add(article_id)
+
+            # === 2️. 제목 중복 필터 ===
+            if norm_title in seen_titles:
+                print(f"제목 중복 스킵: {title}")
+                continue
+            seen_titles.add(norm_title)
 
             summary = (a.get("summary") or "").strip()
 
@@ -122,12 +138,17 @@ def collect_articles_with_filter(topic: str, subTopic: str,
             if not is_purely_korean(summary):
                 continue
 
+            thumbnail_url = a.get("thumbnail_url")
+            if not thumbnail_url:
+                print(f"썸네일 없음: {a.get('title')} → 스킵")
+                continue
+
             session = {
                 "deepsearchId": article_id,
                 "topic": topic,
                 "subTopic": subTopic,
                 "summary": summary,
-                "contentUrl": a.get("content_url"),
+                "sourceUrl": a.get("content_url"),
                 "headline": a.get("title"),
                 "publishedAt": a.get("published_at"),
                 "publisher": a.get("publisher"),
@@ -158,35 +179,38 @@ TOPIC_SUBTOPICS = {
     "tech": "인공지능 OR 반도체 OR 로봇 OR 디지털 OR 과학기술 OR 연구개발 OR 혁신"
 }
 
-
 # === 실행 ===
-date_from = "2025-10-20"
-date_to = "2025-10-21"
+date_from = "2025-10-24"
+date_to = "2025-10-25"
+
+MAX_TOPIC_TOTAL = 70  # 토픽별 최대 수집 개수
 
 for topic, subTopics in TOPIC_SUBTOPICS.items():
     print(f"\n=== [{topic}] 기사 수집 중... ===")
     collected_all = []
     seen_ids = set()  # 전역 중복 추적 세트
 
-    subTopic_list = [s.strip() for s in re.split(r"\s*OR\s*", subTopics) if s.strip()]
+    # OR 전체를 그대로 하나의 쿼리로 사용 (ex: "대통령실 OR 국회 OR 정당 ...")
+    print(f"--- 통합 쿼리: {subTopics} ---")
 
-    for sub in subTopic_list:
-        print(f"--- 🔍 SubTopic 쿼리: {sub} ---")
-        try:
-            cleaned = collect_articles_with_filter(
-                topic=topic,
-                subTopic=sub,
-                date_from=date_from,
-                date_to=date_to,
-                seen_ids=seen_ids, 
-                min_length=250,
-                target_samples=10
-            )
-            collected_all.extend(cleaned)
-        except Exception as e:
-            print(f"[오류 발생] {topic}/{sub}: {e}")
-        time.sleep(2)
+    try:
+        cleaned = collect_articles_with_filter(
+            topic=topic,
+            subTopic=subTopics,
+            date_from=date_from,
+            date_to=date_to,
+            seen_ids=seen_ids,
+            min_length=250,
+            target_samples=MAX_TOPIC_TOTAL, 
+        )
+        collected_all.extend(cleaned)
 
+    except Exception as e:
+        print(f"[오류 발생] {topic}: {e}")
+
+    time.sleep(2)
+
+    # === 수집 완료 후 저장 ===
     backup_file = BACKUP_DIR / f"{topic}_{today}.json"
     with open(backup_file, "w", encoding="utf-8") as f:
         json.dump({"topic": topic, "articles": collected_all}, f, ensure_ascii=False, indent=2)

@@ -22,9 +22,8 @@ DB_ROOT.mkdir(parents=True, exist_ok=True)
 load_dotenv(dotenv_path=ENV_PATH, override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-embedding_fn = embedding_functions.OpenAIEmbeddingFunction(
-    api_key=OPENAI_API_KEY,
-    model_name="text-embedding-3-small"
+embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+    model_name="jhgan/ko-sroberta-multitask"
 )
 
 # 2️. 키 정렬 함수 (deepsearchId, topic, subTopic 우선)
@@ -155,3 +154,17 @@ for topic_dir in DB_ROOT.iterdir():
         print(f"예시: {list(unique_subs)[:5]}")
 
 print("\n모든 토픽 DB 저장 및 검증이 완료되었습니다.")
+
+# 7️. RAG DB 문서 수 확인
+print("\n=== 각 토픽별 문서 수 확인 ===")
+BASE_DIR = Path(__file__).resolve().parents[2]
+DB_ROOT = BASE_DIR / "data" / "db"
+
+for topic_dir in DB_ROOT.iterdir():
+    if topic_dir.is_dir():
+        client = chromadb.PersistentClient(path=str(topic_dir))
+        collection = client.get_or_create_collection(
+            name=f"{topic_dir.name}_news"
+        )
+        count = collection.count()
+        print(f"[{topic_dir.name}] 문서 수: {count}")

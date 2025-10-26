@@ -16,12 +16,12 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 # === 세션 선택 ===
 selected_session = select_session()
 topic = selected_session["topic"]
-coourse_id = selected_session["courseId"]            
+course_id = selected_session["courseId"]            
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
 
-print(f"\n선택된 코스: {coourse_id}")
+print(f"\n선택된 코스: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
@@ -40,9 +40,8 @@ prompt_answer = f"""
 
 출력 형식(JSON):
 {{
-  "answers": [
-    {{"word": "<단어>", "reason": "<이유>"}},
-    {{"word": "<단어>", "reason": "<이유>"}}
+    {{"word": "<단어>"}},
+    {{"word": "<단어>"}}
   ]
 }}
 
@@ -58,7 +57,7 @@ resp = client.chat.completions.create(
     temperature=0
 )
 answers_json = json.loads(re.sub(r"```json|```", "", resp.choices[0].message.content.strip()))
-answers = [a["word"] for a in answers_json["answers"]]
+answers = [a["word"] for a in answers_json]
 print(f"중심 키워드(정답): {answers}")
 
 # === KeyBERT 후보 점수화 ===
@@ -135,16 +134,27 @@ n_level = distractors[step * 2:]
 
 # === JSON 생성 ===
 def make_keyword_block(level, correct_list, distractors):
+    # --- 1. 정답 키워드 2개 선택 ---
     correct_two = correct_list[:2] if len(correct_list) >= 2 else correct_list
-    answers_block = [{"text": c, "isCorrect": True, "explanation": None} for c in correct_two]
-    answers_block += [{"text": d[0], "isCorrect": False, "explanation": None} for d in distractors[:3]]
+    summary_block = summary
+
+    # --- 3. 키워드 블록 생성 ---
+    keywords = [{"word": c, "isTopicWord": True} for c in correct_two]
+    keywords += [{"word": d[0], "isTopicWord": False} for d in distractors[:3]]
+
+    # --- 4. 최종 JSON 구조 ---
     return {
-        "topic" : topic,
-        "coourseId": coourse_id,
+        "topic": topic,
+        "courseId": course_id,
         "sessionId": session_id,
-        "contentType": "keyword",
+        "contentType": "SUMMARY_READING",
         "level": level,
-        "items": [{"question": None, "answers": answers_block}]
+        "items": [
+            {
+                "summary": summary_block,
+                "keywords": keywords
+            }
+        ]
     }
 
 correct_list = answers[:2] if len(answers) >= 2 else answers
@@ -164,7 +174,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = QUIZ_DIR / f"{topic}_{coourse_id}_{session_id}_keyword_nie_{today}.json"
+file_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_SUMMARY_READING_nie_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_json, f, ensure_ascii=False, indent=2)
 
