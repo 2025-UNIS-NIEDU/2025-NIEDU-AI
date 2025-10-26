@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+WORKDIR /app
+
+# 1️⃣ kiwi 빌드용 의존성 설치
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    g++ build-essential libgl1 && \
+    rm -rf /var/lib/apt/lists/*
+
+# 2️⃣ requirements 설치
+COPY requirements.deploy.txt .
+RUN pip install --no-cache-dir -r requirements.deploy.txt
+
+# 3️⃣ torch + kiwi 별도 설치
+RUN pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 \
+    --extra-index-url https://download.pytorch.org/whl/cpu && \
+    pip install --no-cache-dir kiwipiepy==0.19.0
+
+# 4️⃣ 코드 복사 및 실행
+COPY . .
+EXPOSE 8000
+CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]

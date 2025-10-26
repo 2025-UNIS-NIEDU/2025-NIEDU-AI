@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from src.service.ai_service import generate_quiz
+from src.quiz.CURRENT_AFFAIRS_n import generate_background_card_api
 from src.config.settings import settings
 
 app = FastAPI(title="NIEdu AI Backend")
@@ -14,5 +14,5 @@ def root():
 
 @app.post("/api/quiz")
 def quiz(req: QuizRequest):
-    quiz_text = generate_quiz(req.content)
-    return {"quiz": quiz_text}
+    result = generate_background_card_api()  # AI 로직 호출
+    return {"quiz": result}
