@@ -1,5 +1,6 @@
 import os, json, re
 from datetime import datetime
+from pathlib import Path
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from select_session import select_session
@@ -15,6 +16,7 @@ course_id = selected_session["courseId"]
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
+sourceUrl = selected_session.get("sourceUrl", "")
 
 print(f"\n선택된 태그: {course_id}")
 print(f"sessionId: {session_id}")
@@ -38,18 +40,19 @@ prompt_ox_n = f"""
 3. 각 문항은 서로 다른 사실을 다뤄야 합니다.
 4. 문장은 '~했다', '~아니다'처럼 단정형으로 씁니다.
 5. 정답(O/X)은 다양하게 섞습니다.
-6. 해설은 한 줄(50자 이내)로, 사실 근거를 명확히 설명합니다.
+6. 해설은 한 줄(50자 이내)로, 사실 근거를 명확히 설명하는 -다로 끝나는 문장.
+
 7. 출력은 아래 JSON 형식만으로 반환합니다.
 
 출력 형식(JSON):
 [
   {{
+    "contentId": 문제 번호,
     "question": "문장 형태의 문제",
-    "answer": "O 또는 X 중 하나",
-    "isCorrect": "true" or "false",
-    "explanation": "해설"
+    "correctAnswer": "정답 / O 또는 X 중 하나",
+    "answerExplanation": "해설"
+    "sourceUrl": "{sourceUrl}"
   }}
-]
 ]
 
 문제 : 
@@ -68,42 +71,49 @@ response = llm.invoke(prompt_ox_n)
 text = response.content.strip().replace("```json", "").replace("```", "").strip()
 parsed_n = json.loads(text)
 
-# === NIEdu 구조 변환 ===
-ox_items = []
-for q in parsed_n:
-    ans = q.get("answer", "").upper()
-    option_O = {"text": "O", "isCorrect": ans == "O", "explanation": q.get("explanation", "")}
-    option_X = {"text": "X", "isCorrect": ans == "X", "explanation": q.get("explanation", "")}
-    ox_items.append({"question": q["question"], "answers": [option_O, option_X]})
-
-result = {
-    "topic ": topic,
-    "courseId": course_id,
-    "sessionId": session_id,
-    "contentType": "ox",
-    "level": "n",
-    "items": ox_items
-}
-
 # === 결과 출력 및 저장 ===
 print("\n=== 뉴스 요약문 ===\n")
 print(summary)
 print("\n=== 생성된 N단계 OX 퀴즈 ===\n")
-for i, item in enumerate(result["items"], 1):
-    q = item["question"]
-    correct_option = next((opt for opt in item["answers"] if opt["isCorrect"]), None)
-    print(f"{i}. {q}")
-    if correct_option:
-        print(f"정답: {correct_option['text']} | {correct_option['explanation']}\n")
-    else:
-        print("정답 정보 없음\n")
+
+# === 변환: NIEdu 포맷 기반 ===
+ox_contents = []
+for i, q in enumerate(parsed_n, start=1):
+    ans = q.get("correctAnswer", q.get("answer", "")).strip().upper()
+    explanation = q.get("answerExplanation", "")
+    question = q.get("question", "").strip()
+
+    # 유효성 체크
+    if ans not in ["O", "X"]:
+        ans = "O"  # fallback
+
+    ox_contents.append({
+        "contentId": i,
+        "question": question,
+        "correctAnswer": ans,
+        "answerExplanation": explanation,
+        "sourceUrl": sourceUrl
+    })
+
+# === NIEdu 포맷 ===
+result = {
+    "contentType": "OX_QUIZ",  
+    "level": "N",
+    "contents": ox_contents
+}
+
+# === 콘솔 출력 ===
+for item in result["contents"]:
+    print(f"{item['contentId']}. {item['question']}")
+    print(f"정답: {item['correctAnswer']} | {item['answerExplanation']}\n")
 
 # === 파일 저장 ===
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = Path(__file__).resolve().parents[2]
 SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_ox_n_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_OX_QUIZ_N_{today}.json"
+
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(result, f, ensure_ascii=False, indent=2)
 

@@ -13,7 +13,7 @@ today = datetime.now().strftime("%Y-%m-%d")
 BASE_DIR = Path(__file__).resolve().parents[2]
 ENV_PATH = BASE_DIR / ".env"
 BACKUP_DIR = BASE_DIR / "data" / "backup"
-DB_ROOT = BASE_DIR / "data" / "db"
+DB_ROOT = BASE_DIR / "data" / "rag_db"
 
 BACKUP_DIR.mkdir(parents=True, exist_ok=True)
 DB_ROOT.mkdir(parents=True, exist_ok=True)

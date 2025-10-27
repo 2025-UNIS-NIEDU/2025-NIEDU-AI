@@ -65,17 +65,17 @@ prompt_background_n = f"""
 모든 항목은 반드시 존재해야 하며, 각 항목별로 'text'(설명)과 'sourceUrl'(출처 URL)을 포함하세요.
 출력은 **JSON 형식**으로만 작성하고, 불필요한 설명은 하지 마세요.
 
-⚙️ 항목별 규칙:
+[항목별 규칙]
 1. **issue** (기사 주제·핵심 키워드): 40자 이내, 한 줄 요약
 2. **cause** (사건 발생 배경·원인 요인): 최소 100자 이상, 120자 이내 구체적으로
 3. **circumstance** (시점별 전개·주요 행위자): 최소 100자 이상, 120자 이내
 4. **result** (단기적 결과·즉각적 변화): 최소 80자 이상, 100자 이내
 5. **effect** (장기적 사회·경제·정치적 함의): 최소 80자 이상, 100자 이내
 
-⚙️ 작성 규칙:
-- text는 지정된 글자 수 범위 내에서 충분히 구체적이고 자연스러운 문장으로 작성
-- 각 항목은 중복 없이 구체적으로
-- **JSON만 출력**, 추가 설명 금지
+[작성 규칙]
+1. text는 지정된 글자 수 범위 내에서 충분히 구체적이고 자연스러운 문장으로 작성
+2. 각 항목은 중복 없이 구체적으로
+3. **JSON만 출력**, 추가 설명 금지
 
 출력 예시:
 {{
@@ -133,12 +133,9 @@ answers = {
 
 # === 최종 출력 (NIEdu 통합 구조)
 wrapped_output = {
-    "topic": selected_session.get("topic"),
-    "courseId": selected_session.get("courseId"),
-    "sessionId": selected_session.get("sessionId"),
     "contentType": "CURRENT_AFFAIRS",
-    "level": "n",
-    "items": [answers],
+    "level": "N",
+    "contents": [answers],
 }
 
 # 저장 또는 출력
@@ -147,7 +144,7 @@ SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
 
-file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_CURRENT_AFFAIRS_n_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_CURRENT_AFFAIRS_N_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(wrapped_output, f, ensure_ascii=False, indent=2)
 
