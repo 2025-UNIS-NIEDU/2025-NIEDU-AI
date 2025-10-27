@@ -21,6 +21,7 @@ course_id = selected_session["courseId"]
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
+sourceUrl = selected_session.get("sourceUrl", "")
 
 print(f"\n=== 세션 정보 ===")
 print(f"코스 ID: {course_id}")
@@ -30,7 +31,7 @@ print(f"요약문: {summary[:200]}...\n")
 
 # === 3️. 모델 & 임베더 설정 ===
 llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
-llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+llm_i = ChatOpenAI(model="gpt-4o", temperature=0.3)
 llm_harder = ChatOpenAI(model="gpt-5")
 embedder = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
@@ -62,18 +63,19 @@ def parse_json_output(res):
 parse_node = RunnableLambda(parse_json_output)
 
 # === 6️. 검증 (추론형 문제 전용) ===
-def validate_inference_simple(candidates, summary, embedder, q_threshold=0.3, a_threshold=0.6):
+def validate_inference_simple(candidates, summary, embedder, q_threshold=0.1, a_threshold=0.3):
     validated = []
     for cand in candidates:
         q = cand.get("question", "")
-        answers = cand.get("answers", [])
-        correct = next((a["text"] for a in answers if a.get("isCorrect")), None)
-        if not q or not correct:
+        options = cand.get("options", [])
+        correct_label = cand.get("correctAnswer")
+        correct_option = next((opt["text"] for opt in options if opt["label"] == correct_label), None)
+        if not q or not correct_option:
             cand["validation"] = "데이터 누락"
             continue
 
         q_sim = util.cos_sim(embedder.encode(q), embedder.encode(summary)).item()
-        a_sim = util.cos_sim(embedder.encode(correct), embedder.encode(summary)).item()
+        a_sim = util.cos_sim(embedder.encode(correct_option), embedder.encode(summary)).item()
         score = round(q_sim * 0.4 + a_sim * 0.6, 2)
 
         cand.update({
@@ -102,75 +104,79 @@ quiz_pipeline = RunnableMap({
     ),
 })
 
-# === 8️. 전체 실행 함수 ===
+# === 8. 문제 생성  ===
 def generate_all_quizzes(summary: str):
     print("=== 퀴즈 생성 시작 ===")
 
-    # 1️. N단계 (사실형)
+    # ① N단계 (사실형)
     fact_n = (prompt_fact_n | llm_n | parse_node).invoke({"summary": summary})
-    print("N단계 완료")
+    print(f"N단계 완료: {len(fact_n)}문항 생성")
 
-    # 2️. I단계 (추론형)
+    # ② I단계 (추론형)
     inference_i = (prompt_inference_i | llm_i | parse_node).invoke({"summary": summary})
-    print("I단계(추론형) 완료")
+    print(f"I단계(추론형) 완료: {len(inference_i)}문항 생성")
 
-    # 3️. 검증 (추론형 문제 유효성)
+    # ③ 검증
     print("\n=== 추론형 검증 ===")
     validated_i = validate_inference_simple(inference_i, summary, embedder)
     print(f"검증 통과 수: {len(validated_i)} / {len(inference_i)}")
 
-    # 4️. I단계 (심화형) - 검증된 결과 + 기초 문제 활용
-    harder_input = {
-        "n_quiz": json.dumps(fact_n, ensure_ascii=False, indent=2),
-        "i_quiz": json.dumps(validated_i, ensure_ascii=False, indent=2),
-        "summary": summary,
-    }
-    harder_i = (prompt_harder_i | llm_harder | parse_node).invoke(harder_input)
-    print("I단계(심화형) 완료")
+    # ④ 부족분 계산
+    num_needed = 5 - len(validated_i)
+    harder_i = []
+    if num_needed > 0:
+        print(f"추론형 부족 → {num_needed}개 심화형(N단계 기반) 생성 중...")
+
+        # 프롬프트 미리 채워서 문자열로 완성
+        harder_prompt = prompt_harder_i.format_prompt(
+            summary=summary,
+            n_quiz=json.dumps(fact_n, ensure_ascii=False, indent=2),
+            required_count=num_needed
+        )
+
+        # LLM 직접 호출 + JSON 파싱
+        harder_response = llm_harder.invoke(harder_prompt.to_messages())
+        harder_i = parse_json_output(harder_response)
+        print(f"심화형 생성 완료: {len(harder_i)}문항")
+
+    # ⑤ 최종 I단계 = 추론형(통과) + 심화형 보충
+    total_i = validated_i + harder_i
+    total_i = total_i[:5]
+
+    for idx, q in enumerate(total_i, start=1):
+        q["contentId"] = str(idx)
+    print(f"최종 I단계 문제 수: {len(total_i)}")
 
     return {
-        "fact_n": fact_n,
-        "inference_i": validated_i,
-        "harder_i": harder_i,
+        "fact_n": fact_n,       # 사실형 5문항
+        "inference_i": total_i  # 추론형+심화형 합쳐서 5문항
     }
 
-# === 9. 출력 포맷 변환 ===
-def format_quiz_output(data, topic, course_id, session_id):
+# === 8. 출력 포맷  ===
+def format_quiz_output(data):
     """
-    LangChain 생성 결과(fact_n, inference_i, harder_i)를
-    최종 표준 출력 포맷으로 변환.
+    N단계, I단계, 심화형 모두 동일 포맷 유지.
+    (I단계에는 추론형+심화형이 이미 통합되어 있음)
     """
     formatted = []
 
-    # === N단계 ===
-    formatted.append({
-        "topic": topic,
-        "courseId": course_id,
-        "sessionId": session_id,
-        "contentType": "multi",
-        "level": "n",
-        "items": data.get("fact_n", [])
-    })
-
-    # === I단계 ===
-    i_items = data.get("inference_i") or data.get("harder_i", [])
-    cleaned_i = []
-
-    for item in i_items:
-        cleaned_i.append({
-            "question": item.get("question"),
-            "answers": item.get("answers"),
+    for level, key in [("N", "fact_n"), ("I", "inference_i")]:
+        items = data.get(key, [])
+        cleaned = []
+        for item in items:
+            cleaned.append({
+                "contentId": item.get("contentId"),
+                "question": item.get("question"),
+                "options": item.get("options"),
+                "correctAnswer": item.get("correctAnswer"),
+                "answerExplanation": item.get("answerExplanation")
+            })
+        formatted.append({
+            "contentType": "MULTIPLE_CHOICE",
+            "level": level,
+            "sourceUrl": sourceUrl,
+            "contents": cleaned
         })
-
-    formatted.append({
-        "topic": topic,
-        "courseId": course_id,
-        "sessionId": session_id,
-        "contentType": "multi",
-        "level": "i",
-        "items": cleaned_i
-    })
-
     return formatted
 
 # === 10. 저장 ===
@@ -180,7 +186,7 @@ def save_quiz_json(data, topic, course_id, session_id):
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d")
 
-    file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_multi_ni_{today}.json"
+    file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_MULTIPLE_NI_{today}.json"
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -189,6 +195,6 @@ def save_quiz_json(data, topic, course_id, session_id):
 # === 11. 실행 ===
 if __name__ == "__main__":
     all_quizzes = generate_all_quizzes(summary)
-    formatted_output = format_quiz_output(all_quizzes, topic, course_id, session_id)
+    formatted_output = format_quiz_output(all_quizzes)
     save_quiz_json(formatted_output, topic, course_id, session_id)
     print("=== 전체 완료 ===")

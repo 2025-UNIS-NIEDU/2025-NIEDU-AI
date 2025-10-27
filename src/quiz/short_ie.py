@@ -18,68 +18,62 @@ course_id = selected_session["courseId"]
 session_id = selected_session.get("sessionId")
 headline = selected_session.get("headline", "")
 summary = selected_session.get("summary", "")
+sourceUrl = selected_session.get("sourceUrl", "")
 
 print(f"\n선택된 태그: {course_id}")
 print(f"sessionId: {session_id}")
 print(f"제목: {headline}\n")
 
 # === 모델 설정 ===
-llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)  # I단계
-llm_e = ChatOpenAI(model="gpt-4o")
+llm_i = ChatOpenAI(model="gpt-4o", temperature=0.3)  # I단계
+llm_e = ChatOpenAI(model="gpt-5") # E단계
 
 # === I단계 문제 생성 ===
 def generate_quiz_i(summary: str):
-    prompt_i = f"""
+  prompt_i = f"""
 당신은 뉴스 기반 학습 퀴즈 생성 AI입니다.
 아래 뉴스 내용을 참고하여 단답식 문제를 10개 만들어주세요.
 
-[어휘 및 문체 기준]
-1. 원문의 의미를 유지하되, 표현은 더 정제되고 분석적으로 바꿉니다.
-2. 문어체를 사용하되, 지나치게 학술적이지 않게 자연스럽게 유지합니다.
-
 [문항 구성 기준]
-1. 뉴스의 핵심 사실(숫자, 인물, 정책명 등)을 직접 확인할 수 있는 문제
-2. 육하원칙(언제·어디서·누가·무엇을)에 충실한 사실 기반 질문으로 구성
-3. ‘왜’, ‘어떻게’ 등 원인·방법형 질문은 제외
-4. 각 문항은 서로 다른 사실 요소를 다룸
-5. 정답은 뉴스에 명시된 내용만 사용
+1. 질문은 뉴스에서 다룬 **핵심 개념·정책·사건·제도명** 중심으로 작성합니다.
+2. 인물명·지명·시간 관련 표현·수치 등은 절대 정답으로 사용하지 않습니다.
+3. 각 문항은 서로 다른 사실 또는 관점 요소를 다룹니다.  
 
-[추가 지침]
-1. 날짜, 연도, 수치, 통계, 인용문, 이름 등을 묻는 문제는 생성하지 마세요.
+[정답 생성 규칙]
+1. 정답은 반드시 명사 한 단어로 작성합니다.  
+2. 모든 정답은 중복되지 않게 합니다.
+3. 시간 표현, 평가·감정 표현, 추상적 행위명사, 대명사·지시사 등은 정답으로 사용하지 않습니다.  
+4. 정답은 자동 채점이 가능한 단어여야 하며, 의미가 유사하거나 변형 가능한 단어는 모두 금지합니다.  
+5. 정답은 뉴스에 명시된 **한 단어 명사**로, 사람, 조직, 제도, 정책, 사건, 혹은 명확한 사물 이름이어야 합니다.
 
 [세부 규칙]
-1. question은 40자 이내, 한 문장
-2. 정답은 한 단어 (뉴스에 명시된 내용만)
-3. 해설은 50자 이내, 사실적 근거 중심
-4. 출력은 반드시 유효한 JSON 형식만 사용하세요.
+1. question은 최소 30자, 40자 이내, 한 문장, 의문형 문어체
+2. 해설은 50자 이내, 사실적 근거 중심, 모든 해설 문장은 한 문장으로 작성하고, ‘~다.’로 끝나는 단정형 문체를 사용하세요.
+3. 출력은 반드시 유효한 JSON 형식만 사용하세요.
 
 출력 예시 (JSON):
 [
   {{
-    "question": "질문 내용",
-    "answers": [
-      {{
-        "text": "정답",
-        "isCorrect": "true",
-        "explanation": "해설"
-      }}
-    ]
+   "contentId" : 문제 번호,
+   "question": "질문",
+   "correctAnswer": "정답",
+   "answerExplanation": "해설"
   }}
 ]
 
 뉴스 요약:
 {summary}
 """
-    res = llm_i.invoke(prompt_i)
-    text = res.content.strip().replace("```json", "").replace("```", "")
-    return json.loads(text)
+  res = llm_i.invoke(prompt_i)
+  text = res.content.strip().replace("```json", "").replace("```", "")
+  return json.loads(text)
 
 def generate_advanced_e(i_quiz, summary):
     """I단계 10문항 중 5개를 자동 선정 후 E단계로 변환"""
     
     # === 1️. E단계 후보 선정 ===
     sel_prompt = f"""
-    다음 I단계 문제 10개 중에서 E단계(고급 문어체)로 변환하기 적합한 5개를 선택하세요.
+    다음 I단계 문제 6개 중에서 E단계(고급 문어체)로 변환하기 적합한 5개를 선택하세요.
     - 정책·사회적 의미 중심
     - 단순 수치·날짜형 제외
     - JSON 배열로 질문만 출력 (예: ["질문1", "질문2", ...])
@@ -101,7 +95,7 @@ def generate_advanced_e(i_quiz, summary):
     # === 3️. E단계 문제 작성 ===
     prompt_e = f"""
 당신은 뉴스 기반 학습 설계자이자 교육 평가 전문가입니다.
-아래 추출된 I단계 문제 5개를 **고급 문어체 단답식(E 단계)** 문제 5개로 재작성하세요.
+아래 추출된 I단계 문제 3개를 **고급 문어체 단답식(E 단계)** 문제 5개로 재작성하세요.
 
 [어휘 및 문체 기준]
 1. 문체는 공식적·논리적이며, 사실에 근거하되 사회적·정책적 의미를 암시해야 합니다.
@@ -117,36 +111,33 @@ def generate_advanced_e(i_quiz, summary):
   → "해당 사안이 초래된 배경 요인은 무엇인가?"
 
 [문항 구성 기준]
-1. I단계의 정답(answer)은 그대로 유지
-2. 정답은 한 단어
+1. I단계의 정답은 그대로 유지
+2. 정답은 반드시 **명사 한 단어**로 작성
 3. 질문은 그 단어의 의미·맥락을 탐구하도록 하세요.
 
-[해설(explanation) 지침]
-1. 해설은 단순히 ‘왜 정답인가’를 설명하는 수준을 넘어서야 함
-2. 50자 내외로 아래 두 요소를 모두 포함해야 함:
+[해설 지침]
+1. 50자 내외로 아래 두 요소를 모두 포함해야 함:
   - 정답의 사실적 근거 (기사 내용 기반)
   - 정답이 갖는 사회적·정책적·논리적 중요성
+2. 모든 해설은 한 문장으로 작성하고, ‘~다.’로 끝나는 단정형 문체를 사용.
 
 [세부 규칙]
-1. question: 문어체, 35~45자
-2. explanation: 최소 45자, 50자 내외
-3. JSON 배열로 출력 (camelCase 필드명 사용)
+1. question: 30-40자, 의문형 문어체
+2. explanation: 최소 40자, 50자 내외
+3. JSON 배열로 출력 
 4. 기사 외 정보, 추측, 사견 절대 금지
 5. 출력은 반드시 유효한 JSON 형식만 사용하세요.
 
 출력 예시 (JSON):
 [
   {{
-    "question": "국방부가 방첩사 개편 일정을 공식화한 시점은 언제인가?",
-    "answers": [
-      {{
-        "text": "2026년",
-        "isCorrect": "true",
-        "explanation": "국방부는 방첩사 개편을 내년까지 완료하겠다고 명시했다. 이는 조직 재편의 실행력과 투명성을 학습자가 인식하도록 유도하기 위함이다."
-      }}
-    ]
+    "contentId" : 문제 번호,
+    "question": "질문",
+    "correctAnswer": "정답",
+    "answerExplanation": "해설"
   }}
 ]
+
 
 [E 문제 후보]
 {json.dumps(target_items, ensure_ascii=False, indent=2)}
@@ -168,6 +159,12 @@ def generate_advanced_e(i_quiz, summary):
 
     # === 4️. 남은 I단계 5문항 ===
     remaining_i = [q for q in i_quiz if q["question"] not in selected_questions]
+
+    # 각 단계별 contentId 재정렬 (1~5)
+    for idx, q in enumerate(remaining_i, start=1):
+        q["contentId"] = idx
+    for idx, q in enumerate(e_items, start=1):
+        q["contentId"] = idx
 
     print(f"변환된 E단계 문제 수: {len(e_items)}")
     print(f"남은 I단계 문제 수: {len(remaining_i)}")
@@ -199,24 +196,20 @@ today = datetime.now().strftime("%Y-%m-%d")
 
 final_result = [
     {
-        "topic" : topic,
-        "courseId": course_id,
-        "sessionId": session_id,
-        "contentType": "short",
-        "level": "i",
-        "items": remaining_i
+        "contentType": "SHORT",
+        "level": "I",
+        "sourceUrl": sourceUrl,
+        "contents": remaining_i
     },
     {
-        "topic" : topic,
-        "courseId": course_id,
-        "sessionId": session_id,
-        "contentType": "short",
-        "level": "e",
-        "items": e_quiz
+        "contentType": "SHORT",
+        "level": "E",
+        "sourceUrl": sourceUrl,
+        "contents": e_quiz
     }
 ]
 
-file_path = SAVE_DIR / f"{topic}_{course_id}_short_ie_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_SHORT_IE_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_result, f, ensure_ascii=False, indent=2)
 

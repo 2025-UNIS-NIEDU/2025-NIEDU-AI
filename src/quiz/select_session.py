@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-COURSE_DIR = BASE_DIR / "data" / "course"
+COURSE_DIR = BASE_DIR / "data" / "course_db"
 
 
 def select_session(topic: str = None, sub_topic: str = None, course_id: int = None, session_id: int = None):

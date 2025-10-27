@@ -134,7 +134,10 @@ n_level = distractors[step * 2:]
 
 # === JSON 생성 ===
 def make_keyword_block(level, correct_list, distractors):
-    # --- 1. 정답 키워드 2개 선택 ---
+
+    # --- 1. 레벨 타입 정의 ---
+    level = level.upper()
+    # --- 2. 정답 키워드 2개 선택 ---
     correct_two = correct_list[:2] if len(correct_list) >= 2 else correct_list
     summary_block = summary
 
@@ -144,12 +147,9 @@ def make_keyword_block(level, correct_list, distractors):
 
     # --- 4. 최종 JSON 구조 ---
     return {
-        "topic": topic,
-        "courseId": course_id,
-        "sessionId": session_id,
         "contentType": "SUMMARY_READING",
         "level": level,
-        "items": [
+        "contents": [
             {
                 "summary": summary_block,
                 "keywords": keywords
@@ -174,7 +174,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-file_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_SUMMARY_READING_nie_{today}.json"
+file_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_SUMMARY_READING_NIE_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_json, f, ensure_ascii=False, indent=2)
 

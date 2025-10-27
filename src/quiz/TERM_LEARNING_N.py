@@ -61,7 +61,51 @@ res = client.chat.completions.create(
 )
 
 terms = [t.strip() for t in res.choices[0].message.content.strip().split(",") if t.strip()]
-terms = terms[:4]  # 혹시 5개 이상 나오면 앞의 4개만 사용
+terms = terms[:4]  
+
+# === 4. LLM 기반 일반어 필터링 ===
+filter_prompt = f"""
+아래 용어 목록에서 **전문용어가 아닌 일반적인 단어**를 모두 제거하세요.
+[제거 기준]
+- 일상적 단어: 누구나 일상 대화에서 쓰는 말 (예: 사회, 문제, 사람, 산업)
+- 포괄적 개념: 구체적 제도나 정책이 아닌 추상적 개념
+- 비전문어: 구체적 절차, 제도, 기구, 기술명, 법률명 등이 아닌 경우
+- 인명, 지명, 상업적 명칭(브랜드명, 기업명, 상품명 등)은 무조건 제거
+
+출력 예시:
+["열린 경선", "컷오프", "권리당원"]
+
+[뉴스 요약문]
+{summary}
+
+[1차 추출 용어]
+{', '.join(terms)}
+"""
+
+filter_res = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": filter_prompt}],
+    temperature=0
+)
+
+# --- JSON 파싱 시도 ---
+try:
+    filtered_terms = json.loads(filter_res.choices[0].message.content.strip())
+except Exception as e:
+    print("필터링 JSON 파싱 오류:", e)
+    filtered_terms = terms  
+
+# --- 필터링 결과 반영 ---
+if filtered_terms:
+    terms = filtered_terms
+else:
+    print("\n 필터링 후 남은 전문용어가 없습니다. 원본을 그대로 사용합니다.")
+    terms = terms  # 그대로 유지
+
+# --- 중간 점검 (필터링 이후 실행) ---
+print("\n 필터링 완료! 적용된 전문용어 목록:")
+print(json.dumps(terms, ensure_ascii=False, indent=2))
+print("------------------------------------------------\n")
 
 # === 5️ 용어 정의  ===
 def fetch_definition(term):
@@ -69,7 +113,7 @@ def fetch_definition(term):
     params = {
         "key": GOOGLE_API_KEY,
         "cx": GOOGLE_CSE_CX_DICT,
-        "q": f"{term} 정의 OR 의미",
+        "q": f"{terms} 정의 OR 의미",
         "num": 10,
         "lr": "lang_ko"
     }
@@ -132,9 +176,10 @@ def build_examples(term, news_text):
     prompt_1 = f"""
     다음 뉴스 내용을 참고하여 "{term}"이(가) 포함된 자연스럽고 완전한 한 문장을 만들어주세요.
     - 실제 뉴스 문체(보도체)를 유지하세요.
-    - 문장이 중간에서 끊기지 않도록 완전하게 작성하세요.
+    - 예시 문장끼리 겹치지 않게 다양하게 표현하세요.
     - 문체나 어휘가 다른 용어의 문장과 **중복되지 않도록** 다양하게 표현
     - 100자 이내로 1문장만 출력하세요.
+    - -다.로 끝나는 단정형 문체 사용
 
     [뉴스 요약문]
     {news_text}
@@ -164,10 +209,11 @@ def build_examples(term, news_text):
     return example, analogy
 
 # === 7. LLM 결과 정리 ===
-llm_response = res.choices[0].message.content
-raw_terms = llm_response.strip()
-terms = re.split(r'[\n,]+|\d+\.\s*', raw_terms)
-terms = [t.strip() for t in terms if t.strip()]
+if not terms or len(terms) == 0:
+    llm_response = res.choices[0].message.content
+    raw_terms = llm_response.strip()
+    terms = re.split(r'[\n,]+|\d+\.\s*', raw_terms)
+    terms = [t.strip() for t in terms if t.strip()]
 
 # === 8. 용어별 카드 생성 ===
 results = []
@@ -186,14 +232,11 @@ for i, term in enumerate(terms, start=1):
 
 # === 9. NIEdu 포맷 ===
 term_card = {
-    "topic": topic,
-    "courseId": course_id,
-    "sessionId": session_id,
     "contentType": "TERMS_LEARNING",  
-    "level": "n",
-    "items": [
+    "level": "N",
+    "contents": [
         {
-            "terms": results  
+        "terms": results  
         }
     ]
 }
@@ -207,7 +250,7 @@ print(json.dumps(term_card, ensure_ascii=False, indent=2))
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 QUIZ_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
-save_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_TERM_LEARNING_n_{today}.json"
+save_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_TERM_LEARNING_N_{today}.json"
 with open(save_path, "w", encoding="utf-8") as f:
     json.dump(term_card, f, ensure_ascii=False, indent=2)
 

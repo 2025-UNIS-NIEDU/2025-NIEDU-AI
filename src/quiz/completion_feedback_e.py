@@ -1,7 +1,8 @@
 from openai import OpenAI
 import os, json
+from pathlib import Path
 from dotenv import load_dotenv
-
+from datetime import datetime
 
 # === 환경 변수 ===
 load_dotenv(override=True)
@@ -14,13 +15,18 @@ def evaluate_meaning(answer: str, userAnswer: str):
 당신은 뉴스 문장 평가 전문가이자 한국어 학습 피드백 코치입니다.
 학습자의 문장이 모범답안의 의미를 얼마나 잘 전달했는지를 평가해주세요.
 
-[평가 지침]
-1. 핵심 의미가 완전히 반대일 경우 반드시 40점 이하로 평가하세요.
-2. 의미와 방향성(긍정/부정/주장/반박 등)이 모두 일치하면 90점 이상.
-3. 문장 표현이 다르더라도 의도나 논리 구조가 같다면 80점 이상을 부여하세요.
-4. 주제는 같지만 강조점이나 방향이 약간 어긋나면 60~79점.
-5. 핵심 개념이 다르거나 반대 논리이면 40~59점.
-6. 거의 무관하거나 반대 의미일 경우 39점 이하.
+[평가 절차]  
+1. 모범답안의 핵심 의미(주장, 결론, 방향성)를 간단히 파악합니다.  
+2. 학습자의 문장이 이 의미를 올바르게 전달했는지만 평가합니다.  
+3. 문체, 어법, 세부 표현의 차이는 감점하지 않습니다.  
+4. 의미가 동일하거나 거의 동일하다면 90점 이상을 부여합니다.  
+5. 완전히 반대되거나 왜곡된 경우에만 큰 감점을 적용합니다.  
+
+[평가 기준]  
+1. 의미가 동일하거나 거의 동일 (핵심 주장 또는 방향성 일치): **90~100점**  
+2. 핵심 방향은 같으나 표현이 간략하거나 일부 누락된 경우: **80~89점**  
+3. 주제는 같으나 논리 방향이 약간 어긋남: **60~79점**  
+4. 핵심 의미가 다르거나 반대 의미로 표현됨: **0~59점**
 
 [멘트]
 1. 잘한 점과 개선할 점 순서대로 100자 이내로 피드백 해주세요.
@@ -57,13 +63,24 @@ def evaluate_context(answer: str, userAnswer: str):
 당신은 뉴스 문맥 흐름 평가 전문가입니다.
 학습자의 문장이 기사 전후 흐름과 얼마나 자연스럽게 이어지는지를 평가하세요.
 
-[평가 지침]
-1. 문장의 인과·설명·추론 관계가 모범답안과 같은 방향이라면 높은 점수.
-2. 논리 전개가 어긋나거나, 인과가 반대되면 낮은 점수.
-3. 문법적으로는 맞지만 의미상 기사 흐름에 맞지 않으면 60점 이하.
-4. 기사 주제는 같지만 논리 전개가 어색하면 50~69점.
-5. 의미·맥락이 완전히 반대거나 부자연스럽다면 40점 이하.
-6. 모범답안의 전개 흐름을 자연스럽게 이어받고 있다면 90점 이상.
+[평가 절차]
+1. 모범답안이 어떤 맥락(인과·설명·추론·전환)을 형성하는 문장인지 요약합니다.  
+   예: 원인 제시 / 결과 설명 / 반박 / 보충 / 결론 / 전환 등
+2. 학습자의 문장이 그 흐름을 얼마나 자연스럽게 이어가는지 판단합니다.
+3. 문법적으로 맞더라도 논리나 흐름이 어색하면 감점합니다.
+
+[판단 기준]
+- 인과 관계: 사건의 원인→결과 순서가 자연스럽게 이어지는가?
+- 설명 관계: 앞 문장의 주제나 근거를 부연·보완하고 있는가?
+- 추론 관계: 이전 정보로부터 합리적으로 도출되는 내용인가?
+- 전환 관계: 다른 시각이나 새로운 정보로 자연스럽게 넘어가는가?
+
+[평가 기준]
+- 전후 문맥과 인과·추론·설명 흐름이 완벽히 일치: 90~100점  
+- 대체로 자연스럽지만 세부 논리가 다소 생략됨: 80~89점  
+- 주제는 같지만 논리 전개가 어색하거나 불연속적: 60~79점  
+- 문법은 맞지만 의미상 기사 흐름에 맞지 않음: 40~59점  
+- 인과나 논리가 반대·역행하거나 완전히 단절됨: 0~39점  
 
 [멘트]
 1. 잘한 점과 개선할 점 순서대로 100자 이내로 피드백 해주세요.
@@ -163,12 +180,9 @@ def evaluate_feedback(answer: str, userAnswer: str, question: str, topic: str, c
 
     # 최종 출력 JSON 구조
     result = {
-        "topic": topic,
-        "courseId": courseId,
-        "sessionId": sessionId,
-        "contentType": "completionFeedback",
+        "contentType": "COMPLETION_FEEDBACK",
         "level": level,
-        "items": [
+        "contents": [
             {
                 "question": question,
                 "answers": [
@@ -188,11 +202,26 @@ def evaluate_feedback(answer: str, userAnswer: str, question: str, topic: str, c
 # === 5. 실행 예시 ===
 if __name__ == "__main__":
     topic = "politics"
-    courseId = "1"
-    sessionId = "11"
+    courseId = "6"
+    sessionId = "6"
     level = "e"
-    question = "인벤티지랩은 엠제이파트너스의 소송이 _______"
-    answer = "전혀 근거 없는 것으로 판단하고 있다고 밝혔다."
-    userAnswer = "근거 없는 주장이라고 밝혔다." 
+    question = "대통령실 관계자는 장 대표의 발언에 대해 ______"
+    answer = "치부를 감추기 위한 말장난이라고 비판했다."
+    userAnswer = "대통령실은 장 대표의 발언을 부정적으로 평가했다."
     result = evaluate_feedback(answer, userAnswer, question, topic, courseId, sessionId, level)
     print(json.dumps(result, ensure_ascii=False, indent=2))
+
+    # === 저장 경로 설정 ===
+    BASE_DIR = Path(__file__).resolve().parents[2]  # src/ 기준 상위 2단계
+    SAVE_DIR = BASE_DIR / "data" / "quiz"
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    file_name = f"{topic}_{courseId}_{sessionId}_FEEDBACK_{today}.json"
+    save_path = SAVE_DIR / file_name
+
+    # === 결과 저장 ===
+    with open(save_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f" 결과 저장 완료: {save_path}")

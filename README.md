@@ -13,11 +13,11 @@ AI를 활용한 개인화 학습과 게이미피케이션 요소를 통해, 뉴�
 
 ### 🛠 Tech Stack  
 - **Language** · Python 3.11  
-- **Framework** · FastAPI · LangChain · LangGraph  
+- **Framework** · FastAPI · LangChain   
 - **Database** · ChromaDB (Topic-based RAG)  
 - **Clustering / Embedding** · KMeans · OpenAI *text-embedding-3-small*  
 - **LLM** · OpenAI GPT-4o  
-- **Infra / Tools** · Poetry · Docker  
+- **Infra / Tools** · Pip · Docker  
 - **External APIs** · DeepSearch News API · Google CSE API  
 
 ---
@@ -61,7 +61,7 @@ src/
 
 ## 🚀 Run  
 ```bash
-poetry install
+pip install requirements.deploy.txt
 ```
 
 📚 Part of the NIEdu project

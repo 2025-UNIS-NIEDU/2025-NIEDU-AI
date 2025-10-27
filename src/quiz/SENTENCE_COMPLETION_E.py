@@ -26,33 +26,35 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.6)
 
 def generate_sentence_completion_quiz(summary: str):
     prompt = f"""
-당신은 뉴스 기반 학습 퀴즈 생성 AI입니다.
-아래 뉴스 요약문을 바탕으로 **문장 완성형 단답식(E단계)** 문제 3개를 만들어주세요.
 
-🎯 목표:
-- 뉴스의 핵심 내용을 담은 문장을 완성하도록 유도
-- 학습자가 전체 문맥을 이해해야 자연스럽게 완성할 수 있어야 함
-- 정답은 완전한 문장(요약 기반)으로 작성
-- 해설은 생성하지 않음
+[목표]
+1. 뉴스의 핵심 내용을 완성하도록 유도합니다.
+2. 학습자가 전체 문맥을 이해해야 자연스럽게 완성할 수 있어야 합니다.
+3. 정답은 기사 요약의 사실에 기반한 완전한 한 문장으로 작성합니다.
+4. 해설은 생성하지 않습니다.
 
-⚙️ 규칙:
-- level="e"
-- question: 미완성 문장 형태 (약 30~40자, 마지막은 '...' 또는 불완전 문장으로 끝냄)
-- answer: 완성된 문장 (기사 요약의 사실 기반)
-- JSON 배열로 출력 (다른 텍스트 금지)
-- 기사 외 정보나 추측 금지
+[규칙]
+1. question:
+   - 미완성 문장 형태로, 약 25~40자 이내
+   - 문장의 핵심 정보(원인·결과·주체 중 하나)가 빠진 상태여야 함
+   - 마지막은 반드시 ‘______’ 또는 문장 중간에서 끊긴 불완전한 형태로 끝냄
+2. referenceAnswer:
+   - question을 완성하는 **단일 핵심 정보 중심의 한 문장**
+   - 불필요한 이유절(예: "~을 위해", "~로 인해")은 생략
+   - 30~50자 이내의 자연스러운 문장으로 작성
+3. 세 문항은 서로 다른 정보 요소를 다루어야 함
+   (예: 주체, 행위, 평가 등)
+4. 기사에 직접 언급된 사실만 사용하며, 추측·감정·평가 표현 금지
+5. JSON 배열 형태로 출력하며, 다른 텍스트나 설명은 포함하지 마세요.
 
 출력 예시(JSON):
-[
+{{
   {{
-    "question": "윤 의원은 수사권이 경찰로 집중되는 만큼 _______",
-    "answers": [
-      {{
-        "text": "견제와 균형을 유지하는 제도적 장치가 필요하다고 말했다.",
-      }}
-    ]
-  }}
-]
+    "contentId": "문제 번호",
+    "question": "질문"
+    "referenceAnswer" : "정답 문장"
+  }},
+}}
 
 뉴스 요약:
 {summary}
@@ -81,15 +83,12 @@ SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
 
 final_result = {
-    "topic" : topic,
-    "courseId": course_id,
-    "sessionId": session_id,
-    "contentType": "completion",
-    "level": "e",
-    "items": e_quiz,
+    "contentType": "SENTENCE_COMPLETION",
+    "level": "E",
+    "contents": [e_quiz],
 }
 
-file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_completion_e_{today}.json"
+file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_COMPLETION_E_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_result, f, ensure_ascii=False, indent=2)
 

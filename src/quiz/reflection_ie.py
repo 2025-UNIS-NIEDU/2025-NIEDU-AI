@@ -8,8 +8,8 @@ from select_session import select_session
 # 환경 변수 및 경로 설정
 load_dotenv(override=True)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-BASE_DIR = Path(__file__).resolve()[2]
 
+BASE_DIR = Path(__file__).resolve().parents[2]
 QUIZ_DIR = BASE_DIR / "data" / "quiz"
 today = datetime.now().strftime("%Y-%m-%d")
 
@@ -45,32 +45,39 @@ for file_path in target_files:
 print(f"\n총 {len(all_blocks)}개 블록 로드 완료\n")
 
 # 4️. I/E 단계 분리
-i_items, e_items = [], []
+i_contents, e_contents = [], []
 for block in all_blocks:
     if not isinstance(block, dict):
         continue
-    level = block.get("level", "")
-    if level == "i":
-        i_items.extend(block.get("items", []))
-    elif level == "e":
-        e_items.extend(block.get("items", []))
+    level = (block.get("level", "")).upper()
+    contents = block.get("contents", [])
+    valid_questions = [c for c in contents if isinstance(c, dict) and c.get("question")]
 
-print(f"I단계 {len(i_items)}개, E단계 {len(e_items)}개 로드 완료\n")
+
+    if level == "I":
+        i_contents.extend(valid_questions)
+    elif level == "E":
+        e_contents.extend(valid_questions)
+    else:
+    # 디버깅용: 무슨 단계인지 확인
+        print(f"인식 불가 level: {level}, 파일: {block.get('contentType')}")
+
+print(f"I단계 {len(i_contents)}개, E단계 {len(e_contents)}개 로드 완료\n")
 
 # 5️. 질문 미리보기
 print("=== I단계 질문 미리보기 ===")
-for q in [q.get("question") for q in i_items[:3]]:
+for q in [q.get("question") for q in i_contents[:3]]:
     print("•", q)
 
 print("\n=== E단계 질문 미리보기 ===")
-for q in [q.get("question") for q in e_items[:3]]:
+for q in [q.get("question") for q in e_contents[:3]]:
     print("•", q)
 
 # 6️. LLM 설정
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+llm = ChatOpenAI(model="gpt-4o", temperature=0.3)
 
 # 7️. 회고형 문제 생성 함수
-def generate_reflection(level, quiz_items):
+def generate_reflection(level, quiz_list):
     # 단계별 설명 정의
     if level == "i":
         phase_desc = (
@@ -104,7 +111,7 @@ def generate_reflection(level, quiz_items):
   [{{"question": "{'정부 개편안의 추진 배경은 무엇인가?' if level == 'i' else '정부 개편안이 사회적 신뢰에 미친 영향은?'}"}}]
 
 === {level.upper()}단계 문제 목록 ===
-{json.dumps(quiz_items, ensure_ascii=False, indent=2)}
+{json.dumps(quiz_list, ensure_ascii=False, indent=2)}
 """
 
     # LLM 호출 및 결과 처리
@@ -114,34 +121,28 @@ def generate_reflection(level, quiz_items):
 
 # 9.️ 회고형 문제 생성
 print("\n=== I단계 회고 문제 생성 ===")
-i_reflection = generate_reflection("i", i_items)
+i_reflection = generate_reflection("i", i_contents)
 print(json.dumps(i_reflection, ensure_ascii=False, indent=2))
 
 print("\n=== E단계 회고 문제 생성 ===")
-e_reflection = generate_reflection("e", e_items)
+e_reflection = generate_reflection("e", e_contents)
 print(json.dumps(e_reflection, ensure_ascii=False, indent=2))
 
 # 10. 결과 저장
 final_result = [
     {
-        "topic": topic,
-        "courseId": courseId,
-        "sessionId": sessionId,
-        "contentType": "reflection",
-        "level": "i",
-        "items": i_reflection
+        "contentType": "REFLECTION",
+        "level": "I",
+        "contents": i_reflection
     },
     {
-        "topic": topic,
-        "courseId": courseId,
-        "sessionId": sessionId,
-        "contentType": "reflection",
-        "level": "e",
-        "items": e_reflection
+        "contentType": "REFLECTION",
+        "level": "E",
+        "contents": e_reflection
     }
 ]
 
-file_path = QUIZ_DIR / f"{topic}_{courseId}_{sessionId}_reflection_ie_{today}.json"
+file_path = QUIZ_DIR / f"{topic}_{courseId}_{sessionId}_REFLECTION_IE_{today}.json"
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(final_result, f, ensure_ascii=False, indent=2)
 
