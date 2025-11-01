@@ -194,6 +194,7 @@ SAVE_DIR = BASE_DIR / "data" / "quiz"
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 today = datetime.now().strftime("%Y-%m-%d")
 
+# 🔹 단계별 결과 구성
 final_result = [
     {
         "contentType": "SHORT",
@@ -209,9 +210,20 @@ final_result = [
     }
 ]
 
-file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_SHORT_IE_{today}.json"
-with open(file_path, "w", encoding="utf-8") as f:
-    json.dump(final_result, f, ensure_ascii=False, indent=2)
+# 🔹 각 단계별로 별도 저장
+for item in final_result:
+    level = str(item.get("level", "")).upper().strip()  
+    if not level:
+        continue
+
+    file_name = f"{topic}_{course_id}_{session_id}_SHORT_{level}_{today}.json"
+    file_path = SAVE_DIR / file_name
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump([item], f, ensure_ascii=False, indent=2)
+
+    print(f"[저장 완료] {level} 단계 SHORT 퀴즈 파일 → {file_path.resolve()}")
+
 
 print(f"\n 전체 저장 완료 → {file_path.resolve()}")
 print("(I단계 5문항, E단계 5문항 — 총 10문항)")

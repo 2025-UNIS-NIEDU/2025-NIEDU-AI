@@ -46,7 +46,8 @@ def evaluate_meaning(answer: str, userAnswer: str):
 """
     try:
         res = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
+            temperature=0.0,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
         )
@@ -100,6 +101,7 @@ def evaluate_context(answer: str, userAnswer: str):
     try:
         res = client.chat.completions.create(
             model="gpt-4o",
+            temperature=0.0,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
         )
@@ -139,6 +141,7 @@ def evaluate_grammar(userAnswer: str):
     try:
         res = client.chat.completions.create(
             model="gpt-4o-mini",
+            temperature=0.0,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
         )
@@ -150,7 +153,7 @@ def evaluate_grammar(userAnswer: str):
 
 
 # === 4. 총점 계산 및 출력 JSON 구성 ===
-def evaluate_feedback(answer: str, userAnswer: str, question: str, topic: str, courseId: str, sessionId: str, level: str = "e"):
+def evaluate_feedback(answer: str, userAnswer: str, question: str, contentId: int, level: str = "E"):
     meaning_score, meaning_fb = evaluate_meaning(answer, userAnswer)
     context_score, context_fb = evaluate_context(answer, userAnswer)
     grammar_score, grammar_fb = evaluate_grammar(userAnswer)
@@ -158,9 +161,8 @@ def evaluate_feedback(answer: str, userAnswer: str, question: str, topic: str, c
     # 가중치 적용
     total = int(0.6 * meaning_score + 0.3 * context_score + 0.1 * grammar_score)
 
-    # 의미 점수 낮을 경우 cap
-    if meaning_score < 50:
-        total = min(total, 60)
+    # 점수 십의 자리 단위
+    total = int(round(total / 10) * 10)
 
     # 기본멘트 설정
     if total <= 40:
@@ -178,41 +180,59 @@ def evaluate_feedback(answer: str, userAnswer: str, question: str, topic: str, c
         f"문법: {grammar_fb}"
     )
 
-    # 최종 출력 JSON 구조
-    result = {
-        "contentType": "COMPLETION_FEEDBACK",
-        "level": level,
-        "contents": [
-            {
-                "question": question,
-                "answers": [
-                    {
-                        "userAnswer": userAnswer,
-                        "score": total,
-                        "comment": comment
-                    }
-                ]
-            }
-        ]
+    # 🔹 리스트 없이 단일 객체 반환
+    return {
+        "contentId": contentId,
+        "question": question,
+        "userAnswer": userAnswer,
+        "score": total,
+        "comment": comment
     }
 
-    return result
 
-
-# === 5. 실행 예시 ===
+# === 여러 문항 자동 평가 ===
 if __name__ == "__main__":
     topic = "politics"
-    courseId = "6"
-    sessionId = "6"
-    level = "e"
-    question = "대통령실 관계자는 장 대표의 발언에 대해 ______"
-    answer = "치부를 감추기 위한 말장난이라고 비판했다."
-    userAnswer = "대통령실은 장 대표의 발언을 부정적으로 평가했다."
-    result = evaluate_feedback(answer, userAnswer, question, topic, courseId, sessionId, level)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    courseId = "4"
+    sessionId = "8"
+    level = "E"
 
-    # === 저장 경로 설정 ===
-    BASE_DIR = Path(__file__).resolve().parents[2]  # src/ 기준 상위 2단계
+    qa_list = [
+        {
+            "contentId": 1,
+            "question": "강득구 의원은 이재명 정부의 부동산 정책이 ______",
+            "answer": "투기 근절과 시장 안정이라는 원칙 위에 있다고 밝혔다.",
+            "userAnswer": "투기 근절과 시장 안정이라는 원칙 위에 있다고 말했다."
+        },
+        {
+            "contentId": 2,
+            "question": "조용술 대변인은 이 전 차관의 사퇴를 ______",
+            "answer": "사필귀정이라고 평가하며 자기 발등을 찍은 결과라고 강조했다.",
+            "userAnswer": "조용술 대변인은 사퇴를 부당하다고 비판했다."
+        },
+        {
+            "contentId": 3,
+            "question": "이 대통령은 다주택자를 ______",
+            "answer": "투기 세력으로 규정했다고 언급했다.",
+            "userAnswer": "다주택자를 투기와 관련 있다고 말했다."
+        }
+    ]
+
+    results = [
+        evaluate_feedback(q["answer"], q["userAnswer"], q["question"], q["contentId"], level)
+        for q in qa_list
+    ]
+
+    final_output = {
+        "contentType": "COMPLETION_FEEDBACK",
+        "level": level,
+        "contents": results
+    }
+
+    print(json.dumps(final_output, ensure_ascii=False, indent=2))
+
+    # === 저장 ===
+    BASE_DIR = Path(__file__).resolve().parents[2]
     SAVE_DIR = BASE_DIR / "data" / "quiz"
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -220,8 +240,7 @@ if __name__ == "__main__":
     file_name = f"{topic}_{courseId}_{sessionId}_FEEDBACK_{today}.json"
     save_path = SAVE_DIR / file_name
 
-    # === 결과 저장 ===
     with open(save_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+        json.dump(final_output, f, ensure_ascii=False, indent=2)
 
-    print(f" 결과 저장 완료: {save_path}")
+    print(f"결과 저장 완료: {save_path}")
