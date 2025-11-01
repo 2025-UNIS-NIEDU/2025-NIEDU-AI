@@ -4,7 +4,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[2]
 COURSE_DIR = BASE_DIR / "data" / "course_db" / "filtered"
 
-
+# 세션 함수 정의
 def select_session(topic: str = None, sub_topic: str = None, course_id: int = None, session_id: int = None):
     """
     [topic / subTopics] 기반 세션 선택기
