@@ -44,7 +44,7 @@ prompt = f"""
 [용어 선정 기준]
 1. {PROMPT_TEMPLATES[topic_key]} 와 밀접하게 연관된 **전문적·기술적 개념**일 것  
 2. 뉴스 요약문에 **직접 등장하거나 암시된 핵심 주제**일 것  
-3. 일상적인 일반어는 제외하고, 해당 주제(도메인) 내에서만 사용되는 전문어(예: 제도명, 정책명, 기술명, 지표명 등)를 중심으로 추출하세요.
+3. 일상적인 일반어는 제외하고, 해당 주제(도메인) 내에서만 사용되는 전문어(예: 제도명, 정책명, 기술명, 지표명 등)만 추출하세요.
 4. 각 용어는 1~3단어 이내의 **표제어 형태**로 정제  
 5. 불필요한 조사나 동사형(예: 추진, 논의, 강화)은 제거  
 6. 인명·기관명·지명·상표명은 제외  
@@ -55,22 +55,33 @@ prompt = f"""
 """
 
 res = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-4o",
     messages=[{"role": "user", "content": prompt}],
     temperature=0
 )
 
-terms = [t.strip() for t in res.choices[0].message.content.strip().split(",") if t.strip()]
+raw_terms = res.choices[0].message.content.strip()
+terms = re.split(r'[\n,]+|\d+\.\s*', raw_terms)
+terms = [t.strip() for t in terms if t.strip()]
 terms = terms[:4]  
 
 # === 4. LLM 기반 일반어 필터링 ===
 filter_prompt = f"""
-아래 용어 목록에서 **전문용어가 아닌 일반적인 단어**를 모두 제거하세요.
+아래 용어 목록에서 **전문용어가 아닌 일반적인 단어**를 제거하세요.
+
 [제거 기준]
-- 일상적 단어: 누구나 일상 대화에서 쓰는 말 (예: 사회, 문제, 사람, 산업)
-- 포괄적 개념: 구체적 제도나 정책이 아닌 추상적 개념
-- 비전문어: 구체적 절차, 제도, 기구, 기술명, 법률명 등이 아닌 경우
+- 일상적 단어: 누구나 일상 대화에서 쓰는 말 (예: 사람, 산업)
 - 인명, 지명, 상업적 명칭(브랜드명, 기업명, 상품명 등)은 무조건 제거
+- 관용적으로 쓰이는 추상 명사는 제외하세요
+
+[제거 대상 예시]
+무역, 협상, 합의, 논의, 계획, 문제, 영향, 산업, 경제, 사회, 기술, 사람, 정부, 상황, 발표, 정책, 강화, 추진, 논란
+
+[유지 대상 예시]
+한미FTA, 기준금리, 전세사기, 국정감사, 탄소국경조정제, 공매도, 보조금법, 양자협정
+
+[규칙]
+아래 용어 중에서 1-2 개만 제거하세요.
 
 출력 예시:
 ["열린 경선", "컷오프", "권리당원"]
@@ -95,6 +106,17 @@ except Exception as e:
     print("필터링 JSON 파싱 오류:", e)
     filtered_terms = terms  
 
+# ===  최소 2개 이상 보장 로직 추가 ===
+if not filtered_terms or len(filtered_terms) < 2:
+    print("필터링 결과가 2개 미만입니다. 원본 일부를 보강합니다.")
+    # 부족할 경우 원본 terms에서 추가로 채움 (중복 방지)
+    needed = 2 - len(filtered_terms)
+    for t in terms:
+        if t not in filtered_terms:
+            filtered_terms.append(t)
+        if len(filtered_terms) >= 2:
+            break
+
 # --- 필터링 결과 반영 ---
 if filtered_terms:
     terms = filtered_terms
@@ -103,6 +125,8 @@ else:
     terms = terms  # 그대로 유지
 
 # --- 중간 점검 (필터링 이후 실행) ---
+print("\n=== 1차 추출 용어 (GPT-4o-mini 결과) ===")
+print(json.dumps([t.strip() for t in res.choices[0].message.content.strip().split(',') if t.strip()], ensure_ascii=False, indent=2))
 print("\n 필터링 완료! 적용된 전문용어 목록:")
 print(json.dumps(terms, ensure_ascii=False, indent=2))
 print("------------------------------------------------\n")
@@ -232,7 +256,7 @@ for i, term in enumerate(terms, start=1):
 
 # === 9. NIEdu 포맷 ===
 term_card = {
-    "contentType": "TERMS_LEARNING",  
+    "contentType": "TERM_LEARNING",  
     "level": "N",
     "contents": [
         {

@@ -1,45 +1,35 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional, Any
+from typing import List, Optional, Any, Union
 from datetime import datetime
 
-
-# === 하위 구조 정의 ===
-
 class SubTag(BaseModel):
-    name: str
-
+    name: str = Field(..., description="소주제 해시태그명 (예: 정치개혁)")
 
 class Topic(BaseModel):
-    name: str
-
+    name: str = Field(..., description="상위 주제명 (예: Politics)")
 
 class SubTopic(BaseModel):
-    name: str
-
+    name: str = Field(..., description="하위 주제명 (예: 정당)")
 
 class NewsRef(BaseModel):
     headline: str
     publisher: Optional[str] = None
-    publishedAt: Optional[str] = None  # ISO 문자열
+    publishedAt: Optional[datetime] = None
     sourceUrl: Optional[str] = None
     thumbnailUrl: Optional[str] = None
-
 
 class Step(BaseModel):
     stepOrder: int
     contentType: str
-    contents: Any  # dict or list — contentType마다 달라서 Any로 처리
-
+    contents: Union[List[Any], dict]  # 복수 문항 또는 단일 질문
 
 class QuizLevel(BaseModel):
     level: str
     steps: List[Step]
 
-
 class Session(BaseModel):
     newsRef: NewsRef
     quizzes: List[QuizLevel]
-
 
 class Course(BaseModel):
     courseName: str
@@ -48,7 +38,5 @@ class Course(BaseModel):
     subTags: List[SubTag]
     sessions: List[Session]
 
-
-# === 최상위 래퍼 ===
 class CourseWrapper(BaseModel):
     courses: List[Course]

@@ -186,11 +186,19 @@ def save_quiz_json(data, topic, course_id, session_id):
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d")
 
-    file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_MULTIPLE_NI_{today}.json"
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    # N/I 분리
+    for quiz in data:
+        level = str(quiz.get("level", "")).upper().strip()
+        if not level:
+            continue  # level 정보 없으면 스킵
 
-    print(f"\n 저장 완료: {file_path.resolve()}")
+        file_name = f"{topic}_{course_id}_{session_id}_MULTIPLE_{level}_{today}.json"
+        file_path = SAVE_DIR / file_name
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump([quiz], f, ensure_ascii=False, indent=2)
+
+        print(f"[저장 완료] {level} 단계 퀴즈 파일 → {file_path.resolve()}")
 
 # === 11. 실행 ===
 if __name__ == "__main__":

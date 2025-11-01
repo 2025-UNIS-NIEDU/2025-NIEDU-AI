@@ -128,22 +128,31 @@ print("\n=== E단계 회고 문제 생성 ===")
 e_reflection = generate_reflection("e", e_contents)
 print(json.dumps(e_reflection, ensure_ascii=False, indent=2))
 
-# 10. 결과 저장
-final_result = [
-    {
-        "contentType": "REFLECTION",
-        "level": "I",
-        "contents": i_reflection
-    },
-    {
-        "contentType": "REFLECTION",
-        "level": "E",
-        "contents": e_reflection
-    }
-]
+# === 10. 결과 저장 ===
+def save_reflection_json(topic, courseId, sessionId, i_reflection, e_reflection):
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    QUIZ_DIR = BASE_DIR / "data" / "quiz"
+    QUIZ_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.now().strftime("%Y-%m-%d")
 
-file_path = QUIZ_DIR / f"{topic}_{courseId}_{sessionId}_REFLECTION_IE_{today}.json"
-with open(file_path, "w", encoding="utf-8") as f:
-    json.dump(final_result, f, ensure_ascii=False, indent=2)
+    # 🔹 단계별 데이터 구성
+    final_result = [
+        {"contentType": "REFLECTION", "level": "I", "contents": i_reflection},
+        {"contentType": "REFLECTION", "level": "E", "contents": e_reflection},
+    ]
 
-print(f"\n회고 문제 최종 저장 완료 → {file_path.resolve()}")
+    # 🔹 각 레벨별로 개별 JSON 저장
+    for item in final_result:
+        level = str(item.get("level", "")).upper().strip()  
+        if not level:
+            continue
+
+        file_name = f"{topic}_{courseId}_{sessionId}_REFLECTION_{level}_{today}.json"
+        file_path = QUIZ_DIR / file_name
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(item, f, ensure_ascii=False, indent=2)
+
+        print(f"[저장 완료] {level} 단계 리플렉션 파일 → {file_path.resolve()}")
+
+save_reflection_json(topic, courseId, sessionId, i_reflection, e_reflection)
