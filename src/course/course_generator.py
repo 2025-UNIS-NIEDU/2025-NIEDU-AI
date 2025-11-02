@@ -7,6 +7,7 @@ from pathlib import Path
 from collections import OrderedDict, defaultdict
 
 # === 서드파티 라이브러리 ===
+import yaml
 import numpy as np
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -53,7 +54,9 @@ TOPIC_TRANSLATIONS = {
 }
 
 # === 메인 함수 ===
-def generate_course_for_topic(topic: str):
+def generate_course_for_topic(topic: str, embedding_model=None, client=None):
+    if client is None:
+        client = OpenAI(api_key=api_key)
     print(f"\n[{topic}] ChromaDB 불러오는 중...")
 
     # --- DB 경로 ---
@@ -95,29 +98,33 @@ def generate_course_for_topic(topic: str):
     # --- 언론사 리스트 ---
     MAJOR_PUBLISHERS = [
         # --- 전국 종합지 ---
-        "조선일보", "동아일보", "중앙일보",
+        "조선일보", "중앙일보", "동아일보",
         "한겨레", "경향신문", "한국일보",
-        "서울신문", "세계일보",
+        "서울신문", "문화일보", "국민일보", "세계일보",
 
         # --- 경제·비즈니스 ---
-        "매일경제", "한국경제", "머니투데이", "아시아경제",
-        "이데일리", "전자신문", "서울경제", "파이낸셜뉴스",
+        "매일경제", "한국경제", "서울경제", "머니투데이",
+        "아시아경제", "이데일리", "파이낸셜뉴스",
         "헤럴드경제", "디지털타임스", "비즈워치",
 
         # --- 방송사·통신사 ---
-        "연합뉴스", "KBS", "MBC", "SBS", "YTN", "JTBC", "TV조선", "채널A", "MBN",
+        "연합뉴스", "뉴스1", "뉴시스",
+        "KBS", "MBC", "SBS", "YTN", "MBN", "JTBC",
+        "채널A", "TV조선",
+
+        # --- 온라인·탐사·오피니언 매체 ---
+        "오마이뉴스", "프레시안", "미디어오늘",
+        "더팩트", "뉴스타파", "노컷뉴스", "뉴스토마토",
 
         # --- IT·테크 전문 ---
-        "ZDNet코리아", "블로터", "IT동아", "아이뉴스24", "디지털데일리",
+        "전자신문", "디지털타임스", "디지털데일리",
+        "ZDNet코리아", "아이뉴스24", "AI타임스", "테크M", "IT조선",
 
-        # --- 사회·정치 전문 / 오피니언 중심 ---
-        "오마이뉴스", "노컷뉴스", "프레시안", "뉴스1", "뉴스토마토", "뉴시스",
-
-        # --- 과학·환경·에너지 관련 ---
-        "동아사이언스", "헬로디디", "에너지경제신문", "이투뉴스",
-
-        # --- 국제 / 외신계 국내판 ---
-        "BBC코리아", "CNN코리아", "로이터", "AFP통신", "블룸버그", "뉴욕타임즈", "워싱턴포스트"
+        # --- 지역 종합지 ---
+        "부산일보", "국제신문", "매일신문", "영남일보",
+        "광주일보", "전남일보", "전북일보",
+        "강원일보", "강원도민일보", "경인일보", "인천일보",
+        "울산매일", "경남도민일보", "제주일보", "한라일보"
     ]
 
     # --- 언론사 필터 적용 (메타데이터에서 publisher 기준으로 걸러내기) ---
@@ -203,7 +210,7 @@ def generate_course_for_topic(topic: str):
         # 5️. 동적 threshold 적용 (데이터 편차 고려)
         mean_sim = np.mean(sims)
         std_sim = np.std(sims)
-        adaptive_threshold = max(threshold, mean_sim - 0.2 * std_sim)
+        adaptive_threshold = max(threshold, mean_sim - 0.4 * std_sim)
 
         # 6️. threshold 이상만 유지
         filtered_docs = [doc for doc, sim in zip(docs, sims) if sim >= adaptive_threshold]
@@ -268,66 +275,25 @@ def generate_course_for_topic(topic: str):
             if n.get("headline")
         ])
 
-        # --- 코스 설명 생성 ---
+        # --- YAML 프롬프트 로드 ---
+        PROMPT_PATH = BASE_DIR / "src" / "course" / "prompt" / "course.yaml"
+        with open(PROMPT_PATH, "r", encoding="utf-8") as f:
+            prompt_conf = yaml.safe_load(f)
+
         prompt_course = f"""
-당신은 뉴스 기반 학습 콘텐츠를 기획하는 에디터입니다.
-다음 뉴스 요약들이 하나의 주제를 공유한다고 가정하고,
-이를 학습용 코스로 묶어 아래 JSON 형식으로 출력하세요.
+{prompt_conf['system_role']}
 
----
+{prompt_conf['rules']}
 
-### 규칙
-1. courseName
-   - “핵심 이슈를 담은 함축적 제목”
-   - 형식: “핵심 이슈 + 시선 또는 대비 구도”  
-   - 길이: 20~28자.
-   - 주제어 중복금지: 같은 토픽 내에서 이미 등장한 단어(‘시장’, ‘정책’, ‘산업’)은 피하고, 의미가 겹치지 않게 만듭니다.
-   - 감정적 표현(‘위기’, ‘분노’, ‘충격’)은 사용하지 않습니다.
+{prompt_conf['examples']}
 
-2. courseDescription
-   - 길이: 90자 내외.
-   - **이 코스가 보여주는 시선과 문제의식**을 한 문단 안에서 자연스럽게 설명하세요.
-   - “무엇이 왜 중요한가”, “어떤 변화와 연결되는가”를 중심으로 서술합니다.
-   - 문체: 신문 칼럼처럼 **자연스럽고 분석적이며, 문장 간 흐름이 부드러운 서술형**으로 작성합니다.
-   - 어미는 반드시 존댓말로 마무리하되, 문장 사이의 연결이 자연스러워야 합니다.
+{prompt_conf['output_format']}
 
-3. subTopic
-   - courseName과 Description의 의미 중심 키워드를 1개만 선택하세요.
-   - 아래 [서브 토픽 후보 목록]에서 **가장 연관성이 높은 항목 1개만 그대로 선택**합니다.
-
-4. subTags
-   - 코스의 핵심 개념 2~3개를 해시태그로 제시합니다.
-   - 각 해시태그는 **한글 기준 3~4글자(최대 5자)** 로 만듭니다. 
-   - 중복 금지: 같은 토픽 내 다른 코스와 겹치지 않게 생성하세요.
-   - 예시: ["#기술통제", "#정책갈등"]
-
----
-
-### 참고 포맷 가이드
-유형별 제목 스타일 예시는 다음과 같습니다.
-1. 사건형 - 중립적·분석적 
-2. 인물형 - 내러티브·스토리텔링 
-3. 키워드형 - 담론적·철학적 
-4. 질문형 - 탐구적·호기심 유발 
-5. 대립형 - 논쟁적·균형적 
-6. 감정형 - 서사적·공감적 
-
----
-
-### 출력 형식(JSON)
-{{
-  "courseName": string,
-  "courseDescription": string,
-  "subTopic": string,
-  "subTags": string
-}}
-
-[뉴스 제목 목록]
-{joined_headlines}
-[서브 토픽]
-{TOPIC_SUBTOPICS.get(topic, "")}
+{prompt_conf['prompt_template'].format(
+    joined_headlines=joined_headlines,
+    subtopic_candidates=TOPIC_SUBTOPICS.get(topic, "")
+)}
 """
-
         try:
             resp_course = client.chat.completions.create(
                 model="gpt-4o-mini",
@@ -386,3 +352,17 @@ def generate_course_for_topic(topic: str):
         json.dump(output_sorted, f, ensure_ascii=False, indent=2, sort_keys=False)
 
     print(f"{topic} → 코스 파일 저장 완료: {output_file.resolve()}")
+
+if __name__ == "__main__":
+    from sentence_transformers import SentenceTransformer
+    import time
+
+    embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+    TOPICS = ["politics", "economy", "society", "world", "tech"]
+
+    for topic in TOPICS:
+        try:
+            generate_course_for_topic(topic, embedding_model=embedding_model)
+            time.sleep(1)  # DB 락 방지
+        except Exception as e:
+            print(f"[{topic}] 실행 중 오류: {e}")
