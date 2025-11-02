@@ -33,23 +33,10 @@ def is_purely_korean(text: str, threshold: float = 0.3) -> bool:
     total_chars = len(text)
     return (korean_chars / total_chars) >= threshold if total_chars > 0 else False
 
-# === 언론사 필터 정의 ===
-MAJOR_PUBLISHERS = [
-    "조선일보", "동아일보", "중앙일보",   # 전국지 ‘빅3’  
-    "한겨레", "경향신문", "한국일보",     # 전국지, 비교적 영향력 있는 매체  
-    "서울신문", "세계일보",              # 수도권·전국지  
-    "매일경제", "한국경제",              # 경제 전문 일간지  
-    "머니투데이", "아시아경제",           # 경제/비즈니스 전문매체  
-    "이데일리", "전자신문",               # 산업·IT 전문매체  
-    "연합뉴스",                          # 대표 통신사  
-    "KBS", "MBC", "SBS", "YTN"           # 방송사 뉴스채널 및 공영방송  
-]
-
 # === DeepSearch API 호출 ===
 def deepsearch_query(endpoint: str, subTopic: str, date_from: str, date_to: str,
                      page: int = 1, page_size: int = 100, order="published_at", direction="desc"):
-    publisher_filter = " OR ".join([f'publisher:"{p}"' for p in MAJOR_PUBLISHERS])
-    query = f"({subTopic}) AND ({publisher_filter})"
+    query = f"({subTopic})" 
 
     params = {
         "api_key": DEEPSEARCH_API_KEY,
@@ -60,7 +47,6 @@ def deepsearch_query(endpoint: str, subTopic: str, date_from: str, date_to: str,
         "date_to": date_to,
         "order": order,
         "direction": direction,
-        "publisher": publisher_filter,
     }
     resp = requests.get(endpoint, params=params)
     resp.raise_for_status()

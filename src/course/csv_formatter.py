@@ -4,15 +4,15 @@ from pathlib import Path
 
 # === 경로 설정 ===
 BASE_DIR = Path(__file__).resolve().parents[2]
-JSON_PATH = BASE_DIR / "data" / "course_db" / "economy_2025-11-01.json"
-CSV_PATH = BASE_DIR / "data" / "course_db" / "economy_2025-11-01.csv"
+JSON_PATH = BASE_DIR / "data" / "course_db" / "filtered" / "tech_2025-11-02.json"
+CSV_PATH = BASE_DIR / "data" / "course_db" / "filtered" / "tech_2025-11-02.csv"
 
 # === JSON 로드 ===
 with open(JSON_PATH, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # === CSV 헤더 정의 ===
-headers = ["courseId", "courseName", "topic", "subTopic", "sessions_summary"]
+headers = ["courseId", "courseName", "courseDescription", "topic", "subTopic", "subTags", "session_with_publisher"]
 
 # === CSV 변환 ===
 rows = []
@@ -25,14 +25,19 @@ for course in data:
         if s.get("headline")
     ]
     # 여러 세션을 하나의 셀 안에 줄바꿈으로 연결
-    sessions_summary = "\n".join(session_texts)
+    session_with_publisher = "\n".join(session_texts)
+
+    # subTags를 쉼표로 연결된 문자열로 변환
+    sub_tags_str = ", ".join(course.get("subTags", []))
 
     rows.append({
         "courseId": course.get("courseId"),
         "courseName": course.get("courseName"),
+        "courseDescription" : course.get("courseDescription"),
         "topic": course.get("topic"),
         "subTopic": course.get("subTopic"),
-        "sessions_summary": sessions_summary
+        "subTags": sub_tags_str,
+        "session_with_publisher": session_with_publisher
     })
 
 # === CSV 저장 ===
