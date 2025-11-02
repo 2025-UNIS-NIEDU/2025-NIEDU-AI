@@ -1,0 +1,43 @@
+src/
+├── api/                              # FastAPI 엔드포인트 및 모델 정의
+│   ├── models/
+│   │   ├── course_schema.py          # CourseWrapper / Session / QuizLevel 데이터 구조 정의
+│   │   └── __init__.py
+│   ├── main.py                       # 
+│   └── __init__.py
+│
+├── config/
+│   └── settings.py                   # 환경 변수 로드 및 설정값 관리
+│
+├── course/                           # 뉴스 기반 코스 생성 모듈
+│   ├── prompt/
+│   │   └── course.yaml               # LLM 프롬프트 템플릿 (코스명/설명 생성용)
+│   ├── course_generator.py           # RAG 결과(임베딩)를 활용해 LLM으로 코스 자동 생성
+│   ├── course_refiner.py             # 생성된 코스 구조 정제 및 검수
+│   ├── news_api.py                   # DeepSearch API 등으로 뉴스 데이터 수집
+│   ├── rag_builder.py                # 뉴스 임베딩 및 Chroma RAG DB 구축
+│   └── __init__.py
+│
+├── pipeline/
+│   ├── pipeline.py                   # 전체 파이프라인 실행 (뉴스→RAG→코스→퀴즈->Wrapper 통합)
+│   └── __init__.py
+│
+├── quiz/                             # 세션별 퀴즈 생성 모듈
+│   ├── prompt/                       # 퀴즈별 프롬프트 템플릿 모음
+│   ├── completion_feedback.py        # 문장 완성 후 피드백 생성
+│   ├── completion.py                 # 문장 완성형 문제 생성
+│   ├── current_affairs.py            # 시사형 문제 생성
+│   ├── multi.py                      # 다지선다형 문제 생성
+│   ├── ox.py                         # OX 퀴즈 생성
+│   ├── reflect.py                    # 세션 회고 질문 생성
+│   ├── select_session.py             # 세션 필터링 및 선택 로직
+│   ├── short.py                      # 단답형 문제 생성
+│   ├── summary_reading.py            # 기사 요약 키워드 문제 생성
+│   ├── term.py                       # 용어 학습형 문제 생성
+│   └── __init__.py
+│
+└── wrapper/                          # 데이터 통합 및 패키징 모듈
+    ├── course_wrapper.py             # 코스 + 세션 + 퀴즈 통합 JSON 생성
+    ├── quiz_aggregator.py            # 레벨별 퀴즈 파일 병합
+    ├── feedback_wrapper.py           # 피드백 및 점수 통합 관리
+    └── __init__.py
