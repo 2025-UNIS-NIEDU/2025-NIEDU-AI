@@ -1,18 +1,8 @@
+# src/api/main.py
 from fastapi import FastAPI
-from pydantic import BaseModel
-from src.service.ai_service import generate_quiz
-from src.config.settings import settings
+from api.endpoint.course_api import router as course_router
 
-app = FastAPI(title="NIEdu AI Backend")
+app = FastAPI()
 
-class QuizRequest(BaseModel):
-    content: str
-
-@app.get("/")
-def root():
-    return {"message": "NIEdu AI running", "db": settings.DB_HOST}
-
-@app.post("/api/quiz")
-def quiz(req: QuizRequest):
-    quiz_text = generate_quiz(req.content)
-    return {"quiz": quiz_text}
+# 라우터 등록
+app.include_router(course_router)
