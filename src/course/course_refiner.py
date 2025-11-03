@@ -213,16 +213,17 @@ def refine_course_structure():
 
         print(f"[{topic}] 결과 저장 완료 → {out_path.name}")
         print(f"총 {len(refined_courses)}개 코스 유지")
+        
+    # === 모든 토픽 자동 정제 ===
+    TOPICS = ["politics", "economy", "society", "world"]
+    for topic in TOPICS:
+        try:
+            refine_course_simple(topic)
+        except Exception as e:
+            print(f"[{topic}] 처리 중 오류: {e}")
 
 # === 실행 ===
 if __name__ == "__main__":
     print("=== 간단 코스 정제 파이프라인 시작 ===")
-    TOPICS = ["politics", "economy", "society", "world"]
-
-    for t in TOPICS:
-        try:
-            refine_course_simple(t)
-        except Exception as e:
-            print(f"[{t}] 처리 중 오류: {e}")
-
+    refine_course_structure()
     print("=== 모든 코스 정제 완료 ===")

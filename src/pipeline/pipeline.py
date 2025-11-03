@@ -1,5 +1,9 @@
 # === src/pipeline/pipeline.py ===
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
 # --- 코스 생성 관련 ---
 from course.news_api import fetch_news
 from course.rag_builder import build_rag_data
@@ -18,7 +22,7 @@ from quiz.completion_feedback import generate_completion_feedback_quiz
 from quiz.reflect import generate_reflect_quiz
 
 # --- Wrapper import ---
-from wrapper.course_wrapper import build_course_package  
+from wrapper.course_wrapper import build_course_packages  
 
 from sentence_transformers import SentenceTransformer
 from datetime import datetime
@@ -49,7 +53,7 @@ def run_learning_pipeline():
         build_rag_data(topic, embedding_model=embedding_model)
 
         # 2-3. 코스 생성
-        course_data = generate_all_courses(topic, embedding_model=embedding_model)
+        course_data = generate_all_courses(embedding_model=embedding_model)
         if not course_data:
             print(f"[{topic}] 코스 생성 실패 → 스킵")
             continue

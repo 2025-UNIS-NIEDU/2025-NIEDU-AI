@@ -3,9 +3,21 @@ src/
 │   ├── models/
 │   │   ├── course_schema.py          # CourseWrapper / Session / QuizLevel 데이터 구조 정의
 │   │   └── __init__.py
-│   ├── main.py                       # 
+│   ├── main.py                       # FastAPI 엔드포인트 정의
 │   └── __init__.py
 │
+├──data/
+├── backup/           # 생성된 코스 원본 백업 (날짜별 저장)
+├── course_db/        # 1차 정제
+│   └── filtered/     # 2차 정제 -> FastAPI 및 Wrapper가 참조하는 최신 코스 버전
+│                     
+├── quiz/             # 세션별 퀴즈 JSON 파일 저장소
+│   ├── ...           # 개별 퀴즈 json
+│   └── package/      # FastAPI 연동용 구조 — 코스·세션·퀴즈 통합 결과 저장
+│                     # (예: politics_2025-11-04_package.json)
+│
+├── rag_db/           # 토픽별 Chroma RAG 벡터 DB (임베딩 데이터)
+│                     
 ├── config/
 │   └── settings.py                   # 환경 변수 로드 및 설정값 관리
 │
@@ -38,6 +50,5 @@ src/
 │
 └── wrapper/                          # 데이터 통합 및 패키징 모듈
     ├── course_wrapper.py             # 코스 + 세션 + 퀴즈 통합 JSON 생성
-    ├── quiz_aggregator.py            # 레벨별 퀴즈 파일 병합
     ├── feedback_wrapper.py           # 피드백 및 점수 통합 관리
     └── __init__.py

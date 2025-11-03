@@ -16,7 +16,7 @@ from k_means_constrained import KMeansConstrained
 from sentence_transformers import SentenceTransformer
 import chromadb
 
-def generate_all_courses():
+def generate_all_courses(embedding_model=None):
     """뉴스 RAG 기반 전체 토픽(course) 자동 생성"""
 
     # === 날짜 ===
@@ -353,16 +353,16 @@ def generate_all_courses():
 
         print(f"{topic} → 코스 파일 저장 완료: {output_file.resolve()}")
 
-if __name__ == "__main__":
-    from sentence_transformers import SentenceTransformer
-    import time
-
-    embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
-    TOPICS = ["politics", "economy", "society", "world", "tech"]
-
+    # === 모든 토픽 자동 생성 ===
+    TOPICS = ["politics", "economy", "society", "world"]
     for topic in TOPICS:
         try:
-            generate_course_for_topic(topic, embedding_model=embedding_model)
-            time.sleep(1)  # DB 락 방지
+            generate_course_for_topic(topic, embedding_model=embedding_model, client=client)
         except Exception as e:
             print(f"[{topic}] 실행 중 오류: {e}")
+
+if __name__ == "__main__":
+    from sentence_transformers import SentenceTransformer
+
+    embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+    generate_all_courses(embedding_model=embedding_model)
