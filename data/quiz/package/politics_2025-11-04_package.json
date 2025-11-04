@@ -29,33 +29,27 @@
                   "contentType": "SUMMARY_READING",
                   "contents": [
                     {
-                      "contentType": "SUMMARY_READING",
-                      "level": "N",
-                      "contents": [
+                      "summary": "2023년 10월 2일, 이재명 대통령과 로렌스 웡 총리는 한국과 싱가포르 간의 정상회담을 통해 전략적 동반자 관계를 수립했다고 발표했다. 이재명 대통령은 용산 대통령실에서 열린 공동 언론 발표에서 이번 회담의 결과를 설명하며 양국 간의 협력을 강조했다. 로렌스 웡 총리는 올해가 두 나라의 수교 50주년임을 상기시키며, 양국 관계의 우수성을 점검하고 향후 더 나은 관계 구축의 가능성을 확인했다고 밝혔다.",
+                      "keywords": [
                         {
-                          "summary": "2023년 10월 2일, 이재명 대통령과 로렌스 웡 총리는 한국과 싱가포르 간의 정상회담을 통해 전략적 동반자 관계를 수립했다고 발표했다. 이재명 대통령은 용산 대통령실에서 열린 공동 언론 발표에서 이번 회담의 결과를 설명하며 양국 간의 협력을 강조했다. 로렌스 웡 총리는 올해가 두 나라의 수교 50주년임을 상기시키며, 양국 관계의 우수성을 점검하고 향후 더 나은 관계 구축의 가능성을 확인했다고 밝혔다.",
-                          "keywords": [
-                            {
-                              "word": "이재명 대통령",
-                              "isTopicWord": true
-                            },
-                            {
-                              "word": "전략적 동반자 관계",
-                              "isTopicWord": true
-                            },
-                            {
-                              "word": "우수성",
-                              "isTopicWord": false
-                            },
-                            {
-                              "word": "결과",
-                              "isTopicWord": false
-                            },
-                            {
-                              "word": "싱가포르",
-                              "isTopicWord": false
-                            }
-                          ]
+                          "word": "이재명 대통령",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "전략적 동반자 관계",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "우수성",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "결과",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "싱가포르",
+                          "isTopicWord": false
                         }
                       ]
                     }
@@ -152,46 +146,256 @@
                       "sourceUrl": "https://www.ytn.co.kr/_ln/0101_202511022323314491"
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "level": "E",
-              "steps": [
+                },
                 {
-                  "stepOrder": 1,
-                  "contentType": "SUMMARY_READING",
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
                   "contents": [
                     {
-                      "contentType": "SUMMARY_READING",
-                      "level": "E",
-                      "contents": [
+                      "contentId": "1",
+                      "question": "이재명 대통령과 웡 총리는 어떤 관계를 수립했나요?",
+                      "options": [
                         {
-                          "summary": "2023년 10월 2일, 이재명 대통령과 로렌스 웡 총리는 한국과 싱가포르 간의 정상회담을 통해 전략적 동반자 관계를 수립했다고 발표했다. 이재명 대통령은 용산 대통령실에서 열린 공동 언론 발표에서 이번 회담의 결과를 설명하며 양국 간의 협력을 강조했다. 로렌스 웡 총리는 올해가 두 나라의 수교 50주년임을 상기시키며, 양국 관계의 우수성을 점검하고 향후 더 나은 관계 구축의 가능성을 확인했다고 밝혔다.",
-                          "keywords": [
-                            {
-                              "word": "이재명 대통령",
-                              "isTopicWord": true
-                            },
-                            {
-                              "word": "전략적 동반자 관계",
-                              "isTopicWord": true
-                            },
-                            {
-                              "word": "정상회담",
-                              "isTopicWord": false
-                            },
-                            {
-                              "word": "가능성",
-                              "isTopicWord": false
-                            },
-                            {
-                              "word": "한국",
-                              "isTopicWord": false
-                            }
-                          ]
+                          "label": "A",
+                          "text": "전략적 동반자 관계"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제적 협력 관계"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 관계"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사 동맹 관계"
                         }
-                      ]
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "한국과 싱가포르가 전략적 동반자 관계를 수립했다."
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "정상회담은 어디에서 열렸나요?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "용산 대통령실"
+                        },
+                        {
+                          "label": "B",
+                          "text": "청와대"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국회"
+                        },
+                        {
+                          "label": "D",
+                          "text": "싱가포르 정부청사"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "정상회담은 용산 대통령실에서 열렸다."
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "웡 총리는 올해가 무엇의 50주년이라고 언급했나요?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "수교"
+                        },
+                        {
+                          "label": "B",
+                          "text": "전쟁 종식"
+                        },
+                        {
+                          "label": "C",
+                          "text": "무역 협정"
+                        },
+                        {
+                          "label": "D",
+                          "text": "문화 교류"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "올해는 두 나라가 수교한 지 50주년이다."
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "웡 총리는 정상회담에서 어떤 관계를 점검했다고 했나요?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "양국 관계"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제 관계"
+                        },
+                        {
+                          "label": "C",
+                          "text": "안보 관계"
+                        },
+                        {
+                          "label": "D",
+                          "text": "문화 관계"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "웡 총리는 양국 관계의 훌륭한 상태를 점검했다고 했다."
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "이재명 대통령은 어떤 발표를 했나요?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "공동언론발표"
+                        },
+                        {
+                          "label": "B",
+                          "text": "국회 연설"
+                        },
+                        {
+                          "label": "C",
+                          "text": "기자회견"
+                        },
+                        {
+                          "label": "D",
+                          "text": "정책 발표"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "이재명 대통령은 공동언론발표를 통해 결과를 설명했다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "이재명 대통령과 웡 총리가 만난 장소는 어디인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "용산 대통령실"
+                        },
+                        {
+                          "label": "B",
+                          "text": "청와대"
+                        },
+                        {
+                          "label": "C",
+                          "text": "싱가포르"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국회"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "이재명 대통령과 웡 총리는 용산 대통령실에서 만났다."
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "이재명 대통령이 정상회담 결과를 발표한 형식은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "공동언론발표"
+                        },
+                        {
+                          "label": "B",
+                          "text": "기자회견"
+                        },
+                        {
+                          "label": "C",
+                          "text": "서면 발표"
+                        },
+                        {
+                          "label": "D",
+                          "text": "인터뷰"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "이재명 대통령은 공동언론발표에서 결과를 설명했다."
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "웡 총리는 두 나라의 관계를 무엇으로 격상했다고 했나?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "전략적 동반자 관계"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제 협력"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류"
+                        },
+                        {
+                          "label": "D",
+                          "text": "안보 협력"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "웡 총리는 전략적 동반자 관계로 격상했다고 밝혔다."
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "웡 총리는 올해가 두 나라의 무엇을 기념하는 해라고 했나?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "수교 50주년"
+                        },
+                        {
+                          "label": "B",
+                          "text": "무역 협정 체결"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 시작"
+                        },
+                        {
+                          "label": "D",
+                          "text": "외교 관계 수립"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "웡 총리는 수교 50주년을 기념하는 해라고 언급했다."
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "이재명 대통령과 웡 총리는 어떤 관계를 수립했나?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "전략적 동반자 관계"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제 동맹"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 협력"
+                        },
+                        {
+                          "label": "D",
+                          "text": "안보 동맹"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "이재명 대통령과 웡 총리는 전략적 동반자 관계를 수립했다."
                     }
                   ]
                 }
@@ -205,35 +409,453 @@
                   "contentType": "SUMMARY_READING",
                   "contents": [
                     {
-                      "contentType": "SUMMARY_READING",
-                      "level": "I",
-                      "contents": [
+                      "summary": "2023년 10월 2일, 이재명 대통령과 로렌스 웡 총리는 한국과 싱가포르 간의 정상회담을 통해 전략적 동반자 관계를 수립했다고 발표했다. 이재명 대통령은 용산 대통령실에서 열린 공동 언론 발표에서 이번 회담의 결과를 설명하며 양국 간의 협력을 강조했다. 로렌스 웡 총리는 올해가 두 나라의 수교 50주년임을 상기시키며, 양국 관계의 우수성을 점검하고 향후 더 나은 관계 구축의 가능성을 확인했다고 밝혔다.",
+                      "keywords": [
                         {
-                          "summary": "2023년 10월 2일, 이재명 대통령과 로렌스 웡 총리는 한국과 싱가포르 간의 정상회담을 통해 전략적 동반자 관계를 수립했다고 발표했다. 이재명 대통령은 용산 대통령실에서 열린 공동 언론 발표에서 이번 회담의 결과를 설명하며 양국 간의 협력을 강조했다. 로렌스 웡 총리는 올해가 두 나라의 수교 50주년임을 상기시키며, 양국 관계의 우수성을 점검하고 향후 더 나은 관계 구축의 가능성을 확인했다고 밝혔다.",
-                          "keywords": [
-                            {
-                              "word": "이재명 대통령",
-                              "isTopicWord": true
-                            },
-                            {
-                              "word": "전략적 동반자 관계",
-                              "isTopicWord": true
-                            },
-                            {
-                              "word": "수교",
-                              "isTopicWord": false
-                            },
-                            {
-                              "word": "협력",
-                              "isTopicWord": false
-                            },
-                            {
-                              "word": "언론 발표",
-                              "isTopicWord": false
-                            }
-                          ]
+                          "word": "이재명 대통령",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "전략적 동반자 관계",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "수교",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "협력",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "언론 발표",
+                          "isTopicWord": false
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "이재명 대통령이 한-싱가포르 정상회담에서 강조한 점은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 협력 강화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "전략적 동반자 관계"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 확대"
+                        },
+                        {
+                          "label": "D",
+                          "text": "안보 협력 강화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "이재명 대통령은 정상회담에서 전략적 동반자 관계 수립을 강조했다."
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "로렌스 웡 총리가 양국 관계의 훌륭한 상태를 점검한 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제적 이익 추구"
+                        },
+                        {
+                          "label": "B",
+                          "text": "외교 관계 격상"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화적 이해 증진"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사 협력 확대"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "웡 총리는 양국 관계의 훌륭한 상태를 확인하고 외교 관계를 격상했다."
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "양국이 전략적 동반자 관계를 수립한 배경은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제적 협력 필요"
+                        },
+                        {
+                          "label": "B",
+                          "text": "수교 50주년 기념"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 증진"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사적 협력 강화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "양국은 수교 50주년을 맞아 전략적 동반자 관계를 수립했다."
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "이재명 대통령이 공동언론발표에서 밝힌 내용은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 협력 강화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "전략적 동반자 관계"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 확대"
+                        },
+                        {
+                          "label": "D",
+                          "text": "안보 협력 강화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "이재명 대통령은 공동언론발표에서 전략적 동반자 관계를 밝혔다."
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "로렌스 웡 총리가 외교 관계를 격상하게 된 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제적 이익 추구"
+                        },
+                        {
+                          "label": "B",
+                          "text": "수교 50주년 기념"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화적 이해 증진"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사 협력 확대"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "웡 총리는 수교 50주년을 맞아 외교 관계를 격상했다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "이재명 대통령과 로렌스 웡 총리가 정상회담을 통해 확인한 것은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 협력 강화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "양국 관계의 훌륭한 상태"
+                        },
+                        {
+                          "label": "C",
+                          "text": "군사 동맹 체결"
+                        },
+                        {
+                          "label": "D",
+                          "text": "문화 교류 확대"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "정상회담에서 양국 관계의 훌륭한 상태를 점검하고 확인했다."
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "한국과 싱가포르가 전략적 동반자 관계를 수립한 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제적 이익 증대"
+                        },
+                        {
+                          "label": "B",
+                          "text": "외교적 격상 필요"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화적 유사성"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사적 협력 강화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "양국 관계를 격상하기 위해 전략적 동반자 관계를 수립했다."
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "로렌스 웡 총리가 올해를 특별히 언급한 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 위기 극복"
+                        },
+                        {
+                          "label": "B",
+                          "text": "수교 50주년"
+                        },
+                        {
+                          "label": "C",
+                          "text": "기후 변화 대응"
+                        },
+                        {
+                          "label": "D",
+                          "text": "문화 교류 확대"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "올해는 두 나라가 수교한 지 50주년 되는 해이기 때문이다."
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "정상회담에서 외교 관계를 격상한 주된 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "군사 협력 필요"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제적 이익 증대"
+                        },
+                        {
+                          "label": "C",
+                          "text": "양국 관계 점검"
+                        },
+                        {
+                          "label": "D",
+                          "text": "문화 교류 필요"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "정상회담에서 양국 관계의 훌륭한 상태를 점검했기 때문이다."
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "이재명 대통령이 공동언론발표를 통해 강조한 것은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 협력 강화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "전략적 동반자 관계"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 확대"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사 동맹 체결"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "이재명 대통령은 전략적 동반자 관계 수립을 강조했다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이재명 대통령이 회담 결과를 설명한 장소는 어디인가요?",
+                      "correctAnswer": "용산",
+                      "answerExplanation": "이재명 대통령은 용산 대통령실에서 회담 결과를 설명했다."
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "올해는 한국과 싱가포르가 수교한 지 몇 주년인가요?",
+                      "correctAnswer": "50주년",
+                      "answerExplanation": "올해는 한국과 싱가포르가 수교한 지 50주년이다."
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "싱가포르의 총리 이름은 무엇인가요?",
+                      "correctAnswer": "웡",
+                      "answerExplanation": "싱가포르의 총리 이름은 로렌스 웡이다."
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이재명 대통령과 정상회담을 가진 나라는 어디인가요?",
+                      "correctAnswer": "싱가포르",
+                      "answerExplanation": "이재명 대통령은 싱가포르와 정상회담을 가졌다."
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이재명 대통령은 어떤 직위에 있나요?",
+                      "correctAnswer": "대통령",
+                      "answerExplanation": "이재명은 한국의 대통령이다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "양국의 전략적 동반자 관계 수립 의도는 무엇인가?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 10월 2일, 이재명 대통령과 로렌스 웡 총리는 한국과 싱가포르 간의 정상회담을 통해 전략적 동반자 관계를 수립했다고 발표했다. 이재명 대통령은 용산 대통령실에서 열린 공동 언론 발표에서 이번 회담의 결과를 설명하며 양국 간의 협력을 강조했다. 로렌스 웡 총리는 올해가 두 나라의 수교 50주년임을 상기시키며, 양국 관계의 우수성을 점검하고 향후 더 나은 관계 구축의 가능성을 확인했다고 밝혔다.",
+                      "keywords": [
+                        {
+                          "word": "이재명 대통령",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "전략적 동반자 관계",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "정상회담",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "가능성",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "한국",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SHORT_ANSWER",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "정상회담 계기로 확정된 양국 관계의 공식 호칭은 무엇인가?",
+                      "correctAnswer": "동반자",
+                      "answerExplanation": "정상회담에서 전략적 동반자 관계를 수립했고, 양국 협력의 제도적 위상을 높였다."
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "정상회담 후 격상되었다고 확인된 양국 간 영역의 명칭은 무엇인가?",
+                      "correctAnswer": "외교",
+                      "answerExplanation": "웡 총리는 외교 관계를 격상하게 됐다고 덧붙였고, 이는 국가 간 공식 위상 변화를 뜻한다."
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "수립된 동반자 관계의 성격을 규정하는 핵심 용어는 무엇인가?",
+                      "correctAnswer": "전략적",
+                      "answerExplanation": "공동언론발표에서 전략적 동반자 관계를 명시해, 협력의 우선순위와 방향성을 분명히 했다."
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "정상회담 결과가 대외에 제시된 공식 발표 형식의 명칭은 무엇인가?",
+                      "correctAnswer": "공동언론발표",
+                      "answerExplanation": "대통령실에서 결과를 공동언론발표로 설명했으며, 합의 내용을 공식적으로 확인하는 절차다."
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "양국 정상이 함께 점검했다고 밝힌 대상의 일반적 범주는 무엇인가?",
+                      "correctAnswer": "관계",
+                      "answerExplanation": "웡 총리는 양국 관계의 훌륭한 상태를 점검했다고 했고, 이는 협력 수준을 진단하는 근거가 된다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SENTENCE_COMPLETION",
+                  "contents": [
+                    [
+                      {
+                        "contentId": "1",
+                        "question": "한국과 싱가포르가 ______",
+                        "referenceAnswer": "전략적 동반자 관계를 수립했습니다."
+                      },
+                      {
+                        "contentId": "2",
+                        "question": "이재명 대통령은 정상회담 결과를 ______",
+                        "referenceAnswer": "공동언론발표에서 설명했습니다."
+                      },
+                      {
+                        "contentId": "3",
+                        "question": "웡 총리는 양국 관계의 훌륭한 상태를 ______",
+                        "referenceAnswer": "점검하고 앞으로 더 나은 관계를 맺을 수 있음을 확인했습니다."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SENTENCE_COMPLETION",
+                  "contents": [
+                    [
+                      {
+                        "contentId": "1",
+                        "question": "한국과 싱가포르가 ______",
+                        "referenceAnswer": "전략적 동반자 관계를 수립했습니다."
+                      },
+                      {
+                        "contentId": "2",
+                        "question": "이재명 대통령이 공동언론발표에서 밝힌 내용은 ______",
+                        "referenceAnswer": "한-싱가포르 정상회담 결과입니다."
+                      },
+                      {
+                        "contentId": "3",
+                        "question": "웡 총리는 두 나라가 수교한 지 50주년 되는 해라며 ______",
+                        "referenceAnswer": "양국 관계의 훌륭한 상태를 점검했다고 언급했습니다."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "전략적 동반자 관계가 지역 경제에 미칠 긍정적 효과는?"
                     }
                   ]
                 }

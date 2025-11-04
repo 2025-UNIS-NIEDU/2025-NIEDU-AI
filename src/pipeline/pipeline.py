@@ -73,7 +73,7 @@ def run_learning_pipeline():
             }
 
         # 2-5. 코스 패키지 통합
-        build_course_package(topic, course_data)
+        build_course_packages(topic, course_data)
 
         # 2-6. 코스 정제
         refine_course_structure(topic)
