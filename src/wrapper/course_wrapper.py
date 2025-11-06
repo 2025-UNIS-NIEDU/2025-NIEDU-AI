@@ -5,7 +5,7 @@ from collections import defaultdict
 from datetime import datetime
 
 def build_course_packages():
-    """모든 토픽(economy, politics, society, world, tech)에 대해 코스 + 세션 + 퀴즈 통합 JSON 생성"""
+    """모든 토픽(economy, politics, society, world)에 대해 코스 + 세션 + 퀴즈 통합 JSON 생성"""
     today = datetime.now().strftime("%Y-%m-%d")
 
     BASE_DIR = Path(__file__).resolve().parents[2]
@@ -88,16 +88,18 @@ def build_course_packages():
                 ("MULTIPLE_CHOICE", 5),
             ],
             "I": [
-                ("SUMMARY_READING", 1),
-                ("MULTIPLE_CHOICE", 2),
-                ("SHORT_ANSWER", 3),
-                ("SESSION_REFLECTION", 4),
+                ("ARTICLE_READING", 1),
+                ("SUMMARY_READING", 2),
+                ("MULTIPLE_CHOICE", 3),
+                ("SHORT_ANSWER", 4),
+                ("SESSION_REFLECTION", 5),
             ],
             "E": [
-                ("SUMMARY_READING", 1),
-                ("SHORT_ANSWER", 2),
-                ("SENTENCE_COMPLETION", 3),
-                ("SESSION_REFLECTION", 4),
+                ("ARTICLE_READING", 1),
+                ("SUMMARY_READING", 2),
+                ("SHORT_ANSWER", 3),
+                ("SENTENCE_COMPLETION", 4),
+                ("SESSION_REFLECTION", 5),
             ],
         }
 
