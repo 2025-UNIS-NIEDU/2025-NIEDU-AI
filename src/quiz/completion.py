@@ -1,6 +1,8 @@
 import os, json, random
 from datetime import datetime
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from quiz.select_session import select_session

@@ -20,7 +20,6 @@ from quiz.ox import generate_ox_quiz
 from quiz.multi import generate_multi_choice_quiz
 from quiz.short import generate_short_quiz
 from quiz.completion import generate_completion_quiz
-from quiz.completion_feedback import generate_completion_feedback_quiz
 from quiz.reflect import generate_reflect_quiz
 
 # --- Wrapper ---
@@ -28,7 +27,6 @@ from wrapper.course_wrapper import build_course_packages
 
 from sentence_transformers import SentenceTransformer
 from datetime import datetime
-
 
 def run_learning_pipeline():
     """

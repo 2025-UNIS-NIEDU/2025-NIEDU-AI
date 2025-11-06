@@ -1,6 +1,8 @@
 import os, json, re
 from datetime import datetime
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from openai import OpenAI
 from keybert import KeyBERT
