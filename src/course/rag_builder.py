@@ -45,14 +45,31 @@ def build_rag_data():
 
         return dict(ordered + remaining)
 
-    # 3️. 백업 폴더 내 JSON 파일 검색
-    json_files = list(BACKUP_DIR.glob(f"*{today}*.json"))
-    print(f"{len(json_files)}개의 JSON 파일을 감지했습니다.")
+    # 3️. 백업 폴더 내 JSON 파일 중 최신 날짜만 유지
+    json_files_all = sorted(BACKUP_DIR.glob("*.json"), key=os.path.getmtime, reverse=True)
 
-    # 4️. 파일별 변환 및 DB 저장
+    if not json_files_all:
+        print("⚠️ 백업 폴더에 JSON 파일이 없습니다.")
+        return
+
+    # 최신 날짜 추출
+    latest_date = json_files_all[0].stem.split("_")[-1].split(".")[0]
+    json_files = [f for f in json_files_all if latest_date in f.name]
+
+    print(f"📅 최신 날짜({latest_date}) 기준 {len(json_files)}개의 JSON 파일을 처리합니다.")
+
+    # 기존 DB 초기화 (모든 토픽 DB 삭제)
+    for topic_dir in DB_ROOT.iterdir():
+        if topic_dir.is_dir():
+            print(f"🧹 {topic_dir.name} 기존 DB 삭제 중...")
+            for file in topic_dir.glob("*"):
+                file.unlink()
+            topic_dir.rmdir()
+
+    # 4️. 최신 JSON 파일별 변환 및 DB 저장
     for json_file in json_files:
         topic_name = json_file.stem.split("_")[0]
-        print(f"\n[{topic_name}] 변환 중...")
+        print(f"\n[{topic_name}] 변환 중 (파일: {json_file.name}) ...")
 
         topic_db_path = DB_ROOT / topic_name
         topic_db_path.mkdir(parents=True, exist_ok=True)
