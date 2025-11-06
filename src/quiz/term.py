@@ -2,7 +2,9 @@ import os, re, json, requests
 from openai import OpenAI
 from dotenv import load_dotenv
 from datetime import datetime
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from quiz.select_session import select_session
 
 def generate_term_quiz(selected_session=None):

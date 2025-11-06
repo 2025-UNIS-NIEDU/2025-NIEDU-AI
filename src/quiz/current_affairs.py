@@ -1,6 +1,8 @@
 import os, re, json, requests
 from openai import OpenAI
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from datetime import datetime
 from dotenv import load_dotenv
 from quiz.select_session import select_session   

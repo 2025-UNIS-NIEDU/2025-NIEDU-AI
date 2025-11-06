@@ -1,0 +1,933 @@
+{
+  "courses": [
+    {
+      "courseId": 1,
+      "topic": "국제",
+      "subTopic": "미국",
+      "subTags": [
+        "#갈등",
+        "#변화",
+        "#비판"
+      ],
+      "courseName": "미국 정치 : 갈등과 비판의 흐름",
+      "courseDescription": "이 코스는 미국 정치의 갈등과 비판을 중심으로, 사회적 시선과 문제의식을 탐구합니다. 오바마와 트럼프의 대립은 단순한 정치적 충돌을 넘어, 미국 사회의 변화와 맥락을 드러내는 중요한 이슈입니다. 이러한 갈등은 왜 발생했으며, 어떤 사회적 변화를 예고하는지를 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "오바마, 트럼프 향해 맹공…“백악관은 무법·무모·광기의 소굴”",
+          "publishedAt": "2025-11-02T22:44:00",
+          "publisher": "문화일보",
+          "sourceUrl": "https://www.munhwa.com/article/11543803",
+          "summary": "버지니아·뉴저지 주지사 선거 유세 지원 “야유 말고 투표로 심판하라” 버락 오바마 전 미국 대통령이 1일(현지시간) 뉴저지주 뉴어크에서 열린 유세에서 민주당의 뉴저지 주지사 후보인 마이키 셰릴 지지 연설을 하고 있다.\n\n연합뉴스 버락 오바마 전 미국 대통령이 1일(현지시간) 버지니아와 뉴저지 주지사 선거 지원 유세에 나서 도널드 트럼프 대통령을 강하게 비판했다.\n\n미국 정치전문 매체 더힐과 로이터 통신에 따르면, 오바마 전 대통령은 민주당의 버지니아 주지사 후보 애비게일 스팬버거 전 하원의원, 뉴저지 주지사 후보 마이키 셰릴 하원의원의 유세 현장에 연사로 참석했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636604640768430783/000-b82c3471effeadb38a3c0e504b25320e86ec9793.jpg",
+          "quizzes": [
+            {
+              "level": "N",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 11월 1일, 버락 오바마 전 미국 대통령은 뉴저지주 뉴어크에서 열린 유세에서 민주당의 주지사 후보 마이키 셰릴을 지지하는 연설을 했다. 그는 뉴저지와 버지니아의 주지사 선거를 지원하며, 도널드 트럼프 대통령에 대한 비판을 강조했다. 이날 유세에는 민주당의 버지니아 주지사 후보인 애비게일 스팬버거 전 하원의원과 뉴저지 주지사 후보 마이키 셰릴 하원의원이 함께 참석했다.",
+                      "keywords": [
+                        {
+                          "word": "버락 오바마",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "주지사 후보",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "연설",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "트럼프",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "참석",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "TERM_LEARNING",
+                  "contents": [
+                    {
+                      "terms": [
+                        {
+                          "termId": 1,
+                          "name": "주지사 선거",
+                          "definition": "주지사 선거는 주 정부의 최고 행정 책임자를 선출하는 선거를 의미한다.",
+                          "exampleSentence": "버락 오바마 전 대통령이 뉴저지 주지사 선거 유세에서 민주당 후보를 지지하며 투표의 중요성을 강조했다.",
+                          "additionalExplanation": "주지사 선거는 마치 학교에서 반장 뽑는 것과 같아요. 친구들이 가장 믿을 수 있고, 잘 이끌어줄 사람을 고르는 과정이죠."
+                        },
+                        {
+                          "termId": 2,
+                          "name": "유세 지원",
+                          "definition": "유세 지원은 정치 후보를 지지하기 위해 유세에 참석하여 연설하거나 캠페인을 돕는 활동을 의미한다.",
+                          "exampleSentence": "버락 오바마 전 대통령이 뉴저지와 버지니아 주지사 선거 유세 지원에 나서 민주당 후보들을 지지했다.",
+                          "additionalExplanation": "유세 지원은 마치 친구의 생일 파티를 준비하는 것과 같아요. 친구가 주인공이니, 우리는 장식하고 음식을 준비하며 분위기를 띄우는 거죠. 그 친구가 더 많은 사람에게 사랑받을 수 있도록 돕는 거예요."
+                        },
+                        {
+                          "termId": 3,
+                          "name": "민주당 후보",
+                          "definition": "민주당 후보는 미국 민주당 소속으로 선거에 출마하는 정치인을 의미한다.",
+                          "exampleSentence": "버락 오바마 전 대통령이 뉴저지주 유세에서 민주당 후보 마이키 셰릴을 강력히 지지했다.",
+                          "additionalExplanation": "민주당 후보는 바람을 가르는 배와 같아요. 많은 사람의 방향을 잘 수렴해 안전하게 항해하며, 모두가 함께 갈 수 있는 길을 찾는 역할을 하죠."
+                        },
+                        {
+                          "termId": 4,
+                          "name": "정치 비판",
+                          "definition": "정치 비판은 특정 정치인이나 정당의 정책과 행동을 공개적으로 비난하거나 반대하는 것을 의미한다.",
+                          "exampleSentence": "버락 오바마 전 대통령이 뉴저지 유세에서 도널드 트럼프 대통령을 강하게 비판하며 유권자들에게 투표의 중요성을 강조했다.",
+                          "additionalExplanation": "정치 비판은 마치 요리를 할 때, 재료의 신선함을 체크하는 것과 같아요. 신선하지 않은 재료로 요리하면 맛이 없듯, 정치도 제대로 돌아가는지 살펴봐야 더 좋은 결과가 나옵니다."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "CURRENT_AFFAIRS",
+                  "contents": [
+                    {
+                      "issue": "오바마 전 대통령의 트럼프 비판, 정치적 갈등 심화",
+                      "cause": "버락 오바마 전 미국 대통령이 버지니아와 뉴저지 주지사 선거 유세에서 도널드 트럼프 대통령을 강하게 비판했다. 이는 트럼프 행정부에 대한 민주당의 불만과 비판이 고조되는 상황에서 발생해 정치적 갈등이 심화됐다.",
+                      "circumstance": "이 과정에서 오바마 전 대통령은 민주당 후보들을 지지하며 트럼프 대통령을 '무법·무모·광기의 소굴'로 비유했다. 이에 따라 공화당은 오바마의 발언을 비판하며 정치적 공세를 강화했고, 민주당은 이를 지지하며 선거 유세를 이어갔다.",
+                      "result": "결국 오바마 전 대통령의 발언은 민주당 지지층의 결집을 강화하는 한편, 공화당과의 정치적 대립을 더욱 격화시키는 결과로 이어졌다.",
+                      "effect": "이번 사건은 미국 정치에서 전직 대통령의 발언이 갖는 영향력을 다시금 일깨웠다. 또한, 정치적 갈등의 심화가 선거 과정에 미치는 영향을 고려할 필요성을 제기했다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "OX_QUIZ",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "버락 오바마 전 대통령은 뉴저지 주지사 후보를 지지했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "오바마 전 대통령은 뉴저지 주지사 후보 마이키 셰릴을 지지했다.",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "버락 오바마 전 대통령은 도널드 트럼프 대통령을 칭찬했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "오바마 전 대통령은 트럼프 대통령을 강하게 비판했다.",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "오바마 전 대통령은 버지니아 주지사 후보를 지지하지 않았다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "오바마 전 대통령은 버지니아 주지사 후보를 지지하는 유세에 참석했다.",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "오바마 전 대통령은 1일 뉴어크에서 유세를 했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "오바마 전 대통령은 1일 뉴어크에서 유세를 진행했다.",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "오바마 전 대통령은 유세에서 투표를 강조했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "오바마 전 대통령은 '투표로 심판하라'고 강조했다.",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "버락 오바마가 유세를 지원한 주는 어디인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "뉴저지"
+                        },
+                        {
+                          "label": "B",
+                          "text": "캘리포니아"
+                        },
+                        {
+                          "label": "C",
+                          "text": "텍사스"
+                        },
+                        {
+                          "label": "D",
+                          "text": "플로리다"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "버락 오바마는 뉴저지에서 유세를 지원했다."
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "오바마가 지지한 뉴저지 주지사 후보는 누구인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "마이키 셰릴"
+                        },
+                        {
+                          "label": "B",
+                          "text": "애비게일 스팬버거"
+                        },
+                        {
+                          "label": "C",
+                          "text": "도널드 트럼프"
+                        },
+                        {
+                          "label": "D",
+                          "text": "조 바이든"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "오바마는 마이키 셰릴을 지지했다."
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "오바마가 비판한 대통령은 누구인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "조 바이든"
+                        },
+                        {
+                          "label": "B",
+                          "text": "버락 오바마"
+                        },
+                        {
+                          "label": "C",
+                          "text": "도널드 트럼프"
+                        },
+                        {
+                          "label": "D",
+                          "text": "버니 샌더스"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "오바마는 도널드 트럼프를 비판했다."
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "오바마가 유세를 한 날짜는 언제인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "1일"
+                        },
+                        {
+                          "label": "B",
+                          "text": "2일"
+                        },
+                        {
+                          "label": "C",
+                          "text": "3일"
+                        },
+                        {
+                          "label": "D",
+                          "text": "4일"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "오바마는 1일에 유세를 했다."
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "오바마가 유세에서 강조한 주제는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "투표"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제"
+                        },
+                        {
+                          "label": "C",
+                          "text": "교육"
+                        },
+                        {
+                          "label": "D",
+                          "text": "환경"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "오바마는 투표의 중요성을 강조했다."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "I",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636604640768430783/000-b82c3471effeadb38a3c0e504b25320e86ec9793.jpg",
+                      "headline": "오바마, 트럼프 향해 맹공…“백악관은 무법·무모·광기의 소굴”",
+                      "publisher": "문화일보",
+                      "publishedAt": "2025-11-02T22:44:00",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 11월 1일, 버락 오바마 전 미국 대통령은 뉴저지주 뉴어크에서 열린 유세에서 민주당의 주지사 후보 마이키 셰릴을 지지하는 연설을 했다. 그는 뉴저지와 버지니아의 주지사 선거를 지원하며, 도널드 트럼프 대통령에 대한 비판을 강조했다. 이날 유세에는 민주당의 버지니아 주지사 후보인 애비게일 스팬버거 전 하원의원과 뉴저지 주지사 후보 마이키 셰릴 하원의원이 함께 참석했다.",
+                      "keywords": [
+                        {
+                          "word": "버락 오바마",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "주지사 후보",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "하원의원",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "비판",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "선거",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "‘야유 말고 투표’ 발언은 선거 동원 전략상 어떤 행동 방식을 최우선하려는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "현장 항의"
+                        },
+                        {
+                          "label": "B",
+                          "text": "표결 동원"
+                        },
+                        {
+                          "label": "C",
+                          "text": "법정 공방"
+                        },
+                        {
+                          "label": "D",
+                          "text": "기부 확대"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "오바마는 야유 대신 투표를 촉구해 분노를 제도권 참여로 전환하려 했다."
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "더힐과 로이터 동시 인용은 보도 신뢰성 측면에서 무엇을 시사하는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "복수출처 교차"
+                        },
+                        {
+                          "label": "B",
+                          "text": "사설 추정치"
+                        },
+                        {
+                          "label": "C",
+                          "text": "단일출처 의존"
+                        },
+                        {
+                          "label": "D",
+                          "text": "익명제보 중심"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "두 매체가 함께 보도해 핵심 사실이 상호 검증되는 신뢰 구조가 강화된다."
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "버지니아·뉴저지 주지사 지원 인물의 공통된 경력적 특성은 무엇이라고 볼 수 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "상원의원 출신"
+                        },
+                        {
+                          "label": "B",
+                          "text": "시장 경험"
+                        },
+                        {
+                          "label": "C",
+                          "text": "연방하원 경력"
+                        },
+                        {
+                          "label": "D",
+                          "text": "주의회 경력"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "두 후보는 하원 경력을 공유해 연방 네트워크를 주 행정 경쟁력으로 전환하려는 구도다."
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "뉴어크 선택은 표적 유권자 구성상 어떤 상징적 목표를 지시한다고 볼 수 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "교외 중산층"
+                        },
+                        {
+                          "label": "B",
+                          "text": "농촌 보수층"
+                        },
+                        {
+                          "label": "C",
+                          "text": "산간 소수층"
+                        },
+                        {
+                          "label": "D",
+                          "text": "도시권 핵심층"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "뉴어크 대도시 유세는 도시권 핵심층 결집을 노려 투표율을 끌어올리려는 의도다."
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "트럼프 비판을 수반한 지원 유세는 주지사 선거의 성격을 어떤 방향으로 재구성하려는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "순수 지방화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제 단일쟁점"
+                        },
+                        {
+                          "label": "C",
+                          "text": "인물 경쟁론"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국면 전국화"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "트럼프 비판을 전면화해 주지사 선거를 전국 정치 구도의 대결로 재규정하려는 전략이다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SHORT_ANSWER",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "버락 오바마 전 대통령이 지지 연설한 주지사 후보는 누구인가?",
+                      "correctAnswer": "셰릴",
+                      "answerExplanation": "오바마 전 대통령은 뉴저지 주지사 후보인 마이키 셰릴을 지지했다."
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "버락 오바마 전 대통령이 연설한 주는 어디인가?",
+                      "correctAnswer": "뉴저지",
+                      "answerExplanation": "오바마 전 대통령은 뉴저지주 뉴어크에서 연설을 했다."
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "버락 오바마 전 대통령이 유세한 주지사 선거는 어떤 주에서 열렸는가?",
+                      "correctAnswer": "버지니아",
+                      "answerExplanation": "오바마 전 대통령은 버지니아 주지사 선거 유세에 참여했다."
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "버락 오바마 전 대통령이 연설한 도시 이름은 무엇인가?",
+                      "correctAnswer": "뉴어크",
+                      "answerExplanation": "오바마 전 대통령은 뉴저지주 뉴어크에서 연설을 했다."
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "버락 오바마 전 대통령이 연설한 매체는 무엇인가?",
+                      "correctAnswer": "더힐",
+                      "answerExplanation": "오바마 전 대통령의 연설은 더힐과 로이터 통신에 보도되었다."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636604640768430783/000-b82c3471effeadb38a3c0e504b25320e86ec9793.jpg",
+                      "headline": "오바마, 트럼프 향해 맹공…“백악관은 무법·무모·광기의 소굴”",
+                      "publisher": "문화일보",
+                      "publishedAt": "2025-11-02T22:44:00",
+                      "sourceUrl": "https://www.munhwa.com/article/11543803"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 11월 1일, 버락 오바마 전 미국 대통령은 뉴저지주 뉴어크에서 열린 유세에서 민주당의 주지사 후보 마이키 셰릴을 지지하는 연설을 했다. 그는 뉴저지와 버지니아의 주지사 선거를 지원하며, 도널드 트럼프 대통령에 대한 비판을 강조했다. 이날 유세에는 민주당의 버지니아 주지사 후보인 애비게일 스팬버거 전 하원의원과 뉴저지 주지사 후보 마이키 셰릴 하원의원이 함께 참석했다.",
+                      "keywords": [
+                        {
+                          "word": "버락 오바마",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "주지사 후보",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "뉴저지",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "민주당",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "유세",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "오바마가 비판 대상으로 지목한 현직 대통령의 성명은 무엇인가?",
+                      "correctAnswer": "트럼프",
+                      "answerExplanation": "오바마는 트럼프 대통령을 강하게 비판했고, 이는 지도자 책임성에 대한 정치적 심판 촉구다."
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "버지니아 주지사 선거에서 오바마가 지지 표명한 후보의 성명은 무엇인가?",
+                      "correctAnswer": "스팬버거",
+                      "answerExplanation": "오바마는 버지니아 주지사 후보 스팬버거 유세에 참석했으며, 지역 선거에서 당의 동원력 강화를 뜻한다."
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "오바마가 유세로 공개 지원한 정당의 공식 명칭은 무엇인가?",
+                      "correctAnswer": "민주당",
+                      "answerExplanation": "오바마는 민주당의 버지니아·뉴저지 주지사 후보를 지원했으며, 정당 결집과 선거 전략에 함의를 갖는다."
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "오바마가 청중에게 행동 지침으로 촉구한 참여 행위는 무엇인가?",
+                      "correctAnswer": "투표",
+                      "answerExplanation": "오바마는 야유 말고 투표로 심판하라 강조했으며, 시민 참여를 통한 민주적 정당성 확보를 지향한다."
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "오바마가 연사로 참여해 지원한 정치 행사 유형은 무엇인가?",
+                      "correctAnswer": "유세",
+                      "answerExplanation": "오바마는 버지니아·뉴저지 유세 현장에 연사로 섰으며, 공개 지원을 통한 선거 영향력 확대를 의미한다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SENTENCE_COMPLETION",
+                  "contents": [
+                    [
+                      {
+                        "contentId": "1",
+                        "question": "오바마 전 대통령이 유세에서 ______",
+                        "referenceAnswer": "도널드 트럼프 대통령을 강하게 비판했다."
+                      },
+                      {
+                        "contentId": "2",
+                        "question": "오바마 전 대통령은 민주당의 ______",
+                        "referenceAnswer": "버지니아 주지사 후보 애비게일 스팬버거를 지지했다."
+                      },
+                      {
+                        "contentId": "3",
+                        "question": "뉴저지에서 열린 유세에서 오바마 전 대통령은 ______",
+                        "referenceAnswer": "마이키 셰릴 지지 연설을 했다."
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sessionId": 2,
+          "headline": "오바마, 트럼프 맹공하며 “대통령이 춤 한 곡 춰주겠죠” [이런뉴스]",
+          "publishedAt": "2025-11-02T18:07:00",
+          "publisher": "KBS",
+          "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8396584&ref=A",
+          "summary": "버락 오바마 전 미국 대통령이 버지니아·뉴저지 주지사 선거 지원 유세에 나서 도널드 트럼프 대통령을 향해 맹공을 퍼부었습니다.\n\n미국 정치전문 매체 더힐, 로이터 통신에 따르면, 오바마 전 대통령은 현지시간 1일 민주당의 버지니아 주지사 후보 지원 유세에서 \"백악관은 매일 무법과 무모함, 심술궂음, 그리고 광기를 쏟아내고 있다\"고 강하게 비판했습니다.\n\n뉴저지 주지사 후보 지원 유세에서도 트럼프 대통령이 정적을 기소하기 위해 법무부를 동원하고 있으며 연방정부 셧다운이 계속되는 와중에도 3억 달러(약 4천269억원)를 들여 백악관에 초호화 연회장을 짓고 있다고 비판했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636534891975938681/000-9bbe23e4de7614951b73070fe77b1ae91af71dc4.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "오바마 \"백악관 매일 무법·광기 쏟아내\"‥트럼프 비판",
+          "publishedAt": "2025-11-02T16:56:00",
+          "publisher": "MBC",
+          "sourceUrl": "https://imnews.imbc.com/news/2025/world/article/6771463_36725.html",
+          "summary": "미국 버락 오바마 전 대통령이 현지시간 1일, 버지니아·뉴저지 주지사 선거 지원 유세에서 도널드 트럼프 대통령을 강하게 비판했습니다.\n\n오바마 전 대통령은 민주당 버지니아 주지사 후보 지원유세에서 \"우리 나라와 정치는 지금 꽤 어두운 곳에 있다\"며 \"백악관이 매일 무법과 무모함, 그리고 광기를 쏟아내고 있다\"고 목소리를 높였습니다.\n\n뉴저지 주지사 지원 유세에서도 트럼프 대통령이 정적 기소를 위해 법무부를 동원하고 있으며 연방정부 셧다운이 계속되는 와중에도 우리 돈 약 4천여억 원을 들여 백악관에 초호화 연회장을 짓고 있다고 비난했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636517742410600558/000-a38e361a6cb2c3898486e44ea15533ee37dbb820.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "참았던 오바마, 유세장서 폭발…트럼프 겨냥 “백악관은 무법과 광기”",
+          "publishedAt": "2025-11-02T16:43:00",
+          "publisher": "서울신문",
+          "sourceUrl": "https://nownews.seoul.co.kr/news/newsView.php?id=20251102601005",
+          "summary": "로이터통신은 오바마 전 대통령이 민주당 버지니아 주지사 후보 애비게일 스팬버거 전 하원의원과 뉴저지 주지사 후보 마이키 셰릴 하원의원의 유세에 참석해 “이 백악관은 매일 무법과 무모함, 심술궂음 그리고 순전한 광기를 쏟아내고 있다”고 말했다고 보도했다.\n\n“야유하지 말고 투표하라” 유세 현장에서 트럼프 대통령을 향한 야유가 터지자 오바마 전 대통령은 청중을 제지하며 “야유하지 말고 투표하라”고 외쳤다.\n\n정치전문매체 더힐은 “오바마 전 대통령이 이번 유세에서 트럼프 대통령의 지도력을 직접 겨냥하며 지방선거를 사실상 ‘트럼프 심판 선거’로 만들고 있다”고 평가했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636513676393583177/000-9e7fc5705c04a4294240d66a66a879b44a7bd1e5.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "오바마, 트럼프 맹공…\"백악관 매일 무법·광기…투표로 심판\"",
+          "publishedAt": "2025-11-02T15:57:00",
+          "publisher": "아시아경제",
+          "sourceUrl": "https://view.asiae.co.kr/article/2025110215574352993",
+          "summary": "버지니아·뉴저지 주지사 선거 지원 유세버락 오바마 전 미국 대통령이 1일(현지시간) 버지니아·뉴저지 주지사 선거 지원 유세에 나서 도널드 트럼프 대통령을 향해 직격탄을 날렸다.\n\n미국 정치전문 매체 더힐 등 주요 매체에 따르면 오바마 전 대통령은 이날 민주당의 버지니아 주지사 후보 애비게일 스팬버거 전 하원의원, 뉴저지 주지사 후보 마이키 셰릴 하원의원의 선거 유세 연사로 나서 트럼프 대통령을 맹비난했다.\n\n오바마 전 대통령이 지원 유세에 나선 민주당 두 후보는 여론조사에서 우위를 점하고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636502560217109243/000-f9fd9e9b8a5f74aa7171de6a7f5a66b2db5364cc.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 2,
+      "topic": "국제",
+      "subTopic": "중국",
+      "subTags": [
+        "#관계",
+        "#교류",
+        "#문화"
+      ],
+      "courseName": "한중 관계 : 문화교류의 재조명",
+      "courseDescription": "이 코스는 한중 관계의 변화 속에서 문화교류의 중요성과 그 맥락을 탐구합니다. 최근 시진핑 주석의 방한과 한중 정상회담을 통해 양국의 문화적, 경제적 협력이 다시 주목받고 있습니다. 이러한 변화는 국제 정세와 맞물려 있으며, 문화교류는 양국 관계의 회복과 발전에 중요한 역할을 할 것입니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "JYP 만난 시진핑, 한한령 해제?…대중문화교류위원회 “성급한 판단”",
+          "publishedAt": "2025-11-02T22:44:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202511022244005",
+          "summary": "서로 인사 나누며 덕담 수준 대화 ‘콘텐츠 교류 공감대 형성’ 관측도 시진핑 중국 국가주석의 방한으로 한·중 대중문화 교류가 이전보다 활발해질지 주목된다.\n\n대중문화교류위원회는 2일 보도자료를 내고 “시 주석이 한·중 정상회담 만찬에서 박진영 대중문화교류위원장이 꺼낸 한국 가수의 중국 공연 제안에 호응했다는 일부 언론 보도가 있었다”면서 “시 주석과 박 위원장의 대화는 공식 외교 행사에서 서로 인사를 나누며 건넨 원론적 수준의 덕담이었다”고 밝혔다.\n\n한국과 중국은 이번 정상회담을 통해 보이스피싱 범죄 대책과 통화 스와프 등 7가지 협력 분야에 대해 양해각서를 맺었지만 대중문화 콘텐츠 개방은 포함돼 있지 않다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636604640768430784/000-9023d665bb46cd3fea7b8e15f6965721ad730bac.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "시진핑 \"문화·인적교류 강화하자\"제안에 한한령 해제 기대 솔솔",
+          "publishedAt": "2025-11-02T19:59:00",
+          "publisher": "MBC",
+          "sourceUrl": "https://imnews.imbc.com/replay/2025/nwdesk/article/6771494_36799.html",
+          "summary": "◀ 앵커 ▶ 어제 한중정상회담에서 시진핑 주석은 한중 관계 개선을 위한 4가지 제언을 내놨습니다.\n\n시 주석이 직접 '관계 개선', '교류 확대' 같은 말을 언급하면서 중국 내 한류 산업을 가로막았던 한한령 해제에 대한 기대도 커지고 있습니다.\n\n\"그렇게 많은 간첩 활동이 보고가 되고 실제로 잡혀가고 있는데 중국인 무비자 입국 허용 같은 정책을 펴셔야 되겠습니까?\" 한중정상회담에서 시진핑 주석은 한중관계를 위한 4가지 제언을 내놓으며, 양국 국민의 감정을 개선하자고 말했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636565239539569202/000-9c013ddcd76bbed46bbe68af01d3a5b71d98dfe2.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "李 대통령 “머지않은 시일 내 중국 방문…韓中 관계 전면 회복”",
+          "publishedAt": "2025-11-02T17:40:00",
+          "publisher": "동아일보",
+          "sourceUrl": "https://www.donga.com/news/Inter/article/all/20251102/132687382/1",
+          "summary": "이재명 대통령이 “머지않은 시일 내에 중국을 방문하겠다”며 “이번 정상회담으로 한중 관계가 회복했다”고 말했다.\n\n이 대통령은 2일 페이스북을 통해 중국을 “이사 갈 수 없는 중요하고 가까운 이웃이자 떼려야 뗄 수 없는 협력 동반자”로 평가하며 “시진핑 중국 국가주석의 말씀처럼 한중 양국은 사회 제도와 이데올로기 차이를 넘어 오랜 시간 교류하며 신뢰를 쌓아왔다”고 전했다.\n\n이 대통령은 “그간 크고 작은 어려움을 겪기도 했지만, 양국이 함께 만들어 온 깊은 우정과 역사는 흔들림 없이 견고히 이어져 왔음을 확신한다”며 “이번 한중 정상회담은 한중관계를 전면적으로 회복하고, 전략적 협력 동반자로서 실용과 상생의 길로 다시 함께 나아가게 됐다는 점에서 매우 뜻깊다”고 평가했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636527819137880896/000-fa98304d7df955b4bafadb204e109cd6a87a0a18.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "시진핑 방한했지만 ‘한한령’ 해제 기대 성급한 이유",
+          "publishedAt": "2025-11-02T16:48:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202511021648011",
+          "summary": "일부 한한령 전면 해제 기대감에 대중문화교류위 “성급한 판단” 중국, ‘건전하고 유익한 문화’ 강조 평단 호평 작품들, 중국 진출 문 열려 시진핑 중국 국가주석의 방한으로 한·중 대중문화 교류가 이전보다 활발해질 것으로 예상된다.\n\n중국 당국이 문화 정책과 관련해 ‘중화문명 영향력’과 ‘사회 안정’을 중요시함을 알 수 있는 대목이다.\n\n다만 중국이 자국 문화 산업 경쟁력 강화와 한·중 관계 개선을 위해 이전보다는 콘텐츠 교류에 개방적 자세를 보일 수 있다는 관측도 나온다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636515196434518110/000-a2140e23e69326e4d4767b908992282ac4e6e465.png"
+        },
+        {
+          "sessionId": 5,
+          "headline": "호주-중국 관계 개선 속도...\"리창 중국 총리 내년 호주 방문\"",
+          "publishedAt": "2025-11-02T14:59:00",
+          "publisher": "YTN",
+          "sourceUrl": "https://www.ytn.co.kr/_ln/0104_202511021459180716",
+          "summary": "리창 중국 국무원 총리가 미국의 주요 안보 동맹국이자 올해 들어 태평양에서 중국과 군사적 긴장이 높아진 호주를 찾아 관계 개선에 속도를 냅니다.\n\n현지시간 2일 로이터 통신에 따르면 앤서니 앨버니지 호주 총리는 최근 스카이뉴스와 인터뷰에서 \"중국 리창 총리가 내년에 호주를 방문할 예정\"이라며 \"이와 관련해 논의했다\"고 말했습니다.\n\n당시 앨버니지 총리는 회담에서 지난달 중국 전투기가 남중국해에서 호주 초계기를 향해 조명탄을 쏜 사건을 언급하며 우려를 제기했다고 밝혔습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636488381338882286/000-bd939b13e4efa4e949287a7539015eaf7ea11323.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 3,
+      "topic": "국제",
+      "subTopic": "국제",
+      "subTags": [
+        "#관계",
+        "#변화",
+        "#협력"
+      ],
+      "courseName": "미중 조선·해운 제재 철회 : 국제 관계의 변화",
+      "courseDescription": "이 코스는 미중 간 조선·해운 분야 제재 철회가 국제 관계에 미치는 영향을 탐구합니다. 이 변화는 글로벌 경제와 외교의 새로운 맥락을 형성하며, 국가 간 협력과 갈등의 새로운 국면을 보여줍니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "미 “중, 조선·해운 보복조치 철회키로”",
+          "publishedAt": "2025-11-02T19:02:00",
+          "publisher": "KBS",
+          "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8396590&ref=A",
+          "summary": "도널드 트럼프 미국 대통령과 시진핑 중국 국가주석이 타결한 무역 합의의 일환으로 중국이 한화오션의 미국 자회사에 부과한 제재를 철회할 가능성이 제기됩니다.\n\n미국 백악관이 현지시각 1일, 공개한 미중 정상 간 무역 합의 팩트시트에 따르면 중국은 미국의 '무역법 301조' 조사에 보복하기 위해 시행한 조치를 철회하고 다양한 해운 기업에 부과한 제재도 철회하기로 했습니다.\n\n앞서 중국은 지난 14일 한화오션의 미국 자회사 5곳을 중국 기업과 거래가 금지된 제재 목록에 올렸습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636551077425975809/000-ec56fcc0f6b951bc663fde7b12f6cbc63d4b7c34.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "미 \"중, 조선·해운 보복조치 철회\"…한화오션 자회사 제재 풀리나",
+          "publishedAt": "2025-11-02T16:52:00",
+          "publisher": "머니투데이",
+          "sourceUrl": "https://www.mt.co.kr/world/2025/11/02/2025110216455063927",
+          "summary": "중국이 미국의 무역법 제301조 조사에 대응하기 위해 내렸던 보복 조치를 철회하기로 했다고 백악관이 발표했다.\n\n이에 따라 중국이 한화오션의 미국 내 자회사 5곳에 부과했던 제재도 해제할 가능성이 커졌다.\n\n백악관은 1일(현지시간) 공개한 미·중 정상회담 무역 합의 팩트시트(자료집)에서 \"중국은 '해상·물류·조선 산업에 관한 미국의 무역법 301조 조사에 보복하기 위해 시행한 조치를 철회하고 여러 해운 업체에 부과한 제재를 해제할 예정\"이라고 밝혔다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636516197979787525/000-699b26cba2980e97335a94bb86a70cc3c0ed7c83.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "미 \"중, 조선·해운 보복 조치 철회\"…한화오션 제재 풀리나",
+          "publishedAt": "2025-11-02T16:02:00",
+          "publisher": "JTBC",
+          "sourceUrl": "https://news.jtbc.co.kr/article/NB12269174",
+          "summary": "도널드 트럼프 미국 대통령과 시진핑 중국 국가주석이 지난달 30일 부산에서 타결한 무역 합의에 따라 중국이 한화오션 미국 자회사에 부과한 제재를 철회할 가능성이 제기됩니다.\n\n백악관이 현지시간 1일 공개한 미·중 경제 및 무역 합의 팩트시트에 따르면 중국은 중국의 해상·물류·조선 산업에 대한 미국의 '무역법 301조' 조사에 보복하기 위해 시행한 조치를 철회하고 다양한 해운 기업에 부과한 제재도 철회하기로 했습니다.\n\n이번 합의에 따라 미국도 중국의 해상·물류·조선 산업을 겨냥해 시행한 대응 조치를 오는 10일부터 1년간 중단하기로 했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636503061050560961/000-534bec1596bafe3288d26623a9fc0fe8f4700a24.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "‘미·중 조선-해운 제재 철회’ 팩트시트 공개…한화오션 제재 풀리나",
+          "publishedAt": "2025-11-02T14:11:00",
+          "publisher": "중앙일보",
+          "sourceUrl": "https://www.joongang.co.kr/article/25378847",
+          "summary": "특히 중국이 미국의 해운 업체에 대한 보복성 조치를 철회한다는 조항이 명시돼 한화오션의 미 자회사에 부과된 제재 조치의 해제 가능성이 주목된다.\n\n이날 미 백악관이 공개한 ‘미ㆍ중 경제ㆍ무역 합의 팩트시트’에 따르면, 중국은 자국의 해상물류조선 산업에 대한 미국의 ‘무역법 301조 ’ 조사에 보복하기 위해 시행한 조치를 철회하고 다양한 해운 기업에 부과했던 제재도 취소하기로 했다.\n\n이와 함께 미국 정부가 수출통제 대상으로 지정한 중국 기업의 자회사를 겨냥한 수출통제 조치를 오는 10일부터 1년간 연장하기로 했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636475733503250852/000-1bd182a6c63bd07568f95434b18685089098b2f7.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "미 “중, 조선·해운 보복 조치 철회키로”",
+          "publishedAt": "2025-11-02T12:06:00",
+          "publisher": "KBS",
+          "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8396541&ref=A",
+          "summary": "도널드 트럼프 미국 대통령과 시진핑 중국 국가주석이 타결한 무역 합의의 일환으로 중국이 한화오션의 미국 자회사에 부과한 제재를 철회할 가능성이 제기됩니다.\n\n미국 백악관이 현지시간 1일, 공개한 미중 정상 간 무역 합의 팩트시트에 따르면 중국은 미국의 '무역법 301조' 조사에 보복하기 위해 시행한 조치를 철회하고 다양한 해운 기업에 부과한 제재도 철회하기로 했습니다.\n\n앞서 중국은 지난 14일 한화오션의 미국 자회사 5곳을 중국 기업과 거래가 금지된 제재 목록에 올렸습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636445365450444932/000-c08211b159c577348b65a732d3ed4357b11afe83.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 4,
+      "topic": "국제",
+      "subTopic": "미국",
+      "subTags": [
+        "#미래",
+        "#안전",
+        "#혁신"
+      ],
+      "courseName": "테슬라와 미래 모빌리티 : 기술과 안전의 균형",
+      "courseDescription": "이 코스는 테슬라의 혁신적인 모빌리티 기술과 그로 인한 안전 문제를 탐구합니다. 미래의 교통수단이 가져올 변화와 그에 따른 사회적 시선 및 문제의식을 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "[포착] “미래 경찰차, 테슬라가 제작?”…라스베이거스, 사이버트럭 순찰차 도입 논란",
+          "publishedAt": "2025-11-02T21:01:00",
+          "publisher": "서울신문",
+          "sourceUrl": "https://nownews.seoul.co.kr/news/newsView.php?id=20251102601007",
+          "summary": "벤처 자본이 기부한 테슬라 순찰차…“혁신인가 영향력인가” 논란 확산 미국 네바다주 라스베이거스가 테슬라 전기 픽업트럭 ‘사이버트럭’을 경찰 순찰차로 투입한다.\n\n미국 내에서 가장 큰 규모의 사이버트럭 경찰차 도입 사례로, 민간 벤처 자본이 기부한 차량이 공공기관 운영에 사용되면서 ‘공공과 민간의 경계가 모호해졌다’는 논란이 일고 있다.\n\n라스베이거스 외 다른 도시도 전기 순찰차를 도입하고 있지만, 민간이 전액 기부해 경찰 장비를 마련한 사례는 드물다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636578390788150027/000-46d2aaf447180f88ddd96b8e15191a5345115076.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "미중 우주전쟁 불꽃…‘54년만 달착륙’ vs ‘1년 우주 체류’",
+          "publishedAt": "2025-11-02T18:14:00",
+          "publisher": "서울신문",
+          "sourceUrl": "https://www.seoul.co.kr/news/international/2025/11/02/20251102500097",
+          "summary": "특히 선저우 22호 승무원 중 한 명의 우주인은 무려 1년 이상 장기간 우주 궤도에서 체류할 예정이다.\n\n선저우 22호 승무원 중 한 명은 중국의 우주정거장 톈궁에 1년 이상 남아 우주 유영, 화물을 위한 에어록 작업, 우주 과학 실험 및 기술 테스트 등을 수행한다.\n\n달에 발자국을 남기는 첫 중국 우주인의 역사를 쓰기 위해 지난 31일 발사된 선저우 21호의 승무원들은 중국 우주정거장에 체류하는 동안 생쥐를 활용한 궤도 내 과학 실험을 수행한다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636536411651969161/000-c898cc0473c9bea5d1b6df5d991313e027c9b008.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "머스크 \"플라잉카, 올해 안에 공개할 수도\"",
+          "publishedAt": "2025-11-02T08:24:00",
+          "publisher": "노컷뉴스",
+          "sourceUrl": "https://www.nocutnews.co.kr/news/6421997?utm_medium=article&utm_campaign=20251102082338",
+          "summary": "1일(현지시간) 외신들에 따르면, 머스크는 유명 팟캐스터인 조 로건과 방송에서 오랫동안 지연돼 온 새로운 테슬라의 로드스터 스포츠카와 관련한 최신 정보를 묻는 질문에 프로토타입 시연이 가까워지고 있다고 답했다.\n\n머스크는 \"(팔란티어 창업자인) 제 친구 피터 틸이 '미래에는 하늘을 나는 자동차가 있어야 하는데, 아직 나는 자동차는 없다'고 한 적이 있다\"고 말했다.\n\n또 \"제임스 본드 자동차를 모두 합해도 이 차보다 더 멋질 것\"이라고 비유했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636388187398082943/000-2fa5819332f1fbd62f81f886cc07f8ed9215bfbd.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "\"불타는 차 안에 갇혀 숨졌다\"…미국서 테슬라에 유족 소송",
+          "publishedAt": "2025-11-04T10:10:00",
+          "publisher": "MBN",
+          "sourceUrl": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5151899",
+          "summary": "미국에서 테슬라 차량의 충돌 사고 후 화재가 발생한 상황에서 탑승자들이 차 문을 열지 못하는 바람에 갇혀 숨졌다고 주장하는 소송이 제기됐습니다.\n\n3일(현지시간) 블룸버그와 로이터 통신에 따르면, 지난해 사고로 사망한 제프리·미셸 바우어 부부의 자녀들은 테슬라 측의 차량 설계 결함이 부모의 사망을 초래했다며 최근 테슬라를 상대로 소송을 냈습니다.\n\n바우어 부부의 자녀 측 변호인단은 소장에서 \"테슬라의 설계는 차량 충돌에서 생존한 탑승자가 불타는 차 안에 갇힌 상태로 남을 수 있다는, 매우 예측할 수 있는 위험을 초래했다\"고 주장했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/04/1637139641440277122/000-46f4d9a0493760e9044c9f78ade85a531c993965.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "‘불붙은 테슬라서 못 빠져나와 숨졌다’…美서 ‘차 문 결함’ 소송 제기돼",
+          "publishedAt": "2025-11-04T09:42:00",
+          "publisher": "문화일보",
+          "sourceUrl": "https://www.munhwa.com/article/11544207",
+          "summary": "로이터 연합뉴스 미국에서 충돌 사고 후 불이 난 테슬라 차량 안에서 탑승자들이 문을 열지 못해 숨졌다는 주장을 담은 소송이 제기됐다.\n\n3일(현지시간) 블룸버그 등에 따르면, 지난해 11월 사고로 사망한 제프리·미셸 바우어 부부의 자녀들은 차량 설계 결함이 부모의 사망을 초래했다며 테슬라를 상대로 최근 소송을 냈다.\n\n지난해 11월 샌프란시스코 교외에서 사이버트럭 충돌 사고 후 화재로 숨진 대학생 2명의 유족 역시 “차 문이 열리지 않아 차 안에 갇혔다”며 테슬라를 상대로 소송을 제기했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/04/1637132531293884907/000-448c22d59f6ce7132dc7a97c2e382c9db93caba9.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 5,
+      "topic": "국제",
+      "subTopic": "국제",
+      "subTags": [
+        "#변화",
+        "#외교",
+        "#인권"
+      ],
+      "courseName": "트럼프의 군사 개입 경고 : 국제 관계의 변화",
+      "courseDescription": "이 코스는 트럼프 전 대통령의 나이지리아 군사 개입 경고를 통해 국제 관계의 변화와 그 중요성을 탐구합니다. 기독교인 학살 문제를 둘러싼 군사적 개입 가능성은 국제 사회의 복잡한 역학과 연결되며, 이는 국가 간의 외교 정책과 인권 문제에 대한 시각을 재조명하게 합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "트럼프 “나이지리아, 기독교인 학살 방관…총 쏘며 들어갈수도”",
+          "publishedAt": "2025-11-02T17:04:00",
+          "publisher": "동아일보",
+          "sourceUrl": "https://www.donga.com/news/Inter/article/all/20251102/132686157/1",
+          "summary": "” 도널드 트럼프 미국 대통령이 1일 인구 약 2억2000만 명으로 아프리카 최대 인구 대국인 나이지리아가 자국 내 기독교인 학살을 방관하고 있다고 비난했다.\n\n트럼프 대통령은 이미 지난달 31일 나이지리아에서 이슬람 극단주의자들이 기독교인에 대한 집단학살(제노사이드)를 저지르고 있다며 나이지리아를 종교 자유 침해 우려가 심각한 ‘특별우려국’으로 지정했다.\n\n● 아프리카서 중국 견제가 목적 트럼프 대통령이 ‘기독교도 박해’를 군사 개입 명분으로 내세웠지만 진짜 목적은 아프리카를 둘러싼 중국과의 패권 경쟁이라는 분석도 나온다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636518715392659480/000-3d814d123f282f396d63dbdf565ca431b0b759fc.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "\"총 쏘며 들어가겠다\" 아프리카로 향한 트럼프의 '군사작전' 카드 [지금이뉴스]",
+          "publishedAt": "2025-11-02T14:23:00",
+          "publisher": "YTN",
+          "sourceUrl": "https://www.ytn.co.kr/_ln/0134_202511021423462593",
+          "summary": "도널드 트럼프 미국 대통령이 나이지리아 정부가 기독교인 학살을 용인하고 있다고 주장하며 이를 막기 위해 군사력까지 사용할 수 있다고 경고했습니다.\n\n트럼프 대통령은 전날에도 \"기독교는 나이지리아에서 실존적 위협을 맞이하고 있다\", \"이슬람 극단주의자들이 기독교인 집단학살(제노사이드)을 저지르고 있다\"고 주장하며 나이지리아를 종교의 자유 침해 우려가 심각한 특별우려국으로 지정한다고 밝힌 바 있습니다.\n\n티누부 대통령은 나이지리아에 종교의 자유가 없다는 것은 현실을 전혀 반영하지 않은 평가라며 \"종교적 자유와 관용은 우리 집단 정체성의 핵심 요소였으며 앞으로도 계속 그럴 것\"이라고 말했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636487890626285633/000-3b0f393a0054f5d3589f1b0a93f96c0bb57b5c42.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "트럼프 \"나이지리아, 기독교인 학살 계속되면 총 쏘며 들어간다\" 경고",
+          "publishedAt": "2025-11-02T12:56:00",
+          "publisher": "파이낸셜뉴스",
+          "sourceUrl": "http://www.fnnews.com/news/202511021249036277",
+          "summary": "종교 문제를 명분으로 한 미국의 군사 개입 시사 특별우려국 지정 직후 나이지리아 정권 압박 수위 급등 의회 승인·국제법적 정당성 확보 가능성 논란 [파이낸셜뉴스] 도널드 트럼프 미국 대통령이 나이지리아 정부가 기독교인 학살을 방치하고 있다며 군사력 사용까지 시사했다.\n\n트럼프 대통령은 전날에도 \"기독교는 나이지리아에서 실존적 위협에 처해 있다\"며 \"이슬람 극단주의자들이 기독교인을 상대로 집단학살을 저지르고 있다\"고 주장했다.\n\n티누부 대통령은 나이지리아를 종교자유 침해국으로 분류한 것은 \"현실을 전혀 반영하지 않은 평가\"라고 강조했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636456509242216475/000-b7e39d6854ffaaccceb3b2965af21860e389cb89.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "“기독교인 박해 말라” 트럼프, 나이지리아에 군사 작전 경고",
+          "publishedAt": "2025-11-02T11:39:00",
+          "publisher": "국민일보",
+          "sourceUrl": "https://www.kmib.co.kr/article/view.asp?arcid=0028914383&code=61131111",
+          "summary": "도널드 트럼프 미국 대통령이 나이지리아 정부가 기독교인 학살을 용인하고 있다고 주장하며 이를 막기 위해 군사력까지 사용할 수 있다고 경고했다.\n\n트럼프 대통령은 전날에도 ‘기독교는 나이지리아에서 실존적 위협을 맞이하고 있다’ ‘이슬람 극단주의자들이 기독교인 집단학살(제노사이드)을 저지르고 있다’고 주장했다.\n\n트럼프 대통령의 특별우려국 지정에 대해 볼라 아흐메드 티누부 나이지리아 대통령은 “나이지리아는 종교적 박해를 반대하며, 이를 부추기지 않는다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636437278844916013/000-284539a66764cdb0e741725a2bfb41112ede91fc.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "트럼프, 나이지리아 정부 정조준… '기독교인 살해' 계속 허용 시 '軍 투입' 경고",
+          "publishedAt": "2025-11-02T09:57:00",
+          "publisher": "더팩트",
+          "sourceUrl": "https://news.tf.co.kr/read/world/2258181.htm",
+          "summary": "\"군사행동 준비 지시…나이지리아 정부 신속히 움직여야\" 도널드 트럼프 미국 대통령이 1일(현지시간) 나이지리아 정부를 향해 \"기독교인 살해를 계속 허용한다면, 미국은 모든 원조와 지원을 중단할 것\"이라며 군사적 개입 가능성까지 언급했다.\n\n한편 트럼프 대통령은 전날 나이지리아에서 기독교인들이 대량 학살되고 있다면서, 그 배후로 급진 이슬람 세력을 지목하고 나이지리아를 종교의 자유를 침해하는 '특별우려국'으로 지정했다.\n\n미국은 국제종교자유법에 근거해 종교의 자유를 심각하게 침해했거나 이를 묵인했다고 판단하는 국가를 특별우려국으로 지정한다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636411475839029926/000-6db417e2c701dbb1dc5470a5117519b3ff6da206.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 6,
+      "topic": "국제",
+      "subTopic": "일본",
+      "subTags": [
+        "#갈등",
+        "#관계",
+        "#외교"
+      ],
+      "courseName": "독도 비행 논란 : 국제 관계의 복잡성",
+      "courseDescription": "이 코스는 독도 비행을 둘러싼 한일 간의 갈등을 통해 국제 관계의 복잡성을 탐구합니다. 독도 비행이 왜 중요한지, 그리고 이 사건이 한일 관계와 국제 외교에 어떤 영향을 미치는지를 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "블랙이글스 日서 급유 무산…일본 측 ‘독도 비행’ 이력 탓",
+          "publishedAt": "2025-11-02T16:57:25",
+          "publisher": "중앙일보",
+          "sourceUrl": "https://www.joongang.co.kr/article/25378887",
+          "summary": "한국 공군기가 일본 자위대 기지에서 급유하는 방안을 한일 정부가 추진했으나, 일본이 급유 대상 항공기 일부가 독도를 비행한 이력을 문제 삼아 계획이 무산됐다고 요미우리신문이 2일 보도했다.\n\n요미우리는 한국 공군기에 대한 첫 급유가 실현되면 향후 상호 군수지원 협정 체결을 포함해 양국 간 방위 협력이 강화될 것이라는 기대감이 일본에 있었다고 했다.\n\n이 신문은 이번 방안이 일본의 식민지 지배 역사로 생긴 한국 측의 자위대에 대한 강한 거부감을 다소 희석할 기회였다는 인식도 있었다고 덧붙였다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636517210996478473/000-07e7dd5c2904383cc4927d8abb46c7e551bd288a.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "독도 비행했다고…日, 韓블랙이글스에 급유 거절",
+          "publishedAt": "2025-11-02T16:42:00",
+          "publisher": "매일신문",
+          "sourceUrl": "https://www.imaeil.com/page/view/2025110216320821615",
+          "summary": "한국 공군기가 일본 자위대 기지에서 처음으로 급유하는 방안을 한일 정부가 추진했으나, 일본이 급유 대상 항공기 일부가 독도를 비행했던 이력을 문제 삼아 계획이 무산됐다.\n\n요미우리는 한국 공군기에 대한 첫 급유가 실현되면 향후 상호 군수지원 협정 체결을 포함해 양국 간 방위 협력이 강화될 것이라는 기대감이 일본에 있었다고 전했다.\n\n또, 이번 방안이 일본의 식민지 지배 역사로 생긴 한국 측의 자위대에 대한 강한 거부감을 다소 희석할 기회였다는 인식도 있었다고 덧붙였다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636513177325932926/000-9a57946243ce2e91aacb25ca43c018589e37b638.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "한국 공군이 ‘독도 비행’했다고 사상 첫 자위대 급유 무산시킨 일본",
+          "publishedAt": "2025-11-02T14:37:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202511021437011",
+          "summary": "한국 공군 특수비행팀 ‘블랙이글스’가 독도 주변을 비행했다는 이유로 일본이 자위대의 한국 공군기 급유 계획을 무산시켰다는 일본 언론 보도가 나왔다.\n\n요미우리신문은 한일 정부가 방위협력의 일환으로 자위대 기지에서 한국 공군기에 급유를 하는 방안을 계획했지만 지원 대상이었던 한국 공군 블랙이글스가 독도 주변을 비행한 것이 확인되면서 일본 측이 중지할 방침을 굳혔다고 2일 보도했다.\n\n일본 측은 자위대의 사상 첫 한국 공군 급유 지원이 실현되면 앞으로 상호군수지원협정 체결을 포함해 한일 간의 방위 협력 강화에 탄력이 붙을 것이라는 기대를 품고 있었다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636482328127738032/000-cbd2f9679bfc557b78fd386f0b93249d9588738d.jpeg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "\"'블랙이글스 일본서 급유' 추진했다 무산…일, 독도비행 이력 항의\"",
+          "publishedAt": "2025-11-02T11:31:00",
+          "publisher": "SBS",
+          "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008315547",
+          "summary": "▲ 블랙이글스 한국 공군기가 일본 자위대 기지에서 처음으로 급유하는 방안을 한일 정부가 추진했지만 일본이 급유 대상 항공기 일부가 독도를 비행했던 이력을 문제 삼아 계획이 무산됐다고 요미우리신문이 보도했습니다.\n\n한국과 일본은 상호 군수지원 협정을 체결하지 않아 일본은 자위대법 일부 규정을 근거로 연료를 제공할 방침이었습니다.\n\n요미우리는 한국 공군기에 대한 첫 급유가 실현되면 향후 상호 군수지원 협정 체결을 포함해 양국 간 방위 협력이 강화될 것이라는 기대감이 일본에 있었다고 전했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636435261007204522/000-7420dc8b8e12c22f8c9c95fe664462eb157b4e37.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "일본, 블랙이글스 독도비행 이력 항의 급유 거부",
+          "publishedAt": "2025-11-02T11:22:00",
+          "publisher": "MBC",
+          "sourceUrl": "https://imnews.imbc.com/news/2025/world/article/6771422_36725.html",
+          "summary": "우리 공군기가 처음으로 일본 자위대 기지에서 급유하는 방안을 한일 양국이 추진했지만 대상 항공기 일부가 독도를 비행했다는 이유로 일본이 거부한 것으로 알려졌습니다.\n\n일본 요미우리신문은 한국 측 공군 특수비행팀 블랙이글스가 두바이 에어쇼 참가를 위해 이동 중 오키나와에서 중간 급유를 요청했지만 일본 측이 이를 거부했다고 보도했습니다.\n\n일본 정부는 블랙이글스 일부가 최근 독도를 비행했다는 사실을 확인하고, 항의 의사를 전달하는 한편, 관련한 요청을 받아들이지 않기로 했다는 것입니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/02/1636433240518693320/000-353a1f425dfdc4bd6553ab7f9f4be53c8a5d9ca9.jpg"
+        }
+      ]
+    }
+  ]
+}
