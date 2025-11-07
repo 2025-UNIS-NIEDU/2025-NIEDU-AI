@@ -1,5 +1,6 @@
 import os
 import json
+import shutil
 from pathlib import Path
 import chromadb
 from chromadb.utils import embedding_functions
@@ -61,10 +62,12 @@ def build_rag_data():
     # 기존 DB 초기화 (모든 토픽 DB 삭제)
     for topic_dir in DB_ROOT.iterdir():
         if topic_dir.is_dir():
-            print(f"🧹 {topic_dir.name} 기존 DB 삭제 중...")
-            for file in topic_dir.glob("*"):
-                file.unlink()
-            topic_dir.rmdir()
+            print(f"🧹 {topic_dir.name} 기존 DB 전체 삭제 중...")
+            try:
+                shutil.rmtree(topic_dir)
+                print(f"삭제 완료: {topic_dir}")
+            except Exception as e:
+                print(f"삭제 실패 ({topic_dir}): {e}")
 
     # 4️. 최신 JSON 파일별 변환 및 DB 저장
     for json_file in json_files:
