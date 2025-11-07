@@ -38,6 +38,7 @@ def run_learning_pipeline():
 
     embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
+    # 코스 생성 파트
     fetch_news()
     build_rag_data()
     generate_all_courses()
@@ -45,21 +46,26 @@ def run_learning_pipeline():
 
     print("\n=== 퀴즈 생성 단계 시작 ===")
 
-    selected_session = select_session()
-    print(f"\n[선택된 세션 정보]\n{json.dumps(selected_session, ensure_ascii=False, indent=2)}\n")
+    # 모든 세션 자동 불러오기
+    all_sessions = select_session()
+    print(f"총 {len(all_sessions)}개 세션을 처리합니다.")
 
-    generate_article_reading_quiz(selected_session)
-    generate_summary_reading_quiz(selected_session)
-    generate_term_quiz(selected_session)
-    generate_current_affairs_quiz(selected_session)
-    generate_ox_quiz(selected_session)
-    generate_multi_choice_quiz(selected_session)
-    generate_short_quiz(selected_session)
-    generate_completion_quiz(selected_session)
-    generate_reflect_quiz(selected_session)
+    # 모든 세션에 대해 퀴즈 생성
+    for session in all_sessions:
+        print(f"\n 세션 처리 중: {session['courseName']} / {session.get('headline', '')}")
 
+        generate_article_reading_quiz(session)
+        generate_summary_reading_quiz(session)
+        generate_term_quiz(session)
+        generate_current_affairs_quiz(session)
+        generate_ox_quiz(session)
+        generate_multi_choice_quiz(session)
+        generate_short_quiz(session)
+        generate_completion_quiz(session)
+        generate_reflect_quiz(session)
+
+    # 코스 + 퀴즈 통합 패키징
     print("\n=== 퀴즈 생성 완료 → 코스 패키징 시작 ===")
-
     package_data = build_course_packages()  
 
     print("\n=== 전체 파이프라인 완료 ===")
