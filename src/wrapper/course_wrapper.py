@@ -37,7 +37,7 @@ def build_course_packages():
             return
 
         # === 퀴즈 매핑 ===
-        quiz_files = list(QUIZ_DIR.glob(f"{topic}_*.json"))
+        quiz_files = list(QUIZ_DIR.glob(f"{topic}_*_{today}.json"))
         if not quiz_files:
             print(f"퀴즈 파일이 없습니다: {QUIZ_DIR}")
 
