@@ -1,9 +1,33 @@
 from fastapi import APIRouter
-from wrapper.course_wrapper import build_course_package
+from pipeline.pipeline import run_learning_pipeline
+from datetime import datetime
+from pathlib import Path
+import json
 
 router = APIRouter(prefix="/api/course", tags=["Course"])
 
 @router.post("/build")
-def build_course(topic: str):
-    output_path = build_course_package(topic)
-    return {"message": f"{topic} 통합 패키지 생성 완료", "path": str(output_path)}
+def build_course():
+    """전체 학습 파이프라인 수동 실행"""
+    result = run_learning_pipeline()
+    return {"message": "전체 파이프라인 실행 완료", "data": result}
+
+@router.get("/today")
+def get_today_data():
+    """오늘 날짜 기준 통합 패키지 JSON 리턴"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    base_dir = Path(__file__).resolve().parents[3]
+    quiz_package_dir = base_dir / "data" / "quiz" / "package"
+
+    # 오늘 날짜의 통합 패키지 파일 검색
+    package_files = list(quiz_package_dir.glob(f"*_{today}_package.json"))
+    if not package_files:
+        return {"message": f"{today} 기준 패키지 파일이 없습니다."}
+
+    response = {}
+    for f in package_files:
+        topic = f.stem.split("_")[0]
+        with open(f, "r", encoding="utf-8") as fp:
+            response[topic] = json.load(fp)
+
+    return response
