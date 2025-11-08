@@ -1,0 +1,39 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.imaeil.com/page/view/2025110219031459939",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "민주당이 최근 입법 예고한 조치의 공식 명칭은 무엇인가?",
+        "correctAnswer": "재판중지법",
+        "answerExplanation": "민주당이 예고한 법은 '재판중지법'이며, 명칭 논쟁은 정책 인식과 정치적 프레이밍에 직결된다."
+      },
+      {
+        "contentId": 2,
+        "question": "해당 입법 예고안이 표면적으로 내세운 정책 목적은 무엇인가?",
+        "correctAnswer": "사법개혁",
+        "answerExplanation": "민주당은 사법개혁 취지로 입법을 예고했으며, 이 목적 표기는 법안의 정당성에 직결된다."
+      },
+      {
+        "contentId": 3,
+        "question": "한동훈이 비판 발언에서 지목한 대통령의 성명은 무엇인가?",
+        "correctAnswer": "이재명",
+        "answerExplanation": "한동훈은 '이재명 대통령'을 지칭해 법안을 비판했으며, 인물 호명은 책임 귀속과 쟁점화를 강화한다."
+      },
+      {
+        "contentId": 4,
+        "question": "한동훈이 비교의 준거로 거론한 정부의 공식 명칭은 무엇인가?",
+        "correctAnswer": "윤석열",
+        "answerExplanation": "한동훈은 윤석열 정부와 비교하며 민주당을 비판했으며, 비교 설정은 평가의 준거를 제시한다."
+      },
+      {
+        "contentId": 5,
+        "question": "한동훈이 더불어민주당을 지칭하며 사용한 군집적 호칭은 무엇인가?",
+        "correctAnswer": "집단",
+        "answerExplanation": "그는 더불어민주당을 '집단'이라 표현했으며, 이러한 규정어는 대상의 성격 규정과 여론 형성에 작용한다."
+      }
+    ]
+  }
+]

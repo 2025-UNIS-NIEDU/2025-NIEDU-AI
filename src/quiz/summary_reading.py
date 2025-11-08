@@ -1,4 +1,4 @@
-import os, json, re
+import os, json, re, logging
 from datetime import datetime
 import sys
 from pathlib import Path
@@ -9,12 +9,13 @@ from keybert import KeyBERT
 from sentence_transformers import SentenceTransformer, util
 from quiz.select_session import select_session
 
+logger = logging.getLogger(__name__)
+
 def generate_summary_reading_quiz(selected_session=None):
     # === 환경 변수 로드 ===
     load_dotenv(override=True)
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     client = OpenAI(api_key=OPENAI_API_KEY)
-
 
     # === 세션 선택 ===
     if selected_session is None:
@@ -26,9 +27,7 @@ def generate_summary_reading_quiz(selected_session=None):
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    print(f"\n선택된 코스: {course_id}")
-    print(f"sessionId: {session_id}")
-    print(f"제목: {headline}\n")
+    logger.info(f"[{topic}] 세션 {session_id} SUMMARY_READING 시작 — 제목: {headline}")
 
     # === 요약문 정제 ===
     prompt = f"""
@@ -76,14 +75,10 @@ def generate_summary_reading_quiz(selected_session=None):
         refined_summary_json = json.loads(re.sub(r"```json|```", "", refined_summary_raw))
         refined_summary = refined_summary_json.get("summary", "").strip()
     except Exception as e:
-        print("JSON 파싱 실패:", e)
+        logger.warning(f"JSON 파싱 실패(1차): {e}")
         refined_summary = refined_summary_raw  
 
-    print("\n==============================")
-    print("정제된 요약문 결과 (텍스트만)")
-    print("==============================\n")
-    print(refined_summary)
-    print("\n==============================\n")
+    logger.info(f"[{topic}] 1차 요약문 정제 완료")
 
     prompt_refine = f"""
     + 너는 '뉴스 문해력 학습용 교재에 수록될 요약문'을 교정하는 전문 편집자이다.  
@@ -112,7 +107,7 @@ def generate_summary_reading_quiz(selected_session=None):
 
     # === OpenAI Chat Completion 호출 ===
     response = client.chat.completions.create(
-        model="gpt-4o-mini",  # 필요 시 "gpt-4o"나 "gpt-5"로 변경 가능
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "너는 뉴스 문해력 학습용 요약문을 교정하는 전문 편집자이다."},
             {"role": "user", "content": prompt_refine}
@@ -125,14 +120,10 @@ def generate_summary_reading_quiz(selected_session=None):
         refined_summary_json = json.loads(re.sub(r"```json|```", "", refined_summary_raw))
         refined_summary = refined_summary_json.get("summary", "").strip()
     except Exception as e:
-        print("JSON 파싱 실패:", e)
+        logger.warning(f"JSON 파싱 실패(2차): {e}")
         refined_summary = refined_summary_raw  
 
-    print("\n==============================")
-    print("정제된 요약문 결과 (텍스트만)")
-    print("==============================\n")
-    print(refined_summary)
-    print("\n==============================\n")
+    logger.info(f"[{topic}] 최종 요약문 정제 완료")
 
     # === 핵심 정답 추출 ===
     prompt_answer = f"""
@@ -166,7 +157,7 @@ def generate_summary_reading_quiz(selected_session=None):
         answers = [a["word"] for a in answers_json]
     else:
         raise ValueError(f"예상치 못한 JSON 구조: {answers_json}")
-    print(f"중심 키워드(정답): {answers}")
+    logger.info(f"[{topic}] 중심 키워드(정답): {answers}")
 
     # === 2. KeyBERT로 관련 단어 필터링 ===
     anchor_words = answers
@@ -182,7 +173,7 @@ def generate_summary_reading_quiz(selected_session=None):
         return max(sims) >= threshold
 
     related_candidates = [k for k, v in bert_keywords if is_related(k, anchor_words)]
-    print("정답과 관련된 명사 후보:", related_candidates)
+    logger.info(f"[{topic}] 정답과 관련된 명사 후보: {related_candidates}")
 
     # === 3. LLM 혼동 가능성 평가 ===
     prompt_confuse = f"""
@@ -221,27 +212,14 @@ def generate_summary_reading_quiz(selected_session=None):
         temperature=0
     )
 
-
-    # 🚨 중간 출력 (LLM 원문 확인)
-    print("\n==============================")
-    print("LLM 원시 출력 (혼동 후보 원본)")
-    print("==============================\n")
-    print(resp_confuse.choices[0].message.content)
-    print("\n==============================\n")
-
-    # JSON 파싱 시도
     try:
         llm_ranked_data = json.loads(re.sub(r"```json|```", "", resp_confuse.choices[0].message.content.strip()))
     except json.JSONDecodeError as e:
-        print(f"[파싱 오류 발생] JSONDecodeError: {e}")
-        print("LLM 출력 원본 다시 확인 필요 ↑↑↑↑↑↑↑↑")
+        logger.error(f"[{topic}] JSON 파싱 오류(혼동어): {e}", exc_info=True)
         raise
 
-
-    llm_ranked_data = json.loads(re.sub(r"```json|```", "", resp_confuse.choices[0].message.content.strip()))
     llm_ranked = {item["word"]: item["score"] for item in llm_ranked_data["ranked"]}
-
-    print("혼동어 후보:", list(llm_ranked.keys()))
+    logger.info(f"[{topic}] 혼동어 후보: {list(llm_ranked.keys())}")
 
     # === 4. 정규화 ===
     min_s, max_s = min(llm_ranked.values()), max(llm_ranked.values())
@@ -271,7 +249,6 @@ def generate_summary_reading_quiz(selected_session=None):
 
     # === 6. 난이도별 분류 ===
     distractors = sorted(filtered_combined.items(), key=lambda x: x[1], reverse=True)[:9]
-
     while len(distractors) < 9:
         distractors.append(("기타", 0.0))
 
@@ -306,8 +283,7 @@ def generate_summary_reading_quiz(selected_session=None):
         make_keyword_block("e", correct_list, e_level)
     ]
 
-    print("\n=== 변환된 NIEdu 포맷 ===")
-    print(json.dumps(final_json, ensure_ascii=False, indent=2))
+    logger.info(f"[{topic}] SUMMARY_READING JSON 변환 완료")
 
     # === 8. 파일 저장 ===
     BASE_DIR = Path(__file__).resolve().parents[2]
@@ -322,8 +298,10 @@ def generate_summary_reading_quiz(selected_session=None):
         file_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_SUMMARY_READING_{level}_{today}.json"
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump([block], f, ensure_ascii=False, indent=2)
-        print(f"[저장 완료] {level} 단계 파일 → {file_path.resolve()}")
+        logger.info(f"[{topic}] {level} 단계 SUMMARY_READING 저장 완료 → {file_path.name}")
 
-#  실행
+    logger.info(f"[{topic}] 세션 {session_id} SUMMARY_READING 퀴즈 생성 완료")
+
+# === 실행 ===
 if __name__ == "__main__":
     generate_summary_reading_quiz()

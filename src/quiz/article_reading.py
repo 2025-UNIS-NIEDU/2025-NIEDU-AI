@@ -1,4 +1,5 @@
-import os, json
+# === src/quiz/article_reading.py ===
+import os, json, logging
 from datetime import datetime
 import sys
 from pathlib import Path
@@ -6,6 +7,7 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from quiz.select_session import select_session
 
+logger = logging.getLogger(__name__)
 
 def generate_article_reading_quiz(selected_session=None):
     """
@@ -29,17 +31,7 @@ def generate_article_reading_quiz(selected_session=None):
     source_url = selected_session.get("sourceUrl", "")
     thumbnail_url = selected_session.get("thumbnailUrl", "")
 
-    # === 출력 확인 ===
-    print("\n[선택된 세션 메타데이터]")
-    print(json.dumps({
-        "thumbnailUrl": thumbnail_url,
-        "headline": headline,
-        "publisher": publisher,
-        "publishedAt": published_at,
-        "sourceUrl": source_url
-    }, ensure_ascii=False, indent=2))
-
-    # === 메타데이터 공통 구조 ===
+    # === 메타데이터 구조 ===
     article_metadata = {
         "contentType": "ARTICLE_READING",
         "contents": [
@@ -62,12 +54,14 @@ def generate_article_reading_quiz(selected_session=None):
     for level in ["I", "E"]:
         save_path = QUIZ_DIR / f"{topic}_{course_id}_{session_id}_ARTICLE_READING_{level}_{today}.json"
 
-        with open(save_path, "w", encoding="utf-8") as f:
-            json.dump([article_metadata], f, ensure_ascii=False, indent=2)
+        try:
+            with open(save_path, "w", encoding="utf-8") as f:
+                json.dump([article_metadata], f, ensure_ascii=False, indent=2)
+            logger.info(f"[{topic}] {level} 단계 ARTICLE_READING 저장 완료 → {save_path.name}")
+        except Exception as e:
+            logger.error(f"[{topic}] {level} 단계 파일 저장 실패: {e}", exc_info=True)
 
-        print(f"[저장 완료] {level} 단계 파일 → {save_path.resolve()}")
 
-
-# === 실행 테스트 ===
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
     generate_article_reading_quiz()

@@ -1,0 +1,129 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.khan.co.kr/article/202511072048001",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "중국이 희토류 수출 통제를 유예한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경제 성장 촉진"
+          },
+          {
+            "label": "B",
+            "text": "미국과의 협상 결과"
+          },
+          {
+            "label": "C",
+            "text": "자국 산업 보호"
+          },
+          {
+            "label": "D",
+            "text": "환경 보호 강화"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "중국은 미중 정상회담에서 미국과의 협상 결과로 수출 통제를 유예하기로 했다."
+      },
+      {
+        "contentId": "2",
+        "question": "미국이 '펜타닐 관세'를 인하한 주된 목적은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "무역 적자 해소"
+          },
+          {
+            "label": "B",
+            "text": "중국 견제"
+          },
+          {
+            "label": "C",
+            "text": "확전 자제 합의"
+          },
+          {
+            "label": "D",
+            "text": "국내 산업 보호"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "미국은 중국과의 확전 자제 합의의 일환으로 '펜타닐 관세'를 인하했다."
+      },
+      {
+        "contentId": "3",
+        "question": "중국이 희토류 수출 통제를 유예한 결정의 배경은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국제 압력 증가"
+          },
+          {
+            "label": "B",
+            "text": "미중 관계 개선"
+          },
+          {
+            "label": "C",
+            "text": "자원 고갈 우려"
+          },
+          {
+            "label": "D",
+            "text": "기술 발전 촉진"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "중국의 결정은 미중 관계 개선을 위한 전략적 선택으로 보인다."
+      },
+      {
+        "contentId": "4",
+        "question": "상호 양보 이후 단기 경제·외교 지형에 미칠 가장 주요한 효과는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "세율 인상 단행"
+          },
+          {
+            "label": "B",
+            "text": "공급망 불안 완화"
+          },
+          {
+            "label": "C",
+            "text": "대화 채널 축소"
+          },
+          {
+            "label": "D",
+            "text": "보복 조치 예고"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "규제 유예와 관세 인하로 긴장이 풀리며 공급망 불확실성이 단기적으로 줄어든다."
+      },
+      {
+        "contentId": "5",
+        "question": "유예 종료 시점을 내년 11월로 설정한 조치가 시사하는 협상 전략은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "내수 보호 고착"
+          },
+          {
+            "label": "B",
+            "text": "즉시 보복 유도"
+          },
+          {
+            "label": "C",
+            "text": "기술탈동맹 촉진"
+          },
+          {
+            "label": "D",
+            "text": "대선 이후 재조정"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "유예 시한을 내년 11월로 잡아, 대선 이후 결과를 보고 정책 조정 여지를 남긴 조치다."
+      }
+    ]
+  }
+]

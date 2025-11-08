@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "2023년 2일 오후 6시 57분, 한동훈 전 국민의힘 대표는 페이스북에 글을 올려 더불어민주당이 제안한 '재판중지법'을 '국정안정법'으로 부르겠다는 방침을 비판했다. 그는 민주당이 이재명 대통령의 유죄 판결을 방지하려는 법안을 만들고 있다고 주장하며, 이러한 행동을 '계엄령'을 '계몽령'으로 부르는 것과 비유했다. 한동훈 전 대표는 더불어민주당을 '국민을 참 우습게 보는 집단'이라고 평가했다.",
+        "keywords": [
+          {
+            "word": "한동훈",
+            "isTopicWord": true
+          },
+          {
+            "word": "재판중지법",
+            "isTopicWord": true
+          },
+          {
+            "word": "글",
+            "isTopicWord": false
+          },
+          {
+            "word": "방침",
+            "isTopicWord": false
+          },
+          {
+            "word": "집단",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

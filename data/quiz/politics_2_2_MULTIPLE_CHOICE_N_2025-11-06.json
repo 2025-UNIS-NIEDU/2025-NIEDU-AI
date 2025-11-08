@@ -1,0 +1,129 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.imaeil.com/page/view/2025110219031459939",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "한동훈 전 대표가 비판한 법안의 이름은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "재판중지법"
+          },
+          {
+            "label": "B",
+            "text": "국정안정법"
+          },
+          {
+            "label": "C",
+            "text": "국정보호법"
+          },
+          {
+            "label": "D",
+            "text": "헌법 84조 수호법"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "한동훈 전 대표가 비판한 법안은 재판중지법이다."
+      },
+      {
+        "contentId": 2,
+        "question": "한동훈 전 대표가 비판한 정당은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국민의힘"
+          },
+          {
+            "label": "B",
+            "text": "더불어민주당"
+          },
+          {
+            "label": "C",
+            "text": "정의당"
+          },
+          {
+            "label": "D",
+            "text": "자유한국당"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "한동훈 전 대표가 비판한 정당은 더불어민주당이다."
+      },
+      {
+        "contentId": 3,
+        "question": "한동훈 전 대표가 페이스북에 글을 올린 날짜는 언제인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "2일"
+          },
+          {
+            "label": "B",
+            "text": "3일"
+          },
+          {
+            "label": "C",
+            "text": "1일"
+          },
+          {
+            "label": "D",
+            "text": "4일"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "한동훈 전 대표는 2일에 페이스북에 글을 올렸다."
+      },
+      {
+        "contentId": 4,
+        "question": "한동훈 전 대표가 민주당을 어떻게 평가했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국민을 우습게 본다"
+          },
+          {
+            "label": "B",
+            "text": "국민을 존중한다"
+          },
+          {
+            "label": "C",
+            "text": "국민을 지지한다"
+          },
+          {
+            "label": "D",
+            "text": "국민을 무시한다"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "한동훈 전 대표는 민주당을 국민을 우습게 본다고 평가했다."
+      },
+      {
+        "contentId": 5,
+        "question": "한동훈 전 대표가 언급한 '계엄령'의 새로운 이름은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "계몽령"
+          },
+          {
+            "label": "B",
+            "text": "안정법"
+          },
+          {
+            "label": "C",
+            "text": "보호법"
+          },
+          {
+            "label": "D",
+            "text": "수호법"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "한동훈 전 대표는 '계엄령'을 '계몽령'이라고 언급했다."
+      }
+    ]
+  }
+]

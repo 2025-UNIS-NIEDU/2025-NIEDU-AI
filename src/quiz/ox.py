@@ -1,4 +1,4 @@
-import os, json, re
+import os, json, re, logging
 from datetime import datetime
 import sys
 from pathlib import Path
@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from quiz.select_session import select_session
 
+logger = logging.getLogger(__name__)
+
 def generate_ox_quiz(selected_session=None):
     # === 환경 변수 ===
     load_dotenv(override=True)
@@ -14,7 +16,8 @@ def generate_ox_quiz(selected_session=None):
 
     # === 세션 선택 ===
     if selected_session is None:
-          selected_session = select_session()     
+        selected_session = select_session()  
+
     topic = selected_session["topic"]
     course_id = selected_session["courseId"]            
     session_id = selected_session.get("sessionId")
@@ -22,9 +25,7 @@ def generate_ox_quiz(selected_session=None):
     summary = selected_session.get("summary", "")
     sourceUrl = selected_session.get("sourceUrl", "")
 
-    print(f"\n선택된 태그: {course_id}")
-    print(f"sessionId: {session_id}")
-    print(f"제목: {headline}\n")
+    logger.info(f"[{topic}] 세션 {session_id} OX 퀴즈 생성 시작")
 
     # === 모델 ===
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
@@ -71,14 +72,13 @@ def generate_ox_quiz(selected_session=None):
     """
 
     # === LLM 호출 ===
-    response = llm.invoke(prompt_ox_n)
-    text = response.content.strip().replace("```json", "").replace("```", "").strip()
-    parsed_n = json.loads(text)
-
-    # === 결과 출력 및 저장 ===
-    print("\n=== 뉴스 요약문 ===\n")
-    print(summary)
-    print("\n=== 생성된 N단계 OX 퀴즈 ===\n")
+    try:
+        response = llm.invoke(prompt_ox_n)
+        text = response.content.strip().replace("```json", "").replace("```", "").strip()
+        parsed_n = json.loads(text)
+    except Exception as e:
+        logger.error(f"[{topic}] OX 퀴즈 생성 실패: {e}", exc_info=True)
+        return
 
     # === 변환: NIEdu 포맷 기반 ===
     ox_contents = []
@@ -87,7 +87,6 @@ def generate_ox_quiz(selected_session=None):
         explanation = q.get("answerExplanation", "")
         question = q.get("question", "").strip()
 
-        # 유효성 체크
         if ans not in ["O", "X"]:
             ans = "O"  # fallback
 
@@ -106,11 +105,6 @@ def generate_ox_quiz(selected_session=None):
         "contents": ox_contents
     }
 
-    # === 콘솔 출력 ===
-    for item in result["contents"]:
-        print(f"{item['contentId']}. {item['question']}")
-        print(f"정답: {item['correctAnswer']} | {item['answerExplanation']}\n")
-
     # === 파일 저장 ===
     BASE_DIR = Path(__file__).resolve().parents[2]
     SAVE_DIR = BASE_DIR / "data" / "quiz"
@@ -118,10 +112,12 @@ def generate_ox_quiz(selected_session=None):
     today = datetime.now().strftime("%Y-%m-%d")
     file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_OX_QUIZ_N_{today}.json"
 
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-
-    print(f"저장 완료: {file_path.resolve()}")
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        logger.info(f"[{topic}] OX 퀴즈 저장 완료 → {file_path.name} ({len(ox_contents)}문항)")
+    except Exception as e:
+        logger.error(f"[{topic}] OX 퀴즈 저장 중 오류: {e}", exc_info=True)
 
 #  실행
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-import os, re, json, requests
+import os, re, json, requests, logging
 from openai import OpenAI
 from dotenv import load_dotenv
 from datetime import datetime
@@ -6,6 +6,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 from quiz.select_session import select_session
+
+logger = logging.getLogger(__name__)
 
 def generate_term_quiz(selected_session=None):
     # === 1️. 환경 변수 로드 ===
@@ -27,9 +29,7 @@ def generate_term_quiz(selected_session=None):
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    print(f"\n선택된 코스: {course_id}")
-    print(f"sessionId: {session_id}")
-    print(f"제목: {headline}\n")
+    logger.info(f"[{topic}] 세션 {session_id} TERM_LEARNING 시작 — 제목: {headline}")
 
     # === 3️. 섹션별 전문용어 추출 템플릿 ===
     PROMPT_TEMPLATES = {
@@ -101,7 +101,7 @@ def generate_term_quiz(selected_session=None):
 
 
     filter_res = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": filter_prompt}],
         temperature=0
     )
@@ -110,13 +110,12 @@ def generate_term_quiz(selected_session=None):
     try:
         filtered_terms = json.loads(filter_res.choices[0].message.content.strip())
     except Exception as e:
-        print("필터링 JSON 파싱 오류:", e)
+        logger.warning(f"[{topic}] 필터링 JSON 파싱 오류: {e}")
         filtered_terms = terms  
 
     # ===  최소 2개 이상 보장 로직 추가 ===
     if not filtered_terms or len(filtered_terms) < 2:
-        print("필터링 결과가 2개 미만입니다. 원본 일부를 보강합니다.")
-        # 부족할 경우 원본 terms에서 추가로 채움 (중복 방지)
+        logger.warning(f"[{topic}] 필터링 결과 2개 미만 → 원본 일부 보강")
         needed = 2 - len(filtered_terms)
         for t in terms:
             if t not in filtered_terms:
@@ -128,15 +127,11 @@ def generate_term_quiz(selected_session=None):
     if filtered_terms:
         terms = filtered_terms
     else:
-        print("\n 필터링 후 남은 전문용어가 없습니다. 원본을 그대로 사용합니다.")
-        terms = terms  # 그대로 유지
+        logger.warning(f"[{topic}] 필터링 후 용어 없음 → 원본 사용")
+        terms = terms  
 
     # --- 중간 점검 (필터링 이후 실행) ---
-    print("\n=== 1차 추출 용어 (GPT-4o-mini 결과) ===")
-    print(json.dumps([t.strip() for t in res.choices[0].message.content.strip().split(',') if t.strip()], ensure_ascii=False, indent=2))
-    print("\n 필터링 완료! 적용된 전문용어 목록:")
-    print(json.dumps(terms, ensure_ascii=False, indent=2))
-    print("------------------------------------------------\n")
+    logger.info(f"[{topic}] 최종 전문용어: {terms}")
 
     # === 5️ 용어 정의  ===
     def fetch_definition(term):
@@ -144,13 +139,14 @@ def generate_term_quiz(selected_session=None):
         params = {
             "key": GOOGLE_API_KEY,
             "cx": GOOGLE_CSE_CX_DICT,
-            "q": f"{terms} 정의 OR 의미",
+            "q": f"{term} 정의 OR 의미",
             "num": 10,
             "lr": "lang_ko"
         }
 
         res = requests.get(url, params=params)
         if res.status_code != 200:
+            logger.warning(f"[{term}] Google 검색 실패 (status={res.status_code})")
             return term, None
 
         data = res.json()
@@ -158,7 +154,6 @@ def generate_term_quiz(selected_session=None):
         if not items:
             return term, None
 
-        # === snippet 가장 긴 항목 선택 ===
         best_item = max(
             items,
             key=lambda x: len(x.get("snippet", "")) if x.get("snippet") else 0
@@ -166,10 +161,7 @@ def generate_term_quiz(selected_session=None):
 
         title = best_item.get("title", "")
         snippet = best_item.get("snippet", "")
-
-        # === snippet 정제 ===
         snippet = snippet.strip() if snippet else None
-
         return term, snippet
 
     # === 5.5 용어 정의 완성 ===
@@ -199,7 +191,6 @@ def generate_term_quiz(selected_session=None):
             messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
         )
-
         return res.choices[0].message.content.strip()
 
     # === 6️. 예시 문장 + 비유 생성 ===
@@ -273,10 +264,7 @@ def generate_term_quiz(selected_session=None):
     }
 
     # === 10. 결과 출력 및 저장 ===
-    print("\n=== 뉴스 요약문 ===")
-    print(summary)
-    print("\n=== 변환된 NIEdu 용어 카드 ===")
-    print(json.dumps(term_card, ensure_ascii=False, indent=2))
+    logger.info(f"[{topic}] TERM_LEARNING 변환 완료 ({len(results)}개 용어)")
 
     QUIZ_DIR = BASE_DIR / "data" / "quiz"
     QUIZ_DIR.mkdir(parents=True, exist_ok=True)
@@ -285,9 +273,8 @@ def generate_term_quiz(selected_session=None):
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(term_card, f, ensure_ascii=False, indent=2)
 
-    print(f"\n 저장 완료: {save_path}")
-    print(f"({len(results)}개 용어 추출됨)")
+    logger.info(f"[{topic}] 저장 완료 → {save_path.name}")
 
-#  실행
+# === 실행 ===
 if __name__ == "__main__":
     generate_term_quiz()
