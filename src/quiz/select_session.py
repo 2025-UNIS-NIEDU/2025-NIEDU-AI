@@ -1,5 +1,9 @@
-import json
+# === src/quiz/select_session.py ===
+import json, logging
 from pathlib import Path
+from datetime import datetime
+
+logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 COURSE_DIR = BASE_DIR / "data" / "course_db" / "filtered"
@@ -11,9 +15,13 @@ TOPIC_TRANSLATION = {
     "국제": "world",
 }
 
-def select_session():
-    """입력 없이 모든 코스·세션을 자동 순회"""
-    files = sorted(COURSE_DIR.glob("*.json"))
+
+def select_session(today: str = None):
+    """입력 없이 당일의 코스·세션을 자동 순회"""
+    if today is None:
+        today = datetime.now().strftime("%Y-%m-%d")
+
+    files = sorted(COURSE_DIR.glob(f"*_{today}.json"))
     if not files:
         raise FileNotFoundError("data/course_db/filtered 폴더에 코스 파일이 없습니다.")
 
@@ -24,7 +32,7 @@ def select_session():
             with open(f, "r", encoding="utf-8") as fp:
                 data = json.load(fp)
         except Exception as e:
-            print(f"[경고] {f.name} 읽기 실패: {e}")
+            logger.warning(f"[{f.name}] 읽기 실패: {e}")
             continue
 
         # --- 구조 보정 ---
@@ -33,7 +41,7 @@ def select_session():
         elif isinstance(data, list):
             courses = data
         else:
-            print(f"[경고] {f.name}의 구조를 인식할 수 없습니다.")
+            logger.warning(f"[{f.name}] 데이터 구조를 인식할 수 없습니다.")
             continue
 
         for course in courses:
@@ -53,10 +61,11 @@ def select_session():
                 s["subTags"] = sub_tags
                 all_sessions.append(s)
 
-    print(f"총 세션 수: {len(all_sessions)}개")
+    logger.info(f"총 세션 수: {len(all_sessions)}개")
     return all_sessions
 
 
 if __name__ == "__main__":
-    sessions = select_session()
-    print(json.dumps(sessions[:5], ensure_ascii=False, indent=2))  
+    # 로컬 테스트 시에도 조용히 실행
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+    select_session()

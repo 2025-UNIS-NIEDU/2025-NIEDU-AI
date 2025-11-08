@@ -2,6 +2,7 @@
 import os
 import json
 import re
+import logging
 from datetime import datetime
 from pathlib import Path
 from collections import OrderedDict, defaultdict
@@ -15,6 +16,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from k_means_constrained import KMeansConstrained
 from sentence_transformers import SentenceTransformer
 import chromadb
+
+logger = logging.getLogger(__name__)
 
 def generate_all_courses(embedding_model=None):
     """뉴스 RAG 기반 전체 토픽(course) 자동 생성"""
@@ -59,7 +62,8 @@ def generate_all_courses(embedding_model=None):
     def generate_course_for_topic(topic: str, embedding_model=None, client=None):
         if client is None:
             client = OpenAI(api_key=api_key)
-        print(f"\n[{topic}] ChromaDB 불러오는 중...")
+
+        logger.info(f"[{topic}] 코스 생성 시작")
 
         # --- DB 경로 ---
         DB_DIR = BASE_DIR / "data" / "rag_db" / topic
@@ -68,7 +72,6 @@ def generate_all_courses(embedding_model=None):
         # --- 컬렉션 이름 감지 ---
         collections = chroma_client.list_collections()
         if not collections:
-            print(f"[경고] {topic}: 컬렉션 없음. 스킵.")
             return
 
         try:
@@ -84,19 +87,16 @@ def generate_all_courses(embedding_model=None):
         except Exception:
             collection_name = f"{topic}_news"
 
-        # --- 컬렉션 로드 (임베딩 함수 지정 필요 없음) ---
+        # --- 컬렉션 로드 ---
         collection = chroma_client.get_collection(name=collection_name)
-        print(f"감지된 컬렉션: {collection_name}")
 
-        # --- 데이터 + 임베딩 함께 불러오기 ---
         try:
             all_data = collection.get(include=["embeddings", "metadatas"], limit=5000)
             metadatas = [m for m in all_data.get("metadatas", []) if isinstance(m, dict)]
             embeddings = np.array(all_data.get("embeddings", []))
-        except Exception as e:
-            print(f"[오류] {topic} 데이터 로드 실패: {e}")
+        except Exception:
             return
-        
+
         # --- 언론사 리스트 ---
         MAJOR_PUBLISHERS = [
             # --- 전국 종합지 ---
@@ -128,20 +128,16 @@ def generate_all_courses(embedding_model=None):
             "울산매일", "경남도민일보", "제주일보", "한라일보"
         ]
 
-        # --- 언론사 필터 적용 (메타데이터에서 publisher 기준으로 걸러내기) ---
+        # --- 언론사 필터 적용 ---
         filtered_indices = [
             i for i, m in enumerate(metadatas)
             if m.get("publisher") in MAJOR_PUBLISHERS
         ]
-
         metadatas = [metadatas[i] for i in filtered_indices]
         embeddings = embeddings[filtered_indices]
 
-        print(f"[{topic}] 언론사 필터 적용 후 문서 {len(metadatas)}개 남음")
-
         # --- 데이터 검증 ---
         if not metadatas or embeddings.size == 0:
-            print(f"[{topic}] 문서 또는 임베딩이 비어 있음 → 스킵")
             return
 
         # --- 메타데이터 정리 ---
@@ -150,14 +146,11 @@ def generate_all_courses(embedding_model=None):
             filtered_meta = {k: v for k, v in meta.items() if k != "deepsearchId"}
             docs.append(sort_session_keys(filtered_meta))
 
-        print(f"[{topic}] 문서 {len(docs)}개 불러옴 / 임베딩 shape: {embeddings.shape}")
-
-        # ===뉴스 요약문 기반 클러스터링 준비 ===
+        # === 뉴스 요약문 기반 클러스터링 준비 ===
         valid_docs = [d for d in docs if isinstance(d.get("summary", ""), str) and len(d["summary"]) > 0]
         X = embeddings[:len(valid_docs)]
 
         if len(valid_docs) < 14:
-            print(f"[{topic}] 데이터가 너무 적어 클러스터링 불가 → 스킵")
             return
 
         # === Balanced KMeans 클러스터링 ===
@@ -170,82 +163,55 @@ def generate_all_courses(embedding_model=None):
         )
         cluster_labels = clusterer.fit_predict(X)
 
-        # === 클러스터 그룹화 ===
         grouped_by_cluster = defaultdict(list)
         for doc, label in zip(valid_docs, cluster_labels):
             grouped_by_cluster[label].append(doc)
 
-        print(f"[{topic}] 클러스터 {len(grouped_by_cluster)}개 생성 완료")
-
-        
-        # === SentenceTransformer 로드 (1회만)
+        # === SentenceTransformer 로드 ===
         embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
         # === Hybrid 노이즈 필터 ===
         def filter_noise_hybrid(docs, threshold=0.5):
-            """
-            headline + summary 기반 노이즈 제거 (의미 일관성 중심)
-            - headline만 쓸 때보다 주제 일관성이 높음
-            """
-
-            # 1️. 유효 텍스트 수 확인
+            """headline + summary 기반 노이즈 제거"""
             valid_texts = [
                 f"{d.get('headline', '')} {d.get('summary', '')}".strip()
                 for d in docs if d.get("headline") or d.get("summary")
             ]
             if len(valid_texts) <= 3:
-                return docs  # 너무 적으면 필터링 생략
-
-            # 2️. 임베딩 (hybrid 문장)
+                return docs
             embs = np.array([
                 embedding_model.encode(t, convert_to_numpy=True, normalize_embeddings=True)
                 for t in valid_texts
             ])
-
-            # 3️. 중심 벡터 계산
             centroid = np.mean(embs, axis=0, keepdims=True)
-
-            # 4️. 코사인 유사도 계산
             sims = cosine_similarity(embs, centroid).flatten()
-
-            # 5️. 동적 threshold 적용 (데이터 편차 고려)
             mean_sim = np.mean(sims)
             std_sim = np.std(sims)
             adaptive_threshold = max(threshold, mean_sim - 0.4 * std_sim)
-
-            # 6️. threshold 이상만 유지
             filtered_docs = [doc for doc, sim in zip(docs, sims) if sim >= adaptive_threshold]
-
-            # 7️. 전부 제거되는 경우 대비
             return filtered_docs if filtered_docs else docs
 
-            # === 여기서 실제 필터링 적용 ===
         for label in list(grouped_by_cluster.keys()):
             grouped_by_cluster[label] = filter_noise_hybrid(grouped_by_cluster[label])
 
-        # === 최소 크기 기준으로 클러스터 정제 ===
         min_cluster_size = max(5, len(valid_docs) // n_clusters // 2)
         filtered_subtopics = {
             f"Cluster_{i+1}": v
             for i, v in grouped_by_cluster.items()
             if len(v) >= min_cluster_size
-            }
+        }
 
         if not filtered_subtopics:
-            print(f"[{topic}] 충분한 문서가 포함된 클러스터 없음 → 스킵")
             return
-        
-        # === 코스 생성 ===
+
         output = []
 
         def clean_headline(text: str) -> str:
             """헤드라인 내 괄호·따옴표 제거 및 길이 제한"""
             text = re.sub(r"[\[\]\(\)\"\'“”‘’]", "", text)
-            text = text.strip()
-            return text[:60]
+            return text.strip()[:60]
 
         for idx, (subTopic, group_news) in enumerate(filtered_subtopics.items(), start=1):
-            # === 각 클러스터에서 상위 7개만 선택 ===
             group_news = group_news[:7]
             for sid, news in enumerate(group_news, start=1):
                 news["sessionId"] = sid
@@ -256,11 +222,6 @@ def generate_all_courses(embedding_model=None):
                 filtered = {k: v for k, v in s.items() if k not in ("topic", "subTopic", "deepsearchId")}
                 cleaned_sessions.append(sort_session_keys(filtered))
 
-            # === 헤드라인 간단 요약 ===
-            headlines = [clean_headline(n.get("headline", "")) for n in group_news]
-            joined_headlines = "; ".join(headlines)
-
-            # === 토픽별 서브토픽 후보 ===
             TOPIC_SUBTOPICS = {
                 "politics": "대통령실 OR 국회 OR 정당 OR 북한 OR 국방 OR 외교 OR 법률",
                 "economy": "금융 OR 증권 OR 산업 OR 중소기업 OR 부동산 OR 물가 OR 무역",
@@ -268,14 +229,13 @@ def generate_all_courses(embedding_model=None):
                 "world": "미국 OR 중국 OR 일본 OR 유럽 OR 중동 OR 아시아 OR 국제",
             }
 
-            max_headlines = 12  # 프롬프트에 넣을 헤드라인 수 제한
+            max_headlines = 12
             joined_headlines = " / ".join([
                 re.sub(r'["\'\[\]\(\):;]', '', n.get("headline", ""))[:60].strip()
-                for n in group_news[:max_headlines]  # 상위 12개까지만 사용
+                for n in group_news[:max_headlines]
                 if n.get("headline")
             ])
 
-            # --- YAML 프롬프트 로드 ---
             PROMPT_PATH = BASE_DIR / "src" / "course" / "prompt" / "course.yaml"
             with open(PROMPT_PATH, "r", encoding="utf-8") as f:
                 prompt_conf = yaml.safe_load(f)
@@ -302,14 +262,8 @@ def generate_all_courses(embedding_model=None):
                     temperature=0.3
                 )
                 content = resp_course.choices[0].message.content
-                if isinstance(content, str):
-                    meta_course = json.loads(content)
-                elif isinstance(content, dict):
-                    meta_course = content
-                else:
-                    raise ValueError("잘못된 JSON 응답 형식")
-            except Exception as e:
-                print(f"[{topic}] course 생성 실패: {e}")
+                meta_course = json.loads(content) if isinstance(content, str) else content
+            except Exception:
                 meta_course = {
                     "courseName": f"{topic}_{subTopic}",
                     "courseDescription": "자동 생성 실패 → 기본 설명",
@@ -342,16 +296,14 @@ def generate_all_courses(embedding_model=None):
                 ("courseDescription", meta_course.get("courseDescription", "")),
                 ("sessions", cleaned_sessions),
             ])
-
             output.append(course_data)
             
-        # === 저장 ===
         output_sorted = sorted(output, key=lambda x: x["courseId"])
         output_file = COURSE_DIR / f"{topic}_{today}.json"
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(output_sorted, f, ensure_ascii=False, indent=2, sort_keys=False)
 
-        print(f"{topic} → 코스 파일 저장 완료: {output_file.resolve()}")
+        logger.info(f"[{topic}] 코스 파일 저장 완료 ({len(output_sorted)}개)")
 
     # === 모든 토픽 자동 생성 ===
     TOPICS = ["politics", "economy", "society", "world"]
@@ -359,10 +311,8 @@ def generate_all_courses(embedding_model=None):
         try:
             generate_course_for_topic(topic, embedding_model=embedding_model, client=client)
         except Exception as e:
-            print(f"[{topic}] 실행 중 오류: {e}")
+            logger.error(f"[{topic}] 실행 중 오류: {e}")
 
 if __name__ == "__main__":
-    from sentence_transformers import SentenceTransformer
-
     embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
     generate_all_courses(embedding_model=embedding_model)

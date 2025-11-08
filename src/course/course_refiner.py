@@ -1,5 +1,5 @@
 # === 표준 라이브러리 ===
-import os, json, time
+import os, json, time, logging
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -9,9 +9,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 from datetime import datetime
 
+logger = logging.getLogger(__name__)
+
 def refine_course_structure():
     """뉴스 학습 코스 정제 파이프라인 전체 실행"""
-    print("=== 코스 정제 파이프라인 시작 ===")
 
     today = datetime.now().strftime("%Y-%m-%d")
 
@@ -78,7 +79,6 @@ def refine_course_structure():
                 )
                 return resp.choices[0].message.content
             except Exception as e:
-                print(f"[경고] LLM 호출 실패 ({attempt+1}/{retry}): {e}")
                 time.sleep(wait)
         return None
 
@@ -151,11 +151,9 @@ def refine_course_structure():
 
     # === 메인 정제 함수 ===
     def refine_course_simple(topic: str):
-        print(f"\n=== [{topic}] 코스 정제 시작 ===")
 
         topic_path = COURSE_DIR / f"{topic}_{today}.json"
         if not topic_path.exists():
-            print(f"[{topic}] 원본 JSON 없음 → {topic_path}")
             return
 
         with open(topic_path, "r", encoding="utf-8") as f:
@@ -176,24 +174,17 @@ def refine_course_structure():
             try:
                 parsed = json.loads(resp)
             except:
-                print(f"[파싱 오류] {resp[:100]}")
                 continue
 
             if parsed.get("is_educational") is False:
-                print(f"{c['courseName']} → 1차 LLM 판단: 부적절 → 2차 검증 중...")
                 recheck = double_check_false(c, parsed.get("reason", "사유 없음"))
 
                 if recheck.get("is_educational") is False:
-                    print(f"{c['courseName']} → 2차 검증도 부적절 → 완전 제외")
                     continue
-                else:
-                    print(f"{c['courseName']} → 2차 검증 통과 → 유지")
 
             # === 2단계: 유사도 계산 ===
             sim = compute_course_similarity(c)
-            print(f"  {c['courseName']} (유사도 {sim:.2f})")
             if sim < 0.2:
-                print(f"  → 제거 (유사도 낮음)")
                 continue
 
             # === 3단계: 세션 5개로 제한 ===
@@ -210,9 +201,6 @@ def refine_course_structure():
         out_path = FILTER_DIR / f"{topic}_{today}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(refined_courses, f, ensure_ascii=False, indent=2)
-
-        print(f"[{topic}] 결과 저장 완료 → {out_path.name}")
-        print(f"총 {len(refined_courses)}개 코스 유지")
         
     # === 모든 토픽 자동 정제 ===
     TOPICS = ["politics", "economy", "society", "world"]
@@ -220,10 +208,8 @@ def refine_course_structure():
         try:
             refine_course_simple(topic)
         except Exception as e:
-            print(f"[{topic}] 처리 중 오류: {e}")
+            pass
 
 # === 실행 ===
 if __name__ == "__main__":
-    print("=== 간단 코스 정제 파이프라인 시작 ===")
     refine_course_structure()
-    print("=== 모든 코스 정제 완료 ===")

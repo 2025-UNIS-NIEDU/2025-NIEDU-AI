@@ -1,0 +1,129 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01794166642361784",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "한미 간 관세 협상이 타결된 품목은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "자동차"
+          },
+          {
+            "label": "B",
+            "text": "전기차 배터리"
+          },
+          {
+            "label": "C",
+            "text": "부품"
+          },
+          {
+            "label": "D",
+            "text": "소비재"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "한미 간 관세 협상에서 자동차가 언급되었다."
+      },
+      {
+        "contentId": 2,
+        "question": "관세 부담 해소가 안 된 상황에서 증가한 수요는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "금융 지원"
+          },
+          {
+            "label": "B",
+            "text": "수출량"
+          },
+          {
+            "label": "C",
+            "text": "투자"
+          },
+          {
+            "label": "D",
+            "text": "고용"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "관세 부담 해소가 안 된 상황에서 금융 지원 수요가 증가했다."
+      },
+      {
+        "contentId": 3,
+        "question": "금융당국 고위 관계자가 언급한 특별 프로그램은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "위기대응 특별프로그램"
+          },
+          {
+            "label": "B",
+            "text": "재정 지원 프로그램"
+          },
+          {
+            "label": "C",
+            "text": "수출 지원 프로그램"
+          },
+          {
+            "label": "D",
+            "text": "산업 발전 프로그램"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "금융당국 고위 관계자는 위기대응 특별프로그램을 언급했다."
+      },
+      {
+        "contentId": 4,
+        "question": "정부 차원의 금융 지원이 필요한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "수출 경쟁력 유지"
+          },
+          {
+            "label": "B",
+            "text": "소비자 보호"
+          },
+          {
+            "label": "C",
+            "text": "고용 창출"
+          },
+          {
+            "label": "D",
+            "text": "시장 확대"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정부 차원의 금융 지원은 수출 경쟁력 유지를 위해 필요하다."
+      },
+      {
+        "contentId": 5,
+        "question": "관세 협상 이후 여전히 유지되는 관세 비율은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "15%"
+          },
+          {
+            "label": "B",
+            "text": "10%"
+          },
+          {
+            "label": "C",
+            "text": "20%"
+          },
+          {
+            "label": "D",
+            "text": "5%"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "관세 협상 이후에도 15%의 관세가 유지되고 있다."
+      }
+    ]
+  }
+]

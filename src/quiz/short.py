@@ -1,4 +1,4 @@
-import os, json, random
+import os, json, random, logging
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
@@ -6,6 +6,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from quiz.select_session import select_session
+
+logger = logging.getLogger(__name__)
 
 def generate_short_quiz(selected_session=None):
     # === 환경 변수 로드 ===
@@ -78,7 +80,7 @@ def generate_short_quiz(selected_session=None):
         
         # === 1️. E단계 후보 선정 ===
         sel_prompt = f"""
-        다음 I단계 문제 6개 중에서 E단계(고급 문어체)로 변환하기 적합한 5개를 선택하세요.
+        다음 I단계 문제 10개 중에서 E단계(고급 문어체)로 변환하기 적합한 5개를 선택하세요.
         - 정책·사회적 의미 중심
         - 단순 수치·날짜형 제외
         - JSON 배열로 질문만 출력 (예: ["질문1", "질문2", ...])
@@ -91,7 +93,7 @@ def generate_short_quiz(selected_session=None):
         try:
             selected_questions = json.loads(sel_text)
         except json.JSONDecodeError:
-            print("E단계 후보 선택 실패 — 랜덤으로 대체")
+            logger.warning(f"[{topic}] E단계 후보 선택 실패 — 랜덤 대체")
             selected_questions = random.sample([q["question"] for q in i_quiz], 5)
 
         # === 2️. E단계 변환 대상 필터 ===
@@ -159,80 +161,48 @@ def generate_short_quiz(selected_session=None):
         try:
             e_items = json.loads(text)
         except json.JSONDecodeError:
-            print("JSON 파싱 실패 — LLM 응답 확인 필요")
+            logger.error(f"[{topic}] E단계 JSON 파싱 실패 — LLM 응답 확인 필요")
             e_items = []
 
         # === 4️. 남은 I단계 5문항 ===
         remaining_i = [q for q in i_quiz if q["question"] not in selected_questions]
-
-        # 각 단계별 contentId 재정렬 (1~5)
         for idx, q in enumerate(remaining_i, start=1):
             q["contentId"] = idx
         for idx, q in enumerate(e_items, start=1):
             q["contentId"] = idx
 
-        print(f"변환된 E단계 문제 수: {len(e_items)}")
-        print(f"남은 I단계 문제 수: {len(remaining_i)}")
-
-        # 반드시 반환
+        logger.info(f"[{topic}] 변환된 E단계 {len(e_items)}문항 / 남은 I단계 {len(remaining_i)}문항")
         return e_items, remaining_i
 
-    # === 실행 ===
-    print("=== 뉴스 요약문 ===")
-    print(summary)
-
-    print("\n=== I단계 문제 생성 ===")
-    i_quiz = generate_quiz_i(summary)
-    print(json.dumps(i_quiz, ensure_ascii=False, indent=2))
-
-    print("\n=== E단계 문제 변환 ===")
-    e_quiz, remaining_i = generate_advanced_e(i_quiz, summary)
-
-    print("\n[E단계 결과]")
-    print(json.dumps(e_quiz, ensure_ascii=False, indent=2))
-
-    print("\n[남은 I단계 5문항]")
-    print(json.dumps(remaining_i, ensure_ascii=False, indent=2))
+    try:
+        i_quiz = generate_quiz_i(summary)
+        e_quiz, remaining_i = generate_advanced_e(i_quiz, summary)
+    except Exception as e:
+        logger.error(f"[{topic}] 단답형 퀴즈 생성 중 오류: {e}", exc_info=True)
+        return
 
     # === 저장 ===
     SAVE_DIR = BASE_DIR / "data" / "quiz"
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d")
 
-    # 🔹 단계별 결과 구성
     final_result = [
-        {
-            "contentType": "SHORT_ANSWER",
-            "level": "I",
-            "sourceUrl": sourceUrl,
-            "contents": remaining_i
-        },
-        {
-            "contentType": "SHORT_ANSWER",
-            "level": "E",
-            "sourceUrl": sourceUrl,
-            "contents": e_quiz
-        }
+        {"contentType": "SHORT_ANSWER", "level": "I", "sourceUrl": sourceUrl, "contents": remaining_i},
+        {"contentType": "SHORT_ANSWER", "level": "E", "sourceUrl": sourceUrl, "contents": e_quiz}
     ]
 
-    # 🔹 각 단계별로 별도 저장
     for item in final_result:
-        level = str(item.get("level", "")).upper().strip()  
+        level = str(item.get("level", "")).upper().strip()
         if not level:
             continue
-
         file_name = f"{topic}_{course_id}_{session_id}_SHORT_ANSWER_{level}_{today}.json"
         file_path = SAVE_DIR / file_name
-
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump([item], f, ensure_ascii=False, indent=2)
+        logger.info(f"[{topic}] {level}단계 SHORT 퀴즈 저장 완료 → {file_path.name}")
 
-        print(f"[저장 완료] {level} 단계 SHORT 퀴즈 파일 → {file_path.resolve()}")
+    logger.info(f"[{topic}] 세션 {session_id} 단답형 퀴즈 생성 완료")
 
-
-    print(f"\n 전체 저장 완료 → {file_path.resolve()}")
-    print("(I단계 5문항, E단계 5문항 — 총 10문항)")
-
-#  실행
+# === 실행 ===
 if __name__ == "__main__":
     generate_short_quiz()

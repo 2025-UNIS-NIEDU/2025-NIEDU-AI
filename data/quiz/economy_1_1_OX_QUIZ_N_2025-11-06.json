@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "한미 간 관세 협상이 타결됐다.",
+      "correctAnswer": "O",
+      "answerExplanation": "한미 간 관세 협상이 타결된 사실이 확인된다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01794166642361784"
+    },
+    {
+      "contentId": 2,
+      "question": "자동차 등 주요 품목에 대한 관세가 완전히 철폐됐다.",
+      "correctAnswer": "X",
+      "answerExplanation": "자동차 등 주요 품목에 15% 수준의 상호관세가 유지되고 있다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01794166642361784"
+    },
+    {
+      "contentId": 3,
+      "question": "관세 부담이 해소된 상황에서 피해 기업에 대한 금융 지원 수요가 급증하고 있다.",
+      "correctAnswer": "X",
+      "answerExplanation": "관세 부담이 해소되지 않은 상황에서 금융 지원 수요가 급증하고 있다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01794166642361784"
+    },
+    {
+      "contentId": 4,
+      "question": "금융당국 고위 관계자는 관세 부담이 해소되지 않았다고 말했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "금융당국 고위 관계자가 관세 부담이 해소되지 않았다고 언급했다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01794166642361784"
+    },
+    {
+      "contentId": 5,
+      "question": "정부 차원의 금융 지원이 중단되어야 한다.",
+      "correctAnswer": "X",
+      "answerExplanation": "정부 차원의 금융 지원이 지속해야 한다고 강조되고 있다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01794166642361784"
+    }
+  ]
+}

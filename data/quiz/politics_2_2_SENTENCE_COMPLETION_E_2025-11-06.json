@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "한동훈 전 대표는 민주당의 '재판중지법'을 ______",
+        "referenceAnswer": "'국정안정법' 등으로 호칭하겠다고 밝혔다."
+      },
+      {
+        "contentId": "2",
+        "question": "한동훈 전 대표는 민주당이 '재판중지법'을 ______",
+        "referenceAnswer": "'이재명 재판중지법'이라고 부르려 한다고 비판했다."
+      },
+      {
+        "contentId": "3",
+        "question": "한동훈 전 대표는 더불어민주당을 ______",
+        "referenceAnswer": "'국민을 참 우습게 보는 집단'이라고 평가했다."
+      }
+    ]
+  ]
+}

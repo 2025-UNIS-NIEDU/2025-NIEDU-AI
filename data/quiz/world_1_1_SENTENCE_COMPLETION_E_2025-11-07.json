@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "중국 당국은 지난 7일 ______",
+        "referenceAnswer": "희토류 등 수출 통제 강화 조치를 1년 유예하기로 합의했다고 발표했다."
+      },
+      {
+        "contentId": "2",
+        "question": "미중 정상회담에서 미국은 '펜타닐 관세'를 10%포인트 ______",
+        "referenceAnswer": "인하하기로 하면서 양국은 ‘확전 자제’에 합의했다."
+      },
+      {
+        "contentId": "3",
+        "question": "수출 통제는 원래 오는 8일 발효될 예정이었으나 ______",
+        "referenceAnswer": "중국 상무부가 이를 내년 11월 10일까지 유예하기로 했다."
+      }
+    ]
+  ]
+}

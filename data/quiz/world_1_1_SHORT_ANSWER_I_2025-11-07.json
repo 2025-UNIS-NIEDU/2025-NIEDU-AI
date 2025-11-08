@@ -1,0 +1,39 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.khan.co.kr/article/202511072048001",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "중국이 수출 통제를 유예하기로 한 기간은 몇 년인가?",
+        "correctAnswer": "1년",
+        "answerExplanation": "수출 통제는 1년 유예되기로 합의되었다."
+      },
+      {
+        "contentId": 2,
+        "question": "미국이 인하하기로 한 펜타닐 관세의 인하 폭은 몇 퍼센트인가?",
+        "correctAnswer": "10%",
+        "answerExplanation": "펜타닐 관세는 10%포인트 인하하기로 했다."
+      },
+      {
+        "contentId": 3,
+        "question": "미국과 중국의 정상회담이 열린 달은 몇 월인가?",
+        "correctAnswer": "지난달",
+        "answerExplanation": "정상회담은 지난달에 열렸다."
+      },
+      {
+        "contentId": 4,
+        "question": "중국이 수출 통제를 유예하기로 한 마감일은 몇 월 며칠인가?",
+        "correctAnswer": "11월 10일",
+        "answerExplanation": "수출 통제는 내년 11월 10일까지 유예된다."
+      },
+      {
+        "contentId": 5,
+        "question": "중국이 수출 통제를 유예하기로 한 자원의 종류는 무엇인가?",
+        "correctAnswer": "자원",
+        "answerExplanation": "희토류는 자원의 한 종류이다."
+      }
+    ]
+  }
+]

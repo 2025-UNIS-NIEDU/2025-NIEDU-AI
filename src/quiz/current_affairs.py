@@ -1,4 +1,4 @@
-import os, re, json, requests
+import os, re, json, requests, logging
 from openai import OpenAI
 import sys
 from pathlib import Path
@@ -7,7 +7,11 @@ from datetime import datetime
 from dotenv import load_dotenv
 from quiz.select_session import select_session   
 
+logger = logging.getLogger(__name__)
+
 def generate_current_affairs_quiz(selected_session=None):
+    """N단계 시사 이슈형 퀴즈 자동 생성"""
+
     # === 1. 환경 변수 로드 ===
     load_dotenv(override=True)
 
@@ -19,16 +23,15 @@ def generate_current_affairs_quiz(selected_session=None):
 
     # === 2. 세션 불러오기 ===
     if selected_session is None:
-          selected_session = select_session()     
+        selected_session = select_session()     
+
     topic = selected_session["topic"]
     course_id = selected_session["courseId"]            
     session_id = selected_session.get("sessionId")
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    print(f"\n선택된 코스: {course_id}")
-    print(f"sessionId: {session_id}")
-    print(f"제목: {headline}\n")
+    logger.info(f"[{topic}] 세션 {session_id} 시사 이슈형 퀴즈 생성 시작")
 
     # === 3️. CSE 검색 함수 ===
     def get_cse_snippets(query, cx_id, n=10):
@@ -36,7 +39,7 @@ def generate_current_affairs_quiz(selected_session=None):
         params = {"q": query, "key": GOOGLE_API_KEY, "cx": cx_id, "num": n}
         res = requests.get(url, params=params)
         if res.status_code != 200:
-            print(f"❌ CSE API 오류: {res.status_code}")
+            logger.warning(f"❌ CSE API 오류 ({res.status_code}) — {query}")
             return []
         data = res.json()
         snippets = []
@@ -52,15 +55,14 @@ def generate_current_affairs_quiz(selected_session=None):
     news_snippets = get_cse_snippets(selected_session["headline"], GOOGLE_NEWS_ID, n=10)
     gov_snippets = get_cse_snippets(selected_session["headline"], GOOGLE_GOV_ID, n=10)
     snippets = news_snippets + gov_snippets
+    logger.info(f"[{topic}] 스니펫 수집 완료 — 뉴스 {len(news_snippets)} + 정부 {len(gov_snippets)}")
 
-    print(f"스니펫 수집 완료: 뉴스 {len(news_snippets)} + 정부 {len(gov_snippets)} = 총 {len(snippets)}개")
-
-    # === 5️. 스니펫을 하나의 컨텍스트로 병합 ===
+    # === 5️. 스니펫 병합 ===
     context = "\n\n".join(
         [f"[{i+1}] {s['title']}\n{s['snippet']}\nURL: {s['link']}" for i, s in enumerate(snippets)]
     )
 
-    # === 6️. LLM 프롬프트 구성 ===
+    # === 6️. 프롬프트 구성 (절대 수정 금지) ===
     prompt_background_n = f"""
     당신은 '뉴스 문해력 학습용 분석 전문가'입니다.  
 
@@ -126,20 +128,23 @@ def generate_current_affairs_quiz(selected_session=None):
     """
 
     # === 7️. LLM 호출 ===
-    resp = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[{"role": "user", "content": prompt_background_n}],
-        temperature=0.3
-    )
-
-    raw_output = resp.choices[0].message.content.strip()
+    try:
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt_background_n}],
+            temperature=0.3
+        )
+        raw_output = resp.choices[0].message.content.strip()
+    except Exception as e:
+        logger.error(f"[{topic}] LLM 호출 실패: {e}", exc_info=True)
+        return
 
     # === 8. JSON 파싱 ===
     try:
         cleaned = re.sub(r"```json|```", "", raw_output)
         parsed = json.loads(cleaned)
     except json.JSONDecodeError:
-        print("JSON 파싱 실패 — 원문 그대로 저장합니다.")
+        logger.warning(f"[{topic}] JSON 파싱 실패 — 원문 그대로 저장")
         parsed = {
             "CURRENT_AFFAIRS": {
                 "issue": "",
@@ -150,7 +155,7 @@ def generate_current_affairs_quiz(selected_session=None):
             }
         }
 
-    # === 구조 검증 및 보정 ===
+    # === 구조 검증 ===
     affairs = parsed.get("CURRENT_AFFAIRS", {})
     answers = {
         "issue": affairs.get("issue", ""),
@@ -160,25 +165,26 @@ def generate_current_affairs_quiz(selected_session=None):
         "effect": affairs.get("effect", "")
     }
 
-    # === 최종 출력 (NIEdu 통합 구조)
+    # === 최종 래핑 및 저장 ===
     wrapped_output = {
         "contentType": "CURRENT_AFFAIRS",
         "level": "N",
         "contents": [answers],
     }
 
-    # 저장 또는 출력
     BASE_DIR = Path(__file__).resolve().parents[2]
     SAVE_DIR = BASE_DIR / "data" / "quiz"
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d")
-
     file_path = SAVE_DIR / f"{topic}_{course_id}_{session_id}_CURRENT_AFFAIRS_N_{today}.json"
-    with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(wrapped_output, f, ensure_ascii=False, indent=2)
 
-    print(f"CURRENT_AFFAIRS 저장 완료: {file_path}")
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(wrapped_output, f, ensure_ascii=False, indent=2)
+        logger.info(f"[{topic}] CURRENT_AFFAIRS 저장 완료 → {file_path.name}")
+    except Exception as e:
+        logger.error(f"[{topic}] 파일 저장 실패: {e}", exc_info=True)
 
-#  실행
+# === 실행 ===
 if __name__ == "__main__":
     generate_current_affairs_quiz()

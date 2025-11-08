@@ -1,12 +1,12 @@
-import os
-import json
-import shutil
+import os, json, logging
 from pathlib import Path
 import chromadb
 from chromadb.utils import embedding_functions
 from dotenv import load_dotenv
 from collections import OrderedDict
 from datetime import datetime
+
+log = logging.getLogger(__name__) 
 
 def build_rag_data():
     # 0️. 기본 설정
@@ -48,32 +48,28 @@ def build_rag_data():
 
     # 3️. 백업 폴더 내 JSON 파일 중 최신 날짜만 유지
     json_files_all = sorted(BACKUP_DIR.glob("*.json"), key=os.path.getmtime, reverse=True)
-
     if not json_files_all:
-        print("⚠️ 백업 폴더에 JSON 파일이 없습니다.")
+        log.warning("백업 폴더에 JSON 파일이 없습니다.")
         return
 
-    # 최신 날짜 추출
     latest_date = json_files_all[0].stem.split("_")[-1].split(".")[0]
     json_files = [f for f in json_files_all if latest_date in f.name]
+    log.info(f"📅 최신 날짜({latest_date}) 기준 {len(json_files)}개 JSON 처리")
 
-    print(f"📅 최신 날짜({latest_date}) 기준 {len(json_files)}개의 JSON 파일을 처리합니다.")
-
-    # 기존 DB 초기화 (모든 토픽 DB 삭제)
+    # 기존 DB 초기화 (컬렉션 단위 삭제)
     for topic_dir in DB_ROOT.iterdir():
         if topic_dir.is_dir():
-            print(f"🧹 {topic_dir.name} 기존 DB 전체 삭제 중...")
+            client = chromadb.PersistentClient(path=str(topic_dir))
+            collection_name = f"{topic_dir.name}_news"
             try:
-                shutil.rmtree(topic_dir)
-                print(f"삭제 완료: {topic_dir}")
+                client.delete_collection(name=collection_name)
+                log.info(f"[{topic_dir.name}] 기존 컬렉션 초기화 완료")
             except Exception as e:
-                print(f"삭제 실패 ({topic_dir}): {e}")
+                log.warning(f"[{topic_dir.name}] 컬렉션 초기화 실패: {e}")
 
     # 4️. 최신 JSON 파일별 변환 및 DB 저장
     for json_file in json_files:
         topic_name = json_file.stem.split("_")[0]
-        print(f"\n[{topic_name}] 변환 중 (파일: {json_file.name}) ...")
-
         topic_db_path = DB_ROOT / topic_name
         topic_db_path.mkdir(parents=True, exist_ok=True)
 
@@ -89,7 +85,7 @@ def build_rag_data():
                 raw = json.load(f)
             articles = raw.get("articles", raw.get("data", []))
         except Exception as e:
-            print(f"[오류] {topic_name} JSON 로드 실패: {e}")
+            log.error(f"[{topic_name}] JSON 로드 실패: {e}")
             continue
 
         docs, metas, ids = [], [], []
@@ -99,7 +95,6 @@ def build_rag_data():
             try:
                 ordered_item = sort_deepsearchId_keys(item)
 
-                # NoneType, list, dict 방지
                 clean_dict = OrderedDict()
                 for k, v in ordered_item.items():
                     if v is None:
@@ -110,7 +105,6 @@ def build_rag_data():
                         v = str(v)
                     clean_dict[k] = v
 
-                # 임베딩용 텍스트 구성 (자연어 기반)
                 page_content = f"""
                 [기사 제목] {clean_dict.get('headline', '')}
 
@@ -128,35 +122,23 @@ def build_rag_data():
                 [DeepSearch ID] {clean_dict.get('deepsearchId', '')}
                 """
 
-                docs.append(page_content.strip())  # 실제 임베딩에 사용
-                metas.append(clean_dict)           # 전체 메타데이터 저장
+                docs.append(page_content.strip())
+                metas.append(clean_dict)
                 ids.append(f"{topic_name}_{i+1}")
 
             except Exception as e:
-                print(f"[경고] {topic_name} 문서 {i} 처리 중 오류: {e}")
+                log.warning(f"[{topic_name}] 문서 {i} 변환 중 오류: {e}")
+                continue
 
         # 6️. DB에 저장
         if docs:
             try:
                 collection.add(documents=docs, metadatas=metas, ids=ids)
-                print(f"{len(docs)}개 문서를 DB에 추가 완료 → {topic_db_path}")
-                print(f"현재 컬렉션 문서 수: {collection.count()}")
-
-                # 추가된 데이터 샘플 1~2개만 확인
-                sample = collection.get(limit=2, include=["documents", "metadatas"])
-                print(f"샘플 문서 2개 미리보기 ({topic_name}):")
-                for idx, doc in enumerate(sample["documents"]):
-                    meta = sample["metadatas"][idx]
-                    print(f"  ├─ [{meta.get('subTopic', 'N/A')}] {meta.get('headline', '')[:50]}...")
-                print("-" * 80)
-
+                log.info(f"[{topic_name}] {len(docs)}개 문서 추가 완료")
             except Exception as e:
-                print(f"[오류] {topic_name} DB 저장 중 문제 발생: {e}")
-        else:
-            print(f"[주의] {topic_name}에 유효한 문서가 없습니다.")
+                log.error(f"[{topic_name}] DB 저장 중 문제 발생: {e}")
 
     # 7️. subTopic 검증
-    print("\n=== subTopic 필드 검증 ===")
     for topic_dir in DB_ROOT.iterdir():
         if topic_dir.is_dir():
             client = chromadb.PersistentClient(path=str(topic_dir))
@@ -166,21 +148,12 @@ def build_rag_data():
             )
             data = collection.get(include=["metadatas"])
             if not data["metadatas"]:
-                print(f"{topic_dir.name}: 메타데이터 없음")
                 continue
-
             subs = [m.get("subTopic", None) for m in data["metadatas"] if m]
             unique_subs = set(s for s in subs if s)
-            print(f"{topic_dir.name}: subTopic 필드 확인 ({len(unique_subs)}개 고유값)")
-            print(f"예시: {list(unique_subs)[:5]}")
-
-    print("\n모든 토픽 DB 저장 및 검증이 완료되었습니다.")
+            log.info(f"[{topic_dir.name}] subTopic {len(unique_subs)}개 확인")
 
     # 8. RAG DB 문서 수 확인
-    print("\n=== 각 토픽별 문서 수 확인 ===")
-    BASE_DIR = Path(__file__).resolve().parents[2]
-    DB_ROOT = BASE_DIR / "data" / "rag_db"
-
     for topic_dir in DB_ROOT.iterdir():
         if topic_dir.is_dir():
             client = chromadb.PersistentClient(path=str(topic_dir))
@@ -188,7 +161,7 @@ def build_rag_data():
                 name=f"{topic_dir.name}_news"
             )
             count = collection.count()
-            print(f"[{topic_dir.name}] 문서 수: {count}")
+            log.info(f"[{topic_dir.name}] 문서 수: {count}")
 
 #  실행
 if __name__ == "__main__":
