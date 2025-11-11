@@ -26,7 +26,7 @@ def generate_completion_quiz(selected_session=None):
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    logger.info(f"[{topic}] 세션 {session_id} 문장 완성형 퀴즈 생성 시작")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} SENTENCE_COMPLETION 퀴즈 생성 시작")
 
     # === 모델 설정 ===
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.6)

@@ -29,7 +29,7 @@ def generate_term_quiz(selected_session=None):
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    logger.info(f"[{topic}] 세션 {session_id} TERM_LEARNING 시작 — 제목: {headline}")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} TERM_LEARNING 생성 시작 — 제목: {headline}")
 
     # === 3️. 섹션별 전문용어 추출 템플릿 ===
     PROMPT_TEMPLATES = {

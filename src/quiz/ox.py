@@ -25,7 +25,7 @@ def generate_ox_quiz(selected_session=None):
     summary = selected_session.get("summary", "")
     sourceUrl = selected_session.get("sourceUrl", "")
 
-    logger.info(f"[{topic}] 세션 {session_id} OX 퀴즈 생성 시작")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} OX_QUIZ 생성 시작")
 
     # === 모델 ===
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)

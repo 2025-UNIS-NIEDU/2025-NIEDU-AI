@@ -15,7 +15,6 @@ TOPIC_TRANSLATION = {
     "국제": "world",
 }
 
-
 def select_session(today: str = None):
     """입력 없이 당일의 코스·세션을 자동 순회"""
     if today is None:

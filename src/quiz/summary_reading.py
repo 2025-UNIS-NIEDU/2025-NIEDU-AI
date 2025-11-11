@@ -27,7 +27,7 @@ def generate_summary_reading_quiz(selected_session=None):
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    logger.info(f"[{topic}] 세션 {session_id} SUMMARY_READING 시작 — 제목: {headline}")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} SUMMARY_READING생성 시작 — 제목: {headline}")
 
     # === 요약문 정제 ===
     prompt = f"""
@@ -127,24 +127,40 @@ def generate_summary_reading_quiz(selected_session=None):
 
     # === 핵심 정답 추출 ===
     prompt_answer = f"""
-    너는 뉴스의 핵심을 요약하는 분석가이다.
+    너는 뉴스의 핵심 구조를 분석하는 정보 추출 전문가이다.
 
-    다음 뉴스를 읽고,
-    1. 사건의 **주체(Actor)** 를 1개 선택하고,
-    2. 사건의 **핵심 개념(Object)** 을 1개 선택하라.
-    핵심 개념은 **하나의 명사** 또는 **2~3어절 명사구** 형태로 제시하라.
+    다음 요약문을 읽고, 사건의 중심 요소 2가지를 식별하라.
 
-    출력 형식(JSON):
+    [추출 대상]
+    1. **주체(Actor)**: 사건의 중심이 되는 인물, 기관, 또는 단체.  
+    - 행동을 주도하거나 발언·결정을 내린 주체를 한 개만 선택하라.  
+    - 예시: '이재명 대통령', '공정거래위원회', '국방부', '오바마 전 대통령'  
+    - 복수의 기관·인물이 등장하더라도, 주된 역할을 수행한 하나만 선택한다.
+
+    2. **핵심 개념(Object)**: 사건의 본질적 주제나 핵심 사안.  
+    - 주체가 행한 행동이나 정책, 또는 논의의 중심 개념을 한 개만 선택하라.  
+    - 예시: '과징금 부과', '전략적 동반자 관계', '학교폭력', '입시 제도'  
+    - 단, ‘문장 일부’(예: ‘과징금을 부과하기로’)처럼 동사형이나 조사가 포함된 형태는 금지한다.  
+    - 반드시 **명사 또는 2~3어절 복합 명사** 형태로 제시하라.  
+    - 수치, 날짜, 단위(예: 2023년, 6억 원 등)는 포함하지 않는다.
+
+    [출력 규칙]
+    - 모든 단어는 실제 요약문에 등장해야 한다.  
+    - 조사가 포함된 경우(은, 는, 이, 가, 을, 를, 에, 으로 등)는 제거하고 명사형만 남긴다.  
+    - 결과는 JSON 형식으로만 출력한다.
+
+    [출력 형식 예시]
     {{
     "keywords": [
-        {{"word": "단어1"}},
-        {{"word": "단어2"}}
+        {{"word": "공정거래위원회"}},    ← 주체(Actor)
+        {{"word": "과징금"}}             ← 핵심 개념(Object)
     ]
     }}
 
     뉴스 요약문:
     {refined_summary}
     """
+
     resp = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt_answer}],
@@ -162,12 +178,12 @@ def generate_summary_reading_quiz(selected_session=None):
     # === 2. KeyBERT로 관련 단어 필터링 ===
     anchor_words = answers
     kw_model = KeyBERT(model="jhgan/ko-sroberta-multitask")
-    bert_keywords = kw_model.extract_keywords(refined_summary, keyphrase_ngram_range=(1, 2), top_n=15)
+    bert_keywords = kw_model.extract_keywords(refined_summary, keyphrase_ngram_range=(1, 2), top_n=30)
 
     # SentenceTransformer 로 anchor 유사도 필터링
     embed_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
-    def is_related(word, anchors, threshold=0.55):
+    def is_related(word, anchors, threshold=0.5):
         word_emb = embed_model.encode(word, convert_to_tensor=True)
         sims = [util.cos_sim(word_emb, embed_model.encode(a, convert_to_tensor=True)).item() for a in anchors]
         return max(sims) >= threshold
@@ -177,33 +193,73 @@ def generate_summary_reading_quiz(selected_session=None):
 
     # === 3. LLM 혼동 가능성 평가 ===
     prompt_confuse = f"""
-    너는 뉴스 학습용 문제를 설계하는 전문가이다.
+    너는 뉴스 요약문에서 핵심 정보를 추출하는 전문가이다.
 
-    다음 뉴스 요약문과 정답 단어를 참고하여,
-    정답과 주제적으로 밀접하지만 의미가 완전히 일치하지 않는 단어들을 오답 후보로 제시하라.
+    다음 요약문과 정답 단어 2개(주체/핵심개념)를 기반으로,
+    학생이 헷갈릴 수 있는 오답 후보를 제시하라.
 
-    단, 모든 출력 단어는 **순수한 명사 또는 명사구 형태**여야 하며,
-    조사(은, 는, 이, 가, 을, 를 등)나 어미(하다, 되다 등)를 절대 포함하지 않는다.
+    [정답 역할 구분]
+    1. 첫 번째 단어 → 사건의 주체(Actor)
+    2. 두 번째 단어 → 사건의 핵심 개념(Object)
+
+    ---
+
+    [오답 생성 원칙]
+
+    (1) 주체(Actor) 관련 오답:
+    - 실제 기사에 등장하지만 사건의 주체가 아닌 명사.
+    - 기관명, 조직명, 직위, 집단명, 직책, 국가, 정당 등.
+    - 예시: 정답이 ‘이재명 대통령’일 경우 → ‘대통령실’, ‘정부’, ‘국방부’, ‘야당’, ‘호주’ 등.
+
+    (2) 핵심 개념(Object) 관련 오답:
+    - 기사 맥락상 핵심 개념과 연관은 있으나 중심이 아닌 부차적 요소.
+    - 정책명, 사건명, 협약, 제도, 수단, 결과물, 부연 설명어 등.
+    - 예시: 정답이 ‘핵잠수함 도입’일 경우 → ‘합의’, ‘협정’, ‘자주국방’, ‘호주 선례’, ‘외교 실패’ 등.
+
+    ---
+
+    [주의사항]
+    - 모든 단어는 조사나 어미가 없는 명사 또는 2~3어절 복합 명사여야 한다.
+    - 정답의 동의어, 축약형, 포함 관계(예: ‘핵잠수함’ vs ‘핵잠’)는 금지한다.
+    - 추상적·메타적 단어(‘문제’, ‘결과’, ‘상황’, ‘의미’, ‘이유’)는 제외한다.
+    - 조사(은, 는, 이, 가, 을, 를, 에, 에서, 으로, 와, 과)나 
+    동사형 어미(하다, 되다, 하기로, 하였다, 했다 등)가 포함된 경우 해당 부분을 제거하고 순수 명사만 남긴다.
 
     예시:
-    ❌ "무역을", "경제적인"  → X  
-    ✅ "무역", "경제", "교역 정책"  → O
+    - “공정거래위원회는” → “공정거래위원회”
+    - “과징금을 부과하기로” → “과징금”
+    - “대학에서” → “대학”
+    - “입시를 관리하다” → “입시”
 
-    [오답 후보]
-    {bert_keywords}
+    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”
+    허용 예시: “무역정책”, “핵잠수함 도입”, “가맹점 계약”, “학교폭력 기록”
 
-    [입력]
-    뉴스 요약문:
-    {refined_summary}
-
-    정답 단어: {answers}
+    ---
 
     [출력 형식]
     {{
     "ranked": [
-        {{"word": "<단어>", "score": 0.xx, "reason": "<헷갈릴 이유>"}}
+        {{"word": "정부", "role": "actor", "score": 0.85, "reason": "기사에 등장하지만 주체가 아님"}},
+        {{"word": "정책", "role": "object", "score": 0.82, "reason": "핵심 개념과 연관은 있으나 중심이 아님"}}
     ]
     }}
+
+    [출력 조건]
+    - 최소 14개 이상 제시할 것.
+    - 주체형(actor) 오답과 개념형(object) 오답이 균형 있게 포함될 것.
+    - 각 단어에 대해 학생이 왜 혼동할 수 있는지를 간단히 설명할 것.
+
+    ---
+
+    [입력 데이터]
+    요약문:
+    {refined_summary}
+
+    정답 단어:
+    {answers}
+
+    KeyBERT 후보 단어:
+    {related_candidates}
     """
 
     resp_confuse = client.chat.completions.create(
@@ -228,8 +284,8 @@ def generate_summary_reading_quiz(selected_session=None):
         for w, s in llm_ranked.items()
     }
 
-    # === 5. 유의어/중복 필터링 ===
-    def is_semantically_similar(word, answers, threshold=0.8):
+    # === 5. 유의어/중복 필터링 (완화 + KeyBERT 보충) ===
+    def is_semantically_similar(word, answers, threshold=0.9):
         word_emb = embed_model.encode(word, convert_to_tensor=True)
         for a in answers:
             ans_emb = embed_model.encode(a, convert_to_tensor=True)
@@ -239,13 +295,32 @@ def generate_summary_reading_quiz(selected_session=None):
         return False
 
     def too_similar(word, answers):
-        return any(a in word or word in a for a in answers)
+        # 완전히 동일한 단어만 제외
+        return any(a == word for a in answers)
 
     filtered_combined = {
         w: s for w, s in combined.items()
         if not too_similar(w, answers)
-        and not is_semantically_similar(w, answers, threshold=0.8)
+        and not is_semantically_similar(w, answers, threshold=0.9)
     }
+
+    # === 오답 후보 부족 시 KeyBERT 기반 보충 ===
+    if len(filtered_combined) < 9:
+        logger.warning(f"[{topic}] 오답 후보 부족 → KeyBERT 보충 시작 ({len(filtered_combined)}개)")
+        for k, v in bert_keywords:
+            k = k.strip()
+            if k not in filtered_combined and k not in answers and len(k) > 1:
+                filtered_combined[k] = 0.15  # 낮은 점수로 추가
+            if len(filtered_combined) >= 9:
+                break
+
+    if len(filtered_combined) < 9:
+        logger.warning(f"[{topic}] KeyBERT 보충 후에도 부족 ({len(filtered_combined)}개), 일부 중복 허용")
+        for k, v in bert_keywords:
+            if k not in filtered_combined:
+                filtered_combined[k] = 0.1
+            if len(filtered_combined) >= 9:
+                break
 
     # === 6. 난이도별 분류 ===
     distractors = sorted(filtered_combined.items(), key=lambda x: x[1], reverse=True)[:9]
@@ -300,7 +375,7 @@ def generate_summary_reading_quiz(selected_session=None):
             json.dump([block], f, ensure_ascii=False, indent=2)
         logger.info(f"[{topic}] {level} 단계 SUMMARY_READING 저장 완료 → {file_path.name}")
 
-    logger.info(f"[{topic}] 세션 {session_id} SUMMARY_READING 퀴즈 생성 완료")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} SUMMARY_READING 퀴즈 생성 완료")
 
 # === 실행 ===
 if __name__ == "__main__":

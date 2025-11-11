@@ -26,7 +26,7 @@ def generate_reflect_quiz(selected_session=None):
     courseId = selected_session["courseId"]
     sessionId = selected_session["sessionId"]
 
-    logger.info(f"[{topic}] 세션 {sessionId} 리플렉션 생성 시작")
+    logger.info(f"[{topic}] 코스 {courseId} 세션 {sessionId} SESSION_REFLECTION 생성 시작")
 
     # 2️. 선택된 세션 기반으로 파일 자동 필터링
     prefix = f"{topic}_{courseId}_{sessionId}_"
@@ -140,7 +140,7 @@ def generate_reflect_quiz(selected_session=None):
                 logger.error(f"[{topic}] {level}단계 저장 오류: {e}", exc_info=True)
 
     save_reflection_json(topic, courseId, sessionId, i_reflection, e_reflection)
-    logger.info(f"[{topic}] 세션 {sessionId} 리플렉션 생성 완료")
+    logger.info(f"[{topic}] 코스 {courseId} 세션 {sessionId} SESSION_REFLECTION 생성 완료")
 
 #  실행
 if __name__ == "__main__":
