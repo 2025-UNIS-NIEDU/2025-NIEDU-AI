@@ -31,7 +31,7 @@ def generate_multi_choice_quiz(selected_session=None):
     summary = selected_session.get("summary", "")
     sourceUrl = selected_session.get("sourceUrl", "")
 
-    logger.info(f"[{topic}] 세션 {session_id} 객관식 퀴즈 생성 시작")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} MULTIPLE_CHOICE 생성 시작")
 
     # === 3️. 모델 & 임베더 설정 ===
     llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)

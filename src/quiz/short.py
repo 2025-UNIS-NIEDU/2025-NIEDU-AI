@@ -1,207 +1,220 @@
-import os, json, random, logging
-import sys
+import os, sys, json, yaml, logging, random
+from datetime import datetime
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from datetime import datetime
 from dotenv import load_dotenv
+from keybert import KeyBERT
 from langchain_openai import ChatOpenAI
+from langchain.prompts import ChatPromptTemplate
 from quiz.select_session import select_session
 
+logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
 
 def generate_short_quiz(selected_session=None):
-    # === 환경 변수 로드 ===
+    """뉴스 기반 단답형 퀴즈 자동 생성 (I/E 단계, 요약문 기반)"""
+
+    # === 1. 환경 변수 ===
     BASE_DIR = Path(__file__).resolve().parents[2]
     ENV_PATH = BASE_DIR / ".env"
     load_dotenv(ENV_PATH, override=True)
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-    # === 세션 선택 ===
+    # === 2. 세션 선택 ===
     if selected_session is None:
-          selected_session = select_session()
-          
+        selected_session = select_session()
+
     topic = selected_session["topic"]
-    course_id = selected_session["courseId"]            
+    course_id = selected_session["courseId"]
     session_id = selected_session.get("sessionId")
-    headline = selected_session.get("headline", "")
-    summary = selected_session.get("summary", "")
     sourceUrl = selected_session.get("sourceUrl", "")
 
-    print(f"\n선택된 태그: {course_id}")
-    print(f"sessionId: {session_id}")
-    print(f"제목: {headline}\n")
+    logger.info(f"\n[INFO] {topic} 코스 {course_id} 세션 {session_id} SHORT_ANSWER 생성 시작")
 
-    # === 모델 설정 ===
-    llm_i = ChatOpenAI(model="gpt-4o", temperature=0.3)  # I단계
-    llm_e = ChatOpenAI(model="gpt-5") # E단계
+    # === SUMMARY_READING 불러오기 ===
+    SUMMARY_DIR = BASE_DIR / "data" / "quiz"
+    today = datetime.now().strftime("%Y-%m-%d")
+    pattern = f"{topic}_{course_id}_{session_id}_SUMMARY_READING_*_{today}.json"
+    summary_files = sorted(SUMMARY_DIR.glob(pattern))
 
-    # === I단계 문제 생성 ===
-    def generate_quiz_i(summary: str):
-      prompt_i = f"""
-    당신은 뉴스 기반 학습 퀴즈 생성 AI입니다.
-    아래 뉴스 내용을 참고하여 단답식 문제를 10개 만들어주세요.
-
-    [문항 구성 기준]
-    1. 질문은 뉴스에서 다룬 **핵심 개념·정책·사건·제도명** 중심으로 작성합니다.
-    2. 인물명·지명·시간 관련 표현·수치 등은 절대 정답으로 사용하지 않습니다.
-    3. 각 문항은 서로 다른 사실 또는 관점 요소를 다룹니다.  
-
-    [정답 생성 규칙]
-    1. 정답은 반드시 명사 한 단어로 작성합니다.  
-    2. 모든 정답은 중복되지 않게 합니다.
-    3. 시간 표현, 평가·감정 표현, 추상적 행위명사, 대명사·지시사 등은 정답으로 사용하지 않습니다.  
-    4. 정답은 자동 채점이 가능한 단어여야 하며, 의미가 유사하거나 변형 가능한 단어는 모두 금지합니다.  
-    5. 정답은 뉴스에 명시된 **한 단어 명사**로, 사람, 조직, 제도, 정책, 사건, 혹은 명확한 사물 이름이어야 합니다.
-
-    [세부 규칙]
-    1. question은 최소 30자, 40자 이내, 한 문장, 의문형 문어체
-    2. 해설은 50자 이내, 사실적 근거 중심, 모든 해설 문장은 한 문장으로 작성하고, ‘~다.’로 끝나는 단정형 문체를 사용하세요.
-    3. 출력은 반드시 유효한 JSON 형식만 사용하세요.
-
-    출력 예시 (JSON):
-    [
-      {{
-      "contentId" : 문제 번호,
-      "question": "질문",
-      "correctAnswer": "정답",
-      "answerExplanation": "해설"
-      }}
-    ]
-
-    뉴스 요약:
-    {summary}
-    """
-      res = llm_i.invoke(prompt_i)
-      text = res.content.strip().replace("```json", "").replace("```", "")
-      return json.loads(text)
-
-    def generate_advanced_e(i_quiz, summary):
-        """I단계 10문항 중 5개를 자동 선정 후 E단계로 변환"""
-        
-        # === 1️. E단계 후보 선정 ===
-        sel_prompt = f"""
-        다음 I단계 문제 10개 중에서 E단계(고급 문어체)로 변환하기 적합한 5개를 선택하세요.
-        - 정책·사회적 의미 중심
-        - 단순 수치·날짜형 제외
-        - JSON 배열로 질문만 출력 (예: ["질문1", "질문2", ...])
-
-        문제 목록:
-        {json.dumps([q["question"] for q in i_quiz], ensure_ascii=False, indent=2)}
-        """
-        sel_res = llm_i.invoke(sel_prompt)
-        sel_text = sel_res.content.strip().replace("```json", "").replace("```", "")
+    if not summary_files:
+        logger.warning("요약문 파일을 찾을 수 없습니다. select_session의 기본 summary 사용.")
+        summary = selected_session.get("summary", "")
+    else:
+        with open(summary_files[-1], "r", encoding="utf-8") as f:
+            data = json.load(f)
         try:
-            selected_questions = json.loads(sel_text)
-        except json.JSONDecodeError:
-            logger.warning(f"[{topic}] E단계 후보 선택 실패 — 랜덤 대체")
-            selected_questions = random.sample([q["question"] for q in i_quiz], 5)
+            content = data[0]["contents"][0]
+            summary = content["summary"]
+            logger.info(f"요약문 불러옴 → {summary_files[-1].name}")
+        except Exception as e:
+            logger.warning(f"요약문 파싱 실패: {e}")
+            summary = selected_session.get("summary", "")
 
-        # === 2️. E단계 변환 대상 필터 ===
-        target_items = [q for q in i_quiz if q["question"] in selected_questions]
-
-        # === 3️. E단계 문제 작성 ===
-        prompt_e = f"""
-    당신은 뉴스 기반 학습 설계자이자 교육 평가 전문가입니다.
-    아래 추출된 I단계 문제 3개를 **고급 문어체 단답식(E 단계)** 문제 5개로 재작성하세요.
-
-    [어휘 및 문체 기준]
-    1. 문체는 공식적·논리적이며, 사실에 근거하되 사회적·정책적 의미를 암시해야 합니다.
-    2. **독해 속도를 늦추되, 사실적 근거는 기사에 명시된 내용만 사용**
-
-    [표현]
-    독해 속도를 늦추는 질문 예시 : 
-
-    - "정부가 어떤 제도를 발표했는가?"  
-      → "정부가 최근 공표한 제도적 조치의 명칭은 무엇인가?"
-
-    - "이 사건이 발생한 원인은?"  
-      → "해당 사안이 초래된 배경 요인은 무엇인가?"
-
-    [문항 구성 기준]
-    1. I단계의 정답은 그대로 유지
-    2. 정답은 반드시 **명사 한 단어**로 작성
-    3. 질문은 그 단어의 의미·맥락을 탐구하도록 하세요.
-
-    [해설 지침]
-    1. 50자 내외로 아래 두 요소를 모두 포함해야 함:
-      - 정답의 사실적 근거 (기사 내용 기반)
-      - 정답이 갖는 사회적·정책적·논리적 중요성
-    2. 모든 해설은 한 문장으로 작성하고, ‘~다.’로 끝나는 단정형 문체를 사용.
-
-    [세부 규칙]
-    1. question: 30-40자, 의문형 문어체
-    2. explanation: 최소 40자, 50자 내외
-    3. JSON 배열로 출력 
-    4. 기사 외 정보, 추측, 사견 절대 금지
-    5. 출력은 반드시 유효한 JSON 형식만 사용하세요.
-
-    출력 예시 (JSON):
-    [
-      {{
-        "contentId" : 문제 번호,
-        "question": "질문",
-        "correctAnswer": "정답",
-        "answerExplanation": "해설"
-      }}
+    # === 3. 단답식 정답 추출 ===
+    kw_model = KeyBERT(model="jhgan/ko-sroberta-multitask")
+    keybert_keywords = [
+        kw for kw, _ in kw_model.extract_keywords(
+            summary,
+            keyphrase_ngram_range=(1, 2),
+            stop_words=None,
+            top_n=30
+        )
     ]
+    kw_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
+    kw_prompt = ChatPromptTemplate.from_template("""
+    당신은 뉴스 요약문에서 핵심 개념을 추출하는 **언어 정제 전문가**입니다.
 
+    아래의 [요약문]과 [KeyBERT 후보]를 참고하여,
+    문맥상 가장 중요한 **순수 명사 또는 복합 명사(2~3어절)** 7개를 최종 선별하세요.
 
-    [E 문제 후보]
-    {json.dumps(target_items, ensure_ascii=False, indent=2)}
+    [정제 규칙 — 반드시 모두 지켜야 합니다]
 
-    [뉴스 요약]
+    1. **요약문 안에 실제 등장한 명사**만 사용합니다.  
+    - 새로운 단어, 의미 확장, 해석어를 만들어서는 안 됩니다.
+
+    2. **명사(Noun)** 형태만 허용하며, 아래와 같은 어미나 품사는 모두 제외합니다:
+    - 조사: 은, 는, 이, 가, 을, 를, 에, 에서, 으로, 와, 과, 등
+    - 동사형 어미: 하다, 되다, 했다, 되고, 하는, 된, 되며 등
+    - 형용사형 어미: 한, 된, 다양한, 큰, 작은, 새로운 등
+    - 부사·접속사: 그러나, 또한, 특히, 즉, 따라서, 먼저 등
+    - 추상어: 문제, 상황, 결과, 영향, 필요성, 변화, 관계, 과정, 요인, 측면 등
+    - **날짜·시간(예: 2025년, 9월, 상반기 등)**, **수치·단위(예: %, 억, 개, 건, 회, 차 등)** 금지
+
+    3. **2~3어절 복합 명사**는 허용합니다.  
+    - 예: “전략적 동반자 관계”, “용산 대통령실”, “에너지 전환 정책”
+
+    4. **아래 5개 카테고리 중 최소 1개 이상씩 포함되도록 7개를 고르세요.**
+    - 인물명 (예: 대통령, 대표, 위원장 등 실제 인물 명칭)
+    - 기관명 (예: 정부, 위원회, 기업, 공사, 단체 등)
+    - 정책명 또는 제도명 (예: 정책, 계획, 전략, 제도, 협약 등)
+    - 사건명 또는 활동명 (예: 정상회담, 발표, 구축, 수주, 개혁 등)
+    - 핵심 개념 (예: 생성형 AI, 에너지 전환, 디지털 전환, 보안 체계 등)
+        5. 중복·유사 표현은 하나로 통합합니다.  
+        - 예: “AI 플랫폼”과 “생성형 AI 플랫폼”은 맥락상 하나로 간주
+                                                 
+    [정답 예시] :
+    - “공정거래위원회는” → “공정거래위원회”
+    - “과징금을 부과하기로” → “과징금”
+    - “대학에서” → “대학”
+    - “입시를 관리하다” → “입시”
+
+    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”
+    허용 예시: “무역정책”, “핵잠수함 도입”, “가맹점 계약”, “학교폭력 기록”
+
+    [요약문]
     {summary}
 
-    이제 위의 기준을 충실히 반영하여,
-    **단답형이지만 어휘·논리·맥락이 모두 한 단계 높은 고급 문어체 E단계 문제 5개**를 생성하세요.
-    """
-        e_res = llm_e.invoke(prompt_e)
-        text = e_res.content.strip().replace("```json", "").replace("```", "")
+    [KeyBERT 후보]
+    {keybert_keywords}
+    """)
 
+    kw_chain = kw_prompt | kw_llm
+    kw_res = kw_chain.invoke({"summary": summary, "keybert_keywords": keybert_keywords})
+
+    keywords_raw = kw_res.content.strip().replace("```", "").replace("json", "")
+    keywords = [kw.strip() for kw in keywords_raw.split(",") if kw.strip()]
+
+    logger.info(f"[LLM 키워드 정제 완료]")
+
+    # === 4. 모델 설정 ===
+    llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    llm_e1 = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+    llm_e2 = ChatOpenAI(model="gpt-4o", temperature=0.3)
+
+    # === 5. YAML 프롬프트 로드 (I / E-1 / E-2 분리) ===
+    def load_prompt_yaml(filename: str):
+        """prompt 폴더 내 YAML 템플릿 로드"""
+        prompt_dir = BASE_DIR / "src" / "quiz" / "prompt"
+        path = prompt_dir / filename
+        if not path.exists():
+            raise FileNotFoundError(f"프롬프트 파일을 찾을 수 없습니다: {path}")
+        with open(path, "r", encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+        if "_type" not in data or "template" not in data:
+            raise ValueError(f"잘못된 YAML 구조: {filename}")
+        return ChatPromptTemplate.from_template(data["template"])
+
+    # --- 프롬프트 개별 로드 ---
+    prompt_i  = load_prompt_yaml("short_i.yaml")     # I단계 (기본 단답형)
+    prompt_e1 = load_prompt_yaml("short_e_1.yaml")   # E-1단계 (상황절+의미절)
+    prompt_e2 = load_prompt_yaml("short_e_2.yaml")   # E-2단계 (심화 리라이트형)
+
+    # --- LLM 체인 구성 ---
+    chain_i  = prompt_i  | llm_i
+    chain_e1 = prompt_e1 | llm_e1
+    chain_e2 = prompt_e2 | llm_e2
+
+    # --- 공통 JSON 파싱 함수 ---
+    def parse_json_output(res):
+        """LLM 출력(JSON 문자열 또는 코드블록 포함)을 안전하게 파싱"""
+        text = res.content.strip()
+        text = text.replace("```json", "").replace("```", "").strip()
         try:
-            e_items = json.loads(text)
+            return json.loads(text)
         except json.JSONDecodeError:
-            logger.error(f"[{topic}] E단계 JSON 파싱 실패 — LLM 응답 확인 필요")
-            e_items = []
+            logger.warning("JSON 파싱 오류 발생, 빈 리스트 반환")
+            return []
 
-        # === 4️. 남은 I단계 5문항 ===
-        remaining_i = [q for q in i_quiz if q["question"] not in selected_questions]
-        for idx, q in enumerate(remaining_i, start=1):
-            q["contentId"] = idx
-        for idx, q in enumerate(e_items, start=1):
-            q["contentId"] = idx
-
-        logger.info(f"[{topic}] 변환된 E단계 {len(e_items)}문항 / 남은 I단계 {len(remaining_i)}문항")
-        return e_items, remaining_i
-
+    # === 7. 문제 생성 ===
     try:
-        i_quiz = generate_quiz_i(summary)
-        e_quiz, remaining_i = generate_advanced_e(i_quiz, summary)
+        # --- (1) I단계 ---
+        i_res = chain_i.invoke({
+            "summary": summary,
+            "keywords": keywords
+        })
+        all_quiz_i = parse_json_output(i_res)
+        logger.info(f"[I단계 생성 완료] {len(all_quiz_i)}문항")
+
+        # === I단계 5문항 제한 ===
+        i_quiz = all_quiz_i[:5]  # 상위 5개만 저장
+        logger.info(f"[I단계 최종 선택] {len(i_quiz)}문항")
+
+        # --- (2) E-1단계 ---
+        e1_res = chain_e1.invoke({
+            "summary": summary,
+            "keywords": keywords
+        })
+        all_quiz_e1 = parse_json_output(e1_res)
+        logger.info(f"[E-1단계 생성 완료] {len(all_quiz_e1)}문항")
+
+        # --- (3) E-2단계 (I 심화형) ---
+        e2_res = chain_e2.invoke({
+            "i_quiz": json.dumps(all_quiz_i, ensure_ascii=False)
+        })
+        all_quiz_e2 = parse_json_output(e2_res)
+        logger.info(f"[E-2단계 생성 완료] {len(all_quiz_e2)}문항")
+
+        # --- (4) 병합 규칙 ---
+        needed = max(0, 5 - len(all_quiz_e1))
+        all_quiz_e = (all_quiz_e1 + all_quiz_e2[:needed])[:5]
+        random.shuffle(all_quiz_e)
+        e_quiz= all_quiz_e
+        logger.info(f"[E단계 통합 완료] 최종 {len(all_quiz_e)}문항")
+
     except Exception as e:
-        logger.error(f"[{topic}] 단답형 퀴즈 생성 중 오류: {e}", exc_info=True)
+        logger.error(f"[ERROR] {topic} 코스 {course_id} 세션 {session_id} 퀴즈 생성 중 오류: {e}")
         return
 
-    # === 저장 ===
+    # === 9. 저장 ===
     SAVE_DIR = BASE_DIR / "data" / "quiz"
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d")
 
-    final_result = [
-        {"contentType": "SHORT_ANSWER", "level": "I", "sourceUrl": sourceUrl, "contents": remaining_i},
-        {"contentType": "SHORT_ANSWER", "level": "E", "sourceUrl": sourceUrl, "contents": e_quiz}
+    results = [
+        {"contentType": "SHORT_ANSWER", "level": "I", "sourceUrl": sourceUrl, "contents": i_quiz},
+        {"contentType": "SHORT_ANSWER", "level": "E", "sourceUrl": sourceUrl, "contents": e_quiz},
     ]
 
-    for item in final_result:
-        level = str(item.get("level", "")).upper().strip()
-        if not level:
-            continue
-        file_name = f"{topic}_{course_id}_{session_id}_SHORT_ANSWER_{level}_{today}.json"
-        file_path = SAVE_DIR / file_name
-        with open(file_path, "w", encoding="utf-8") as f:
-            json.dump([item], f, ensure_ascii=False, indent=2)
-        logger.info(f"[{topic}] {level}단계 SHORT 퀴즈 저장 완료 → {file_path.name}")
+    for r in results:
+        level = r["level"]
+        filename = f"{topic}_{course_id}_{session_id}_SHORT_ANSWER_{level}_{today}.json"
+        path = SAVE_DIR / filename
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump([r], f, ensure_ascii=False, indent=2)
+        logger.info(f"[저장 완료] {path.name}")
 
-    logger.info(f"[{topic}] 세션 {session_id} 단답형 퀴즈 생성 완료")
+    logger.info(f"[완료] {topic} 코스 {course_id} 세션 {session_id} SHORT_ANSWER 생성 완료\n")
+
 
 # === 실행 ===
 if __name__ == "__main__":

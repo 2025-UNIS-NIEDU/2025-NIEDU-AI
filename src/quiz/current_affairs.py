@@ -31,7 +31,7 @@ def generate_current_affairs_quiz(selected_session=None):
     headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
-    logger.info(f"[{topic}] 세션 {session_id} 시사 이슈형 퀴즈 생성 시작")
+    logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} CURRENT_AFFAIRS 퀴즈 생성 시작")
 
     # === 3️. CSE 검색 함수 ===
     def get_cse_snippets(query, cx_id, n=10):
@@ -181,7 +181,7 @@ def generate_current_affairs_quiz(selected_session=None):
     try:
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(wrapped_output, f, ensure_ascii=False, indent=2)
-        logger.info(f"[{topic}] CURRENT_AFFAIRS 저장 완료 → {file_path.name}")
+        logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} CURRENT_AFFAIRS 저장 완료 → {file_path.name}")
     except Exception as e:
         logger.error(f"[{topic}] 파일 저장 실패: {e}", exc_info=True)
 
