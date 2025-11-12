@@ -62,4 +62,4 @@ jobs:
               --name nie-ai \
               --env-file .env \
               -p 8000:8000 \
-              ${{ secrets.ECR_REPOSITORY }}:lates
+              ${{ secrets.ECR_REPOSITORY }}:latest
