@@ -48,6 +48,7 @@ jobs:
             DATASOURCE_URL=${{ secrets.DATASOURCE_URL }}
             DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }}
             DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }}
+            LOG_LEVEL=${{ secrets.LOG_LEVEL }}
             EOF
 
             echo "Stopping previous container"
@@ -61,4 +62,4 @@ jobs:
               --name nie-ai \
               --env-file .env \
               -p 8000:8000 \
-              ${{ secrets.ECR_REPOSITORY }}:latest
+              ${{ secrets.ECR_REPOSITORY }}:lates
