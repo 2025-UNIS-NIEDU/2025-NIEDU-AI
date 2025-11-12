@@ -1,5 +1,4 @@
-import os
-import json
+import os, json, logging
 from pathlib import Path
 import chromadb
 from chromadb.utils import embedding_functions
@@ -7,151 +6,163 @@ from dotenv import load_dotenv
 from collections import OrderedDict
 from datetime import datetime
 
-# 0️. 기본 설정
-today = datetime.now().strftime("%Y-%m-%d")
+log = logging.getLogger(__name__) 
 
-BASE_DIR = Path(__file__).resolve().parents[2]
-ENV_PATH = BASE_DIR / ".env"
-BACKUP_DIR = BASE_DIR / "data" / "backup"
-DB_ROOT = BASE_DIR / "data" / "db"
+def build_rag_data():
+    # 0️. 기본 설정
+    today = datetime.now().strftime("%Y-%m-%d")
 
-BACKUP_DIR.mkdir(parents=True, exist_ok=True)
-DB_ROOT.mkdir(parents=True, exist_ok=True)
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    ENV_PATH = BASE_DIR / ".env"
+    BACKUP_DIR = BASE_DIR / "data" / "backup"
+    DB_ROOT = BASE_DIR / "data" / "rag_db"
 
-# 1️. 환경 변수 및 임베딩 설정
-load_dotenv(dotenv_path=ENV_PATH, override=True)
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+    DB_ROOT.mkdir(parents=True, exist_ok=True)
 
-embedding_fn = embedding_functions.OpenAIEmbeddingFunction(
-    api_key=OPENAI_API_KEY,
-    model_name="text-embedding-3-small"
-)
+    # 1️. 환경 변수 및 임베딩 설정
+    load_dotenv(dotenv_path=ENV_PATH, override=True)
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# 2️. 키 정렬 함수 (deepsearchId, topic, subTopic 우선)
-def sort_deepsearchId_keys(session: dict) -> dict:
-    """deepsearchId → topic → subTopic 순으로 고정, 나머지는 알파벳 순 정렬"""
-    if not isinstance(session, dict):
-        return session
-
-    ordered = []
-    for key in ("deepsearchId", "topic", "subTopic"):
-        if key in session:
-            ordered.append((key, session[key]))
-
-    remaining = sorted(
-        [(k, v) for k, v in session.items() if k not in ("deepsearchId", "topic", "subTopic")],
-        key=lambda x: x[0].lower()
+    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name="jhgan/ko-sroberta-multitask"
     )
 
-    return dict(ordered + remaining)
+    # 2️. 키 정렬 함수 (deepsearchId, topic, subTopic 우선)
+    def sort_deepsearchId_keys(session: dict) -> dict:
+        """deepsearchId → topic → subTopic 순으로 고정, 나머지는 알파벳 순 정렬"""
+        if not isinstance(session, dict):
+            return session
 
-# 3️. 백업 폴더 내 JSON 파일 검색
-json_files = list(BACKUP_DIR.glob(f"*{today}*.json"))
-print(f"{len(json_files)}개의 JSON 파일을 감지했습니다.")
+        ordered = []
+        for key in ("deepsearchId", "topic", "subTopic"):
+            if key in session:
+                ordered.append((key, session[key]))
 
-# 4️. 파일별 변환 및 DB 저장
-for json_file in json_files:
-    topic_name = json_file.stem.split("_")[0]
-    print(f"\n[{topic_name}] 변환 중...")
+        remaining = sorted(
+            [(k, v) for k, v in session.items() if k not in ("deepsearchId", "topic", "subTopic")],
+            key=lambda x: x[0].lower()
+        )
 
-    topic_db_path = DB_ROOT / topic_name
-    topic_db_path.mkdir(parents=True, exist_ok=True)
+        return dict(ordered + remaining)
 
-    client = chromadb.PersistentClient(path=str(topic_db_path))
-    collection = client.get_or_create_collection(
-        name=f"{topic_name}_news",
-        embedding_function=embedding_fn
-    )
+    # 3️. 백업 폴더 내 JSON 파일 중 최신 날짜만 유지
+    json_files_all = sorted(BACKUP_DIR.glob("*.json"), key=os.path.getmtime, reverse=True)
+    if not json_files_all:
+        log.warning("백업 폴더에 JSON 파일이 없습니다.")
+        return
 
-    # === JSON 로드 ===
-    try:
-        with open(json_file, "r", encoding="utf-8") as f:
-            raw = json.load(f)
-        articles = raw.get("articles", raw.get("data", []))
-    except Exception as e:
-        print(f"[오류] {topic_name} JSON 로드 실패: {e}")
-        continue
+    latest_date = json_files_all[0].stem.split("_")[-1].split(".")[0]
+    json_files = [f for f in json_files_all if latest_date in f.name]
+    log.info(f"📅 최신 날짜({latest_date}) 기준 {len(json_files)}개 JSON 처리")
 
-    docs, metas, ids = [], [], []
+    # 기존 DB 초기화 (컬렉션 단위 삭제)
+    for topic_dir in DB_ROOT.iterdir():
+        if topic_dir.is_dir():
+            client = chromadb.PersistentClient(path=str(topic_dir))
+            collection_name = f"{topic_dir.name}_news"
+            try:
+                client.delete_collection(name=collection_name)
+                log.info(f"[{topic_dir.name}] 기존 컬렉션 초기화 완료")
+            except Exception as e:
+                log.warning(f"[{topic_dir.name}] 컬렉션 초기화 실패: {e}")
 
-    # 5️. 기사별 문서 변환
-    for i, item in enumerate(articles):
-        try:
-            ordered_item = sort_deepsearchId_keys(item)
+    # 4️. 최신 JSON 파일별 변환 및 DB 저장
+    for json_file in json_files:
+        topic_name = json_file.stem.split("_")[0]
+        topic_db_path = DB_ROOT / topic_name
+        topic_db_path.mkdir(parents=True, exist_ok=True)
 
-            # NoneType, list, dict 방지
-            clean_dict = OrderedDict()
-            for k, v in ordered_item.items():
-                if v is None:
-                    v = ""
-                elif isinstance(v, (list, dict)):
-                    v = json.dumps(v, ensure_ascii=False)
-                else:
-                    v = str(v)
-                clean_dict[k] = v
-
-            # 임베딩용 텍스트 구성 (자연어 기반)
-            page_content = f"""
-            [기사 제목] {clean_dict.get('headline', '')}
-
-            [주제] {clean_dict.get('topic', '')}
-            [세부 주제] {clean_dict.get('subTopic', '')}
-
-            [요약] {clean_dict.get('summary', '')}
-
-            [언론사] {clean_dict.get('publisher', '')}
-            [게시일] {clean_dict.get('publishedAt', '')}
-
-            [기사 URL] {clean_dict.get('contentUrl', '')}
-            [썸네일] {clean_dict.get('thumbnailUrl', '')}
-
-            [DeepSearch ID] {clean_dict.get('deepsearchId', '')}
-            """
-
-            docs.append(page_content.strip())  # 실제 임베딩에 사용
-            metas.append(clean_dict)           # 전체 메타데이터 저장
-            ids.append(f"{topic_name}_{i+1}")
-
-        except Exception as e:
-            print(f"[경고] {topic_name} 문서 {i} 처리 중 오류: {e}")
-
-    # 6️. DB에 저장
-    if docs:
-        try:
-            collection.add(documents=docs, metadatas=metas, ids=ids)
-            print(f"{len(docs)}개 문서를 DB에 추가 완료 → {topic_db_path}")
-            print(f"현재 컬렉션 문서 수: {collection.count()}")
-
-            # 추가된 데이터 샘플 1~2개만 확인
-            sample = collection.get(limit=2, include=["documents", "metadatas"])
-            print(f"샘플 문서 2개 미리보기 ({topic_name}):")
-            for idx, doc in enumerate(sample["documents"]):
-                meta = sample["metadatas"][idx]
-                print(f"  ├─ [{meta.get('subTopic', 'N/A')}] {meta.get('headline', '')[:50]}...")
-            print("-" * 80)
-
-        except Exception as e:
-            print(f"[오류] {topic_name} DB 저장 중 문제 발생: {e}")
-    else:
-        print(f"[주의] {topic_name}에 유효한 문서가 없습니다.")
-
-# 7️. subTopic 검증
-print("\n=== subTopic 필드 검증 ===")
-for topic_dir in DB_ROOT.iterdir():
-    if topic_dir.is_dir():
-        client = chromadb.PersistentClient(path=str(topic_dir))
+        client = chromadb.PersistentClient(path=str(topic_db_path))
         collection = client.get_or_create_collection(
-            name=f"{topic_dir.name}_news",
+            name=f"{topic_name}_news",
             embedding_function=embedding_fn
         )
-        data = collection.get(include=["metadatas"])
-        if not data["metadatas"]:
-            print(f"{topic_dir.name}: 메타데이터 없음")
+
+        # === JSON 로드 ===
+        try:
+            with open(json_file, "r", encoding="utf-8") as f:
+                raw = json.load(f)
+            articles = raw.get("articles", raw.get("data", []))
+        except Exception as e:
+            log.error(f"[{topic_name}] JSON 로드 실패: {e}")
             continue
 
-        subs = [m.get("subTopic", None) for m in data["metadatas"] if m]
-        unique_subs = set(s for s in subs if s)
-        print(f"{topic_dir.name}: subTopic 필드 확인 ({len(unique_subs)}개 고유값)")
-        print(f"예시: {list(unique_subs)[:5]}")
+        docs, metas, ids = [], [], []
 
-print("\n모든 토픽 DB 저장 및 검증이 완료되었습니다.")
+        # 5️. 기사별 문서 변환
+        for i, item in enumerate(articles):
+            try:
+                ordered_item = sort_deepsearchId_keys(item)
+
+                clean_dict = OrderedDict()
+                for k, v in ordered_item.items():
+                    if v is None:
+                        v = ""
+                    elif isinstance(v, (list, dict)):
+                        v = json.dumps(v, ensure_ascii=False)
+                    else:
+                        v = str(v)
+                    clean_dict[k] = v
+
+                page_content = f"""
+                [기사 제목] {clean_dict.get('headline', '')}
+
+                [주제] {clean_dict.get('topic', '')}
+                [세부 주제] {clean_dict.get('subTopic', '')}
+
+                [요약] {clean_dict.get('summary', '')}
+
+                [언론사] {clean_dict.get('publisher', '')}
+                [게시일] {clean_dict.get('publishedAt', '')}
+
+                [기사 URL] {clean_dict.get('contentUrl', '')}
+                [썸네일] {clean_dict.get('thumbnailUrl', '')}
+
+                [DeepSearch ID] {clean_dict.get('deepsearchId', '')}
+                """
+
+                docs.append(page_content.strip())
+                metas.append(clean_dict)
+                ids.append(f"{topic_name}_{i+1}")
+
+            except Exception as e:
+                log.warning(f"[{topic_name}] 문서 {i} 변환 중 오류: {e}")
+                continue
+
+        # 6️. DB에 저장
+        if docs:
+            try:
+                collection.add(documents=docs, metadatas=metas, ids=ids)
+                log.info(f"[{topic_name}] {len(docs)}개 문서 추가 완료")
+            except Exception as e:
+                log.error(f"[{topic_name}] DB 저장 중 문제 발생: {e}")
+
+    # 7️. subTopic 검증
+    for topic_dir in DB_ROOT.iterdir():
+        if topic_dir.is_dir():
+            client = chromadb.PersistentClient(path=str(topic_dir))
+            collection = client.get_or_create_collection(
+                name=f"{topic_dir.name}_news",
+                embedding_function=embedding_fn
+            )
+            data = collection.get(include=["metadatas"])
+            if not data["metadatas"]:
+                continue
+            subs = [m.get("subTopic", None) for m in data["metadatas"] if m]
+            unique_subs = set(s for s in subs if s)
+            log.info(f"[{topic_dir.name}] subTopic {len(unique_subs)}개 확인")
+
+    # 8. RAG DB 문서 수 확인
+    for topic_dir in DB_ROOT.iterdir():
+        if topic_dir.is_dir():
+            client = chromadb.PersistentClient(path=str(topic_dir))
+            collection = client.get_or_create_collection(
+                name=f"{topic_dir.name}_news"
+            )
+            count = collection.count()
+            log.info(f"[{topic_dir.name}] 문서 수: {count}")
+
+#  실행
+if __name__ == "__main__":
+    build_rag_data()
