@@ -118,8 +118,7 @@ def generate_short_quiz(selected_session=None):
 
     # === 4. 모델 설정 ===
     llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-    llm_e1 = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
-    llm_e2 = ChatOpenAI(model="gpt-4o", temperature=0.3)
+    llm_e = ChatOpenAI(model="gpt-4o", temperature=0.3)
 
     # === 5. YAML 프롬프트 로드 (I / E-1 / E-2 분리) ===
     def load_prompt_yaml(filename: str):
@@ -136,13 +135,11 @@ def generate_short_quiz(selected_session=None):
 
     # --- 프롬프트 개별 로드 ---
     prompt_i  = load_prompt_yaml("short_i.yaml")     # I단계 (기본 단답형)
-    prompt_e1 = load_prompt_yaml("short_e_1.yaml")   # E-1단계 (상황절+의미절)
-    prompt_e2 = load_prompt_yaml("short_e_2.yaml")   # E-2단계 (심화 리라이트형)
+    prompt_e = load_prompt_yaml("short_e.yaml")   # E-2단계 (심화 리라이트형)
 
     # --- LLM 체인 구성 ---
     chain_i  = prompt_i  | llm_i
-    chain_e1 = prompt_e1 | llm_e1
-    chain_e2 = prompt_e2 | llm_e2
+    chain_e = prompt_e | llm_e
 
     # --- 공통 JSON 파싱 함수 ---
     def parse_json_output(res):
@@ -166,30 +163,24 @@ def generate_short_quiz(selected_session=None):
         logger.info(f"[I단계 생성 완료] {len(all_quiz_i)}문항")
 
         # === I단계 5문항 제한 ===
-        i_quiz = all_quiz_i[:5]  # 상위 5개만 저장
+        i_quiz = all_quiz_i[:5]
         logger.info(f"[I단계 최종 선택] {len(i_quiz)}문항")
 
-        # --- (2) E-1단계 ---
-        e1_res = chain_e1.invoke({
-            "summary": summary,
-            "keywords": keywords
+        # --- (2) E단계 진행 ---
+        e2_res = chain_e.invoke({
+            "summary" : summary,
+            "i_quiz": json.dumps(i_quiz, ensure_ascii=False),
         })
-        all_quiz_e1 = parse_json_output(e1_res)
-        logger.info(f"[E-1단계 생성 완료] {len(all_quiz_e1)}문항")
+        all_quiz_e = parse_json_output(e2_res)
+        logger.info(f"[E단계 생성 완료] {len(all_quiz_e)}문항")
 
-        # --- (3) E-2단계 (I 심화형) ---
-        e2_res = chain_e2.invoke({
-            "i_quiz": json.dumps(all_quiz_i, ensure_ascii=False)
-        })
-        all_quiz_e2 = parse_json_output(e2_res)
-        logger.info(f"[E-2단계 생성 완료] {len(all_quiz_e2)}문항")
-
-        # --- (4) 병합 규칙 ---
-        needed = max(0, 5 - len(all_quiz_e1))
-        all_quiz_e = (all_quiz_e1 + all_quiz_e2[:needed])[:5]
+        # --- (3) 문제 랜덤화 및 contentId 부여 ---
         random.shuffle(all_quiz_e)
-        e_quiz= all_quiz_e
-        logger.info(f"[E단계 통합 완료] 최종 {len(all_quiz_e)}문항")
+        for idx, q in enumerate(all_quiz_e, start=1):
+            q["contentId"] = str(idx)
+
+        e_quiz = all_quiz_e
+        logger.info(f"[E단계 최종 선택] {len(e_quiz)}문항")
 
     except Exception as e:
         logger.error(f"[ERROR] {topic} 코스 {course_id} 세션 {session_id} 퀴즈 생성 중 오류: {e}")

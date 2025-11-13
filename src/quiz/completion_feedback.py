@@ -171,17 +171,8 @@ def generate_completion_feedback_quiz():
         # 점수 십의 자리 단위
         total = int(round(total / 10) * 10)
 
-        # 기본멘트 설정
-        if total <= 40:
-            default_feedback = "좀 더 생각해봐요"
-        elif total <= 79:
-            default_feedback = "좋아요, 이 부분만 추가하면 될 것 같아요"
-        else:
-            default_feedback = "오늘 열심히 학습했군요! 너무 잘했어요."
-
         # comment 통합 (맨 앞에 기본멘트 추가)
         comment = (
-            f"{default_feedback}.\n"
             f"의미: {meaning_fb}\n"
             f"맥락: {context_fb}\n"
             f"문법: {grammar_fb}"
@@ -195,7 +186,7 @@ def generate_completion_feedback_quiz():
             "score": total,
             "comment": comment
         }
-
+    
 
     # === 여러 문항 자동 평가 ===
     if __name__ == "__main__":

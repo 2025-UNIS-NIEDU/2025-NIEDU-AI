@@ -77,6 +77,7 @@ def build_course_packages():
             quiz_map[f"{cid}_{sid}"].append({
                 "contentType": contentType,
                 "level": level,
+                "sourceUrl": quiz_entry.get("sourceUrl", ""),  
                 "contents": contents
             })
 

@@ -78,8 +78,6 @@ def generate_summary_reading_quiz(selected_session=None):
         logger.warning(f"JSON 파싱 실패(1차): {e}")
         refined_summary = refined_summary_raw  
 
-    logger.info(f"[{topic}] 1차 요약문 정제 완료")
-
     prompt_refine = f"""
     + 너는 '뉴스 문해력 학습용 교재에 수록될 요약문'을 교정하는 전문 편집자이다.  
     아래 [입력 요약문]을 **다시 작성하라.**  
@@ -122,8 +120,6 @@ def generate_summary_reading_quiz(selected_session=None):
     except Exception as e:
         logger.warning(f"JSON 파싱 실패(2차): {e}")
         refined_summary = refined_summary_raw  
-
-    logger.info(f"[{topic}] 최종 요약문 정제 완료")
 
     # === 핵심 정답 추출 ===
     prompt_answer = f"""
@@ -173,7 +169,6 @@ def generate_summary_reading_quiz(selected_session=None):
         answers = [a["word"] for a in answers_json]
     else:
         raise ValueError(f"예상치 못한 JSON 구조: {answers_json}")
-    logger.info(f"[{topic}] 중심 키워드(정답): {answers}")
 
     # === 2. KeyBERT로 관련 단어 필터링 ===
     anchor_words = answers
@@ -189,7 +184,6 @@ def generate_summary_reading_quiz(selected_session=None):
         return max(sims) >= threshold
 
     related_candidates = [k for k, v in bert_keywords if is_related(k, anchor_words)]
-    logger.info(f"[{topic}] 정답과 관련된 명사 후보: {related_candidates}")
 
     # === 3. LLM 혼동 가능성 평가 ===
     prompt_confuse = f"""
@@ -231,7 +225,7 @@ def generate_summary_reading_quiz(selected_session=None):
     - “대학에서” → “대학”
     - “입시를 관리하다” → “입시”
 
-    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”
+    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”, "새로운"
     허용 예시: “무역정책”, “핵잠수함 도입”, “가맹점 계약”, “학교폭력 기록”
 
     ---
@@ -275,7 +269,6 @@ def generate_summary_reading_quiz(selected_session=None):
         raise
 
     llm_ranked = {item["word"]: item["score"] for item in llm_ranked_data["ranked"]}
-    logger.info(f"[{topic}] 혼동어 후보: {list(llm_ranked.keys())}")
 
     # === 4. 정규화 ===
     min_s, max_s = min(llm_ranked.values()), max(llm_ranked.values())
@@ -285,7 +278,7 @@ def generate_summary_reading_quiz(selected_session=None):
     }
 
     # === 5. 유의어/중복 필터링 (완화 + KeyBERT 보충) ===
-    def is_semantically_similar(word, answers, threshold=0.9):
+    def is_semantically_similar(word, answers, threshold=0.8):
         word_emb = embed_model.encode(word, convert_to_tensor=True)
         for a in answers:
             ans_emb = embed_model.encode(a, convert_to_tensor=True)

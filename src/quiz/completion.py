@@ -104,3 +104,4 @@ def generate_completion_quiz(selected_session=None):
 # === 실행 ===
 if __name__ == "__main__":
     generate_completion_quiz()
+    
