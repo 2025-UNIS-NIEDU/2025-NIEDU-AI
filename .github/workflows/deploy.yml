@@ -30,8 +30,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.ECR_REPOSITORY }}:latest
-          cache-from: type=registry,ref=${{ secrets.ECR_REPOSITORY }}:buildcache
-          cache-to: type=registry,ref=${{ secrets.ECR_REPOSITORY }}:buildcache,mode=max
+          no-cache: true
 
       - name: SSH into EC2 and Deploy
         uses: appleboy/ssh-action@v1.0.0
