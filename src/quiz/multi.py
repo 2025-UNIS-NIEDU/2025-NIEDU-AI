@@ -6,7 +6,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer, util
 from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
+from langchain.prompts import PromptTemplate 
 import yaml
 from langchain.schema.runnable import RunnableMap, RunnableLambda
 from quiz.select_session import select_session
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 def generate_multi_choice_quiz(selected_session=None):
     """N·I단계 객관식 퀴즈 자동 생성"""
-    
+
     # === 1️. 환경 변수 로드 ===
     load_dotenv(override=True)
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -43,9 +43,13 @@ def generate_multi_choice_quiz(selected_session=None):
     def load_utf8_prompt(path: str):
         with open(path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
-        if "_type" not in data or "template" not in data:
-            raise ValueError(f"잘못된 YAML 구조: {path}")
-        return ChatPromptTemplate.from_template(data["template"])
+
+        if "_type" not in data or data["_type"] not in {"prompt", "prompt_template"}:
+            raise ValueError(f"{path}: '_type'이 'prompt' 또는 'prompt_template' 이어야 합니다.")
+        if "template" not in data:
+            raise ValueError(f"{path}: 'template' 필드가 없습니다.")
+
+        return PromptTemplate.from_template(data["template"])
 
     prompt_fact_n = load_utf8_prompt("src/quiz/prompt/fact_n.yaml")
     prompt_inference_i = load_utf8_prompt("src/quiz/prompt/inference_i.yaml")
@@ -76,7 +80,7 @@ def generate_multi_choice_quiz(selected_session=None):
 
             q_sim = util.cos_sim(embedder.encode(q), embedder.encode(summary)).item()
             a_sim = util.cos_sim(embedder.encode(correct_option), embedder.encode(summary)).item()
-            score = round(q_sim * 0.4 + a_sim * 0.6, 2)
+            score = round(q_sim * 0.3 + a_sim * 0.7, 2)
             cand.update({
                 "question_sim": q_sim,
                 "answer_sim": a_sim,
@@ -86,21 +90,6 @@ def generate_multi_choice_quiz(selected_session=None):
             if cand["validation"] == "통과":
                 validated.append(cand)
         return validated
-
-    # === 7️. RunnableMap 파이프라인 구성 ===
-    quiz_pipeline = RunnableMap({
-        "fact_n": prompt_fact_n | llm_n | parse_node,
-        "inference_i": prompt_inference_i | llm_i | parse_node,
-        "harder_i": (
-            RunnableLambda(lambda x: {
-                "n_quiz": json.dumps(x["fact_n"], ensure_ascii=False, indent=2),
-                "summary": x["summary"]
-            })
-            | prompt_harder_i
-            | llm_harder
-            | parse_node
-        ),
-    })
 
     # === 8. 문제 생성 ===
     def generate_all_quizzes(summary: str):
@@ -114,18 +103,39 @@ def generate_multi_choice_quiz(selected_session=None):
         harder_i = []
         if num_needed > 0:
             logger.info(f"[{topic}] 추론형 부족 → {num_needed}개 심화형 생성 중")
-            harder_prompt = prompt_harder_i.format_prompt(
+            harder_prompt = prompt_harder_i.format(
                 summary=summary,
                 n_quiz=json.dumps(fact_n, ensure_ascii=False, indent=2),
                 required_count=num_needed
             )
-            harder_response = llm_harder.invoke(harder_prompt.to_messages())
+            harder_response = llm_harder.invoke(harder_prompt)
             harder_i = parse_json_output(harder_response)
 
         total_i = (validated_i + harder_i)[:5]
+        
+        # 현재 정답 배치 랜덤화
+        for q in total_i:
+            options = q.get("options", [])
+            correct_label = q.get("correctAnswer")
+            if not options or not correct_label:
+                continue
+
+            correct_text = next((o["text"] for o in options if o["label"] == correct_label), None)
+            if not correct_text:
+                continue
+
+            random.shuffle(options)
+            new_label = next((o["label"] for o in options if o["text"] == correct_text), None)
+
+            q["options"] = options
+            if new_label:
+                q["correctAnswer"] = new_label
+
+        # contentId 재인덱싱        
         for idx, q in enumerate(total_i, start=1):
             q["contentId"] = str(idx)
 
+        # 결과 반환
         return {"fact_n": fact_n, "inference_i": total_i}
 
     # === 9. 출력 포맷 ===

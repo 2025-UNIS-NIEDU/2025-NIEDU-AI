@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="" />
+    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="Merge branch 'main' of https://github.com/2025-UNIS-NIEDU/2025-NIEDU-AI&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/quiz/image_interpretation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz/prompt/short_e.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/quiz/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/completion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/completion_feedback.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/completion_feedback.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/multi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/fact_n.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/prompt/fact_n.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/harder_i.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/prompt/harder_i.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/short_e_1.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/short_e_2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/short_i.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/prompt/short_i.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/short.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/short.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quiz/summary_reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/summary_reading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wrapper/course_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/wrapper/course_wrapper.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +65,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
