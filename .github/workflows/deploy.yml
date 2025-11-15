@@ -35,7 +35,7 @@ jobs:
       - name: SSH into EC2 and Deploy
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: ${{ secrets.EC2_HOST }}
+          host: ${{ secrets.ECR_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
@@ -68,4 +68,5 @@ jobs:
               --env-file .env \
               -e "PYTHONPATH=/app/src" \
               -p 8000:8000 \
-              ${{ secrets.ECR_REPOSITORY }}:latest
+              ${{ secrets.ECR_REPOSITORY }}:latest \
+              uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips="*"

@@ -134,7 +134,7 @@
       <workItem from="1761284656487" duration="16000" />
       <workItem from="1762906611152" duration="2123000" />
       <workItem from="1763171148671" duration="3306000" />
-      <workItem from="1763179312672" duration="2796000" />
+      <workItem from="1763179312672" duration="3904000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] main.py 절대경로로 import">
       <option name="closed" value="true" />
