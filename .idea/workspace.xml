@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="[FIX] main.py 절대경로로 import" />
+    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="[FIX] main.py 절대경로로 import">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +133,8 @@
       <workItem from="1761257943533" duration="1070000" />
       <workItem from="1761284656487" duration="16000" />
       <workItem from="1762906611152" duration="2123000" />
-      <workItem from="1763171148671" duration="2911000" />
+      <workItem from="1763171148671" duration="3306000" />
+      <workItem from="1763179312672" duration="1949000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] main.py 절대경로로 import">
       <option name="closed" value="true" />

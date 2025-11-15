@@ -30,6 +30,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.ECR_REPOSITORY }}:latest
+          # [유지] GitHub Actions 빌드 캐시 무시
           no-cache: true
 
       - name: SSH into EC2 and Deploy
@@ -43,7 +44,6 @@ jobs:
             
             ECR_REPO_URL="${{ secrets.ECR_REPOSITORY }}"
             ECR_SERVER_ADDRESS=$(echo $ECR_REPO_URL | cut -d'/' -f1)
-
             aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin $ECR_SERVER_ADDRESS
             
             echo "Generating .env file"
@@ -56,6 +56,9 @@ jobs:
 
             echo "Stopping previous container"
             docker stop nie-ai || true && docker rm nie-ai || true
+
+            echo "Deleting old local image on EC2"
+            docker rmi ${{ secrets.ECR_REPOSITORY }}:latest || true
 
             echo "Pulling latest image"
             docker pull ${{ secrets.ECR_REPOSITORY }}:latest
