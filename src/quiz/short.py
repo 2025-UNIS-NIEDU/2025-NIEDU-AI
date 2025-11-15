@@ -160,11 +160,9 @@ def generate_short_quiz(selected_session=None):
             "keywords": keywords
         })
         all_quiz_i = parse_json_output(i_res)
-        logger.info(f"[I단계 생성 완료] {len(all_quiz_i)}문항")
 
         # === I단계 5문항 제한 ===
         i_quiz = all_quiz_i[:5]
-        logger.info(f"[I단계 최종 선택] {len(i_quiz)}문항")
 
         # --- (2) E단계 진행 ---
         e2_res = chain_e.invoke({
@@ -172,7 +170,6 @@ def generate_short_quiz(selected_session=None):
             "i_quiz": json.dumps(i_quiz, ensure_ascii=False),
         })
         all_quiz_e = parse_json_output(e2_res)
-        logger.info(f"[E단계 생성 완료] {len(all_quiz_e)}문항")
 
         # --- (3) 문제 랜덤화 및 contentId 부여 ---
         random.shuffle(all_quiz_e)
@@ -180,7 +177,13 @@ def generate_short_quiz(selected_session=None):
             q["contentId"] = str(idx)
 
         e_quiz = all_quiz_e
-        logger.info(f"[E단계 최종 선택] {len(e_quiz)}문항")
+
+        # --- (4) 문제 내부에 sourceUrl 삽입  ---
+        for q in i_quiz:
+            q["sourceUrl"] = sourceUrl
+
+        for q in e_quiz:
+            q["sourceUrl"] = sourceUrl
 
     except Exception as e:
         logger.error(f"[ERROR] {topic} 코스 {course_id} 세션 {session_id} 퀴즈 생성 중 오류: {e}")

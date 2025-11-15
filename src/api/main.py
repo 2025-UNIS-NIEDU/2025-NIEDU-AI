@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from src.api.endpoint.course_api import router as course_router
-from pipeline.pipeline import run_learning_pipeline
+from src.pipeline.pipeline import run_learning_pipeline
 from datetime import datetime
 import asyncio
 import pytz
