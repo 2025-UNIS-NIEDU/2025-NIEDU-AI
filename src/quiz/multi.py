@@ -148,7 +148,8 @@ def generate_multi_choice_quiz(selected_session=None):
                 "question": i.get("question"),
                 "options": i.get("options"),
                 "correctAnswer": i.get("correctAnswer"),
-                "answerExplanation": i.get("answerExplanation")
+                "answerExplanation": i.get("answerExplanation"),
+                "sourceUrl": sourceUrl
             } for i in items]
             formatted.append({
                 "contentType": "MULTIPLE_CHOICE",
