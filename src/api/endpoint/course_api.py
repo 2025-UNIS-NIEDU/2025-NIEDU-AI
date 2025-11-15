@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from pipeline.pipeline import run_learning_pipeline
+from src.pipeline.pipeline import run_learning_pipeline
 from datetime import datetime
 from pathlib import Path
 import json
