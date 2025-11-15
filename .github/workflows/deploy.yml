@@ -64,5 +64,6 @@ jobs:
             docker run -d \
               --name nie-ai \
               --env-file .env \
+              -e "PYTHONPATH=/app/src" \
               -p 8000:8000 \
               ${{ secrets.ECR_REPOSITORY }}:latest
