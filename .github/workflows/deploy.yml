@@ -40,7 +40,11 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "Logging in to ECR from EC2"
-            aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
+            
+            ECR_REPO_URL="${{ secrets.ECR_REPOSITORY }}"
+            ECR_SERVER_ADDRESS=$(echo $ECR_REPO_URL | cut -d'/' -f1)
+
+            aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin $ECR_SERVER_ADDRESS
             
             echo "Generating .env file"
             cat <<EOF > .env

@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="Merge branch 'main' of https://github.com/2025-UNIS-NIEDU/2025-NIEDU-AI&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change afterPath="$PROJECT_DIR$/src/quiz/image_interpretation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz/prompt/short_e.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/quiz/test.py" afterDir="false" />
+    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="[FIX] main.py 절대경로로 import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/completion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/completion_feedback.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/completion_feedback.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/multi.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/multi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/fact_n.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/prompt/fact_n.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/harder_i.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/prompt/harder_i.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/short_e_1.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/short_e_2.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/prompt/short_i.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/prompt/short_i.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/short.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/short.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quiz/summary_reading.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/quiz/summary_reading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wrapper/course_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/wrapper/course_wrapper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,31 +43,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.FastAPI.executor": "Debug",
-    "Python.Run FastAPI Server.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.FastAPI.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.Run FastAPI Server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Run FastAPI Server" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
@@ -148,11 +133,25 @@
       <workItem from="1761257943533" duration="1070000" />
       <workItem from="1761284656487" duration="16000" />
       <workItem from="1762906611152" duration="2123000" />
+      <workItem from="1763171148671" duration="2048000" />
     </task>
+    <task id="LOCAL-00001" summary="[FIX] main.py 절대경로로 import">
+      <option name="closed" value="true" />
+      <created>1763171283312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763171283312</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[FIX] main.py 절대경로로 import" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] main.py 절대경로로 import" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
