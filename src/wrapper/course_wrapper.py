@@ -78,10 +78,14 @@ def build_course_packages():
                 else:
                     contents = []
 
+                source_url = ""
+                if isinstance(quiz_entry, dict) and "sourceUrl" in quiz_entry:
+                    source_url = quiz_entry["sourceUrl"]
+
                 quiz_map[f"{cid}_{sid}"].append({
                     "contentType": contentType,
                     "level": level,
-                    "sourceUrl": quiz_entry.get("sourceUrl", ""),
+                    "sourceUrl": source_url,
                     "contents": contents
                 })
 
@@ -139,11 +143,18 @@ def build_course_packages():
                                 "contents": q["contents"]
                             })
                         else:
-                            level_map[level].append({
+                            entry = {
                                 "stepOrder": order,
                                 "contentType": ctype,
-                                "contents": q["contents"]
-                            })
+                            }
+
+                            EXCLUDE_SOURCE_URL = {"SESSION_REFLECTION", "SENTENCE_COMPLETION"}
+                            if ctype not in EXCLUDE_SOURCE_URL and q.get("sourceUrl"):
+                                entry["sourceUrl"] = q["sourceUrl"]
+
+                            entry["contents"] = q["contents"]
+
+                            level_map[level].append(entry)
 
                     quizzes = []
                     for lvl in ["N", "I", "E"]:
