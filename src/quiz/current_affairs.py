@@ -28,7 +28,6 @@ def generate_current_affairs_quiz(selected_session=None):
     topic = selected_session["topic"]
     course_id = selected_session["courseId"]            
     session_id = selected_session.get("sessionId")
-    headline = selected_session.get("headline", "")
     summary = selected_session.get("summary", "")
 
     logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} CURRENT_AFFAIRS 퀴즈 생성 시작")
@@ -105,7 +104,8 @@ def generate_current_affairs_quiz(selected_session=None):
 
     [작성 규칙]
     - 중복 표현 금지, 논리적 연결 유지.  
-    - **추측 금지. 기사 또는 스니펫에 언급된 근거만 활용.**  
+    - context에 포함된 스니펫 내용을 최우선 근거로 사용한다.
+    - 추측 금지. 기사 요약문 및 제공된 context에 명시된 사실만 근거로 사용.
     - 출력은 반드시 **JSON 형식**으로만 작성할 것.
 
     [출력 예시]
