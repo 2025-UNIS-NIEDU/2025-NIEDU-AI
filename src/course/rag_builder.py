@@ -2,28 +2,20 @@ import os, json, logging
 from pathlib import Path
 import chromadb
 from chromadb.utils import embedding_functions
-from dotenv import load_dotenv
 from collections import OrderedDict
-from datetime import datetime
 
 log = logging.getLogger(__name__) 
 
 def build_rag_data():
     # 0️. 기본 설정
-    today = datetime.now().strftime("%Y-%m-%d")
-
     BASE_DIR = Path(__file__).resolve().parents[2]
-    ENV_PATH = BASE_DIR / ".env"
     BACKUP_DIR = BASE_DIR / "data" / "backup"
     DB_ROOT = BASE_DIR / "data" / "rag_db"
 
     BACKUP_DIR.mkdir(parents=True, exist_ok=True)
     DB_ROOT.mkdir(parents=True, exist_ok=True)
 
-    # 1️. 환경 변수 및 임베딩 설정
-    load_dotenv(dotenv_path=ENV_PATH, override=True)
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
+    # 1️. 임베딩 설정
     embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
         model_name="jhgan/ko-sroberta-multitask"
     )
@@ -56,7 +48,7 @@ def build_rag_data():
     json_files = [f for f in json_files_all if latest_date in f.name]
     log.info(f"📅 최신 날짜({latest_date}) 기준 {len(json_files)}개 JSON 처리")
 
-    # 기존 DB 초기화 (컬렉션 단위 삭제)
+    # 기존 DB 초기화 
     for topic_dir in DB_ROOT.iterdir():
         if topic_dir.is_dir():
             client = chromadb.PersistentClient(path=str(topic_dir))
