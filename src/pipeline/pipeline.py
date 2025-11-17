@@ -12,7 +12,6 @@ load_dotenv(ENV_PATH, override=True)
 
 # --- 코스 생성 관련 ---
 from course.news_api import fetch_news
-from course.rag_builder import build_rag_data
 from course.course_generator import generate_all_courses
 from course.course_refiner import refine_course_structure
 
@@ -55,7 +54,6 @@ def run_learning_pipeline():
     # 코스 생성 파트
     logger.info("뉴스 수집 및 RAG 데이터 빌드 시작")
     fetch_news()
-    build_rag_data()
     generate_all_courses()
     refine_course_structure()
     logger.info("코스 생성 및 정제 완료")
@@ -95,7 +93,6 @@ def run_learning_pipeline():
 
     logger.info("=== 전체 파이프라인 완료 ===")
     return package_data
-
 
 if __name__ == "__main__":
     run_learning_pipeline()
