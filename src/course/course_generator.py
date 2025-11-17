@@ -72,12 +72,25 @@ def generate_all_courses():
 
             return headline
         
-        # 한자 포함 헤드라인 제외 
         def contains_hanja(text: str) -> bool:
-            """한자 포함 여부 검사"""
+            """한자(중국·일본·한국), 확장 한자 포함 여부 검사"""
             if not isinstance(text, str):
                 return False
-            return bool(re.search(r"[\u4E00-\u9FFF]", text))
+            
+            # 한자 전체 유니코드 블록
+            hanja_pattern = (
+                r"[\u4E00-\u9FFF"   # CJK Unified Ideographs
+                r"\u3400-\u4DBF"    # CJK Unified Ideographs Extension A
+                r"\u20000-\u2A6DF"  # Extension B
+                r"\u2A700-\u2B73F"  # Extension C
+                r"\u2B740-\u2B81F"  # Extension D
+                r"\u2B820-\u2CEAF"  # Extension E
+                r"\uF900-\uFAFF"    # CJK Compatibility Ideographs
+                r"\u2F800-\u2FA1F]" # CJK Compatibility Ideographs Supplement
+            )
+
+            return bool(re.search(hanja_pattern, text))
+
 
         logger.info(f"[{topic}] 코스 생성 시작")
 
