@@ -67,6 +67,7 @@ jobs:
               --name nie-ai \
               --env-file .env \
               -e "PYTHONPATH=/app/src" \
+              -e "PROXY_HEADERS=true" \
+              -e "FORWARDED_ALLOW_IPS=*" \
               -p 8000:8000 \
-              ${{ secrets.ECR_REPOSITORY }}:latest \
-              uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips="*"
+              ${{ secrets.ECR_REPOSITORY }}:latest
