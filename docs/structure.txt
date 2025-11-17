@@ -15,19 +15,16 @@ src/
 │   ├── ...           # 개별 퀴즈 json
 │   └── package/      # FastAPI 연동용 구조 — 코스·세션·퀴즈 통합 결과 저장
 │                     # (예: politics_2025-11-04_package.json)
-│
-├── rag_db/           # 토픽별 Chroma RAG 벡터 DB (임베딩 데이터)
-│                     
+││                     
 ├── config/
 │   └── settings.py                   # 환경 변수 로드 및 설정값 관리
 │
 ├── course/                           # 뉴스 기반 코스 생성 모듈
 │   ├── prompt/
 │   │   └── course.yaml               # LLM 프롬프트 템플릿 (코스명/설명 생성용)
-│   ├── course_generator.py           # RAG 결과(임베딩)를 활용해 LLM으로 코스 자동 생성
+│   ├── course_generator.py           # 임베딩 후 LLM으로 코스 자동 생성
 │   ├── course_refiner.py             # 생성된 코스 구조 정제 및 검수
 │   ├── news_api.py                   # DeepSearch API 등으로 뉴스 데이터 수집
-│   ├── rag_builder.py                # 뉴스 임베딩 및 Chroma RAG DB 구축
 │   └── __init__.py
 │
 ├── pipeline/

@@ -24,7 +24,6 @@ def refine_course_structure():
     load_dotenv(ENV_PATH, override=True)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-
     # === 학습용 코스 선별 프롬프트 ===
     PROMPT_SIMPLE_FILTER = """
     너는 뉴스 학습 코스의 편집자이다.

@@ -11,14 +11,13 @@ import yaml
 import numpy as np
 from dotenv import load_dotenv
 from openai import OpenAI
+from sentence_transformers import SentenceTransformer
 from k_means_constrained import KMeansConstrained
-import chromadb
 
 logger = logging.getLogger(__name__)
 
 def generate_all_courses():
     """뉴스 RAG 기반 전체 토픽(course) 자동 생성"""
-
     # === 날짜 ===
     today = datetime.now().strftime("%Y-%m-%d")
 
@@ -78,53 +77,42 @@ def generate_all_courses():
                 return False
             
             # 한자 전체 유니코드 블록
-            hanja_pattern = (
-                r"[\u4E00-\u9FFF"   # CJK Unified Ideographs
-                r"\u3400-\u4DBF"    # CJK Unified Ideographs Extension A
-                r"\u20000-\u2A6DF"  # Extension B
-                r"\u2A700-\u2B73F"  # Extension C
-                r"\u2B740-\u2B81F"  # Extension D
-                r"\u2B820-\u2CEAF"  # Extension E
-                r"\uF900-\uFAFF"    # CJK Compatibility Ideographs
-                r"\u2F800-\u2FA1F]" # CJK Compatibility Ideographs Supplement
-            )
-
+            hanja_pattern = r"[\u4E00-\u9FFF\uF900-\uFAFF]"
             return bool(re.search(hanja_pattern, text))
-
 
         logger.info(f"[{topic}] 코스 생성 시작")
 
-        # --- DB 경로 ---
-        DB_DIR = BASE_DIR / "data" / "rag_db" / topic
-        chroma_client = chromadb.PersistentClient(path=str(DB_DIR))
+        # --- JSON 로드 (DB 대신) ---
+        BACKUP_DIR = BASE_DIR / "data" / "backup"
+        logger.info(f"[DEBUG] Backup files: {list(BACKUP_DIR.glob('*'))}")   
 
-        # --- 컬렉션 이름 감지 ---
-        collections = chroma_client.list_collections()
-        if not collections:
+        json_files = list(BACKUP_DIR.glob(f"*{topic}_{today}.json"))
+        if not json_files:
+            logger.warning(f"[{topic}] JSON 파일 없음")
             return
 
-        try:
-            first_col = collections[0]
-            if hasattr(first_col, "name"):
-                collection_name = first_col.name
-            elif isinstance(first_col, dict):
-                collection_name = first_col.get("name", f"{topic}_news")
-            elif isinstance(first_col, str):
-                collection_name = first_col
-            else:
-                collection_name = f"{topic}_news"
-        except Exception:
-            collection_name = f"{topic}_news"
+        with open(json_files[0], "r", encoding="utf-8") as f:
+            raw = json.load(f)
 
-        # --- 컬렉션 로드 ---
-        collection = chroma_client.get_collection(name=collection_name)
+        articles = raw.get("articles", raw.get("data", []))
 
-        try:
-            all_data = collection.get(include=["embeddings", "metadatas"], limit=5000)
-            metadatas = [m for m in all_data.get("metadatas", []) if isinstance(m, dict)]
-            embeddings = np.array(all_data.get("embeddings", []))
-        except Exception:
+        # --- metadatas 및 summary 텍스트 추출 ---
+        metadatas = []
+        texts_for_embedding = []
+
+        for a in articles:
+            summary = a.get("summary", "")
+            if isinstance(summary, str) and len(summary) > 0:
+                metadatas.append(a)
+                texts_for_embedding.append(summary)
+
+        if not texts_for_embedding:
+            logger.warning(f"[{topic}] 요약 텍스트 없음")
             return
+
+        # --- 임베딩 생성 ---
+        st_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+        embeddings = st_model.encode(texts_for_embedding, convert_to_numpy=True)
 
         # --- 언론사 리스트 ---
         MAJOR_PUBLISHERS = [
