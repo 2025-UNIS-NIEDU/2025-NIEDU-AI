@@ -270,7 +270,14 @@ def generate_term_quiz(selected_session=None):
     results = []
     for i, term in enumerate(terms, start=1):
         term, snippet = fetch_definition(term)
-        completed = complete_snippet(term, snippet, summary) if snippet else None
+        
+        if snippet:
+            # snippet 있는 경우 → snippet 다듬기 ONLY
+            completed = complete_snippet(term, snippet, summary)
+        else:
+            # snippet 없는 경우 → summary 기반 정의 생성 (fallback)
+            completed = complete_snippet(term, None, summary)   
+
         example, analogy = build_examples(term, summary)
 
         results.append({

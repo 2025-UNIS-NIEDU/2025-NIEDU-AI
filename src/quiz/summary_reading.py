@@ -6,7 +6,6 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from openai import OpenAI
-from keybert import KeyBERT
 from quiz.select_session import select_session
 
 logger = logging.getLogger(__name__)
@@ -140,7 +139,7 @@ def generate_summary_reading_quiz(selected_session=None):
     (b) 문서명
     (c) 협상·절차명
     (d) 사건명
-    - 반드시 요약문에 등장한 명사 또는 2~3어절 복합명사
+    - 반드시 요약문에 등장한 명사 
     - 동사형/조사 포함 금지 (예: '~하기로', '~했다')
     - Actor의 주장·비판에서 나온 별칭 금지 (예: '국익 시트')
 
@@ -187,73 +186,26 @@ def generate_summary_reading_quiz(selected_session=None):
     else:
         raise ValueError(f"예상치 못한 JSON 구조: {answers_json}")
 
-    # === 2. KeyBERT로 관련 단어 필터링 ===
-    anchor_words = answers
-    kw_model = KeyBERT(model="jhgan/ko-sroberta-multitask")
-    bert_keywords = kw_model.extract_keywords(refined_summary, keyphrase_ngram_range=(1, 2), top_n=30)
-
-    def is_valid_distractor(word, anchors):
-        """정답 단어와의 포함/구성 요소 관계만으로 오답 여부 판단"""
-
-        w = word.strip()
-        w_clean = re.sub(r"[^가-힣A-Za-z0-9]", "", w)
-
-
-        for a in anchors:
-            a = a.strip()
-            a_clean = re.sub(r"[^가-힣A-Za-z0-9]", "", a)
-
-            # ① 동일 단어 필터
-            if w_clean == a_clean:
-                return False
-
-            # ② 포함 관계 필터 (국익 시트 vs 국익, 조국혁신당 vs 조국)
-            if w_clean in a_clean or a_clean in w_clean:
-                return False
-
-            # ③ 정답의 명사 조각(token) 기반 필터
-            tokens = re.split(r"[ \-\_]", a)
-            tokens = [t.strip() for t in tokens if len(t.strip()) >= 2]
-
-            for t in tokens:
-                t_clean = re.sub(r"[^가-힣A-Za-z0-9]", "", t)
-
-                if len(t_clean) < 2:
-                    continue
-
-                if t_clean in w_clean or w_clean in t_clean:
-                    return False
-
-        return True
-
-    # === 필터링된 오답 후보 ===
-    filtered_keywords = [
-        item[0] 
-        for item in bert_keywords 
-        if is_valid_distractor(item[0],anchor_words)
-    ]
-    related_candidates=filtered_keywords
-
     # === 3. LLM 혼동 가능성 평가 ===
     prompt_confuse = f"""
     다음 요약문에서 정답 단어 2개(Actor / Object)를 기준으로,
-    KeyBERT 후보 단어들이 '오답으로 적합한지' 판단하고 score를 매겨라.
+    요약문을 읽고 해당 내용 안의 **명사**들이 '오답으로 적합한지' 판단하고 score를 매겨라.
 
     [정답 역할]
     - 첫 번째 단어: 사건의 주체(Actor)
     - 두 번째 단어: 사건의 핵심 개념(Object)
 
-    [오답 필터 규칙 — 아래 중 하나라도 걸리면 제외 (score=0)]
+    [오답 필터 규칙 — 아래 중 하나라도 걸리면 오답에서 제외]
     1) 형태 조건: 조사가 포함됨, 동사/형용사, 1~2글자, 명사가 아님
     2) 관계 조건: 정답과 동일/유사/포함/파생/축약
     3) 맥락 조건: 기사에서 중심 역할(Actor/Object)로 쓰인 단어
 
     [오답 선정 기준]
-    - Actor형: 기사에 등장하지만 사건의 주체가 아닌 인물/조직/기관/국가/직책
-    - Object형: 핵심 개념과 관련은 있으나 중심이 아닌 정책/제도/사건/보조 개념
+    - Actor형: 기사에 등장하지만 사건의 주체가 아닌 인물/조직/기관/국가/직책 등의 **명사**
+    - Object형: 핵심 개념과 관련은 있으나 중심이 아닌 정책/제도/사건/보조 개념 등의 **명사**
 
     [출력 조건]
-    - 최소 14개
+    - 최소 13개
     - actor/object 균형적으로 포함
     - 왜 학생이 혼동할 수 있는지 간단히 reason 명시
 
@@ -271,12 +223,9 @@ def generate_summary_reading_quiz(selected_session=None):
 
     정답:
     {answers}
-
-    KeyBERT 후보:
-    {related_candidates}
     """
     resp_confuse = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt_confuse}],
         temperature=0
     )
@@ -289,26 +238,6 @@ def generate_summary_reading_quiz(selected_session=None):
 
     llm_ranked = {item["word"]: item["score"] for item in llm_ranked_data["ranked"]}
     filtered_combined=dict(llm_ranked)
-
-    # === 오답 후보 부족 시 KeyBERT 기반 보충 ===
-    if len(filtered_combined) < 9:
-        logger.warning(f"[{topic}] 오답 후보 부족 → KeyBERT 보충 시작 ({len(filtered_combined)}개)")
-        for item in bert_keywords:
-            k = item[0].strip()   
-            if k not in filtered_combined and k not in answers and len(k) > 1:
-                filtered_combined[k] = 0.15  
-            if len(filtered_combined) >= 9:
-                break
-
-    # === 남은 부족분 재보충 ===
-    if len(filtered_combined) < 9:
-        logger.warning(f"[{topic}] KeyBERT 보충 후에도 부족 ({len(filtered_combined)}개), 일부 중복 허용")
-        for item in bert_keywords:
-            k = item[0].strip()
-            if k not in filtered_combined:
-                filtered_combined[k] = 0.1
-            if len(filtered_combined) >= 9:
-                break
 
     # === 6. 난이도별 분류 ===
     distractors = sorted(filtered_combined.items(), key=lambda x: x[1], reverse=True)[:9]
