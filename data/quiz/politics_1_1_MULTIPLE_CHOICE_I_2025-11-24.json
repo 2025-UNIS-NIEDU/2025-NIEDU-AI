@@ -9,124 +9,124 @@
         "question": "강원특별법 3차 개정안이 국회에서 계류 중인 이유는 무엇인가?",
         "options": [
           {
-            "label": "D",
-            "text": "지역 주민의 반대"
+            "label": "A",
+            "text": "정치적 우선순위 부족"
           },
           {
             "label": "B",
-            "text": "법안 발의자의 부재"
+            "text": "국회 내 갈등 심화"
           },
           {
             "label": "C",
-            "text": "국회 논의 무산"
+            "text": "법안 내용의 불명확성"
           },
           {
-            "label": "A",
-            "text": "정부의 정책 우선순위"
+            "label": "D",
+            "text": "재정 지원 부족"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "강원특별법 3차 개정안은 국회 행정안전위원회 법안1소위에서 두 차례나 논의가 무산되며 심사되지 못하고 있다.",
+        "correctAnswer": "A",
+        "answerExplanation": "강원특별법 3차 개정안은 15개월 넘게 논의되지 않아 정치적 우선순위에서 밀려 있음을 시사한다.",
         "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
       },
       {
         "contentId": "2",
-        "question": "김진태 강원특별자치도지사가 항의 서한을 작성한 주된 이유는 무엇인가?",
+        "question": "김진태 강원특별자치도지사가 항의 서한을 전달한 주된 목적은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정부의 예산 삭감"
-          },
-          {
-            "label": "D",
-            "text": "국회의원 선거"
-          },
-          {
-            "label": "C",
-            "text": "지역 주민의 불만"
+            "text": "정치적 이미지 개선"
           },
           {
             "label": "B",
-            "text": "법안 심사 지연"
+            "text": "지역 경제 활성화"
+          },
+          {
+            "label": "C",
+            "text": "법안 통과 촉구"
+          },
+          {
+            "label": "D",
+            "text": "여야 협력 강화"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "김진태 도지사는 강원특별법 3차 개정안이 15개월 넘게 심사되지 않은 것에 대한 불만으로 항의 서한을 작성했다.",
+        "correctAnswer": "C",
+        "answerExplanation": "김진태 도지사는 강원특별법 3차 개정안의 법안 심사를 촉구하기 위해 항의 서한을 전달했다.",
         "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
       },
       {
         "contentId": "3",
-        "question": "전북도와 강원도가 공동으로 항의 서한을 작성한 이유는 무엇인가?",
+        "question": "김진태 도지사의 발언에서 드러난 새 정부 정책에 대한 비판적 시각은 무엇인가?",
         "options": [
           {
-            "label": "D",
-            "text": "문화 교류 확대"
+            "label": "A",
+            "text": "정책 실행력 부족"
           },
           {
             "label": "B",
-            "text": "법안 심사 촉구"
-          },
-          {
-            "label": "A",
-            "text": "정치적 연대 강화"
+            "text": "외교 정책 실패"
           },
           {
             "label": "C",
-            "text": "예산 지원 요청"
-          }
-        ],
-        "correctAnswer": "B",
-        "answerExplanation": "전북도와 강원도는 강원특별법 3차 개정안의 법안 심사를 촉구하기 위해 공동으로 항의 서한을 작성했다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
-      },
-      {
-        "contentId": "4",
-        "question": "김진태 도지사의 발언에서 드러나는 새 정부 정책에 대한 비판적 시각은 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "경제 성장 둔화"
-          },
-          {
-            "label": "B",
-            "text": "정책 실행력 부족"
+            "text": "경제 정책 부재"
           },
           {
             "label": "D",
             "text": "사회 복지 축소"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "김진태 도지사는 새 정부의 정책 실행력 부족을 강하게 비판하며 법안 논의 지연을 문제 삼았다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+      },
+      {
+        "contentId": "4",
+        "question": "전북도와 강원도가 공동으로 항의 서한을 작성한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경제 협력 확대"
+          },
+          {
+            "label": "B",
+            "text": "지역 연대 강화"
           },
           {
             "label": "C",
-            "text": "외교 관계 악화"
+            "text": "법안 통과 압박"
+          },
+          {
+            "label": "D",
+            "text": "정치적 중립 유지"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "김진태 도지사는 새 정부의 5극 3특 정책이 실행되지 않는 상황을 비판하며 정책 실행력 부족을 지적했다.",
+        "correctAnswer": "C",
+        "answerExplanation": "전북도와 강원도는 법안 통과를 압박하기 위해 공동으로 항의 서한을 작성했다.",
         "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
       },
       {
         "contentId": "5",
-        "question": "국회 심사 장기 지연에 대응한 강원도의 초당적 압박 수단은 구체적으로 무엇인가?",
+        "question": "국회 심사 장기 미뤄짐에 대해 서한이 겨냥한 구체적 압박 대상은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "여야 원내대표 면담"
+            "text": "여야 원내대표"
           },
           {
             "label": "B",
-            "text": "전북도와 합동 서한"
-          },
-          {
-            "label": "D",
-            "text": "도민 청원 운동"
+            "text": "전북도 의회"
           },
           {
             "label": "C",
-            "text": "행안위 전체회의 요구"
+            "text": "대통령실 비서진"
+          },
+          {
+            "label": "D",
+            "text": "행안위 법안소위"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "전북도와 공동 항의서한을 원내대표에 보내 국회 심사 촉구의 초당적 압박 수단을 택한 것이다.",
+        "correctAnswer": "A",
+        "answerExplanation": "서한은 여야 원내대표에게 전달되었고, 심사 착수를 촉구하려 정치적 결정을 압박한 것이다.",
         "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
       }
     ]
