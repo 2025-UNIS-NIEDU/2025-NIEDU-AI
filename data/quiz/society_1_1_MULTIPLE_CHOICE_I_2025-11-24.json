@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "http://www.inews24.com/view/1910467",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "광산구의회의 ‘참당당 청소년 정치아카데미’가 높은 평가를 받은 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정책혁신성"
+          },
+          {
+            "label": "D",
+            "text": "문화 행사 개최"
+          },
+          {
+            "label": "C",
+            "text": "국제적 협력 강화"
+          },
+          {
+            "label": "B",
+            "text": "예산 절감 효과"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "‘참당당 청소년 정치아카데미’는 정책혁신성과 참여 기반 설계 등에서 높은 평가를 받았다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "2",
+        "question": "광산구의회가 ‘참당당 청소년 정치아카데미’를 정례화하려는 의도는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정치 리터러시 교육 확대"
+          },
+          {
+            "label": "C",
+            "text": "청소년 인구 감소"
+          },
+          {
+            "label": "D",
+            "text": "국제적 인지도 상승"
+          },
+          {
+            "label": "B",
+            "text": "지역 예산 절감"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정례화 계획은 정치 리터러시와 시민성 교육을 지속적으로 확대하려는 의도를 반영한다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "3",
+        "question": "‘의회주도형 청소년 정치 리터러시 교육모델’의 수상이 갖는 사회적 함의는 무엇인가?",
+        "options": [
+          {
+            "label": "C",
+            "text": "경제적 이익 증대"
+          },
+          {
+            "label": "D",
+            "text": "문화적 다양성 존중"
+          },
+          {
+            "label": "B",
+            "text": "정치적 중립성 강화"
+          },
+          {
+            "label": "A",
+            "text": "청소년 교육의 중요성 인정"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "수상은 청소년 정치 리터러시 교육의 중요성과 의회 주도의 교육 모델의 가치를 인정받았음을 의미한다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "4",
+        "question": "광산구의회의 정책이 타 지자체에 확산될 가능성이 높은 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "D",
+            "text": "기술적 발전"
+          },
+          {
+            "label": "C",
+            "text": "문화적 차이"
+          },
+          {
+            "label": "A",
+            "text": "정책혁신성"
+          },
+          {
+            "label": "B",
+            "text": "경제적 지원"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정책혁신성과 지역문제 해결능력 제고 효과가 타 지자체에 확산 가능성을 높인다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "5",
+        "question": "경진대회 수상이 지역 청소년 학습체계에 가져올 구조적 변화는 무엇이라 할 수 있는가?",
+        "options": [
+          {
+            "label": "C",
+            "text": "타지역 확산 우선"
+          },
+          {
+            "label": "D",
+            "text": "학교 중심 전환"
+          },
+          {
+            "label": "A",
+            "text": "지속 운영 정착"
+          },
+          {
+            "label": "B",
+            "text": "단기 행사 중심"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정례화와 학교·기관 연계 계획은 단발성 사업을 넘어 지속적 시민학습 체계 구축을 뜻한다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      }
+    ]
+  }
+]

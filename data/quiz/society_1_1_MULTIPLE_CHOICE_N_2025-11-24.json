@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "http://www.inews24.com/view/1910467",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "경진대회에서 본심사에 진출한 의회의 수는 몇 개인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "12개 의회"
+          },
+          {
+            "label": "B",
+            "text": "10개 의회"
+          },
+          {
+            "label": "C",
+            "text": "15개 의회"
+          },
+          {
+            "label": "D",
+            "text": "8개 의회"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "경진대회에는 총 12개 의회가 본심사에 진출했다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "2",
+        "question": "광산구의회의 ‘참당당 청소년 정치아카데미’가 높은 평가를 받은 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정치적 중립성"
+          },
+          {
+            "label": "B",
+            "text": "정책 혁신성"
+          },
+          {
+            "label": "C",
+            "text": "재정 지원"
+          },
+          {
+            "label": "D",
+            "text": "국제 협력"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정책혁신성과 참여·체험 기반 설계 등에서 높은 평가를 받았다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "3",
+        "question": "이번 장려상이 의미하는 바는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정치적 중립성 강화"
+          },
+          {
+            "label": "B",
+            "text": "의회주도형 교육 모델 인정"
+          },
+          {
+            "label": "C",
+            "text": "청소년 참여 확대"
+          },
+          {
+            "label": "D",
+            "text": "정책 혁신 촉진"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "장려상은 의회주도형 청소년 정치 리터러시 교육모델이 인정받은 것이다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "4",
+        "question": "광산구의회가 앞으로 계획하는 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정치 리터러시 교육 플랫폼 확대"
+          },
+          {
+            "label": "B",
+            "text": "정치적 중립성 강화"
+          },
+          {
+            "label": "C",
+            "text": "청소년 참여 축소"
+          },
+          {
+            "label": "D",
+            "text": "국제 협력 강화"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "광산구의회는 정치 리터러시 교육 플랫폼으로 확대할 계획이다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      },
+      {
+        "contentId": "5",
+        "question": "‘참당당 청소년 정치아카데미’의 설계 및 운영 주체는 누구인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "광산구의회"
+          },
+          {
+            "label": "B",
+            "text": "전국 교육청"
+          },
+          {
+            "label": "C",
+            "text": "청소년 단체"
+          },
+          {
+            "label": "D",
+            "text": "지자체 연합"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "‘참당당 청소년 정치아카데미’는 광산구의회가 직접 설계하고 운영했다.",
+        "sourceUrl": "http://www.inews24.com/view/1910467"
+      }
+    ]
+  }
+]

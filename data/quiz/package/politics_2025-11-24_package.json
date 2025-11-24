@@ -1,0 +1,1035 @@
+{
+  "courses": [
+    {
+      "courseId": 1,
+      "topic": "정치",
+      "subTopic": "국회",
+      "subTags": [
+        "#발전",
+        "#정치",
+        "#협력"
+      ],
+      "courseName": "지방자치법안 : 정치적 협력의 중요성",
+      "courseDescription": "이 코스는 지방자치법안의 정치적 협력과 그 중요성을 탐구합니다. 법안 통과의 지연은 지역 발전에 영향을 미치며, 여야 간의 협력이 필수적입니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "김진태 강원지사, 강원특별법 3차 개정안 논의 불발에 국회 비판(종합)",
+          "publishedAt": "2025-11-24T18:42:00",
+          "publisher": "연합뉴스",
+          "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+          "summary": "\"15개월 지나도 논의 한 번 않다니…이게 새 정부 5극 3특인가\" 전북도와 공동 작성 항의 서한, 여야 원내대표에 각각 전달 (춘천=연합뉴스) 이재현 기자 = 강원특별법 3차 개정안 심사가 15개월 넘게 국회에서 심사조차 받지 못하고 계류 중인 것과 관련해 김진태 강원특별자치도지사는 24일 \"새 정부의 5극 3특이라는 게 이런 겁니까\"라며 강하게 비판했다.\n\n김 지사는 이날 도청 기자실에서 가진 기자간담회에서 이같이 밝히고, 국회 행정안전위원회 법안1소위에서 두 차례나 논의가 무산된 3차 개정안의 법안 심사를 촉구하는 항의 서한을 전북도와 공동으로 여야 원내대표에게 전달했다.\n\n3차 개정안은 지난해 9월 한기호·송기헌 국회의원이 공동발의 후 1년 넘게 심사만 기다리고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644516583382585744/000-91acc00def35adff53c98062d65c52ca1737d777.jpg",
+          "quizzes": [
+            {
+              "level": "N",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 10월 24일, 김진태 강원특별자치도지사는 강원특별법 3차 개정안이 국회에서 15개월 동안 심사조차 받지 못한 것에 대해 강도 높게 비판했다. 도청 기자실에서 열린 기자간담회에서 그는 새 정부의 5극 3특 정책을 언급하며 불만을 표명했다. 이어 김 지사는 전북도와 공동으로 작성한 항의 서한을 여야 원내대표에게 전달하며 법안 심사를 촉구했다. 이 법안은 2022년 9월 한기호·송기헌 국회의원이 공동발의한 이후 1년 넘게 심사를 기다리고 있다.",
+                      "keywords": [
+                        {
+                          "word": "김진태",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "강원특별법 3차 개정안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "기자",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "심사",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "원내대표",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "TERM_LEARNING",
+                  "contents": [
+                    {
+                      "terms": [
+                        {
+                          "termId": 1,
+                          "name": "강원특별법",
+                          "definition": "강원특별법은 강원도의 특별한 행정 및 재정 지원을 규정하는 법률이다.",
+                          "exampleSentence": "강원특별법 3차 개정안이 15개월 이상 국회에서 심사조차 받지 못하고 계류 중인 가운데, 김진태 강원특별자치도지사는 이를 강하게 비판했다.",
+                          "additionalExplanation": "강원특별법은 마치 특별한 선물 상자를 열어주는 것과 같아요. 강원도에 필요한 지원과 혜택을 주어, 지역이 더 발전하고 사람들의 삶이 나아지도록 도와주는 법이에요."
+                        },
+                        {
+                          "termId": 2,
+                          "name": "3차 개정안",
+                          "definition": "3차 개정안은 강원특별법의 수정안을 의미하며, 국회에서 15개월 이상 심사되지 않고 계류 중인 법안이다.",
+                          "exampleSentence": "강원특별자치도지사 김진태는 24일 기자간담회에서 15개월째 국회에 계류 중인 3차 개정안의 심사를 촉구하며 새 정부의 정책을 강하게 비판했다.",
+                          "additionalExplanation": "3차 개정안은 마치 집안을 정리하는 것과 같아요. 필요 없는 물건을 버리고, 새로운 가구를 배치해 더 편안한 공간을 만드는 과정이라고 할 수 있죠."
+                        },
+                        {
+                          "termId": 3,
+                          "name": "국회 행정안전위원회",
+                          "definition": "국회 행정안전위원회는 행정안전 관련 법안 심사를 담당하는 국회의 상임위원회를 의미한다.",
+                          "exampleSentence": "김진태 강원특별자치도지사는 24일 기자간담회에서 국회 행정안전위원회에서 15개월째 계류 중인 강원특별법 3차 개정안의 심사를 촉구했다.",
+                          "additionalExplanation": "국회 행정안전위원회는 마치 학교의 안전 관리 위원회 같아요. 학생들이 안전하게 학교 생활을 할 수 있도록 규칙을 만들고 점검하는 역할을 하거든요."
+                        },
+                        {
+                          "termId": 4,
+                          "name": "법안 심사",
+                          "definition": "법안 심사는 국회에서 법안의 내용을 검토하고 논의하는 과정을 말한다.",
+                          "exampleSentence": "강원특별법 3차 개정안의 법안 심사가 15개월째 국회에서 지연되고 있는 가운데, 김진태 지사는 이를 강하게 비판했다.",
+                          "additionalExplanation": "법안 심사는 마치 요리를 할 때 재료를 고르고 조리법을 점검하는 것 같아요. 맛있고 건강한 요리를 위해 필요한 재료와 조리법을 잘 살펴보는 과정이죠."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "CURRENT_AFFAIRS",
+                  "contents": [
+                    {
+                      "issue": "강원특별법 3차 개정안 심사 지연, 정치적 갈등 심화",
+                      "cause": "강원특별법 3차 개정안이 15개월 넘게 국회에서 심사조차 받지 못하고 계류 중인 상황에서, 김진태 강원도지사가 정부의 5극 3특 정책을 비판하며 법안 심사를 촉구했다. 이는 정치적 무관심과 국회 내 갈등이 심화된 배경에서 발생했다.",
+                      "circumstance": "이 과정에서 김 지사는 전북도와 공동으로 여야 원내대표에게 항의 서한을 전달했으며, 여당과 야당 모두 법안 심사의 필요성을 인식하고 있으나, 실제 논의는 두 차례 무산되었다. 이로 인해 정치적 공방이 이어지고 있다.",
+                      "result": "결국 김진태 지사는 기자간담회에서 강한 비판을 이어갔고, 법안 심사 지연에 대한 여론이 악화되면서 정치권의 압박이 커졌다.",
+                      "effect": "이번 사건은 국회에서의 법안 심사 지연이 지역 발전에 미치는 부정적 영향을 일깨웠다. 이는 정치적 책임과 법안 처리의 중요성을 다시금 환기시키며, 향후 제도 개선의 필요성을 제기하고 있다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "OX_QUIZ",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "강원특별법 3차 개정안은 15개월 이상 국회에서 심사받지 못했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "강원특별법 3차 개정안은 15개월 넘게 계류 중이다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "김진태 강원특별자치도지사는 새 정부의 5극 3특을 긍정적으로 평가했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "김 지사는 새 정부의 5극 3특을 강하게 비판했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "강원특별법 3차 개정안은 1년 이상 심사 중이다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "3차 개정안은 1년 넘게 심사만 기다리고 있다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "김진태 도지사는 기자간담회에서 강원특별법 3차 개정안의 심사를 촉구했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "김 지사는 기자간담회에서 법안 심사를 촉구했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "강원특별법 3차 개정안은 여야 원내대표에게 전달된 항의 서한과 관련이 없다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "항의 서한은 여야 원내대표에게 전달되었다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "김진태 강원특별자치도지사가 비판한 정부의 정책은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "5극 3특 정책"
+                        },
+                        {
+                          "label": "B",
+                          "text": "지역 균형 발전"
+                        },
+                        {
+                          "label": "C",
+                          "text": "행정 개혁"
+                        },
+                        {
+                          "label": "D",
+                          "text": "경제 성장 전략"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "김 지사는 새 정부의 5극 3특 정책을 비판하며 불만을 표출했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "강원특별법 3차 개정안의 논의가 무산된 회의는 어떤 위원회에서 이루어졌는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "행정안전위원회"
+                        },
+                        {
+                          "label": "B",
+                          "text": "법제사법위원회"
+                        },
+                        {
+                          "label": "C",
+                          "text": "예산결산특별위원회"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국토교통위원회"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "3차 개정안의 논의는 국회 행정안전위원회에서 이루어졌다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "김진태 도지사가 기자간담회에서 언급한 주제는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "법안 심사 촉구"
+                        },
+                        {
+                          "label": "B",
+                          "text": "정치적 연대"
+                        },
+                        {
+                          "label": "C",
+                          "text": "경제 정책"
+                        },
+                        {
+                          "label": "D",
+                          "text": "사회 복지"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "김 지사는 법안 심사를 촉구하는 내용을 기자간담회에서 밝혔다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "강원특별법 3차 개정안은 언제 발의되었는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "작년 9월"
+                        },
+                        {
+                          "label": "B",
+                          "text": "올해 1월"
+                        },
+                        {
+                          "label": "C",
+                          "text": "작년 12월"
+                        },
+                        {
+                          "label": "D",
+                          "text": "올해 3월"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "3차 개정안은 지난해 9월에 발의되었다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "전북도와 공동으로 전달된 서한의 주된 내용은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "법안 심사 요청"
+                        },
+                        {
+                          "label": "B",
+                          "text": "정책 개선 요구"
+                        },
+                        {
+                          "label": "C",
+                          "text": "예산 증액 요청"
+                        },
+                        {
+                          "label": "D",
+                          "text": "행정 개혁 촉구"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "서한은 법안 심사를 요청하는 내용으로 전달되었다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "I",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644516583382585744/000-91acc00def35adff53c98062d65c52ca1737d777.jpg",
+                      "headline": "김진태 강원지사, 강원특별법 3차 개정안 논의 불발에 국회 비판(종합)",
+                      "publisher": "연합뉴스",
+                      "publishedAt": "2025-11-24T18:42:00",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 10월 24일, 김진태 강원특별자치도지사는 강원특별법 3차 개정안이 국회에서 15개월 동안 심사조차 받지 못한 것에 대해 강도 높게 비판했다. 도청 기자실에서 열린 기자간담회에서 그는 새 정부의 5극 3특 정책을 언급하며 불만을 표명했다. 이어 김 지사는 전북도와 공동으로 작성한 항의 서한을 여야 원내대표에게 전달하며 법안 심사를 촉구했다. 이 법안은 2022년 9월 한기호·송기헌 국회의원이 공동발의한 이후 1년 넘게 심사를 기다리고 있다.",
+                      "keywords": [
+                        {
+                          "word": "김진태",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "강원특별법 3차 개정안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "전북도",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "항의 서한",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "법안",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "강원특별법 3차 개정안이 국회에서 계류 중인 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "D",
+                          "text": "지역 주민의 반대"
+                        },
+                        {
+                          "label": "B",
+                          "text": "법안 발의자의 부재"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국회 논의 무산"
+                        },
+                        {
+                          "label": "A",
+                          "text": "정부의 정책 우선순위"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "강원특별법 3차 개정안은 국회 행정안전위원회 법안1소위에서 두 차례나 논의가 무산되며 심사되지 못하고 있다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "김진태 강원특별자치도지사가 항의 서한을 작성한 주된 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "정부의 예산 삭감"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국회의원 선거"
+                        },
+                        {
+                          "label": "C",
+                          "text": "지역 주민의 불만"
+                        },
+                        {
+                          "label": "B",
+                          "text": "법안 심사 지연"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "김진태 도지사는 강원특별법 3차 개정안이 15개월 넘게 심사되지 않은 것에 대한 불만으로 항의 서한을 작성했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "전북도와 강원도가 공동으로 항의 서한을 작성한 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "D",
+                          "text": "문화 교류 확대"
+                        },
+                        {
+                          "label": "B",
+                          "text": "법안 심사 촉구"
+                        },
+                        {
+                          "label": "A",
+                          "text": "정치적 연대 강화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "예산 지원 요청"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "전북도와 강원도는 강원특별법 3차 개정안의 법안 심사를 촉구하기 위해 공동으로 항의 서한을 작성했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "김진태 도지사의 발언에서 드러나는 새 정부 정책에 대한 비판적 시각은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 성장 둔화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "정책 실행력 부족"
+                        },
+                        {
+                          "label": "D",
+                          "text": "사회 복지 축소"
+                        },
+                        {
+                          "label": "C",
+                          "text": "외교 관계 악화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "김진태 도지사는 새 정부의 5극 3특 정책이 실행되지 않는 상황을 비판하며 정책 실행력 부족을 지적했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "국회 심사 장기 지연에 대응한 강원도의 초당적 압박 수단은 구체적으로 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "여야 원내대표 면담"
+                        },
+                        {
+                          "label": "B",
+                          "text": "전북도와 합동 서한"
+                        },
+                        {
+                          "label": "D",
+                          "text": "도민 청원 운동"
+                        },
+                        {
+                          "label": "C",
+                          "text": "행안위 전체회의 요구"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "전북도와 공동 항의서한을 원내대표에 보내 국회 심사 촉구의 초당적 압박 수단을 택한 것이다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "김진태 지사가 비판한 법안의 이름은 무엇인가?",
+                      "correctAnswer": "강원특별법",
+                      "answerExplanation": "김진태 지사는 강원특별법 3차 개정안이 심사받지 못한 것에 대해 비판했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "김진태 지사가 언급한 정부의 정책 이름은 무엇인가?",
+                      "correctAnswer": "5극 3특 정책",
+                      "answerExplanation": "김진태 지사는 새 정부의 5극 3특 정책에 대해 불만을 표명했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "김진태 지사가 여야 원내대표에게 전달한 문서는 무엇인가?",
+                      "correctAnswer": "항의 서한",
+                      "answerExplanation": "김진태 지사는 전북도와 공동으로 작성한 항의 서한을 전달하며 법안 심사를 촉구했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "강원특별법 개정안이 심사를 기다린 기간은 얼마인가?",
+                      "correctAnswer": "15개월",
+                      "answerExplanation": "강원특별법 3차 개정안은 국회에서 15개월 동안 심사조차 받지 못했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "김진태 지사가 법안 심사를 촉구한 장소는 어디인가?",
+                      "correctAnswer": "도청 기자실",
+                      "answerExplanation": "김진태 지사는 도청 기자실에서 기자간담회를 열고 법안 심사를 촉구했다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "강원특별법 심사 지연의 본질은 무엇인가?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644516583382585744/000-91acc00def35adff53c98062d65c52ca1737d777.jpg",
+                      "headline": "김진태 강원지사, 강원특별법 3차 개정안 논의 불발에 국회 비판(종합)",
+                      "publisher": "연합뉴스",
+                      "publishedAt": "2025-11-24T18:42:00",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 10월 24일, 김진태 강원특별자치도지사는 강원특별법 3차 개정안이 국회에서 15개월 동안 심사조차 받지 못한 것에 대해 강도 높게 비판했다. 도청 기자실에서 열린 기자간담회에서 그는 새 정부의 5극 3특 정책을 언급하며 불만을 표명했다. 이어 김 지사는 전북도와 공동으로 작성한 항의 서한을 여야 원내대표에게 전달하며 법안 심사를 촉구했다. 이 법안은 2022년 9월 한기호·송기헌 국회의원이 공동발의한 이후 1년 넘게 심사를 기다리고 있다.",
+                      "keywords": [
+                        {
+                          "word": "김진태",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "강원특별법 3차 개정안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "정부",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "정책",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "국회",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+                  "contents": [
+                    {
+                      "contentId": "1",
+                      "question": "정치적 의사 표현과 법안 심사 촉구를 목적으로 여야 원내대표에게 전달된 공식 문서는 무엇입니까?",
+                      "correctAnswer": "항의 서한",
+                      "answerExplanation": "항의 서한은 정치적 압박을 통해 법안 심사를 촉진하려는 의도를 담고 있다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "국가 균형 발전을 목표로 하며, 최근 정책적 논란의 중심에 있는 정부의 전략은 무엇입니까?",
+                      "correctAnswer": "5극 3특 정책",
+                      "answerExplanation": "5극 3특 정책은 지역 간 불균형 해소와 경제 활성화를 지향한다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "정책적 관심을 환기하고 법안 심사를 촉구하기 위해 특정 장소에서 열린 기자회견의 장소는 어디입니까?",
+                      "correctAnswer": "도청 기자실",
+                      "answerExplanation": "도청 기자실은 지역 정치의 중심지로서 정책 논의를 활성화하는 공간이다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "4",
+                      "question": "정치적 무관심과 제도적 지연을 상징하는, 특정 법안이 심사를 기다린 기간은 얼마입니까?",
+                      "correctAnswer": "15개월",
+                      "answerExplanation": "15개월의 지연은 입법 과정의 비효율성과 정치적 무관심을 반영한다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    },
+                    {
+                      "contentId": "5",
+                      "question": "지역 자치와 균형 발전을 위한 법적 틀을 제공하며, 최근 비판의 대상이 된 법안은 무엇입니까?",
+                      "correctAnswer": "강원특별법",
+                      "answerExplanation": "강원특별법은 지역 특성을 반영한 자치권 강화를 지향한다.",
+                      "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SENTENCE_COMPLETION",
+                  "contents": [
+                    [
+                      {
+                        "contentId": "1",
+                        "question": "강원특별법 3차 개정안이 국회에서 ______",
+                        "referenceAnswer": "15개월 넘게 심사조차 받지 못하고 계류 중이다."
+                      },
+                      {
+                        "contentId": "2",
+                        "question": "김진태 강원특별자치도지사는 새 정부의 5극 3특을 ______",
+                        "referenceAnswer": "강하게 비판하며 항의 서한을 전달했다."
+                      },
+                      {
+                        "contentId": "3",
+                        "question": "3차 개정안은 지난해 9월 국회의원들이 공동발의한 후 ______",
+                        "referenceAnswer": "1년 넘게 심사만 기다리고 있다."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "정치적 무관심이 사회에 미치는 장기적 영향은?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sessionId": 2,
+          "headline": "강원·전북특별법 표류…김진태 지사, 여야 원내대표 찾아 '정기국회 처리' 요청",
+          "publishedAt": "2025-11-24T18:28:00",
+          "publisher": "강원도민일보",
+          "sourceUrl": "https://www.kado.net/news/articleView.html?idxno=2018485",
+          "summary": "조속 통과 요청 공동 서한문 전달 김진태 강원도지사는 24일 국회를 방문, 여야 원내대표를 만나 강원·전북특별법 일부개정안의 정기국회 내 조속한 통과를 요청하는 공동 서한문을 전달했다.\n\n김진태 도지사와 김관영 전북지사가 함께 서명한 이번 공동 서한문은 지난해 강원·전북특별법 개정안이 국회 행정안전위원회에 상정되었으나, 법안소위에서 단 한 차례의 논의도 이뤄지지 않은 상황에 대한 양 도의 깊은 우려를 전달하기 위한 것이다.\n\n양 지사는 서한문에서 \"강원과 전북은 도민행복과 국가발전을 위해 그 핵심적인 성장엔진으로서 특별법을 개정해 가고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644512494435308001/000-b279b2c379ab5c55f83117edf5daa8d50b1e5176.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "전북·강원도 \"특별법 개정안 심사 마무리해야\"…여야에 서한문",
+          "publishedAt": "2025-11-24T17:48:00",
+          "publisher": "연합뉴스",
+          "sourceUrl": "https://www.yna.co.kr/view/AKR20251124132300055?input=1195m",
+          "summary": "임채두 기자 = 김관영 전북특별자치도지사와 김진태 강원특별자치도지사가 24일 \"국회 행정안전위원회는 조속히 법안심사소위를 열어 두 지역의 특별법 개정안 법안 심사를 마무리해야 한다\"고 촉구했다.\n\n두 광역단체장은 이날 여야 원내대표에게 전자우편 등 방식으로 전달한 서한문을 통해 \"특별법 개정안이 지난해 국회 행정안전위원회에 상정됐으나 올해 11월까지 법안심사소위에서 아무런 논의가 이뤄지지 않았다\"고 비판하면서 이같이 강조했다.\n\n이어 \"특별법 개정안은 정부와 협의도 끝난 무쟁점 법안\"이라며 \"국회는 큰 관심과 의지로 이번 정기 국회 내에 반드시 (개정안을) 통과시켜주기를 바란다\"고 피력했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644502889927938773/000-546597545daad6867ff365375e91c790bf558425.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "광주 북구의원, 본예산 심의 회기 당일 출판기념회 개최 '구설'",
+          "publishedAt": "2025-11-24T19:17:00",
+          "publisher": "연합뉴스",
+          "sourceUrl": "https://www.yna.co.kr/view/AKR20251124141300054?input=1195m",
+          "summary": "정다움 기자 = 광주 북구의회 한 의원이 내년도 본예산을 심의하는 회기 당일에 출판 기념 북콘서트를 열기로 하면서 구설에 오르고 있다.\n\n그러나 북콘서트가 열리는 당일은 제306회 북구의회 제2차 정례회가 열리는 날로, 의회 안팎에서 곱지 않은 시선이 나오고 있다.\n\n북구의회 한 의원은 \"정례회 일정이 사전에 의원들에게 공지됐는데, 이를 알고도 개최를 계획한 것은 이유 불문 부적절하다\"며 \"진정한 의정 활동은 구의원의 책무를 다하는 것에서 나온다\"고 비판했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644525449776337135/000-1f28908d43b27542d4c3d6e015490ee36c559661.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "‘양평공무원 사망’ 직권조사 의결? 인권위 “내달 재논의”",
+          "publishedAt": "2025-11-24T19:15:00",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11476004",
+          "summary": "인권위는 이날 오후 제21차 전원위원회에서 “보안 문제로 (회의) 이전에 보고서를 배포하지 못했다”며 보고서를 의결하지 못했다고 밝혔다.\n\n민중기 특별검사팀의 수사 기간이 연장되면서 보고서 논의를 위한 시간적인 여유가 생긴 점도 영향을 미친 것으로 풀이된다.\n\n이날 위원들은 보안을 위해 낮 12시부터 회의실에서 보고서를 검토한 후 논의에 들어갔는데, 이 과정에서 소라미 비상임위원은 안건 검토를 다른 장소에서 진행하겠다고 주장하다 안창호 위원장과 마찰을 빚어 회의장을 떠나기도 했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644524098853933389/000-cb8e15ff97069d236996b718b33d757596c2303e.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 2,
+      "topic": "정치",
+      "subTopic": "국회",
+      "subTags": [
+        "#공공",
+        "#변화",
+        "#책임"
+      ],
+      "courseName": "사회적 책임 : 공공성 확충의 필요성",
+      "courseDescription": "이 코스는 사회적 책임과 공공성 확충의 중요성을 탐구합니다. 다양한 사회적 이슈들이 공공성의 부족으로 인해 발생하고 있으며, 이는 사회적 불균형과 불안정성을 초래합니다. 공공성의 확충은 사회의 안정과 발전을 위한 필수 요소로, 이를 위한 정책적 변화와 사회적 인식의 전환이 필요합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "배현주 김해시의원, 세비 모아 장학금 3000만원 기부",
+          "publishedAt": "2025-11-24T19:15:00",
+          "publisher": "뉴시스",
+          "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003415043",
+          "summary": "김상우 기자 = 김해시미래인재장학재단(이사장 노은식)은 24일 배현주 김해시의원이 장학금 3000만원을 기탁했다고 밝혔다.\n\n배 의원은 “학생들의 미래를 지원할 수 있는 기회가 주어져 감사드리며, 장학금은 2022년부터 지역민의 일꾼으로서 세비를 모아 기탁한 것이며 앞으로도 어려운 이웃에게 도움을 주고자 더욱 노력하겠다”고 전했다.\n\n홍태용 시장은 “지역 발전을 위해 뜻깊은 나눔을 실천해 주셔서 감사드리며, 의원님의 뜻이 전달될 수 있도록 재단과 함께 충실히 역할을 다하겠다”고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644524780810014850/000-823f5f26cccc02e3a75bf203e50fa7de3ce49af0.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "노인은 느는데 줄어드는 요양보호사…“공공성 확충·처우 개선 시급”",
+          "publishedAt": "2025-11-24T17:49:00",
+          "publisher": "서울신문",
+          "sourceUrl": "https://www.seoul.co.kr/news/politics/2025/11/24/20251124500302",
+          "summary": "남인순 “처우 개선은 미룰 수 없는 과제” ‘노인장기요양보험법’ 개정안 발의 예정 협회 “정부가 표준임금체계 수립 나서야” “공공 비율 높이기 위한 계획 수립 필요” 국회 소통관에서는 매일 쉴 새 없이 기자회견이 진행됩니다.\n\n그러나 돌봄의 최전선에서 일하는 핵심 인력인 요양보호사의 처우와 직업에 대한 인식 수준은 열악한 수준에 머물고 있습니다.\n\n그러면서 “이제는 국가가 요양보호사들의 처우를 개선하고 적절한 대우를 받을 수 있도록 해야 한다”고 목소리를 높였습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644502889932132353/000-9fe4781998913629f8bdac31c3db321342e42f65.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "강원도, 어촌 대전환 본격 추진…2030년까지 2555억 투입",
+          "publishedAt": "2025-11-24T18:08:07",
+          "publisher": "강원도민일보",
+          "sourceUrl": "https://www.kado.net/news/articleView.html?idxno=2018481",
+          "summary": "어항·어촌 현대화 사업은 해양수산부의 어촌소멸 대응 핵심 정책으로 어촌 정비, 생활환경 개선, 관광 기반 확충 등 어촌 전반을 현대화하는 종합 재생 사업이다.\n\n이는 강원도내 총 64개 어항 중 30%가 공모에 선정된 것이다.\n\n김진태 도지사는 \"취임 이후 총 19개 사업 2555억원의 어항·어촌 현대화 공모사업에 선정돼 추진 중\"이라며 \"강원도 어항은 전국 어항의 3%에 불과하지만 203개 공모사업 중 19개에 선정돼 9.4%의 선정률을 기록하며 3배 이상의 성과를 낸 것\"이라고 전했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644507708767998035/000-c3cb472ee2e3439efc3cc28ca41d215b13f26c6b.png"
+        },
+        {
+          "sessionId": 4,
+          "headline": "남북 유소년축구 원산대회 재개 모색 정책토론회, 국회서 열려",
+          "publishedAt": "2025-11-24T18:14:35",
+          "publisher": "연합뉴스",
+          "sourceUrl": "https://n.news.naver.com/mnews/article/001/0015759914?rc=N&ntype=RANKING&sid=100",
+          "summary": "글자 크기 변경교류 정상화·스포츠 평화외교 새로운 로드맵 제안 (춘천=연합뉴스) 이상학 기자 = 남북 유소년 축구 원산대회 개최 방안을 본격적으로 모색하기 위한 정책토론회가 24일 서울 국회에서 열렸다.\n\n그동안 코로나19와 남북 관계 경색으로 중단됐던 대회를 내년에 개최하는 것을 논의하는 자리다.\n\n허영 의원은 \"스포츠는 이념을 넘어 사람과 사람을 잇는 가장 강력한 평화의 통로로, 남북 유소년 축구 원산 대회의 성공적 개최를 통해 한반도 평화의 길을 다시 여는 주춧돌을 놓겠다\"고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644509044565741640/000-b3ca37d24d07a341dbba197677c4a425d95fa236.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "안철수, 재난안전법 개정안 대표발의 …대피명령 위반 과태료 100만원 ↑",
+          "publishedAt": "2025-11-24T17:41:00",
+          "publisher": "머니투데이",
+          "sourceUrl": "https://www.mt.co.kr/politics/2025/11/24/2025112417090477822",
+          "summary": "'주민들, 수해 상황에서도 대피 않고 집 지키려'…공무원 애로사항 듣고 발의 안철수 국민의힘 의원이 재난 시 대피 명령을 위반한 주민에게 부과하는 과태료를 200만원에서 300만원으로 상향하는 내용의 법률 개정안을 대표 발의했다.\n\n더 많은 사람이 대피 명령을 따르게 하기 위함으로, 안 의원은 지난 여름 수해를 입은 산청 공무원들로부터 의견을 청취해 법안 발의에 나섰다고 밝혔다.\n\n과태료를 상향해 주민들이 대피 명령에 따를 유인을 강화하겠다는 의도다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644500942416122009/000-e8c35930d9d3afe5c63febe10471deef672cd06c.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 3,
+      "topic": "정치",
+      "subTopic": "외교",
+      "subTags": [
+        "#균형",
+        "#외교",
+        "#평화"
+      ],
+      "courseName": "한반도 평화체제 : 외교적 시선",
+      "courseDescription": "이 코스는 한반도 평화체제 구축의 중요성과 외교적 시선을 탐구합니다. 한반도 평화체제는 남북관계와 국제정세의 변화 속에서 국익을 극대화하는 중요한 과제입니다. 이를 통해 우리는 평화와 안보의 균형을 어떻게 유지할 수 있을지 고민하게 됩니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "이 대통령 “평화체제 구축시 한미연합훈련 않는 게 바람직”",
+          "publishedAt": "2025-11-24T18:52:00",
+          "publisher": "채널A",
+          "sourceUrl": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000502375",
+          "summary": "이재명 대통령은 남북 긴장완화 노력의 하나로 한미연합훈련 축소 등을 검토할 수 있냐는 질문에 \"남북 간의 평화체제가 확고하게 구축되면 한미연합훈련을 안 하는 게 바람직하다\"고 답했습니다.\n\n이 대통령은 다만 \"지금 단계에서는 쉽게 얘기할 수가 없는 부분\"이라며 \"상황과 조건에 따라서 얘기할 거지, 지금 미리 어떤 방향으로 예단하기는 어렵다\"고 밝혔습니다.\n\n그러면서 \"상황에 따라서 (한미연합훈련이) 지렛대가 될 수도 있고 결과가 될 수도 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644518584992534947/000-86d8b8934bcb201e3bba9211a6c39c06139e3e45.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "이 대통령 \"남북관계, 언제 우발충돌 할지 모르는 위험상황\"",
+          "publishedAt": "2025-11-24T18:31:06",
+          "publisher": "MBN",
+          "sourceUrl": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5156879",
+          "summary": "이 대통령은 \"북한은 '적대적 두 국가', '철천지원수'로 남북관계를 규정하면서 대화와 접촉을 일절 거부하고 있다\"며 \"아무리 적대적인 국가 사이에서라도 비상연락망이나 핫라인을 가져야 한다.\n\n이 대통령은 이런 상황일수록 대화의 노력이 절실하고 통일은 장기적으로 접근해야 한다고 강조했습니다.\n\n이에 이 대통령은 \"북한이 가장 예민해하는 부분\"이라며 \"선제적으로 우리가 훈련 규모 축소나 연기를 검토하자는 주장도 일부에서 있지만, 지금 상황에서 어떤 방향으로 갈지 예단하기는 어렵다\"고 말했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644513161371586693/000-dfab27cedbfee0447d8fe7931826e019dc1aa54e.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "이 대통령 \"남북관계, 매우 위험한 상황…대화 노력 기울여야\"",
+          "publishedAt": "2025-11-24T18:26:00",
+          "publisher": "SBS",
+          "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008343228",
+          "summary": "이재명 대통령은 현지시간 24일 튀르키예로 향하던 공군 1호기에서 기자 간담회를 열고 현재의 남북관계에 대해 \"언제 우발적 충돌이 벌어질지 모르는 매우 위험한 상황\"이라고 진단하고 이를 극복하려면 인내심을 갖고 대화 노력을 기울여야 한다고 강조했습니다.\n\n이 대통령은 이런 상황일수록 대화의 노력이 절실하다고 강조했는데, \"북한이 자꾸 피하면 쫓아가서라도 말을 붙여야 한다.\n\n먼저 북한과 대화하고, 평화 공존을 이루고 그다음에 (통일을) 얘기하자는 것\"이라고 밝혔습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644512494435307998/000-66ae5c3217c72218beb6e87dac0888433014eed9.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "이 대통령 \"평화체제 구축되면 한미연합훈련 안 하는 게 바람직…지금은 말하기 어려워\"",
+          "publishedAt": "2025-11-24T17:33:02",
+          "publisher": "뉴시스",
+          "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414950",
+          "summary": "조재완 김지은 기자 = 이재명 대통령은 24일 한미 연합군사훈련의 규모를 선제적으로 축소·연기하자는 일부 주장에 대해, 현 단계에서 쉽게 논할 수 있는 사안은 아니라고 밝혔다.\n\n이 대통령은 \"한편으로는 남북 간의 평화체제가 확고하게 구축이 되면 (한미 연합훈련을) 안 하는 게 바람직할 것\"이라며 \"상황에 따라서 이게 지렛대가 될 수도 있고 결과가 될 수도 있다.\n\n다만 \"지금 단계에선 쉽게 이야기할 수 없는 부분\"이라며 \"이것은 상황과 조건에 따라서 얘기할 것이지, 지금 미리 어떤 방향으로 예단하기는 어렵다\"고 했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644498893188239404/000-9ce1f13486acdadf367692196d5f656479b7099f.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "이 대통령, 중·일 갈등 “상황을 냉철하게 지켜보고 국익 극대화 최선 다해야”",
+          "publishedAt": "2025-11-24T19:10:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
+          "summary": "이 대통령은 “싸울 필요가 없는 평화체제를 확고하게 구축하면 도널드 트럼프 대통령이 별로 안 좋아하는 돈 드는 합동군사훈련 안 해도 되지 않느냐”면서도 “그러나 지금 단계에서는 쉽게 얘기할 수가 없다”고 말했다.\n\n이 대통령은 “대한민국 외교의 기본 원칙은 한·미동맹을 근간으로 하되, 한·중관계를 안정적으로 관리하는 것”이라며 “이 기조의 근본은 국익중심의 실용외교다.\n\n이 대통령은 중·일 갈등 고조와 관련해 “양측과의 회동에서 한국 입장을 충실히 설명했다”며 “곡해가 발생하지 않게 잘 협의했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644523396274459062/000-69c151b7b7d5f1620f991dface2788b48186a422.jpeg"
+        }
+      ]
+    },
+    {
+      "courseId": 4,
+      "topic": "정치",
+      "subTopic": "정당",
+      "subTags": [
+        "#갈등",
+        "#민주",
+        "#조율"
+      ],
+      "courseName": "정당 내 갈등 : 정치적 조율의 필요성",
+      "courseDescription": "이 코스는 정당 내 갈등과 정치적 조율의 필요성을 탐구합니다. 정당 내 다양한 의견과 갈등은 정치적 결정 과정에서 중요한 요소로 작용하며, 이는 사회적 변화와 맥락 속에서 이해되어야 합니다. 이러한 갈등은 정치적 균형과 조율의 중요성을 부각시키며, 민주주의의 본질을 재조명하는 기회를 제공합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "'1인 1표제' 내부 반발 확산에 결정 연기",
+          "publishedAt": "2025-11-24T18:49:00",
+          "publisher": "SBS",
+          "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008343272",
+          "summary": "다만, 당헌 개정 마지막 관문인 중앙위원회 소집 시점은 당초 이번주 금요일에서 다음달 5일로 일주일 늦추기로 했습니다.\n\n정 대표는 당무위에서, 영남 지역을 비롯한 '민주당 험지'의 대표성 문제 등에서 보완책을 마련하는 게 숙제라며, 특별결의문 채택 등의 방식으로 충분한 숙의를 통해 정리되길 바란다고 말한 걸로 전해졌습니다.\n\n정치권에선 대표직 연임을 노리는 정 대표의 사전 포석에 친이재명계가 제동을 걸고 있다는 분석이 나오고 있지만, 정작 친명계 핵심들은 당헌 개정에 힘을 싣고 있습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644517906685497840/000-576160a5a7fa4865a5bf6de6cc23f46f8d6e1c42.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "민주, '1인 1표제' 최종 결정 연기…이견 분출에 속도 조절",
+          "publishedAt": "2025-11-24T18:01:00",
+          "publisher": "SBS",
+          "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008343193",
+          "summary": "조승래 사무총장은 국회 당무위원회 종료 후 기자들과 만나 \"1인1표제 도입과 관련해 당원들의 우려가 있었기 때문에 어떻게 보완할지 논의가 필요하다\"며 \"중앙위 소집을 당초 11월 28일에서 12월 5일로 일주일 연기하는 안에 대해 동의했다\"고 말했습니다.\n\n1인 1표제 도입을 위한 당헌·당규 개정안은 최고위와 당무위, 중앙위 의결을 차례로 거쳐 최종 확정됩니다.\n\n오늘(24일) 비공개 당무위에서는 당헌·당규 개정 내용과 절차를 두고 격한 토론이 오간 것으로 전해졌습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644506365718303076/000-d17a748b1857c91c05b167679c943802a73fac1f.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "국힘 모든 법안 ‘필리버스터’ 검토…“강경 투쟁 의견 모아”",
+          "publishedAt": "2025-11-24T19:06:00",
+          "publisher": "한겨레",
+          "sourceUrl": "https://www.hani.co.kr/arti/politics/politics_general/1231015.html",
+          "summary": "12·3 비상계엄 1년을 앞두고 국민의힘이 민생 법안을 포함한 모든 법안에 대해 필리버스터(무제한 토론을 통한 합법적 의사진행 방해)에 나설 수도 있다며 대정부 강경 투쟁을 예고했다.\n\n장동혁 국민의힘 대표는 24일 서울 마포에서 열린 ‘전국원외당협위원장 워크숍’에서 “고개를 숙이면 목을 부러뜨리고, 허리를 숙이면 허리를 부러뜨리고, 우리가 엎드리면 밟아서 땅에 짓이기는 것이 민주당”이라며 “당당하게 나서서 이재명과 민주당과 싸워야 된다”고 말했다.\n\n장 대표는 최근 전국을 돌며 장외 여론전을 펼치고 있는데, 내란 사태 1년을 맞아서도 윤석열 전 대통령과 절연하는 등 기조를 바꾸는 대신 지지층 결집을 통한 대정부 강경 투쟁에 고삐를 죄겠다는 뜻을 재확인한 것이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644522066285826228/000-52f060293c0a137faf37e5df9235be62c4ba51e0.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "국힘 “추경호 체포동의안 거부·모든 법안 필버”",
+          "publishedAt": "2025-11-24T18:48:00",
+          "publisher": "세계일보",
+          "sourceUrl": "https://www.segye.com/newsView/20251124514724",
+          "summary": "당은 추경호 의원에 대한 체포동의안을 거부하는 한편, 더불어민주당의 입법 강행에 맞서 모든 법안에 필리버스터(무제한 토론) 진행 방침을 시사했다.\n\n“거수기 역할 더는 안 한다” 국민의힘 장동혁 대표(오른쪽)와 송언석 원내대표가 24일 서울 여의도 국회에서 열린 최고위원회의에 참석하기 위해 회의장에 들어서고 있다.\n\n추경호 국민의힘 의원이 24일 서울 여의도 국회에서 열린 제429회 국회(정기회) 정무위원회 제10차 전체회의에서 참석해 자료를 바라보고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644517906685497831/000-27798af4d0e7b643f31e313e9f85d0404ac581c5.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "박형준 “계엄 사과해야”…강성파와 거리두기?",
+          "publishedAt": "2025-11-24T18:06:00",
+          "publisher": "부산일보",
+          "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112417490767872",
+          "summary": "국힘 소속 광역단체장 중 첫 요구 내년 지선 앞두고 부동층 포섭 전략 국민의힘이 장외 투쟁과 강성 지지층 결집에 당력을 집중하는 전략을 택한 것과 달리 박형준 부산시장은 “계엄에 대해 사과해야 한다”며 당 지도부와 거리를 두는 모습이다.\n\n국민의힘 소속 현역 광역단체장 중 12·3 불법 계엄 1년을 앞두고 사과를 공개 촉구한 건 박 시장이 처음이다.\n\n12·3 불법 계엄 1년을 앞두고 여권이 내년 지선을 겨냥해 현역 국민의힘 광역단체장에 대해 맹공을 퍼부을 가능성이 큰데, 박 시장의 이 같은 계엄 사과 발언은 합리적인 보수 이미지를 가져가며 여권의 공세를 사전에 차단하려는 전략으로도 풀이된다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644507046063772015/000-9f4dcfe16d2bde4499bff69c7a39f4cf76e75c9a.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 5,
+      "topic": "정치",
+      "subTopic": "외교",
+      "subTags": [
+        "#파트너십",
+        "#협력",
+        "#확장"
+      ],
+      "courseName": "경제외교 : 글로벌 파트너십의 확장",
+      "courseDescription": "이 코스는 경제외교의 중요성과 글로벌 파트너십 확장의 맥락을 탐구합니다. 이는 중소기업과 벤처를 비롯한 국민 전체에 미치는 영향을 조명하며, 국가 간 협력의 새로운 방향성을 제시합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "한-라오스 '미래포럼' 개최…\"포괄적·심층적 파트너십 발전 기대\"",
+          "publishedAt": "2025-11-24T19:01:00",
+          "publisher": "뉴스1",
+          "sourceUrl": "https://www.news1.kr/diplomacy/defense-diplomacy/5986577",
+          "summary": "정의혜 외교부 차관보는 개회사에서 1995년 재수교 이후 정치·경제·인적교류 전반에서의 협력 성과를 평가하고, 향후 30년을 향한 포괄적·심층적 협력 강화 의지를 밝혔다.\n\n퐁사뭇 안라완 라오스 외교부 차관은 양국 간 활발한 인적 교류와 한국의 개발협력 사업 등을 언급하며, 재수교 30주년을 계기로 관계를 한 단계 격상해 나가기를 희망한다고 말했다.\n\n각 세션에서는 초국가범죄 대응, 핵심광물·인프라·기후변화 협력, 인적·문화 교류 확대 방안 등이 논의됐다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644521384212304207/000-9b3a39848f94a8e99ba2f11361597c994f778da4.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "강훈식 \"경제외교 성과, 중소·벤처 비롯 국민 전체로 확산돼야\"",
+          "publishedAt": "2025-11-24T18:42:00",
+          "publisher": "MBN",
+          "sourceUrl": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5156881",
+          "summary": "강훈식 대통령 비서실장은 오늘(24일) \"경제외교 성과가 대기업에 머물지 않고 중소·벤처기업은 물론 국민 전체로 확산돼야 한다\"고 말했습니다.\n\n강 실장은 \"이런 성과는 특정 기업만이 아니라 정부와 기업, 나아가 국민 전체가 함께 노력한 결과\"라고 평가했습니다.\n\n이어 \"대기업의 성과와 노하우가 협력업체 및 중소·벤처기업으로 공유될 수 있는 지속 가능한 상생 생태계를 구축해야 한다\"며 기재부·산업통상부·공정거래위원회·중소벤처기업부 등 유관 부처와 협력해 대기업과 중소·벤처기업이 과실을 나누고 함께 성장할 수 있는 전략을 조속히 마련하라고 지시했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644515842299400792/000-5acad7f5b0e9a51b630004e944cecfee23f18017.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "\"가장 큰 성과는 'UAE 방산협력’… K방산 수주 낭보 곧 전할것\"",
+          "publishedAt": "2025-11-24T18:22:00",
+          "publisher": "파이낸셜뉴스",
+          "sourceUrl": "http://www.fnnews.com/news/202511241821251596",
+          "summary": "■중동 3개국 선택 이유, '방산' 이 대통령은 이날 남아공 요하네스버그에서 튀르키예로 이동하는 공군 1호기 기내에서 기자간담회를 갖고 \"방위산업, 무역·투자 등 협력 분야의 새로운 아이템을 발굴하고 기존 관계를 강화하기 위해 핵심국가 중심으로 중동 3개국을 선택했다\"고 설명했다.\n\n방산외교와 관련해 이 대통령은 \"외국 정상들이 우리 방위산업 실력에 대해 매우 놀라워한다\"고 했다.\n\n이 대통령은 \"국가 간 관계는 이제 서로 떼어놓고 따로 살 수 없는 상황\"이라며 \"모두가 존중받고 함께 잘사는 국제질서를 만들어야 한다\"고 강조했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644511153470181705/000-88a2add3b243172bd4254f5210a862674b53ad7a.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "한-라오스 외교차관 회담…온라인스캠 범죄 등 논의",
+          "publishedAt": "2025-11-24T18:06:00",
+          "publisher": "뉴시스",
+          "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003415008",
+          "summary": "유자비 기자 = 외교부는 24일 박윤주 제1차관이 풍사뭇 안라완 라오스 외교부 차관과 회담을 갖고 양국 관계, 온라인 스캠 범죄 등 초국가범죄 대응, 한반도 문제 등에 대해 논의했다고 밝혔다.\n\n박 차관은 이날 오후 외교부에서 풍사뭇 차관과 회담을 갖고 양국이 기존의 협력에 더해 연계성, 핵심광물, 녹색경제 등 미래지향적 협력 분야에서 진전을 이룰 수 있도록 긴밀히 협력하길 기대한다고 했다.\n\n박 차관은 역내 수사공조 강화를 위해 적극 협력하자고 했고 풍사뭇 차관은 라오스 정부도 이 문제를 중시하고 있는 바 한국과 긴밀히 협력하길 기대한다고 했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644507046063772016/000-37aa9c3b96180e8b25b3195912936a11388a236b.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "재외공관의 책임, 다시 세워야",
+          "publishedAt": "2025-11-24T18:01:00",
+          "publisher": "디지털타임스",
+          "sourceUrl": "https://www.dt.co.kr/article/12031138",
+          "summary": "특히 재외공관이 안일한 태도로 초기 단계에 적절하게 대응하지 못했고, 해외로 출국한 우리 국민, 특히나 젊은 청년들을 보호하지 못하면서 재외국민의 안전에 대한 관심이 높아졌다.\n\n개정안이 제도적으로 정착된다면, 재외공관에 대한 정기적 점검과 평가가 가능해지고, 이를 통해 재외국민 보호 기능을 실질적으로 강화할 수 있을 것이다.\n\n재외공관이 국민의 든든한 보호망으로 자리 잡기 위해서는 ‘재외국민 보호를 위한 영사조력법 일부개정안’(제7조 제5항·제6항 및 제22조의 2 신설 등)의 조속 통과가 반드시 필요하다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644506365718303075/000-5a689a48cb51ef2c18a3f813c375dfff6beb68e5.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 6,
+      "topic": "정치",
+      "subTopic": "국회",
+      "subTags": [
+        "#변화",
+        "#인식",
+        "#정책"
+      ],
+      "courseName": "정책 변화 : 사회적 인식의 전환",
+      "courseDescription": "이 코스는 정책 변화가 사회적 인식과 어떻게 연결되는지를 탐구합니다. 다양한 사회적 시선과 문제의식을 통해 정책의 중요성과 그 변화가 가져오는 사회적 맥락을 이해할 수 있습니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "정부, 교섭단위 분리제도 적극 활용",
+          "publishedAt": "2025-11-24T18:26:00",
+          "publisher": "부산일보",
+          "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112418243078196",
+          "summary": "노란봉투법 시행령 개정안 예고 원·하청 원활한 교섭 지원 취지 내년 3월 노란봉투법(노동조합 및 노동관계 조정법 2·3조 개정안) 시행을 앞두고 정부가 원청과 하청 노조의 원활한 교섭을 지원하기 위해 교섭 창구 단일화 절차의 틀 안에서 교섭 단위 분리제도를 활용하는 방안을 추진하기로 했다.\n\n즉, 원청 노조와 하청 노조, 하청 노조 간의 교섭 창구 단일화 절차를 자율적으로 우선 진행하도록 하나 절차 중 교섭 단위 분리제도를 적극 활용하는 방안을 제시한 것이다.\n\n그러나 교섭 창구 단일화는 소수 노조의 교섭권을 저해할 수 있다는 이유로 노동계 등의 반발을 샀고, 이런 의견들을 고려해 노동부는 교섭 창구 단일화 절차를 일단 진행하되 절차 중 교섭 단위 분리제도를 활용하는 방안을 제시했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644511840975327847/000-935300eaa5bcb3c6301056185f1e76cff53d1c63.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "이철규 의원 주최 '중견기업 혁신성장 정책포럼' 성료",
+          "publishedAt": "2025-11-24T18:29:00",
+          "publisher": "강원도민일보",
+          "sourceUrl": "https://www.kado.net/news/articleView.html?idxno=2018486",
+          "summary": "국민의힘 이철규(동해·태백·삼척·정선) 국회의원이 주최한 '중견기업 혁신성장 정책포럼'이 24일국회에서 성료했다.\n\n국회 산업통상자원중소벤처기업위원장을 맡고 있는 이철규 의원과 한국중견기업연합회, 한국중견기업학회가 함께 마련한 이날 포럼은 '신성장동력 확보를 위한 중견기업 스케일업 방안 모색'을 주제로 열려 규제해소와 인력·세제 지원, 예측가능한 정책금융 인프라 조성 방안 등 중견기업의 주요 현안들을 다양하게 모색했다.\n\n이철규 의원은 \"우리 산업의 중추이자 국가경쟁력의 핵심 기반인 중견기업은 적기에 지원해야 가장 빠르게 성과를 창출하는 기업군\"이라며 \"적시에 정책·입법적 지원을 하도록 현장 소통을 강화하겠다\"고 밝혔다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644513161371586688/000-6597c76f9f226334fe9506ee0c67a0348cad51ce.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "한덕수, 재판서 \"윤석열 계엄선포 만류했다\"…헌재 위증은 인정",
+          "publishedAt": "2025-11-24T18:42:00",
+          "publisher": "MBN",
+          "sourceUrl": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5156882",
+          "summary": "이후 대통령실에 도착한 한 전 총리는 윤 전 대통령의 비상계엄 선포 계획을 듣고 \"너무 깜짝 놀라서 '우리나라의 대외신인도가 떨어지고 경제가 정말 망가질 수 있습니다.\n\n한 전 총리는 명시적으로 반대라는 단어를 사용하지는 않았지만, 반대하는 취지로 대외신인도와 경제를 언급했다고 부연했습니다.\n\n국무위원들이 모인 뒤 한 전 총리는 강하게 반대 의사를 표한 최상목 전 경제부총리 겸 기획재정부 장관에게 '당신도 (대통령 집무실에) 좀 들어가서 이야기를 해 봐라'는 취지로 말했다고 합니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644515842299400793/000-aaff3e8db5dc52849be0bbb1398cd9989757c722.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "시장 상인들 애로사항 듣는 김상욱에 막말 쏟아낸 '그들'",
+          "publishedAt": "2025-11-24T17:26:00",
+          "publisher": "오마이뉴스",
+          "sourceUrl": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003185663&CMPT_CD=P0010&utm_medium=newsearch",
+          "summary": "울산 남구 신정시장 활성화 위한 간담회 개최...극우 성향 인사들 회의 방해하며 혐오 발언 ▲ 더불어민주당 김상욱 의원(울산 남구갑)이 지난 주말(22일) 오전 지역구에 있는 신정시장에서 상인들을 만나 민생간담회를 가졌다.\n\nⓒ 김상욱 의원실 김상욱 더불어민주당 의원(울산 남구갑)이 지난 주말(22일) 오전 지역구에 있는 신정시장에서 상인들을 만나 민생간담회를 가졌다.\n\n▲ 더불어민주당 김상욱 의원(울산 남구갑)이 지난 주말(22일) 오전 지역구에 있는 신정시장에서 상인들을 만나 민생간담회를 가지자 일부 인사들이 간담회장 앞에서 김상욱 의원을 비판하는 집회를 하고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644496924696514628/000-aaf8f62c34d595c81e6c08f315b6522cf25714f8.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "‘2025 수원 새빛만남…즉석에서 해결한다",
+          "publishedAt": "2025-11-24T17:40:00",
+          "publisher": "헤럴드경제",
+          "sourceUrl": "https://biz.heraldcorp.com/article/10622614",
+          "summary": "이날 새빛만남에 참석한 수원시 교통정책과장은 “오늘 오후에라도 어머니를 만나 함께 현장을 확인하고, 개선 방향을 찾아보겠다”고 약속했다.\n\n시민이 건의 사항을 이야기하면 담당 부서 책임자가 건의한 시민과 일정을 조율해 최대한 빨리 현장을 찾아 문제점을 확인하고, 개선 대책을 수립한다.\n\n이재준 시장은 현장에서 건의 사항과 관련된 부서의 실국장의 의견을 들은 후 현장 확인이 필요하다고 판단되면 “의견을 주신 시민과 함께 신속하게 현장을 방문해 문제점을 살펴보고, 대응 방안을 마련해 알려달라”고 요청한다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644500942416122005/000-04ce278ed55fe4c4b59fa6ca09fad075ff1aceff.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 7,
+      "topic": "정치",
+      "subTopic": "법률",
+      "subTags": [
+        "#법안",
+        "#부패",
+        "#정의"
+      ],
+      "courseName": "대장동 사건 : 법률적 접근과 해석",
+      "courseDescription": "이 코스는 대장동 사건의 법률적 접근을 통해 사회적 부패 문제를 조명합니다. 법률적 대응이 왜 중요한지, 그리고 이러한 법안이 사회적 정의 실현과 어떤 맥락에서 연결되는지를 탐구합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "국힘, ‘대장동 범죄수익 환수 특별법’ 당론 추진…“강력한 칼날 될 것”",
+          "publishedAt": "2025-11-24T18:37:00",
+          "publisher": "중앙일보",
+          "sourceUrl": "https://www.joongang.co.kr/article/25384640",
+          "summary": "국민의힘은 24일 대장동 사건 범죄 수익을 환수하는 내용을 골자로 하는 ‘대장동 범죄수익 환수에 관한 특별법’을 당론으로 추진하겠다고 밝혔다.\n\n또 취득한 재산과 관련해 대장동 범죄 수익으로 보이는 상당한 개연성이 있는 경우 관련 재산을 모두 환수할 수 있도록 했다.\n\n국회 법사위 소속 나경원 의원은 “이번 특별법의 핵심은 소급효를 인정한다는 것”이라며“범죄의 실체를 반드시 밝혀내는 것과 함께 대장동 범죄 수익을 국민 품에 돌려주는 것이 우리가 해야 할 일”이라고 강조했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644515134351217041/000-0a97ad9bfa9d4e3349457a90c15fc070ec8d9a61.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "국힘 '대장동 범죄수익 환수 특별법' 당론 추진…\"부패한 권력의 심장 겨눌 것\"",
+          "publishedAt": "2025-11-24T18:05:00",
+          "publisher": "MBN",
+          "sourceUrl": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5156865",
+          "summary": "국민의힘이 형사 판결이 확정되기 전이라도 법원의 허가 아래 범죄수익을 소급해 전액 환수할 수 있게 하는 '대장동 범죄수익 환수 특별법' 제정을 당론으로 추진합니다.\n\n장동혁 대표는 오늘(24일) 국회에서 열린 '대장동 범죄수익 환수 특별법 제정을 위한 긴급 토론회'에 참석해 대장동 항소 포기를 \"피땀 흘려 살아가는 국민의 재산을 강탈한 약탈 정치\"라고 규정하며 \"특별법은 부패한 권력의 심장을 겨누는 강력한 칼날이 될 것\"이라고 선언했습니다.\n\n국민의힘은 이번 정기 국회에서 대장동 범죄수익 환수 특별법이 통과되도록 최선을 다하겠다고 밝혔습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644507046063772010/000-0d39847e1b000fecd3352e6a3d163d238c72f071.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "국힘, '대장동 범죄수익환수특별법' 당론 추진…\"범죄수익 환수\"",
+          "publishedAt": "2025-11-24T18:03:09",
+          "publisher": "JTBC",
+          "sourceUrl": "https://news.jtbc.co.kr/article/NB12272242",
+          "summary": "국민의힘이 대장동 개발 비리 사건의 범죄 수익을 소급해 환수할 수 있는 '대장동 범죄수익 환수에 관한 특별법'을 당론으로 추진하겠다고 밝혔습니다.\n\n또 취득한 재산과 관련해 대장동 범죄 수익으로 보이는 상당한 개연성이 있는 경우 관련 재산을 모두 환수할 수 있도록 했습니다.\n\n그러면서 \"이번 특별법의 핵심은 소급효를 인정한다는 것\"이라면서 \"범죄의 실체를 반드시 밝혀내는 것과 함께 대장동 범죄 수익을 국민 품에 돌려주는 것이 우리가 해야 할 일\"이라고 덧붙였습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644506365718303079/000-ce8b4010ce3ff2e1f2c39a34dd79b82d4ff09d07.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "국민의힘, '대장동 범죄수익 환수 특별법' 당론 추진키로",
+          "publishedAt": "2025-11-24T18:00:10",
+          "publisher": "프레시안",
+          "sourceUrl": "https://www.pressian.com/pages/articles/2025112416573072149?utm_medium=search",
+          "summary": "장동혁 \"범죄수익 단 1원도 안 남겨야\"…송언석 \"지옥까지 쫓아가 환수\" 국민의힘이 24일 '대장동 범죄수익 환수 특별법' 제정을 당론으로 추진한다고 밝혔다.\n\n국민의힘은 이날 오후 당 정책위원회와 국회 법제사법위원회 소속 의원들 주도로 국회에서 '대장동 범죄수익 환수 특별법 제정을 위한 긴급 토론회'를 열었다.\n\n송 원내대표는 \"국민의힘은 대장동 범죄수익 환수 특별법 제정을 당론으로 추진하고자 한다\"며 \"이번 정기국회에서 이 법이 반드시 통과시킬 수 있도록 최선을 다하겠다\"고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644505632889508013/000-30e40aad1f9fe2b07afc218de611c582b527aca5.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "국민의힘, '대장동 범죄수익 환수 특별법' 당론 추진키로",
+          "publishedAt": "2025-11-24T18:00:10",
+          "publisher": "프레시안",
+          "sourceUrl": "https://www.pressian.com/pages/articles/2025112416573072149?utm_medium=search",
+          "summary": "장동혁 \"범죄수익 단 1원도 안 남겨야\"…송언석 \"지옥까지 쫓아가 환수\" 국민의힘이 24일 '대장동 범죄수익 환수 특별법' 제정을 당론으로 추진한다고 밝혔다.\n\n국민의힘은 이날 오후 당 정책위원회와 국회 법제사법위원회 소속 의원들 주도로 국회에서 '대장동 범죄수익 환수 특별법 제정을 위한 긴급 토론회'를 열었다.\n\n송 원내대표는 \"국민의힘은 대장동 범죄수익 환수 특별법 제정을 당론으로 추진하고자 한다\"며 \"이번 정기국회에서 이 법이 반드시 통과시킬 수 있도록 최선을 다하겠다\"고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/politics/2025/11/24/1644505632889508013/000-30e40aad1f9fe2b07afc218de611c582b527aca5.jpg"
+        }
+      ]
+    }
+  ]
+}
