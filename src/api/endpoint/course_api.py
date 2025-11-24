@@ -18,23 +18,22 @@ def get_today_data():
     base_dir = Path(__file__).resolve().parents[3]
     quiz_package_dir = base_dir / "data" / "quiz" / "package"
 
-    # 1. 모든 패키지 파일을 다 찾기
     package_files = sorted(list(quiz_package_dir.glob("*_package.json")))
 
+    # 1. 파일이 없을 경우: 백엔드 형식에 맞게 {"courses": []} 반환
     if not package_files:
-        # 파일이 하나도 없으면 오늘 날짜로 메시지 리턴
-        today = datetime.now().strftime("%Y-%m-%d")
-        return {"message": f"{today} 기준 패키지 파일이 없습니다."}
+        return {"courses": []}
 
-    # 2. 가장 최신 파일 하나를 가져옴
-    latest_file = package_files[-1]
-
-    # 3. 그 파일을 열어서 리턴
-    response = {}
+    # 2. 모든 패키지를 하나의 리스트로 통합
+    all_courses = []
 
     for f in package_files:
-        topic = f.stem.split("_")[0]
         with open(f, "r", encoding="utf-8") as fp:
-            response[topic] = json.load(fp)
+            course_data = json.load(fp)
+            if isinstance(course_data, list):
+                all_courses.extend(course_data)
+            else:
+                all_courses.append(course_data)
 
-    return response
+                # 3. AICourseListResponse 형식으로 래핑하여 반환
+    return {"courses": all_courses}
