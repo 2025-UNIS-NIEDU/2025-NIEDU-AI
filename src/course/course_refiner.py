@@ -238,6 +238,18 @@ def refine_course_structure():
             # === 최종 세션 5개로 제한 ===
             c["sessions"] = select_top5_sessions(client, c)
 
+            def parse_datetime(x):
+                try:
+                    return datetime.fromisoformat(x.get("publishedAt"))
+                except:
+                    return datetime.min  # 날짜 없을 때 대비
+
+            c["sessions"].sort(key=parse_datetime, reverse=True)
+
+            # 정렬 후 sessionId 다시 부여
+            for idx, s in enumerate(c["sessions"], start=1):
+                s["sessionId"] = idx
+
             refined_courses.append(c)
 
         # === 인덱스 정리 ===
