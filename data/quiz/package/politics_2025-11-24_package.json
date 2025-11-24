@@ -154,7 +154,7 @@
                   "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "김진태 강원특별자치도지사가 비판한 대상은 누구인가?",
                       "options": [
                         {
@@ -179,7 +179,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "강원특별법 3차 개정안의 심사를 촉구한 주체는 누구인가?",
                       "options": [
                         {
@@ -204,7 +204,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "강원특별법 3차 개정안이 국회에서 논의되지 않은 기간은 얼마인가?",
                       "options": [
                         {
@@ -229,7 +229,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "강원특별법 3차 개정안을 공동 발의한 국회의원은 누구인가?",
                       "options": [
                         {
@@ -254,7 +254,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "강원특별법 3차 개정안 심사 촉구 서한을 전달받은 대상은 누구인가?",
                       "options": [
                         {
@@ -335,7 +335,7 @@
                   "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "강원특별법 3차 개정안이 국회에서 계류 중인 이유는 무엇인가?",
                       "options": [
                         {
@@ -360,7 +360,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "김진태 강원특별자치도지사가 항의 서한을 전달한 주된 목적은 무엇인가?",
                       "options": [
                         {
@@ -385,7 +385,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "김진태 도지사의 발언에서 드러난 새 정부 정책에 대한 비판적 시각은 무엇인가?",
                       "options": [
                         {
@@ -410,7 +410,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "전북도와 강원도가 공동으로 항의 서한을 작성한 이유는 무엇인가?",
                       "options": [
                         {
@@ -435,7 +435,7 @@
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "국회 심사 장기 미뤄짐에 대해 서한이 겨냥한 구체적 압박 대상은 무엇인가?",
                       "options": [
                         {
@@ -467,35 +467,35 @@
                   "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "김진태 지사가 비판한 법안의 이름은 무엇인가?",
                       "correctAnswer": "강원특별법",
                       "answerExplanation": "김진태 지사는 강원특별법 3차 개정안이 심사받지 못한 것에 대해 비판했다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "김진태 지사가 언급한 정부의 정책 이름은 무엇인가?",
                       "correctAnswer": "5극 3특 정책",
                       "answerExplanation": "김진태 지사는 새 정부의 5극 3특 정책에 대해 불만을 표명했다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "김진태 지사가 여야 원내대표에게 전달한 문서는 무엇인가?",
                       "correctAnswer": "항의 서한",
                       "answerExplanation": "김진태 지사는 전북도와 공동으로 작성한 항의 서한을 전달하며 법안 심사를 촉구했다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "강원특별법 개정안이 심사를 기다린 기간은 얼마인가?",
                       "correctAnswer": "15개월",
                       "answerExplanation": "강원특별법 3차 개정안은 국회에서 15개월 동안 심사조차 받지 못했다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "김진태 지사가 법안 심사를 촉구한 장소는 어디인가?",
                       "correctAnswer": "도청 기자실",
                       "answerExplanation": "김진태 지사는 도청 기자실에서 기자간담회를 열고 법안 심사를 촉구했다.",
@@ -567,35 +567,35 @@
                   "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "정치적 의사 표현과 법안 심사 촉구를 목적으로 여야 원내대표에게 전달된 공식 문서는 무엇입니까?",
                       "correctAnswer": "항의 서한",
                       "answerExplanation": "항의 서한은 정치적 압박을 통해 법안 심사를 촉진하려는 의도를 담고 있다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "국가 균형 발전을 목표로 하며, 최근 정책적 논란의 중심에 있는 정부의 전략은 무엇입니까?",
                       "correctAnswer": "5극 3특 정책",
                       "answerExplanation": "5극 3특 정책은 지역 간 불균형 해소와 경제 활성화를 지향한다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "정책적 관심을 환기하고 법안 심사를 촉구하기 위해 특정 장소에서 열린 기자회견의 장소는 어디입니까?",
                       "correctAnswer": "도청 기자실",
                       "answerExplanation": "도청 기자실은 지역 정치의 중심지로서 정책 논의를 활성화하는 공간이다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "정치적 무관심과 제도적 지연을 상징하는, 특정 법안이 심사를 기다린 기간은 얼마입니까?",
                       "correctAnswer": "15개월",
                       "answerExplanation": "15개월의 지연은 입법 과정의 비효율성과 정치적 무관심을 반영한다.",
                       "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "지역 자치와 균형 발전을 위한 법적 틀을 제공하며, 최근 비판의 대상이 된 법안은 무엇입니까?",
                       "correctAnswer": "강원특별법",
                       "answerExplanation": "강원특별법은 지역 특성을 반영한 자치권 강화를 지향한다.",
@@ -609,17 +609,17 @@
                   "contents": [
                     [
                       {
-                        "contentId": "1",
+                        "contentId": 1,
                         "question": "강원특별법 3차 개정안이 국회에서 ______",
                         "referenceAnswer": "15개월 넘게 심사조차 받지 못하고 계류 중이다."
                       },
                       {
-                        "contentId": "2",
+                        "contentId": 2,
                         "question": "김진태 강원특별자치도지사는 새 정부의 5극 3특을 ______",
                         "referenceAnswer": "강하게 비판하며 항의 서한을 전달했다."
                       },
                       {
-                        "contentId": "3",
+                        "contentId": 3,
                         "question": "3차 개정안은 지난해 9월 국회의원들이 공동발의한 후 ______",
                         "referenceAnswer": "1년 넘게 심사만 기다리고 있다."
                       }

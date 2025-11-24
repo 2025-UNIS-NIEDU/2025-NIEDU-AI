@@ -154,7 +154,7 @@
                   "sourceUrl": "http://www.inews24.com/view/1910467",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "광산구의회의 ‘참당당 청소년 정치아카데미’가 높은 평가를 받은 이유는 무엇인가?",
                       "options": [
                         {
@@ -179,7 +179,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "이번 장려상이 의미 있는 수상으로 평가받는 이유는 무엇인가?",
                       "options": [
                         {
@@ -204,7 +204,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "광산구의회가 앞으로 정례화할 계획인 프로그램은 무엇인가?",
                       "options": [
                         {
@@ -229,7 +229,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "광산구의회가 연계할 계획인 기관은 무엇인가?",
                       "options": [
                         {
@@ -254,7 +254,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "광산구의회가 확대할 계획인 교육 플랫폼의 주제는 무엇인가?",
                       "options": [
                         {
@@ -335,7 +335,7 @@
                   "sourceUrl": "http://www.inews24.com/view/1910467",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "광산구의회의 ‘참당당 청소년 정치아카데미’가 높은 평가를 받은 이유는 무엇인가?",
                       "options": [
                         {
@@ -360,7 +360,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "광산구의회가 ‘참당당 청소년 정치아카데미’를 정례화하려는 이유는 무엇인가?",
                       "options": [
                         {
@@ -385,7 +385,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "광산구의회의 청소년 정치 교육 모델이 공식적으로 인정받은 의미는 무엇인가?",
                       "options": [
                         {
@@ -410,7 +410,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "광산구의회의 ‘참당당 청소년 정치아카데미’가 지역 학교와 연계하려는 이유는 무엇인가?",
                       "options": [
                         {
@@ -435,7 +435,7 @@
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "장려상 인정이 의회주도 교육모델 전국 확산 전략에 제시하는 핵심 함의는 무엇인가?",
                       "options": [
                         {
@@ -467,35 +467,35 @@
                   "sourceUrl": "http://www.inews24.com/view/1910467",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "2023년 본심사에 진출한 프로그램의 이름은 무엇인가?",
                       "correctAnswer": "청소년 정치아카데미",
                       "answerExplanation": "광산구의회의 '참당당 청소년 정치아카데미'가 높은 평가를 받았다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "이번 장려상을 수상한 교육 모델은 어떤 유형인가?",
                       "correctAnswer": "의회주도형",
                       "answerExplanation": "이번 장려상은 전국 최초의 의회주도형 청소년 정치 리터러시 교육 모델이 인정받은 것이다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "정치 리터러시 교육의 확대를 위해 광산구의회가 연계할 기관은 무엇인가?",
                       "correctAnswer": "청소년 기관",
                       "answerExplanation": "광산구의회는 청소년 기관과의 연계를 통해 교육 플랫폼으로 확대할 계획이다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "정치 리터러시 교육의 성과로 강조된 요소 중 하나는 무엇인가?",
                       "correctAnswer": "정책 혁신성",
                       "answerExplanation": "이 프로그램은 정책 혁신성에서 두드러진 성과를 보였다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "광산구의회가 추진하는 프로그램의 주요 목표 중 하나는 무엇인가?",
                       "correctAnswer": "지역 문제",
                       "answerExplanation": "이 프로그램은 지역 문제 해결 능력 강화를 목표로 하고 있다.",
@@ -567,35 +567,35 @@
                   "sourceUrl": "http://www.inews24.com/view/1910467",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "광산구의회가 추진하는 프로그램의 주요 목표로 지역 사회의 어떤 능력을 강화하려는 것입니까?",
                       "correctAnswer": "지역 문제",
                       "answerExplanation": "지역 문제 해결 능력은 지역 사회의 지속 가능한 발전을 도모한다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "정치 리터러시 교육에서 두드러진 성과로 평가된 요소는 무엇입니까?",
                       "correctAnswer": "정책 혁신성",
                       "answerExplanation": "정책 혁신성은 교육 프로그램의 창의적 접근을 강조한다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "의회가 주도하여 청소년의 정치적 이해를 높이는 교육 모델로 장려상을 수상한 유형은 무엇입니까?",
                       "correctAnswer": "의회주도형",
                       "answerExplanation": "의회주도형 모델은 청소년의 정치적 이해를 증진시키는 데 기여한다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "정치적 참여와 비판적 사고 함양을 목표로 본심사에 진출한 프로그램은 무엇입니까?",
                       "correctAnswer": "청소년 정치아카데미",
                       "answerExplanation": "청소년 정치아카데미는 정치 교육을 통해 참여 의식을 고취한다.",
                       "sourceUrl": "http://www.inews24.com/view/1910467"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "정치 리터러시 교육의 확장을 위해 광산구의회가 협력할 계획인 기관은 무엇입니까?",
                       "correctAnswer": "청소년 기관",
                       "answerExplanation": "청소년 기관과의 협력은 교육의 접근성과 효과성을 증대한다.",
@@ -609,17 +609,17 @@
                   "contents": [
                     [
                       {
-                        "contentId": "1",
+                        "contentId": 1,
                         "question": "경진대회 본심사에 진출한 의회는 총 ______",
                         "referenceAnswer": "12개 의회가 본심사에 진출했다."
                       },
                       {
-                        "contentId": "2",
+                        "contentId": 2,
                         "question": "광산구의회의 ‘참당당 청소년 정치아카데미’는 높은 평가를 ______",
                         "referenceAnswer": "정책혁신성 등에서 받았다."
                       },
                       {
-                        "contentId": "3",
+                        "contentId": 3,
                         "question": "광산구의회는 ‘참당당 청소년 정치아카데미’를 ______",
                         "referenceAnswer": "정례화하고 확대할 계획이다."
                       }
