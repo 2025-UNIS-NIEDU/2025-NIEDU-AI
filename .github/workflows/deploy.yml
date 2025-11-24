@@ -51,6 +51,7 @@ jobs:
             DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }}
             DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }}
             LOG_LEVEL=${{ secrets.LOG_LEVEL }}
+            DEEPSEARCH_API_KEY=${{ secrets.DEEPSEARCH_API_KEY }}
             EOF
 
             echo "Stopping previous container"

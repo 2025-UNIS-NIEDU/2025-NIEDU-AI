@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="[FIX] main.py 절대경로로 import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/endpoint/course_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/endpoint/course_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,9 @@
       <workItem from="1763179312672" duration="3904000" />
       <workItem from="1763191934289" duration="2365000" />
       <workItem from="1763290199743" duration="1541000" />
-      <workItem from="1763355205704" duration="343000" />
+      <workItem from="1763355205704" duration="999000" />
+      <workItem from="1763432829495" duration="3000" />
+      <workItem from="1763974104438" duration="2175000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] main.py 절대경로로 import">
       <option name="closed" value="true" />
