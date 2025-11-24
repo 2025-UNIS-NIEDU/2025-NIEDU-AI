@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "경진대회 본심사에 진출한 의회는 총 ______",
+        "referenceAnswer": "12개 의회가 본심사에 진출했다."
+      },
+      {
+        "contentId": "2",
+        "question": "광산구의회의 ‘참당당 청소년 정치아카데미’는 높은 평가를 ______",
+        "referenceAnswer": "정책혁신성 등에서 받았다."
+      },
+      {
+        "contentId": "3",
+        "question": "광산구의회는 ‘참당당 청소년 정치아카데미’를 ______",
+        "referenceAnswer": "정례화하고 확대할 계획이다."
+      }
+    ]
+  ]
+}

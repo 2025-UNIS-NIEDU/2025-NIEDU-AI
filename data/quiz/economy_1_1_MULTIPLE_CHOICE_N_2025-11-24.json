@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "외환시장 안정과 관련해 어떤 기관들이 협의체를 구성했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "기재부와 보건복지부"
+          },
+          {
+            "label": "B",
+            "text": "국민연금과 한은"
+          },
+          {
+            "label": "C",
+            "text": "기재부와 한은"
+          },
+          {
+            "label": "D",
+            "text": "기재부, 보건복지부, 한은, 국민연금"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "4자 협의체는 기재부, 보건복지부, 한은, 국민연금으로 구성되었다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+      },
+      {
+        "contentId": "2",
+        "question": "4자 협의체의 주요 논의 주제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국민연금의 수익성"
+          },
+          {
+            "label": "B",
+            "text": "외환시장의 불안정"
+          },
+          {
+            "label": "C",
+            "text": "투자 확대 방안"
+          },
+          {
+            "label": "D",
+            "text": "수익성과 안정 조화"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "협의체에서는 수익성과 외환시장의 안정 조화를 논의할 예정이다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+      },
+      {
+        "contentId": "3",
+        "question": "외환시장에 불안감을 주는 원달러 환율은 얼마를 넘었는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "1400원"
+          },
+          {
+            "label": "B",
+            "text": "1450원"
+          },
+          {
+            "label": "C",
+            "text": "1470원"
+          },
+          {
+            "label": "D",
+            "text": "1500원"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "원달러 환율은 1470원을 넘어서 시장에 불안감을 주었다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+      },
+      {
+        "contentId": "4",
+        "question": "국민연금의 역할은 무엇으로 해석되는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "자본시장의 큰손 활용"
+          },
+          {
+            "label": "B",
+            "text": "외환시장 개입"
+          },
+          {
+            "label": "C",
+            "text": "투자 수익 극대화"
+          },
+          {
+            "label": "D",
+            "text": "정책 결정 참여"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "국민연금은 자본시장의 큰손으로 외환시장 안정에 기여할 것으로 해석된다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+      },
+      {
+        "contentId": "5",
+        "question": "기재부의 발표에 따르면 앞으로 어떤 방안을 논의할 예정인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "외환시장 개입 방안"
+          },
+          {
+            "label": "B",
+            "text": "국민연금의 투자 방안"
+          },
+          {
+            "label": "C",
+            "text": "수익성과 안정 방안"
+          },
+          {
+            "label": "D",
+            "text": "해외 투자 확대 방안"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "기재부는 수익성과 외환시장의 안정 방안을 논의할 예정이라고 밝혔다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "김진태 강원특별자치도지사가 비판한 정부의 정책은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "5극 3특 정책"
+          },
+          {
+            "label": "B",
+            "text": "지역 균형 발전"
+          },
+          {
+            "label": "C",
+            "text": "행정 개혁"
+          },
+          {
+            "label": "D",
+            "text": "경제 성장 전략"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "김 지사는 새 정부의 5극 3특 정책을 비판하며 불만을 표출했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+      },
+      {
+        "contentId": "2",
+        "question": "강원특별법 3차 개정안의 논의가 무산된 회의는 어떤 위원회에서 이루어졌는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "행정안전위원회"
+          },
+          {
+            "label": "B",
+            "text": "법제사법위원회"
+          },
+          {
+            "label": "C",
+            "text": "예산결산특별위원회"
+          },
+          {
+            "label": "D",
+            "text": "국토교통위원회"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "3차 개정안의 논의는 국회 행정안전위원회에서 이루어졌다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+      },
+      {
+        "contentId": "3",
+        "question": "김진태 도지사가 기자간담회에서 언급한 주제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "법안 심사 촉구"
+          },
+          {
+            "label": "B",
+            "text": "정치적 연대"
+          },
+          {
+            "label": "C",
+            "text": "경제 정책"
+          },
+          {
+            "label": "D",
+            "text": "사회 복지"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "김 지사는 법안 심사를 촉구하는 내용을 기자간담회에서 밝혔다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+      },
+      {
+        "contentId": "4",
+        "question": "강원특별법 3차 개정안은 언제 발의되었는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "작년 9월"
+          },
+          {
+            "label": "B",
+            "text": "올해 1월"
+          },
+          {
+            "label": "C",
+            "text": "작년 12월"
+          },
+          {
+            "label": "D",
+            "text": "올해 3월"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "3차 개정안은 지난해 9월에 발의되었다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+      },
+      {
+        "contentId": "5",
+        "question": "전북도와 공동으로 전달된 서한의 주된 내용은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "법안 심사 요청"
+          },
+          {
+            "label": "B",
+            "text": "정책 개선 요구"
+          },
+          {
+            "label": "C",
+            "text": "예산 증액 요청"
+          },
+          {
+            "label": "D",
+            "text": "행정 개혁 촉구"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "서한은 법안 심사를 요청하는 내용으로 전달되었다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251124065951062?input=1195m"
+      }
+    ]
+  }
+]

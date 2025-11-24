@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "이 대통령이 언급한 평화체제 구축의 필요성은 무엇과 관련이 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "합동군사훈련"
+          },
+          {
+            "label": "B",
+            "text": "경제 협력"
+          },
+          {
+            "label": "C",
+            "text": "국제 연합"
+          },
+          {
+            "label": "D",
+            "text": "무역 협정"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령은 평화체제를 구축하면 합동군사훈련이 필요 없다고 말했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+      },
+      {
+        "contentId": "2",
+        "question": "이 대통령이 강조한 대한민국 외교의 기본 원칙은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "한·중 동맹"
+          },
+          {
+            "label": "B",
+            "text": "국익 중심의 실용외교"
+          },
+          {
+            "label": "C",
+            "text": "다자간 협력"
+          },
+          {
+            "label": "D",
+            "text": "군사적 동맹"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "대통령은 국익 중심의 실용외교를 기본 원칙으로 강조했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+      },
+      {
+        "contentId": "3",
+        "question": "이 대통령이 중·일 갈등에 대해 어떤 입장을 취했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "중립적인 태도"
+          },
+          {
+            "label": "B",
+            "text": "한국 입장 설명"
+          },
+          {
+            "label": "C",
+            "text": "갈등 조장"
+          },
+          {
+            "label": "D",
+            "text": "무시하는 태도"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "대통령은 한국 입장을 충실히 설명했다고 밝혔다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+      },
+      {
+        "contentId": "4",
+        "question": "이 대통령이 한·미 동맹의 중요성을 강조한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "안정적인 관리"
+          },
+          {
+            "label": "B",
+            "text": "군사적 강화"
+          },
+          {
+            "label": "C",
+            "text": "경제적 이익"
+          },
+          {
+            "label": "D",
+            "text": "문화 교류"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령은 한·미 동맹을 안정적으로 관리하는 것이 중요하다고 말했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+      },
+      {
+        "contentId": "5",
+        "question": "이 대통령이 현재 상황에서 평화체제 구축에 대해 어떻게 언급했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "쉽게 얘기할 수 없다"
+          },
+          {
+            "label": "B",
+            "text": "즉각적으로 가능하다"
+          },
+          {
+            "label": "C",
+            "text": "필수적이다"
+          },
+          {
+            "label": "D",
+            "text": "우선순위가 아니다"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령은 현재 단계에서 쉽게 얘기할 수 없다고 말했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+      }
+    ]
+  }
+]
