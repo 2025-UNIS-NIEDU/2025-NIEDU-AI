@@ -107,6 +107,48 @@
                   ]
                 },
                 {
+                  "stepOrder": 4,
+                  "contentType": "OX_QUIZ",
+                  "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이 대통령은 평화체제를 구축하면 합동군사훈련을 하지 않아도 된다고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "이 대통령은 평화체제 구축 시 합동군사훈련이 필요 없다고 언급했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이 대통령은 한·미동맹을 기본 원칙으로 삼지 않는다고 말했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "이 대통령은 한·미동맹을 대한민국 외교의 기본 원칙으로 삼고 있다고 밝혔다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이 대통령은 한·중관계를 불안정하게 관리해야 한다고 말했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "이 대통령은 한·중관계를 안정적으로 관리해야 한다고 강조했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이 대통령은 중·일 갈등 고조와 관련해 한국 입장을 잘 설명했다고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "이 대통령은 중·일 갈등에서 한국 입장을 충실히 설명했다고 언급했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이 대통령은 국익중심의 실용외교가 대한민국 외교의 근본이라고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "이 대통령은 국익중심의 실용외교가 외교의 근본이라고 강조했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    }
+                  ]
+                },
+                {
                   "stepOrder": 5,
                   "contentType": "MULTIPLE_CHOICE",
                   "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
