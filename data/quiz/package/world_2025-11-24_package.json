@@ -113,27 +113,27 @@
                   "contents": [
                     {
                       "contentId": "1",
-                      "question": "이 대통령이 언급한 평화체제 구축의 필요성은 무엇과 관련이 있는가?",
+                      "question": "이 대통령이 언급한 평화체제 구축의 결과는 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "합동군사훈련"
+                          "text": "합동군사훈련 중단"
                         },
                         {
                           "label": "B",
-                          "text": "경제 협력"
+                          "text": "무역 협정 체결"
                         },
                         {
                           "label": "C",
-                          "text": "국제 연합"
+                          "text": "경제 제재 강화"
                         },
                         {
                           "label": "D",
-                          "text": "무역 협정"
+                          "text": "외교 관계 단절"
                         }
                       ],
                       "correctAnswer": "A",
-                      "answerExplanation": "대통령은 평화체제를 구축하면 합동군사훈련이 필요 없다고 말했다.",
+                      "answerExplanation": "평화체제가 확고하면 합동군사훈련을 안 해도 된다고 언급했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
@@ -142,98 +142,98 @@
                       "options": [
                         {
                           "label": "A",
-                          "text": "한·중 동맹"
+                          "text": "한·일동맹 중심"
                         },
                         {
                           "label": "B",
-                          "text": "국익 중심의 실용외교"
+                          "text": "한·미동맹 중심"
                         },
                         {
                           "label": "C",
-                          "text": "다자간 협력"
+                          "text": "한·유럽동맹 중심"
                         },
                         {
                           "label": "D",
-                          "text": "군사적 동맹"
+                          "text": "한·러동맹 중심"
                         }
                       ],
                       "correctAnswer": "B",
-                      "answerExplanation": "대통령은 국익 중심의 실용외교를 기본 원칙으로 강조했다.",
+                      "answerExplanation": "대한민국 외교의 기본 원칙은 한·미동맹을 근간으로 한다고 밝혔다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "3",
-                      "question": "이 대통령이 중·일 갈등에 대해 어떤 입장을 취했는가?",
+                      "question": "이 대통령이 중·일 갈등과 관련해 언급한 내용은 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "중립적인 태도"
-                        },
-                        {
-                          "label": "B",
                           "text": "한국 입장 설명"
                         },
                         {
+                          "label": "B",
+                          "text": "군사 동맹 강화"
+                        },
+                        {
                           "label": "C",
-                          "text": "갈등 조장"
+                          "text": "경제 제재 발표"
                         },
                         {
                           "label": "D",
-                          "text": "무시하는 태도"
+                          "text": "무역 협상 체결"
                         }
                       ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "대통령은 한국 입장을 충실히 설명했다고 밝혔다.",
+                      "correctAnswer": "A",
+                      "answerExplanation": "중·일 갈등과 관련해 한국 입장을 충실히 설명했다고 언급했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "4",
-                      "question": "이 대통령이 한·미 동맹의 중요성을 강조한 이유는 무엇인가?",
+                      "question": "이 대통령이 외교 기조의 근본으로 언급한 것은 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "안정적인 관리"
+                          "text": "군사중심 외교"
                         },
                         {
                           "label": "B",
-                          "text": "군사적 강화"
+                          "text": "국익중심 실용외교"
                         },
                         {
                           "label": "C",
-                          "text": "경제적 이익"
+                          "text": "문화중심 외교"
                         },
                         {
                           "label": "D",
-                          "text": "문화 교류"
+                          "text": "경제중심 외교"
                         }
                       ],
-                      "correctAnswer": "A",
-                      "answerExplanation": "대통령은 한·미 동맹을 안정적으로 관리하는 것이 중요하다고 말했다.",
+                      "correctAnswer": "B",
+                      "answerExplanation": "외교 기조의 근본은 국익중심의 실용외교라고 언급했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "5",
-                      "question": "이 대통령이 현재 상황에서 평화체제 구축에 대해 어떻게 언급했는가?",
+                      "question": "이 대통령이 트럼프 대통령과 관련해 언급한 내용은 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "쉽게 얘기할 수 없다"
+                          "text": "돈 드는 훈련 비선호"
                         },
                         {
                           "label": "B",
-                          "text": "즉각적으로 가능하다"
+                          "text": "경제 협력 강화"
                         },
                         {
                           "label": "C",
-                          "text": "필수적이다"
+                          "text": "군사 동맹 체결"
                         },
                         {
                           "label": "D",
-                          "text": "우선순위가 아니다"
+                          "text": "무역 협상 중단"
                         }
                       ],
                       "correctAnswer": "A",
-                      "answerExplanation": "대통령은 현재 단계에서 쉽게 얘기할 수 없다고 말했다.",
+                      "answerExplanation": "트럼프 대통령이 돈 드는 합동군사훈련을 별로 안 좋아한다고 언급했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     }
                   ]
@@ -294,127 +294,127 @@
                   "contents": [
                     {
                       "contentId": "1",
-                      "question": "이 대통령이 한·미동맹을 강조한 발언의 배경에는 어떤 외교적 의도가 있는가?",
+                      "question": "이 대통령이 한·미동맹을 강조하면서도 한·중관계를 안정적으로 관리하려는 이유는 무엇인가?",
                       "options": [
                         {
-                          "label": "C",
-                          "text": "일본과의 관계 개선"
-                        },
-                        {
                           "label": "A",
-                          "text": "중국과의 갈등 심화"
-                        },
-                        {
-                          "label": "D",
-                          "text": "러시아와의 협력 확대"
+                          "text": "경제적 이익 확보"
                         },
                         {
                           "label": "B",
-                          "text": "미국과의 협력 강화"
+                          "text": "문화 교류 증진"
+                        },
+                        {
+                          "label": "C",
+                          "text": "군사적 긴장 완화"
+                        },
+                        {
+                          "label": "D",
+                          "text": "외교적 균형 유지"
                         }
                       ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "한·미동맹을 강조한 것은 미국과의 협력을 강화하여 외교적 안정성을 확보하려는 의도를 반영한다.",
+                      "correctAnswer": "D",
+                      "answerExplanation": "한·미동맹과 한·중관계의 균형 유지 의도는 외교적 안정성을 확보하려는 것이다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "2",
-                      "question": "이 대통령이 중·일 갈등 관련 발언에서 한국 입장을 설명한 이유는 무엇인가?",
+                      "question": "이 대통령이 합동군사훈련의 필요성을 언급한 배경에는 어떤 상황이 작용했는가?",
                       "options": [
                         {
-                          "label": "D",
-                          "text": "군사적 긴장 완화"
+                          "label": "A",
+                          "text": "환경적 문제 발생"
                         },
                         {
                           "label": "B",
-                          "text": "한국의 중립 유지"
+                          "text": "국내 정치적 압력"
                         },
                         {
                           "label": "C",
-                          "text": "경제적 이익 확보"
+                          "text": "경제적 제재 우려"
                         },
                         {
-                          "label": "A",
-                          "text": "양국 간 협력 촉진"
+                          "label": "D",
+                          "text": "국제적 군사 긴장"
                         }
                       ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "한국 입장을 설명한 것은 중·일 갈등에서 한국의 중립적 입장을 유지하려는 외교적 노력을 보여준다.",
+                      "correctAnswer": "D",
+                      "answerExplanation": "합동군사훈련 필요성 언급은 국제적 군사 긴장 상황을 반영한 것이다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "3",
-                      "question": "이 대통령이 합동군사훈련에 대해 언급한 발언의 함의는 무엇인가?",
+                      "question": "이 대통령이 중·일 갈등 상황에서 한국의 입장을 설명한 이유는 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "군사훈련 확대 필요"
-                        },
-                        {
-                          "label": "C",
-                          "text": "훈련 비용 절감"
-                        },
-                        {
-                          "label": "D",
-                          "text": "훈련 중단 결정"
+                          "text": "경제 협력 강화"
                         },
                         {
                           "label": "B",
-                          "text": "평화체제 구축 중요"
+                          "text": "군사 동맹 체결"
+                        },
+                        {
+                          "label": "C",
+                          "text": "문화 교류 확대"
+                        },
+                        {
+                          "label": "D",
+                          "text": "외교적 오해 방지"
                         }
                       ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "합동군사훈련 언급은 평화체제 구축의 중요성을 강조하며 군사적 긴장을 완화하려는 의도를 내포한다.",
+                      "correctAnswer": "D",
+                      "answerExplanation": "중·일 갈등에서 한국 입장 설명은 외교적 오해를 방지하려는 의도이다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "4",
-                      "question": "이 대통령이 한·중관계 안정적 관리의 중요성을 언급한 이유는 무엇인가?",
+                      "question": "이 대통령의 발언에 따르면, 평화체제 구축의 궁극적 목표는 무엇인가?",
                       "options": [
                         {
-                          "label": "C",
-                          "text": "문화적 교류 확대"
-                        },
-                        {
-                          "label": "D",
-                          "text": "정치적 갈등 조정"
-                        },
-                        {
                           "label": "A",
-                          "text": "군사적 협력 강화"
+                          "text": "문화적 교류 증진"
                         },
                         {
                           "label": "B",
-                          "text": "경제적 협력 유지"
+                          "text": "경제적 자립 강화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "군사훈련 비용 절감"
+                        },
+                        {
+                          "label": "D",
+                          "text": "외교적 고립 방지"
                         }
                       ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "한·중관계 안정적 관리는 경제적 협력을 유지하고 양국 간 상호 의존성을 강화하려는 의도를 반영한다.",
+                      "correctAnswer": "C",
+                      "answerExplanation": "평화체제 구축의 목표는 군사훈련 비용 절감을 통해 국익을 도모하는 것이다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
                       "contentId": "5",
-                      "question": "훈련 축소 시사와 동맹·대중 외교 병행 발언의 주요 정책적 함의는 무엇인가?",
+                      "question": "대통령 발언에 비추어, 외교 기조와 연동된 훈련 축소의 핵심 전제를 가장 정확히 지목한 선택지는 무엇인가?",
                       "options": [
                         {
-                          "label": "C",
-                          "text": "대중관계 우선 전환"
-                        },
-                        {
                           "label": "A",
-                          "text": "평화정착 조건부 조정"
-                        },
-                        {
-                          "label": "D",
-                          "text": "오해 방지 역외 중재"
+                          "text": "안정적 평화구도"
                         },
                         {
                           "label": "B",
-                          "text": "동맹 약화 즉각 추진"
+                          "text": "훈련비용 절감 합의"
+                        },
+                        {
+                          "label": "C",
+                          "text": "트럼프 태도 변화"
+                        },
+                        {
+                          "label": "D",
+                          "text": "대중국 관계 진전"
                         }
                       ],
                       "correctAnswer": "A",
-                      "answerExplanation": "훈련 축소를 평화체제 성립에 연계해, 동맹 중심의 점진적 조정 전략을 시사한 것이다.",
+                      "answerExplanation": "평화정착 시 훈련 불요 언급은 조건부 억지에서 구조적 평화로의 전환 의지와 외교 일관성을 시사한다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     }
                   ]

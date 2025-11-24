@@ -45,6 +45,30 @@ template: |-
         "question": "복지 지원 공로로 감사패를 수여받은 단체는 어디인가?",
         "correctAnswer": "샬트르 성 바오로 수녀회",
         "answerExplanation": "하나금융그룹은 노인복지시설을 지원한 공로로 수녀회로부터 감사패를 받았다."
+      }},
+      {{
+        "contentId": "4",
+        "question": "외환시장 불안의 배경이 된 주요 지표는 무엇인가?",
+        "correctAnswer": "원달러 환율",
+        "answerExplanation": "원달러 환율 상승은 외환시장 불안을 키운 요인으로 제시되었다."
+      }},
+      {{
+        "contentId": "5",
+        "question": "협의체 논의에서 중심적으로 다뤄지는 핵심 요소는 무엇인가?",
+        "correctAnswer": "수익성",
+        "answerExplanation": "협의체는 국민연금의 수익성과 시장 안정 조화를 논의한다고 밝혔다."
+      }},
+      {{
+        "contentId": "6",
+        "question": "외환시장 안정 논의를 촉발한 상황과 관련된 기관은 무엇인가?",
+        "correctAnswer": "한국은행",
+        "answerExplanation": "한국은행은 기재부와 함께 외환시장 안정 논의에 참여했다고 설명되었다."
+      }},
+      {{
+        "contentId": "7",
+        "question": "협의체 구성에서 시장 안정과 직결되는 주체는 누구인가?",
+        "correctAnswer": "외환당국",
+        "answerExplanation": "외환당국은 협의체 가동과 시장 안정 대응에 참여했다고 언급되었다."
       }}
     ]
 

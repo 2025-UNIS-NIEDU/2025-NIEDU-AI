@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer, util
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate 
 import yaml
-from langchain.schema.runnable import RunnableMap, RunnableLambda
+from langchain.schema.runnable import RunnableLambda
 from quiz.select_session import select_session
 
 logger = logging.getLogger(__name__)
@@ -34,7 +34,7 @@ def generate_multi_choice_quiz(selected_session=None):
     logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} MULTIPLE_CHOICE 생성 시작")
 
     # === 3️. 모델 & 임베더 설정 ===
-    llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+    llm_n = ChatOpenAI(model="gpt-4o", temperature=0)
     llm_i = ChatOpenAI(model="gpt-4o", temperature=0.3)
     llm_harder = ChatOpenAI(model="gpt-5")
     embedder = SentenceTransformer("jhgan/ko-sroberta-multitask")
@@ -113,29 +113,52 @@ def generate_multi_choice_quiz(selected_session=None):
 
         total_i = (validated_i + harder_i)[:5]
         
-        # 현재 정답 배치 랜덤화
-        for q in total_i:
+        # === 현재 정답 배치 랜덤화 ===
+        def shuffle_options(q):
             options = q.get("options", [])
             correct_label = q.get("correctAnswer")
+
             if not options or not correct_label:
-                continue
+                return q
 
-            correct_text = next((o["text"] for o in options if o["label"] == correct_label), None)
+            # 정답 텍스트 확보
+            correct_text = next(
+                (opt["text"].strip() for opt in options if opt["label"] == correct_label),
+                None
+            )
             if not correct_text:
-                continue
+                return q
 
+            # 옵션 셔플
             random.shuffle(options)
-            new_label = next((o["label"] for o in options if o["text"] == correct_text), None)
+
+            # 라벨 재부여
+            labels = ["A", "B", "C", "D"]
+            for idx, opt in enumerate(options):
+                opt["label"] = labels[idx]
+
+            # 새 정답 라벨
+            new_correct_label = next(
+                (opt["label"] for opt in options if opt["text"].strip() == correct_text),
+                None
+            )
 
             q["options"] = options
-            if new_label:
-                q["correctAnswer"] = new_label
+            q["correctAnswer"] = new_correct_label
+            return q
 
-        # contentId 재인덱싱        
+        # === ★ N 단계 셔플 적용 ===
+        for q in fact_n:
+            shuffle_options(q)
+
+        # === ★ I 단계 셔플 적용 ===
+        for q in total_i:
+            shuffle_options(q)
+
+        # contentId 재정렬
         for idx, q in enumerate(total_i, start=1):
             q["contentId"] = str(idx)
 
-        # 결과 반환
         return {"fact_n": fact_n, "inference_i": total_i}
 
     # === 9. 출력 포맷 ===

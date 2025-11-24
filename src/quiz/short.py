@@ -113,7 +113,7 @@ def generate_short_quiz(selected_session=None):
     logger.info(f"[LLM 키워드 정제 완료]")
 
     # === 4. 모델 설정 ===
-    llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    llm_i = ChatOpenAI(model="gpt-4o", temperature=0)
     llm_e = ChatOpenAI(model="gpt-4o", temperature=0.3)
 
     # === 5. YAML 프롬프트 로드 (I / E-1 / E-2 분리) ===

@@ -6,27 +6,27 @@
     "contents": [
       {
         "contentId": "1",
-        "question": "이 대통령이 언급한 평화체제 구축의 필요성은 무엇과 관련이 있는가?",
+        "question": "이 대통령이 언급한 평화체제 구축의 결과는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "합동군사훈련"
+            "text": "합동군사훈련 중단"
           },
           {
             "label": "B",
-            "text": "경제 협력"
+            "text": "무역 협정 체결"
           },
           {
             "label": "C",
-            "text": "국제 연합"
+            "text": "경제 제재 강화"
           },
           {
             "label": "D",
-            "text": "무역 협정"
+            "text": "외교 관계 단절"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "대통령은 평화체제를 구축하면 합동군사훈련이 필요 없다고 말했다.",
+        "answerExplanation": "평화체제가 확고하면 합동군사훈련을 안 해도 된다고 언급했다.",
         "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
       },
       {
@@ -35,98 +35,98 @@
         "options": [
           {
             "label": "A",
-            "text": "한·중 동맹"
+            "text": "한·일동맹 중심"
           },
           {
             "label": "B",
-            "text": "국익 중심의 실용외교"
+            "text": "한·미동맹 중심"
           },
           {
             "label": "C",
-            "text": "다자간 협력"
+            "text": "한·유럽동맹 중심"
           },
           {
             "label": "D",
-            "text": "군사적 동맹"
+            "text": "한·러동맹 중심"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "대통령은 국익 중심의 실용외교를 기본 원칙으로 강조했다.",
+        "answerExplanation": "대한민국 외교의 기본 원칙은 한·미동맹을 근간으로 한다고 밝혔다.",
         "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
       },
       {
         "contentId": "3",
-        "question": "이 대통령이 중·일 갈등에 대해 어떤 입장을 취했는가?",
+        "question": "이 대통령이 중·일 갈등과 관련해 언급한 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "중립적인 태도"
-          },
-          {
-            "label": "B",
             "text": "한국 입장 설명"
           },
           {
+            "label": "B",
+            "text": "군사 동맹 강화"
+          },
+          {
             "label": "C",
-            "text": "갈등 조장"
+            "text": "경제 제재 발표"
           },
           {
             "label": "D",
-            "text": "무시하는 태도"
+            "text": "무역 협상 체결"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "대통령은 한국 입장을 충실히 설명했다고 밝혔다.",
+        "correctAnswer": "A",
+        "answerExplanation": "중·일 갈등과 관련해 한국 입장을 충실히 설명했다고 언급했다.",
         "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
       },
       {
         "contentId": "4",
-        "question": "이 대통령이 한·미 동맹의 중요성을 강조한 이유는 무엇인가?",
+        "question": "이 대통령이 외교 기조의 근본으로 언급한 것은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "안정적인 관리"
+            "text": "군사중심 외교"
           },
           {
             "label": "B",
-            "text": "군사적 강화"
+            "text": "국익중심 실용외교"
           },
           {
             "label": "C",
-            "text": "경제적 이익"
+            "text": "문화중심 외교"
           },
           {
             "label": "D",
-            "text": "문화 교류"
+            "text": "경제중심 외교"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "대통령은 한·미 동맹을 안정적으로 관리하는 것이 중요하다고 말했다.",
+        "correctAnswer": "B",
+        "answerExplanation": "외교 기조의 근본은 국익중심의 실용외교라고 언급했다.",
         "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
       },
       {
         "contentId": "5",
-        "question": "이 대통령이 현재 상황에서 평화체제 구축에 대해 어떻게 언급했는가?",
+        "question": "이 대통령이 트럼프 대통령과 관련해 언급한 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "쉽게 얘기할 수 없다"
+            "text": "돈 드는 훈련 비선호"
           },
           {
             "label": "B",
-            "text": "즉각적으로 가능하다"
+            "text": "경제 협력 강화"
           },
           {
             "label": "C",
-            "text": "필수적이다"
+            "text": "군사 동맹 체결"
           },
           {
             "label": "D",
-            "text": "우선순위가 아니다"
+            "text": "무역 협상 중단"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "대통령은 현재 단계에서 쉽게 얘기할 수 없다고 말했다.",
+        "answerExplanation": "트럼프 대통령이 돈 드는 합동군사훈련을 별로 안 좋아한다고 언급했다.",
         "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
       }
     ]

@@ -155,32 +155,32 @@
                   "contents": [
                     {
                       "contentId": "1",
-                      "question": "외환시장 안정과 관련해 어떤 기관들이 협의체를 구성했는가?",
+                      "question": "외환시장 안정을 위해 가동된 협의체에 참여한 기관은 어디인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "기재부와 보건복지부"
+                          "text": "보건복지부와 기재부"
                         },
                         {
                           "label": "B",
-                          "text": "국민연금과 한은"
-                        },
-                        {
-                          "label": "C",
                           "text": "기재부와 한은"
                         },
                         {
+                          "label": "C",
+                          "text": "국민연금과 한은"
+                        },
+                        {
                           "label": "D",
-                          "text": "기재부, 보건복지부, 한은, 국민연금"
+                          "text": "기재부와 외환당국"
                         }
                       ],
-                      "correctAnswer": "D",
-                      "answerExplanation": "4자 협의체는 기재부, 보건복지부, 한은, 국민연금으로 구성되었다.",
+                      "correctAnswer": "C",
+                      "answerExplanation": "협의체에는 기재부, 보건복지부, 한은, 국민연금이 참여했다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     },
                     {
                       "contentId": "2",
-                      "question": "4자 협의체의 주요 논의 주제는 무엇인가?",
+                      "question": "외환시장 안정을 위해 국민연금이 활용되는 이유는 무엇인가?",
                       "options": [
                         {
                           "label": "A",
@@ -188,94 +188,94 @@
                         },
                         {
                           "label": "B",
-                          "text": "외환시장의 불안정"
+                          "text": "국민연금의 외환 보유량"
                         },
                         {
                           "label": "C",
-                          "text": "투자 확대 방안"
+                          "text": "국민연금의 자본시장 영향력"
                         },
                         {
                           "label": "D",
-                          "text": "수익성과 안정 조화"
+                          "text": "국민연금의 해외투자 경험"
                         }
                       ],
-                      "correctAnswer": "D",
-                      "answerExplanation": "협의체에서는 수익성과 외환시장의 안정 조화를 논의할 예정이다.",
+                      "correctAnswer": "C",
+                      "answerExplanation": "국민연금은 자본시장의 큰손으로 외환시장 안정에 활용된다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     },
                     {
                       "contentId": "3",
-                      "question": "외환시장에 불안감을 주는 원달러 환율은 얼마를 넘었는가?",
+                      "question": "외환시장 안정을 위한 4자 협의체의 주요 논의 주제는 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "1400원"
+                          "text": "외환시장 개입 방법"
                         },
                         {
                           "label": "B",
-                          "text": "1450원"
+                          "text": "환율 변동 예측"
                         },
                         {
                           "label": "C",
-                          "text": "1470원"
+                          "text": "수익성과 안정의 조화"
                         },
                         {
                           "label": "D",
-                          "text": "1500원"
+                          "text": "국민연금의 수익성"
                         }
                       ],
                       "correctAnswer": "C",
-                      "answerExplanation": "원달러 환율은 1470원을 넘어서 시장에 불안감을 주었다.",
+                      "answerExplanation": "협의체는 수익성과 외환시장 안정의 조화를 논의할 예정이다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     },
                     {
                       "contentId": "4",
-                      "question": "국민연금의 역할은 무엇으로 해석되는가?",
+                      "question": "외환시장 안정을 위해 국민연금이 참여하는 협의체의 성격은 무엇인가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "자본시장의 큰손 활용"
+                          "text": "5자 협의체"
                         },
                         {
                           "label": "B",
-                          "text": "외환시장 개입"
+                          "text": "6자 협의체"
                         },
                         {
                           "label": "C",
-                          "text": "투자 수익 극대화"
+                          "text": "4자 협의체"
                         },
                         {
                           "label": "D",
-                          "text": "정책 결정 참여"
+                          "text": "3자 협의체"
                         }
                       ],
-                      "correctAnswer": "A",
-                      "answerExplanation": "국민연금은 자본시장의 큰손으로 외환시장 안정에 기여할 것으로 해석된다.",
+                      "correctAnswer": "C",
+                      "answerExplanation": "외환시장 안정을 위해 4자 협의체가 가동되었다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     },
                     {
                       "contentId": "5",
-                      "question": "기재부의 발표에 따르면 앞으로 어떤 방안을 논의할 예정인가?",
+                      "question": "외환시장 안정에 대한 국민연금의 역할은 무엇으로 해석되는가?",
                       "options": [
                         {
                           "label": "A",
-                          "text": "외환시장 개입 방안"
+                          "text": "환율 조작 방지"
                         },
                         {
                           "label": "B",
-                          "text": "국민연금의 투자 방안"
+                          "text": "외환 보유량 증가"
                         },
                         {
                           "label": "C",
-                          "text": "수익성과 안정 방안"
+                          "text": "자본시장 영향력 활용"
                         },
                         {
                           "label": "D",
-                          "text": "해외 투자 확대 방안"
+                          "text": "해외투자 축소"
                         }
                       ],
                       "correctAnswer": "C",
-                      "answerExplanation": "기재부는 수익성과 외환시장의 안정 방안을 논의할 예정이라고 밝혔다.",
+                      "answerExplanation": "국민연금의 참여는 자본시장 큰손으로서의 영향력 활용을 의미한다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     }
                   ]
@@ -336,127 +336,127 @@
                   "contents": [
                     {
                       "contentId": "1",
-                      "question": "4자 협의체가 외환시장 안정을 위해 국민연금을 활용하려는 이유는 무엇인가?",
+                      "question": "외환당국과 국민연금이 4자 협의체를 가동한 주된 이유는 무엇인가?",
                       "options": [
                         {
-                          "label": "B",
-                          "text": "국민연금의 자본시장 영향력"
-                        },
-                        {
-                          "label": "C",
-                          "text": "국민연금의 해외 투자 감소"
-                        },
-                        {
                           "label": "A",
-                          "text": "국민연금의 외환 보유량 증가"
-                        },
-                        {
-                          "label": "D",
-                          "text": "국민연금의 수익성 하락"
-                        }
-                      ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "국민연금은 자본시장의 큰손으로 외환시장 안정에 중요한 역할을 할 수 있다.",
-                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
-                    },
-                    {
-                      "contentId": "2",
-                      "question": "4자 협의체가 국민연금의 수익성과 외환시장 안정을 동시에 달성하려는 이유는 무엇인가?",
-                      "options": [
-                        {
-                          "label": "C",
-                          "text": "국민연금의 역할 확대"
-                        },
-                        {
-                          "label": "A",
-                          "text": "국민연금의 독립성 강화"
+                          "text": "국내 투자 확대"
                         },
                         {
                           "label": "B",
-                          "text": "경제 성장률 저하"
+                          "text": "원달러 환율 안정"
                         },
                         {
-                          "label": "D",
-                          "text": "경제 안정과 수익성 조화"
-                        }
-                      ],
-                      "correctAnswer": "D",
-                      "answerExplanation": "국민연금의 수익성과 외환시장 안정을 조화롭게 달성하여 경제 안정과 수익성을 동시에 추구하려는 것이다.",
-                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
-                    },
-                    {
-                      "contentId": "3",
-                      "question": "보건복지부가 4자 협의체에 참여하는 이유는 무엇인가?",
-                      "options": [
-                        {
-                          "label": "A",
-                          "text": "보건 정책 수립"
+                          "label": "C",
+                          "text": "금리 인상 조정"
                         },
                         {
                           "label": "D",
                           "text": "복지 예산 증대"
-                        },
-                        {
-                          "label": "C",
-                          "text": "외환시장 직접 개입"
-                        },
-                        {
-                          "label": "B",
-                          "text": "국민연금 관리 감독"
                         }
                       ],
                       "correctAnswer": "B",
-                      "answerExplanation": "보건복지부는 국민연금을 관리 감독하며 외환시장 안정에 기여하기 위해 협의체에 참여한다.",
+                      "answerExplanation": "원달러 환율이 1470원을 넘어서면서 시장 불안이 커졌고, 이를 안정시키기 위해 4자 협의체가 가동되었다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": "2",
+                      "question": "4자 협의체에 국민연금이 참여한 것은 어떤 의미를 갖는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "복지정책 개편"
+                        },
+                        {
+                          "label": "B",
+                          "text": "금융 규제 완화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "외환시장 안정 기여"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국민연금의 독립성 강화"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "국민연금이 자본시장의 큰손으로서 외환시장 안정에 기여하기 위해 4자 협의체에 참여한 것이다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": "3",
+                      "question": "기재부가 4자 협의체에서 논의할 방안은 무엇을 목표로 하는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "복지 예산 절감"
+                        },
+                        {
+                          "label": "B",
+                          "text": "시장 안정과 수익성 조화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "환율 변동성 확대"
+                        },
+                        {
+                          "label": "D",
+                          "text": "수익성 극대화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "기재부는 국민연금의 수익성과 외환시장의 안정을 조화롭게 달성할 방안을 논의할 예정이다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     },
                     {
                       "contentId": "4",
-                      "question": "협의체가 연금 운용과 환시안정 사이에서 설정하려는 핵심 정책 균형은 무엇인가?",
+                      "question": "외환시장 안정을 위한 4자 협의체의 가동은 어떤 배경에서 이루어졌는가?",
                       "options": [
                         {
-                          "label": "B",
-                          "text": "헤지비율 상향"
-                        },
-                        {
                           "label": "A",
-                          "text": "수익-안정 조화"
+                          "text": "환율 급등으로 인한 불안"
                         },
                         {
-                          "label": "D",
-                          "text": "유출입 규제"
+                          "label": "B",
+                          "text": "수출 증가로 인한 변화"
                         },
                         {
                           "label": "C",
-                          "text": "매수개입 확대"
+                          "text": "내수 경기 침체"
+                        },
+                        {
+                          "label": "D",
+                          "text": "금리 인하로 인한 효과"
                         }
                       ],
                       "correctAnswer": "A",
-                      "answerExplanation": "환율 급등에 출범한 협의체는 수익과 안정을 병행해 연금의 완충 기능을 제도화하려는 조치다.",
+                      "answerExplanation": "원달러 환율이 1470원을 넘어서면서 시장에 불안감을 주었고, 이에 따라 4자 협의체가 가동되었다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     },
                     {
                       "contentId": "5",
-                      "question": "복지부·연금 참여가 외환불안 대응에서 시사하는 구체적 작동 원리는 무엇이라 보는가?",
+                      "question": "국민연금의 해외투자 확대가 외환시장에 미치는 영향은 무엇인가?",
                       "options": [
                         {
-                          "label": "D",
-                          "text": "외화보유고 매각"
+                          "label": "A",
+                          "text": "수출 감소 유발"
                         },
                         {
                           "label": "B",
-                          "text": "연금자금 흐름활용"
+                          "text": "금리 상승 촉진"
                         },
                         {
                           "label": "C",
-                          "text": "기준금리 조정"
+                          "text": "내수 시장 위축"
                         },
                         {
-                          "label": "A",
-                          "text": "재정지출 확대"
+                          "label": "D",
+                          "text": "환율 안정 기여"
                         }
                       ],
-                      "correctAnswer": "B",
-                      "answerExplanation": "큰손 연금을 동원해 자금흐름을 조율함으로써 외화 수급 불균형을 완화하려는 신호다.",
+                      "correctAnswer": "D",
+                      "answerExplanation": "국민연금의 해외투자 확대는 외환시장 안정에 기여할 수 있는 방안으로 평가된다.",
                       "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
                     }
                   ]
