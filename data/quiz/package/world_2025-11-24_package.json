@@ -112,7 +112,7 @@
                   "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "이 대통령이 언급한 평화체제 구축의 결과는 무엇인가?",
                       "options": [
                         {
@@ -137,7 +137,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "이 대통령이 강조한 대한민국 외교의 기본 원칙은 무엇인가?",
                       "options": [
                         {
@@ -162,7 +162,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "이 대통령이 중·일 갈등과 관련해 언급한 내용은 무엇인가?",
                       "options": [
                         {
@@ -187,7 +187,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "이 대통령이 외교 기조의 근본으로 언급한 것은 무엇인가?",
                       "options": [
                         {
@@ -212,7 +212,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "이 대통령이 트럼프 대통령과 관련해 언급한 내용은 무엇인가?",
                       "options": [
                         {
@@ -293,7 +293,7 @@
                   "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "이 대통령이 한·미동맹을 강조하면서도 한·중관계를 안정적으로 관리하려는 이유는 무엇인가?",
                       "options": [
                         {
@@ -318,7 +318,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "이 대통령이 합동군사훈련의 필요성을 언급한 배경에는 어떤 상황이 작용했는가?",
                       "options": [
                         {
@@ -343,7 +343,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "이 대통령이 중·일 갈등 상황에서 한국의 입장을 설명한 이유는 무엇인가?",
                       "options": [
                         {
@@ -368,7 +368,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "이 대통령의 발언에 따르면, 평화체제 구축의 궁극적 목표는 무엇인가?",
                       "options": [
                         {
@@ -393,7 +393,7 @@
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "대통령 발언에 비추어, 외교 기조와 연동된 훈련 축소의 핵심 전제를 가장 정확히 지목한 선택지는 무엇인가?",
                       "options": [
                         {
@@ -425,35 +425,35 @@
                   "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "윤석열 대통령이 언급한 군사훈련의 대안은 무엇인가?",
                       "correctAnswer": "평화체제",
                       "answerExplanation": "윤 대통령은 평화체제 구축 시 합동군사훈련을 하지 않아도 될 것이라고 말했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "윤석열 대통령이 강조한 외교의 기본 원칙은 무엇인가?",
                       "correctAnswer": "한·미동맹",
                       "answerExplanation": "윤 대통령은 외교의 기본 원칙이 한·미동맹을 바탕으로 한다고 설명했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "윤석열 대통령이 중·일 갈등에 대해 전달한 것은 무엇인가?",
                       "correctAnswer": "한국의 입장",
                       "answerExplanation": "윤 대통령은 중·일 갈등에 대해 한국의 입장을 양측에 전달했다고 밝혔다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "윤석열 대통령이 실용외교의 기초로 삼고 있는 것은 무엇인가?",
                       "correctAnswer": "국익 중심",
                       "answerExplanation": "윤 대통령은 실용외교가 국익 중심에 기초한다고 강조했다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "윤석열 대통령이 현재 상황에 대해 언급한 것은 무엇인가?",
                       "correctAnswer": "쉽게 말할 수 없는 상황",
                       "answerExplanation": "윤 대통령은 현재 상황이 쉽게 말할 수 없는 상황임을 덧붙였다.",
@@ -525,35 +525,35 @@
                   "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
                   "contents": [
                     {
-                      "contentId": "1",
+                      "contentId": 1,
                       "question": "국가 이익을 최우선으로 하여 실용성을 강조하는 외교 전략의 기초로 윤석열 대통령이 삼고 있는 것은 무엇입니까?",
                       "correctAnswer": "국익 중심",
                       "answerExplanation": "국익 중심은 실용성을 강조하며 외교 정책의 실효성을 높인다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "2",
+                      "contentId": 2,
                       "question": "복잡한 국제 정세를 반영하며, 윤석열 대통령이 현재 상황에 대해 언급한 표현은 무엇입니까?",
                       "correctAnswer": "쉽게 말할 수 없는 상황",
                       "answerExplanation": "쉽게 말할 수 없는 상황은 복잡한 국제 정세의 불확실성을 나타낸다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "3",
+                      "contentId": 3,
                       "question": "국제적 갈등 상황에서 중재적 역할을 수행하며, 윤석열 대통령이 중·일 갈등에 대해 전달한 것은 무엇입니까?",
                       "correctAnswer": "한국의 입장",
                       "answerExplanation": "한국의 입장 전달은 중재적 역할을 통해 외교적 균형을 추구한다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "4",
+                      "contentId": 4,
                       "question": "외교적 안정과 안보 협력을 강화하는 데 중점을 두며, 윤석열 대통령이 외교의 기본 원칙으로 강조한 동맹은 무엇입니까?",
                       "correctAnswer": "한·미동맹",
                       "answerExplanation": "한·미동맹은 외교적 안정과 안보 협력의 핵심 축을 형성한다.",
                       "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     },
                     {
-                      "contentId": "5",
+                      "contentId": 5,
                       "question": "군사적 긴장 완화와 상호 신뢰 구축을 목표로 하며, 합동군사훈련의 대안으로 제시된 체제는 무엇입니까?",
                       "correctAnswer": "평화체제",
                       "answerExplanation": "평화체제는 군사적 긴장을 줄이고 외교적 신뢰를 증진하는 목표를 지닌다.",
@@ -567,17 +567,17 @@
                   "contents": [
                     [
                       {
-                        "contentId": "1",
+                        "contentId": 1,
                         "question": "이 대통령은 평화체제를 구축하면 합동군사훈련을 ______",
                         "referenceAnswer": "하지 않아도 될 것이라고 밝혔다."
                       },
                       {
-                        "contentId": "2",
+                        "contentId": 2,
                         "question": "이 대통령은 외교의 기본 원칙으로 한·미동맹을 ______",
                         "referenceAnswer": "근간으로 삼고 있다고 강조했다."
                       },
                       {
-                        "contentId": "3",
+                        "contentId": 3,
                         "question": "이 대통령은 중·일 갈등에 대해 한국 입장을 ______",
                         "referenceAnswer": "충실히 설명했다고 말했다."
                       }

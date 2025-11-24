@@ -167,6 +167,25 @@ def build_course_packages():
 
             # === 최종 저장 ===
             final_package = {"courses": courses}
+
+            stack = [final_package]
+            while stack:
+                item = stack.pop()
+                if isinstance(item, dict):
+                    for k, v in item.items():
+                        if k == "contentId":
+                            try:
+                                item[k] = int(v)
+                            except:
+                                pass
+                        else:
+                            if isinstance(v, (dict, list)):
+                                stack.append(v)
+                elif isinstance(item, list):
+                    for v in item:
+                        if isinstance(v, (dict, list)):
+                            stack.append(v)
+                            
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(final_package, f, ensure_ascii=False, indent=2)
 
