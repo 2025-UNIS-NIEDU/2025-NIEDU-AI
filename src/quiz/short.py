@@ -147,6 +147,27 @@ def generate_short_quiz(selected_session=None):
         except json.JSONDecodeError:
             logger.warning("JSON 파싱 오류 발생, 빈 리스트 반환")
             return []
+        
+    def format_short_output(items, sourceUrl):
+        """LLM 출력물이 망가져도 구조를 강제로 정규화"""
+        contents = []
+        for idx, item in enumerate(items, start=1):
+            if not isinstance(item, dict):
+                item = {}
+
+            q = item.get("question", "").strip() or "질문을 불러올 수 없습니다."
+            a = item.get("correctAnswer", "").strip() or "정답 정보 없음"
+            ex = item.get("answerExplanation", "").strip()
+
+            contents.append({
+                "contentId": idx,
+                "question": q or "",
+                "correctAnswer": a or "",
+                "answerExplanation": ex or "",
+                "sourceUrl": sourceUrl,
+            })
+
+        return contents
 
     # === 7. 문제 생성 ===
     try:
@@ -169,17 +190,11 @@ def generate_short_quiz(selected_session=None):
 
         # --- (3) 문제 랜덤화 및 contentId 부여 ---
         random.shuffle(all_quiz_e)
-        for idx, q in enumerate(all_quiz_e, start=1):
-            q["contentId"] = str(idx)
 
-        e_quiz = all_quiz_e
+        # === LLM 출력 정규화 (append-safe) ===
+        i_quiz = format_short_output(i_quiz, sourceUrl)
+        e_quiz = format_short_output(all_quiz_e, sourceUrl)
 
-        # --- (4) 문제 내부에 sourceUrl 삽입  ---
-        for q in i_quiz:
-            q["sourceUrl"] = sourceUrl
-
-        for q in e_quiz:
-            q["sourceUrl"] = sourceUrl
 
     except Exception as e:
         logger.error(f"[ERROR] {topic} 코스 {course_id} 세션 {session_id} 퀴즈 생성 중 오류: {e}")
