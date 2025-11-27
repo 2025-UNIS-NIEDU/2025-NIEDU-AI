@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "이스라엘의 정치적 불안정 속에서 해외 이주를 촉발한 주요 정치적 갈등의 중심에 있는 인물은 누구입니까?",
+        "correctAnswer": "네타냐후 정권",
+        "answerExplanation": "네타냐후 정권에 대한 불만은 정치적 신뢰 약화와 사회 분열을 초래한다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 2,
+        "question": "이스라엘의 해외 이주를 가속화하며 지역 안보와 정치적 불안을 심화시킨 주요 군사적 갈등은 무엇입니까?",
+        "correctAnswer": "가자 전쟁",
+        "answerExplanation": "가자 전쟁은 정치적 불안정과 사회적 갈등을 심화시키는 요인이다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 3,
+        "question": "이스라엘의 인재 유출이 장기적으로 국가의 경제적 역량과 글로벌 경쟁력에 미칠 수 있는 잠재적 영향은 무엇입니까?",
+        "correctAnswer": "경제",
+        "answerExplanation": "대규모 이탈은 경제 성장 둔화와 글로벌 경쟁력 약화를 초래할 수 있다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 4,
+        "question": "이스라엘의 인구 이동에서 진보적 가치관을 가진 고학력층의 해외 이주가 시사하는 사회적 변화는 무엇입니까?",
+        "correctAnswer": "진보",
+        "answerExplanation": "진보 성향의 고학력층 이주는 사회적 다양성과 균형에 영향을 미친다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 5,
+        "question": "이스라엘의 해외 이주 현상에서 지적 자본의 유출을 의미하며 사회적 불균형을 초래할 수 있는 계층은 무엇입니까?",
+        "correctAnswer": "고학력층",
+        "answerExplanation": "고학력층의 이주는 국가 경쟁력 약화와 사회적 불평등을 심화시킨다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      }
+    ]
+  }
+]

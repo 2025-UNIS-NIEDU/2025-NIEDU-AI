@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "지난해 이스라엘에서 해외로 이주한 사람들의 주된 성향은 무엇인가?",
+        "correctAnswer": "진보",
+        "answerExplanation": "이들은 주로 진보 성향의 고학력 및 고소득층으로 나타났다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 2,
+        "question": "이스라엘에서 지난해 해외로 이주한 사람들의 주요 불만 대상은 누구인가?",
+        "correctAnswer": "네타냐후 정권",
+        "answerExplanation": "베냐민 네타냐후 정권에 대한 불만이 이들의 이주 원인으로 분석된다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 3,
+        "question": "이스라엘의 해외 이주자들이 주로 속한 사회적 계층은 무엇인가?",
+        "correctAnswer": "고학력층",
+        "answerExplanation": "이들은 주로 진보 성향의 고학력 및 고소득층으로 나타났다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 4,
+        "question": "이스라엘의 해외 이주 현상에 영향을 미친 전쟁은 무엇인가?",
+        "correctAnswer": "가자 전쟁",
+        "answerExplanation": "가자 전쟁과 네타냐후 정권에 대한 불만이 이들의 이주 원인으로 분석된다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      },
+      {
+        "contentId": 5,
+        "question": "이스라엘의 대규모 이탈이 미칠 것으로 예상되는 분야는 무엇인가?",
+        "correctAnswer": "경제",
+        "answerExplanation": "전문가들은 대규모 이탈이 이스라엘의 경제, 사회, 정치에 중대한 영향을 미칠 것이라고 전망하고 있다.",
+        "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "전쟁 종식을 위한 국제적 협력의 주체로, 젤렌스키 대통령이 협력하고 있는 주요 파트너는 누구입니까?",
+        "correctAnswer": "파트너들",
+        "answerExplanation": "파트너들은 전쟁 종식을 위한 국제적 협력의 핵심 주체다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 2,
+        "question": "전쟁 종식을 위한 협력의 지리적 중심지로, 젤렌스키 대통령이 협력하고 있는 지역은 어디입니까?",
+        "correctAnswer": "유럽",
+        "answerExplanation": "유럽은 전쟁 종식을 위한 국제 협력의 지리적 중심지로 작용한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 3,
+        "question": "국제 안보와 평화 구축을 위한 종전안 논의의 중추적 역할을 수행하는 국가로, 우크라이나 대통령이 협력을 지속하겠다고 밝힌 나라는 어디입니까?",
+        "correctAnswer": "미국",
+        "answerExplanation": "미국은 우크라이나와의 종전안 논의에서 핵심적 역할을 담당한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 4,
+        "question": "전쟁 종식을 위한 체계적 접근을 지향하며, 젤렌스키 대통령이 마련하려고 하는 것은 무엇입니까?",
+        "correctAnswer": "구체적인 단계들",
+        "answerExplanation": "구체적인 단계들은 전쟁 종식을 위한 체계적 접근을 지향한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 5,
+        "question": "젤렌스키 대통령이 국제 협력의 진전을 설명한 시점으로, 종전안 관련 회동이 이루어진 날은 언제입니까?",
+        "correctAnswer": "전날",
+        "answerExplanation": "전날 회동은 국제 협력의 진전을 보여주는 중요한 시점이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      }
+    ]
+  }
+]
