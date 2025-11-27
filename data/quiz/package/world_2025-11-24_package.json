@@ -29,26 +29,26 @@
                   "contentType": "SUMMARY_READING",
                   "contents": [
                     {
-                      "summary": "2023년 9월 29일, 윤석열 대통령은 평화체제 구축 시 도널드 트럼프 대통령이 반대하는 합동군사훈련을 하지 않아도 될 것이라고 말했다. 그러나 그는 현재 상황이 쉽게 말할 수 없는 상황임을 덧붙였다. 윤 대통령은 대한민국 외교의 기본 원칙이 한·미동맹을 바탕으로 한·중관계의 안정적 관리임을 설명하며, 이는 국익 중심의 실용외교에 기초한다고 강조했다. 또한 그는 중·일 갈등에 대해 한국의 입장을 양측에 충실히 전달했다고 밝혔다.",
+                      "summary": "이 대통령은 중·일 갈등에 대해 냉철한 관찰이 필요하며, 국익 극대화를 위해 최선을 다해야 한다고 밝혔다. 그는 평화체제를 구축하면 불필요한 군사훈련을 피할 수 있다고 언급했지만, 현재 상황에서는 쉽게 말할 수 없다고 덧붙였다. 또한 대한민국 외교의 기본 원칙은 한·미동맹을 바탕으로 한·중관계를 안정적으로 관리하는 것이며, 이는 국익 중심의 실용외교에 기초한다고 설명했다. 이 대통령은 양측과의 회동에서 한국의 입장을 충실히 설명하고, 오해가 없도록 협의했다고 말했다.",
                       "keywords": [
                         {
-                          "word": "윤석열",
+                          "word": "이 대통령",
                           "isTopicWord": true
                         },
                         {
-                          "word": "한·미동맹",
+                          "word": "국익 중심의 실용외교",
                           "isTopicWord": true
                         },
                         {
-                          "word": "평화체제",
+                          "word": "한·중관계",
                           "isTopicWord": false
                         },
                         {
-                          "word": "국익",
+                          "word": "한국",
                           "isTopicWord": false
                         },
                         {
-                          "word": "실용외교",
+                          "word": "회동",
                           "isTopicWord": false
                         }
                       ]
@@ -103,6 +103,48 @@
                       "circumstance": "이 과정에서 이 대통령은 중·일 회동에서 한국의 입장을 충실히 설명하고, 갈등의 곡해를 방지하기 위해 협의했다고 전했다. 이러한 발언은 여당과 야당 간의 외교 정책에 대한 논의로 이어졌다.",
                       "result": "결국 이 대통령은 중·일 갈등 상황을 냉철하게 지켜보며 국익을 극대화하는 외교를 지속하겠다는 의지를 표명했다. 이에 따라 정부의 외교 전략에 대한 여론이 주목받고 있다.",
                       "effect": "이번 발언은 국익 중심의 외교의 중요성을 다시 한번 일깨우며, 향후 외교 정책의 방향성과 전략적 접근의 필요성을 강조하는 계기가 되었다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "OX_QUIZ",
+                  "sourceUrl": "https://www.khan.co.kr/article/202511241910001",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이 대통령은 평화체제를 구축하면 합동군사훈련을 하지 않아도 된다고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "이 대통령은 평화체제 구축 시 합동군사훈련이 필요 없다고 언급했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이 대통령은 한·미동맹을 기본 원칙으로 삼지 않는다고 말했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "이 대통령은 한·미동맹을 대한민국 외교의 기본 원칙으로 삼고 있다고 밝혔다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이 대통령은 한·중관계를 불안정하게 관리해야 한다고 말했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "이 대통령은 한·중관계를 안정적으로 관리해야 한다고 강조했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이 대통령은 중·일 갈등 고조와 관련해 한국 입장을 잘 설명했다고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "이 대통령은 중·일 갈등에서 한국 입장을 충실히 설명했다고 언급했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이 대통령은 국익중심의 실용외교가 대한민국 외교의 근본이라고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "이 대통령은 국익중심의 실용외교가 외교의 근본이라고 강조했다.",
+                      "sourceUrl": "https://www.khan.co.kr/article/202511241910001"
                     }
                   ]
                 },
@@ -261,14 +303,14 @@
                   "contentType": "SUMMARY_READING",
                   "contents": [
                     {
-                      "summary": "2023년 9월 29일, 윤석열 대통령은 평화체제 구축 시 도널드 트럼프 대통령이 반대하는 합동군사훈련을 하지 않아도 될 것이라고 말했다. 그러나 그는 현재 상황이 쉽게 말할 수 없는 상황임을 덧붙였다. 윤 대통령은 대한민국 외교의 기본 원칙이 한·미동맹을 바탕으로 한·중관계의 안정적 관리임을 설명하며, 이는 국익 중심의 실용외교에 기초한다고 강조했다. 또한 그는 중·일 갈등에 대해 한국의 입장을 양측에 충실히 전달했다고 밝혔다.",
+                      "summary": "이 대통령은 중·일 갈등에 대해 냉철한 관찰이 필요하며, 국익 극대화를 위해 최선을 다해야 한다고 밝혔다. 그는 평화체제를 구축하면 불필요한 군사훈련을 피할 수 있다고 언급했지만, 현재 상황에서는 쉽게 말할 수 없다고 덧붙였다. 또한 대한민국 외교의 기본 원칙은 한·미동맹을 바탕으로 한·중관계를 안정적으로 관리하는 것이며, 이는 국익 중심의 실용외교에 기초한다고 설명했다. 이 대통령은 양측과의 회동에서 한국의 입장을 충실히 설명하고, 오해가 없도록 협의했다고 말했다.",
                       "keywords": [
                         {
-                          "word": "윤석열",
+                          "word": "이 대통령",
                           "isTopicWord": true
                         },
                         {
-                          "word": "한·미동맹",
+                          "word": "국익 중심의 실용외교",
                           "isTopicWord": true
                         },
                         {
@@ -276,11 +318,11 @@
                           "isTopicWord": false
                         },
                         {
-                          "word": "한국",
+                          "word": "외교",
                           "isTopicWord": false
                         },
                         {
-                          "word": "합동군사훈련",
+                          "word": "한·미동맹",
                           "isTopicWord": false
                         }
                       ]
@@ -493,26 +535,26 @@
                   "contentType": "SUMMARY_READING",
                   "contents": [
                     {
-                      "summary": "2023년 9월 29일, 윤석열 대통령은 평화체제 구축 시 도널드 트럼프 대통령이 반대하는 합동군사훈련을 하지 않아도 될 것이라고 말했다. 그러나 그는 현재 상황이 쉽게 말할 수 없는 상황임을 덧붙였다. 윤 대통령은 대한민국 외교의 기본 원칙이 한·미동맹을 바탕으로 한·중관계의 안정적 관리임을 설명하며, 이는 국익 중심의 실용외교에 기초한다고 강조했다. 또한 그는 중·일 갈등에 대해 한국의 입장을 양측에 충실히 전달했다고 밝혔다.",
+                      "summary": "이 대통령은 중·일 갈등에 대해 냉철한 관찰이 필요하며, 국익 극대화를 위해 최선을 다해야 한다고 밝혔다. 그는 평화체제를 구축하면 불필요한 군사훈련을 피할 수 있다고 언급했지만, 현재 상황에서는 쉽게 말할 수 없다고 덧붙였다. 또한 대한민국 외교의 기본 원칙은 한·미동맹을 바탕으로 한·중관계를 안정적으로 관리하는 것이며, 이는 국익 중심의 실용외교에 기초한다고 설명했다. 이 대통령은 양측과의 회동에서 한국의 입장을 충실히 설명하고, 오해가 없도록 협의했다고 말했다.",
                       "keywords": [
                         {
-                          "word": "윤석열",
+                          "word": "이 대통령",
                           "isTopicWord": true
                         },
                         {
-                          "word": "한·미동맹",
+                          "word": "국익 중심의 실용외교",
                           "isTopicWord": true
                         },
                         {
-                          "word": "도널드 트럼프",
+                          "word": "중·일 갈등",
                           "isTopicWord": false
                         },
                         {
-                          "word": "대통령",
+                          "word": "평화체제",
                           "isTopicWord": false
                         },
                         {
-                          "word": "외교",
+                          "word": "군사훈련",
                           "isTopicWord": false
                         }
                       ]
@@ -654,7 +696,465 @@
           "publisher": "아시아경제",
           "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
           "summary": "올해도 8만명 해외 이주 전망 진보 성향, 고학력·고소득자가 대부분 \"이스라엘 경제·정치 등에 중대 영향\"가자전쟁과 네타냐후 정권에 대한 불만 때문에 해외로 이주하는 이스라엘인이 수만명에 달한다는 외신 보도가 나왔다.\n\n진보 성향의 고학력·고소득자들이 대부분으로, 이러한 움직임이 이스라엘의 경제 등에 중대한 영향을 미칠 수 있다는 분석이 나오고 있다.\n\n전문가들은 이러한 이탈이 앞으로 수십년 동안 이스라엘의 경제·사회·정치에 중대한 영향을 미칠 수 있다고 전망했다.",
-          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/24/1644522184565199113/000-99fbcf38c4daf8f70bed88b7eb610e3b89bed5bc.jpg"
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/24/1644522184565199113/000-99fbcf38c4daf8f70bed88b7eb610e3b89bed5bc.jpg",
+          "quizzes": [
+            {
+              "level": "N",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "이스라엘에서 지난해 8만명이 해외로 이주한 것으로 나타났다. 이들은 대체로 진보 성향의 고학력 및 고소득층으로, 가자 전쟁과 네타냐후 정권에 대한 불만으로 이주를 결정한 것으로 보인다. 전문가들은 이탈 현상이 이스라엘의 경제, 사회 및 정치에 중대한 영향을 미칠 것이라고 전망하고 있다.",
+                      "keywords": [
+                        {
+                          "word": "이스라엘",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "이주",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "고소득층",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "불만",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "네타냐후 정권",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이스라엘에서 해외로 이주하는 사람들의 주된 성향은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "중도 성향"
+                        },
+                        {
+                          "label": "B",
+                          "text": "보수 성향"
+                        },
+                        {
+                          "label": "C",
+                          "text": "진보 성향"
+                        },
+                        {
+                          "label": "D",
+                          "text": "무관심 성향"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "해외로 이주하는 이스라엘인들은 주로 진보 성향을 가지고 있다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이스라엘인들이 해외로 이주하는 주된 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "가자전쟁과 네타냐후 정권에 대한 불만"
+                        },
+                        {
+                          "label": "B",
+                          "text": "기후 변화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "교육 기회 부족"
+                        },
+                        {
+                          "label": "D",
+                          "text": "경제적 불황"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "이스라엘인들은 가자전쟁과 네타냐후 정권에 대한 불만으로 해외로 이주하고 있다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이스라엘의 해외 이주가 미칠 수 있는 영향은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "문화적 다양성 증가"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제·사회·정치에 중대한 영향"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국제 관계 개선"
+                        },
+                        {
+                          "label": "D",
+                          "text": "기술 발전 촉진"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "해외 이주는 이스라엘의 경제·사회·정치에 중대한 영향을 미칠 수 있다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이스라엘에서 해외로 이주하는 사람들의 주된 특징은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "저학력·저소득자"
+                        },
+                        {
+                          "label": "B",
+                          "text": "청소년"
+                        },
+                        {
+                          "label": "C",
+                          "text": "노년층"
+                        },
+                        {
+                          "label": "D",
+                          "text": "고학력·고소득자"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "해외로 이주하는 이스라엘인들은 주로 고학력·고소득자들이다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이스라엘의 해외 이주 현상에 대한 전문가들의 전망은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "수십년 동안 중대한 영향"
+                        },
+                        {
+                          "label": "B",
+                          "text": "단기적 영향"
+                        },
+                        {
+                          "label": "C",
+                          "text": "무시할 수 있는 수준"
+                        },
+                        {
+                          "label": "D",
+                          "text": "긍정적 변화"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "전문가들은 이주 현상이 수십년 동안 중대한 영향을 미칠 것으로 전망했다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "I",
+              "steps": [
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "이스라엘에서 지난해 8만명이 해외로 이주한 것으로 나타났다. 이들은 대체로 진보 성향의 고학력 및 고소득층으로, 가자 전쟁과 네타냐후 정권에 대한 불만으로 이주를 결정한 것으로 보인다. 전문가들은 이탈 현상이 이스라엘의 경제, 사회 및 정치에 중대한 영향을 미칠 것이라고 전망하고 있다.",
+                      "keywords": [
+                        {
+                          "word": "이스라엘",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "이주",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "정치",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "가자 전쟁",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "고학력층",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "고숙련·고소득층 유출이 경제 역동성에 미칠 핵심 경로는 무엇이라 볼 수 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "외화 유입 확대"
+                        },
+                        {
+                          "label": "B",
+                          "text": "단기 성장 반등"
+                        },
+                        {
+                          "label": "C",
+                          "text": "이민 유입 보완"
+                        },
+                        {
+                          "label": "D",
+                          "text": "혁신 역량 저하"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "고학력·고소득층 이탈은 혁신과 창업 역량을 약화시켜 성장잠재력을 구조적으로 깎아내린다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "전문가가 제시한 영향의 시계를 고려할 때 정책은 어떤 시간 틀을 전제로 해야 하는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "선거주기 관리"
+                        },
+                        {
+                          "label": "B",
+                          "text": "연도별 성과"
+                        },
+                        {
+                          "label": "C",
+                          "text": "세대단위 접근"
+                        },
+                        {
+                          "label": "D",
+                          "text": "분기별 조정"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "영향이 수십년에 걸친다고 보도돼 장기적 관점의 제도 설계와 투자 우선순위가 요구된다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이탈 집단의 이념·계층 특성상 국내 정치 균형에 예상되는 1차적 변화는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "보수층 결집"
+                        },
+                        {
+                          "label": "B",
+                          "text": "소수정당 약화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "개혁 진영 약세"
+                        },
+                        {
+                          "label": "D",
+                          "text": "중도층 부상"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "이주자가 개혁 성향의 고숙련층이 많아 해당 진영의 조직력과 표집중도가 약화될 가능성이 크다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이번 해외 이동의 주된 동인이 구조적 유인보다 정치·안보 요인이라는 판단의 근거는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "생활비 상승"
+                        },
+                        {
+                          "label": "B",
+                          "text": "정권 불만 확대"
+                        },
+                        {
+                          "label": "C",
+                          "text": "기술 스타트업"
+                        },
+                        {
+                          "label": "D",
+                          "text": "해외 임금 격차"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "가자 분쟁과 현 정권 불만이 핵심 동인으로, 정책적 유인보다 강한 밀어내기 요인임을 시사한다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "고숙련 이탈이 복지와 재정 측면에서 우선 점검해야 할 위험 신호는 무엇으로 볼 수 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "노동공급 완화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "세수 기반 약화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국가부채 개선"
+                        },
+                        {
+                          "label": "D",
+                          "text": "복지지출 축소"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "고소득·고숙련층 이탈은 세원 감소로 이어져 복지 지속성과 공공투자 여력을 함께 제약한다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "지난해 이스라엘에서 해외로 이주한 사람들의 주된 성향은 무엇인가?",
+                      "correctAnswer": "진보",
+                      "answerExplanation": "이들은 주로 진보 성향의 고학력 및 고소득층으로 나타났다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이스라엘에서 지난해 해외로 이주한 사람들의 주요 불만 대상은 누구인가?",
+                      "correctAnswer": "네타냐후 정권",
+                      "answerExplanation": "베냐민 네타냐후 정권에 대한 불만이 이들의 이주 원인으로 분석된다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이스라엘의 해외 이주자들이 주로 속한 사회적 계층은 무엇인가?",
+                      "correctAnswer": "고학력층",
+                      "answerExplanation": "이들은 주로 진보 성향의 고학력 및 고소득층으로 나타났다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이스라엘의 해외 이주 현상에 영향을 미친 전쟁은 무엇인가?",
+                      "correctAnswer": "가자 전쟁",
+                      "answerExplanation": "가자 전쟁과 네타냐후 정권에 대한 불만이 이들의 이주 원인으로 분석된다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이스라엘의 대규모 이탈이 미칠 것으로 예상되는 분야는 무엇인가?",
+                      "correctAnswer": "경제",
+                      "answerExplanation": "전문가들은 대규모 이탈이 이스라엘의 경제, 사회, 정치에 중대한 영향을 미칠 것이라고 전망하고 있다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "이스라엘에서 지난해 8만명이 해외로 이주한 것으로 나타났다. 이들은 대체로 진보 성향의 고학력 및 고소득층으로, 가자 전쟁과 네타냐후 정권에 대한 불만으로 이주를 결정한 것으로 보인다. 전문가들은 이탈 현상이 이스라엘의 경제, 사회 및 정치에 중대한 영향을 미칠 것이라고 전망하고 있다.",
+                      "keywords": [
+                        {
+                          "word": "이스라엘",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "이주",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "전문가",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "경제",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "사회",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이스라엘의 정치적 불안정 속에서 해외 이주를 촉발한 주요 정치적 갈등의 중심에 있는 인물은 누구입니까?",
+                      "correctAnswer": "네타냐후 정권",
+                      "answerExplanation": "네타냐후 정권에 대한 불만은 정치적 신뢰 약화와 사회 분열을 초래한다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이스라엘의 해외 이주를 가속화하며 지역 안보와 정치적 불안을 심화시킨 주요 군사적 갈등은 무엇입니까?",
+                      "correctAnswer": "가자 전쟁",
+                      "answerExplanation": "가자 전쟁은 정치적 불안정과 사회적 갈등을 심화시키는 요인이다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이스라엘의 인재 유출이 장기적으로 국가의 경제적 역량과 글로벌 경쟁력에 미칠 수 있는 잠재적 영향은 무엇입니까?",
+                      "correctAnswer": "경제",
+                      "answerExplanation": "대규모 이탈은 경제 성장 둔화와 글로벌 경쟁력 약화를 초래할 수 있다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이스라엘의 인구 이동에서 진보적 가치관을 가진 고학력층의 해외 이주가 시사하는 사회적 변화는 무엇입니까?",
+                      "correctAnswer": "진보",
+                      "answerExplanation": "진보 성향의 고학력층 이주는 사회적 다양성과 균형에 영향을 미친다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이스라엘의 해외 이주 현상에서 지적 자본의 유출을 의미하며 사회적 불균형을 초래할 수 있는 계층은 무엇입니까?",
+                      "correctAnswer": "고학력층",
+                      "answerExplanation": "고학력층의 이주는 국가 경쟁력 약화와 사회적 불평등을 심화시킨다.",
+                      "sourceUrl": "https://view.asiae.co.kr/article/2025112418375328083"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "sessionId": 2,
@@ -713,7 +1213,465 @@
           "publisher": "뉴시스",
           "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
           "summary": "김재영 기자 = 우크라이나의 볼로디미르 젤렌스키 대통령은 24일 미국과 우크라가 전날에 이어 이날 미 종전안에 대한 논의를 계속할 예정인 가운데 \"더 많은 합의가 필요하다\"고 말했다.\n\n이 구절은 유럽 지도자들이 러시아의 대 우크라 영토 양보 요구를 미국 트럼프 정부가 수용하는 듯한 기색을 보일 때 제일 먼저 꺼내는 말이다.\n\n이어 전날 있었던 미국, 우크라 및 유럽 주요국 간 종전안 관련 제네바 회동에 관해 \"우크라는 미국과 또 유럽 파트너들 그리고 많은 다른 주체들과 함께 긴밀하게 우리에 대한 러시아의 전쟁을 끝내는 단계들을 규정짓기 위해 즉 진정한 안전보장을 가져오기 위해 노력(논의)했다\"고 말했다.",
-          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/24/1644520023231959374/000-3d47af265f6abdd59fbed965ba746b6be75fc0e7.jpg"
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2025/11/24/1644520023231959374/000-3d47af265f6abdd59fbed965ba746b6be75fc0e7.jpg",
+          "quizzes": [
+            {
+              "level": "N",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "우크라이나의 볼로디미르 젤렌스키 대통령은 24일 미국과 우크라이나가 미 종전안에 대한 논의를 지속할 것이라고 밝혔다. 그는 '더 많은 합의가 필요하다'며, 유럽 지도자들이 러시아의 영토 양보 요구를 미국 정부가 수용할 가능성을 언급할 때 이 발언을 했다. 젤렌스키는 전날 제네바 회동에서 우크라이나가 미국과 유럽 파트너들과 함께 러시아의 전쟁을 종료하기 위한 방안을 모색했다고 설명했다.",
+                      "keywords": [
+                        {
+                          "word": "볼로디미르 젤렌스키",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "미 종전안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "영토 양보",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "정부",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "합의",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "볼로디미르 젤렌스키 대통령이 강조한 필요 사항은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "더 많은 합의"
+                        },
+                        {
+                          "label": "B",
+                          "text": "경제 지원 확대"
+                        },
+                        {
+                          "label": "C",
+                          "text": "즉각적인 휴전"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사적 개입"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "젤렌스키 대통령은 더 많은 합의가 필요하다고 강조했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "우크라이나와 미국이 논의 중인 주제는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 협력 방안"
+                        },
+                        {
+                          "label": "B",
+                          "text": "무역 협정"
+                        },
+                        {
+                          "label": "C",
+                          "text": "환경 보호 협약"
+                        },
+                        {
+                          "label": "D",
+                          "text": "종전안"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "우크라이나와 미국은 종전안에 대해 논의 중이다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "젤렌스키 대통령이 언급한 회동 장소는 어디인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "제네바"
+                        },
+                        {
+                          "label": "B",
+                          "text": "베를린"
+                        },
+                        {
+                          "label": "C",
+                          "text": "브뤼셀"
+                        },
+                        {
+                          "label": "D",
+                          "text": "파리"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "젤렌스키 대통령은 제네바 회동에 대해 언급했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "우크라이나가 종전안을 논의한 주요국은 어디인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "아프리카 주요국"
+                        },
+                        {
+                          "label": "B",
+                          "text": "아시아 주요국"
+                        },
+                        {
+                          "label": "C",
+                          "text": "남미 주요국"
+                        },
+                        {
+                          "label": "D",
+                          "text": "유럽 주요국"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "우크라이나는 유럽 주요국과 종전안을 논의했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "젤렌스키 대통령이 언급한 전쟁의 주체는 누구인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "북한"
+                        },
+                        {
+                          "label": "B",
+                          "text": "중국"
+                        },
+                        {
+                          "label": "C",
+                          "text": "러시아"
+                        },
+                        {
+                          "label": "D",
+                          "text": "이란"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "젤렌스키 대통령은 러시아의 전쟁에 대해 언급했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "I",
+              "steps": [
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "우크라이나의 볼로디미르 젤렌스키 대통령은 24일 미국과 우크라이나가 미 종전안에 대한 논의를 지속할 것이라고 밝혔다. 그는 '더 많은 합의가 필요하다'며, 유럽 지도자들이 러시아의 영토 양보 요구를 미국 정부가 수용할 가능성을 언급할 때 이 발언을 했다. 젤렌스키는 전날 제네바 회동에서 우크라이나가 미국과 유럽 파트너들과 함께 러시아의 전쟁을 종료하기 위한 방안을 모색했다고 설명했다.",
+                      "keywords": [
+                        {
+                          "word": "볼로디미르 젤렌스키",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "미 종전안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "러시아",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "제네바",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "전쟁",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "젤렌스키 대통령이 '더 많은 합의가 필요하다'고 언급한 배경에는 어떤 맥락이 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "유럽의 중재 실패"
+                        },
+                        {
+                          "label": "B",
+                          "text": "러시아의 양보 요구"
+                        },
+                        {
+                          "label": "C",
+                          "text": "전쟁 장기화 우려"
+                        },
+                        {
+                          "label": "D",
+                          "text": "미국의 지지 철회"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "젤렌스키 대통령의 발언은 러시아의 영토 양보 요구를 미국이 수용할 가능성에 대한 우려를 반영한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "미국과 우크라이나가 종전안 논의를 계속하는 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 제재 완화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "평화적 해결 모색"
+                        },
+                        {
+                          "label": "C",
+                          "text": "무기 판매 증가"
+                        },
+                        {
+                          "label": "D",
+                          "text": "군사 협력 강화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "미국과 우크라이나는 종전안 논의를 통해 러시아와의 갈등을 평화적으로 해결하려는 노력을 지속하고 있다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "유럽 지도자들의 상투구가 촉발되는 미국측 대러 구상 신호는 정확히 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "트럼프측 수용 신호"
+                        },
+                        {
+                          "label": "B",
+                          "text": "러 측 유화 제스처"
+                        },
+                        {
+                          "label": "C",
+                          "text": "EU 주도 단독안"
+                        },
+                        {
+                          "label": "D",
+                          "text": "우크라 항복 예고"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "기사에 따르면 트럼프 수용 기류 때 쓰인 표현으로, 이는 미국 구상에 대한 유럽의 견제 신호다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "젤렌스키의 '더 많은 합의' 언급이 드러내는 현재 협상 단계의 성격은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "동맹 이탈 가속"
+                        },
+                        {
+                          "label": "B",
+                          "text": "핵심 쟁점 미합치"
+                        },
+                        {
+                          "label": "C",
+                          "text": "절차 부분 타결"
+                        },
+                        {
+                          "label": "D",
+                          "text": "휴전 선언 임박"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "“더 많은 합의” 발언은 쟁점 미정리의 표시로, 협상이 아직 중반 국면임을 시사한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "제네바 회동이 중점 삼은 목표를 가장 정확히 요약한 선택지는 무엇이라고 볼 수 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "상호방위 조약"
+                        },
+                        {
+                          "label": "B",
+                          "text": "즉시 철군 촉구"
+                        },
+                        {
+                          "label": "C",
+                          "text": "종식 단계 설계·보장"
+                        },
+                        {
+                          "label": "D",
+                          "text": "대러 제재 강화"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "회동이 종식 단계와 실질 보장을 규정하려 했다는 점은 절차 설계 중심 접근을 뜻한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "우크라이나 대통령이 종전안 논의를 계속할 것이라고 밝힌 국가는 어디인가?",
+                      "correctAnswer": "미국",
+                      "answerExplanation": "볼로디미르 젤렌스키 대통령은 미국과 우크라이나가 미 종전안에 대한 논의를 계속할 것이라고 밝혔다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "젤렌스키 대통령이 종전안 관련 회동을 설명한 날은 언제인가?",
+                      "correctAnswer": "전날",
+                      "answerExplanation": "젤렌스키 대통령은 전날 미국, 우크라이나 및 유럽 주요국 간의 종전안 관련 회동을 설명했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "젤렌스키 대통령이 전쟁 종료를 위해 협력하고 있는 지역은 어디인가?",
+                      "correctAnswer": "유럽",
+                      "answerExplanation": "젤렌스키 대통령은 우크라이나가 미국, 유럽 파트너들과 협력하여 전쟁을 종료하기 위한 구체적인 단계들을 마련하고 있다고 덧붙였다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "젤렌스키 대통령이 전쟁 종료를 위해 마련하려고 하는 것은 무엇인가?",
+                      "correctAnswer": "구체적인 단계들",
+                      "answerExplanation": "젤렌스키 대통령은 전쟁을 종료하기 위한 구체적인 단계들을 마련하기 위해 노력하고 있다고 덧붙였다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "젤렌스키 대통령이 전쟁 종료를 위해 협력하고 있는 주체는 누구인가?",
+                      "correctAnswer": "파트너들",
+                      "answerExplanation": "젤렌스키 대통령은 우크라이나가 미국, 유럽 파트너들, 그리고 다른 주체들과 협력하여 전쟁을 종료하기 위해 노력하고 있다고 덧붙였다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "우크라이나의 볼로디미르 젤렌스키 대통령은 24일 미국과 우크라이나가 미 종전안에 대한 논의를 지속할 것이라고 밝혔다. 그는 '더 많은 합의가 필요하다'며, 유럽 지도자들이 러시아의 영토 양보 요구를 미국 정부가 수용할 가능성을 언급할 때 이 발언을 했다. 젤렌스키는 전날 제네바 회동에서 우크라이나가 미국과 유럽 파트너들과 함께 러시아의 전쟁을 종료하기 위한 방안을 모색했다고 설명했다.",
+                      "keywords": [
+                        {
+                          "word": "볼로디미르 젤렌스키",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "미 종전안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "미국",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "우크라이나",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "유럽 지도자들",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "전쟁 종식을 위한 국제적 협력의 주체로, 젤렌스키 대통령이 협력하고 있는 주요 파트너는 누구입니까?",
+                      "correctAnswer": "파트너들",
+                      "answerExplanation": "파트너들은 전쟁 종식을 위한 국제적 협력의 핵심 주체다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "전쟁 종식을 위한 협력의 지리적 중심지로, 젤렌스키 대통령이 협력하고 있는 지역은 어디입니까?",
+                      "correctAnswer": "유럽",
+                      "answerExplanation": "유럽은 전쟁 종식을 위한 국제 협력의 지리적 중심지로 작용한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "국제 안보와 평화 구축을 위한 종전안 논의의 중추적 역할을 수행하는 국가로, 우크라이나 대통령이 협력을 지속하겠다고 밝힌 나라는 어디입니까?",
+                      "correctAnswer": "미국",
+                      "answerExplanation": "미국은 우크라이나와의 종전안 논의에서 핵심적 역할을 담당한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "전쟁 종식을 위한 체계적 접근을 지향하며, 젤렌스키 대통령이 마련하려고 하는 것은 무엇입니까?",
+                      "correctAnswer": "구체적인 단계들",
+                      "answerExplanation": "구체적인 단계들은 전쟁 종식을 위한 체계적 접근을 지향한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "젤렌스키 대통령이 국제 협력의 진전을 설명한 시점으로, 종전안 관련 회동이 이루어진 날은 언제입니까?",
+                      "correctAnswer": "전날",
+                      "answerExplanation": "전날 회동은 국제 협력의 진전을 보여주는 중요한 시점이다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "sessionId": 2,

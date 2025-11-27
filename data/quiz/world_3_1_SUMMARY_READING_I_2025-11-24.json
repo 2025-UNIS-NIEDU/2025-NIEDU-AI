@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "I",
+    "contents": [
+      {
+        "summary": "우크라이나의 볼로디미르 젤렌스키 대통령은 24일 미국과 우크라이나가 미 종전안에 대한 논의를 지속할 것이라고 밝혔다. 그는 '더 많은 합의가 필요하다'며, 유럽 지도자들이 러시아의 영토 양보 요구를 미국 정부가 수용할 가능성을 언급할 때 이 발언을 했다. 젤렌스키는 전날 제네바 회동에서 우크라이나가 미국과 유럽 파트너들과 함께 러시아의 전쟁을 종료하기 위한 방안을 모색했다고 설명했다.",
+        "keywords": [
+          {
+            "word": "볼로디미르 젤렌스키",
+            "isTopicWord": true
+          },
+          {
+            "word": "미 종전안",
+            "isTopicWord": true
+          },
+          {
+            "word": "러시아",
+            "isTopicWord": false
+          },
+          {
+            "word": "제네바",
+            "isTopicWord": false
+          },
+          {
+            "word": "전쟁",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]
