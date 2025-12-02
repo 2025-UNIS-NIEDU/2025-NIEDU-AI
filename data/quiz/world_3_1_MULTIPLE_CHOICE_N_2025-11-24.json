@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "볼로디미르 젤렌스키 대통령이 강조한 필요 사항은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "더 많은 합의"
+          },
+          {
+            "label": "B",
+            "text": "경제 지원 확대"
+          },
+          {
+            "label": "C",
+            "text": "즉각적인 휴전"
+          },
+          {
+            "label": "D",
+            "text": "군사적 개입"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "젤렌스키 대통령은 더 많은 합의가 필요하다고 강조했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 2,
+        "question": "우크라이나와 미국이 논의 중인 주제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경제 협력 방안"
+          },
+          {
+            "label": "B",
+            "text": "무역 협정"
+          },
+          {
+            "label": "C",
+            "text": "환경 보호 협약"
+          },
+          {
+            "label": "D",
+            "text": "종전안"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "우크라이나와 미국은 종전안에 대해 논의 중이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 3,
+        "question": "젤렌스키 대통령이 언급한 회동 장소는 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "제네바"
+          },
+          {
+            "label": "B",
+            "text": "베를린"
+          },
+          {
+            "label": "C",
+            "text": "브뤼셀"
+          },
+          {
+            "label": "D",
+            "text": "파리"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "젤렌스키 대통령은 제네바 회동에 대해 언급했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 4,
+        "question": "우크라이나가 종전안을 논의한 주요국은 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "아프리카 주요국"
+          },
+          {
+            "label": "B",
+            "text": "아시아 주요국"
+          },
+          {
+            "label": "C",
+            "text": "남미 주요국"
+          },
+          {
+            "label": "D",
+            "text": "유럽 주요국"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "우크라이나는 유럽 주요국과 종전안을 논의했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      },
+      {
+        "contentId": 5,
+        "question": "젤렌스키 대통령이 언급한 전쟁의 주체는 누구인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "북한"
+          },
+          {
+            "label": "B",
+            "text": "중국"
+          },
+          {
+            "label": "C",
+            "text": "러시아"
+          },
+          {
+            "label": "D",
+            "text": "이란"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "젤렌스키 대통령은 러시아의 전쟁에 대해 언급했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251124_0003414999"
+      }
+    ]
+  }
+]

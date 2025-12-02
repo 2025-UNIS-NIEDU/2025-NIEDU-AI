@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "기재부는 외환시장 안정을 위한 4자 협의체를 가동했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "기재부가 외환시장 안정을 위해 4자 협의체를 가동했다고 밝혔다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+    },
+    {
+      "contentId": 2,
+      "question": "국민연금은 외환시장 안정과 관련해 참여하지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "국민연금은 외환시장 안정과 관련해 4자 협의체에 참여하고 있다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+    },
+    {
+      "contentId": 3,
+      "question": "4자 협의체는 외환시장의 불안감을 해소하기 위한 방안을 논의하지 않는다.",
+      "correctAnswer": "X",
+      "answerExplanation": "4자 협의체는 외환시장 안정을 위한 방안을 논의할 예정이다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+    },
+    {
+      "contentId": 4,
+      "question": "4자 협의체는 보건복지부, 국민연금, 기재부, 한은으로 구성되어 있다.",
+      "correctAnswer": "O",
+      "answerExplanation": "4자 협의체는 보건복지부, 국민연금, 기재부, 한은으로 구성되어 있다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+    },
+    {
+      "contentId": 5,
+      "question": "국민연금 카드는 외환시장 안정에 기여하지 않는다.",
+      "correctAnswer": "X",
+      "answerExplanation": "국민연금 카드는 외환시장 안정에 적극적으로 활용될 것으로 해석된다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+    }
+  ]
+}

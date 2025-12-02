@@ -30,8 +30,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.ECR_REPOSITORY }}:latest
-          cache-from: type=registry,ref=${{ secrets.ECR_REPOSITORY }}:buildcache
-          cache-to: type=registry,ref=${{ secrets.ECR_REPOSITORY }}:buildcache,mode=max
+          no-cache: true
 
       - name: SSH into EC2 and Deploy
         uses: appleboy/ssh-action@v1.0.0
@@ -41,7 +40,10 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             echo "Logging in to ECR from EC2"
-            aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin ${{ secrets.ECR_REPOSITORY }}
+            
+            ECR_REPO_URL="${{ secrets.ECR_REPOSITORY }}"
+            ECR_SERVER_ADDRESS=$(echo $ECR_REPO_URL | cut -d'/' -f1)
+            aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin $ECR_SERVER_ADDRESS
             
             echo "Generating .env file"
             cat <<EOF > .env
@@ -49,10 +51,14 @@ jobs:
             DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }}
             DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }}
             LOG_LEVEL=${{ secrets.LOG_LEVEL }}
+            DEEPSEARCH_API_KEY=${{ secrets.DEEPSEARCH_API_KEY }}
             EOF
 
             echo "Stopping previous container"
             docker stop nie-ai || true && docker rm nie-ai || true
+
+            echo "Force deleting ALL unused Docker data on EC2"
+            docker system prune -a -f || true
 
             echo "Pulling latest image"
             docker pull ${{ secrets.ECR_REPOSITORY }}:latest
@@ -61,5 +67,8 @@ jobs:
             docker run -d \
               --name nie-ai \
               --env-file .env \
+              -e "PYTHONPATH=/app/src" \
+              -e "PROXY_HEADERS=true" \
+              -e "FORWARDED_ALLOW_IPS=*" \
               -p 8000:8000 \
               ${{ secrets.ECR_REPOSITORY }}:latest

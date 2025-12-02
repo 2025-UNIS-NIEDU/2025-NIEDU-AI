@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from pipeline.pipeline import run_learning_pipeline
+from src.pipeline.pipeline import run_learning_pipeline
 from datetime import datetime
 from pathlib import Path
 import json
@@ -30,19 +30,25 @@ def get_test_data():
 @router.get("/today")
 def get_today_data():
     """오늘 날짜 기준 통합 패키지 JSON 리턴"""
-    today = datetime.now().strftime("%Y-%m-%d")
     base_dir = Path(__file__).resolve().parents[3]
     quiz_package_dir = base_dir / "data" / "quiz" / "package"
 
-    # 오늘 날짜의 통합 패키지 파일 검색
-    package_files = list(quiz_package_dir.glob(f"*_{today}_package.json"))
+    package_files = sorted(list(quiz_package_dir.glob("*_package.json")))
+
+    # 1. 파일이 없을 경우: 백엔드 형식에 맞게 {"courses": []} 반환
     if not package_files:
-        return {"message": f"{today} 기준 패키지 파일이 없습니다."}
+        return {"courses": []}
 
-    response = {}
+    # 2. 모든 패키지를 하나의 리스트로 통합
+    all_courses = []
+
     for f in package_files:
-        topic = f.stem.split("_")[0]
         with open(f, "r", encoding="utf-8") as fp:
-            response[topic] = json.load(fp)
+            course_data = json.load(fp)
+            if isinstance(course_data, list):
+                all_courses.extend(course_data)
+            else:
+                all_courses.append(course_data)
 
-    return response
+                # 3. AICourseListResponse 형식으로 래핑하여 반환
+    return {"courses": all_courses}

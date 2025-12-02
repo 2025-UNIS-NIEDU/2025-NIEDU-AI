@@ -10,6 +10,7 @@ from quiz.select_session import select_session
 logger = logging.getLogger(__name__)
 
 def generate_term_quiz(selected_session=None):
+
     # === 1️. 환경 변수 로드 ===
     BASE_DIR = Path(__file__).resolve().parents[2]
     ENV_PATH = BASE_DIR / ".env"
@@ -71,26 +72,35 @@ def generate_term_quiz(selected_session=None):
 
     # === 4. LLM 기반 일반어 필터링 ===
     filter_prompt = f"""
-    당신은 뉴스 요약문에서 추출된 후보 용어들을 평가하는 **정책·언론 전문 분석가**입니다.
-    아래 용어 중 **일상적·포괄적 표현은 모두 제거**하고, 
-    **정책·제도·외교·경제·법률 분야에서 공식적으로 사용되는 전문 용어만 남기세요.**
+    당신은 뉴스 요약문에서 추출된 용어 중,
+    **정책·외교·경제·법률·산업 등에서 공식적·제도적으로 사용되는 전문어만 선별하는 전문가**입니다.
 
-    [판단 기준]
-    - **유지**: 
-    - 공식 명칭(제도, 법률, 정책, 기구명, 회담명, 협정명 등)
-    - 실제 기사·공문·보도자료에서 특정 사건·기구를 지칭하는 고유명사
-    - 복합어라도 맥락이 특정 영역(외교, 경제, 산업 등)으로 한정될 때
-    - **제거**:
-    - 일반명사, 추상명사, 형용적 표현 (예: 논의, 계획, 관계, 협력, 개선, 방안, 제언)
-    - 일상적 조합어 (예: 경제 협력, 사회 변화, 관계 개선)
-    - 비구체적 단어 또는 맥락 없이 쓰이는 용어
-    - **예시**
-    - 유지: 한중정상회담, 한한령, 탄소국경조정제, 국정감사, 기준금리, 보조금법
-    - 제거: 협력, 관계, 제언, 산업, 정책, 사회, 발전, 논의, 변화, 계획
+    [전문 용어 판정 기준 — 아래 조건 중 1개 이상 충족해야 ‘유지’]
+    1) **공식 명칭**
+    - 정부·국회·기관·국제기구·정당의 정식 명칭
+    - 법률명, 제도명, 정책명, 기구명, 부처명, 회담명, 협정명
+    - 예: 「전기안전관리법」, 「한중정상회담」, 「산업통상자원부」
+
+    2) **고유 명칭(Proper Noun)**
+    - 특정 사건·정책·제도를 지칭하는 고유한 이름
+    - 예: 「한한령」, 「탄소국경조정제」, 「오커스(AUKUS)」
+
+    3) **명확한 기능·역할을 가진 ‘특정 분야 용어’**
+    - 경제·외교·국방·산업 등 전문 분야에서만 사용되는 기술적 용어
+    - 예: 「기준금리」, 「보조금법」, 「방산수출」, 「직접세」
+
+    4) **복합 명사 중 의미가 구체적이고 특정 영역으로 제한되는 용어**
+    - 일반적인 조합어가 아니라 특정 제도·정책·기구를 가리키는 경우
+    - 예: 「외국환시장 안정조치」, 「탄소배출권 거래제」
+
+    [제외되는 항목 — 단순 참고용 (명시적 나열 불필요)]
+    - 일상적/추상적 일반명사(협력, 논의, 방안, 변화, 관계 등)
+    - 특정 실체가 없는 광범위한 개념(경제, 산업, 정책 등)
+    - 모호하거나 문맥 의존적인 표현
 
     [출력 형식]
-    전문 용어만 남긴 JSON 배열로 출력하세요. 예시:
-    ["한중정상회담", "한한령", "탄소국경조정제"]
+    전문 용어만 남긴 JSON 배열로 출력:
+    ["한중정상회담", "탄소국경조정제"]
 
     [뉴스 요약문]
     {summary}
@@ -98,7 +108,6 @@ def generate_term_quiz(selected_session=None):
     [1차 추출 용어]
     {', '.join(terms)}
     """
-
 
     filter_res = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -116,7 +125,6 @@ def generate_term_quiz(selected_session=None):
     # ===  최소 2개 이상 보장 로직 추가 ===
     if not filtered_terms or len(filtered_terms) < 2:
         logger.warning(f"[{topic}] 필터링 결과 2개 미만 → 원본 일부 보강")
-        needed = 2 - len(filtered_terms)
         for t in terms:
             if t not in filtered_terms:
                 filtered_terms.append(t)
@@ -159,33 +167,53 @@ def generate_term_quiz(selected_session=None):
             key=lambda x: len(x.get("snippet", "")) if x.get("snippet") else 0
         )
 
-        title = best_item.get("title", "")
         snippet = best_item.get("snippet", "")
         snippet = snippet.strip() if snippet else None
         return term, snippet
 
     # === 5.5 용어 정의 완성 ===
     def complete_snippet(term, snippet, summary):
-        prompt = f"""
-    당신은 '{term}'의 개념을 뉴스 요약문 맥락에서 자연스럽고 정확하게 정의하는 전문가입니다.
+        if snippet and snippet.strip():
 
-    [뉴스 요약문]
-    {summary}
+            prompt = f"""
+        당신은 '{term}'의 개념을 뉴스 요약문 맥락에서 자연스럽고 정확하게 정의하는 전문가입니다.
 
-    [입력된 정의 후보]
-    {snippet}
+        [뉴스 요약문]
+        {summary}
 
-    [작성 규칙]
-    1. 먼저 위 문장이 '{term}'의 정의로서 뉴스 요약문 맥락에 **적절한지** 판단하세요.
-    2. 만약 문장이 맥락과 다르거나, 사실상 의미가 어긋나거나, 지나치게 일반적이면 — '{term}'의 정의를 **새롭게 작성**하세요.
-    3. 자연스러운 경우에는 문법과 어투만 다듬어 완전한 문장으로 정리하세요.
-    4. 문체는 사전식 정의체 (“~이다.”, “~을 의미한다.”, “~을 말한다.” 등)로 마무리합니다.
-    5. 불필요한 영어·기호(…, :, ·, -, “”)는 모두 제거합니다.
-    6. 한 문장, 60자 이내로만 작성합니다.
-    7. 정의의 초점은 **이 뉴스에서의 의미**에 두세요 (사전 일반 정의가 아님).
+        [입력된 정의 후보]
+        {snippet}
 
-    출력은 정의 문장 한 줄만 하세요.
-    """
+        [작성 규칙]
+        1. 먼저 위 문장이 '{term}'의 정의로서 뉴스 요약문 맥락에 **적절한지** 판단하세요.
+        2. 만약 문장이 맥락과 다르거나, 사실상 의미가 어긋나거나, 지나치게 일반적이면 — '{term}'의 정의를 **새롭게 작성**하세요.
+        3. 자연스러운 경우에는 문법과 어투만 다듬어 완전한 문장으로 정리하세요.
+        4. 문체는 사전식 정의체 (“~이다.”, “~을 의미한다.”, “~을 말한다.” 등)로 마무리합니다.
+        5. 불필요한 영어·기호(…, :, ·, -, “”)는 모두 제거합니다.
+        6. 한 문장, 60자 이내로만 작성합니다.
+        7. 정의의 초점은 **이 뉴스에서의 의미**에 두세요 (사전 일반 정의가 아님).
+
+        출력은 정의 문장 한 줄만 하세요.
+        """
+        else:
+            prompt = f"""
+        당신은 '{term}'의 개념을 **뉴스 요약문만을 기반으로 추론**해 정의하는 전문가입니다.
+
+        [뉴스 요약문]
+        {summary}
+
+        [작성 절차]
+        1. 뉴스 문맥에서 '{term}'이 어떤 역할/의미를 가지는지 추론하세요.
+        2. 해당 문맥을 반영한 **적합한 사전식 정의 문장**을 직접 생성하세요.
+
+        [작성 규칙]
+        - 한 문장, 60자 이내.
+        - 사전식 정의체 (“~이다”, “~을 의미한다”).
+        - 문맥 중심: 뉴스에서의 기능·의미만 반영.
+        - 영어·기호·군더더기 제거.
+
+        출력은 정의 문장 **한 줄만** 작성하세요.
+        """
         res = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
@@ -241,7 +269,14 @@ def generate_term_quiz(selected_session=None):
     results = []
     for i, term in enumerate(terms, start=1):
         term, snippet = fetch_definition(term)
-        completed = complete_snippet(term, snippet, summary) if snippet else None
+        
+        if snippet:
+            # snippet 있는 경우 → snippet 다듬기 ONLY
+            completed = complete_snippet(term, snippet, summary)
+        else:
+            # snippet 없는 경우 → summary 기반 정의 생성 (fallback)
+            completed = complete_snippet(term, None, summary)   
+
         example, analogy = build_examples(term, summary)
 
         results.append({

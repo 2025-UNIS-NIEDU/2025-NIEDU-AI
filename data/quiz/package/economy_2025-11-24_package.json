@@ -1,0 +1,976 @@
+{
+  "courses": [
+    {
+      "courseId": 1,
+      "topic": "경제",
+      "subTopic": "금융",
+      "subTags": [
+        "#경제",
+        "#안정",
+        "#협력"
+      ],
+      "courseName": "국민연금과 환율 : 협력의 경제학",
+      "courseDescription": "이 코스는 국민연금이 환율 안정화에 미치는 영향을 탐구합니다. 국민연금의 역할이 왜 중요한지, 그리고 이 과정이 경제적 협력과 어떤 맥락에서 연결되는지를 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "국민연금 해외투자 환율 끌어올리나…정부 4자 협의체 가동",
+          "publishedAt": "2025-11-24T19:24:00",
+          "publisher": "부산일보",
+          "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+          "summary": "기재부·보건복지부·한은·국민연금 참여 “해외투자 확대과정 외환시장 영향 점검” 외환시장의 안정에 국민연금 카드 활용 원달러 환율이 1470원 넘으면서 시장에 불안감을 주자 외환당국과 국민연금 등이 외환시장 안정을 위한 4자 협의체를 가동했다.\n\n기재부는 “앞으로 4자 협의체에서는 국민연금의 수익성과 외환시장의 안정을 조화롭게 달성할 수 있는 방안을 논의할 예정”이라고 밝혔다.\n\n4자 협의체에 보건복지부와 국민연금이 참여하는 것은 외환시장 안정과 관련해 자본시장의 ‘큰손’인 국민연금 카드를 적극적으로 활용하겠다는 의미로 해석된다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644526599468618291/000-6e4c2cc860421b9e5e7bf80a289ac2fb2603e152.jpg",
+          "quizzes": [
+            {
+              "level": "N",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "기획재정부, 보건복지부, 한국은행, 국민연금이 참여한 4자 협의체는 29일 외환시장 안정 방안을 논의했다. 원달러 환율이 1470원을 초과하며 외환시장 불안이 커진 가운데, 외환당국과 국민연금은 시장 안정을 위한 협의체를 가동하기로 했다. 기획재정부는 이 협의체에서 국민연금의 수익성과 외환시장 안정을 조화시키는 방안을 논의할 예정이라고 밝혔다. 보건복지부와 국민연금의 참여는 외환시장 안정에 대한 국민연금의 역할을 강조하는 것으로 해석된다.",
+                      "keywords": [
+                        {
+                          "word": "기획재정부",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "외환시장 안정 방안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "시장 안정",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "환율",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "안정",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "TERM_LEARNING",
+                  "contents": [
+                    {
+                      "terms": [
+                        {
+                          "termId": 1,
+                          "name": "외환시장 안정",
+                          "definition": "외환시장 안정은 외환시장에서의 환율 변동성을 줄이고 시장의 신뢰를 유지하는 것을 의미한다.",
+                          "exampleSentence": "외환당국과 국민연금이 참여하는 4자 협의체가 외환시장 안정을 위한 방안을 모색한다.",
+                          "additionalExplanation": "외환시장이 안정된다는 건 마치 바람이 없는 날씨처럼, 파도가 잔잔한 바다와 같아요. 그러면 배가 안전하게 항해할 수 있죠."
+                        },
+                        {
+                          "termId": 2,
+                          "name": "국민연금",
+                          "definition": "국민연금은 외환시장 안정과 수익성을 동시에 고려하는 자본시장의 주요 참여자를 의미한다.",
+                          "exampleSentence": "국민연금은 외환시장 안정을 위한 4자 협의체에 참여하여 자본시장에서의 영향력을 적극적으로 활용할 계획이다.",
+                          "additionalExplanation": "국민연금은 마치 친구와 함께 모은 저금통 같아요. 나중에 힘들 때 꺼내 쓰는 돈이죠. 함께 모아두면 노후에도 안심할 수 있어요."
+                        },
+                        {
+                          "termId": 3,
+                          "name": "원달러 환율",
+                          "definition": "원달러 환율은 원화와 달러화 간의 교환 비율로, 외환시장에서의 안정성을 나타내는 중요한 지표이다.",
+                          "exampleSentence": "원달러 환율이 1470원을 초과하며 외환시장에 불안감을 조성하자, 정부는 외환시장 안정을 위한 4자 협의체를 가동하기로 했다.",
+                          "additionalExplanation": "원달러 환율은 마치 친구와 과자를 바꾸는 거래 같아요. 친구가 가진 과자가 비싸면, 내가 더 많은 과자를 줘야 하고, 반대로 친구의 과자가 싸면 적게 주면 되죠. 그런 식으로 돈의 가치가 바뀌는 거예요."
+                        },
+                        {
+                          "termId": 4,
+                          "name": "해외투자 확대",
+                          "definition": "해외투자 확대는 외환시장 안정과 국민연금의 수익성을 동시에 고려하여 자본시장에서의 투자 비중을 늘리는 것을 의미한다.",
+                          "exampleSentence": "기재부는 외환시장 안정을 위한 4자 협의체에서 해외투자 확대와 관련된 방안을 논의할 계획이라고 밝혔다.",
+                          "additionalExplanation": "해외투자 확대는 마치 다양한 맛의 음식을 먹어보는 것과 같아요. 한 가지 음식만 먹는 대신 여러 나라의 음식을 경험하면서 더 풍부한 맛을 느끼는 거죠."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "CURRENT_AFFAIRS",
+                  "contents": [
+                    {
+                      "issue": "해외투자 확대와 외환시장 안정 논의, 국민연금 참여",
+                      "cause": "원달러 환율이 1470원을 초과하며 외환시장에서 불안감이 고조되자, 기재부와 보건복지부, 한은, 국민연금이 외환시장 안정을 위한 4자 협의체를 구성하게 되었다. 이는 최근 외환시장 변동성이 커진 상황에서 발생한 조치다.",
+                      "circumstance": "이 과정에서 기재부는 협의체에서 국민연금의 수익성과 외환시장 안정의 조화를 논의할 것이라고 밝혔고, 국민연금은 자본시장에서의 영향력을 활용하여 외환시장 안정에 기여할 의지를 보였다. 이에 따라 정부와 국민연금 간의 협력이 강화되는 양상이 나타났다.",
+                      "result": "결국 4자 협의체의 가동으로 외환시장 안정에 대한 논의가 본격화되었고, 국민연금의 역할이 더욱 부각되면서 외환시장에 대한 정책적 대응이 강화될 것으로 예상된다.",
+                      "effect": "이번 협의체 구성은 외환시장 안정과 국민연금의 역할의 중요성을 다시금 일깨웠다. 이는 향후 외환시장 관리와 자본시장 정책의 통합적 접근 필요성을 시사한다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "OX_QUIZ",
+                  "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "기재부는 외환시장 안정을 위한 4자 협의체를 가동했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "기재부가 외환시장 안정을 위해 4자 협의체를 가동했다고 밝혔다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "국민연금은 외환시장 안정과 관련해 참여하지 않았다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "국민연금은 외환시장 안정과 관련해 4자 협의체에 참여하고 있다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "4자 협의체는 외환시장의 불안감을 해소하기 위한 방안을 논의하지 않는다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "4자 협의체는 외환시장 안정을 위한 방안을 논의할 예정이다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "4자 협의체는 보건복지부, 국민연금, 기재부, 한은으로 구성되어 있다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "4자 협의체는 보건복지부, 국민연금, 기재부, 한은으로 구성되어 있다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "국민연금 카드는 외환시장 안정에 기여하지 않는다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "국민연금 카드는 외환시장 안정에 적극적으로 활용될 것으로 해석된다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "외환시장 안정을 위해 가동된 협의체에 참여한 기관은 어디인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "보건복지부와 기재부"
+                        },
+                        {
+                          "label": "B",
+                          "text": "기재부와 한은"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국민연금과 한은"
+                        },
+                        {
+                          "label": "D",
+                          "text": "기재부와 외환당국"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "협의체에는 기재부, 보건복지부, 한은, 국민연금이 참여했다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "외환시장 안정을 위해 국민연금이 활용되는 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "국민연금의 수익성"
+                        },
+                        {
+                          "label": "B",
+                          "text": "국민연금의 외환 보유량"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국민연금의 자본시장 영향력"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국민연금의 해외투자 경험"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "국민연금은 자본시장의 큰손으로 외환시장 안정에 활용된다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "외환시장 안정을 위한 4자 협의체의 주요 논의 주제는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "외환시장 개입 방법"
+                        },
+                        {
+                          "label": "B",
+                          "text": "환율 변동 예측"
+                        },
+                        {
+                          "label": "C",
+                          "text": "수익성과 안정의 조화"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국민연금의 수익성"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "협의체는 수익성과 외환시장 안정의 조화를 논의할 예정이다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "외환시장 안정을 위해 국민연금이 참여하는 협의체의 성격은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "5자 협의체"
+                        },
+                        {
+                          "label": "B",
+                          "text": "6자 협의체"
+                        },
+                        {
+                          "label": "C",
+                          "text": "4자 협의체"
+                        },
+                        {
+                          "label": "D",
+                          "text": "3자 협의체"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "외환시장 안정을 위해 4자 협의체가 가동되었다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "외환시장 안정에 대한 국민연금의 역할은 무엇으로 해석되는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "환율 조작 방지"
+                        },
+                        {
+                          "label": "B",
+                          "text": "외환 보유량 증가"
+                        },
+                        {
+                          "label": "C",
+                          "text": "자본시장 영향력 활용"
+                        },
+                        {
+                          "label": "D",
+                          "text": "해외투자 축소"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "국민연금의 참여는 자본시장 큰손으로서의 영향력 활용을 의미한다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "I",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644526599468618291/000-6e4c2cc860421b9e5e7bf80a289ac2fb2603e152.jpg",
+                      "headline": "국민연금 해외투자 환율 끌어올리나…정부 4자 협의체 가동",
+                      "publisher": "부산일보",
+                      "publishedAt": "2025-11-24T19:24:00",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "기획재정부, 보건복지부, 한국은행, 국민연금이 참여한 4자 협의체는 29일 외환시장 안정 방안을 논의했다. 원달러 환율이 1470원을 초과하며 외환시장 불안이 커진 가운데, 외환당국과 국민연금은 시장 안정을 위한 협의체를 가동하기로 했다. 기획재정부는 이 협의체에서 국민연금의 수익성과 외환시장 안정을 조화시키는 방안을 논의할 예정이라고 밝혔다. 보건복지부와 국민연금의 참여는 외환시장 안정에 대한 국민연금의 역할을 강조하는 것으로 해석된다.",
+                      "keywords": [
+                        {
+                          "word": "기획재정부",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "외환시장 안정 방안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "협의체",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "외환당국",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "수익성",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "외환당국과 국민연금이 4자 협의체를 가동한 주된 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "국내 투자 확대"
+                        },
+                        {
+                          "label": "B",
+                          "text": "원달러 환율 안정"
+                        },
+                        {
+                          "label": "C",
+                          "text": "금리 인상 조정"
+                        },
+                        {
+                          "label": "D",
+                          "text": "복지 예산 증대"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "원달러 환율이 1470원을 넘어서면서 시장 불안이 커졌고, 이를 안정시키기 위해 4자 협의체가 가동되었다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "4자 협의체에 국민연금이 참여한 것은 어떤 의미를 갖는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "복지정책 개편"
+                        },
+                        {
+                          "label": "B",
+                          "text": "금융 규제 완화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "외환시장 안정 기여"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국민연금의 독립성 강화"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "국민연금이 자본시장의 큰손으로서 외환시장 안정에 기여하기 위해 4자 협의체에 참여한 것이다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "기재부가 4자 협의체에서 논의할 방안은 무엇을 목표로 하는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "복지 예산 절감"
+                        },
+                        {
+                          "label": "B",
+                          "text": "시장 안정과 수익성 조화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "환율 변동성 확대"
+                        },
+                        {
+                          "label": "D",
+                          "text": "수익성 극대화"
+                        }
+                      ],
+                      "correctAnswer": "B",
+                      "answerExplanation": "기재부는 국민연금의 수익성과 외환시장의 안정을 조화롭게 달성할 방안을 논의할 예정이다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "외환시장 안정을 위한 4자 협의체의 가동은 어떤 배경에서 이루어졌는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "환율 급등으로 인한 불안"
+                        },
+                        {
+                          "label": "B",
+                          "text": "수출 증가로 인한 변화"
+                        },
+                        {
+                          "label": "C",
+                          "text": "내수 경기 침체"
+                        },
+                        {
+                          "label": "D",
+                          "text": "금리 인하로 인한 효과"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "원달러 환율이 1470원을 넘어서면서 시장에 불안감을 주었고, 이에 따라 4자 협의체가 가동되었다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "국민연금의 해외투자 확대가 외환시장에 미치는 영향은 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "수출 감소 유발"
+                        },
+                        {
+                          "label": "B",
+                          "text": "금리 상승 촉진"
+                        },
+                        {
+                          "label": "C",
+                          "text": "내수 시장 위축"
+                        },
+                        {
+                          "label": "D",
+                          "text": "환율 안정 기여"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "국민연금의 해외투자 확대는 외환시장 안정에 기여할 수 있는 방안으로 평가된다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "외환시장 안정 방안을 논의한 기관은 무엇인가?",
+                      "correctAnswer": "협의체",
+                      "answerExplanation": "기획재정부, 보건복지부, 한국은행, 국민연금이 참여한 협의체가 논의했다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "원달러 환율이 초과한 수치는 얼마인가?",
+                      "correctAnswer": "1470원",
+                      "answerExplanation": "원달러 환율이 1470원을 초과하며 외환시장 불안이 커졌다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "외환시장 안정에 대한 국민연금의 역할을 강조한 부처는 무엇인가?",
+                      "correctAnswer": "보건복지부",
+                      "answerExplanation": "보건복지부와 국민연금의 참여는 국민연금의 역할을 강조하는 것으로 해석된다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "외환시장 안정을 위한 협의체의 주체는 무엇인가?",
+                      "correctAnswer": "국민연금",
+                      "answerExplanation": "외환당국과 국민연금은 시장 안정을 위한 협의체를 가동하기로 했다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "기획재정부가 논의할 방안은 무엇인가?",
+                      "correctAnswer": "수익성과 외환시장 안정",
+                      "answerExplanation": "기획재정부는 수익성과 외환시장 안정을 조화시키는 방안을 논의할 예정이다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "국민연금의 외환시장 개입 의도가 무엇인가?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644526599468618291/000-6e4c2cc860421b9e5e7bf80a289ac2fb2603e152.jpg",
+                      "headline": "국민연금 해외투자 환율 끌어올리나…정부 4자 협의체 가동",
+                      "publisher": "부산일보",
+                      "publishedAt": "2025-11-24T19:24:00",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "기획재정부, 보건복지부, 한국은행, 국민연금이 참여한 4자 협의체는 29일 외환시장 안정 방안을 논의했다. 원달러 환율이 1470원을 초과하며 외환시장 불안이 커진 가운데, 외환당국과 국민연금은 시장 안정을 위한 협의체를 가동하기로 했다. 기획재정부는 이 협의체에서 국민연금의 수익성과 외환시장 안정을 조화시키는 방안을 논의할 예정이라고 밝혔다. 보건복지부와 국민연금의 참여는 외환시장 안정에 대한 국민연금의 역할을 강조하는 것으로 해석된다.",
+                      "keywords": [
+                        {
+                          "word": "기획재정부",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "외환시장 안정 방안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "보건복지부",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "한국은행",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "국민연금",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "기획재정부가 외환시장 안정과 수익성 간의 균형을 모색하며 논의할 주요 정책적 방안은 무엇입니까?",
+                      "correctAnswer": "수익성과 외환시장 안정",
+                      "answerExplanation": "기획재정부는 수익성과 안정성 조화를 정책 목표로 삼는다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "외환시장 안정화 과정에서 국민연금의 전략적 중요성을 강조하며 정책적 역할을 부각한 정부 부처는 어디입니까?",
+                      "correctAnswer": "보건복지부",
+                      "answerExplanation": "보건복지부는 국민연금의 외환시장 안정 기여를 강조한다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "최근 외환시장 불안정의 지표로 작용하며 원화의 가치 하락을 나타내는 원달러 환율 수치는 얼마입니까?",
+                      "correctAnswer": "1470원",
+                      "answerExplanation": "1470원 초과는 외환시장 불안과 원화 가치 하락을 시사한다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "외환시장 안정화를 목표로 하며 주요 금융기관과의 협력을 통해 정책적 대응을 주도하는 주체는 무엇입니까?",
+                      "correctAnswer": "국민연금",
+                      "answerExplanation": "국민연금은 외환시장 안정화 협의체의 핵심 주체로 작용한다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "외환시장 안정화 방안을 논의하며 정책적 조율을 위한 협력적 의사결정을 수행하는 기관은 무엇입니까?",
+                      "correctAnswer": "협의체",
+                      "answerExplanation": "협의체는 다부처 협력을 통해 외환시장 안정성을 강화한다.",
+                      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112419192890066"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SENTENCE_COMPLETION",
+                  "contents": [
+                    [
+                      {
+                        "contentId": 1,
+                        "question": "외환시장이 불안해지자 외환당국과 ______",
+                        "referenceAnswer": "국민연금 등이 외환시장 안정을 위한 4자 협의체를 가동했다."
+                      },
+                      {
+                        "contentId": 2,
+                        "question": "기재부는 앞으로 4자 협의체에서 ______",
+                        "referenceAnswer": "국민연금의 수익성과 외환시장의 안정을 조화롭게 달성할 방안을 논의할 예정이다."
+                      },
+                      {
+                        "contentId": 3,
+                        "question": "4자 협의체에 국민연금이 참여하는 것은 ______",
+                        "referenceAnswer": "외환시장 안정과 관련해 국민연금 카드를 적극적으로 활용하겠다는 의미로 해석된다."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "외환시장 불안정이 사회적 가치에 미치는 영향은?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sessionId": 2,
+          "headline": "“내 노후자산 국민연금”… 환율방어에 동원된다",
+          "publishedAt": "2025-11-24T18:25:00",
+          "publisher": "디지털타임스",
+          "sourceUrl": "https://www.dt.co.kr/article/12031151",
+          "summary": "‘4자 협의체 첫 가동’…전략적 환헤지·외환 스와프 연장 검토 연금 독립성 훼손 우려…“원칙 없는 개입은 오히려 위험” 정부가 천정부지로 치솟는 원·달러 환율 방어를 위해 결국 국민연금에 손을 벌린다.\n\n‘전략적 환헤지’란 환율이 일정 수준 이상 오르면 국민연금이 보유한 해외 자산 중 일부를 달러로 매도해 시장에 공급하는 방식이다.\n\n일각에서는 국민연금을 환율 방어 수단으로 활용하는 데 대해 노후자산 운용의 독립성 약화와 장기 수익률 훼손을 우려하고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644512191522672745/000-291209d24fcdbe23cb8d935e31ae50e5df1d121d.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "불안한 환율에 ‘국민연금’ 등판…환율안정 ‘4자 협의체’ 가동",
+          "publishedAt": "2025-11-24T17:56:16",
+          "publisher": "헤럴드경제",
+          "sourceUrl": "https://biz.heraldcorp.com/article/10622625",
+          "summary": "기획재정부는 24일 언론 공지를 통해 “기재부와 보건복지부, 한국은행, 국민연금이 국민연금의 해외투자 확대 과정에서 나타나는 외환시장 영향 등을 점검하기 위한 4자 협의체를 구성했고, 첫 회의를 열었다”고 발표했다.\n\n기재부는 “앞으로 협의체에서는 국민연금의 수익성과 외환시장 안정이라는 두 목표를 조화롭게 달성할 수 있는 방안을 논의할 것”이라고 설명했다.\n\n첫 회의에서는 국민연금의 해외투자가 외환시장 수급에 미치는 변동성을 완화하는 방안이 중점적으로 논의된 것으로 알려졌다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644504543666508091/000-6bd9473dc8e1b2516c6b638406a4aad64595bac4.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "“환율 1470원대마저…” 국민연금, ‘환헤지 카드’로 투입되나",
+          "publishedAt": "2025-11-24T17:50:11",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11475887",
+          "summary": "환율안정 ‘4자 협의체’ 가동 “연금 수익성-외환안정 조화” 국힘 “경제 기초체력 회복 시급” 최근 원/달러 환율은 외환 수장들의 구두 개입성 발언에도 1470원을 넘어 계속 상승세를 이어가자 외환당국과 국민연금 등이 24일 외환시장 안정을 위한 4자 협의체를 가동에 나섰다.\n\n기획재정부는 이날 언론공지를 통해 “기재부와 보건복지부·한국은행·국민연금은 국민연금의 해외투자 확대 과정에서의 외환시장 영향 등을 점검하기 위한 4자 협의체를 구성했다”며 첫 회의 개시을 알렸다.\n\n기재부는 “앞으로 4자 협의체에서는 국민연금의 수익성과 외환시장의 안정을 조화롭게 달성할 수 있는 방안을 논의할 예정”이라고 덧붙였다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644503232933925002/000-2244fbd0d1ba7a7efba9fc58d3ffb0c00d54b866.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "환율 불안에…정부, 국민연금 불러 4자 협의체 가동",
+          "publishedAt": "2025-11-24T17:45:00",
+          "publisher": "헤럴드경제",
+          "sourceUrl": "https://biz.heraldcorp.com/article/10622616",
+          "summary": "[헤럴드경제=김용훈 기자] 외환당국이 최근 원/달러 환율 변동성이 확대되자 주요 수급주체인 국민연금과 함께 시장 안정 방안 논의에 착수했다.\n\n기획재정부·보건복지부·한국은행·국민연금이 구성한 ‘4자 협의체’가 가동되면서, 대규모 해외투자를 집행하는 국민연금의 운용 패턴이 외환시장 안정 논의의 핵심 변수로 부상했다.\n\n기획재정부는 24일 “국민연금의 해외투자 확대 과정에서의 외환시장 영향 점검을 위해 기재부·복지부·한국은행·국민연금이 4자 협의체를 구성해 첫 회의를 개최했다”며 “국민연금의 수익성과 외환시장의 안정을 조화롭게 달성할 수 있는 방안을 논의할 예정”이라고 밝혔다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644501934402572887/000-53cd3676a7ec4daf09540d11ec0910f882af182e.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 2,
+      "topic": "경제",
+      "subTopic": "부동산",
+      "subTags": [
+        "#균형",
+        "#변화",
+        "#정책"
+      ],
+      "courseName": "부동산 시장 : 지역 균형의 도전",
+      "courseDescription": "이 코스는 부동산 시장의 지역 균형 문제를 탐구합니다. 주택 시장의 침체와 규제 완화 요구는 지역 경제에 큰 영향을 미치며, 이는 사회적 불균형과 연결됩니다. 이러한 맥락에서 부동산 정책의 중요성과 변화의 흐름을 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "경남 주택시장 침체 ‘고사 위기’…“규제 완화 촉구”",
+          "publishedAt": "2025-11-24T19:15:56",
+          "publisher": "KBS",
+          "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8415629&ref=A",
+          "summary": "경상남도가 지역 현실에 맞는 부동산 규제 완화와 공급 확대 등 5대 과제를 정부에 건의하기로 했습니다.\n\n[정지영/한국공인중개사협회 경남도회장 : \"창원의 아주 고가의 아파트가 35평(115㎡) 팔았을 때, 서울에 전용면적 18평(59㎡)짜리 아파트 전세가 정도밖에 안 되는 현상이 생기는 거죠.\"] 전문가들은 정부가 수도권 집값을 잡기 위해 부동산 규제 정책을 획일적으로 적용하면서, 지역의 주택시장 침체와 양극화 현상이 더 커지고 있다고 지적합니다.\n\n이 때문에 경상남도가 경남 지역 현실에 맞는 부동산 규제 완화와 공급 확대 등 5개 과제를 정부에 건의하기로 했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644526599468618285/000-3158fa14de478a9106de99f24886f179abaefec8.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "지역 건설업계 “건설 대기업에 또 휘둘려선 안 돼”",
+          "publishedAt": "2025-11-24T18:30:00",
+          "publisher": "부산일보",
+          "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025112418271576679",
+          "summary": "84개월로도 충분히 공사 가능해 대기업에 끌려가는 모습 아쉬워 재입찰에선 정부가 중심 잡아야 국토교통부가 가덕신공항 부지 조성 공사 기간을 106개월로 재추산해 재입찰을 할 계획이라고 밝히자 지역에서 불필요하게 공기를 연장했다는 목소리가 커지고 있다.\n\n지역 건설업계 내부적으로도 연약 지반 공사 등을 공기에 맞춰 안정적으로 수행할 수 있을 것이라는 예측이 나오는데, 국토부가 건설 대기업에 지나치게 휘둘린다는 지적이다.\n\n사업비만 10조 원이 넘는 ‘메가 프로젝트’이기에 컨소시엄이 안정적으로 운영되려면 중견, 지역 건설사 외에 건설 대기업의 추가 참여가 필요한 실정이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644513519535788476/000-a55f65c1687f9c49978b78283caff5e1baa74214.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "10·15대책 그늘 드리우자…수도권 곳곳 분양일정 \"내년으로\"",
+          "publishedAt": "2025-11-24T18:01:00",
+          "publisher": "이데일리",
+          "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=04162326642369000",
+          "summary": "하반기 '로또청약' 꼽힌 오티에르 반포 내년 2월로 더샵 신풍역·르프리베, 아크로 리버스카이도 해 넘겨 '돌연 규제지역' 두산위브 더센트럴 수원 연내 불투명 \"규제 여부 따라 적정분양가·수요예측 변수 따져봐야\"[이데일리 남궁민관 기자] 연말 공급이 기대됐던 수도권 주요 단지들이 분양 일정을 속속 미루면서 청약 수요자들의 기다림이 길어질 전망이다.\n\n(그래픽= 이미나 기자) 24일 업계에 따르면 포스코이앤씨는 올해 하반기 ‘로또 청약’ 중 하나로 수요자들의 기대를 모았던 ‘오티에르 반포’ 분양 일정을 내년 2월로 미뤘다.\n\n이와 함께 포스코이앤씨는 영등포구 문래동5가 22번지 일원 문래진주 재건축 단지인 ‘더샵 르프리베’ 분양 일정도 내년 2월로 연기한 상태다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644506055369167240/000-1488ebd881f83d639428582191623f22ccad0347.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "김부장은 집주인,,박대리는 세입자… 서울 30대 무주택 가구 역대 최대",
+          "publishedAt": "2025-11-24T17:59:00",
+          "publisher": "서울경제",
+          "sourceUrl": "https://www.sedaily.com/NewsView/2H0KW6FE7V",
+          "summary": "집 없는 30대 3.4%↑···52.7만가구 보유자는 4% 줄어 약 18만가구 \"주택 구입 자금 지원\" 30대 최다 서울에 사는 30대 무주택 가구가 통계 작성 이래 최대치를 기록했다.\n\n반면 같은 기간 서울에서 주택을 소유하고 있는 30대 가구는 18만 3456가구로 전년(19만 1349가구) 대비 4% 감소하며 통계 작성 이래 가장 적었다.\n\n서울에 거주하는 30대 가운데 주택을 소유한 가구의 비중을 의미하는 주택 소유율은 지난해 25.8%를 기록했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644505266416390422/000-b253e9dc4026d6f803505a9d0f73a54e9a289a1a.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "정비구역 지정권 누가 갖나…지방선거 앞두고 서울시·자치구 ‘기싸움’",
+          "publishedAt": "2025-11-24T17:56:00",
+          "publisher": "서울경제",
+          "sourceUrl": "https://www.sedaily.com/NewsView/2H0KVF2L7H",
+          "summary": "정비구역 지정, 재건축·재개발 첫 관문 자치구 신청하면 시가 심의 거쳐 지정 국토부, 자치구 요청에 분배 방안 검토 정원오가 띄우고 민주당이 지원 사격 서울시는 “난개발 가능성” 강력 반대 정부가 재건축·재개발 속도를 높이기 위해 각종 제도 개편을 추진 중인 가운데 ‘정비구역 지정 권한의 자치구 이양’ 논의도 급물살을 타고 있다.\n\n서울시가 정비구역 지정을 전담해 병목 현상이 발생하고 있는 만큼 정비사업 규모에 따라 정비구역 지정 권한을 시와 자치구가 나눠 가져야 한다는 주장이다.\n\n반면 서울시는 정비구역 지정 권한을 자치구로 넘기면 난개발 가능성이 크다며 반대하고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644504543666508081/000-1e146c823eea19db9d860b7432e6d10f035324d9.png"
+        }
+      ]
+    },
+    {
+      "courseId": 3,
+      "topic": "경제",
+      "subTopic": "금융",
+      "subTags": [
+        "#가치",
+        "#사회",
+        "#역할"
+      ],
+      "courseName": "금융 지원 : 사회적 가치와 역할",
+      "courseDescription": "이 코스는 금융 지원의 사회적 가치와 역할을 탐구합니다. 금융 기관의 지원이 창업 기회와 지역 사회 발전에 어떻게 기여하는지를 살펴보고, 이러한 변화가 사회적 맥락에서 어떤 의미를 가지는지 분석합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "명륜진사갈비 가맹점협의회 \"금융 지원, 실질적 창업 기회\" 탄원",
+          "publishedAt": "2025-11-24T19:01:00",
+          "publisher": "한국일보",
+          "sourceUrl": "https://www.hankookilbo.com/News/Read/A2025112417250000341?did=NA",
+          "summary": "명륜당 대표, 고금리 불법대출 혐의 송치 가맹점주 \"상대적 금리 낮아 현실적 대안\" 프랜차이즈 명륜진사갈비의 가맹본부 명륜당 대표가 가맹점주에게 높은 금리로 불법 대출을 해줬다는 혐의로 검찰에 송치돼 가맹점주들이 어려움에 처했다는 탄원이 제기됐다.\n\n명륜진사갈비 가맹점협의회는 24일 전국 500여 명의 가맹점주를 대표해 금융위원회와 공정거래위원회, 서울시 민생사법경찰국, 한국산업은행에 탄원서를 제출했다.\n\n서울시 민생사법경찰국은 2024년 9월 말부터 가맹점주 대상 고금리 대출 의혹이 제기된 명륜당 대표를 대부업법 위반 혐의로 14일 검찰에 송치했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644521015558148608/000-3f332404f6c16915b862d083fffccd42a9711efd.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "전북은행 \"임직원 244명 매월 기부\"…'우수지부자'로 전주시장 표창",
+          "publishedAt": "2025-11-24T18:42:00",
+          "publisher": "뉴스1",
+          "sourceUrl": "https://www.news1.kr/local/jeonbuk/5986567",
+          "summary": "전북은행은 시복지재단에서 2019년 실시한 '기부 1004 캠페인'과 작년 '1더하기1 기부천사 챌린지' 참여를 통해 현재까지 지속해 기부에 동참한 공로를 인정받아 시장 표창을 받았다고 전했다.\n\n전북은행 임직원 244명은 매월 정기적으로 1만 1004원을 기부해 연간 시 복지 사각지대 지원을 위한 성금 약 2800만 원을 조성하고 있다.\n\n오현권 전북은행 부행장은 \"직원들이 매월 자발적으로 기부에 참여해 십시일반 모은 성금이 전주시민의 행복한 삶과 복지 향상 지원을 위한 소중한 마중물로 사용되길 바란다\"며 \"앞으로도 서로 돕고 서로 나누는 지속 가능한 나눔 문화를 만들어가기 위한 기부와 봉사를 꾸준히 펼치겠다\"고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644516254142304720/000-014a3906bc5599c6973135bdd1335a036a3080f1.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "20개 은행 1단계 223억·2단계 3376억 '분담금 폭탄'",
+          "publishedAt": "2025-11-24T18:23:00",
+          "publisher": "파이낸셜뉴스",
+          "sourceUrl": "http://www.fnnews.com/news/202511241822594613",
+          "summary": "1단계는 부실채권 규모 기준 2단계는 당기순익으로 결정 국민 562억·하나 535억 등 5대 은행이 2382억 내기로 7년 이상 갚지 못한 5000만원 이하 채무를 탕감해주는 배드뱅크 '새도약기금' 프로그램의 분담금이 최종 확정됐다.\n\n지난해 말 대손준비금을 반영한 당기순이익을 기준으로 한 2단계 분담금(3376억4700만원)도 낸다.\n\n2단계 분담액 기준을 놓고 20개 은행이 치열하게 토론한 끝에 대손준비금을 반영한 순익을 기준으로 결정됐다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644511528877166989/000-17ad882899c32bff529f30fa8fe33b64da3fe0e7.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "산불 구호, 소상공인 지원…어려운 이웃 곁으로",
+          "publishedAt": "2025-11-24T18:17:00",
+          "publisher": "이데일리",
+          "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=04218086642369000",
+          "summary": "새마을금고는 지자체, 지역 신용보증재단이 함께 참여하는 민·관 협력 모델도 구축했다.\n\n해당 모델은 새마을금고가 출연금을 지원하고 지자체는 이자 지원을 시행해 취약계층의 금융 부담을 덜어주는 방식이다.\n\n새마을금고 관계자는 “지역과 이웃의 어려움이 커지는 시기일수록, 가장 가까운 곳에서 손을 잡아주는 따듯한 금융, 일상에서 든든한 버팀목이 되어주는 서민금융을 적극적으로 실천하겠다”며 “앞으로도 지역의 희망을 지키는 금융기관으로 한 걸음 더 나아가 생활밀착형 금융기관으로서의 존재감을 더욱 빛내겠다”고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644510064687583444/000-0bc7d47ecf272c666c2ea7d2a2b881ddd43faea2.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "토스·달바 키운 모태펀드, 이젠 ABC 키워야",
+          "publishedAt": "2025-11-24T17:40:00",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11475861",
+          "summary": "백 교수는 \"딥테크는 개발기간 자체가 10년으로 한국도 10년 이상 가는 펀드가 필요하다\"며 \"그 역할을 해줄 수 있는 게 현재 우리나라에서는 모태펀드밖에 없다\"고 설명했다.\n\n중소벤처기업부에 따르면 한국 유니콘 30여 곳 중 80% 이상이 모태펀드 출자 자펀드에서 투자를 받았다.\n\n백 교수는 \"한국의 기술 스타트업 중 80% 이상이 모태펀드 투자를 바탕으로 성장해왔다고 봐도 과언이 아니다\"며 \"모태펀드는 단순한 자금줄이 아니라 기업의 생애 주기를 함께하는 동반자\"라고 강조했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644500594796400934/000-965f6a1c8a00812f2f089fe172f47e231422bfb6.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 4,
+      "topic": "경제",
+      "subTopic": "산업",
+      "subTags": [
+        "#맥락",
+        "#변화",
+        "#협상"
+      ],
+      "courseName": "노란봉투법 : 산업계 협상지옥",
+      "courseDescription": "이 코스는 노란봉투법 시행령이 산업계에 미치는 영향을 탐구합니다. 협상 부담과 교섭권 보장의 중요성을 조명하며, 산업계의 변화와 맥락을 이해하는 데 중점을 둡니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "노란봉투법 시행령 갈등…노조 \"이중 단일화\"·기업 \"협상 부담\"",
+          "publishedAt": "2025-11-24T18:46:00",
+          "publisher": "뉴스1",
+          "sourceUrl": "https://www.news1.kr/economy/employment-labor/5986073",
+          "summary": "민주노총 \"창구단일화 반복, 실질 교섭 가로막아\" 재계 \"1년 내내 노사 협상만 할 판…현장 혼란 우려\" (세종=뉴스1) 나혜윤 기자 = 내년 3월 시행을 앞둔 '노란봉투법'(노조법 2·3조 개정안) 시행령안이 정부에 입법예고되면서 원청의 교섭 의무 범위와 하청노조 권한을 둘러싼 논란이 다시 불붙었다.\n\n개정안은 근로조건에 실질적 영향력을 행사하는 원청도 사용자로 간주해 하청노조와 교섭 의무를 지도록 하고, 자율교섭이 어려운 경우 교섭단위 분리 제도를 통해 절차를 조정하도록 규정했다.\n\n한국노총 역시 \"교섭단위 분리로 개별 하청노조가 원청과 교섭하려면 다시 창구단일화 절차를 밟아야 하므로, 원청 교섭 진입이 더 어려워질 수 있다\"고 경고했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644517611041591843/000-ece0746fdfa4304dc47eebbc09c9099f64b9371c.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "“협력사만 수천곳인데”…산업계 ‘노란봉투법 협상지옥’ 열리나",
+          "publishedAt": "2025-11-24T18:43:06",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11475993",
+          "summary": "내년 3월부터는 이들 기업 노조는 원청 기업의 실질적인 지배력을 이유로 직접 교섭을 요구하고 교섭에 응하지 않는 경우 파업에 나설 공산이 크다.\n\n원청 사업자가 수백, 수천 개에 달하는 하청 기업과 교섭하는 데 따른 부작용도 상당하다.\n\n한국경영자총협회 관계자는 “정부가 원청 업체와 하청노조 간 교섭은 원청 사용자의 사업장을 기준으로 교섭창구 단일화를 추진하겠다고 밝히고 있지만, 이를 명확히 하는 시행령 개정을 별도로 하지 않았다”며 “향후 법적 분쟁이 지속될 것”이라고 지적했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644516254142304719/000-7b3d3c978d20148eb20dc22aded9ec010ac1c51b.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "노동계 \"교섭권 보장하려면 창구 단일화 폐지해야\"",
+          "publishedAt": "2025-11-24T18:07:00",
+          "publisher": "매일신문",
+          "sourceUrl": "https://www.imaeil.com/page/view/2025112417492164171",
+          "summary": "전국민주노동조합총연맹 성명 발표 \"어렵게 쟁취한 원청교섭권 다시 박탈하려는 시도\" 주장 정부가 노동조합법 시행령 일부 개정안을 입법 예고한다고 발표하자 노동계는 \"하청노동자의 교섭권을 무력화할 위험이 있다\"며 개정안 폐기를 촉구했다.\n\n전국민주노동조합총연맹(민주노총)은 24일 성명을 내고 \"개정안 핵심은 하청노동자가 원청 사용자와 교섭하려면 기존 노조법 상의 창구단일화 절차를 강제한다는 것으로, 이는 하청노동자의 교섭권을 보장하라는 노조법 2·3조 개정 취지를 정면으로 부정하는 조치\"라며 \"20여 년의 투쟁과 두 차례의 거부권을 넘어 어렵게 쟁취한 원청교섭권을 다시 박탈하려는 시도를 중단해야 한다\"고 밝혔다.\n\n개정안은 교섭창구 단일화 절차의 틀 안에서 '교섭단위 분리제도'를 활용하는 방안을 포함한다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644507395822588353/000-3dc85300f14b315d20208886d0a6480f9655c24e.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "현대차는 협력사만 8500곳…산업계 \"협상지옥 열린다\"",
+          "publishedAt": "2025-11-24T17:54:15",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11475903",
+          "summary": "내년 3월부터는 이들 기업 노조는 원청기업의 실질적인 지배력을 이유로 직접 교섭을 요구하고 교섭에 응하지 않는 경우 파업에 나설 공산이 크다.\n\n한 기업체 관계자는 \"가뜩이나 대표 교섭권을 가진 원청노조와 교섭해도 해를 넘기는 경우가 많다\"며 \"아무리 교섭단위를 단일화한다고 해도 교섭단위가 수십, 수백 개로 늘어나면 1년 내내 교섭만 해도 부족할 것\"이라고 말했다.\n\n한국경영자총협회 관계자는 \"정부가 원청업체와 하청노조 간 교섭은 원청 사용자의 사업장을 기준으로 교섭창구 단일화를 추진하겠다고 밝히고 있지만, 이를 명확히 하는 시행령 개정을 별도로 하지 않았다\"며 \"향후 법적 분쟁이 지속될 것\"이라고 지적했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644504543666508075/000-6f722e79638dc3ccfb7964bb4a3c1de6d6ab6892.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "\"교섭단위 분리에 공장 멈출 수도\"…재계, 노란봉투법 시행령에 강한 우려",
+          "publishedAt": "2025-11-24T17:39:00",
+          "publisher": "매일신문",
+          "sourceUrl": "https://www.imaeil.com/page/view/2025112416324022178",
+          "summary": "24일 고용노동부가 입법 예고한 노란봉투법 시행령 개정안은 원청 노조와 하청 노조가 교섭창구 단일화 절차를 우선 진행하되 절차 중 교섭단위 분리제도를 활용할 수 있도록 했다.\n\n한국경영자총협회(경총)은 이날 입장문을 통해 \"무분별하게 교섭단위 분리 결정 기준을 확대할 경우 15년간 유지된 원청 단위의 교섭창구 단일화가 형해화될 수 있다\"고 밝혔다.\n\n교섭단위 분리 기준으로 기존 단위 유지 시 노조 간 갈등 유발 및 노사관계 왜곡 가능성까지 포함된 상황에서 원청의 복수노조가 이를 근거로 각각의 창구 개설을 요구할 수 있다는 것이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644500594796400942/000-ccdef1de6715f7430d0dcd3b3e4e14535fd9f220.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 5,
+      "topic": "경제",
+      "subTopic": "산업",
+      "subTags": [
+        "#지방",
+        "#지속",
+        "#혁신"
+      ],
+      "courseName": "지방도시 발전 : 지속가능한 혁신",
+      "courseDescription": "이 코스는 지방도시의 지속가능한 발전을 위한 혁신적 접근을 탐구합니다. 에너지 효율 개선, 로컬벤처 성장, 기후위기 대응 등 다양한 측면에서의 변화와 맥락을 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "울산에너지포럼, 에너지 효율 개선 시민 참여 프로그램 확대",
+          "publishedAt": "2025-11-24T18:40:00",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11475989",
+          "summary": "지속 가능한 에너지 전환 포럼 개최 지역과 협력 미래 에너지 체계 구축 울산에너지포럼이 에너지 효율 개선을 위한 시민 참여 프로그램을 확대할 계획이다.\n\n이번 포럼은 에너지공단, 울산연구원, 에너지경제연구원 등 울산에너지포럼 회원사, 울산지역 산·학·연 관계자, 시민 등 100여명이 참석한 가운데 ‘지속 가능한 에너지 도시로의 전환’을 주제로 진행됐다.\n\n이상훈 이사장은 “울산이 탄소중립과 지속 가능한 에너지 전환을 위한 거점 도시가 될 수 있도록 울산시와 함께 재생에너지 확산, 친환경 교통수단 전환 등 미래 에너지 체계를 구축하기 위해 협력할 것”이라고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644515494230888966/000-f7ef5152b8b4f194dd577b70a5cf1cf9a9532e31.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "화성시 2040년 계획인구 154만명…도시기본계획 승인",
+          "publishedAt": "2025-11-24T18:18:00",
+          "publisher": "매일경제",
+          "sourceUrl": "https://www.mk.co.kr/article/11475975",
+          "summary": "인구 154만 명 목표, 경기남부 거점도시로 도약 2도심 4부도심 체계로 도시기능의 효율적 배분 강화 경기 화성시의 ‘2040 화성 도시기본계획’이 경기도로부터 최종 승인을 받았다.\n\n24일 화성시에 따르면 이번 도시기본계획은 ‘첨단산업과 문화가 만나는 지속가능한 글로벌 도시, 화성’을 미래상으로 설정하고, 2040년까지의 도시 발전 방향을 제시했다.\n\n정명근 화성시장은 “최종 승인된 2040년 화성 도시기본계획을 통해 화성시가 특례시를 넘어 경기남부의 거점도시로 성장할 기틀을 마련하는 계기가 될 것으로 기대된다”고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644510064687583438/000-9ada3ed41ca2fd91403aced17ad1fddb8269383f.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "광주 찾은 노용석 중기 1차관 \"로컬벤처 성장기반 조성할 것\"",
+          "publishedAt": "2025-11-24T18:03:00",
+          "publisher": "이데일리",
+          "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=04168886642369000",
+          "summary": "호남권 아기유니콘 및 벤처기업 현장 건의사항 청취 ‘글로벌 벤처 4대 강국’ 도약 방안에 반영 예정 노용석 중소벤처기업부 제1차관은 24일 광주 송정역세권센터에서 호남권 벤처·스타트업 간담회를 열고 “지역 벤처기업의 더 나은 성장 기반을 조성할 수 있도록 노력하겠다”고 약속했다.\n\n노용석 중소벤처기업부 제1차관이 24일 광주 송정역세권센터에서 열린 ‘글로벌 벤처 4대 강국 실현을 위한 현장 소통 간담회’에서 인사말을 하고 있다.\n\n(사진=중소벤처기업부)중기부는 벤처 생태계 활성화를 위해 올해 안에 ‘글로벌 벤처 4대 강국 도약 방안’(벤처 도약 방안)을 발표할 예정이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644506740185763984/000-c25cdceaf48438685f4e1da3d9bd03c9870584fe.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "“7대 미래산업 육성, 교통망 확충 등 협력방안 논의”",
+          "publishedAt": "2025-11-24T17:44:00",
+          "publisher": "강원일보",
+          "sourceUrl": "https://www.kwnews.co.kr/page/view/2025112417293341093",
+          "summary": "김진태 지사 24일 대한상공회의소 방문 김진태 지사가 24일 대한상공회의소를 방문, 강원특별자치도의 7대 미래산업 육성, 교통망 확충, 지역경제 활성화를 위한 협력 방안을 논의했다.\n\n김진태 지사는 “3년 전 만해도 불모지였던 반도체 산업에 10개 사업 2,300억 원을 투자하는 등 강원도는 7대 미래산업을 중심으로 산업지도를 완전히 새롭게 그려가고 있다”며 “강원도는 수도권까지 1시간대로 연결되는 수도권 강원시대에 진입했다.\n\n박동민 대한상의 전무이사는 “강원의 미래산업 전략은 국가 경쟁력 강화에도 중요한 과제”라며 “대한상공회의소도 산업·투자·에너지 전환 등 다양한 분야에서 실질적 협력을 이어가겠다”고 답했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644501934402572868/000-7a940d64a432ef9d4090d69355fa796ddff1ef45.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "김진태 강원지사 \"기후위기 극복, 기후테크·기후경제로 풀어야\"",
+          "publishedAt": "2025-11-24T17:05:00",
+          "publisher": "연합뉴스",
+          "sourceUrl": "https://www.yna.co.kr/view/AKR20251124125600062?input=1195m",
+          "summary": "기후위기 대응 전략 논의하는 '대한민국 탄소포럼 2025' 참석 이재현 기자 = 김진태 강원특별자치도지사는 24일 서울 대한상공회의소에서 열린 '대한민국 탄소포럼 2025'에 참석해 \"기후 위기 극복은 이제 기후테크와 기후경제로 풀어야 한다\"고 밝혔다.\n\n2017년부터 시작된 포럼의 올해 주제는 '기후 위기 대응과 에너지 전환을 위한 새로운 도약'이다.\n\n특별강연과 주제 발표, 특별 대담, 14개의 세미나, 전문가 미팅 등 역대 최대 규모의 프로그램이 함께 진행돼 국내외 탄소 정책 변화와 산업계 대응 전략을 폭넓게 공유하는 자리가 마련됐다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644492052265832870/000-fbb4481c57cb6830613543244aabeb7ff881ef1f.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 6,
+      "topic": "경제",
+      "subTopic": "산업",
+      "subTags": [
+        "#전환",
+        "#지속",
+        "#혁신"
+      ],
+      "courseName": "산업 전환 : 지속 가능성의 탐색",
+      "courseDescription": "이 코스는 산업 전환의 중요성과 지속 가능성에 대한 사회적 시선을 탐구합니다. 산업 구조 변화와 기술 혁신이 왜 중요한지, 그리고 이러한 변화가 경제와 사회에 어떤 영향을 미치는지를 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "‘좀비기업’ 퇴출 속도전…“내년부터가 진짜”",
+          "publishedAt": "2025-11-24T18:24:00",
+          "publisher": "디지털타임스",
+          "sourceUrl": "https://www.dt.co.kr/article/12031150",
+          "summary": "올해 심사 절차를 대폭 개선한데 이어 내년부터 시가총액 등 형식적 요건도 강화되는 만큼 향후 상장폐지 기업은 더 늘어날 것으로 보인다.\n\n거래소는 지난 7월까지 상장규정 등 제도를 개선해 코스닥 상장폐지 실질요건 심사를 2심제로 축소하고, 개선기간도 1년6개월로 줄였다.\n\n지난해 기심위나 시장위의 심사를 받은 39개 기업 중 6곳은 상장 유지가 결정됐고, 기심위에서 상장폐지 결정을 받은 20곳 가운데 7곳은 시장위에서 개선기간 부여로 수위가 낮아져 그대로 시장에 남았다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644512191522672740/000-bf695887a381a13a2b42880976c6a2999d5f5e8d.png"
+        },
+        {
+          "sessionId": 2,
+          "headline": "현대차·기아-현대해상, 로보틱스 기반 서비스 고도화 협력",
+          "publishedAt": "2025-11-24T18:19:08",
+          "publisher": "동아일보",
+          "sourceUrl": "https://www.donga.com/news/Economy/article/all/20251124/132831073/2",
+          "summary": "먼저 현대차·기아와 현대해상은 로봇 특화 보험을 공동 개발하고 연내 출시 예정인 1호 보험상품 ‘딥테크종합보험’에 대한 계약을 체결한다.\n\n1호 보험상품 개발을 위해 양측은 현대차·기아가 호텔, 병원, 공항 등 다양한 장소에서 운영 중인 배송 로봇과 전기차 충전 로봇의 실증 사업 운영 데이터를 기반으로 보험 리스크를 분석하는 등 협력을 진행해왔다.\n\n현동진 현대차·기아 로보틱스랩 상무는 “로봇산업에 특화된 보험 및 데이터 기반 금융 서비스 모델을 정립해 로봇 기술의 상용화에 앞장서고 나아가 투자 안정성을 확보하는 계기가 될 것”이라고 말했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644510791115870658/000-dbd80a1b7149b3858be9179b5b5e746b19188baf.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "한화솔루션, 고순도 크레졸 생산시설 5년만에 투자 철회…\"사업성 저하\"",
+          "publishedAt": "2025-11-24T17:59:00",
+          "publisher": "머니투데이",
+          "sourceUrl": "https://www.mt.co.kr/industry/2025/11/24/2025112417362142069",
+          "summary": "한화솔루션이 사업 포트폴리오 확장의 일환으로 추진했던 고순도 크레졸 생산시설 투자를 철회하기로 했다.\n\n한화솔루션은 24일 공시를 통해 \"예상보다 길어진 투자 기간과 추가 자본 투입으로 인한 경제성 저하, 개발 기간 중 중국·인도 등에서의 신규 설비 증설로 인한 공급 과잉과 이에 따른 제품 가격 하락 등으로 사업성이 당초 예상 대비 크게 낮아졌다고 판단했다\"며 \"이에 따라 최종적으로 투자를 철회하기로 결정했다\"고 밝혔다.\n\n앞서 한화솔루션은 2020년 11월 1200억원을 투입해 연산 3만 톤 규모의 고순도 크레졸 생산 공장을 건설하겠다는 계획을 발표했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644506055369167210/000-9963a76ba8280bf4100866d79be47474fba0a022.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "포스코노조 \"사측 안전방관 끝내겠다…재해 뿌리부터 차단\"",
+          "publishedAt": "2025-11-24T17:58:16",
+          "publisher": "연합뉴스",
+          "sourceUrl": "https://www.yna.co.kr/view/AKR20251124134300053?input=1195m",
+          "summary": "포스코 대표교섭노조인 한국노총 금속노련 포스코노동조합은 최근 발생한 중대재해와 관련해 \"안전의 주체로서 회사의 안전방관을 끝내겠다\"고 24일 밝혔다.\n\n포스코노조는 이날 성명에서 \"그룹안전특별진단 태스크포스를 통해 노동자 목소리를 반영한 가시적 대안을 마련하던 중 안타까운 사고가 발생한 데 대해 무거운 책임감을 느낀다\"며 \"중대재해 원인을 뿌리부터 차단하기 위한 구체적 실행 의지를 분명히 밝힌다\"고 강조했다.\n\n이어 \"사고가 날 때마다 회사는 현장 지킬 사람과 시간도 없는데 현장지킴이 배치 강화를 반복하는 행정 중심 안전으로 오히려 재해 위험을 높인다\"며 \"현장 목소리를 듣지 않고 보고형 대책만 되풀이한다면 재해는 절대 줄어들지 않을 것\"이라고 주장했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644505266416390434/000-ced1b4558493e167f73b19bccb20dd20a0364d1d.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "무인 시스템으로 인력난 해결…작심 스터디카페 지방 출점 확대",
+          "publishedAt": "2025-11-24T17:48:00",
+          "publisher": "한국경제",
+          "sourceUrl": "https://www.hankyung.com/article/202511242605O",
+          "summary": "지방 창업 시장에서 인력난과 높은 인건비가 주요 리스크로 부각되는 가운데, 점주가 상주하지 않아도 운영 가능한 무인 스터디카페 모델이 빠르게 확산되고 있다.\n\n외식업 종사자나 건물주들이 업종 전환이나 직접 운영 모델로 선택하는 사례도 늘고 있으며, 이는 지방 창업 최대 리스크인 운영 인력 부족 문제를 해결할 수 있다는 점이 경쟁력으로 작용하고 있다는 분석이다.\n\n작심스터디카페 관계자는 “지방 창업에서는 인력 수급과 상권 편차가 가장 큰 리스크인데, 중앙관제 시스템과 무인 운영 구조, 성인 중심의 안정적 수요층은 지방에서 더 큰 경쟁력으로 작용한다”고 설명했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/economy/2025/11/24/1644502594124648829/000-51dc64f04585d5d6a249f1684925421a5732921d.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -4,9 +4,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 from tqdm import tqdm
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
@@ -26,9 +23,6 @@ def refine_course_structure():
     # === 환경 변수 로드 ===
     load_dotenv(ENV_PATH, override=True)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-    # === 임베딩 모델 ===
-    embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
 
     # === 학습용 코스 선별 프롬프트 ===
     PROMPT_SIMPLE_FILTER = """
@@ -129,16 +123,6 @@ def refine_course_structure():
         except:
             return {"is_educational": False, "reason": "2차 파싱 실패"}
 
-    # === 유사도 계산 ===
-    def compute_course_similarity(course):
-        headlines = [s.get("headline", "") for s in course.get("sessions", []) if s.get("headline")]
-        if len(headlines) < 2:
-            return 0.0
-        embs = embedding_model.encode(headlines, convert_to_numpy=True, normalize_embeddings=True)
-        sims = cosine_similarity(embs)
-        upper = np.triu_indices_from(sims, k=1)
-        return float(np.mean(sims[upper]))
-
     # === JSON 파싱 오류 방지 ===
     def clean_json_response(resp: str) -> str:
         return (
@@ -148,6 +132,75 @@ def refine_course_structure():
             .replace("`", "")
             .strip()
         )
+    
+    # === 헤드라인 기반 세션 선택 프롬프트 ===
+    PROMPT_SELECT_SESSIONS_TEMPLATE = """
+    너는 뉴스 학습 코스의 편집자이다.
+
+    아래에 코스명과 해당 코스에 포함된 세션들의 headline 목록이 주어진다.
+    너의 역할은 **코스명과 의미적으로 가장 강하게 연관된 headline 5개만 선택하는 것**이다.
+
+    ---
+
+    ### 선택 기준 (중요)
+
+    - headline만 보고 판단한다. (summary는 고려하지 않는다)
+    - 코스명과 주제적으로 직접 연결되는 기사 우선
+    - 코스명 주요 키워드가 headline에 있음, 또는 의미적으로 연관되면 선택
+    - 단순 문자열 매칭이 아니라 headline 전체 의미 기반으로 판단
+    - 정치/경제/사회/국제적 맥락까지 고려해서 의미적 연관성 중심으로 선택
+
+    ---
+
+    ### 출력 형식(JSON)
+    {{
+    "selected_sessions": [
+        {{ "index": 3 }},
+        {{ "index": 5 }},
+        {{ "index": 1 }},
+        {{ "index": 7 }},
+        {{ "index": 2 }}
+    ],
+    "reason": "코스명과 가장 직접적으로 연결된 headline들을 선택함"
+    }}
+
+    ### 코스명
+    {courseName}
+
+    ### headline 목록
+    {session_list}
+    """
+
+    def select_top5_sessions(client, course):
+        """코스명과 headline 의미적 연관성을 기준으로 LLM이 세션 5개 선택"""
+
+        # numbering 붙여서 텍스트로 정리
+        session_list_txt = "\n".join([
+            f"{i+1}. {s.get('headline', '')}"
+            for i, s in enumerate(course["sessions"])
+        ])
+
+        prompt = PROMPT_SELECT_SESSIONS_TEMPLATE.format(
+            courseName=course.get("courseName"),
+            session_list=session_list_txt,
+        )
+
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.1,
+        ).choices[0].message.content
+
+        try:
+            parsed = json.loads(
+                resp.replace("```json", "").replace("```", "").strip()
+            )
+            idxs = [x["index"] - 1 for x in parsed["selected_sessions"]]
+            return [course["sessions"][i] for i in idxs]
+
+        except:
+            # 실패하면 fallback
+            return course["sessions"][:5]
 
     # === 메인 정제 함수 ===
     def refine_course_simple(topic: str):
@@ -172,7 +225,7 @@ def refine_course_structure():
             resp_clean = clean_json_response(resp)
 
             try:
-                parsed = json.loads(resp)
+                parsed = json.loads(resp_clean)
             except:
                 continue
 
@@ -182,13 +235,20 @@ def refine_course_structure():
                 if recheck.get("is_educational") is False:
                     continue
 
-            # === 2단계: 유사도 계산 ===
-            sim = compute_course_similarity(c)
-            if sim < 0.2:
-                continue
+            # === 최종 세션 5개로 제한 ===
+            c["sessions"] = select_top5_sessions(client, c)
 
-            # === 3단계: 세션 5개로 제한 ===
-            c["sessions"] = c["sessions"][:5]
+            def parse_datetime(x):
+                try:
+                    return datetime.fromisoformat(x.get("publishedAt"))
+                except:
+                    return datetime.min  # 날짜 없을 때 대비
+
+            c["sessions"].sort(key=parse_datetime, reverse=True)
+
+            # 정렬 후 sessionId 다시 부여
+            for idx, s in enumerate(c["sessions"], start=1):
+                s["sessionId"] = idx
 
             refined_courses.append(c)
 

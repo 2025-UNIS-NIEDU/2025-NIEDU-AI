@@ -7,21 +7,17 @@ from datetime import datetime
 from pathlib import Path
 from collections import OrderedDict, defaultdict
 
-# === 서드파티 라이브러리 ===
 import yaml
 import numpy as np
 from dotenv import load_dotenv
 from openai import OpenAI
-from sklearn.metrics.pairwise import cosine_similarity
-from k_means_constrained import KMeansConstrained
 from sentence_transformers import SentenceTransformer
-import chromadb
+from k_means_constrained import KMeansConstrained
 
 logger = logging.getLogger(__name__)
 
-def generate_all_courses(embedding_model=None):
+def generate_all_courses():
     """뉴스 RAG 기반 전체 토픽(course) 자동 생성"""
-
     # === 날짜 ===
     today = datetime.now().strftime("%Y-%m-%d")
 
@@ -59,43 +55,64 @@ def generate_all_courses(embedding_model=None):
     }
 
     # === 메인 함수 ===
-    def generate_course_for_topic(topic: str, embedding_model=None, client=None):
+    def generate_course_for_topic(topic: str, client=None):
         if client is None:
             client = OpenAI(api_key=api_key)
 
+        # 헤드라인 제거 함수    
+        def clean_headline(headline: str) -> str:
+            """headline 텍스트 정제(태그 제거 + 공백 정리만)"""
+            if not isinstance(headline, str):
+                return ""
+
+            headline = re.sub(r"\[[^\]]+\]", "", headline)
+
+            headline = re.sub(r"\s+", " ", headline).strip()
+
+            return headline
+        
+        def contains_hanja(text: str) -> bool:
+            """한자(중국·일본·한국), 확장 한자 포함 여부 검사"""
+            if not isinstance(text, str):
+                return False
+            
+            # 한자 전체 유니코드 블록
+            hanja_pattern = r"[\u4E00-\u9FFF\uF900-\uFAFF]"
+            return bool(re.search(hanja_pattern, text))
+
         logger.info(f"[{topic}] 코스 생성 시작")
 
-        # --- DB 경로 ---
-        DB_DIR = BASE_DIR / "data" / "rag_db" / topic
-        chroma_client = chromadb.PersistentClient(path=str(DB_DIR))
+        # --- JSON 로드 (DB 대신) ---
+        BACKUP_DIR = BASE_DIR / "data" / "backup"
+        logger.info(f"[DEBUG] Backup files: {list(BACKUP_DIR.glob('*'))}")   
 
-        # --- 컬렉션 이름 감지 ---
-        collections = chroma_client.list_collections()
-        if not collections:
+        json_files = list(BACKUP_DIR.glob(f"*{topic}_{today}.json"))
+        if not json_files:
+            logger.warning(f"[{topic}] JSON 파일 없음")
             return
 
-        try:
-            first_col = collections[0]
-            if hasattr(first_col, "name"):
-                collection_name = first_col.name
-            elif isinstance(first_col, dict):
-                collection_name = first_col.get("name", f"{topic}_news")
-            elif isinstance(first_col, str):
-                collection_name = first_col
-            else:
-                collection_name = f"{topic}_news"
-        except Exception:
-            collection_name = f"{topic}_news"
+        with open(json_files[0], "r", encoding="utf-8") as f:
+            raw = json.load(f)
 
-        # --- 컬렉션 로드 ---
-        collection = chroma_client.get_collection(name=collection_name)
+        articles = raw.get("articles", raw.get("data", []))
 
-        try:
-            all_data = collection.get(include=["embeddings", "metadatas"], limit=5000)
-            metadatas = [m for m in all_data.get("metadatas", []) if isinstance(m, dict)]
-            embeddings = np.array(all_data.get("embeddings", []))
-        except Exception:
+        # --- metadatas 및 summary 텍스트 추출 ---
+        metadatas = []
+        texts_for_embedding = []
+
+        for a in articles:
+            summary = a.get("summary", "")
+            if isinstance(summary, str) and len(summary) > 0:
+                metadatas.append(a)
+                texts_for_embedding.append(summary)
+
+        if not texts_for_embedding:
+            logger.warning(f"[{topic}] 요약 텍스트 없음")
             return
+
+        # --- 임베딩 생성 ---
+        st_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+        embeddings = st_model.encode(texts_for_embedding, convert_to_numpy=True)
 
         # --- 언론사 리스트 ---
         MAJOR_PUBLISHERS = [
@@ -142,9 +159,28 @@ def generate_all_courses(embedding_model=None):
 
         # --- 메타데이터 정리 ---
         docs = []
-        for meta in metadatas:
+        filtered_embeddings = []
+
+        for i, meta in enumerate(metadatas):
+            headline = clean_headline(meta.get("headline", ""))
+
+            # 한자 포함 → 제외
+            if contains_hanja(headline):
+                continue
+
+            # 60자 초과 → 제외 
+            if len(headline) > 60:
+                continue
+
+            # 정제된 headline 재저장
+            meta["headline"] = headline
+
             filtered_meta = {k: v for k, v in meta.items() if k != "deepsearchId"}
+
             docs.append(sort_session_keys(filtered_meta))
+            filtered_embeddings.append(embeddings[i])
+
+        embeddings = np.array(filtered_embeddings)
 
         # === 뉴스 요약문 기반 클러스터링 준비 ===
         valid_docs = [d for d in docs if isinstance(d.get("summary", ""), str) and len(d["summary"]) > 0]
@@ -167,33 +203,6 @@ def generate_all_courses(embedding_model=None):
         for doc, label in zip(valid_docs, cluster_labels):
             grouped_by_cluster[label].append(doc)
 
-        # === SentenceTransformer 로드 ===
-        embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
-
-        # === Hybrid 노이즈 필터 ===
-        def filter_noise_hybrid(docs, threshold=0.5):
-            """headline + summary 기반 노이즈 제거"""
-            valid_texts = [
-                f"{d.get('headline', '')} {d.get('summary', '')}".strip()
-                for d in docs if d.get("headline") or d.get("summary")
-            ]
-            if len(valid_texts) <= 3:
-                return docs
-            embs = np.array([
-                embedding_model.encode(t, convert_to_numpy=True, normalize_embeddings=True)
-                for t in valid_texts
-            ])
-            centroid = np.mean(embs, axis=0, keepdims=True)
-            sims = cosine_similarity(embs, centroid).flatten()
-            mean_sim = np.mean(sims)
-            std_sim = np.std(sims)
-            adaptive_threshold = max(threshold, mean_sim - 0.4 * std_sim)
-            filtered_docs = [doc for doc, sim in zip(docs, sims) if sim >= adaptive_threshold]
-            return filtered_docs if filtered_docs else docs
-
-        for label in list(grouped_by_cluster.keys()):
-            grouped_by_cluster[label] = filter_noise_hybrid(grouped_by_cluster[label])
-
         min_cluster_size = max(5, len(valid_docs) // n_clusters // 2)
         filtered_subtopics = {
             f"Cluster_{i+1}": v
@@ -205,11 +214,6 @@ def generate_all_courses(embedding_model=None):
             return
 
         output = []
-
-        def clean_headline(text: str) -> str:
-            """헤드라인 내 괄호·따옴표 제거 및 길이 제한"""
-            text = re.sub(r"[\[\]\(\)\"\'“”‘’]", "", text)
-            return text.strip()[:60]
 
         for idx, (subTopic, group_news) in enumerate(filtered_subtopics.items(), start=1):
             group_news = group_news[:7]
@@ -309,10 +313,9 @@ def generate_all_courses(embedding_model=None):
     TOPICS = ["politics", "economy", "society", "world"]
     for topic in TOPICS:
         try:
-            generate_course_for_topic(topic, embedding_model=embedding_model, client=client)
+            generate_course_for_topic(topic, client=client)
         except Exception as e:
             logger.error(f"[{topic}] 실행 중 오류: {e}")
 
 if __name__ == "__main__":
-    embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
-    generate_all_courses(embedding_model=embedding_model)
+    generate_all_courses()

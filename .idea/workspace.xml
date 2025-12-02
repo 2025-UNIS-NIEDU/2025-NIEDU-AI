@@ -4,75 +4,151 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b5c7f53-2767-4d4c-bf1b-96082f6eb1d7" name="변경" comment="[FEAT] 배치 처리 및 엔드포인트 추가" />
+    <list default="true" id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="[FIX] main.py 절대경로로 import">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="workflow" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cse2348&quot;
+  }
 }</component>
-  <component name="ProjectId" id="35Ci7O8jyoq7iQ3A5UkiIKMiczc" />
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/2025-UNIS-NIEDU/2025-NIEDU-AI.git&quot;,
+    &quot;accountId&quot;: &quot;ce3b7e68-31a4-4bfd-9bbd-ae5855348aa3&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="34S6gVX4JqkFDQ5chkhyOPCTiEQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;Python.FastAPI.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.Run FastAPI Server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RunManager">
-    <configuration name="NIEDU-AI" type="Python.FastAPI">
-      <option name="appName" value="app" />
-      <option name="file" value="$PROJECT_DIR$/src/api/main.py" />
-      <module name="2025-NIEDU-AI" />
+    <configuration name="Run FastAPI Server" type="PythonConfigurationType" factoryName="Python">
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="SDK_NAME" value="Python 3.12" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (2025-NIEDU-AI)" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\sally\2025-NIEDU-AI" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="uvicorn" />
+      <option name="PARAMETERS" value="src.api.main:app --host 0.0.0.0 --port 8000 --reload" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="0b5c7f53-2767-4d4c-bf1b-96082f6eb1d7" name="변경" comment="" />
-      <created>1762620286679</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14d6ccdd-276e-4ab8-a1ca-21a5766db4b9" name="Changes" comment="" />
+      <created>1761194737055</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1762620286679</updated>
-      <workItem from="1762620288577" duration="2054000" />
+      <updated>1761194737055</updated>
+      <workItem from="1761194738345" duration="1997000" />
+      <workItem from="1761199514638" duration="137000" />
+      <workItem from="1761199884499" duration="2718000" />
+      <workItem from="1761203582541" duration="4903000" />
+      <workItem from="1761213885659" duration="3167000" />
+      <workItem from="1761217890218" duration="1711000" />
+      <workItem from="1761219755339" duration="2675000" />
+      <workItem from="1761222475101" duration="1937000" />
+      <workItem from="1761224834904" duration="128000" />
+      <workItem from="1761225375591" duration="1237000" />
+      <workItem from="1761226651894" duration="5380000" />
+      <workItem from="1761257943533" duration="1070000" />
+      <workItem from="1761284656487" duration="16000" />
+      <workItem from="1762906611152" duration="2123000" />
+      <workItem from="1763171148671" duration="3306000" />
+      <workItem from="1763179312672" duration="3904000" />
+      <workItem from="1763191934289" duration="2365000" />
+      <workItem from="1763290199743" duration="1541000" />
+      <workItem from="1763355205704" duration="999000" />
+      <workItem from="1763432829495" duration="3000" />
+      <workItem from="1763974104438" duration="3149000" />
+      <workItem from="1763984407734" duration="1078000" />
     </task>
-    <task id="LOCAL-00001" summary="[FEAT] 배치 처리 및 엔드포인트 추가">
+    <task id="LOCAL-00001" summary="[FIX] main.py 절대경로로 import">
       <option name="closed" value="true" />
-      <created>1762621175237</created>
+      <created>1763171283312</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1762621175237</updated>
+      <updated>1763171283312</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -81,10 +157,11 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEAT] 배치 처리 및 엔드포인트 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 배치 처리 및 엔드포인트 추가" />
+    <MESSAGE value="[FIX] main.py 절대경로로 import" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] main.py 절대경로로 import" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2025_NIEDU_AI$NIEDU_AI.coverage" NAME="NIEDU-AI 커버리지 결과" MODIFIED="1762620759614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

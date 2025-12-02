@@ -6,19 +6,18 @@ from datetime import datetime
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer, util
 from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
+from langchain.prompts import PromptTemplate 
 import yaml
-from langchain.schema.runnable import RunnableMap, RunnableLambda
+from langchain.schema.runnable import RunnableLambda
 from quiz.select_session import select_session
 
 logger = logging.getLogger(__name__)
 
 def generate_multi_choice_quiz(selected_session=None):
     """N·I단계 객관식 퀴즈 자동 생성"""
-    
+
     # === 1️. 환경 변수 로드 ===
     load_dotenv(override=True)
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
     # === 2️. 세션 선택 ===
     if selected_session is None:
@@ -34,7 +33,7 @@ def generate_multi_choice_quiz(selected_session=None):
     logger.info(f"[{topic}] 코스 {course_id} 세션 {session_id} MULTIPLE_CHOICE 생성 시작")
 
     # === 3️. 모델 & 임베더 설정 ===
-    llm_n = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+    llm_n = ChatOpenAI(model="gpt-4o", temperature=0)
     llm_i = ChatOpenAI(model="gpt-4o", temperature=0.3)
     llm_harder = ChatOpenAI(model="gpt-5")
     embedder = SentenceTransformer("jhgan/ko-sroberta-multitask")
@@ -43,9 +42,13 @@ def generate_multi_choice_quiz(selected_session=None):
     def load_utf8_prompt(path: str):
         with open(path, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
-        if "_type" not in data or "template" not in data:
-            raise ValueError(f"잘못된 YAML 구조: {path}")
-        return ChatPromptTemplate.from_template(data["template"])
+
+        if "_type" not in data or data["_type"] not in {"prompt", "prompt_template"}:
+            raise ValueError(f"{path}: '_type'이 'prompt' 또는 'prompt_template' 이어야 합니다.")
+        if "template" not in data:
+            raise ValueError(f"{path}: 'template' 필드가 없습니다.")
+
+        return PromptTemplate.from_template(data["template"])
 
     prompt_fact_n = load_utf8_prompt("src/quiz/prompt/fact_n.yaml")
     prompt_inference_i = load_utf8_prompt("src/quiz/prompt/inference_i.yaml")
@@ -76,7 +79,7 @@ def generate_multi_choice_quiz(selected_session=None):
 
             q_sim = util.cos_sim(embedder.encode(q), embedder.encode(summary)).item()
             a_sim = util.cos_sim(embedder.encode(correct_option), embedder.encode(summary)).item()
-            score = round(q_sim * 0.4 + a_sim * 0.6, 2)
+            score = round(q_sim * 0.3 + a_sim * 0.7, 2)
             cand.update({
                 "question_sim": q_sim,
                 "answer_sim": a_sim,
@@ -87,22 +90,7 @@ def generate_multi_choice_quiz(selected_session=None):
                 validated.append(cand)
         return validated
 
-    # === 7️. RunnableMap 파이프라인 구성 ===
-    quiz_pipeline = RunnableMap({
-        "fact_n": prompt_fact_n | llm_n | parse_node,
-        "inference_i": prompt_inference_i | llm_i | parse_node,
-        "harder_i": (
-            RunnableLambda(lambda x: {
-                "n_quiz": json.dumps(x["fact_n"], ensure_ascii=False, indent=2),
-                "summary": x["summary"]
-            })
-            | prompt_harder_i
-            | llm_harder
-            | parse_node
-        ),
-    })
-
-    # === 8. 문제 생성 ===
+    # === 7. 문제 생성 ===
     def generate_all_quizzes(summary: str):
         logger.info(f"[{topic}] N·I단계 퀴즈 생성 중...")
 
@@ -114,38 +102,127 @@ def generate_multi_choice_quiz(selected_session=None):
         harder_i = []
         if num_needed > 0:
             logger.info(f"[{topic}] 추론형 부족 → {num_needed}개 심화형 생성 중")
-            harder_prompt = prompt_harder_i.format_prompt(
+            harder_prompt = prompt_harder_i.format(
                 summary=summary,
                 n_quiz=json.dumps(fact_n, ensure_ascii=False, indent=2),
                 required_count=num_needed
             )
-            harder_response = llm_harder.invoke(harder_prompt.to_messages())
+            harder_response = llm_harder.invoke(harder_prompt)
             harder_i = parse_json_output(harder_response)
 
         total_i = (validated_i + harder_i)[:5]
+        
+        # === 8. 정답 라벨 균등 배열 생성 ===
+        total_questions = len(fact_n) + len(total_i)
+
+        balanced_labels = ["A","B","C","D"] * ((total_questions // 4) + 1)
+        random.shuffle(balanced_labels)
+        balanced_labels = balanced_labels[:total_questions]
+
+        balanced_index = 0
+
+        # === 정답 위치 균등화 셔플 ===
+        def assign_balanced_label(q, forced_label):
+            options = q["options"]
+            correct_label = q["correctAnswer"]
+            
+            # 정답 텍스트 찾아서
+            correct_text = next(
+                opt["text"] for opt in options if opt["label"] == correct_label
+            )
+
+            # 오답 텍스트
+            distractors = [opt["text"] for opt in options if opt["text"] != correct_text]
+            random.shuffle(distractors)
+
+            # 새 옵션 생성
+            labels = ["A","B","C","D"]
+            new_opts = []
+
+            for label in labels:
+                if label == forced_label:
+                    new_opts.append({"label": label, "text": correct_text})
+                else:
+                    new_opts.append({"label": label, "text": distractors.pop()})
+
+            q["options"] = new_opts
+            q["correctAnswer"] = forced_label
+            return q
+
+        # N단계
+        for q in fact_n:
+            forced_label = balanced_labels[balanced_index]
+            assign_balanced_label(q, forced_label)
+            balanced_index += 1
+
+        # I단계
+        for q in total_i:
+            forced_label = balanced_labels[balanced_index]
+            assign_balanced_label(q, forced_label)
+            balanced_index += 1
+
+        # contentId 재정렬
         for idx, q in enumerate(total_i, start=1):
-            q["contentId"] = str(idx)
+            q["contentId"] = idx
 
         return {"fact_n": fact_n, "inference_i": total_i}
 
-    # === 9. 출력 포맷 ===
+    # === 9. 출력 포맷 — LLM 안전 append 방식으로 변경 ===
     def format_quiz_output(data):
         formatted = []
+
         for level, key in [("N", "fact_n"), ("I", "inference_i")]:
             items = data.get(key, [])
-            cleaned = [{
-                "contentId": i.get("contentId"),
-                "question": i.get("question"),
-                "options": i.get("options"),
-                "correctAnswer": i.get("correctAnswer"),
-                "answerExplanation": i.get("answerExplanation")
-            } for i in items]
+            contents = []
+
+            for idx, item in enumerate(items, start=1):
+
+                # 안전 보정
+                question = item.get("question", "").strip()
+                options = item.get("options", [])
+                correct_label = item.get("correctAnswer", "").strip()
+                explanation = item.get("answerExplanation", "")
+
+                # --- 옵션 보정 ---
+                if not isinstance(options, list):
+                    options = []
+
+                # 옵션 4개 미만이면 채우기
+                while len(options) < 4:
+                    options.append({"label": None, "text": "보기를 찾을 수 없음"})
+
+                # --- 정답 보정 ---
+                # 이제 correct_text를 “보정된 options”에서 찾는다.
+                correct_text = None
+                for opt in item.get("options", []):
+                    if opt.get("label") == correct_label:
+                        correct_text = opt.get("text", "").strip()
+
+                new_correct_label = None
+                if correct_text:
+                    for opt in options:
+                        if opt["text"].strip() == correct_text:
+                            new_correct_label = opt["label"]
+                            break
+
+                # 정답이 없을 경우 → fallback 없음 → 그냥 None으로 둔다
+
+                contents.append({
+                    "contentId": idx,  
+                    "question": question or "",
+                    "options": options or "",
+                    "correctAnswer": new_correct_label or "",
+                    "answerExplanation": explanation or "",
+                    "sourceUrl": sourceUrl
+                })
+
             formatted.append({
                 "contentType": "MULTIPLE_CHOICE",
                 "level": level,
                 "sourceUrl": sourceUrl,
-                "contents": cleaned
+                "contents": contents
             })
+
         return formatted
 
     # === 10. 저장 ===

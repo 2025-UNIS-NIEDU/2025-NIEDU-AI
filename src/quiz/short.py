@@ -50,25 +50,16 @@ def generate_short_quiz(selected_session=None):
             logger.warning(f"요약문 파싱 실패: {e}")
             summary = selected_session.get("summary", "")
 
-    # === 3. 단답식 정답 추출 ===
-    kw_model = KeyBERT(model="jhgan/ko-sroberta-multitask")
-    keybert_keywords = [
-        kw for kw, _ in kw_model.extract_keywords(
-            summary,
-            keyphrase_ngram_range=(1, 2),
-            stop_words=None,
-            top_n=30
-        )
-    ]
     kw_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
     kw_prompt = ChatPromptTemplate.from_template("""
-    당신은 뉴스 요약문에서 핵심 개념을 추출하는 **언어 정제 전문가**입니다.
+    당신은 “뉴스 요약문 기반 단답식 퀴즈 생성 시스템”의 **정답 후보 추출 모듈**입니다.
 
-    아래의 [요약문]과 [KeyBERT 후보]를 참고하여,
-    문맥상 가장 중요한 **순수 명사 또는 복합 명사(2~3어절)** 7개를 최종 선별하세요.
+    아래의 [요약문]을 읽고
+    문맥상 가장 중요한 **순수 명사 또는 복합 명사(2~3어절)** 키워드 7개를 최종 선별하세요.
 
-    [정제 규칙 — 반드시 모두 지켜야 합니다]
-
+    [정답 필터링 규칙 — 반드시 모두 지켜야 합니다]
+                                                 
+    ---
     1. **요약문 안에 실제 등장한 명사**만 사용합니다.  
     - 새로운 단어, 의미 확장, 해석어를 만들어서는 안 됩니다.
 
@@ -82,34 +73,39 @@ def generate_short_quiz(selected_session=None):
 
     3. **2~3어절 복합 명사**는 허용합니다.  
     - 예: “전략적 동반자 관계”, “용산 대통령실”, “에너지 전환 정책”
-
+                                                 
+    ---                                           
+    [정답 예시] :
+    - “공정거래위원회는” → “공정거래위원회”
+    - “과징금을 부과하기로” → “과징금”
+    - “대학에서” → “대학”
+    - “입시를 관리하다” → “입시”
+                                                 
+    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”
+    허용 예시: “무역정책”, “핵잠수함 도입”, “가맹점 계약”, “학교폭력 기록”
+    ---
+                                                
     4. **아래 5개 카테고리 중 최소 1개 이상씩 포함되도록 7개를 고르세요.**
     - 인물명 (예: 대통령, 대표, 위원장 등 실제 인물 명칭)
     - 기관명 (예: 정부, 위원회, 기업, 공사, 단체 등)
     - 정책명 또는 제도명 (예: 정책, 계획, 전략, 제도, 협약 등)
     - 사건명 또는 활동명 (예: 정상회담, 발표, 구축, 수주, 개혁 등)
     - 핵심 개념 (예: 생성형 AI, 에너지 전환, 디지털 전환, 보안 체계 등)
-        5. 중복·유사 표현은 하나로 통합합니다.  
-        - 예: “AI 플랫폼”과 “생성형 AI 플랫폼”은 맥락상 하나로 간주
                                                  
-    [정답 예시] :
-    - “공정거래위원회는” → “공정거래위원회”
-    - “과징금을 부과하기로” → “과징금”
-    - “대학에서” → “대학”
-    - “입시를 관리하다” → “입시”
-
-    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”
-    허용 예시: “무역정책”, “핵잠수함 도입”, “가맹점 계약”, “학교폭력 기록”
-
+    5. 중복·유사 표현은 하나로 통합합니다.  
+    - 예: “AI 플랫폼”과 “생성형 AI 플랫폼”은 맥락상 하나로 간주
+                                                 
+    6. 반드시 **쉼표( , )로 구분된 한 줄짜리 문자열**로만 출력합니다.
+    - JSON, 리스트, 마크다운, 줄바꿈, 설명문 모두 금지.
+    - 출력 예시:
+    키워드1, 키워드2, 키워드3, 키워드4, 키워드5, 키워드6, 키워드7                                            
+                                                
     [요약문]
     {summary}
-
-    [KeyBERT 후보]
-    {keybert_keywords}
     """)
 
     kw_chain = kw_prompt | kw_llm
-    kw_res = kw_chain.invoke({"summary": summary, "keybert_keywords": keybert_keywords})
+    kw_res = kw_chain.invoke({"summary": summary})
 
     keywords_raw = kw_res.content.strip().replace("```", "").replace("json", "")
     keywords = [kw.strip() for kw in keywords_raw.split(",") if kw.strip()]
@@ -117,9 +113,8 @@ def generate_short_quiz(selected_session=None):
     logger.info(f"[LLM 키워드 정제 완료]")
 
     # === 4. 모델 설정 ===
-    llm_i = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-    llm_e1 = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
-    llm_e2 = ChatOpenAI(model="gpt-4o", temperature=0.3)
+    llm_i = ChatOpenAI(model="gpt-4o", temperature=0)
+    llm_e = ChatOpenAI(model="gpt-4o", temperature=0.3)
 
     # === 5. YAML 프롬프트 로드 (I / E-1 / E-2 분리) ===
     def load_prompt_yaml(filename: str):
@@ -136,13 +131,11 @@ def generate_short_quiz(selected_session=None):
 
     # --- 프롬프트 개별 로드 ---
     prompt_i  = load_prompt_yaml("short_i.yaml")     # I단계 (기본 단답형)
-    prompt_e1 = load_prompt_yaml("short_e_1.yaml")   # E-1단계 (상황절+의미절)
-    prompt_e2 = load_prompt_yaml("short_e_2.yaml")   # E-2단계 (심화 리라이트형)
+    prompt_e = load_prompt_yaml("short_e.yaml")   # E-2단계 (심화 리라이트형)
 
     # --- LLM 체인 구성 ---
     chain_i  = prompt_i  | llm_i
-    chain_e1 = prompt_e1 | llm_e1
-    chain_e2 = prompt_e2 | llm_e2
+    chain_e = prompt_e | llm_e
 
     # --- 공통 JSON 파싱 함수 ---
     def parse_json_output(res):
@@ -154,6 +147,27 @@ def generate_short_quiz(selected_session=None):
         except json.JSONDecodeError:
             logger.warning("JSON 파싱 오류 발생, 빈 리스트 반환")
             return []
+        
+    def format_short_output(items, sourceUrl):
+        """LLM 출력물이 망가져도 구조를 강제로 정규화"""
+        contents = []
+        for idx, item in enumerate(items, start=1):
+            if not isinstance(item, dict):
+                item = {}
+
+            q = item.get("question", "").strip() or "질문을 불러올 수 없습니다."
+            a = item.get("correctAnswer", "").strip() or "정답 정보 없음"
+            ex = item.get("answerExplanation", "").strip()
+
+            contents.append({
+                "contentId": idx,
+                "question": q or "",
+                "correctAnswer": a or "",
+                "answerExplanation": ex or "",
+                "sourceUrl": sourceUrl,
+            })
+
+        return contents
 
     # === 7. 문제 생성 ===
     try:
@@ -163,33 +177,24 @@ def generate_short_quiz(selected_session=None):
             "keywords": keywords
         })
         all_quiz_i = parse_json_output(i_res)
-        logger.info(f"[I단계 생성 완료] {len(all_quiz_i)}문항")
 
         # === I단계 5문항 제한 ===
-        i_quiz = all_quiz_i[:5]  # 상위 5개만 저장
-        logger.info(f"[I단계 최종 선택] {len(i_quiz)}문항")
+        i_quiz = all_quiz_i[:5]
 
-        # --- (2) E-1단계 ---
-        e1_res = chain_e1.invoke({
-            "summary": summary,
-            "keywords": keywords
+        # --- (2) E단계 진행 ---
+        e2_res = chain_e.invoke({
+            "summary" : summary,
+            "i_quiz": json.dumps(i_quiz, ensure_ascii=False),
         })
-        all_quiz_e1 = parse_json_output(e1_res)
-        logger.info(f"[E-1단계 생성 완료] {len(all_quiz_e1)}문항")
+        all_quiz_e = parse_json_output(e2_res)
 
-        # --- (3) E-2단계 (I 심화형) ---
-        e2_res = chain_e2.invoke({
-            "i_quiz": json.dumps(all_quiz_i, ensure_ascii=False)
-        })
-        all_quiz_e2 = parse_json_output(e2_res)
-        logger.info(f"[E-2단계 생성 완료] {len(all_quiz_e2)}문항")
-
-        # --- (4) 병합 규칙 ---
-        needed = max(0, 5 - len(all_quiz_e1))
-        all_quiz_e = (all_quiz_e1 + all_quiz_e2[:needed])[:5]
+        # --- (3) 문제 랜덤화 및 contentId 부여 ---
         random.shuffle(all_quiz_e)
-        e_quiz= all_quiz_e
-        logger.info(f"[E단계 통합 완료] 최종 {len(all_quiz_e)}문항")
+
+        # === LLM 출력 정규화 (append-safe) ===
+        i_quiz = format_short_output(i_quiz, sourceUrl)
+        e_quiz = format_short_output(all_quiz_e, sourceUrl)
+
 
     except Exception as e:
         logger.error(f"[ERROR] {topic} 코스 {course_id} 세션 {session_id} 퀴즈 생성 중 오류: {e}")

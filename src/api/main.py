@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .endpoint.course_api import router as course_router
-from pipeline.pipeline import run_learning_pipeline
+from src.api.endpoint.course_api import router as course_router
+from src.pipeline.pipeline import run_learning_pipeline
 from datetime import datetime
 import asyncio
 import pytz
@@ -23,11 +23,11 @@ async def daily_pipeline_scheduler():
         if now.hour == 0 and now.minute == 0:
             logger.info("⏰ 자정 감지 → 자동 파이프라인 실행 시작")
             try:
-                run_learning_pipeline()
+                await asyncio.to_thread(run_learning_pipeline)
+
                 logger.info("✅ 파이프라인 자동 실행 완료")
             except Exception as e:
                 logger.error(f"❌ 파이프라인 실행 실패: {e}")
-            # 1분간 중복 실행 방지
             await asyncio.sleep(60)
         await asyncio.sleep(30)
 

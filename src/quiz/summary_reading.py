@@ -1,3 +1,4 @@
+# src/summary_reading with keybert version
 import os, json, re, logging
 from datetime import datetime
 import sys
@@ -5,14 +6,12 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from openai import OpenAI
-from keybert import KeyBERT
-from sentence_transformers import SentenceTransformer, util
 from quiz.select_session import select_session
 
 logger = logging.getLogger(__name__)
 
 def generate_summary_reading_quiz(selected_session=None):
-    # === 환경 변수 로드 ===
+
     load_dotenv(override=True)
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     client = OpenAI(api_key=OPENAI_API_KEY)
@@ -31,29 +30,29 @@ def generate_summary_reading_quiz(selected_session=None):
 
     # === 요약문 정제 ===
     prompt = f"""
-    너는 '뉴스 문해력 학습용 교재에 수록될 요약문'을 교정하는 전문 편집자이다.  
-    문체는 보도체가 아닌 분석적 서술체로 유지한다.  
+    너는 '뉴스 문해력 학습용 교재 요약문'을 교정하는 전문 편집자이다.
+    문체는 간결하고 분석적이며 중립적이어야 한다.
 
-    [교정 기준]
-    1. 원문에 존재하지 않는 정보나 추측을 추가하지 않는다.  
-    2. 인물, 기관, 수치 등 사실 관계는 원문과 일치하도록 유지한다.  
-    3. 모든 문장은 과거 시제로 통일한다.  
-    4. 문장은 중립적이고 사실 서술형으로 작성한다.  
-    - 감정적, 비유적, 추측성 어휘(예: '논란', '비판적', '충격')는 삭제한다.  
-    5. 각 문장은 25자 내외로 간결하게, 한 문단이 한 호흡으로 자연스럽게 이어지게 한다.
-    6. 인물·기관은 처음 등장할 때 전체 명칭으로, 이후 약칭 사용 가능하다. 부족한 정보가 있다면 명칭 간단히 덧붙인다. 
-    7. 대명사(그, 이, 해당 등)와 지시어(이날, 이에 대해 등)는 구체적인 명사로 바꾼다.  
-    8. 날짜·시간 표현은 가능한 한 명시적 표현으로 바꾼다. (‘오늘’ → ‘29일’)  
-    9. 전체는 사건의 발생→발언→결과 순으로 자연스럽게 배열한다.  
+    [핵심 규칙]
+    1. 입력 요약문에 없는 사실, 날짜, 인물, 기관 정보를 새로 만들지 않는다.
+    2. 감정적·비유적·추측성 표현(예: 논란, 비판적, 충격 등)은 모두 제거한다.
+    3. 직함만 제시된 인물(예: '이 대통령')은 기사 제목에서 특정 가능한 경우에만 전체 이름/직함으로 치환한다.
+    4. 날짜·연도·기간 관련 정보는 입력에 등장한 경우에만 그대로 사용하며, 입력에 없으면 절대 생성하지 않는다.  
+    5. 직접 인용(" ")은 입력 문장에 실제 존재하는 내용만 사용하고, 그 외는 모두 자연스러운 간접 인용으로 바꾼다.  
+    6. 모든 문장은 과거 시제로 통일한다.
 
-    [주의]
-    1. 단, 문장을 매끄럽게 만들기 위해 어순 조정은 허용된다.  
-    2. 띄어 쓰기에 유의한다.
-    3. 최종 출력은 아래 JSON 형식으로만 반환하라.
+    [가독성 규칙]
+    6. 문장은 자연스럽게 이어지도록 필요한 범위에서 접속어나 연결 표현을 사용할 수 있다.
+    7. 문장 구조는 ‘배경 → 발언 → 설명 → 정리’ 흐름으로 재배열할 수 있다. (사실 추가는 금지)
 
+    [출력 형식]
+    다음 JSON 형식으로만 출력한다.
     {{
-    "summary": "<교정된 요약문 (약 200~250자)>"
+    "summary": "<교정된 요약문 (200~250자)>"
     }}
+
+    [기사 제목]
+    {headline}
 
     [입력 요약문]
     {summary}
@@ -78,25 +77,21 @@ def generate_summary_reading_quiz(selected_session=None):
         logger.warning(f"JSON 파싱 실패(1차): {e}")
         refined_summary = refined_summary_raw  
 
-    logger.info(f"[{topic}] 1차 요약문 정제 완료")
-
     prompt_refine = f"""
-    + 너는 '뉴스 문해력 학습용 교재에 수록될 요약문'을 교정하는 전문 편집자이다.  
-    아래 [입력 요약문]을 **다시 작성하라.**  
+    너는 '뉴스 문해력 학습용 교재'의 전문 편집자이다.
+
+    아래 [입력 요약문]을 더 자연스럽고 매끄럽게 다듬어라.
+    사실과 맥락은 그대로 유지하되, 문장 흐름만 정돈한다.
 
     [지침]
-    1. 사건의 전개는 원인 → 전개 → 결과 순으로 자연스럽게 배열한다.
-    2. 누가, 언제, 무엇을, 왜 했는지가 명확히 드러나야 한다.
-    3. 문체는 중립적이고 사실 중심의 보도체로 유지하되, 어미는 자연스럽게 조정한다.
-    4. 세부 정보가 불확실할 때는 추정하지 않는다. 대신, 문맥이 단절되지 않도록 기사 속에서 확인 가능한 근거나 발언, 상황 묘사를 활용해 자연스럽게 연결한다.
-    만약 원인이 명확히 드러나지 않는다면, 초점을 인물의 발언 배경이나 정책적 의미로 이동시켜 서술한다.5. 문장 간 흐름이 매끄럽도록 연결어를 조정하되, 논리를 억지로 이어 붙이지 않는다.
-    6. 전체 문단은 200~250자 내외로 구성한다.
+    1. 문장은 자연스럽고 읽기 쉽게 연결한다.
+    2. 정보는 추가하지 않는다. (추론·창작 금지)
+    3. 원문에 등장한 사실·인물·기관·지명만 사용한다.
+    4. 문체는 중립적이고 보도체 톤으로 유지한다.
+    5. 날짜·연도·기간은 입력에 있는 경우에만 그대로 사용하고, 새로 만들지 않는다.
+    6. 전체 길이는 180~250자 사이로 맞춘다.
 
-    [주의]
-    1. 새로운 사실이나 세부 정보를 창작하지 말라.  
-    2. 띄어 쓰기에 유의한다. 
-    3. 출력은 반드시 아래 JSON 형식으로만 반환하라.
-
+    [출력 형식]
     {{
     "summary": "<자연스럽고 논리적으로 정돈된 요약문>"
     }}
@@ -123,40 +118,55 @@ def generate_summary_reading_quiz(selected_session=None):
         logger.warning(f"JSON 파싱 실패(2차): {e}")
         refined_summary = refined_summary_raw  
 
-    logger.info(f"[{topic}] 최종 요약문 정제 완료")
-
     # === 핵심 정답 추출 ===
     prompt_answer = f"""
-    너는 뉴스의 핵심 구조를 분석하는 정보 추출 전문가이다.
+    당신은 뉴스 요약문에서 Actor(주체)와 Object(핵심 개념)을 추출하는 정보 구조화 엔진입니다.
 
-    다음 요약문을 읽고, 사건의 중심 요소 2가지를 식별하라.
+    [추출 대상 정의]
 
-    [추출 대상]
-    1. **주체(Actor)**: 사건의 중심이 되는 인물, 기관, 또는 단체.  
-    - 행동을 주도하거나 발언·결정을 내린 주체를 한 개만 선택하라.  
-    - 예시: '이재명 대통령', '공정거래위원회', '국방부', '오바마 전 대통령'  
-    - 복수의 기관·인물이 등장하더라도, 주된 역할을 수행한 하나만 선택한다.
+    1. Actor(주체)
+    - 사건의 중심이 되는 인물·기관·단체 중 단 1개
+    - 발언·결정·조치의 주체
+    - 요약문에 등장한 고유명사만 선택
 
-    2. **핵심 개념(Object)**: 사건의 본질적 주제나 핵심 사안.  
-    - 주체가 행한 행동이나 정책, 또는 논의의 중심 개념을 한 개만 선택하라.  
-    - 예시: '과징금 부과', '전략적 동반자 관계', '학교폭력', '입시 제도'  
-    - 단, ‘문장 일부’(예: ‘과징금을 부과하기로’)처럼 동사형이나 조사가 포함된 형태는 금지한다.  
-    - 반드시 **명사 또는 2~3어절 복합 명사** 형태로 제시하라.  
-    - 수치, 날짜, 단위(예: 2023년, 6억 원 등)는 포함하지 않는다.
+    2. Object(핵심 개념)
+    - 사건 전체의 "핵심 논점" 또는 “중심 대상”인 명사/복합명사
+    - 반드시 1개만 선택
+    - 다음 중 하나여야 함:
+    (a) 정책명
+    (b) 문서명
+    (c) 협상·절차명
+    (d) 사건명
+    - 반드시 요약문에 등장한 명사 
+    - 동사형/조사 포함 금지 (예: '~하기로', '~했다')
+    - Actor의 주장·비판에서 나온 별칭 금지 (예: '국익 시트')
 
-    [출력 규칙]
-    - 모든 단어는 실제 요약문에 등장해야 한다.  
-    - 조사가 포함된 경우(은, 는, 이, 가, 을, 를, 에, 으로 등)는 제거하고 명사형만 남긴다.  
-    - 결과는 JSON 형식으로만 출력한다.
+    -----------------------------------------
+    [선택 규칙]
 
-    [출력 형식 예시]
+    Object 선택 절차:
+    1) 요약문에서 ‘정책/문서/협상/절차/사건명’ 후보만 추출  
+    2) “이 사건은 무엇을 둘러싸고 벌어졌는가?” 기준으로 1개 선택  
+    3) 문서명·정책명이 등장하면 절차명보다 우선한다  
+    (예: '팩트시트' > '비준 절차')
+
+    Actor 선택 절차:
+    1) 가장 중심적으로 행동하거나 발언한 주체를 1개 선택  
+    2) 집단(여야)도 가능하나, 특정 인물이 더 핵심이면 인물 우선  
+
+    -----------------------------------------
+    [출력 형식]
+
+    아래 형식으로만 출력하라:
+
     {{
     "keywords": [
-        {{"word": "공정거래위원회"}},    ← 주체(Actor)
-        {{"word": "과징금"}}             ← 핵심 개념(Object)
+        {{"word": "ACTOR"}},
+        {{"word": "OBJECT"}}
     ]
     }}
 
+    -----------------------------------------
     뉴스 요약문:
     {refined_summary}
     """
@@ -173,97 +183,47 @@ def generate_summary_reading_quiz(selected_session=None):
         answers = [a["word"] for a in answers_json]
     else:
         raise ValueError(f"예상치 못한 JSON 구조: {answers_json}")
-    logger.info(f"[{topic}] 중심 키워드(정답): {answers}")
-
-    # === 2. KeyBERT로 관련 단어 필터링 ===
-    anchor_words = answers
-    kw_model = KeyBERT(model="jhgan/ko-sroberta-multitask")
-    bert_keywords = kw_model.extract_keywords(refined_summary, keyphrase_ngram_range=(1, 2), top_n=30)
-
-    # SentenceTransformer 로 anchor 유사도 필터링
-    embed_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
-
-    def is_related(word, anchors, threshold=0.5):
-        word_emb = embed_model.encode(word, convert_to_tensor=True)
-        sims = [util.cos_sim(word_emb, embed_model.encode(a, convert_to_tensor=True)).item() for a in anchors]
-        return max(sims) >= threshold
-
-    related_candidates = [k for k, v in bert_keywords if is_related(k, anchor_words)]
-    logger.info(f"[{topic}] 정답과 관련된 명사 후보: {related_candidates}")
 
     # === 3. LLM 혼동 가능성 평가 ===
     prompt_confuse = f"""
-    너는 뉴스 요약문에서 핵심 정보를 추출하는 전문가이다.
+    다음 요약문에서 정답 단어 2개(Actor / Object)를 기준으로,
+    요약문을 읽고 해당 내용 안의 **명사**들이 '오답으로 적합한지' 판단하고 score를 매겨라.
 
-    다음 요약문과 정답 단어 2개(주체/핵심개념)를 기반으로,
-    학생이 헷갈릴 수 있는 오답 후보를 제시하라.
+    [정답 역할]
+    - 첫 번째 단어: 사건의 주체(Actor)
+    - 두 번째 단어: 사건의 핵심 개념(Object)
 
-    [정답 역할 구분]
-    1. 첫 번째 단어 → 사건의 주체(Actor)
-    2. 두 번째 단어 → 사건의 핵심 개념(Object)
+    [오답 필터 규칙 — 아래 중 하나라도 걸리면 오답에서 제외]
+    1) 형태 조건: 조사가 포함됨, 동사/형용사, 1~2글자, 명사가 아님
+    2) 관계 조건: 정답과 동일/유사/포함/파생/축약
+    3) 맥락 조건: 기사에서 중심 역할(Actor/Object)로 쓰인 단어
 
-    ---
+    [오답 선정 기준]
+    - Actor형: 기사에 등장하지만 사건의 주체가 아닌 인물/조직/기관/국가/직책 등의 **명사**
+    - Object형: 핵심 개념과 관련은 있으나 중심이 아닌 정책/제도/사건/보조 개념 등의 **명사**
 
-    [오답 생성 원칙]
-
-    (1) 주체(Actor) 관련 오답:
-    - 실제 기사에 등장하지만 사건의 주체가 아닌 명사.
-    - 기관명, 조직명, 직위, 집단명, 직책, 국가, 정당 등.
-    - 예시: 정답이 ‘이재명 대통령’일 경우 → ‘대통령실’, ‘정부’, ‘국방부’, ‘야당’, ‘호주’ 등.
-
-    (2) 핵심 개념(Object) 관련 오답:
-    - 기사 맥락상 핵심 개념과 연관은 있으나 중심이 아닌 부차적 요소.
-    - 정책명, 사건명, 협약, 제도, 수단, 결과물, 부연 설명어 등.
-    - 예시: 정답이 ‘핵잠수함 도입’일 경우 → ‘합의’, ‘협정’, ‘자주국방’, ‘호주 선례’, ‘외교 실패’ 등.
-
-    ---
-
-    [주의사항]
-    - 모든 단어는 조사나 어미가 없는 명사 또는 2~3어절 복합 명사여야 한다.
-    - 정답의 동의어, 축약형, 포함 관계(예: ‘핵잠수함’ vs ‘핵잠’)는 금지한다.
-    - 추상적·메타적 단어(‘문제’, ‘결과’, ‘상황’, ‘의미’, ‘이유’)는 제외한다.
-    - 조사(은, 는, 이, 가, 을, 를, 에, 에서, 으로, 와, 과)나 
-    동사형 어미(하다, 되다, 하기로, 하였다, 했다 등)가 포함된 경우 해당 부분을 제거하고 순수 명사만 남긴다.
-
-    예시:
-    - “공정거래위원회는” → “공정거래위원회”
-    - “과징금을 부과하기로” → “과징금”
-    - “대학에서” → “대학”
-    - “입시를 관리하다” → “입시”
-
-    비허용 예시: “무역을”, “수시 모집에서”, “정책을 위한 계획”, “핵잠수함을 도입하는 것”, “경제적인 문제”
-    허용 예시: “무역정책”, “핵잠수함 도입”, “가맹점 계약”, “학교폭력 기록”
-
-    ---
+    [출력 조건]
+    - 최소 13개
+    - actor/object 균형적으로 포함
+    - 왜 학생이 혼동할 수 있는지 간단히 reason 명시
 
     [출력 형식]
     {{
     "ranked": [
-        {{"word": "정부", "role": "actor", "score": 0.85, "reason": "기사에 등장하지만 주체가 아님"}},
-        {{"word": "정책", "role": "object", "score": 0.82, "reason": "핵심 개념과 연관은 있으나 중심이 아님"}}
+        {{"word": "정부", "role": "actor", "score": 0.83, "reason": "요약문에 등장하지만 주체가 아님"}},
+        {{"word": "정책", "role": "object", "score": 0.81, "reason": "핵심 개념과 관련 있으나 중심 아님"}}
     ]
     }}
 
-    [출력 조건]
-    - 최소 14개 이상 제시할 것.
-    - 주체형(actor) 오답과 개념형(object) 오답이 균형 있게 포함될 것.
-    - 각 단어에 대해 학생이 왜 혼동할 수 있는지를 간단히 설명할 것.
-
-    ---
-
-    [입력 데이터]
+    [입력]
     요약문:
     {refined_summary}
 
-    정답 단어:
+    정답:
     {answers}
-
-    KeyBERT 후보 단어:
-    {related_candidates}
     """
-
     resp_confuse = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt_confuse}],
         temperature=0
     )
@@ -275,52 +235,7 @@ def generate_summary_reading_quiz(selected_session=None):
         raise
 
     llm_ranked = {item["word"]: item["score"] for item in llm_ranked_data["ranked"]}
-    logger.info(f"[{topic}] 혼동어 후보: {list(llm_ranked.keys())}")
-
-    # === 4. 정규화 ===
-    min_s, max_s = min(llm_ranked.values()), max(llm_ranked.values())
-    combined = {
-        w: round((s - min_s) / (max_s - min_s + 1e-6), 3)
-        for w, s in llm_ranked.items()
-    }
-
-    # === 5. 유의어/중복 필터링 (완화 + KeyBERT 보충) ===
-    def is_semantically_similar(word, answers, threshold=0.9):
-        word_emb = embed_model.encode(word, convert_to_tensor=True)
-        for a in answers:
-            ans_emb = embed_model.encode(a, convert_to_tensor=True)
-            sim = util.cos_sim(word_emb, ans_emb).item()
-            if sim >= threshold:
-                return True
-        return False
-
-    def too_similar(word, answers):
-        # 완전히 동일한 단어만 제외
-        return any(a == word for a in answers)
-
-    filtered_combined = {
-        w: s for w, s in combined.items()
-        if not too_similar(w, answers)
-        and not is_semantically_similar(w, answers, threshold=0.9)
-    }
-
-    # === 오답 후보 부족 시 KeyBERT 기반 보충 ===
-    if len(filtered_combined) < 9:
-        logger.warning(f"[{topic}] 오답 후보 부족 → KeyBERT 보충 시작 ({len(filtered_combined)}개)")
-        for k, v in bert_keywords:
-            k = k.strip()
-            if k not in filtered_combined and k not in answers and len(k) > 1:
-                filtered_combined[k] = 0.15  # 낮은 점수로 추가
-            if len(filtered_combined) >= 9:
-                break
-
-    if len(filtered_combined) < 9:
-        logger.warning(f"[{topic}] KeyBERT 보충 후에도 부족 ({len(filtered_combined)}개), 일부 중복 허용")
-        for k, v in bert_keywords:
-            if k not in filtered_combined:
-                filtered_combined[k] = 0.1
-            if len(filtered_combined) >= 9:
-                break
+    filtered_combined=dict(llm_ranked)
 
     # === 6. 난이도별 분류 ===
     distractors = sorted(filtered_combined.items(), key=lambda x: x[1], reverse=True)[:9]
