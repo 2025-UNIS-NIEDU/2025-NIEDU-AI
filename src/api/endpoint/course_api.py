@@ -11,7 +11,7 @@ router = APIRouter(prefix="/api/course", tags=["Course"])
 @router.get("/test")
 def get_test_data():
     # 프로젝트 기준 상대 경로 설정
-    file_path = Path("data/quiz/package/economy_2025-11-06_package.json")
+    file_path = Path("data/quiz/package/economy_2025-11-24_package.json")
 
     # 파일 존재 여부 체크
     if not file_path.exists():
