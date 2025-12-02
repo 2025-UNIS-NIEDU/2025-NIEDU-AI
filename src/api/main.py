@@ -14,6 +14,7 @@ app.include_router(course_router)
 KST = pytz.timezone("Asia/Seoul")
 logger = logging.getLogger(__name__)
 
+
 async def daily_pipeline_scheduler():
     """한국시간 자정마다 자동 실행"""
     while True:
