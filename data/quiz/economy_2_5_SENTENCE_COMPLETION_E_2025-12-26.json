@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "광주시의원들은 12·29 제주항공 여객기 참사에 대해 ______",
+        "referenceAnswer": "철저한 진상규명과 책임 규명을 촉구했다."
+      },
+      {
+        "contentId": "2",
+        "question": "참사로 179명이 희생된 지 1년이 지났지만 ______",
+        "referenceAnswer": "정확한 사고 원인과 책임 소재가 규명되지 않았다."
+      },
+      {
+        "contentId": "3",
+        "question": "광주시의원들은 유가족에 대한 장기적 지원 체계를 ______",
+        "referenceAnswer": "국가 책임 아래 마련해야 한다고 주장했다."
+      }
+    ]
+  ]
+}

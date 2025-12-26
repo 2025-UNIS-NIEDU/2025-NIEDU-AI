@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "정보 유출 사건의 조사 과정에서 핵심 증거로 회수된 전자 기기는 무엇입니까?",
+        "correctAnswer": "노트북 회수",
+        "answerExplanation": "노트북 회수는 유출 경로 파악과 책임 규명에 중요한 역할을 한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 2,
+        "question": "기업의 자율적 결정으로 발표된 성탄절 관련 공지가 정부 지시와 무관한 이유는 무엇입니까?",
+        "correctAnswer": "성탄절 발표",
+        "answerExplanation": "성탄절 발표는 기업의 독립적 의사결정과 운영 자율성을 반영한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 3,
+        "question": "정보 유출 사고 이후 신뢰 회복과 문제 해결을 위해 지속적으로 협력한 공공 기관은 어디입니까?",
+        "correctAnswer": "정부",
+        "answerExplanation": "정부와의 협력은 사고 수습과 제도적 신뢰 회복을 촉진한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 4,
+        "question": "대규모 정보 유출 사건의 중심에 서며 보안 관리의 중요성을 환기시킨 기업은 어디입니까?",
+        "correctAnswer": "쿠팡",
+        "answerExplanation": "쿠팡의 정보 유출 사건은 기업 보안 체계의 취약성을 드러냈다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 5,
+        "question": "정보 유출에 대한 비판을 반박하고 투명성을 강조하기 위해 기업이 취한 조치는 무엇입니까?",
+        "correctAnswer": "자료 공개",
+        "answerExplanation": "자료 공개는 기업의 책임성과 정보 관리 투명성을 증진한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "2026년도 국고채 발행계획을 확정한 기관은 어디인가?",
+        "correctAnswer": "기획재정부",
+        "answerExplanation": "기획재정부는 2026년도 국고채 발행계획을 확정했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 2,
+        "question": "내년 국고채 발행 규모는 올해보다 얼마나 줄어드는가?",
+        "correctAnswer": "5000억원",
+        "answerExplanation": "내년에 발행할 국고채 규모를 올해보다 5000억원 줄였다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 3,
+        "question": "내년 국고채 총 발행한도는 얼마로 정해졌는가?",
+        "correctAnswer": "225조7000억원",
+        "answerExplanation": "내년 국고채 총 발행한도는 225조7000억원으로 정해졌다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 4,
+        "question": "올해 국고채 발행량에서 제외된 항목은 무엇인가?",
+        "correctAnswer": "개인투자용 국채",
+        "answerExplanation": "올해 발행량인 226조2000억원에서 개인투자용 국채 1조3000억원이 제외되었다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 5,
+        "question": "내년 국고채 발행계획에서 감소한 항목은 무엇인가?",
+        "correctAnswer": "발행규모",
+        "answerExplanation": "내년에 발행할 국고채 규모를 올해보다 줄였다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      }
+    ]
+  }
+]

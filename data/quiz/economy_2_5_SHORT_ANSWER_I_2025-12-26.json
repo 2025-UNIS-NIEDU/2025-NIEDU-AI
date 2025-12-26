@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "광주시의원들이 12·29 참사 1주기를 앞두고 발표한 것은 무엇인가?",
+        "correctAnswer": "성명",
+        "answerExplanation": "광주시의원들은 참사 1주기를 앞두고 성명을 발표했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 2,
+        "question": "참사로 인해 희생된 사람들의 수는 몇 명인가?",
+        "correctAnswer": "179명",
+        "answerExplanation": "참사로 179명이 희생되었다고 지적되었다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 3,
+        "question": "의원들이 촉구한 사고 조사 방식은 무엇인가?",
+        "correctAnswer": "독립적인 사고 조사",
+        "answerExplanation": "의원들은 독립적인 사고 조사를 통한 철저한 진상 규명을 촉구했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 4,
+        "question": "조사 신뢰성을 저해하는 문제로 지적된 것은 무엇인가?",
+        "correctAnswer": "자료 비공개",
+        "answerExplanation": "조사 지연, 자료 비공개 등이 조사 신뢰성을 저해한다고 밝혔다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 5,
+        "question": "의원들이 국가에 요구한 유가족에 대한 조치는 무엇인가?",
+        "correctAnswer": "장기적인 지원 체계",
+        "answerExplanation": "의원들은 국가의 책임 아래 유가족에 대한 장기적인 지원 체계를 요구했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      }
+    ]
+  }
+]

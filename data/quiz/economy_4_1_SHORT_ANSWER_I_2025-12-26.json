@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "진안양수발전소 유치 성공 기원 대회가 열린 장소는 어디인가?",
+        "correctAnswer": "진안문예체육회관",
+        "answerExplanation": "한국동서발전은 진안문예체육회관에서 결의대회를 개최했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 2,
+        "question": "권명호 사장이 양수발전의 중요성을 설명한 측면은 무엇인가?",
+        "correctAnswer": "전력계통",
+        "answerExplanation": "권명호 사장은 양수발전이 국가 전력계통의 안정성을 가능하게 한다고 설명했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 3,
+        "question": "진안군이 선도할 수 있는 분야로 권명호 사장이 언급한 것은 무엇인가?",
+        "correctAnswer": "에너지 전환",
+        "answerExplanation": "권명호 사장은 진안군이 에너지 전환을 선도할 잠재력을 지니고 있다고 강조했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 4,
+        "question": "양수발전 사업 추진에 있어 필요한 지역의 요소는 무엇인가?",
+        "correctAnswer": "공감대",
+        "answerExplanation": "권명호 사장은 양수발전 사업에 있어 지역의 공감대가 필요하다고 덧붙였다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 5,
+        "question": "진안양수발전소 유치 의지를 다지기 위해 개최된 행사의 명칭은 무엇인가?",
+        "correctAnswer": "범군민 결의대회",
+        "answerExplanation": "한국동서발전은 범군민 결의대회를 개최하고 유치 의지를 다졌다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      }
+    ]
+  }
+]

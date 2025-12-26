@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "I",
+    "contents": [
+      {
+        "summary": "한성숙 장관은 청년상인이 지역 소비를 이끌며 민생경제의 중요한 축이라고 언급했다. 그는 경동시장이 청년에게 도전하고 성장할 수 있는 창업공간이자, 전통시장의 지속 가능성을 높이는 미래자산이라고 평가했다. 중소벤처기업부는 청년이 지역에 안정적으로 정착하고 성장할 수 있는 환경을 조성하고, 민생경제와 전통시장의 지속 가능한 발전을 위한 정책적 지원을 계속할 계획이라고 밝혔다.",
+        "keywords": [
+          {
+            "word": "한성숙",
+            "isTopicWord": true
+          },
+          {
+            "word": "정책적 지원",
+            "isTopicWord": true
+          },
+          {
+            "word": "청년",
+            "isTopicWord": false
+          },
+          {
+            "word": "전통시장",
+            "isTopicWord": false
+          },
+          {
+            "word": "미래자산",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "국민권익위원회는 신혼부부의 혼인신고 지연 원인인 '결혼 페널티' 문제를 해결하기 위해 국토부에 제도 개선을 권고했다. 권익위는 버팀목 및 디딤돌 대출의 부부 합산 소득 기준을 개인 기준의 2배로 상향 조정하고, 유자녀 가구에 대한 가산금리 면제도 제안했다. 그러나 국토부는 이러한 제안이 집값 안정 기조와 부합하지 않다고 밝혔다.",
+        "keywords": [
+          {
+            "word": "국민권익위원회",
+            "isTopicWord": true
+          },
+          {
+            "word": "결혼 페널티",
+            "isTopicWord": true
+          },
+          {
+            "word": "국토부",
+            "isTopicWord": false
+          },
+          {
+            "word": "집값",
+            "isTopicWord": false
+          },
+          {
+            "word": "신혼부부",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

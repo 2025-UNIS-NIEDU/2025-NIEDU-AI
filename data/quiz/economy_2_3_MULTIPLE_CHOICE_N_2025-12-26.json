@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "한국수산자원공단이 부산역 일대에서 실시한 캠페인의 주제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "교통 안전 캠페인"
+          },
+          {
+            "label": "B",
+            "text": "환경 보호 캠페인"
+          },
+          {
+            "label": "C",
+            "text": "문화 예술 캠페인"
+          },
+          {
+            "label": "D",
+            "text": "갑질 근절 캠페인"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "한국수산자원공단은 갑질 근절 캠페인을 부산역 일대에서 실시했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 2,
+        "question": "한국수산자원공단 감사법무실이 국민에게 전달한 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "환경 보호 리플릿"
+          },
+          {
+            "label": "B",
+            "text": "문화 예술 리플릿"
+          },
+          {
+            "label": "C",
+            "text": "교통 안전 리플릿"
+          },
+          {
+            "label": "D",
+            "text": "갑질근절 리플릿"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "감사법무실은 국민에게 갑질근절 리플릿을 전달했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 3,
+        "question": "한국수산자원공단이 사회문화 조성을 위해 알린 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "갑질 신고 채널"
+          },
+          {
+            "label": "B",
+            "text": "환경 보호 채널"
+          },
+          {
+            "label": "C",
+            "text": "교통 안전 채널"
+          },
+          {
+            "label": "D",
+            "text": "문화 예술 채널"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "공단은 갑질 신고 채널을 알려 사회문화 조성에 앞장섰다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 4,
+        "question": "한국수산자원공단의 캠페인이 진행된 장소는 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "부산역 일대"
+          },
+          {
+            "label": "B",
+            "text": "광주역 일대"
+          },
+          {
+            "label": "C",
+            "text": "대전역 일대"
+          },
+          {
+            "label": "D",
+            "text": "서울역 일대"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "캠페인은 부산역 일대에서 진행되었다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 5,
+        "question": "한국수산자원공단의 캠페인 주체는 누구인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국토교통부"
+          },
+          {
+            "label": "B",
+            "text": "환경부"
+          },
+          {
+            "label": "C",
+            "text": "문화체육관광부"
+          },
+          {
+            "label": "D",
+            "text": "한국수산자원공단"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "캠페인의 주체는 한국수산자원공단이다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      }
+    ]
+  }
+]

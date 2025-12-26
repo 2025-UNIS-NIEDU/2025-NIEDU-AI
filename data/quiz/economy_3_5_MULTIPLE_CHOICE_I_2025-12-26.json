@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "외국인의 국내 주식시장 '사자' 행보가 환율에 미친 영향은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "환율 하락 압력"
+          },
+          {
+            "label": "B",
+            "text": "환율 상승 유도"
+          },
+          {
+            "label": "C",
+            "text": "환율 변동성 증가"
+          },
+          {
+            "label": "D",
+            "text": "환율 안정화"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "외국인의 국내 주식 매수는 원화 수요를 증가시켜 환율 하락 압력을 가했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+      },
+      {
+        "contentId": 2,
+        "question": "환율 변동성이 큰 흐름을 보인 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "수출입 균형"
+          },
+          {
+            "label": "B",
+            "text": "정책 불확실성"
+          },
+          {
+            "label": "C",
+            "text": "시장 유동성 부족"
+          },
+          {
+            "label": "D",
+            "text": "연말 거래 감소"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "연말 한산한 시장 상황이 환율 변동성을 증가시키는 요인으로 작용했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+      },
+      {
+        "contentId": 3,
+        "question": "연휴 전후 환율 급락의 배경을 시장 맥락까지 포함해 가장 정밀하고 정확히 설명하는 선택지는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "박한유동성·정책개입"
+          },
+          {
+            "label": "B",
+            "text": "연준추가긴축"
+          },
+          {
+            "label": "C",
+            "text": "달러강세확대"
+          },
+          {
+            "label": "D",
+            "text": "외인현물매수"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "연휴 전후 얇은 수급과 당국 조치가 환율 하락을 이끌어, 정책 신호의 단기 파급력을 명확히 시사한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+      },
+      {
+        "contentId": 4,
+        "question": "외국인 매수와 대형주 신고가를 종합할 때 현재 환율 하락이 시사하는 시장 심리의 성격은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경기침체공포"
+          },
+          {
+            "label": "B",
+            "text": "유동성경색"
+          },
+          {
+            "label": "C",
+            "text": "달러선호강화"
+          },
+          {
+            "label": "D",
+            "text": "위험선호강화"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "외국인 순매수와 대형주 신고가는 위험선호 회복을 보여주며, 이는 달러 약세 압력 강화로 이어진다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+      },
+      {
+        "contentId": 5,
+        "question": "23~26일 환율 전체 흐름을 시점과 변동폭을 고려해 가장 정확하게 요약한 선택지는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "장중저점경신지속"
+          },
+          {
+            "label": "B",
+            "text": "나흘연속상승"
+          },
+          {
+            "label": "C",
+            "text": "고점형성후이틀급락"
+          },
+          {
+            "label": "D",
+            "text": "완만하락후급반등"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "23일 고점 후 휴일을 사이에 둔 이틀간 급락은 얇은 수급과 당국 영향이 겹친 결과임을 강하게 시사한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+      }
+    ]
+  }
+]

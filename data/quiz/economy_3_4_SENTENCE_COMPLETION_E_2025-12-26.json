@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "2026년 국고채 발행계획에 따르면, 정부는 ______",
+        "referenceAnswer": "내년에 국고채를 총 225조7000억원 발행하기로 했다."
+      },
+      {
+        "contentId": "2",
+        "question": "기획재정부는 내년도 예산과 시장여건 전망을 토대로 국고채 발행계획을 ______",
+        "referenceAnswer": "확정했다고 26일 밝혔다."
+      },
+      {
+        "contentId": "3",
+        "question": "내년 국고채 발행한도는 올해보다 ______",
+        "referenceAnswer": "5000억원 줄어든 225조7000억원이다."
+      }
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "삼천리그룹이 인수한 회사의 이름은 무엇인가?",
+        "correctAnswer": "성경식품",
+        "answerExplanation": "삼천리그룹은 성경식품의 지분 100%를 인수하는 계약을 체결했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
+      },
+      {
+        "contentId": 2,
+        "question": "삼천리그룹이 체결한 계약의 종류는 무엇인가?",
+        "correctAnswer": "주식 매매 계약",
+        "answerExplanation": "삼천리그룹은 성경식품의 지분 100%를 인수하는 주식 매매 계약을 체결했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
+      },
+      {
+        "contentId": 3,
+        "question": "삼천리그룹이 창립 몇 주년을 맞아 인수를 진행했는가?",
+        "correctAnswer": "70주년",
+        "answerExplanation": "이번 인수는 삼천리그룹의 창립 70주년을 맞아 진행되었다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
+      },
+      {
+        "contentId": 4,
+        "question": "삼천리그룹이 강화하려는 사업 부문은 무엇인가?",
+        "correctAnswer": "생활문화 부문",
+        "answerExplanation": "삼천리그룹은 생활문화 부문 포트폴리오를 강화하기 위해 인수를 진행했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
+      },
+      {
+        "contentId": 5,
+        "question": "삼천리그룹이 성경식품 인수를 통해 높이려는 것은 무엇인가?",
+        "correctAnswer": "글로벌 경쟁력",
+        "answerExplanation": "삼천리그룹은 글로벌 경쟁력을 높여 생활문화 사업의 중요한 축으로 자리매김할 계획이다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
+      }
+    ]
+  }
+]

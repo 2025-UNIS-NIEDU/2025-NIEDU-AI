@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신세계 그룹에서 발생한 사고의 주요 내용은 무엇인가?",
+        "correctAnswer": "개인정보",
+        "answerExplanation": "신세계 그룹에서 임직원 8만여 명의 개인정보가 유출되는 사고가 발생했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 2,
+        "question": "신세계 그룹의 정보 유출 사고가 발생한 시스템은 무엇인가?",
+        "correctAnswer": "인트라넷 시스템",
+        "answerExplanation": "신세계 측은 내부 인트라넷 시스템에서 정보가 유출된 정황을 확인했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 3,
+        "question": "신세계 그룹이 정보 유출 사고 후 취한 조치는 무엇인가?",
+        "correctAnswer": "긴급 점검과 차단",
+        "answerExplanation": "신세계는 사고를 인지하고 관련 시스템 및 계정에 대한 긴급 점검과 차단 조치를 시행했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 4,
+        "question": "신세계 그룹의 정보 유출 사고와 관련하여 유출되지 않은 정보는 무엇인가?",
+        "correctAnswer": "고객 정보",
+        "answerExplanation": "신세계 측은 고객 정보는 유출되지 않았다고 밝혔다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 5,
+        "question": "신세계 그룹이 정보 유출 사고 후 신고한 곳은 어디인가?",
+        "correctAnswer": "관계 기관",
+        "answerExplanation": "신세계는 관계 기관에 신고하고 사고 원인과 영향 범위에 대한 조사를 진행할 계획이라고 전했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      }
+    ]
+  }
+]

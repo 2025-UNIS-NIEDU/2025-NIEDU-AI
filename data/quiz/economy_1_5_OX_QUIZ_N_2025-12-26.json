@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "청년상인은 지역 소비를 이끌며 민생경제의 중요한 축이다.",
+      "correctAnswer": "O",
+      "answerExplanation": "장관의 발언에 따르면 청년상인은 민생경제의 중요한 축이다.",
+      "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+    },
+    {
+      "contentId": 2,
+      "question": "청년상인은 단순한 창업 주체가 아니다.",
+      "correctAnswer": "X",
+      "answerExplanation": "청년상인은 단순한 창업 주체로 언급되었다.",
+      "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+    },
+    {
+      "contentId": 3,
+      "question": "경동시장은 청년에게 도전할 기회를 제공하지 않는다.",
+      "correctAnswer": "X",
+      "answerExplanation": "경동시장은 청년에게 도전하고 성장할 수 있는 창업공간이다.",
+      "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+    },
+    {
+      "contentId": 4,
+      "question": "중기부는 청년이 지역에서 안정적으로 정착할 수 있는 환경을 조성할 계획이다.",
+      "correctAnswer": "O",
+      "answerExplanation": "중기부는 청년의 안정적 정착을 위한 환경 조성을 계획하고 있다.",
+      "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+    },
+    {
+      "contentId": 5,
+      "question": "청년상인의 존재는 전통시장의 지속 가능성을 낮춘다.",
+      "correctAnswer": "X",
+      "answerExplanation": "청년상인은 전통시장의 지속 가능성을 높이는 역할을 한다.",
+      "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신혼부부의 혼인신고 지연 원인으로 지목된 문제는 무엇인가?",
+        "correctAnswer": "결혼 페널티",
+        "answerExplanation": "국민권익위원회는 신혼부부의 혼인신고 지연 원인인 '결혼 페널티' 문제를 해결하기 위해 국토부에 제도 개선을 권고했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 2,
+        "question": "국민권익위원회가 제도 개선을 권고한 부처는 어디인가?",
+        "correctAnswer": "국토부",
+        "answerExplanation": "국민권익위원회는 국토부에 제도 개선을 권고했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 3,
+        "question": "권익위가 제안한 대출 소득 기준 조정 대상은 무엇인가?",
+        "correctAnswer": "버팀목 대출",
+        "answerExplanation": "권익위는 버팀목 및 디딤돌 대출의 부부 합산 소득 기준을 개인 기준의 2배로 상향 조정하고 제안했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 4,
+        "question": "권익위가 제안한 대출 소득 기준 조정 대상은 무엇인가?",
+        "correctAnswer": "디딤돌 대출",
+        "answerExplanation": "권익위는 버팀목 및 디딤돌 대출의 부부 합산 소득 기준을 개인 기준의 2배로 상향 조정하고 제안했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 5,
+        "question": "유자녀 가구에 대한 권익위의 제안은 무엇인가?",
+        "correctAnswer": "가산금리 면제",
+        "answerExplanation": "권익위는 유자녀 가구에 대한 가산금리 면제도 제안했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      }
+    ]
+  }
+]

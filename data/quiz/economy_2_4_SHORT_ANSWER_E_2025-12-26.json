@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "정혜경 의원이 쿠팡의 발표를 비판하며 언급한, 정보 공개의 책임성을 강조하는 두 기관은 무엇입니까?",
+        "correctAnswer": "정부",
+        "answerExplanation": "정부와 국회는 정보 공개의 책임성과 투명성을 강조하는 주요 기관이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 2,
+        "question": "정혜경 의원이 쿠팡의 발표를 비판하며 강조한, 공공과 민간의 협력적 검증 절차는 무엇입니까?",
+        "correctAnswer": "민관합동조사",
+        "answerExplanation": "민관합동조사는 투명성과 객관성을 강화하는 협력적 검증 절차다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 3,
+        "question": "쿠팡이 자체적으로 발표한 조사 결과가 다루고 있는 주요 정보 보안 이슈는 무엇입니까?",
+        "correctAnswer": "개인정보 유출",
+        "answerExplanation": "개인정보 유출은 기업의 정보 관리 신뢰성을 저해하는 주요 이슈다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 4,
+        "question": "쿠팡이 조사 결과 발표의 정당성을 주장하며 언급한, 정부와의 협력적 조사 방식은 무엇입니까?",
+        "correctAnswer": "공조 조사",
+        "answerExplanation": "공조 조사는 정부와의 협력을 통해 조사 신뢰성을 높이려는 방식이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 5,
+        "question": "쿠팡의 조사 결과 발표에 대해 정책적 투명성과 책임성을 강조하며 비판한 인물은 누구입니까?",
+        "correctAnswer": "정혜경",
+        "answerExplanation": "정혜경 의원은 쿠팡의 발표가 책임 있는 정보 공개를 저해한다고 비판했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "이재명 정부 출범 이후 국가데이터처가 기획재정부의 핵심 인사들이 배출되는 중요한 기관으로 부각되었다. 26일 관가에 따르면, 새 정부 출범 이후 기재부 고위직 인사에서 데이터처 출신 인사들이 중용되며 '데이터처 전성시대'가 열렸다고 전해졌다. 기재부 조세정책과장을 지낸 양순필 국장이 기획조정관으로 이동하면서 데이터처는 '승진 필수 코스'로 자리 잡았다는 평가를 받고 있다.",
+        "keywords": [
+          {
+            "word": "이재명",
+            "isTopicWord": true
+          },
+          {
+            "word": "국가데이터처",
+            "isTopicWord": true
+          },
+          {
+            "word": "정부",
+            "isTopicWord": false
+          },
+          {
+            "word": "인사",
+            "isTopicWord": false
+          },
+          {
+            "word": "기획재정부",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

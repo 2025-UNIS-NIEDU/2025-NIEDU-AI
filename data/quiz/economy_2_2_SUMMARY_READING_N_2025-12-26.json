@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "N",
+    "contents": [
+      {
+        "summary": "쿠팡은 3천 건의 정보가 유출되었으며, 유출자의 노트북도 회수했다고 발표했다. 이 발표가 '셀프 면죄부'라는 비판을 받자, 쿠팡은 이를 반박하기 위해 관련 자료를 공개했다. 조사 일지에 따르면, 쿠팡은 유출 사고 발생 후 정부와 지속적으로 협력했다고 밝혔으나, 성탄절 발표는 정부 지시와는 무관하게 쿠팡의 자체 결정으로 알려졌다.",
+        "keywords": [
+          {
+            "word": "쿠팡",
+            "isTopicWord": true
+          },
+          {
+            "word": "정보 유출",
+            "isTopicWord": true
+          },
+          {
+            "word": "성탄절",
+            "isTopicWord": false
+          },
+          {
+            "word": "협력",
+            "isTopicWord": false
+          },
+          {
+            "word": "비판",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

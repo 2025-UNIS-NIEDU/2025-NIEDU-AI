@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "신세계 그룹에서 유출된 개인정보는 ______",
+        "referenceAnswer": "임직원 8만여 명의 사원번호 등이다."
+      },
+      {
+        "contentId": "2",
+        "question": "신세계 측은 고객 정보 유출은 ______",
+        "referenceAnswer": "없는 걸로 확인했다고 밝혔다."
+      },
+      {
+        "contentId": "3",
+        "question": "신세계 측은 사고 인지 즉시 ______",
+        "referenceAnswer": "관련 시스템 및 계정에 대한 긴급 점검과 차단 조치를 시행했다."
+      }
+    ]
+  ]
+}

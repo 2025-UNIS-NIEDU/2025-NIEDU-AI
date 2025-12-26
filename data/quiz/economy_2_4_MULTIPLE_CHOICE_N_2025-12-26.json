@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "정혜경 의원이 쿠팡의 태도를 비판한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정부와의 협력 부족"
+          },
+          {
+            "label": "B",
+            "text": "경쟁사와의 갈등"
+          },
+          {
+            "label": "C",
+            "text": "국민과 헌법 위에 군림"
+          },
+          {
+            "label": "D",
+            "text": "기술적 오류 발생"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "정혜경 의원은 쿠팡의 오만한 태도를 비판했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 2,
+        "question": "쿠팡이 개인정보 유출과 관련해 발표한 내용은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "자체 조사 결과"
+          },
+          {
+            "label": "B",
+            "text": "정부의 공식 발표"
+          },
+          {
+            "label": "C",
+            "text": "경쟁사의 조사 결과"
+          },
+          {
+            "label": "D",
+            "text": "국제 협력 보고서"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡은 자체 조사 결과를 발표했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 3,
+        "question": "쿠팡의 발표에 대해 정혜경 의원이 지적한 문제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "기술적 오류 발생"
+          },
+          {
+            "label": "B",
+            "text": "정부와의 협력 부족"
+          },
+          {
+            "label": "C",
+            "text": "경쟁사와의 갈등"
+          },
+          {
+            "label": "D",
+            "text": "상황 축소 및 은폐"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "정혜경 의원은 쿠팡의 상황 축소 및 은폐를 지적했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 4,
+        "question": "쿠팡이 발표한 입장문에서 언급한 조사의 성격은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "단독 조사"
+          },
+          {
+            "label": "B",
+            "text": "공조 조사"
+          },
+          {
+            "label": "C",
+            "text": "국제 조사"
+          },
+          {
+            "label": "D",
+            "text": "비공식 조사"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡은 공조 조사였다고 입장문에서 설명했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 5,
+        "question": "정혜경 의원이 쿠팡의 발표를 비판한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국민 앞에 진정성 부족"
+          },
+          {
+            "label": "B",
+            "text": "경쟁사와의 갈등"
+          },
+          {
+            "label": "C",
+            "text": "정부와의 협력 부족"
+          },
+          {
+            "label": "D",
+            "text": "기술적 오류 발생"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정혜경 의원은 쿠팡의 진정성 부족을 비판했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "오영훈 제주도지사가 제2공항 갈등 해소를 위해 운영하겠다고 밝힌 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "관련 위원회나 협의체"
+          },
+          {
+            "label": "B",
+            "text": "환경 보호 단체"
+          },
+          {
+            "label": "C",
+            "text": "시민 자문단"
+          },
+          {
+            "label": "D",
+            "text": "국제 협력 기구"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "오영훈 도지사는 환경영향평가 결과에 따라 관련 위원회나 협의체를 운영하겠다고 밝혔다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 2,
+        "question": "제2공항 환경영향평가의 쟁점으로 언급된 조사는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "조류 충돌 위험 조사"
+          },
+          {
+            "label": "B",
+            "text": "교통 혼잡도 조사"
+          },
+          {
+            "label": "C",
+            "text": "수질 오염 조사"
+          },
+          {
+            "label": "D",
+            "text": "소음 영향 조사"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "조류 충돌 위험 조사가 제2공항 환경영향평가의 쟁점으로 언급되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 3,
+        "question": "오영훈 도지사가 항공 수요 예측에 대해 명확히 제시해야 한다고 언급한 기관은 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "제주도청"
+          },
+          {
+            "label": "B",
+            "text": "환경부"
+          },
+          {
+            "label": "C",
+            "text": "국토교통부"
+          },
+          {
+            "label": "D",
+            "text": "기상청"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "오영훈 도지사는 국토교통부가 항공 수요 예측을 명확히 제시해야 한다고 언급했다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 4,
+        "question": "제주-중국 칭다오 화물 직항로에 대해 오영훈 도지사가 강조한 점은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "환경 보호 우선"
+          },
+          {
+            "label": "B",
+            "text": "즉각적인 수익 창출"
+          },
+          {
+            "label": "C",
+            "text": "관광객 유치 강화"
+          },
+          {
+            "label": "D",
+            "text": "미래를 위한 투자"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "오영훈 도지사는 제주 미래를 위해 투자해야 한다고 강조했다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 5,
+        "question": "오영훈 도지사가 기자간담회에서 밝힌 제2공항 관련 계획은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국제 협력 강화"
+          },
+          {
+            "label": "B",
+            "text": "환경영향평가 결과 발표"
+          },
+          {
+            "label": "C",
+            "text": "관련 위원회 운영"
+          },
+          {
+            "label": "D",
+            "text": "공항 확장 계획"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "오영훈 도지사는 환경영향평가 결과에 따라 관련 위원회를 운영하겠다고 밝혔다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      }
+    ]
+  }
+]

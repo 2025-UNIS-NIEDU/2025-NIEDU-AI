@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "신세계프라퍼티가 '제30회 한국유통대상'에서 수상한 부문은 ______",
+        "referenceAnswer": "유통산업 상생·협력 문화확산 유공 부문이다."
+      },
+      {
+        "contentId": "2",
+        "question": "신세계프라퍼티는 2016년 스타필드 하남 개점 이후 ______",
+        "referenceAnswer": "지역 상권 및 소상공인을 위한 상생 활동을 이어왔다."
+      },
+      {
+        "contentId": "3",
+        "question": "신세계프라퍼티는 앞으로도 ______를 지속 모색할 계획이다.",
+        "referenceAnswer": "지역 사회에 실질적으로 기여하는 상생협력 방안을"
+      }
+    ]
+  ]
+}

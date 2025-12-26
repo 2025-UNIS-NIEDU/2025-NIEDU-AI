@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신세계 그룹에서 유출된 정보는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "마케팅 전략"
+          },
+          {
+            "label": "B",
+            "text": "고객 개인정보"
+          },
+          {
+            "label": "C",
+            "text": "재무 보고서"
+          },
+          {
+            "label": "D",
+            "text": "임직원 사원번호"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "신세계 그룹에서는 임직원 사원번호 등 개인정보가 유출되었다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 2,
+        "question": "신세계 그룹은 사고 인지 후 어떤 조치를 취했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "신규 시스템 도입"
+          },
+          {
+            "label": "B",
+            "text": "긴급 점검 및 차단"
+          },
+          {
+            "label": "C",
+            "text": "임직원 교육 강화"
+          },
+          {
+            "label": "D",
+            "text": "고객 정보 삭제"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "신세계 그룹은 사고 인지 즉시 긴급 점검과 차단 조치를 시행했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 3,
+        "question": "신세계 그룹은 정보 유출 사고를 어디에 신고했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경찰청"
+          },
+          {
+            "label": "B",
+            "text": "관계 기관"
+          },
+          {
+            "label": "C",
+            "text": "소비자 보호원"
+          },
+          {
+            "label": "D",
+            "text": "국회"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "신세계 그룹은 정보 유출 사고를 관계 기관에 신고했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 4,
+        "question": "신세계 그룹은 유출된 정보 중 고객 정보에 대해 무엇을 확인했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "유출이 확인됨"
+          },
+          {
+            "label": "B",
+            "text": "유출 여부 미확인"
+          },
+          {
+            "label": "C",
+            "text": "일부 유출 확인"
+          },
+          {
+            "label": "D",
+            "text": "유출이 없는 것으로 확인"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "신세계 그룹은 고객 정보 유출은 없는 것으로 확인했다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 5,
+        "question": "신세계 그룹은 앞으로 어떤 계획을 가지고 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "인력 감축"
+          },
+          {
+            "label": "B",
+            "text": "해외 진출 확대"
+          },
+          {
+            "label": "C",
+            "text": "신규 사업 추진"
+          },
+          {
+            "label": "D",
+            "text": "사고 원인 조사"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "신세계 그룹은 정확한 사고 원인과 영향 범위에 관한 조사를 진행할 계획이다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      }
+    ]
+  }
+]

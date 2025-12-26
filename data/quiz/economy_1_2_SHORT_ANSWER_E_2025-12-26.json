@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.news1.kr/realestate/general/6020967",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "청년 주거 안정을 위한 정부의 지속적 금융 지원으로, 주거 비용 부담을 완화하는 데 기여하는 것은 무엇입니까?",
+        "correctAnswer": "정책 금융",
+        "answerExplanation": "정책 금융은 청년 주거 안정을 위해 지속적으로 제공되어 주거 비용 부담을 완화한다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 2,
+        "question": "청년층의 주거 불안 해소를 위한 정책적 방향성을 제시하며, 주거 안정성 강화를 목표로 한 정부 계획은 무엇입니까?",
+        "correctAnswer": "제2차 청년정책 기본계획",
+        "answerExplanation": "제2차 청년정책 기본계획은 청년 주거 불안 해소를 통해 사회적 안정을 도모한다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 3,
+        "question": "청년 주거 환경의 질적 개선을 중심 과제로 설정하며, 주거 복지 향상을 지향하는 계획은 무엇입니까?",
+        "correctAnswer": "2차 기본계획",
+        "answerExplanation": "2차 기본계획은 청년 주거 환경 개선을 통해 삶의 질 향상을 목표로 한다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 4,
+        "question": "청년층을 대상으로 한 저리의 정책 금융으로, 주거 비용 부담을 경감하고자 제공되는 대출 상품은 무엇입니까?",
+        "correctAnswer": "버팀목 대출",
+        "answerExplanation": "버팀목 대출은 청년층의 주거 비용 부담을 줄이기 위한 저리 정책 금융이다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 5,
+        "question": "청년층의 주거 안정과 자산 형성을 지원하기 위해 설계된 금융 상품으로, 내집 마련을 돕는 대출 상품은 무엇입니까?",
+        "correctAnswer": "청년주택드림대출",
+        "answerExplanation": "청년주택드림대출은 청년의 주거 안정과 자산 형성을 지원하는 금융 상품이다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      }
+    ]
+  }
+]

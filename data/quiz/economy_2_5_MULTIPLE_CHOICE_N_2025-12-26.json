@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "광주시의원들이 12·29 참사 1주기를 앞두고 발표한 성명의 주요 내용은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "독립적 사고조사 촉구"
+          },
+          {
+            "label": "B",
+            "text": "환경 보호 강화"
+          },
+          {
+            "label": "C",
+            "text": "국제 협력 강화"
+          },
+          {
+            "label": "D",
+            "text": "항공사 지원 촉구"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "광주시의원들은 독립적 사고조사를 통한 철저한 진상규명을 촉구했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 2,
+        "question": "광주시의원들이 비판한 항공철도사고조사위원회 관련 논란은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "자료 공개"
+          },
+          {
+            "label": "B",
+            "text": "예산 부족"
+          },
+          {
+            "label": "C",
+            "text": "유가족 참여 배제"
+          },
+          {
+            "label": "D",
+            "text": "조사 신속성"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "유가족 참여 배제 논란 등으로 조사 신뢰성이 훼손됐다고 비판했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 3,
+        "question": "광주시의원들이 유가족을 위해 국가에 요구한 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "단기적 지원 체계"
+          },
+          {
+            "label": "B",
+            "text": "장기적 지원 체계"
+          },
+          {
+            "label": "C",
+            "text": "일회성 보상"
+          },
+          {
+            "label": "D",
+            "text": "사과문 발표"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "유가족에 대한 장기적·지속적 지원 체계를 마련해야 한다고 요구했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 4,
+        "question": "광주시의원들이 참사 1주기를 맞아 강조한 다짐은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "사건 은폐"
+          },
+          {
+            "label": "B",
+            "text": "끝까지 함께할 것"
+          },
+          {
+            "label": "C",
+            "text": "책임 회피"
+          },
+          {
+            "label": "D",
+            "text": "조사 중단"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "참사가 미해결로 남지 않도록 끝까지 함께하겠다고 밝혔다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      },
+      {
+        "contentId": 5,
+        "question": "광주시의원들이 성명에서 언급한 참사로 인한 피해는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "179명 희생"
+          },
+          {
+            "label": "B",
+            "text": "환경 오염"
+          },
+          {
+            "label": "C",
+            "text": "문화재 손상"
+          },
+          {
+            "label": "D",
+            "text": "경제적 손실"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "참사로 179명이 희생된 지 1년이 지났다고 언급했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+      }
+    ]
+  }
+]

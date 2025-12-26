@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "청년상인은 민생경제의 중요한 축으로 ______",
+        "referenceAnswer": "지역 소비를 이끌며 수요를 확장한다."
+      },
+      {
+        "contentId": "2",
+        "question": "경동시장은 청년에게 창업공간을 제공하며 ______",
+        "referenceAnswer": "전통시장의 지속 가능성을 높일 수 있는 미래자산이다."
+      },
+      {
+        "contentId": "3",
+        "question": "중기부는 청년이 지역에서 안정적으로 정착할 수 있도록 ______",
+        "referenceAnswer": "정책적 지원을 이어갈 계획이다."
+      }
+    ]
+  ]
+}

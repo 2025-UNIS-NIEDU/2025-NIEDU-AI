@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신세계프라퍼티가 수상한 표창의 주관 부처는 어디인가?",
+        "correctAnswer": "산업통상부장관",
+        "answerExplanation": "신세계프라퍼티는 산업통상부장관 표창을 수상했다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 2,
+        "question": "신세계프라퍼티가 수상한 상의 이름은 무엇인가?",
+        "correctAnswer": "한국유통대상",
+        "answerExplanation": "신세계프라퍼티는 '제30회 한국유통대상'에서 표창을 받았다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 3,
+        "question": "신세계프라퍼티가 지역 상권과 소상공인을 위해 지속해온 활동은 무엇인가?",
+        "correctAnswer": "상생 활동",
+        "answerExplanation": "신세계프라퍼티는 지역 상권 및 소상공인을 위한 상생 활동을 지속해왔다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 4,
+        "question": "신세계프라퍼티가 개점한 이후 상생 활동을 시작한 해는 언제인가?",
+        "correctAnswer": "2016년",
+        "answerExplanation": "신세계프라퍼티는 2016년 스타필드 하남 개점 이후 상생 활동을 시작했다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 5,
+        "question": "신세계프라퍼티가 기여할 계획을 밝힌 분야는 무엇인가?",
+        "correctAnswer": "유통산업",
+        "answerExplanation": "신세계프라퍼티는 유통산업 발전에 기여할 방안을 모색할 계획이라고 밝혔다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "한국동서발전이 진안에서 개최한 행사의 명칭은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "진안군민 에너지 협력 회의"
+          },
+          {
+            "label": "B",
+            "text": "진안 발전소 건설 기념식"
+          },
+          {
+            "label": "C",
+            "text": "진안 에너지 전환 포럼"
+          },
+          {
+            "label": "D",
+            "text": "진안양수발전소 유치 성공 기원 범군민 결의대회"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "한국동서발전은 진안에서 유치 성공 기원 범군민 결의대회를 개최했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 2,
+        "question": "권명호 사장이 진안군의 잠재력을 언급한 분야는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "농업 혁신"
+          },
+          {
+            "label": "B",
+            "text": "문화 예술"
+          },
+          {
+            "label": "C",
+            "text": "에너지 전환"
+          },
+          {
+            "label": "D",
+            "text": "관광 산업"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "권명호 사장은 진안군이 에너지 전환의 중심지가 될 잠재력이 있다고 언급했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 3,
+        "question": "권명호 사장이 양수발전을 설명한 방식은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "환경 보호의 필수 요소"
+          },
+          {
+            "label": "B",
+            "text": "국가 전력계통의 핵심"
+          },
+          {
+            "label": "C",
+            "text": "지역 경제의 중심"
+          },
+          {
+            "label": "D",
+            "text": "단순한 발전설비"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "권명호 사장은 양수발전을 국가 전력계통의 핵심 인프라로 설명했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 4,
+        "question": "양수발전 사업 추진에 필요한 요소로 권명호 사장이 강조한 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "지역의 공감대와 결속"
+          },
+          {
+            "label": "B",
+            "text": "기업의 독자적 의지"
+          },
+          {
+            "label": "C",
+            "text": "해외 투자 유치"
+          },
+          {
+            "label": "D",
+            "text": "정부의 전폭적 지원"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "권명호 사장은 지역의 공감대와 결속이 필요하다고 강조했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 5,
+        "question": "진안양수발전소 유치 성공 기원 범군민 결의대회가 열린 장소는 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "진안문화센터"
+          },
+          {
+            "label": "B",
+            "text": "진안문예체육회관"
+          },
+          {
+            "label": "C",
+            "text": "진안군청 대회의실"
+          },
+          {
+            "label": "D",
+            "text": "진안시민회관"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "결의대회는 진안문예체육회관에서 열렸다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      }
+    ]
+  }
+]

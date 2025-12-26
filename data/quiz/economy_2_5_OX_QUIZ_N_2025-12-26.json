@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "광주시의원들은 제주항공 여객기 참사에 대한 진상규명을 촉구했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "광주시의원들이 성명을 통해 진상규명을 촉구한 사실이다.",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+    },
+    {
+      "contentId": 2,
+      "question": "광주시의원들은 참사로 179명이 희생되지 않았다고 주장했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "기사에서는 179명이 희생된 사실을 언급하고 있다.",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+    },
+    {
+      "contentId": 3,
+      "question": "광주시의원들은 유가족에 대한 지원 체계 마련을 요구하지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "의원들은 유가족에 대한 지원 체계 마련을 요구한 사실이 있다.",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+    },
+    {
+      "contentId": 4,
+      "question": "조사 지연과 자료 비공개로 조사 신뢰성이 훼손되었다.",
+      "correctAnswer": "O",
+      "answerExplanation": "기사에서 조사 신뢰성이 훼손된 이유로 조사 지연과 자료 비공개를 언급하고 있다.",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+    },
+    {
+      "contentId": 5,
+      "question": "광주시의원들은 참사가 해결될 때까지 유가족과 함께하겠다고 밝혔다.",
+      "correctAnswer": "O",
+      "answerExplanation": "의원들은 참사가 미해결로 남지 않도록 함께하겠다고 밝혔다.",
+      "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+    }
+  ]
+}

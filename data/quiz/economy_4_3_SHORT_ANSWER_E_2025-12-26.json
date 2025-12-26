@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "대규모 국제행사 유치로 국가적 인정을 받은 기업은 어디입니까?",
+        "correctAnswer": "리컨벤션",
+        "answerExplanation": "리컨벤션은 국제행사 유치로 국가적 신뢰와 인정을 받았다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 2,
+        "question": "국제행사 유치 및 운영을 통해 글로벌 네트워크 확장을 주도한 인물은 누구입니까?",
+        "correctAnswer": "이봉순",
+        "answerExplanation": "이봉순은 국제행사 운영으로 글로벌 협력 기반을 강화했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 3,
+        "question": "이봉순 대표가 지역 발전과 인재 육성을 위해 강조한 산업은 무엇입니까?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "관광산업은 지역 경제 성장과 인재 개발의 핵심 동력으로 지향된다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 4,
+        "question": "리컨벤션이 지역 경제 활성화를 위해 융합한 주요 산업은 무엇입니까?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "관광산업 융합은 지역 경제와 문화적 자산의 시너지를 창출한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 5,
+        "question": "국가적 공로를 인정받아 국제행사 전문가가 수상한 상은 무엇입니까?",
+        "correctAnswer": "대통령 표창",
+        "answerExplanation": "대통령 표창은 국제행사 분야에서의 공로를 공식적으로 인정한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      }
+    ]
+  }
+]

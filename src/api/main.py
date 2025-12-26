@@ -20,7 +20,7 @@ async def daily_pipeline_scheduler():
     while True:
         now = datetime.now(KST)
         # 자정(00:00)에 한 번 실행
-        if now.hour == 0 and now.minute == 0:
+        if now.hour == 22 and now.minute == 30:
             logger.info("⏰ 자정 감지 → 자동 파이프라인 실행 시작")
             try:
                 await asyncio.to_thread(run_learning_pipeline)

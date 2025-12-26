@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "한 장관이 청년상인을 민생경제의 중요한 축으로 언급한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "수출 시장 확대"
+          },
+          {
+            "label": "B",
+            "text": "고령화 문제 해결"
+          },
+          {
+            "label": "C",
+            "text": "지역 소비 촉진"
+          },
+          {
+            "label": "D",
+            "text": "소비 감소 유도"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "청년상인은 지역 소비를 이끌며 수요를 확장해 민생경제의 중요한 축으로 작용한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 2,
+        "question": "경동시장이 청년에게 창업공간으로 평가받는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "도전과 성장 기회"
+          },
+          {
+            "label": "B",
+            "text": "고정 고객층"
+          },
+          {
+            "label": "C",
+            "text": "낮은 임대료"
+          },
+          {
+            "label": "D",
+            "text": "정부 보조금"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "경동시장은 청년에게 도전하고 성장할 수 있는 창업공간으로 평가받는다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 3,
+        "question": "중기부가 청년의 지역 정착을 지원하는 정책을 추진하는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "지역 경제 활성화"
+          },
+          {
+            "label": "B",
+            "text": "대기업 의존도 감소"
+          },
+          {
+            "label": "C",
+            "text": "청년 실업률 증가"
+          },
+          {
+            "label": "D",
+            "text": "해외 진출 장려"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "중기부는 청년이 지역에서 안정적으로 정착해 지역 경제 활성화를 도모하려 한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 4,
+        "question": "전통시장의 지속 가능성을 높이기 위한 방안으로 청년 유입이 강조된 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "문화적 다양성 증대"
+          },
+          {
+            "label": "B",
+            "text": "젊은 세대 유입"
+          },
+          {
+            "label": "C",
+            "text": "노동력 부족 해소"
+          },
+          {
+            "label": "D",
+            "text": "기술 혁신 촉진"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "젊은 세대의 유입은 전통시장의 지속 가능성을 높이는 미래자산으로 작용한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 5,
+        "question": "중기부의 정책적 지원이 민생경제에 미칠 장기적 영향은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "소득 불평등 심화"
+          },
+          {
+            "label": "B",
+            "text": "고용 불안정 심화"
+          },
+          {
+            "label": "C",
+            "text": "경제적 자립 강화"
+          },
+          {
+            "label": "D",
+            "text": "수출 의존도 증가"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "중기부의 정책적 지원은 청년의 지역 정착과 성장을 통해 경제적 자립을 강화할 것이다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      }
+    ]
+  }
+]

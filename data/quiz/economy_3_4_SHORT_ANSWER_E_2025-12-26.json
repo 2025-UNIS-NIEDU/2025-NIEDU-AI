@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "올해 국채 발행량에서 제외되어 개인 투자자의 참여를 제한한 항목은 무엇입니까?",
+        "correctAnswer": "개인투자용 국채",
+        "answerExplanation": "개인투자용 국채 제외는 국채 시장의 구조적 변화를 시사한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 2,
+        "question": "내년 국채 발행 계획에서 축소되어 재정 긴축의 신호로 해석되는 주요 항목은 무엇입니까?",
+        "correctAnswer": "발행규모",
+        "answerExplanation": "발행규모 축소는 재정 긴축과 경제 안정화 정책의 일환이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 3,
+        "question": "내년 국채 발행 규모가 올해 대비 축소되며 예상되는 재정 정책의 긴축적 조정 폭은 얼마입니까?",
+        "correctAnswer": "5000억원",
+        "answerExplanation": "5000억원 축소는 재정 안정화와 시장 신뢰 회복을 목표로 한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 4,
+        "question": "2026년도 국채 발행 계획을 확정하며 재정 정책의 방향성을 제시한 국내 주요 경제 부처는 어디입니까?",
+        "correctAnswer": "기획재정부",
+        "answerExplanation": "기획재정부는 재정 건전성을 고려해 국채 발행 계획을 확정했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 5,
+        "question": "2024년 국채 발행 한도를 설정하며 국가 재정 운영의 안정성을 도모한 총 발행 한도는 얼마입니까?",
+        "correctAnswer": "225조7000억원",
+        "answerExplanation": "225조7000억원은 재정 운영의 안정성과 시장 신뢰를 강화한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      }
+    ]
+  }
+]

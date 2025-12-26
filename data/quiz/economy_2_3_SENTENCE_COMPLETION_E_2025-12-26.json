@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "한국수산자원공단은 ‘갑질 없는 건강한 문화’ 조성을 위해 ______",
+        "referenceAnswer": "부산역 일대에서 갑질 근절 캠페인을 실시했다."
+      },
+      {
+        "contentId": "2",
+        "question": "수산자원공단 감사법무실 직원들은 국민과 함께 ______를 형성하기 위해 노력했다.",
+        "referenceAnswer": "갑질 예방 및 근절에 대한 공감대를"
+      },
+      {
+        "contentId": "3",
+        "question": "일반 국민이 체감할 수 있는 갑질 신고 채널을 알려 ______",
+        "referenceAnswer": "갑질 없는 건강한 미래 사회 구현을 위한 노력을 했다."
+      }
+    ]
+  ]
+}

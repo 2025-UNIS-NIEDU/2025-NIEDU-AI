@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://biz.heraldcorp.com/article/10644379",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "향후 5년간 청년정책의 방향을 담은 계획은 무엇인가?",
+        "correctAnswer": "제2차 청년정책 기본계획",
+        "answerExplanation": "정부는 '제2차 청년정책 기본계획'을 확정했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 2,
+        "question": "김민석 총리가 강조한 청년정책의 필요성은 무엇인가?",
+        "correctAnswer": "보편적 청년정책",
+        "answerExplanation": "김민석 총리는 보편적 청년정책의 필요성을 강조했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 3,
+        "question": "청년 참여 통로 확대를 강조한 인물은 누구인가?",
+        "correctAnswer": "김민석",
+        "answerExplanation": "김민석 총리는 청년 참여 통로 확대를 강조했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 4,
+        "question": "청년들의 목소리를 직접 듣고 정책에 반영할 것을 당부받은 대상은 누구인가?",
+        "correctAnswer": "각 부처 장관",
+        "answerExplanation": "각 부처 장관에게 청년들의 목소리를 듣고 반영할 것을 당부했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 5,
+        "question": "부처 간 이견 조정과 정책 사각지대 발굴을 위해 신설된 회의는 무엇인가?",
+        "correctAnswer": "청년정책 관계장관회의",
+        "answerExplanation": "국무총리가 주재하는 '청년정책 관계장관회의'를 신설했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      }
+    ]
+  }
+]

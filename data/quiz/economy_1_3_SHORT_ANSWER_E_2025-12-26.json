@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.mk.co.kr/article/11588772",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "기존 자산 관리 시스템의 한계를 극복하고자 정부가 도입을 가속화하는 제도는 무엇입니까?",
+        "correctAnswer": "공공신탁",
+        "answerExplanation": "공공신탁은 고액 자산가 중심의 시스템을 개선하여 포용적 금융 환경을 조성한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 2,
+        "question": "고령 치매환자의 재산 보호와 관리의 공공성을 강화하기 위해 정부가 도입을 추진하는 제도는 무엇입니까?",
+        "correctAnswer": "공공신탁",
+        "answerExplanation": "공공신탁은 고령 치매환자의 재산을 공공기관이 관리하여 사회적 안전망을 강화한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 3,
+        "question": "고령 치매환자 재산 관리의 신뢰성을 높이기 위해 수탁기관으로 지정될 가능성이 높은 기관은 어디입니까?",
+        "correctAnswer": "국민연금",
+        "answerExplanation": "국민연금은 공공신탁의 수탁기관으로서 제도적 신뢰성을 제공한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 4,
+        "question": "고령 치매환자 재산 관리의 공공적 실험이 시작될 예정인 시기는 언제입니까?",
+        "correctAnswer": "내년",
+        "answerExplanation": "내년 시범사업은 제도의 실효성을 검증하고 확대 가능성을 탐색한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 5,
+        "question": "공공신탁 제도 도입의 주요 목표 중 하나로, 재산 관리의 접근성을 높이기 위해 추진하는 것은 무엇입니까?",
+        "correctAnswer": "서민층 가입",
+        "answerExplanation": "수수료 인하로 서민층의 재산 관리 참여를 확대하여 사회적 형평성을 제고한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      }
+    ]
+  }
+]

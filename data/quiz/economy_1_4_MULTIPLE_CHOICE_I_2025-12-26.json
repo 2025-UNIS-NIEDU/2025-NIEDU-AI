@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "국민권익위원회가 '결혼 페널티' 개선을 권고한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "혼인신고 증가"
+          },
+          {
+            "label": "B",
+            "text": "집값 안정화"
+          },
+          {
+            "label": "C",
+            "text": "세금 감면"
+          },
+          {
+            "label": "D",
+            "text": "대출 수혜 확대"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "권익위는 혼인신고 미루는 신혼부부가 대출 수혜를 받도록 합산 소득 기준을 상향 조정하여 결혼 페널티를 개선하려 했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 2,
+        "question": "국토부가 권익위의 제도 개선 권고에 반대한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "집값 안정 기조와 불일치"
+          },
+          {
+            "label": "B",
+            "text": "예산 부족"
+          },
+          {
+            "label": "C",
+            "text": "대출 신청 증가"
+          },
+          {
+            "label": "D",
+            "text": "법적 문제"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "국토부는 권익위의 대출 기준 완화가 집값 안정 기조와 맞지 않는다고 판단하여 반대했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 3,
+        "question": "혼인신고를 미루는 신혼부부가 증가하는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "세금 혜택"
+          },
+          {
+            "label": "B",
+            "text": "대출 수혜 제한"
+          },
+          {
+            "label": "C",
+            "text": "주택 가격 상승"
+          },
+          {
+            "label": "D",
+            "text": "소득 증가"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "혼인신고를 미루는 신혼부부는 부부 합산 소득 기준으로 인해 대출 수혜를 받지 못하는 경우가 많아 증가하고 있다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 4,
+        "question": "권익위가 제안한 유자녀 가구 가산금리 면제의 목적은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "출산율 증가 유도"
+          },
+          {
+            "label": "B",
+            "text": "소득 증대"
+          },
+          {
+            "label": "C",
+            "text": "대출 부담 완화"
+          },
+          {
+            "label": "D",
+            "text": "주택 공급 확대"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "권익위는 유자녀 가구의 대출 부담을 완화하기 위해 가산금리 면제를 제안했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 5,
+        "question": "권익위 제안과 국토부의 집값 우려가 충돌한 핵심 기준은 무엇이라 볼 수 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "자산요건 조정"
+          },
+          {
+            "label": "B",
+            "text": "자녀가산 면제"
+          },
+          {
+            "label": "C",
+            "text": "합산소득 상향"
+          },
+          {
+            "label": "D",
+            "text": "금리상한 도입"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "권익위는 합산소득 상향을 권고했고, 이는 수혜 확대로 주택 수요 압력을 키운다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      }
+    ]
+  }
+]

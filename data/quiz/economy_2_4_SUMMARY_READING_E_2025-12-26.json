@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "쿠팡이 개인정보 유출 관련 자체 조사 결과를 발표하자, 정혜경 진보당 의원은 26일 이를 비판했다. 그녀는 쿠팡이 상황을 축소하고 은폐하려는 태도를 보였으며, 민관합동조사가 진행 중인 상황에서 일방적인 발표를 한 것은 정부와 국회를 기만하는 행위라고 주장했다. 이에 대해 쿠팡은 문제가 된 조사가 정부의 지시에 따라 진행된 공조 조사라고 설명했다.",
+        "keywords": [
+          {
+            "word": "쿠팡",
+            "isTopicWord": true
+          },
+          {
+            "word": "개인정보 유출",
+            "isTopicWord": true
+          },
+          {
+            "word": "조사",
+            "isTopicWord": false
+          },
+          {
+            "word": "결과",
+            "isTopicWord": false
+          },
+          {
+            "word": "정부",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "정부가 확정한 청년정책 기본계획은 ______",
+        "referenceAnswer": "2026년부터 2030년까지의 방향을 담고 있다."
+      },
+      {
+        "contentId": "2",
+        "question": "국무총리는 청년들의 목소리를 직접 듣고 정책에 ______",
+        "referenceAnswer": "반영해 달라고 각 부처 장관들에게 당부했다."
+      },
+      {
+        "contentId": "3",
+        "question": "청년정책 관계장관회의는 부처 간 이견을 조정하고 ______",
+        "referenceAnswer": "정책 사각지대를 발굴하기 위해 신설된다."
+      }
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "3천 건의 정보가 유출된 사건의 주체는 누구인가?",
+        "correctAnswer": "쿠팡",
+        "answerExplanation": "쿠팡은 3천 건의 정보가 유출되었으며, 유출자의 노트북도 회수했다고 발표했다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 2,
+        "question": "유출된 정보와 관련하여 회수된 물품은 무엇인가?",
+        "correctAnswer": "노트북 회수",
+        "answerExplanation": "쿠팡은 유출자의 노트북도 회수했다고 발표했다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 3,
+        "question": "쿠팡이 비판을 반박하기 위해 공개한 것은 무엇인가?",
+        "correctAnswer": "자료 공개",
+        "answerExplanation": "쿠팡은 이를 반박하기 위해 관련 자료를 공개했다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 4,
+        "question": "쿠팡이 정보 유출 사고 후 지속적으로 협력한 대상은 누구인가?",
+        "correctAnswer": "정부",
+        "answerExplanation": "쿠팡은 유출 사고 발생 후 정부와 지속적으로 협력했다고 밝혔다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 5,
+        "question": "쿠팡의 성탄절 발표가 정부 지시와 무관한 이유는 무엇인가?",
+        "correctAnswer": "성탄절 발표",
+        "answerExplanation": "성탄절 발표는 정부 지시와는 무관하게 쿠팡의 자체 결정으로 알려졌다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "기획재정부가 발표한 2026년 국고채 발행계획의 주체는 누구인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국회 재정위원회"
+          },
+          {
+            "label": "B",
+            "text": "한국은행"
+          },
+          {
+            "label": "C",
+            "text": "기획재정부"
+          },
+          {
+            "label": "D",
+            "text": "금융위원회"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "기획재정부가 2026년 국고채 발행계획을 발표했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 2,
+        "question": "2026년 국고채 발행계획에 따르면 내년 발행량은 올해보다 어떻게 되는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "5000억원 감소"
+          },
+          {
+            "label": "B",
+            "text": "1조3000억원 증가"
+          },
+          {
+            "label": "C",
+            "text": "5000억원 증가"
+          },
+          {
+            "label": "D",
+            "text": "1조3000억원 감소"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "내년 국고채 발행량은 올해보다 5000억원 감소한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 3,
+        "question": "기획재정부가 국고채 발행계획을 확정한 기준은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국내 물가 상승률"
+          },
+          {
+            "label": "B",
+            "text": "국제 경제 상황"
+          },
+          {
+            "label": "C",
+            "text": "내년도 예산과 시장여건"
+          },
+          {
+            "label": "D",
+            "text": "외환 보유고"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "내년도 예산과 시장여건을 토대로 발행계획을 확정했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 4,
+        "question": "내년 국고채 발행계획에서 제외된 항목은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "지방채"
+          },
+          {
+            "label": "B",
+            "text": "개인투자용 국채"
+          },
+          {
+            "label": "C",
+            "text": "기업 투자 국채"
+          },
+          {
+            "label": "D",
+            "text": "외국인 투자 국채"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "개인투자용 국채는 발행계획에서 제외되었다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      },
+      {
+        "contentId": 5,
+        "question": "정부가 내년 국고채 발행계획을 발표한 날짜는 언제인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "28일"
+          },
+          {
+            "label": "B",
+            "text": "25일"
+          },
+          {
+            "label": "C",
+            "text": "27일"
+          },
+          {
+            "label": "D",
+            "text": "26일"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "정부는 26일에 국고채 발행계획을 발표했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456127"
+      }
+    ]
+  }
+]

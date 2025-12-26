@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "정혜경 의원은 쿠팡의 태도를 ______",
+        "referenceAnswer": "국민과 헌법 위에 군림하는 오만한 태도라고 지적했다."
+      },
+      {
+        "contentId": "2",
+        "question": "쿠팡은 개인정보 유출 사건에 대해 ______",
+        "referenceAnswer": "상황을 축소하고 은폐하려는 태도로 일관하고 있다."
+      },
+      {
+        "contentId": "3",
+        "question": "쿠팡은 자체 조사 결과 발표에 대해 ______",
+        "referenceAnswer": "정부의 지시에 따라 수주간 진행한 공조 조사라고 설명했다."
+      }
+    ]
+  ]
+}

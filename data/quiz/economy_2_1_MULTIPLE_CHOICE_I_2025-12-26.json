@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신세계 그룹이 개인정보 유출 사고 후 즉각적으로 취한 조치는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "임직원 해고"
+          },
+          {
+            "label": "B",
+            "text": "협력사 정보 삭제"
+          },
+          {
+            "label": "C",
+            "text": "시스템 점검 및 차단"
+          },
+          {
+            "label": "D",
+            "text": "고객 정보 공개"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "신세계 그룹은 사고 인지 즉시 시스템 점검과 차단 조치를 시행하여 추가 피해를 방지하려는 의도를 보였다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 2,
+        "question": "신세계 그룹의 개인정보 유출 사고에서 고객 정보가 유출되지 않은 점이 시사하는 바는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "고객 정보 보안 강화"
+          },
+          {
+            "label": "B",
+            "text": "고객 불만 증가"
+          },
+          {
+            "label": "C",
+            "text": "협력사 정보 무시"
+          },
+          {
+            "label": "D",
+            "text": "임직원 정보 중요성"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "고객 정보가 유출되지 않았다는 점은 고객 정보 보안이 상대적으로 잘 유지되고 있음을 시사한다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 3,
+        "question": "신세계 그룹의 개인정보 유출 사고에서 임직원 정보 유출이 주는 사회적 함의는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "협력사 신뢰도 상승"
+          },
+          {
+            "label": "B",
+            "text": "내부 보안 취약성"
+          },
+          {
+            "label": "C",
+            "text": "고객 신뢰도 하락"
+          },
+          {
+            "label": "D",
+            "text": "경쟁사 이익 증가"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "임직원 정보 유출은 신세계 그룹 내부의 보안 시스템이 취약하다는 사회적 함의를 내포한다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 4,
+        "question": "사고 인지 직후 신세계가 우선 겨냥한 대응 목표는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "장기 인력 충원"
+          },
+          {
+            "label": "B",
+            "text": "클라우드 이전"
+          },
+          {
+            "label": "C",
+            "text": "확산 차단"
+          },
+          {
+            "label": "D",
+            "text": "대외 홍보 강화"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "긴급 점검과 차단을 즉시 시행해 피해 확산 억제가 최우선 과제임을 드러냈다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      },
+      {
+        "contentId": 5,
+        "question": "인트라넷 유출 정황이 시사하는 핵심 취약 지점은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "내부 접근 제어"
+          },
+          {
+            "label": "B",
+            "text": "경계선 방어"
+          },
+          {
+            "label": "C",
+            "text": "고객 정보 암호화"
+          },
+          {
+            "label": "D",
+            "text": "전면 오프라인"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "내부 인트라넷에서 유출돼 외곽보다 내부 접근 통제가 핵심 취약으로 지목된다.",
+        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+      }
+    ]
+  }
+]

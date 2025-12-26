@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "제주 제2공항 찬반 갈등 해소를 위해 운영될 예정인 것은 무엇인가?",
+        "correctAnswer": "협의체",
+        "answerExplanation": "오영훈 제주도지사는 관련 위원회 및 협의체를 운영하겠다고 밝혔다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 2,
+        "question": "제2공항 환경영향평가의 쟁점 중 하나로 언급된 조사는 무엇인가?",
+        "correctAnswer": "조류 충돌 위험 조사",
+        "answerExplanation": "제2공항 환경영향평가의 쟁점인 조류 충돌 위험 조사는 정부 지침을 따른다고 언급되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 3,
+        "question": "항공 수요 예측을 명확히 제시해야 하는 기관은 어디인가?",
+        "correctAnswer": "국토교통부",
+        "answerExplanation": "항공 수요 예측은 국토교통부가 명확히 제시해야 한다고 언급되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 4,
+        "question": "제주-중국 칭다오 간의 무엇이 물동량 부족으로 어려움을 겪고 있는가?",
+        "correctAnswer": "화물 직항로",
+        "answerExplanation": "제주-중국 칭다오 화물 직항로는 물동량 부족으로 어려움을 겪고 있다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      },
+      {
+        "contentId": 5,
+        "question": "오영훈 제주도지사가 기자간담회에서 밝힌 직책은 무엇인가?",
+        "correctAnswer": "제주도지사",
+        "answerExplanation": "오영훈은 제주도지사로서 기자간담회에서 발언했다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+      }
+    ]
+  }
+]

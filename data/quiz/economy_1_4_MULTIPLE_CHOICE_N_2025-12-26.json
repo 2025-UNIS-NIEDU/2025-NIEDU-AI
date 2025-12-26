@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "국민권익위원회가 제안한 대출 제도 개선의 주요 내용은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "신청 절차 간소화"
+          },
+          {
+            "label": "B",
+            "text": "대출 한도 축소"
+          },
+          {
+            "label": "C",
+            "text": "대출 금리 인상"
+          },
+          {
+            "label": "D",
+            "text": "소득 기준 완화"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "권익위는 부부 합산 소득 기준을 완화하도록 제안했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 2,
+        "question": "국토부가 권익위의 제안에 대해 보인 반응은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "부분 수용"
+          },
+          {
+            "label": "B",
+            "text": "기조와 불일치"
+          },
+          {
+            "label": "C",
+            "text": "즉각 시행"
+          },
+          {
+            "label": "D",
+            "text": "적극 수용"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "국토부는 제안이 집값 안정 기조와 맞지 않는다고 밝혔다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 3,
+        "question": "혼인신고를 미루는 신혼부부가 늘어난 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "주택 공급 부족"
+          },
+          {
+            "label": "B",
+            "text": "소득 합산 기준"
+          },
+          {
+            "label": "C",
+            "text": "대출 금리 인하"
+          },
+          {
+            "label": "D",
+            "text": "세금 혜택 감소"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "혼인신고를 미루는 이유는 부부 합산 소득 기준 때문이다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 4,
+        "question": "권익위가 제안한 유자녀 가구에 대한 혜택은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "가산금리 면제"
+          },
+          {
+            "label": "B",
+            "text": "주택 보조금 지급"
+          },
+          {
+            "label": "C",
+            "text": "대출 한도 증액"
+          },
+          {
+            "label": "D",
+            "text": "소득세 감면"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "권익위는 유자녀 가구에 가산금리 면제를 제안했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 5,
+        "question": "버팀목·디딤돌 대출의 소득 기준 문제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "부부 기준 미달"
+          },
+          {
+            "label": "B",
+            "text": "부부 기준 초과"
+          },
+          {
+            "label": "C",
+            "text": "개인 기준 초과"
+          },
+          {
+            "label": "D",
+            "text": "개인 기준 미달"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "버팀목·디딤돌 대출의 부부 합산 소득 기준이 개인 기준에 미달한다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      }
+    ]
+  }
+]

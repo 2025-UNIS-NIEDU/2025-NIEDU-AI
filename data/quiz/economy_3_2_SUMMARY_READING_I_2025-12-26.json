@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "I",
+    "contents": [
+      {
+        "summary": "서울경제신문이 미래에셋증권에 의뢰해 실시한 분석에 따르면, 2023년 1월부터 11월 사이에 발행된 개인 투자용 국채의 주요 투자자는 50대였다. 특히 5년물에서는 50대가 48%의 비중을 차지한 반면, 20년물에서는 20대, 30대, 40대가 전체의 64.7%를 기록하여 젊은 투자자들이 만기가 긴 국채를 선호하는 경향을 나타냈다.",
+        "keywords": [
+          {
+            "word": "미래에셋증권",
+            "isTopicWord": true
+          },
+          {
+            "word": "국채",
+            "isTopicWord": true
+          },
+          {
+            "word": "투자",
+            "isTopicWord": false
+          },
+          {
+            "word": "50대",
+            "isTopicWord": false
+          },
+          {
+            "word": "발행",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

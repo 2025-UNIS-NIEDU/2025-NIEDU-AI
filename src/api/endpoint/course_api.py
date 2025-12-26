@@ -1,10 +1,9 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from src.pipeline.pipeline import run_learning_pipeline
 from datetime import datetime
 from pathlib import Path
 import json
 from starlette.responses import JSONResponse
-from http.client import HTTPException
 
 router = APIRouter(prefix="/api/course", tags=["Course"])
 
@@ -51,4 +50,34 @@ def get_today_data():
                 all_courses.append(course_data)
 
                 # 3. AICourseListResponse 형식으로 래핑하여 반환
+    return {"courses": all_courses}
+
+
+@router.get("/packages/all")
+def get_all_packages():
+    """data/quiz/package 내 모든 JSON을 통합해 courses 리스트로 반환"""
+    base_dir = Path(__file__).resolve().parents[3]
+    quiz_package_dir = base_dir / "data" / "quiz" / "package"
+
+    package_files = sorted(list(quiz_package_dir.glob("*.json")))
+    if not package_files:
+        return {"courses": []}
+
+    all_courses = []
+    for f in package_files:
+        try:
+            with open(f, "r", encoding="utf-8") as fp:
+                data = json.load(fp)
+        except json.JSONDecodeError:
+            raise HTTPException(status_code=500, detail=f"Invalid JSON format: {f.name}")
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
+
+        if isinstance(data, dict) and isinstance(data.get("courses"), list):
+            all_courses.extend(data["courses"])
+        elif isinstance(data, list):
+            all_courses.extend(data)
+        else:
+            all_courses.append(data)
+
     return {"courses": all_courses}

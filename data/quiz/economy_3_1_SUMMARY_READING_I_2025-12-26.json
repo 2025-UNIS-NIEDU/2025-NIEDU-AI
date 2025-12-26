@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "I",
+    "contents": [
+      {
+        "summary": "오영훈 제주도지사는 기자간담회에서 제주 제2공항 찬반 갈등 해소를 위해 환경영향평가 결과에 따라 관련 위원회 및 협의체를 운영하겠다고 밝혔다. 그는 제2공항 환경영향평가의 쟁점인 조류 충돌 위험 조사는 정부 지침을 따르고, 항공 수요 예측은 국토교통부가 명확히 제시해야 한다고 언급했다. 또한, 물동량 부족으로 어려움을 겪고 있는 제주-중국 칭다오 화물 직항로에 대해서는 손실을 감수하더라도 제주 미래를 위해 투자해야 한다고 강조했다.",
+        "keywords": [
+          {
+            "word": "오영훈",
+            "isTopicWord": true
+          },
+          {
+            "word": "제주 제2공항",
+            "isTopicWord": true
+          },
+          {
+            "word": "기자",
+            "isTopicWord": false
+          },
+          {
+            "word": "항공",
+            "isTopicWord": false
+          },
+          {
+            "word": "간담회",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

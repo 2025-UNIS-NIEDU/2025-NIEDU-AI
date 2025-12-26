@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "정부가 공공신탁 도입에 속도를 내는 것은 ______",
+        "referenceAnswer": "고액 자산가 중심으로 설계되어 있기 때문이다."
+      },
+      {
+        "contentId": "2",
+        "question": "내년 시범사업 후 단계적 확대를 통해 ______",
+        "referenceAnswer": "서민층 가입을 유도할 계획이다."
+      },
+      {
+        "contentId": "3",
+        "question": "치매환자의 재산을 공공기관이 맡아 관리하는 ______",
+        "referenceAnswer": "공공신탁 제도 도입이 추진되고 있다."
+      }
+    ]
+  ]
+}

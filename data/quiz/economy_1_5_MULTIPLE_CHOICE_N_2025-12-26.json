@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "한 장관이 청년상인을 평가한 내용은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국제 무역의 주체"
+          },
+          {
+            "label": "B",
+            "text": "단순한 창업 주체"
+          },
+          {
+            "label": "C",
+            "text": "전통시장 경쟁자"
+          },
+          {
+            "label": "D",
+            "text": "지역 소비의 촉진자"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "한 장관은 청년상인을 지역 소비를 이끄는 주체로 평가했다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 2,
+        "question": "경동시장이 청년에게 제공하는 기회는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국제 시장 진출"
+          },
+          {
+            "label": "B",
+            "text": "창업공간 제공"
+          },
+          {
+            "label": "C",
+            "text": "금융 지원 확대"
+          },
+          {
+            "label": "D",
+            "text": "기술 교육 제공"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "경동시장은 청년에게 창업공간을 제공하는 기회를 제공한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 3,
+        "question": "경동시장이 전통시장에 기여하는 바는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "지속 가능성 증대"
+          },
+          {
+            "label": "B",
+            "text": "비용 증가"
+          },
+          {
+            "label": "C",
+            "text": "경쟁력 약화"
+          },
+          {
+            "label": "D",
+            "text": "고객 감소"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "경동시장은 전통시장의 지속 가능성을 높이는 데 기여한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 4,
+        "question": "중기부의 정책방향은 무엇을 목표로 하는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "수출입 규제 완화"
+          },
+          {
+            "label": "B",
+            "text": "청년의 해외 진출"
+          },
+          {
+            "label": "C",
+            "text": "대기업 지원 강화"
+          },
+          {
+            "label": "D",
+            "text": "지역 정착과 성장"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "중기부는 청년이 지역에서 정착하고 성장할 수 있는 환경을 조성한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      },
+      {
+        "contentId": 5,
+        "question": "중기부가 지속적으로 지원할 분야는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "교육과 문화산업"
+          },
+          {
+            "label": "B",
+            "text": "민생경제와 전통시장"
+          },
+          {
+            "label": "C",
+            "text": "국제 무역과 금융"
+          },
+          {
+            "label": "D",
+            "text": "대기업과 스타트업"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "중기부는 민생경제와 전통시장의 지속 가능한 발전을 지원한다.",
+        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+      }
+    ]
+  }
+]

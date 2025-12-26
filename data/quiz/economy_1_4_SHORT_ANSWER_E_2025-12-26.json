@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신혼부부의 주거 금융 접근성을 개선하기 위해 소득 기준 조정이 제안된 대출 상품은 무엇입니까?",
+        "correctAnswer": "디딤돌 대출",
+        "answerExplanation": "디딤돌 대출의 소득 기준 조정은 주거 금융 접근성을 개선한다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 2,
+        "question": "신혼부부의 사회적 안정성을 저해하는 경제적 부담 요소로 지목된 문제는 무엇입니까?",
+        "correctAnswer": "결혼 페널티",
+        "answerExplanation": "결혼 페널티는 신혼부부의 경제적 부담을 가중시켜 사회적 안정성을 저해한다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 3,
+        "question": "유자녀 가구의 경제적 부담 경감을 위해 권익위가 제안한 금융 혜택은 무엇입니까?",
+        "correctAnswer": "가산금리 면제",
+        "answerExplanation": "가산금리 면제는 유자녀 가구의 경제적 부담을 경감하는 조치다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 4,
+        "question": "신혼부부의 경제적 부담 완화를 위해 제도 개선 권고를 받은 정부 부처는 어디입니까?",
+        "correctAnswer": "국토부",
+        "answerExplanation": "국토부는 신혼부부의 경제적 부담 완화를 위한 제도 개선을 권고받았다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      },
+      {
+        "contentId": 5,
+        "question": "신혼부부의 주거 안정성을 높이기 위해 소득 기준 조정이 제안된 대출 상품은 무엇입니까?",
+        "correctAnswer": "버팀목 대출",
+        "answerExplanation": "버팀목 대출의 소득 기준 조정은 신혼부부 주거 안정성을 강화한다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.mk.co.kr/article/11588772",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "정부가 도입하려는 제도는 무엇을 관리하기 위한 것인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "고령층의 교육"
+          },
+          {
+            "label": "B",
+            "text": "고령층의 재산"
+          },
+          {
+            "label": "C",
+            "text": "고령층의 주거"
+          },
+          {
+            "label": "D",
+            "text": "고령층의 건강"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정부는 고령층의 재산을 관리하기 위한 공공신탁 제도를 도입하려 한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 2,
+        "question": "공공신탁 제도의 수탁기관으로 예상되는 곳은 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국민은행"
+          },
+          {
+            "label": "B",
+            "text": "국민건강보험"
+          },
+          {
+            "label": "C",
+            "text": "국민교육원"
+          },
+          {
+            "label": "D",
+            "text": "국민연금"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "공공신탁 제도의 수탁기관으로 국민연금이 맡을 것으로 예상된다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 3,
+        "question": "정부가 공공신탁 제도를 추진하는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "고령층의 건강 증진"
+          },
+          {
+            "label": "B",
+            "text": "고령층의 교육 지원"
+          },
+          {
+            "label": "C",
+            "text": "고령층의 주거 안정"
+          },
+          {
+            "label": "D",
+            "text": "고액 자산가 중심 설계"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "공공신탁 제도는 고액 자산가 중심으로 설계되어 추진된다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 4,
+        "question": "공공신탁 제도 도입의 공식 과제로 추진하는 정부는 누구의 정부인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "윤석열 정부"
+          },
+          {
+            "label": "B",
+            "text": "박근혜 정부"
+          },
+          {
+            "label": "C",
+            "text": "이재명 정부"
+          },
+          {
+            "label": "D",
+            "text": "문재인 정부"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "공공신탁 제도는 이재명 정부의 공식 과제로 추진되고 있다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 5,
+        "question": "정부가 관리하려는 '치매 머니'의 규모는 어느 정도인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "200조원"
+          },
+          {
+            "label": "B",
+            "text": "172조원"
+          },
+          {
+            "label": "C",
+            "text": "100조원"
+          },
+          {
+            "label": "D",
+            "text": "150조원"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정부가 관리하려는 '치매 머니'의 규모는 172조원에 이른다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      }
+    ]
+  }
+]

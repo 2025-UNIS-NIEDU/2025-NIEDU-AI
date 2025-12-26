@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "정부는 청년 주거 불안 해소를 위해 ______",
+        "referenceAnswer": "청년 친화 주택 공급을 확대하고 주거비 지원에 나선다."
+      },
+      {
+        "contentId": "2",
+        "question": "제2차 청년정책 기본계획은 주거 환경 개선을 ______",
+        "referenceAnswer": "핵심 과제로 삼아 질적 지원에 중점을 둔다."
+      },
+      {
+        "contentId": "3",
+        "question": "청년주택드림대출은 최대 40년, 최저 연 2.4%의 ______",
+        "referenceAnswer": "저리 정책 금융으로 청년들의 내집 마련을 지원한다."
+      }
+    ]
+  ]
+}

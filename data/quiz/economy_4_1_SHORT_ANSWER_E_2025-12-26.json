@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "국가 전력망의 안정성과 효율성을 강화하는 데 핵심적인 역할을 수행하는 발전 방식은 무엇입니까?",
+        "correctAnswer": "전력계통",
+        "answerExplanation": "양수발전은 전력계통의 안정성을 높여 에너지 공급의 신뢰성을 강화한다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 2,
+        "question": "양수발전 사업의 성공적 추진을 위해 필수적인 지역 사회의 협력과 이해를 의미하는 요소는 무엇입니까?",
+        "correctAnswer": "공감대",
+        "answerExplanation": "지역 공감대 형성은 양수발전 사업의 사회적 수용성을 높인다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 3,
+        "question": "진안군이 미래 에너지 정책의 전환점을 주도할 수 있는 잠재적 분야로 언급된 것은 무엇입니까?",
+        "correctAnswer": "에너지 전환",
+        "answerExplanation": "진안군은 에너지 전환을 통해 지속 가능한 발전을 선도할 수 있다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 4,
+        "question": "양수발전소 유치를 위한 지역적 결속과 의지를 다지기 위해 개최된 행사가 열린 장소는 어디입니까?",
+        "correctAnswer": "진안문예체육회관",
+        "answerExplanation": "진안문예체육회관에서 결의대회가 열려 지역 유치 의지를 강화했다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      },
+      {
+        "contentId": 5,
+        "question": "진안양수발전소 유치를 위한 지역 주민의 결집된 의지를 표현하기 위해 개최된 행사의 명칭은 무엇입니까?",
+        "correctAnswer": "범군민 결의대회",
+        "answerExplanation": "범군민 결의대회는 지역 사회의 유치 의지를 결집시키는 역할을 한다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618444969264"
+      }
+    ]
+  }
+]

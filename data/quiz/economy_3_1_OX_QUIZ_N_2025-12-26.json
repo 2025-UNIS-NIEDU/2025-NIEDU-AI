@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "오영훈 제주도지사는 기자간담회에서 제주 제2공항 찬반 갈등 해소를 위해 환경영향평가 결과가 나오면 위원회를 운영하겠다고 밝혔다.",
+      "correctAnswer": "O",
+      "answerExplanation": "오영훈 지사가 위원회 운영을 밝힌 사실이다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+    },
+    {
+      "contentId": 2,
+      "question": "오영훈 제주도지사는 제주 제2공항 찬반 갈등 해소를 위해 환경영향평가 결과가 나오지 않으면 위원회를 운영하겠다고 밝혔다.",
+      "correctAnswer": "X",
+      "answerExplanation": "위원회 운영은 환경영향평가 결과가 나온 후에 이루어진다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+    },
+    {
+      "contentId": 3,
+      "question": "오영훈 제주도지사는 환경영향평가 쟁점인 조류 충돌 위험 조사에 정부 지침을 적용하지 않겠다고 말했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "오 지사는 정부 지침을 적용하겠다고 명확히 밝혔다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+    },
+    {
+      "contentId": 4,
+      "question": "오영훈 제주도지사는 제주-중국 칭다오 화물 직항로에 대해 손실을 감수하더라도 투자해야 한다고 말했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "오 지사가 손실을 감수하고 투자해야 한다고 언급한 사실이다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+    },
+    {
+      "contentId": 5,
+      "question": "오영훈 제주도지사는 항공 수요 예측을 국토교통부가 명확히 제시할 필요가 없다고 말했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "오 지사는 항공 수요 예측을 국토교통부가 명확히 제시해야 한다고 강조했다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+    }
+  ]
+}

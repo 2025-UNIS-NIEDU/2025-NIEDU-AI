@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "국민권익위원회는 '결혼 페널티' 개선을 위해 ______",
+        "referenceAnswer": "국토부에 제도 개선을 권고했다."
+      },
+      {
+        "contentId": "2",
+        "question": "버팀목·디딤돌 대출의 부부 합산 소득 기준은 개인 기준의 ______",
+        "referenceAnswer": "2배에 훨씬 못 미치게 설정되어 있다."
+      },
+      {
+        "contentId": "3",
+        "question": "혼인신고를 미루는 신혼부부가 증가하는 이유는 ______",
+        "referenceAnswer": "버팀목·디딤돌 대출을 받기 위해서이다."
+      }
+    ]
+  ]
+}

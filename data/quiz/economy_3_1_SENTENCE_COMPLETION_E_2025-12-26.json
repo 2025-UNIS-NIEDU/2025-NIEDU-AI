@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "오영훈 제주도지사는 기자간담회에서 ______",
+        "referenceAnswer": "제주 제2공항 찬반 갈등 해소를 위한 계획을 밝혔다."
+      },
+      {
+        "contentId": "2",
+        "question": "오 지사는 제2공항 환경영향평가 쟁점에 대해 ______",
+        "referenceAnswer": "정부 지침을 적용하여 조류 충돌 위험 조사를 진행해야 한다고 말했다."
+      },
+      {
+        "contentId": "3",
+        "question": "제주-중국 칭다오 화물 직항로는 ______",
+        "referenceAnswer": "물동량 부족으로 어려움을 겪고 있지만 투자해야 한다고 오 지사가 밝혔다."
+      }
+    ]
+  ]
+}

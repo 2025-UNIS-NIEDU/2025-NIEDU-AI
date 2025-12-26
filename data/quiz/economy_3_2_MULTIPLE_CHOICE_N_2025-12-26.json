@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "개인 투자용 국채 5년물을 가장 많이 산 연령대는?",
+        "options": [
+          {
+            "label": "A",
+            "text": "50대"
+          },
+          {
+            "label": "B",
+            "text": "40대"
+          },
+          {
+            "label": "C",
+            "text": "30대"
+          },
+          {
+            "label": "D",
+            "text": "20대"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "50대가 개인 투자용 국채 5년물을 가장 많이 구매했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 2,
+        "question": "개인 투자용 국채 10년물을 가장 많이 산 연령대는?",
+        "options": [
+          {
+            "label": "A",
+            "text": "40대"
+          },
+          {
+            "label": "B",
+            "text": "20대"
+          },
+          {
+            "label": "C",
+            "text": "30대"
+          },
+          {
+            "label": "D",
+            "text": "50대"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "50대가 개인 투자용 국채 10년물을 가장 많이 구매했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 3,
+        "question": "개인 투자용 국채 20년물을 선호하는 연령대는?",
+        "options": [
+          {
+            "label": "A",
+            "text": "젊은 연령대"
+          },
+          {
+            "label": "B",
+            "text": "노년 연령대"
+          },
+          {
+            "label": "C",
+            "text": "모든 연령대"
+          },
+          {
+            "label": "D",
+            "text": "중년 연령대"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "젊은 연령대가 개인 투자용 국채 20년물을 선호했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 4,
+        "question": "개인 투자용 국채의 단독 판매사는 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "삼성증권"
+          },
+          {
+            "label": "B",
+            "text": "한국투자증권"
+          },
+          {
+            "label": "C",
+            "text": "미래에셋증권"
+          },
+          {
+            "label": "D",
+            "text": "NH투자증권"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "미래에셋증권이 개인 투자용 국채의 단독 판매사다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 5,
+        "question": "개인 투자용 국채 5년물은 언제 출시되었는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "1월"
+          },
+          {
+            "label": "B",
+            "text": "7월"
+          },
+          {
+            "label": "C",
+            "text": "3월"
+          },
+          {
+            "label": "D",
+            "text": "5월"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "개인 투자용 국채 5년물은 올해 3월에 출시되었다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      }
+    ]
+  }
+]

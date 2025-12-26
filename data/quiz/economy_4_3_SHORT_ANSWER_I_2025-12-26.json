@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "25년간 대규모 국제행사를 유치 및 운영한 인물은 누구인가?",
+        "correctAnswer": "이봉순",
+        "answerExplanation": "이봉순 리컨벤션 대표는 25년간 대규모 국제행사를 유치 및 운영했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 2,
+        "question": "대규모 국제행사 유치로 대통령 표창을 받은 회사는 어디인가?",
+        "correctAnswer": "리컨벤션",
+        "answerExplanation": "리컨벤션은 대규모 국제행사를 유치 및 운영하여 대통령 표창을 받았다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 3,
+        "question": "이봉순 대표가 받은 상은 무엇인가?",
+        "correctAnswer": "대통령 표창",
+        "answerExplanation": "이봉순 리컨벤션 대표는 대통령 표창을 받았다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 4,
+        "question": "리컨벤션이 융합한 산업은 무엇인가?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "리컨벤션은 지역 관광 자원과 마이스 산업을 융합했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 5,
+        "question": "이봉순 대표가 강조한 미래 산업은 무엇인가?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "이 대표는 관광산업이 지역의 가치와 인재가 함께 성장하는 미래 산업이라고 전했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      }
+    ]
+  }
+]

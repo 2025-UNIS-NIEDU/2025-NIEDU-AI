@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.mk.co.kr/article/11588772",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "정부가 공공신탁 제도를 도입하려는 주된 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "재산 관리 효율화"
+          },
+          {
+            "label": "B",
+            "text": "고액 자산가 보호"
+          },
+          {
+            "label": "C",
+            "text": "고령층 복지 확대"
+          },
+          {
+            "label": "D",
+            "text": "치매 예방 강화"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "공공신탁 제도는 고액 자산가 중심으로 설계되어 고령층의 재산 보호를 강화하려는 의도를 담고 있다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 2,
+        "question": "공공신탁 제도에서 국민연금이 수탁기관으로 예상되는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "재정 안정성"
+          },
+          {
+            "label": "B",
+            "text": "고령화 대응 부족"
+          },
+          {
+            "label": "C",
+            "text": "국제 협력 강화"
+          },
+          {
+            "label": "D",
+            "text": "의료 서비스 제공"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "국민연금은 재정적 안정성을 바탕으로 고령층 재산을 안정적으로 관리할 수 있는 기관으로 예상된다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 3,
+        "question": "정부가 공공신탁 제도를 단계적으로 확대하려는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "사회적 수용성 확보"
+          },
+          {
+            "label": "B",
+            "text": "재정 부담 감소"
+          },
+          {
+            "label": "C",
+            "text": "정책 실패 방지"
+          },
+          {
+            "label": "D",
+            "text": "기술적 문제 해결"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "단계적 확대는 사회적 수용성을 확보하며 제도의 안정적 정착을 도모하려는 의도를 반영한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 4,
+        "question": "공공신탁 제도가 서민층 가입을 유도하기 위해 수수료를 낮추는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경쟁력 강화"
+          },
+          {
+            "label": "B",
+            "text": "정책 홍보 강화"
+          },
+          {
+            "label": "C",
+            "text": "가입 장벽 완화"
+          },
+          {
+            "label": "D",
+            "text": "수익성 증대"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "수수료 인하는 서민층의 가입 장벽을 낮추어 제도 참여를 촉진하려는 정책적 의도를 담고 있다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      },
+      {
+        "contentId": 5,
+        "question": "정부가 치매환자의 재산 관리를 공공기관에 맡기려는 배경에는 어떤 사회적 함의가 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "가족 부담 경감"
+          },
+          {
+            "label": "B",
+            "text": "재산 분쟁 예방"
+          },
+          {
+            "label": "C",
+            "text": "의료비 절감"
+          },
+          {
+            "label": "D",
+            "text": "치매 인식 개선"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "공공기관이 재산을 관리함으로써 치매환자 가족의 경제적·심리적 부담을 경감하려는 사회적 함의를 지닌다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+      }
+    ]
+  }
+]

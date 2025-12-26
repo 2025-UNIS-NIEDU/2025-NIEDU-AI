@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "한국수산자원공단은 갑질 없는 건강한 사회 분위기 조성을 위해 캠페인을 실시했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "한국수산자원공단이 캠페인을 실시한 사실이다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+    },
+    {
+      "contentId": 2,
+      "question": "한국수산자원공단은 갑질을 조장하는 캠페인을 실시했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "캠페인은 갑질 근절을 목표로 한 것이다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+    },
+    {
+      "contentId": 3,
+      "question": "한국수산자원공단은 부산역 일대에서만 캠페인을 실시했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "캠페인은 전국적으로 실시된 것이다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+    },
+    {
+      "contentId": 4,
+      "question": "수산자원공단 감사법무실 직원들은 갑질 예방을 위해 리플릿을 전달했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "리플릿 전달은 갑질 예방을 위한 활동이다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+    },
+    {
+      "contentId": 5,
+      "question": "한국수산자원공단은 갑질 근절을 위해 신고 채널을 알리지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신고 채널을 알려 갑질 근절을 도모한 사실이다.",
+      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+    }
+  ]
+}

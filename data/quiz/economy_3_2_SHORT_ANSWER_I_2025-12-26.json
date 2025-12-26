@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "2023년 1월부터 11월 사이 개인 투자용 국채의 주요 투자자는 누구인가?",
+        "correctAnswer": "50대",
+        "answerExplanation": "2023년 1월부터 11월 사이에 발행된 개인 투자용 국채의 주요 투자자는 50대였다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 2,
+        "question": "5년물 개인 투자용 국채에서 가장 큰 비중을 차지한 연령대는 무엇인가?",
+        "correctAnswer": "50대",
+        "answerExplanation": "5년물에서는 50대가 48%의 비중을 차지했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 3,
+        "question": "20년물 개인 투자용 국채에서 두드러진 투자자 그룹은 누구인가?",
+        "correctAnswer": "젊은 투자자",
+        "answerExplanation": "20년물에서는 20대, 30대, 40대가 전체의 64.7%를 기록하여 젊은 투자자들이 만기가 긴 국채를 선호하는 경향을 나타냈다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 4,
+        "question": "20년물 국채에서 20대, 30대, 40대가 차지한 비중은 얼마인가?",
+        "correctAnswer": "64.7%",
+        "answerExplanation": "20년물에서는 20대, 30대, 40대가 전체의 64.7%를 기록했다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      },
+      {
+        "contentId": 5,
+        "question": "젊은 투자자들이 선호하는 국채의 만기는 어떻게 되는가?",
+        "correctAnswer": "20년물",
+        "answerExplanation": "젊은 투자자들이 만기가 긴 국채를 선호하는 경향을 나타냈다.",
+        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      }
+    ]
+  }
+]

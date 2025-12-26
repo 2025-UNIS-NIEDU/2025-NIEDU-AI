@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "정부는 청년 주거 불안 해소를 위해 '청년 친화 주택' 공급을 확대했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "정부는 청년 주거 불안 해소를 위해 주택 공급을 확대한다고 밝혔다.",
+      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+    },
+    {
+      "contentId": 2,
+      "question": "2차 기본계획은 주거 환경 개선을 핵심 과제로 삼지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "2차 기본계획에서는 주거 환경 개선을 핵심 과제로 삼았다고 한다.",
+      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+    },
+    {
+      "contentId": 3,
+      "question": "정부는 청년 주거비 지원을 43만 명 이하로 제한했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "정부는 43만 명 이상을 대상으로 주거비 지원을 실시한다고 밝혔다.",
+      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+    },
+    {
+      "contentId": 4,
+      "question": "청년주택드림대출은 최대 30년, 최저 연 2.4%이다.",
+      "correctAnswer": "X",
+      "answerExplanation": "청년주택드림대출은 최대 40년, 최저 연 2.4%로 제공된다.",
+      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+    },
+    {
+      "contentId": 5,
+      "question": "청년 전용 버팀목 대출은 전세자금 지원을 위해 제공된다.",
+      "correctAnswer": "O",
+      "answerExplanation": "청년 전용 버팀목 대출은 전세자금 지원을 위해 지속 공급된다.",
+      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+    }
+  ]
+}

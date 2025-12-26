@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "쿠팡의 성탄절 기습 발표가 '셀프 면죄부'라는 비판을 받는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정부와 협력 부족"
+          },
+          {
+            "label": "B",
+            "text": "유출 정보 과장"
+          },
+          {
+            "label": "C",
+            "text": "노트북 회수 실패"
+          },
+          {
+            "label": "D",
+            "text": "자체 조사 발표"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "쿠팡의 성탄절 발표는 정부 조사와 무관한 자체 조사 결과로, 책임 회피 의도가 있다는 비판을 받는다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 2,
+        "question": "쿠팡의 유출 정보 발표가 '기습 발표'로 평가되는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정보 과장 발표"
+          },
+          {
+            "label": "B",
+            "text": "예고 없는 발표"
+          },
+          {
+            "label": "C",
+            "text": "정부 승인 미비"
+          },
+          {
+            "label": "D",
+            "text": "노트북 미회수"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡의 발표는 성탄절에 예고 없이 이루어져 '기습 발표'로 평가된다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 3,
+        "question": "쿠팡이 유출자의 노트북을 회수한 사실을 강조한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정보 유출 방지"
+          },
+          {
+            "label": "B",
+            "text": "조사 일지 보완"
+          },
+          {
+            "label": "C",
+            "text": "책임 회피 시도"
+          },
+          {
+            "label": "D",
+            "text": "정부 지시 이행"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡은 노트북 회수를 통해 추가 정보 유출을 방지하고자 하는 의도를 강조한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 4,
+        "question": "쿠팡의 성탄절 발표가 정부 지시와 무관하다는 점이 시사하는 바는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "책임 회피 의도"
+          },
+          {
+            "label": "B",
+            "text": "정부와의 갈등"
+          },
+          {
+            "label": "C",
+            "text": "자체 조사 강조"
+          },
+          {
+            "label": "D",
+            "text": "정보 과장 우려"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡의 발표가 정부 지시와 무관함을 강조함으로써 자체 조사의 중요성을 부각하려는 의도를 시사한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      },
+      {
+        "contentId": 5,
+        "question": "정부 협력 주장과 성탄절 발표의 자율성 사이 긴장을 평가할 때 핵심 단서는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정부 협력 지속 기록"
+          },
+          {
+            "label": "B",
+            "text": "성탄절 자체 결정"
+          },
+          {
+            "label": "C",
+            "text": "유출량 3천건 수치"
+          },
+          {
+            "label": "D",
+            "text": "노트북 압수 사실"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "성탄절 발표는 정부 지시가 없었고, 발표 책임이 회사에 집중됨을 명확히 드러낸다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      }
+    ]
+  }
+]

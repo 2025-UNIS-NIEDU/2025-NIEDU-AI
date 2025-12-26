@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "신세계프라퍼티가 수상한 표창의 부문은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "지역 경제 발전 부문"
+          },
+          {
+            "label": "B",
+            "text": "소상공인 지원 부문"
+          },
+          {
+            "label": "C",
+            "text": "유통산업 혁신 부문"
+          },
+          {
+            "label": "D",
+            "text": "상생·협력 문화확산 유공 부문"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "신세계프라퍼티는 상생·협력 문화확산 유공 부문에서 표창을 수상했다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 2,
+        "question": "신세계프라퍼티가 스타필드 하남 개점 이후 지속해온 활동은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "신규 매장 확장"
+          },
+          {
+            "label": "B",
+            "text": "지역 상생 활동"
+          },
+          {
+            "label": "C",
+            "text": "온라인 플랫폼 개발"
+          },
+          {
+            "label": "D",
+            "text": "해외 시장 진출"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "신세계프라퍼티는 지역 상생 활동을 지속해왔다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 3,
+        "question": "신세계프라퍼티가 앞으로 모색할 계획인 방안은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "상생협력 방안"
+          },
+          {
+            "label": "B",
+            "text": "해외 투자 확대"
+          },
+          {
+            "label": "C",
+            "text": "인력 구조 조정"
+          },
+          {
+            "label": "D",
+            "text": "기술 혁신 방안"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "신세계프라퍼티는 상생협력 방안을 지속 모색할 계획이다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 4,
+        "question": "신세계프라퍼티가 공식적으로 인정받은 성과는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "기술 혁신 성과"
+          },
+          {
+            "label": "B",
+            "text": "해외 시장 진출"
+          },
+          {
+            "label": "C",
+            "text": "고객 서비스 개선"
+          },
+          {
+            "label": "D",
+            "text": "동반 성장 성과"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "신세계프라퍼티는 동반 성장 성과를 공식적으로 인정받았다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      },
+      {
+        "contentId": 5,
+        "question": "신세계프라퍼티가 수상한 표창의 주최 기관은 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "산업통상부"
+          },
+          {
+            "label": "B",
+            "text": "중소벤처기업부"
+          },
+          {
+            "label": "C",
+            "text": "문화체육관광부"
+          },
+          {
+            "label": "D",
+            "text": "환경부"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "신세계프라퍼티는 산업통상부장관 표창을 수상했다.",
+        "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+      }
+    ]
+  }
+]

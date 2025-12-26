@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "부산역 일대에서 실시된 캠페인의 주최 기관은 어디인가?",
+        "correctAnswer": "한국수산자원공단",
+        "answerExplanation": "한국수산자원공단 감사법무실은 부산역 일대에서 캠페인을 실시하였다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 2,
+        "question": "캠페인의 주요 목표로 설정된 사회적 분위기는 무엇인가?",
+        "correctAnswer": "건강한 사회",
+        "answerExplanation": "캠페인은 갑질 없는 건강한 사회 분위기 조성을 목표로 하였다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 3,
+        "question": "캠페인에서 국민에게 전달된 자료 중 하나는 무엇인가?",
+        "correctAnswer": "리플릿",
+        "answerExplanation": "직원들은 국민에게 갑질 근절 리플릿과 홍보물품을 전달하였다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 4,
+        "question": "캠페인이 국민과 형성하고자 한 것은 무엇인가?",
+        "correctAnswer": "공감대",
+        "answerExplanation": "캠페인은 국민과의 공감대를 형성하기 위해 진행되었다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      },
+      {
+        "contentId": 5,
+        "question": "캠페인에서 안내된 신고 채널은 무엇과 관련이 있는가?",
+        "correctAnswer": "직장 내 괴롭힘",
+        "answerExplanation": "캠페인은 직장 내 괴롭힘 신고 채널을 안내하였다.",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      }
+    ]
+  }
+]

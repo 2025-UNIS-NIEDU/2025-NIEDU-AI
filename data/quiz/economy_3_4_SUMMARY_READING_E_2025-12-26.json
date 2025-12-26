@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "기획재정부는 2026년도 국고채 발행계획을 확정하며, 내년에 발행할 국고채 규모를 올해보다 5000억원 줄여 총 225조7000억원으로 정했다고 밝혔다. 내년 국고채 총 발행한도는 225조7000억원으로, 올해 발행량인 226조2000억원(개인투자용 국채 1조3000억원 제외)보다 감소한 규모이다.",
+        "keywords": [
+          {
+            "word": "기획재정부",
+            "isTopicWord": true
+          },
+          {
+            "word": "국고채 발행계획",
+            "isTopicWord": true
+          },
+          {
+            "word": "정부",
+            "isTopicWord": false
+          },
+          {
+            "word": "국채",
+            "isTopicWord": false
+          },
+          {
+            "word": "재정부",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

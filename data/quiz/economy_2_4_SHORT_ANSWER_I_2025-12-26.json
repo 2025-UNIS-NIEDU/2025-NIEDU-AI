@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "쿠팡이 발표한 조사 결과와 관련하여 비판한 인물은 누구인가?",
+        "correctAnswer": "정혜경",
+        "answerExplanation": "정혜경 진보당 의원은 쿠팡의 발표를 비판했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 2,
+        "question": "쿠팡이 발표한 조사 결과의 주제는 무엇인가?",
+        "correctAnswer": "개인정보 유출",
+        "answerExplanation": "쿠팡은 개인정보 유출 관련 자체 조사 결과를 발표했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 3,
+        "question": "정혜경 의원이 쿠팡의 발표를 비판한 이유는 무엇인가?",
+        "correctAnswer": "민관합동조사",
+        "answerExplanation": "정혜경 의원은 민관합동조사가 진행 중인 상황에서 일방적인 발표를 비판했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 4,
+        "question": "쿠팡이 조사 결과 발표를 정당화하기 위해 언급한 조사 방식은 무엇인가?",
+        "correctAnswer": "공조 조사",
+        "answerExplanation": "쿠팡은 문제가 된 조사가 정부의 지시에 따라 진행된 공조 조사라고 설명했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 5,
+        "question": "정혜경 의원이 쿠팡의 발표를 비판하며 언급한 두 기관은 무엇인가?",
+        "correctAnswer": "정부",
+        "answerExplanation": "정혜경 의원은 정부와 국회를 기만하는 행위라고 주장했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "N",
+    "contents": [
+      {
+        "summary": "한국수산자원공단 감사법무실은 부산역 일대에서 대국민 갑질 근절 캠페인을 실시하여 갑질 없는 건강한 사회 분위기 조성을 목표로 하였다. 이번 캠페인은 갑질의 사회적 심각성을 알리고 국민과의 공감대를 형성하기 위해 진행되었으며, 직원들은 일반 국민에게 갑질 근절 리플릿과 홍보물품을 전달하였다. 또한, 국민이 체감할 수 있는 갑질 및 직장 내 괴롭힘 신고 채널을 안내하여 건강한 미래 사회 구현을 위한 노력을 기울였다.",
+        "keywords": [
+          {
+            "word": "한국수산자원공단",
+            "isTopicWord": true
+          },
+          {
+            "word": "갑질 근절 캠페인",
+            "isTopicWord": true
+          },
+          {
+            "word": "신고 채널",
+            "isTopicWord": false
+          },
+          {
+            "word": "미래",
+            "isTopicWord": false
+          },
+          {
+            "word": "건강",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

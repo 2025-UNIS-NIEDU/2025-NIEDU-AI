@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "신세계프라퍼티는 '제30회 한국유통대상'에서 표창을 수상했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "신세계프라퍼티가 유통산업 상생·협력 문화확산 유공 부문 표창을 수상했다.",
+      "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+    },
+    {
+      "contentId": 2,
+      "question": "신세계프라퍼티는 스타필드 하남 개점 이후 상생 활동을 중단했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신세계프라퍼티는 상생 활동을 지속적으로 이어왔다.",
+      "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+    },
+    {
+      "contentId": 3,
+      "question": "신세계프라퍼티는 앞으로 상생 활동을 중단할 계획이다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신세계프라퍼티는 앞으로도 상생 활동을 지속할 계획이다.",
+      "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+    },
+    {
+      "contentId": 4,
+      "question": "신세계프라퍼티는 2016년 스타필드 하남 개점 이후 지역 상권을 지원했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "신세계프라퍼티는 지역 상권 및 소상공인을 지원하는 상생 활동을 했다.",
+      "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+    },
+    {
+      "contentId": 5,
+      "question": "신세계프라퍼티는 지역 사회에 기여하지 않겠다고 밝혔다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신세계프라퍼티는 지역 사회에 실질적으로 기여할 계획이라고 밝혔다.",
+      "sourceUrl": "https://news.tf.co.kr/read/economy/2276577.htm"
+    }
+  ]
+}

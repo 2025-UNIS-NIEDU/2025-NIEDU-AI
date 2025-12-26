@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://biz.heraldcorp.com/article/10644379",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "김민석 총리가 주재한 회의에서 확정된 계획은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "제2차 청년정책 기본계획"
+          },
+          {
+            "label": "B",
+            "text": "청년정책 실행계획"
+          },
+          {
+            "label": "C",
+            "text": "청년정책 발전계획"
+          },
+          {
+            "label": "D",
+            "text": "제1차 청년정책 기본계획"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "김민석 총리는 제2차 청년정책 기본계획을 확정했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 2,
+        "question": "정부가 청년정책 추진을 위해 신설한 회의는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "청년정책 실무회의"
+          },
+          {
+            "label": "B",
+            "text": "청년정책 관계장관회의"
+          },
+          {
+            "label": "C",
+            "text": "청년정책 자문회의"
+          },
+          {
+            "label": "D",
+            "text": "청년정책 특별위원회"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정부는 청년정책 관계장관회의를 신설했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 3,
+        "question": "김민석 총리가 청년정책과 관련해 장관들에게 당부한 내용은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정책 시행 연기"
+          },
+          {
+            "label": "B",
+            "text": "정책 홍보 강화"
+          },
+          {
+            "label": "C",
+            "text": "청년 목소리 반영"
+          },
+          {
+            "label": "D",
+            "text": "정책 예산 증액"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "김민석 총리는 청년들의 목소리를 정책에 반영해 달라고 당부했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 4,
+        "question": "정부가 청년정책을 통해 확대하려는 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "청년 일자리 수"
+          },
+          {
+            "label": "B",
+            "text": "청년 교육 기회"
+          },
+          {
+            "label": "C",
+            "text": "청년 복지 혜택"
+          },
+          {
+            "label": "D",
+            "text": "정책과정 참여 통로"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "정부는 청년정책을 통해 정책과정 참여 통로를 확대하려 한다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      },
+      {
+        "contentId": 5,
+        "question": "정부가 청년정책 추진을 위해 조정하려는 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "부처 간 이견"
+          },
+          {
+            "label": "B",
+            "text": "청년 교육 수준"
+          },
+          {
+            "label": "C",
+            "text": "청년 인구 증가"
+          },
+          {
+            "label": "D",
+            "text": "정책 예산 분배"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정부는 부처 간 이견을 조정하려 한다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      }
+    ]
+  }
+]

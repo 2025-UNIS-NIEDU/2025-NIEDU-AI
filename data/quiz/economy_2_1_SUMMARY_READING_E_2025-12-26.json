@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "신세계 그룹에서 임직원 8만여 명의 사원번호 등 개인정보가 유출되는 사고가 발생했다. 신세계 측은 내부 인트라넷 시스템에서 임직원과 일부 협력사 직원의 정보가 유출된 정황을 확인했으며, 고객 정보는 유출되지 않았다고 밝혔다. 이들은 사고를 즉시 인지하고 관련 시스템 및 계정에 대한 긴급 점검과 차단 조치를 시행했으며, 관계 기관에 신고하고 사고 원인과 영향 범위에 대한 조사를 진행할 계획이라고 전했다.",
+        "keywords": [
+          {
+            "word": "신세계 그룹",
+            "isTopicWord": true
+          },
+          {
+            "word": "개인정보 유출 사고",
+            "isTopicWord": true
+          },
+          {
+            "word": "시스템",
+            "isTopicWord": false
+          },
+          {
+            "word": "정보",
+            "isTopicWord": false
+          },
+          {
+            "word": "인트라넷",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

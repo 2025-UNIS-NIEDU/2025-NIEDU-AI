@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "정부는 고령 치매환자의 재산을 공공기관이 관리하는 '공공신탁' 제도 도입을 추진하고 있다. 이 제도는 내년 시범사업을 시작으로 단계적으로 확대될 예정이며, 수수료를 낮추어 서민층의 가입을 유도할 계획이다. 국민연금이 수탁기관으로 지정될 가능성이 높다. 정부는 고액 자산가 중심으로 설계된 기존 시스템을 개선하기 위해 공공신탁 도입에 속도를 내고 있다.",
+        "keywords": [
+          {
+            "word": "정부",
+            "isTopicWord": true
+          },
+          {
+            "word": "공공신탁",
+            "isTopicWord": true
+          },
+          {
+            "word": "국민연금",
+            "isTopicWord": false
+          },
+          {
+            "word": "시범사업",
+            "isTopicWord": false
+          },
+          {
+            "word": "수수료",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

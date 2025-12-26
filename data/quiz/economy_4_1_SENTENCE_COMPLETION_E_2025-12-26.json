@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "권명호 사장은 진안군이 ______",
+        "referenceAnswer": "양수발전의 최적지로서 대한민국 에너지 전환을 선도할 수 있는 잠재력을 지니고 있다고 말했다."
+      },
+      {
+        "contentId": "2",
+        "question": "양수발전 사업은 지역의 공감대와 ______",
+        "referenceAnswer": "군민들의 분명한 의지가 있을 때 가능성이 높아진다고 강조했다."
+      },
+      {
+        "contentId": "3",
+        "question": "이번 결의대회는 양수발전 유치 의지를 ______",
+        "referenceAnswer": "진안군민과 함께 다지기 위한 행사로 열렸다."
+      }
+    ]
+  ]
+}

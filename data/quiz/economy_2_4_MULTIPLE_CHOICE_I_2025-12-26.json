@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "쿠팡의 개인정보 유출 사건 발표 방식에 대한 정혜경 의원의 비판은 어떤 사회적 함의를 내포하고 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "기업의 책임 회피"
+          },
+          {
+            "label": "B",
+            "text": "소비자 신뢰 증대"
+          },
+          {
+            "label": "C",
+            "text": "기업의 투명성 강화"
+          },
+          {
+            "label": "D",
+            "text": "정부의 규제 완화"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "정혜경 의원의 비판은 쿠팡이 상황을 축소·은폐하려는 태도를 보였다는 점에서 기업의 책임 회피를 지적하고 있다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 2,
+        "question": "쿠팡이 자체 조사 결과를 기습 발표한 행위는 어떤 정책적 의도를 드러내는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "사건의 조기 해결"
+          },
+          {
+            "label": "B",
+            "text": "여론의 무마 시도"
+          },
+          {
+            "label": "C",
+            "text": "정부와의 협력 강화"
+          },
+          {
+            "label": "D",
+            "text": "소비자 보호 강화"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡의 기습 발표는 여론을 무마하고 사건의 주도권을 잡으려는 시도로 해석될 수 있다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 3,
+        "question": "정혜경 의원이 쿠팡의 발표를 '국민과 헌법 위에 군림하는 오만한 태도'라고 표현한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정부의 지시 이행"
+          },
+          {
+            "label": "B",
+            "text": "소비자 보호 노력"
+          },
+          {
+            "label": "C",
+            "text": "공조 조사 참여"
+          },
+          {
+            "label": "D",
+            "text": "일방적 발표"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "정혜경 의원은 쿠팡의 일방적 발표가 국민과 정부를 무시하는 태도로 비춰질 수 있음을 지적하고 있다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 4,
+        "question": "절차와 공조 관점에서 이번 논란의 본질을 가장 정확히 짚는 개념은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "국회 보고 누락"
+          },
+          {
+            "label": "B",
+            "text": "정부 승인 공표"
+          },
+          {
+            "label": "C",
+            "text": "내부 단독 발표"
+          },
+          {
+            "label": "D",
+            "text": "사후 정리 보고"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "공동조사 중 일방 발표가 지적됐고 공조 해명과 대비돼, 쟁점은 단독 발표의 적정성이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      },
+      {
+        "contentId": 5,
+        "question": "쿠팡 해명이 겨냥한 정당성의 차원을 어떻게 규정할 수 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "대중감정 수습"
+          },
+          {
+            "label": "B",
+            "text": "도덕성 회복"
+          },
+          {
+            "label": "C",
+            "text": "절차적 타당"
+          },
+          {
+            "label": "D",
+            "text": "법원판결 존중"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "정부 지시 공조였다는 해명은 절차 정당성을 겨냥하며, 도덕적 책임과는 결이 다르다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      }
+    ]
+  }
+]

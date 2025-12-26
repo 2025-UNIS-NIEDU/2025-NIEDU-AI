@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "원·달러 환율이 1440.35원에 정규장을 마쳤다.",
+      "correctAnswer": "O",
+      "answerExplanation": "원·달러 환율이 1440.35원에 정규장을 마친 사실이다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+    },
+    {
+      "contentId": 2,
+      "question": "원·달러 환율이 23일에 1440원으로 기록했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "23일 환율은 1483.8원으로 직전 고점을 기록했다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+    },
+    {
+      "contentId": 3,
+      "question": "환율이 상승하면서 외국인이 국내주식시장에서 '팔자'였다.",
+      "correctAnswer": "X",
+      "answerExplanation": "외국인은 국내주식시장에서 '사자'로 나타났다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+    },
+    {
+      "contentId": 4,
+      "question": "정규장 종가 기준으로 24일 환율은 1449.8원이었다.",
+      "correctAnswer": "X",
+      "answerExplanation": "24일 환율은 1449.8원이 아니라 1440.35원이다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+    },
+    {
+      "contentId": 5,
+      "question": "원·달러 환율이 급락한 이유는 외국인의 매도 때문이었다.",
+      "correctAnswer": "X",
+      "answerExplanation": "환율 급락은 당국 조치와 시장 상황의 영향 때문이다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03342326642402456"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.news1.kr/realestate/general/6020967",
+    "contents": [
+      {
+        "contentId": 1,
+        "question": "정부가 청년 주거 불안을 해소하기 위해 추진하는 정책은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "고령자 주택 지원"
+          },
+          {
+            "label": "B",
+            "text": "농촌 주택 개발"
+          },
+          {
+            "label": "C",
+            "text": "청년 친화 주택 공급"
+          },
+          {
+            "label": "D",
+            "text": "외국인 주택 보조"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "정부는 청년 주거 불안을 해소하기 위해 청년 친화 주택 공급을 추진한다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 2,
+        "question": "제2차 청년정책 기본계획의 핵심 과제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "해외 취업 지원"
+          },
+          {
+            "label": "B",
+            "text": "교육 기회 제공"
+          },
+          {
+            "label": "C",
+            "text": "분양 기회 확대"
+          },
+          {
+            "label": "D",
+            "text": "주거 환경 개선"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "제2차 청년정책 기본계획의 핵심 과제는 주거 환경 개선이다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 3,
+        "question": "청년 주거 안정을 위해 정부가 지속 공급할 금융 상품은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "기업 지원 대출"
+          },
+          {
+            "label": "B",
+            "text": "농업인 전용 대출"
+          },
+          {
+            "label": "C",
+            "text": "청년주택드림대출"
+          },
+          {
+            "label": "D",
+            "text": "고령자 전용 대출"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "정부는 청년 주거 안정을 위해 청년주택드림대출을 지속 공급할 계획이다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 4,
+        "question": "정부가 청년 주거비 지원을 계획하는 대상은 누구인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "학생"
+          },
+          {
+            "label": "B",
+            "text": "청년"
+          },
+          {
+            "label": "C",
+            "text": "외국인"
+          },
+          {
+            "label": "D",
+            "text": "노인"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정부는 청년 주거비 지원을 청년을 대상으로 계획하고 있다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      },
+      {
+        "contentId": 5,
+        "question": "정부가 청년 주거 안정을 위해 강화하려는 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "문화 행사"
+          },
+          {
+            "label": "B",
+            "text": "전세사기 예방"
+          },
+          {
+            "label": "C",
+            "text": "해외 유학"
+          },
+          {
+            "label": "D",
+            "text": "농업 지원"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정부는 청년 주거 안정을 위해 전세사기 예방을 강화하려 한다.",
+        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      }
+    ]
+  }
+]

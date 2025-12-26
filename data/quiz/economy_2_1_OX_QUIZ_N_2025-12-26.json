@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "신세계 그룹에서 임직원 개인정보가 유출되었다.",
+      "correctAnswer": "O",
+      "answerExplanation": "신세계 그룹에서 임직원 개인정보 유출 사고가 발생했다는 사실이다.",
+      "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+    },
+    {
+      "contentId": 2,
+      "question": "신세계 측은 고객 정보가 유출되었다고 밝혔다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신세계 측은 고객 정보 유출이 없다고 확인했다는 사실이다.",
+      "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+    },
+    {
+      "contentId": 3,
+      "question": "신세계 측은 사고 인지 후 아무런 조치를 취하지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신세계 측은 사고 인지 즉시 긴급 점검과 차단 조치를 시행했다고 밝혔다.",
+      "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+    },
+    {
+      "contentId": 4,
+      "question": "신세계 측은 사고 원인과 영향 범위 조사를 진행할 계획이다.",
+      "correctAnswer": "O",
+      "answerExplanation": "신세계 측은 사고 원인과 영향 범위에 대한 조사를 진행할 계획이라고 밝혔다.",
+      "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+    },
+    {
+      "contentId": 5,
+      "question": "신세계 그룹의 임직원 정보 유출 사고는 고객 정보 유출로 이어졌다.",
+      "correctAnswer": "X",
+      "answerExplanation": "신세계 측은 고객 정보 유출이 없다고 확인했기 때문에 이 주장은 사실이 아니다.",
+      "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+    }
+  ]
+}
