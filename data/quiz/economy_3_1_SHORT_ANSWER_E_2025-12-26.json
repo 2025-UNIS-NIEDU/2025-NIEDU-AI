@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "E",
-    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A",
     "contents": [
       {
         "contentId": 1,
-        "question": "제주와 중국 칭다오 간의 물류 흐름을 원활히 하기 위해 필요한 물동량 확보가 과제로 남은 항공 경로는 무엇입니까?",
-        "correctAnswer": "화물 직항로",
-        "answerExplanation": "화물 직항로의 물동량 부족은 국제 물류 네트워크의 효율성을 저해한다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "question": "지역 경제 활성화와 연결성 강화를 목표로 하며, 발전계획안에 포함된 주요 사회기반시설 확충 내용은 무엇입니까?",
+        "correctAnswer": "도로망 강화",
+        "answerExplanation": "도로망 강화는 지역 간 연결성 향상과 경제 활성화를 목표로 한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 2,
-        "question": "항공 인프라 확장을 위한 수요 예측의 명확성을 요구받고 있는 정부 부처는 어디입니까?",
-        "correctAnswer": "국토교통부",
-        "answerExplanation": "국토교통부는 항공 수요 예측의 명확성을 통해 정책 신뢰성을 강화해야 한다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "question": "지역 발전계획안의 재정적 규모와 구체적 실행을 위한 세부 사업 계획의 총 규모는 얼마입니까?",
+        "correctAnswer": "세부 사업",
+        "answerExplanation": "세부 사업 계획은 71개, 27조 원 규모로 지역 발전을 구체화한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 3,
-        "question": "제주 제2공항 갈등 해소를 위한 이해관계자 간 대화와 조정을 목표로 하는 운영 기구는 무엇입니까?",
-        "correctAnswer": "협의체",
-        "answerExplanation": "협의체 운영은 이해관계자 간의 갈등 해소와 합의 도출을 지향한다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "question": "지역 간 교통 접근성을 높이고 경제적 교류를 촉진하기 위해 발전계획안에 포함된 철도 관련 사업은 무엇입니까?",
+        "correctAnswer": "고속 및 광역철도 구축",
+        "answerExplanation": "고속 및 광역철도 구축은 교통 접근성을 높여 경제 교류를 촉진한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 4,
-        "question": "오영훈이 공식적으로 제주 지역의 행정 책임자로서 발표한 직책은 무엇입니까?",
-        "correctAnswer": "제주도지사",
-        "answerExplanation": "제주도지사로서의 발언은 지역 행정의 방향성과 책임을 명확히 한다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "question": "비수도권 지역 균형 발전을 위한 법적 틀을 제공하며, 8개 시·도의 지속 가능한 성장을 지원하는 법률은 무엇입니까?",
+        "correctAnswer": "중부내륙특별법",
+        "answerExplanation": "중부내륙특별법은 지역 균형 발전을 위한 법적 기반을 제공한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 5,
-        "question": "제2공항 환경영향평가에서 생태적 안전성을 검토하기 위해 정부 지침에 따라 수행되는 조사는 무엇입니까?",
-        "correctAnswer": "조류 충돌 위험 조사",
-        "answerExplanation": "조류 충돌 위험 조사는 생태적 안전성을 확보하기 위한 필수 절차다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "question": "충청북도가 지역 발전을 위한 계획안을 제출한, 국가의 행정적 조정과 지원을 담당하는 기관은 어디입니까?",
+        "correctAnswer": "행정안전부",
+        "answerExplanation": "행정안전부는 지역 발전 계획을 조정하고 지원하는 역할을 한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       }
     ]
   }

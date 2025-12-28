@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://www.news1.kr/realestate/general/6020967",
+    "sourceUrl": "https://www.mk.co.kr/article/11588803",
     "contents": [
       {
         "contentId": 1,
-        "question": "정부가 '청년 친화 주택' 공급을 확대하려는 이유는 무엇인가?",
+        "question": "흑백요리사2의 셰프들이 운영하는 식당의 위치 분포는 어떤 사회적 함의를 지니고 있는가?",
         "options": [
           {
             "label": "A",
-            "text": "환경 보호 강화"
+            "text": "서울 집중화 현상"
           },
           {
             "label": "B",
-            "text": "주거비 절감"
+            "text": "농촌 지역 발전"
           },
           {
             "label": "C",
-            "text": "인구 증가 대응"
+            "text": "지방 경제 활성화"
           },
           {
             "label": "D",
-            "text": "주거 불안 해소"
+            "text": "해외 진출 증가"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "'청년 친화 주택' 공급 확대는 청년층의 주거 불안을 해소하려는 정부의 정책적 의도를 반영한다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "correctAnswer": "A",
+        "answerExplanation": "셰프들이 운영하는 식당 대부분이 서울에 집중된 것은 수도권 중심의 경제 및 문화 집중 현상을 반영한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 2,
-        "question": "제2차 청년정책 기본계획에서 질적 지원을 핵심 과제로 삼은 이유는 무엇인가?",
+        "question": "두 시즌 모두 도산대로 비중이 최다인 점은 상권 구조상 어떤 지속성을 시사하는가?",
         "options": [
           {
             "label": "A",
-            "text": "인구 감소 대응"
+            "text": "외국인 수요"
           },
           {
             "label": "B",
-            "text": "주거 환경 개선"
+            "text": "마케팅 착시"
           },
           {
             "label": "C",
-            "text": "정책 예산 절감"
+            "text": "임대료 특혜"
           },
           {
             "label": "D",
-            "text": "주택 가격 상승"
+            "text": "지속적 핵심지"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "질적 지원을 핵심 과제로 삼은 것은 청년층의 주거 환경을 개선하려는 정책적 목표를 나타낸다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "correctAnswer": "D",
+        "answerExplanation": "두 시즌 도산대로 비중이 최다여 대표 상권의 장기 지속성을 시사한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 3,
-        "question": "청년주택드림대출과 청년 전용 버팀목 대출을 지속 공급하는 이유는 무엇인가?",
+        "question": "상위 셰프 식당이 서울에 거의 몰린 양상은 외식 생태의 어떤 공간적 특성을 보여주는가?",
         "options": [
           {
             "label": "A",
-            "text": "부동산 투기 억제"
+            "text": "도심 집중"
           },
           {
             "label": "B",
-            "text": "금융 시장 안정"
+            "text": "지역 분산"
           },
           {
             "label": "C",
-            "text": "청년 내집 마련 지원"
+            "text": "지방 반등"
           },
           {
             "label": "D",
-            "text": "대출 금리 인상"
+            "text": "순환 균형"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "저리 정책 금융을 지속 공급하는 것은 청년들의 내집 마련과 주거 안정을 지원하려는 목적이다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "correctAnswer": "A",
+        "answerExplanation": "35곳 중 33곳이 서울이어서 수요와 인력의 도심 집중을 드러낸다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 4,
-        "question": "정부가 전세사기 예방 강화를 추진하는 배경에는 어떤 사회적 필요가 있는가?",
+        "question": "작년 숙대입구 2위, 올해 해방촌 3위 변화는 용산 내부 상권의 어떤 흐름을 드러내는가?",
         "options": [
           {
             "label": "A",
-            "text": "청년 보호 강화"
+            "text": "일시적 소음"
           },
           {
             "label": "B",
-            "text": "주택 공급 감소"
+            "text": "급격한 쇠퇴"
           },
           {
             "label": "C",
-            "text": "세금 수입 증가"
+            "text": "미시적 재편"
           },
           {
             "label": "D",
-            "text": "부동산 시장 확대"
+            "text": "외부 충격"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "전세사기 예방 강화는 청년층을 보호하고 주거 안정을 도모하려는 사회적 필요에서 비롯되었다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "correctAnswer": "C",
+        "answerExplanation": "숙대입구와 해방촌의 교체는 용산 내부 축의 점진적 재편을 뜻한다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 5,
-        "question": "정부의 청년 주거비 지원 확대 정책이 가지는 장기적 효과는 무엇인가?",
+        "question": "도산대로가 작년 5곳에서 올해 7곳으로 늘어난 변화는 비중 관점에서 어떤 해석이 타당한가?",
         "options": [
           {
             "label": "A",
-            "text": "청년층 경제적 자립"
+            "text": "집적 심화"
           },
           {
             "label": "B",
-            "text": "부동산 투기 증가"
+            "text": "표본 오류"
           },
           {
             "label": "C",
-            "text": "주택 가격 안정"
+            "text": "무작위 변동"
           },
           {
             "label": "D",
-            "text": "인구 고령화 완화"
+            "text": "공급 축소"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "청년 주거비 지원 확대는 청년층의 경제적 자립을 촉진하여 장기적으로 사회 안정에 기여할 수 있다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "answerExplanation": "7/35 대 5/37로 올해 비중이 높아져 도산대로 중심 집적이 심화되는 흐름이다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       }
     ]
   }

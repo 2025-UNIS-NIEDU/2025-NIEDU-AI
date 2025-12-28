@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024",
     "contents": [
       {
         "contentId": 1,
-        "question": "광주시의원들이 유가족에 대한 장기적 지원 체계를 강조한 이유는 무엇인가?",
+        "question": "경찰과 쿠팡의 상반된 진술은 조사 주체성의 어떤 쟁점을 가장 부각하는가?",
         "options": [
           {
             "label": "A",
-            "text": "항공사 책임 강화"
+            "text": "정부지시 범위"
           },
           {
             "label": "B",
-            "text": "재정 지원 감소"
+            "text": "법원 사후 통제"
           },
           {
             "label": "C",
-            "text": "공항 확장 필요"
+            "text": "경찰 주도 원칙"
           },
           {
             "label": "D",
-            "text": "유가족 고통 해소"
-          }
-        ],
-        "correctAnswer": "D",
-        "answerExplanation": "유가족의 고통이 해소되지 않았다는 점에서 장기적 지원 체계의 필요성이 강조되었다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
-      },
-      {
-        "contentId": 2,
-        "question": "항공철도사고조사위원회를 둘러싼 논란이 조사에 미친 영향은 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "조사 비용 절감"
-          },
-          {
-            "label": "B",
-            "text": "조사 인력 증가"
-          },
-          {
-            "label": "C",
-            "text": "조사 신뢰성 훼손"
-          },
-          {
-            "label": "D",
-            "text": "조사 기간 단축"
-          }
-        ],
-        "correctAnswer": "C",
-        "answerExplanation": "조사 지연과 자료 비공개, 유가족 참여 배제 논란은 조사 신뢰성을 훼손했다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
-      },
-      {
-        "contentId": 3,
-        "question": "광주시의원들의 성명 발표가 사회에 미칠 수 있는 함의는 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "공항 확장 촉진"
-          },
-          {
-            "label": "B",
-            "text": "항공료 인하 요구"
-          },
-          {
-            "label": "C",
-            "text": "항공사 이미지 개선"
-          },
-          {
-            "label": "D",
-            "text": "국민적 불신 해소"
-          }
-        ],
-        "correctAnswer": "D",
-        "answerExplanation": "정확한 사고 원인과 책임 규명을 통해 국민적 불신을 해소하려는 의도가 있다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
-      },
-      {
-        "contentId": 4,
-        "question": "광주시의원들이 참사 1주기를 맞아 성명을 발표한 주된 목적은 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "책임 규명 촉구"
-          },
-          {
-            "label": "B",
-            "text": "유가족 참여 배제"
-          },
-          {
-            "label": "C",
-            "text": "항공사 지원 요청"
-          },
-          {
-            "label": "D",
-            "text": "공항 확장 반대"
+            "text": "국회 감시 강화"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "참사 1주기를 맞아 독립적 사고조사를 통한 철저한 진상 규명과 책임 규명을 촉구하기 위함이다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "answerExplanation": "경찰은 협의 부재를 밝혀 정부 지시 범위의 모호성이 핵심 쟁점으로 부각된다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
-        "contentId": 5,
-        "question": "의원들이 제기한 불신 해소의 근본적 핵심 축은 무엇이라 보아야 하는가?",
+        "contentId": 2,
+        "question": "경찰의 '사실관계 확인' 언급은 현 단계 수사 진행 상황에 대해 무엇을 시사하는가?",
         "options": [
           {
             "label": "A",
-            "text": "국가책임지원"
+            "text": "초기 검증 국면"
           },
           {
             "label": "B",
-            "text": "절차간소화"
+            "text": "현장 압수 단계"
           },
           {
             "label": "C",
-            "text": "항공사징계강화"
+            "text": "종결 보고 단계"
           },
           {
             "label": "D",
-            "text": "조사독립성"
+            "text": "기소 전 막바지"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "지연·비공개·배제로 신뢰가 흔들려 독립성 확보가 핵심이며 안전 거버넌스 강화로 이어진다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "correctAnswer": "A",
+        "answerExplanation": "사실관계 확인 중이라는 표현은 아직 초기 검증 단계임을 시사한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
+      },
+      {
+        "contentId": 3,
+        "question": "쿠팡의 공조 주장과 경찰 반박의 시차는 신뢰성 판단에서 어떤 지점을 문제화하는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "외부 감독 강화"
+          },
+          {
+            "label": "B",
+            "text": "법적 책임 소멸"
+          },
+          {
+            "label": "C",
+            "text": "설명 정합성 의문"
+          },
+          {
+            "label": "D",
+            "text": "공식 합의 존재"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "공조 주장과 협의 부재가 맞물려 양측 설명의 정합성에 의문이 집중된다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
+      },
+      {
+        "contentId": 4,
+        "question": "유출자 접촉·기기 회수에 협의 부재가 절차적 측면에서 특히 중대한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "보안 예산 부족"
+          },
+          {
+            "label": "B",
+            "text": "증거 취급 절차"
+          },
+          {
+            "label": "C",
+            "text": "노사 협약 위반"
+          },
+          {
+            "label": "D",
+            "text": "소비 촉진 정책"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "증거물 회수는 절차 통제가 본질이어서 협의 부재는 증거 보전 리스크를 키운다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
+      },
+      {
+        "contentId": 5,
+        "question": "자체 조사 논란 이후 쿠팡 추가 입장문의 핵심 전략적 초점은 무엇으로 해석하는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "보상안 즉시화"
+          },
+          {
+            "label": "B",
+            "text": "정부 연계 강조"
+          },
+          {
+            "label": "C",
+            "text": "피해 축소 서술"
+          },
+          {
+            "label": "D",
+            "text": "사과문 선공개"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정부 지시와 공조를 강조해 독자 행위 프레임을 희석하려는 전략으로 읽힌다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       }
     ]
   }

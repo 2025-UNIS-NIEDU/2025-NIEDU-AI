@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://biz.heraldcorp.com/article/10644379",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A",
     "contents": [
       {
         "contentId": 1,
-        "question": "김민석 총리가 주재한 회의에서 확정된 계획은 무엇인가?",
+        "question": "제주올레의 소비지출 유발 효과에 대한 연구를 발표한 기관은 어디인가?",
         "options": [
           {
             "label": "A",
-            "text": "제2차 청년정책 기본계획"
+            "text": "제주도청"
           },
           {
             "label": "B",
-            "text": "청년정책 실행계획"
+            "text": "한국은행"
           },
           {
             "label": "C",
-            "text": "청년정책 발전계획"
+            "text": "제주연구원"
           },
           {
             "label": "D",
-            "text": "제1차 청년정책 기본계획"
-          }
-        ],
-        "correctAnswer": "A",
-        "answerExplanation": "김민석 총리는 제2차 청년정책 기본계획을 확정했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
-      },
-      {
-        "contentId": 2,
-        "question": "정부가 청년정책 추진을 위해 신설한 회의는 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "청년정책 실무회의"
-          },
-          {
-            "label": "B",
-            "text": "청년정책 관계장관회의"
-          },
-          {
-            "label": "C",
-            "text": "청년정책 자문회의"
-          },
-          {
-            "label": "D",
-            "text": "청년정책 특별위원회"
-          }
-        ],
-        "correctAnswer": "B",
-        "answerExplanation": "정부는 청년정책 관계장관회의를 신설했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
-      },
-      {
-        "contentId": 3,
-        "question": "김민석 총리가 청년정책과 관련해 장관들에게 당부한 내용은 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "정책 시행 연기"
-          },
-          {
-            "label": "B",
-            "text": "정책 홍보 강화"
-          },
-          {
-            "label": "C",
-            "text": "청년 목소리 반영"
-          },
-          {
-            "label": "D",
-            "text": "정책 예산 증액"
+            "text": "제주관광공사"
           }
         ],
         "correctAnswer": "C",
-        "answerExplanation": "김민석 총리는 청년들의 목소리를 정책에 반영해 달라고 당부했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "answerExplanation": "제주연구원이 제주올레의 소비지출 유발 효과에 대한 연구를 발표했다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
-        "contentId": 4,
-        "question": "정부가 청년정책을 통해 확대하려는 것은 무엇인가?",
+        "contentId": 2,
+        "question": "제주올레 이용객의 소비가 집중되는 분야는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "청년 일자리 수"
+            "text": "숙박과 식사"
           },
           {
             "label": "B",
-            "text": "청년 교육 기회"
+            "text": "문화 체험"
           },
           {
             "label": "C",
-            "text": "청년 복지 혜택"
+            "text": "교통 서비스"
           },
           {
             "label": "D",
-            "text": "정책과정 참여 통로"
-          }
-        ],
-        "correctAnswer": "D",
-        "answerExplanation": "정부는 청년정책을 통해 정책과정 참여 통로를 확대하려 한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
-      },
-      {
-        "contentId": 5,
-        "question": "정부가 청년정책 추진을 위해 조정하려는 것은 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "부처 간 이견"
-          },
-          {
-            "label": "B",
-            "text": "청년 교육 수준"
-          },
-          {
-            "label": "C",
-            "text": "청년 인구 증가"
-          },
-          {
-            "label": "D",
-            "text": "정책 예산 분배"
+            "text": "기념품 구매"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "정부는 부처 간 이견을 조정하려 한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "answerExplanation": "제주올레 이용객의 소비는 주로 숙박과 식사에 집중된다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
+      },
+      {
+        "contentId": 3,
+        "question": "제주올레의 지역경제 파급효과 분석에 사용된 방법은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "설문 조사"
+          },
+          {
+            "label": "B",
+            "text": "통계적 예측"
+          },
+          {
+            "label": "C",
+            "text": "산업 연관 분석"
+          },
+          {
+            "label": "D",
+            "text": "현장 관찰"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "산업 연관 분석이 제주올레의 지역경제 파급효과 분석에 사용되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
+      },
+      {
+        "contentId": 4,
+        "question": "제주올레의 소비지출 유발 효과는 연간 얼마로 분석되었는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "5천억 원"
+          },
+          {
+            "label": "B",
+            "text": "6천 630억 원"
+          },
+          {
+            "label": "C",
+            "text": "7천억 원"
+          },
+          {
+            "label": "D",
+            "text": "6천억 원"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "제주올레의 소비지출 유발 효과는 연간 6천 630억 원으로 분석되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
+      },
+      {
+        "contentId": 5,
+        "question": "제주올레의 고용 유발 효과는 몇 명에 이르는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "11만 명"
+          },
+          {
+            "label": "B",
+            "text": "12만 명"
+          },
+          {
+            "label": "C",
+            "text": "10만 명"
+          },
+          {
+            "label": "D",
+            "text": "11만 7천 명"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "제주올레의 고용 유발 효과는 11만 7천 명에 이른다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       }
     ]
   }

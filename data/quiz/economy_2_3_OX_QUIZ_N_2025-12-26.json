@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "한국수산자원공단은 갑질 없는 건강한 사회 분위기 조성을 위해 캠페인을 실시했다.",
+      "question": "쿠팡은 정부의 지시에 따라 조사를 진행했다.",
       "correctAnswer": "O",
-      "answerExplanation": "한국수산자원공단이 캠페인을 실시한 사실이다.",
-      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      "answerExplanation": "쿠팡은 정부의 지시에 따라 조사를 진행했다고 밝혔다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
     },
     {
       "contentId": 2,
-      "question": "한국수산자원공단은 갑질을 조장하는 캠페인을 실시했다.",
+      "question": "쿠팡은 독자적으로 조사를 진행했다고 주장했다.",
       "correctAnswer": "X",
-      "answerExplanation": "캠페인은 갑질 근절을 목표로 한 것이다.",
-      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      "answerExplanation": "쿠팡은 독자적으로 조사를 진행한 것이 아니라고 밝혔다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
     },
     {
       "contentId": 3,
-      "question": "한국수산자원공단은 부산역 일대에서만 캠페인을 실시했다.",
+      "question": "쿠팡은 정부의 감독 없이 조사를 진행했다.",
       "correctAnswer": "X",
-      "answerExplanation": "캠페인은 전국적으로 실시된 것이다.",
-      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      "answerExplanation": "쿠팡은 정부의 감독 없이 조사를 진행하지 않았다고 설명했다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
     },
     {
       "contentId": 4,
-      "question": "수산자원공단 감사법무실 직원들은 갑질 예방을 위해 리플릿을 전달했다.",
+      "question": "쿠팡은 유출자의 자백을 확보하고 기기를 회수했다.",
       "correctAnswer": "O",
-      "answerExplanation": "리플릿 전달은 갑질 예방을 위한 활동이다.",
-      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      "answerExplanation": "쿠팡은 유출자의 자백을 확보하고 기기를 회수했다고 밝혔다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
     },
     {
       "contentId": 5,
-      "question": "한국수산자원공단은 갑질 근절을 위해 신고 채널을 알리지 않았다.",
+      "question": "쿠팡은 정부와 협의 없이 유출자를 추적했다.",
       "correctAnswer": "X",
-      "answerExplanation": "신고 채널을 알려 갑질 근절을 도모한 사실이다.",
-      "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+      "answerExplanation": "쿠팡은 정부와 협의하며 유출자를 추적했다고 설명했다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
     }
   ]
 }

@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "국민권익위원회는 결혼 페널티를 개선하기 위해 나섰다.",
+      "question": "삼천리그룹은 성경식품의 지분 100%를 인수했다.",
       "correctAnswer": "O",
-      "answerExplanation": "국민권익위원회가 결혼 페널티 개선에 나섰다고 밝혔다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      "answerExplanation": "삼천리그룹이 성경식품 지분 100%를 인수했다고 밝혔다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
     },
     {
       "contentId": 2,
-      "question": "혼인신고를 미루는 신혼부부는 줄어들고 있다.",
+      "question": "삼천리그룹은 성경식품의 지분 50%를 인수했다.",
       "correctAnswer": "X",
-      "answerExplanation": "혼인신고를 미루는 신혼부부가 크게 늘어났다고 한다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      "answerExplanation": "삼천리그룹은 성경식품의 지분 100%를 인수했다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
     },
     {
       "contentId": 3,
-      "question": "부부 합산 소득 기준은 개인 기준의 2배로 설정되어 있다.",
+      "question": "삼천리그룹은 성경식품을 인수하여 포트폴리오를 약화시켰다.",
       "correctAnswer": "X",
-      "answerExplanation": "부부 합산 소득 기준은 개인 기준의 2배에 훨씬 못 미친다고 한다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      "answerExplanation": "삼천리그룹은 성경식품 인수로 포트폴리오를 강화했다고 밝혔다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
     },
     {
       "contentId": 4,
-      "question": "국토부는 결혼 페널티 개선을 지지하고 있다.",
-      "correctAnswer": "X",
-      "answerExplanation": "국토부는 집값 안정 기조와 맞지 않다고 반대하고 있다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      "question": "삼천리그룹은 성경식품 인수로 글로벌 경쟁력을 높이겠다고 밝혔다.",
+      "correctAnswer": "O",
+      "answerExplanation": "삼천리그룹은 성경식품 인수로 글로벌 경쟁력 제고를 목표로 한다고 밝혔다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
     },
     {
       "contentId": 5,
-      "question": "권익위는 유자녀 가구에 가산금리를 면제하자고 제안했다.",
+      "question": "삼천리그룹은 성경식품 인수로 외식사업 시너지를 확대할 계획이다.",
       "correctAnswer": "O",
-      "answerExplanation": "권익위가 유자녀 가구 가산금리 면제를 제안했다고 한다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+      "answerExplanation": "삼천리그룹은 성경식품 인수로 외식사업 시너지 확대를 계획하고 있다.",
+      "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
     }
   ]
 }

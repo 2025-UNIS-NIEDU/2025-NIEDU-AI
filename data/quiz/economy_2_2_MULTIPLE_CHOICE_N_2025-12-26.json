@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
+    "sourceUrl": "https://www.news1.kr/industry/distribution/6020559",
     "contents": [
       {
         "contentId": 1,
-        "question": "쿠팡이 성탄절에 발표한 조사의 성격은 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사고와 관련해 발표한 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정부 주도 조사"
+            "text": "경영진의 사과문"
           },
           {
             "label": "B",
-            "text": "자체 조사"
+            "text": "정부 지시 조사 결과"
           },
           {
             "label": "C",
-            "text": "민간 위탁 조사"
+            "text": "피해자 보상 계획"
           },
           {
             "label": "D",
-            "text": "국제 공동 조사"
+            "text": "셀프 조사 결과"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "쿠팡의 성탄절 발표는 정부 조사와 무관한 자체 조사였다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "answerExplanation": "쿠팡은 정부 지시에 의해 진행된 조사 결과를 발표했다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       },
       {
         "contentId": 2,
-        "question": "쿠팡이 유출자의 노트북을 회수한 시점은 언제인가?",
+        "question": "경찰이 쿠팡의 발표에 대해 반박한 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "성탄절 이전"
+            "text": "조사에 참여했다"
           },
           {
             "label": "B",
-            "text": "성탄절 이후"
+            "text": "발표를 지지한다"
           },
           {
             "label": "C",
-            "text": "정부 공문 수령 후"
+            "text": "협의한 적 없다"
           },
           {
             "label": "D",
-            "text": "정부 조사 시작 후"
+            "text": "조사 결과를 인정한다"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "쿠팡은 성탄절 이전에 유출자의 노트북을 회수했다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "correctAnswer": "C",
+        "answerExplanation": "경찰은 쿠팡과 협의한 적 없다고 반박했다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       },
       {
         "contentId": 3,
-        "question": "쿠팡이 공개한 조사 일지에 따르면, 유출 사고에 대한 공식 공문을 받은 날짜는 언제인가?",
+        "question": "쿠팡의 발표로 인해 불거진 논란은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "지난 2일"
+            "text": "경영진의 사임"
           },
           {
             "label": "B",
-            "text": "지난 1일"
+            "text": "신규 서비스 출시"
           },
           {
             "label": "C",
-            "text": "지난 3일"
+            "text": "셀프 조사 논란"
           },
           {
             "label": "D",
-            "text": "지난 4일"
+            "text": "보상금 지급 논란"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "쿠팡은 지난 2일 유출 사고에 대한 공식 공문을 받았다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡의 발표로 인해 셀프 조사 논란이 불거졌다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       },
       {
         "contentId": 4,
-        "question": "쿠팡의 성탄절 발표에 대한 비판의 주요 내용은 무엇인가?",
+        "question": "민관합동조사단이 수사 중인 사안은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정보 유출 은폐"
+            "text": "경영진의 부정행위"
           },
           {
             "label": "B",
-            "text": "조사 일지 조작"
+            "text": "신규 사업 계획"
           },
           {
             "label": "C",
-            "text": "정부의 지시 무시"
+            "text": "고객 서비스 개선"
           },
           {
             "label": "D",
-            "text": "셀프 면죄부"
+            "text": "개인정보 유출 사고"
           }
         ],
         "correctAnswer": "D",
-        "answerExplanation": "쿠팡의 성탄절 발표는 '셀프 면죄부'라는 비판을 받았다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "answerExplanation": "민관합동조사단은 개인정보 유출 사고를 수사 중이다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       },
       {
         "contentId": 5,
-        "question": "쿠팡이 유출 정보의 실제 저장 건수를 발표한 것은 무엇과 관련이 있는가?",
+        "question": "쿠팡이 강조한 점은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "언론의 보도"
+            "text": "정부와의 공조"
           },
           {
             "label": "B",
-            "text": "정부의 요청"
+            "text": "독립적 조사"
           },
           {
             "label": "C",
-            "text": "고객의 요구"
+            "text": "기술 혁신"
           },
           {
             "label": "D",
-            "text": "자체 조사 결과"
+            "text": "고객 만족도"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "쿠팡은 자체 조사 결과를 통해 유출 정보의 건수를 발표했다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡은 정부와의 공조를 강조했다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       }
     ]
   }

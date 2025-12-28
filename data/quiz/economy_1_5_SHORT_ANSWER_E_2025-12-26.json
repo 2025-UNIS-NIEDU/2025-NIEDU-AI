@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "E",
-    "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m",
     "contents": [
       {
         "contentId": 1,
-        "question": "청년들이 지역 사회에 안정적으로 정착할 수 있도록 지원 환경을 조성하는 정부 기관은 어디입니까?",
-        "correctAnswer": "중소벤처기업부",
-        "answerExplanation": "중소벤처기업부는 청년 정착을 위한 지원 환경 조성을 목표로 한다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "리컨벤션이 국내외 관광객 유치를 위해 창출하고 있는 문화적·경제적 가치는 무엇입니까?",
+        "correctAnswer": "관광 콘텐츠",
+        "answerExplanation": "관광 콘텐츠는 지역 경제 활성화와 문화 교류를 촉진한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 2,
-        "question": "청년상인의 경제적 기여를 강조하며 지역 경제 활성화의 핵심 축으로 평가된 역할은 무엇입니까?",
-        "correctAnswer": "민생경제",
-        "answerExplanation": "청년상인은 민생경제의 핵심 축으로 지역 경제 활성화를 주도한다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "외화 획득과 일자리 창출의 공로로 이봉순 대표가 수상한 국가적 인정은 무엇입니까?",
+        "correctAnswer": "대통령 표창",
+        "answerExplanation": "대통령 표창은 국가 경제 기여와 사회적 책임을 인정받은 결과다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 3,
-        "question": "청년 창업과 혁신의 장으로 평가받으며 도전과 성장을 위한 기회를 제공하는 장소는 어디입니까?",
-        "correctAnswer": "경동시장",
-        "answerExplanation": "경동시장은 청년 창업과 혁신의 중심지로 평가받고 있다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "25년간 대규모 국제행사의 유치와 운영을 통해 경제적 파급 효과를 창출한 분야는 무엇입니까?",
+        "correctAnswer": "국제행사",
+        "answerExplanation": "국제행사는 경제 활성화와 글로벌 네트워크 강화를 촉진한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 4,
-        "question": "청년상인의 참여로 지속 가능성이 높아지며 지역 경제의 미래 자산으로 언급된 시장은 무엇입니까?",
-        "correctAnswer": "전통시장",
-        "answerExplanation": "전통시장은 청년상인의 참여로 지속 가능성을 높이는 미래 자산이다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "리컨벤션이 지역 경제 활성화와 문화 교류를 목표로 융합한 두 산업은 무엇입니까?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "관광산업 융합은 지역 경제와 문화적 가치 증진을 지향한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 5,
-        "question": "지역 소비를 주도하며 경제적 활력을 불어넣는 청년상인의 역할이 강조된 경제 분야는 무엇입니까?",
-        "correctAnswer": "민생경제",
-        "answerExplanation": "청년상인은 지역 소비를 주도하며 민생경제의 활력을 증진한다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "이봉순 대표가 지역의 고유한 가치와 인재 역량의 동반 성장을 강조한 산업은 무엇입니까?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "관광산업은 지역 특색과 인적 자원의 조화를 통해 발전한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       }
     ]
   }

@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K",
+    "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456",
     "contents": [
       {
         "contentId": 1,
-        "question": "국민권익위원회가 '결혼 페널티' 개선을 권고한 이유는 무엇인가?",
+        "question": "삼천리그룹이 성경식품을 인수한 주된 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "혼인신고 증가"
+            "text": "기술 개발 강화"
           },
           {
             "label": "B",
-            "text": "집값 안정화"
+            "text": "부동산 투자 확대"
           },
           {
             "label": "C",
-            "text": "세금 감면"
+            "text": "인력 구조 조정"
           },
           {
             "label": "D",
-            "text": "대출 수혜 확대"
+            "text": "외식사업 시너지 확대"
           }
         ],
         "correctAnswer": "D",
-        "answerExplanation": "권익위는 혼인신고 미루는 신혼부부가 대출 수혜를 받도록 합산 소득 기준을 상향 조정하여 결혼 페널티를 개선하려 했다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "answerExplanation": "삼천리그룹은 성경식품 인수를 통해 외식사업 시너지를 확대하고자 하며, 이는 글로벌 경쟁력 제고를 목표로 한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 2,
-        "question": "국토부가 권익위의 제도 개선 권고에 반대한 이유는 무엇인가?",
+        "question": "성경식품 인수가 삼천리그룹의 생활문화 부문에 미칠 영향은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "집값 안정 기조와 불일치"
+            "text": "포트폴리오 강화"
           },
           {
             "label": "B",
-            "text": "예산 부족"
+            "text": "재정 부담 증가"
           },
           {
             "label": "C",
-            "text": "대출 신청 증가"
+            "text": "포트폴리오 약화"
           },
           {
             "label": "D",
-            "text": "법적 문제"
+            "text": "기술 혁신 지연"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "국토부는 권익위의 대출 기준 완화가 집값 안정 기조와 맞지 않는다고 판단하여 반대했다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "answerExplanation": "성경식품 인수는 삼천리그룹의 생활문화 부문 포트폴리오를 강화하며, 그룹의 사업 확장을 도모한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 3,
-        "question": "혼인신고를 미루는 신혼부부가 증가하는 이유는 무엇인가?",
+        "question": "삼천리그룹이 성경식품 인수를 통해 달성하고자 하는 장기적 목표는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "세금 혜택"
+            "text": "인력 감축"
           },
           {
             "label": "B",
-            "text": "대출 수혜 제한"
+            "text": "글로벌 경쟁력 제고"
           },
           {
             "label": "C",
-            "text": "주택 가격 상승"
+            "text": "국내 시장 점유율 감소"
           },
           {
             "label": "D",
-            "text": "소득 증가"
+            "text": "단기 수익 창출"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "혼인신고를 미루는 신혼부부는 부부 합산 소득 기준으로 인해 대출 수혜를 받지 못하는 경우가 많아 증가하고 있다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "answerExplanation": "삼천리그룹은 성경식품 인수를 통해 글로벌 경쟁력을 제고하고, 생활문화 사업의 한 축으로 자리매김하려 한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 4,
-        "question": "권익위가 제안한 유자녀 가구 가산금리 면제의 목적은 무엇인가?",
+        "question": "삼천리그룹이 성경식품 인수를 발표한 시점의 상징적 의미는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "출산율 증가 유도"
+            "text": "신제품 출시"
           },
           {
             "label": "B",
-            "text": "소득 증대"
+            "text": "창립 70주년 기념"
           },
           {
             "label": "C",
-            "text": "대출 부담 완화"
+            "text": "주가 급등"
           },
           {
             "label": "D",
-            "text": "주택 공급 확대"
+            "text": "경영진 교체"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "권익위는 유자녀 가구의 대출 부담을 완화하기 위해 가산금리 면제를 제안했다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "B",
+        "answerExplanation": "삼천리그룹은 창립 70주년을 맞아 성경식품 인수를 발표하며, 이를 통해 그룹의 지속적 성장을 도모하려 한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 5,
-        "question": "권익위 제안과 국토부의 집값 우려가 충돌한 핵심 기준은 무엇이라 볼 수 있는가?",
+        "question": "그룹 차원 포트폴리오 재편 관점에서, 이번 인수의 가장 전략적 핵심은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "자산요건 조정"
+            "text": "생활문화 축 구축"
           },
           {
             "label": "B",
-            "text": "자녀가산 면제"
+            "text": "외식 채널 통합"
           },
           {
             "label": "C",
-            "text": "합산소득 상향"
+            "text": "단기 실적 반등"
           },
           {
             "label": "D",
-            "text": "금리상한 도입"
+            "text": "대외 경쟁력 증대"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "권익위는 합산소득 상향을 권고했고, 이는 수혜 확대로 주택 수요 압력을 키운다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "A",
+        "answerExplanation": "그룹은 생활문화 포트폴리오 강화를 밝혔고, 이를 사업축 확립으로 이어가려는 의지다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       }
     ]
   }

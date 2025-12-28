@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://www.mk.co.kr/article/11588772",
+    "sourceUrl": "https://www.segye.com/newsView/20251226508540",
     "contents": [
       {
         "contentId": 1,
-        "question": "정부가 도입하려는 제도는 무엇을 관리하기 위한 것인가?",
+        "question": "스텔라 아르투아의 캠페인 영상에 출연한 셰프는 누구인가?",
         "options": [
           {
             "label": "A",
-            "text": "고령층의 교육"
+            "text": "이연복 셰프"
           },
           {
             "label": "B",
-            "text": "고령층의 재산"
+            "text": "백종원 셰프"
           },
           {
             "label": "C",
-            "text": "고령층의 주거"
+            "text": "최현석 셰프"
           },
           {
             "label": "D",
-            "text": "고령층의 건강"
+            "text": "권성준 셰프"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "정부는 고령층의 재산을 관리하기 위한 공공신탁 제도를 도입하려 한다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "correctAnswer": "D",
+        "answerExplanation": "권성준 셰프가 스텔라 아르투아의 캠페인 영상에 출연했다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 2,
-        "question": "공공신탁 제도의 수탁기관으로 예상되는 곳은 어디인가?",
+        "question": "‘흑백요리사’ 시즌1의 우승자는 누구인가?",
         "options": [
           {
             "label": "A",
-            "text": "국민은행"
+            "text": "최현석"
           },
           {
             "label": "B",
-            "text": "국민건강보험"
+            "text": "이연복"
           },
           {
             "label": "C",
-            "text": "국민교육원"
+            "text": "김풍"
           },
           {
             "label": "D",
-            "text": "국민연금"
+            "text": "권성준"
           }
         ],
         "correctAnswer": "D",
-        "answerExplanation": "공공신탁 제도의 수탁기관으로 국민연금이 맡을 것으로 예상된다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "answerExplanation": "‘흑백요리사’ 시즌1의 우승자는 권성준 셰프다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 3,
-        "question": "정부가 공공신탁 제도를 추진하는 이유는 무엇인가?",
+        "question": "스텔라 아르투아의 브랜드 앰버서더로 활동하는 셰프는 누구인가?",
         "options": [
           {
             "label": "A",
-            "text": "고령층의 건강 증진"
+            "text": "권성준"
           },
           {
             "label": "B",
-            "text": "고령층의 교육 지원"
+            "text": "최현석"
           },
           {
             "label": "C",
-            "text": "고령층의 주거 안정"
+            "text": "이연복"
           },
           {
             "label": "D",
-            "text": "고액 자산가 중심 설계"
+            "text": "백종원"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "공공신탁 제도는 고액 자산가 중심으로 설계되어 추진된다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "correctAnswer": "A",
+        "answerExplanation": "권성준 셰프는 스텔라 아르투아의 브랜드 앰버서더다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 4,
-        "question": "공공신탁 제도 도입의 공식 과제로 추진하는 정부는 누구의 정부인가?",
+        "question": "스텔라 아르투아 캠페인 영상의 제목은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "윤석열 정부"
+            "text": "셰프의 선택 편"
           },
           {
             "label": "B",
-            "text": "박근혜 정부"
+            "text": "맥주의 순간 편"
           },
           {
             "label": "C",
-            "text": "이재명 정부"
+            "text": "요리사의 비밀 편"
           },
           {
             "label": "D",
-            "text": "문재인 정부"
+            "text": "맛의 여정 편"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "공공신탁 제도는 이재명 정부의 공식 과제로 추진되고 있다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "correctAnswer": "A",
+        "answerExplanation": "캠페인 영상의 제목은 ‘셰프의 선택 편’이다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 5,
-        "question": "정부가 관리하려는 '치매 머니'의 규모는 어느 정도인가?",
+        "question": "권성준 셰프가 출연한 캠페인 영상은 어디에서 공개되었는가?",
         "options": [
           {
             "label": "A",
-            "text": "200조원"
+            "text": "라디오"
           },
           {
             "label": "B",
-            "text": "172조원"
+            "text": "넷플릭스"
           },
           {
             "label": "C",
-            "text": "100조원"
+            "text": "TV 광고"
           },
           {
             "label": "D",
-            "text": "150조원"
+            "text": "신문"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "정부가 관리하려는 '치매 머니'의 규모는 172조원에 이른다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "answerExplanation": "캠페인 영상은 넷플릭스에서 공개되었다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       }
     ]
   }

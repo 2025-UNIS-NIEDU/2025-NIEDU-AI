@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "I",
-    "sourceUrl": "https://www.news1.kr/realestate/general/6020967",
+    "sourceUrl": "https://www.mk.co.kr/article/11588803",
     "contents": [
       {
         "contentId": 1,
-        "question": "청년 주거 불안 해소를 목표로 한 계획은 무엇인가?",
-        "correctAnswer": "제2차 청년정책 기본계획",
-        "answerExplanation": "정부는 '제2차 청년정책 기본계획'을 통해 청년 주거 불안 해소를 목표로 삼았다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "question": "상위 셰프들이 주로 운영하는 지역은 어디인가?",
+        "correctAnswer": "서울",
+        "answerExplanation": "상위 38인 셰프가 운영하는 35곳 중 33곳이 서울에 위치한다고 보도되었다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 2,
-        "question": "청년 주거 환경 개선을 핵심 과제로 삼은 계획은 무엇인가?",
-        "correctAnswer": "2차 기본계획",
-        "answerExplanation": "2차 기본계획은 주거 환경 개선 등 질적 지원을 핵심 과제로 삼았다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "question": "올해 셰프들이 운영하는 레스토랑이 가장 많이 위치한 상권은 어디인가?",
+        "correctAnswer": "도산대로",
+        "answerExplanation": "올해 셰프들이 운영하는 레스토랑 중 7곳이 도산대로에 위치한다고 보도되었다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 3,
-        "question": "청년들의 내집 마련을 지원하기 위한 대출 상품은 무엇인가?",
-        "correctAnswer": "청년주택드림대출",
-        "answerExplanation": "청년주택드림대출은 청년들의 내집 마련과 주거 안정을 지원하기 위한 대출 상품이다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "question": "지난해 두 번째로 많은 셰프 레스토랑이 위치한 지역은 어디인가?",
+        "correctAnswer": "용산구",
+        "answerExplanation": "지난해 두 번째로 많은 셰프 레스토랑은 용산구 숙대입구 인근에 있었다고 보도되었다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 4,
-        "question": "청년 전용으로 제공되는 저리 정책 금융은 무엇인가?",
-        "correctAnswer": "버팀목 대출",
-        "answerExplanation": "청년 전용 버팀목 대출은 저리 정책 금융으로 제공된다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "question": "올해 셰프 레스토랑이 세 번째로 많이 위치한 지역은 어디인가?",
+        "correctAnswer": "해방촌",
+        "answerExplanation": "올해 셰프 레스토랑이 세 번째로 많이 위치한 지역은 해방촌이라고 보도되었다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       },
       {
         "contentId": 5,
-        "question": "정부가 청년 주거 안정을 위해 지속적으로 공급하는 것은 무엇인가?",
-        "correctAnswer": "정책 금융",
-        "answerExplanation": "정부는 저리 정책 금융을 지속적으로 공급하여 청년 주거 안정을 지원할 계획이다.",
-        "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+        "question": "흑백요리사2에 출연한 셰프들이 운영하는 레스토랑 수는 몇 곳인가?",
+        "correctAnswer": "레스토랑",
+        "answerExplanation": "흑백요리사2에 출연한 셰프들이 운영하는 레스토랑은 총 35곳이다.",
+        "sourceUrl": "https://www.mk.co.kr/article/11588803"
       }
     ]
   }

@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "E",
-    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024",
     "contents": [
       {
         "contentId": 1,
-        "question": "12·29 참사 1주기를 맞아 지역 사회의 책임 의식을 환기하고자 광주시의원들이 발표한 공식 입장은 무엇입니까?",
-        "correctAnswer": "성명",
-        "answerExplanation": "성명 발표는 지역 사회의 책임 의식 강화와 재발 방지를 촉구한다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "question": "유출자와의 접촉 및 기기 회수 과정에서 경찰이 명확히 부인한 기업 간의 상호작용은 무엇입니까?",
+        "correctAnswer": "협의",
+        "answerExplanation": "협의 부재는 사건 해결 과정에서의 소통 부족과 절차적 투명성 결여를 시사한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 2,
-        "question": "국가의 책임 아래 유가족의 안정적 삶을 보장하기 위해 의원들이 요구한 지속 가능한 지원 체계는 무엇입니까?",
-        "correctAnswer": "장기적인 지원 체계",
-        "answerExplanation": "장기적 지원 체계는 유가족의 안정과 사회적 연대 강화를 목표로 한다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "question": "개인정보 유출 사건의 진상 규명을 위해 경찰이 지속적으로 추진하고 있는 절차적 행위는 무엇입니까?",
+        "correctAnswer": "조사",
+        "answerExplanation": "조사는 사건의 진상 규명과 책임 소재 파악을 위한 필수적 절차다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 3,
-        "question": "사고 원인 규명과 책임 소재 명확화를 위해 의원들이 강조한 조사 방식으로, 외부 간섭을 배제하는 접근법은 무엇입니까?",
-        "correctAnswer": "독립적인 사고 조사",
-        "answerExplanation": "독립적 조사는 객관적 진상 규명과 공정한 책임 추궁을 지향한다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "question": "개인정보 보호의 실패 사례로 주목받으며 내부 보안 관리의 허점을 드러낸 기업은 어디입니까?",
+        "correctAnswer": "쿠팡",
+        "answerExplanation": "쿠팡은 개인정보 유출 사건으로 내부 보안 체계의 취약성을 드러냈다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 4,
-        "question": "12·29 참사로 인해 발생한 인명 피해의 규모를 나타내며, 사회적 경각심을 불러일으키는 희생자 수는 몇 명입니까?",
-        "correctAnswer": "179명",
-        "answerExplanation": "179명의 희생은 참사의 심각성을 부각하며 안전 대책의 필요성을 강조한다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "question": "정부 지침에 따라 기업이 개인정보 유출 사건 해결을 위해 강조한 협력 방식은 무엇입니까?",
+        "correctAnswer": "공조 조사",
+        "answerExplanation": "공조 조사는 정부와 기업 간의 협력적 대응을 통해 사건 해결을 도모한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 5,
-        "question": "조사 과정의 투명성과 신뢰성을 저해하는 요소로 지적되며, 정보 접근성을 제한하는 문제는 무엇입니까?",
-        "correctAnswer": "자료 비공개",
-        "answerExplanation": "자료 비공개는 조사 투명성을 저해해 신뢰성 확보를 어렵게 한다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "question": "개인정보 유출 사건에서 법적 책임을 규명하기 위해 경찰이 집중적으로 검토하고 있는 핵심 요소는 무엇입니까?",
+        "correctAnswer": "사실관계",
+        "answerExplanation": "사실관계 확인은 법적 책임 규명과 사건의 진실성을 확보하는 데 필수적이다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       }
     ]
   }

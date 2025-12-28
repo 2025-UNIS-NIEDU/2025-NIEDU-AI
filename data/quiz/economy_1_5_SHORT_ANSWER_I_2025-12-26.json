@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "I",
-    "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m",
     "contents": [
       {
         "contentId": 1,
-        "question": "한성숙 장관이 청년상인을 평가한 역할은 무엇인가?",
-        "correctAnswer": "민생경제",
-        "answerExplanation": "한성숙 장관은 청년상인이 민생경제의 중요한 축이라고 언급했다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "이봉순 대표가 25년간 기여한 분야는 무엇인가?",
+        "correctAnswer": "국제행사",
+        "answerExplanation": "이봉순 대표는 25년 동안 대규모 국제행사 유치와 운영에 기여했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 2,
-        "question": "청년에게 도전과 성장을 위한 공간으로 평가된 곳은 어디인가?",
-        "correctAnswer": "경동시장",
-        "answerExplanation": "경동시장은 청년에게 도전하고 성장할 수 있는 창업공간으로 평가되었다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "리컨벤션이 융합한 두 가지 산업은 무엇인가?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "리컨벤션은 지역 관광자원과 마이스 산업을 융합한 관광 콘텐츠를 기획했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 3,
-        "question": "한성숙 장관이 청년상인과 관련하여 언급한 시장의 미래자산은 무엇인가?",
-        "correctAnswer": "전통시장",
-        "answerExplanation": "전통시장은 청년상인에 의해 지속 가능성을 높이는 미래자산으로 평가되었다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "이봉순 대표가 받은 상은 무엇인가?",
+        "correctAnswer": "대통령 표창",
+        "answerExplanation": "이봉순 대표는 외화 획득과 고용 창출에 기여한 공로로 대통령 표창을 받았다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 4,
-        "question": "청년이 지역에 안정적으로 정착할 수 있도록 환경을 조성하는 기관은 어디인가?",
-        "correctAnswer": "중소벤처기업부",
-        "answerExplanation": "중소벤처기업부는 청년이 지역에 안정적으로 정착할 수 있는 환경을 조성할 계획이다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "리컨벤션이 기획하고 운영하는 것은 무엇인가?",
+        "correctAnswer": "관광 콘텐츠",
+        "answerExplanation": "리컨벤션은 관광 콘텐츠를 기획하고 운영하며 국내외 관광객 유치에 힘써왔다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 5,
-        "question": "청년상인이 지역 소비를 이끌며 중요한 역할을 하는 분야는 무엇인가?",
-        "correctAnswer": "민생경제",
-        "answerExplanation": "청년상인은 지역 소비를 이끌며 민생경제의 중요한 축으로 언급되었다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "question": "이봉순 대표가 강조한 산업의 특징은 무엇인가?",
+        "correctAnswer": "관광산업",
+        "answerExplanation": "이봉순 대표는 관광산업이 지역의 고유한 가치와 인재의 역량이 함께 성장하는 산업이라고 강조했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       }
     ]
   }

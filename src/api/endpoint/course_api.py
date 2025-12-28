@@ -32,7 +32,8 @@ def get_today_data():
     base_dir = Path(__file__).resolve().parents[3]
     quiz_package_dir = base_dir / "data" / "quiz" / "package"
 
-    package_files = sorted(list(quiz_package_dir.glob("*_package.json")))
+    today = datetime.now().strftime("%Y-%m-%d")
+    package_files = sorted(list(quiz_package_dir.glob(f"*_{today}_package.json")))
 
     # 1. 파일이 없을 경우: 백엔드 형식에 맞게 {"courses": []} 반환
     if not package_files:

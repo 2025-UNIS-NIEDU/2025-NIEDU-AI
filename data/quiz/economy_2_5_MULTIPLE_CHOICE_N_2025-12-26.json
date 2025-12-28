@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m",
+    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024",
     "contents": [
       {
         "contentId": 1,
-        "question": "광주시의원들이 12·29 참사 1주기를 앞두고 발표한 성명의 주요 내용은 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사건과 관련해 주장한 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "독립적 사고조사 촉구"
+            "text": "자체적으로 조사 중"
           },
           {
             "label": "B",
-            "text": "환경 보호 강화"
+            "text": "정부 지시로 조사 진행"
           },
           {
             "label": "C",
-            "text": "국제 협력 강화"
+            "text": "경찰과 협의 후 조사"
           },
           {
             "label": "D",
-            "text": "항공사 지원 촉구"
+            "text": "외부 전문가와 협력"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "광주시의원들은 독립적 사고조사를 통한 철저한 진상규명을 촉구했다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡은 정부 지시에 따라 조사를 진행했다고 주장했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 2,
-        "question": "광주시의원들이 비판한 항공철도사고조사위원회 관련 논란은 무엇인가?",
+        "question": "경찰이 쿠팡의 개인정보 유출 조사에 대해 밝힌 입장은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "자료 공개"
+            "text": "조사 중단 요청"
           },
           {
             "label": "B",
-            "text": "예산 부족"
+            "text": "협의 후 조사 승인"
           },
           {
             "label": "C",
-            "text": "유가족 참여 배제"
+            "text": "조사 결과 발표 예정"
           },
           {
             "label": "D",
-            "text": "조사 신속성"
+            "text": "협의 없이 진행"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "유가족 참여 배제 논란 등으로 조사 신뢰성이 훼손됐다고 비판했다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "correctAnswer": "D",
+        "answerExplanation": "경찰은 쿠팡과 협의 없이 조사가 진행되었다고 밝혔다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 3,
-        "question": "광주시의원들이 유가족을 위해 국가에 요구한 것은 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사건에 대해 다시 발표한 입장문 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "단기적 지원 체계"
+            "text": "외부 감사 진행"
           },
           {
             "label": "B",
-            "text": "장기적 지원 체계"
+            "text": "경찰과 협력 조사"
           },
           {
             "label": "C",
-            "text": "일회성 보상"
+            "text": "정부 지시 공조 조사"
           },
           {
             "label": "D",
-            "text": "사과문 발표"
+            "text": "자체 조사 완료"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "유가족에 대한 장기적·지속적 지원 체계를 마련해야 한다고 요구했다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡은 정부의 지시에 따라 공조 조사를 진행했다고 발표했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 4,
-        "question": "광주시의원들이 참사 1주기를 맞아 강조한 다짐은 무엇인가?",
+        "question": "경찰이 쿠팡의 조사 과정에 대해 취하고 있는 조치는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "사건 은폐"
+            "text": "조사 중단 명령"
           },
           {
             "label": "B",
-            "text": "끝까지 함께할 것"
+            "text": "조사 결과 승인"
           },
           {
             "label": "C",
-            "text": "책임 회피"
+            "text": "사실관계 면밀 확인"
           },
           {
             "label": "D",
-            "text": "조사 중단"
+            "text": "협의 요청"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "참사가 미해결로 남지 않도록 끝까지 함께하겠다고 밝혔다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "correctAnswer": "C",
+        "answerExplanation": "경찰은 쿠팡의 조사 과정에 대해 사실관계를 면밀히 확인하고 있다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       },
       {
         "contentId": 5,
-        "question": "광주시의원들이 성명에서 언급한 참사로 인한 피해는 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사건과 관련해 논란이 된 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "179명 희생"
+            "text": "조사 결과 조작"
           },
           {
             "label": "B",
-            "text": "환경 오염"
+            "text": "외부 전문가 배제"
           },
           {
             "label": "C",
-            "text": "문화재 손상"
+            "text": "정부 지시 무시"
           },
           {
             "label": "D",
-            "text": "경제적 손실"
+            "text": "경찰과의 협의 부족"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "참사로 179명이 희생된 지 1년이 지났다고 언급했다.",
-        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226096300054?input=1195m"
+        "correctAnswer": "D",
+        "answerExplanation": "쿠팡은 경찰과의 협의 없이 조사를 진행해 논란이 되었다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003456024"
       }
     ]
   }

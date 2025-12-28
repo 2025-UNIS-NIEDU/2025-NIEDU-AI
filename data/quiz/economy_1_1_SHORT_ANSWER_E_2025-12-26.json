@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "E",
-    "sourceUrl": "https://biz.heraldcorp.com/article/10644379",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A",
     "contents": [
       {
         "contentId": 1,
-        "question": "부처 간 정책 조율과 청년 정책의 사각지대 해소를 목적으로 신설된 협의체는 무엇입니까?",
-        "correctAnswer": "청년정책 관계장관회의",
-        "answerExplanation": "청년정책 관계장관회의는 정책 조율과 사각지대 해소를 목적으로 한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레로 인해 지역 경제에서 발생한 생산 유발 효과의 총액은 얼마입니까?",
+        "correctAnswer": "1조 2,240억 원",
+        "answerExplanation": "제주올레는 1조 2,240억 원의 생산 유발 효과를 통해 지역 경제 성장을 촉진한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 2,
-        "question": "향후 5년간 청년층의 사회적 기회 확대와 경제적 자립을 위한 정책적 방향성을 제시하는 계획은 무엇입니까?",
-        "correctAnswer": "제2차 청년정책 기본계획",
-        "answerExplanation": "제2차 청년정책 기본계획은 청년층의 사회적 기회 확대를 지향한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레가 지역 경제에 미치는 소비 지출 유발 효과의 규모는 얼마로 평가됩니까?",
+        "correctAnswer": "6,630억 원",
+        "answerExplanation": "제주올레는 지역 경제 활성화를 통해 6,630억 원의 소비 지출을 유도한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 3,
-        "question": "청년층의 사회적 안전망 강화와 평등한 기회 제공을 위한 정책적 필요성을 강조한 김민석 총리의 발언은 무엇을 지향합니까?",
-        "correctAnswer": "보편적 청년정책",
-        "answerExplanation": "보편적 청년정책은 청년층의 사회적 안전망 강화를 지향한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레의 경제적 파급력을 분석하여 지역 경제에 대한 기여도를 평가한 연구 기관은 어디입니까?",
+        "correctAnswer": "제주연구원",
+        "answerExplanation": "제주연구원은 제주올레의 경제적 파급 효과를 분석하여 지역 경제 기여도를 평가했다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 4,
-        "question": "청년층의 정책 결정 과정 참여 확대를 통해 민주적 정당성을 강화하려는 의지를 표명한 인물은 누구입니까?",
-        "correctAnswer": "김민석",
-        "answerExplanation": "김민석 총리는 청년층의 정책 참여 확대를 통해 민주적 정당성을 강화하려 한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레 이용객의 소비 지출이 집중되는 주요 경제 분야는 무엇입니까?",
+        "correctAnswer": "숙박, 식사, 지역 상권",
+        "answerExplanation": "소비 지출은 주로 숙박, 식사, 지역 상권에 집중되어 지역 경제에 활력을 불어넣는다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 5,
-        "question": "청년층의 요구를 정책에 반영하여 사회적 신뢰를 구축하려는 책임을 부여받은 정부 내 주요 인사는 누구입니까?",
-        "correctAnswer": "각 부처 장관",
-        "answerExplanation": "각 부처 장관은 청년층 요구 반영을 통해 사회적 신뢰 구축을 지향한다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레가 지역 경제에 미친 고용 창출 효과로 인해 발생한 일자리 수는 몇 명입니까?",
+        "correctAnswer": "11만 7,000명",
+        "answerExplanation": "제주올레는 11만 7,000명의 고용 창출을 통해 지역 경제 활성화에 기여한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       }
     ]
   }

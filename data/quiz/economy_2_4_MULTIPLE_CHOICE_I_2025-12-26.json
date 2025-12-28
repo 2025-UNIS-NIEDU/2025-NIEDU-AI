@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998",
+    "sourceUrl": "https://www.khan.co.kr/article/202512261702001",
     "contents": [
       {
         "contentId": 1,
-        "question": "쿠팡의 개인정보 유출 사건 발표 방식에 대한 정혜경 의원의 비판은 어떤 사회적 함의를 내포하고 있는가?",
+        "question": "경찰이 쿠팡의 발표를 반박한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "기업의 책임 회피"
+            "text": "조사 결과 왜곡"
           },
           {
             "label": "B",
-            "text": "소비자 신뢰 증대"
+            "text": "경찰 권한 침해"
           },
           {
             "label": "C",
-            "text": "기업의 투명성 강화"
+            "text": "공식 협의 부인"
           },
           {
             "label": "D",
-            "text": "정부의 규제 완화"
+            "text": "정부의 요청 무시"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "정혜경 의원의 비판은 쿠팡이 상황을 축소·은폐하려는 태도를 보였다는 점에서 기업의 책임 회피를 지적하고 있다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "C",
+        "answerExplanation": "경찰은 쿠팡의 발표에 대해 공식적으로 협의한 적이 없다고 반박하며 사실 관계를 바로잡으려 했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
         "contentId": 2,
-        "question": "쿠팡이 자체 조사 결과를 기습 발표한 행위는 어떤 정책적 의도를 드러내는가?",
+        "question": "쿠팡이 정부의 지시에 따라 하드 드라이브를 제출한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "사건의 조기 해결"
+            "text": "정부 조사 협조"
           },
           {
             "label": "B",
-            "text": "여론의 무마 시도"
+            "text": "법적 책임 회피"
           },
           {
             "label": "C",
-            "text": "정부와의 협력 강화"
+            "text": "시장 신뢰 회복"
           },
           {
             "label": "D",
-            "text": "소비자 보호 강화"
+            "text": "기술적 문제 해결"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "쿠팡의 기습 발표는 여론을 무마하고 사건의 주도권을 잡으려는 시도로 해석될 수 있다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡은 정부의 지시에 따라 하드 드라이브를 제출하며 정부 조사에 협조하는 모습을 보였다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
         "contentId": 3,
-        "question": "정혜경 의원이 쿠팡의 발표를 '국민과 헌법 위에 군림하는 오만한 태도'라고 표현한 이유는 무엇인가?",
+        "question": "경찰·부처의 반박과 쿠팡 발표 불일치가 드러내는 갈등의 핵심 요인은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정부의 지시 이행"
+            "text": "명령 주체 혼동"
           },
           {
             "label": "B",
-            "text": "소비자 보호 노력"
+            "text": "자료 보관 지연"
           },
           {
             "label": "C",
-            "text": "공조 조사 참여"
+            "text": "보상 절차 누락"
           },
           {
             "label": "D",
-            "text": "일방적 발표"
+            "text": "증거 인멸 우려"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "정혜경 의원은 쿠팡의 일방적 발표가 국민과 정부를 무시하는 태도로 비춰질 수 있음을 지적하고 있다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "A",
+        "answerExplanation": "요약은 정부 지시 협의가 부인됐음을 전하며, 이는 책임 주체 혼선을 드러낸다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
         "contentId": 4,
-        "question": "절차와 공조 관점에서 이번 논란의 본질을 가장 정확히 짚는 개념은 무엇인가?",
+        "question": "저장장치 제출 직후 정부가 착수했다고 이해한 대목은 쿠팡의 어떤 판단 성향을 시사하는가?",
         "options": [
           {
             "label": "A",
-            "text": "국회 보고 누락"
+            "text": "피해 통지 강화"
           },
           {
             "label": "B",
-            "text": "정부 승인 공표"
+            "text": "법적 분쟁 대비"
           },
           {
             "label": "C",
-            "text": "내부 단독 발표"
+            "text": "내부 조사 우선"
           },
           {
             "label": "D",
-            "text": "사후 정리 보고"
+            "text": "절차 신뢰 과다"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "공동조사 중 일방 발표가 지적됐고 공조 해명과 대비돼, 쟁점은 단독 발표의 적정성이다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "D",
+        "answerExplanation": "제출 직후 정부 착수로 이해했다는 대목은 절차 전제에 대한 과신을 드러낸다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
         "contentId": 5,
-        "question": "쿠팡 해명이 겨냥한 정당성의 차원을 어떻게 규정할 수 있는가?",
+        "question": "부처가 ‘일방적 주장’이라 규정한 취지는 공적 책임 배분에서 무엇을 강조하려는가?",
         "options": [
           {
             "label": "A",
-            "text": "대중감정 수습"
+            "text": "사후 통제 강화"
           },
           {
             "label": "B",
-            "text": "도덕성 회복"
+            "text": "조사 권한 귀속"
           },
           {
             "label": "C",
-            "text": "절차적 타당"
+            "text": "피해 구제 우선"
           },
           {
             "label": "D",
-            "text": "법원판결 존중"
+            "text": "지휘 체계 확인"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "정부 지시 공조였다는 해명은 절차 정당성을 겨냥하며, 도덕적 책임과는 결이 다르다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "B",
+        "answerExplanation": "부처의 ‘일방적’ 평가는 수사 권한 귀속과 역할 경계의 명확화를 지향한다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       }
     ]
   }

@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630",
+    "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941",
     "contents": [
       {
         "contentId": 1,
-        "question": "한국수산자원공단이 부산역 일대에서 실시한 캠페인의 주제는 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사태와 관련해 밝힌 조사 방식은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "교통 안전 캠페인"
+            "text": "내부 감사"
           },
           {
             "label": "B",
-            "text": "환경 보호 캠페인"
+            "text": "독자적 조사"
           },
           {
             "label": "C",
-            "text": "문화 예술 캠페인"
+            "text": "정부 지시 공조"
           },
           {
             "label": "D",
-            "text": "갑질 근절 캠페인"
+            "text": "외부 기관 위탁"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "한국수산자원공단은 갑질 근절 캠페인을 부산역 일대에서 실시했다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡은 정부의 지시에 따라 공조하여 조사를 진행했다고 밝혔다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 2,
-        "question": "한국수산자원공단 감사법무실이 국민에게 전달한 것은 무엇인가?",
+        "question": "쿠팡이 개인정보 유출과 관련해 경찰에 제출한 증거물은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "환경 보호 리플릿"
+            "text": "USB"
           },
           {
             "label": "B",
-            "text": "문화 예술 리플릿"
+            "text": "하드드라이브"
           },
           {
             "label": "C",
-            "text": "교통 안전 리플릿"
+            "text": "서버"
           },
           {
             "label": "D",
-            "text": "갑질근절 리플릿"
+            "text": "휴대전화"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "감사법무실은 국민에게 갑질근절 리플릿을 전달했다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡은 하드드라이브와 노트북 등 증거물을 경찰에 제출했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 3,
-        "question": "한국수산자원공단이 사회문화 조성을 위해 알린 것은 무엇인가?",
+        "question": "쿠팡이 개인정보 유출자와 관련해 확보한 것은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "갑질 신고 채널"
+            "text": "유출자의 자백"
           },
           {
             "label": "B",
-            "text": "환경 보호 채널"
+            "text": "유출자의 동기"
           },
           {
             "label": "C",
-            "text": "교통 안전 채널"
+            "text": "유출자의 위치"
           },
           {
             "label": "D",
-            "text": "문화 예술 채널"
+            "text": "유출자의 신원"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "공단은 갑질 신고 채널을 알려 사회문화 조성에 앞장섰다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "answerExplanation": "쿠팡은 유출자의 완전한 자백을 확보했다고 밝혔다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 4,
-        "question": "한국수산자원공단의 캠페인이 진행된 장소는 어디인가?",
+        "question": "쿠팡이 개인정보 유출 사태 해결을 위해 정부와 어떤 방식으로 협력했는가?",
         "options": [
           {
             "label": "A",
-            "text": "부산역 일대"
+            "text": "분기별 점검"
           },
           {
             "label": "B",
-            "text": "광주역 일대"
+            "text": "월간 보고"
           },
           {
             "label": "C",
-            "text": "대전역 일대"
+            "text": "매일 협력"
           },
           {
             "label": "D",
-            "text": "서울역 일대"
+            "text": "주간 회의"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "캠페인은 부산역 일대에서 진행되었다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡은 몇 주간에 걸쳐 거의 매일 정부와 협력했다고 밝혔다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 5,
-        "question": "한국수산자원공단의 캠페인 주체는 누구인가?",
+        "question": "쿠팡이 개인정보 유출 사태와 관련해 정부와 함께 한 조치는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "국토교통부"
+            "text": "유출자 교육"
           },
           {
             "label": "B",
-            "text": "환경부"
+            "text": "유출자 추적"
           },
           {
             "label": "C",
-            "text": "문화체육관광부"
+            "text": "유출자 처벌"
           },
           {
             "label": "D",
-            "text": "한국수산자원공단"
+            "text": "유출자 보호"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "캠페인의 주체는 한국수산자원공단이다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡은 정부와 협의하며 유출자를 추적했다고 설명했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       }
     ]
   }

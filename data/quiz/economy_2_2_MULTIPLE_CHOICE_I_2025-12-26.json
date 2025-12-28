@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
+    "sourceUrl": "https://www.news1.kr/industry/distribution/6020559",
     "contents": [
       {
         "contentId": 1,
-        "question": "쿠팡의 성탄절 기습 발표가 '셀프 면죄부'라는 비판을 받는 이유는 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사고와 관련해 선제적으로 조사 경과를 발표한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정부와 협력 부족"
+            "text": "여론 지지 확보"
           },
           {
             "label": "B",
-            "text": "유출 정보 과장"
+            "text": "수사 투명성 확보"
           },
           {
             "label": "C",
-            "text": "노트북 회수 실패"
+            "text": "정부 압력 회피"
           },
           {
             "label": "D",
-            "text": "자체 조사 발표"
+            "text": "경영진 책임 회피"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "쿠팡의 성탄절 발표는 정부 조사와 무관한 자체 조사 결과로, 책임 회피 의도가 있다는 비판을 받는다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡의 선제적 발표는 수사 투명성을 강조하여 여론의 비판을 완화하려는 의도가 있다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       },
       {
         "contentId": 2,
-        "question": "쿠팡의 유출 정보 발표가 '기습 발표'로 평가되는 이유는 무엇인가?",
+        "question": "경찰이 쿠팡의 발표에 대해 '협의한 적 없다'고 반박한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정보 과장 발표"
+            "text": "경찰의 권위 강화"
           },
           {
             "label": "B",
-            "text": "예고 없는 발표"
+            "text": "정부의 입장 유지"
           },
           {
             "label": "C",
-            "text": "정부 승인 미비"
+            "text": "조사 결과 왜곡 방지"
           },
           {
             "label": "D",
-            "text": "노트북 미회수"
-          }
-        ],
-        "correctAnswer": "B",
-        "answerExplanation": "쿠팡의 발표는 성탄절에 예고 없이 이루어져 '기습 발표'로 평가된다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
-      },
-      {
-        "contentId": 3,
-        "question": "쿠팡이 유출자의 노트북을 회수한 사실을 강조한 이유는 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "정보 유출 방지"
-          },
-          {
-            "label": "B",
-            "text": "조사 일지 보완"
-          },
-          {
-            "label": "C",
-            "text": "책임 회피 시도"
-          },
-          {
-            "label": "D",
-            "text": "정부 지시 이행"
-          }
-        ],
-        "correctAnswer": "A",
-        "answerExplanation": "쿠팡은 노트북 회수를 통해 추가 정보 유출을 방지하고자 하는 의도를 강조한다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
-      },
-      {
-        "contentId": 4,
-        "question": "쿠팡의 성탄절 발표가 정부 지시와 무관하다는 점이 시사하는 바는 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "책임 회피 의도"
-          },
-          {
-            "label": "B",
-            "text": "정부와의 갈등"
-          },
-          {
-            "label": "C",
-            "text": "자체 조사 강조"
-          },
-          {
-            "label": "D",
-            "text": "정보 과장 우려"
+            "text": "쿠팡과의 협력 강조"
           }
         ],
         "correctAnswer": "C",
-        "answerExplanation": "쿠팡의 발표가 정부 지시와 무관함을 강조함으로써 자체 조사의 중요성을 부각하려는 의도를 시사한다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "answerExplanation": "경찰의 반박은 쿠팡의 발표가 조사 결과를 왜곡할 수 있다는 우려에서 비롯되었다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       },
       {
-        "contentId": 5,
-        "question": "정부 협력 주장과 성탄절 발표의 자율성 사이 긴장을 평가할 때 핵심 단서는 무엇인가?",
+        "contentId": 3,
+        "question": "쿠팡의 발표가 '셀프 조사 논란'에 휩싸인 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정부 협력 지속 기록"
+            "text": "경찰과의 협력 부족"
           },
           {
             "label": "B",
-            "text": "성탄절 자체 결정"
+            "text": "경영진의 책임 회피"
           },
           {
             "label": "C",
-            "text": "유출량 3천건 수치"
+            "text": "여론의 지지 부족"
           },
           {
             "label": "D",
-            "text": "노트북 압수 사실"
+            "text": "정부의 강력한 항의"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "정부의 강력한 항의는 쿠팡의 발표가 독단적이라는 인식을 강화하여 '셀프 조사 논란'을 촉발했다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
+      },
+      {
+        "contentId": 4,
+        "question": "쿠팡이 '정부 지시에 따른 조사'라고 해명한 배경에는 어떤 의도가 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "조사 책임 전가"
+          },
+          {
+            "label": "B",
+            "text": "정부와의 갈등 회피"
+          },
+          {
+            "label": "C",
+            "text": "여론의 지지 확보"
+          },
+          {
+            "label": "D",
+            "text": "경영진의 책임 강조"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "성탄절 발표는 정부 지시가 없었고, 발표 책임이 회사에 집중됨을 명확히 드러낸다.",
-        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+        "answerExplanation": "쿠팡의 해명은 정부와의 갈등을 피하고 협력적인 이미지를 유지하려는 의도가 있다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
+      },
+      {
+        "contentId": 5,
+        "question": "쿠팡의 개인정보 유출 사고 발표가 청문회의 분수령으로 작용할 가능성이 있는 이유는?",
+        "options": [
+          {
+            "label": "A",
+            "text": "여론의 강한 비판"
+          },
+          {
+            "label": "B",
+            "text": "정부의 강력한 대응"
+          },
+          {
+            "label": "C",
+            "text": "경찰의 조사 결과"
+          },
+          {
+            "label": "D",
+            "text": "경영진의 책임 회피"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡의 발표는 여론의 강한 비판을 유발하여 청문회에서의 논의가 집중될 가능성을 높인다.",
+        "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
       }
     ]
   }

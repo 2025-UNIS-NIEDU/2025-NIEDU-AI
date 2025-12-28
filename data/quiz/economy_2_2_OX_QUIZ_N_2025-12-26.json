@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "쿠팡은 유출된 정보가 3천 건이라고 발표했다.",
+      "question": "쿠팡은 개인정보 유출 사고와 관련해 조사 결과를 발표했다.",
       "correctAnswer": "O",
-      "answerExplanation": "쿠팡이 실제 저장된 유출 정보는 3천 건이라고 발표했다.",
-      "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      "answerExplanation": "쿠팡이 개인정보 유출 사고에 대한 조사 결과를 발표한 사실이다.",
+      "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
     },
     {
       "contentId": 2,
-      "question": "쿠팡의 성탄절 발표는 정부의 지시로 이루어졌다.",
+      "question": "경찰은 쿠팡과 협의한 적이 있다고 밝혔다.",
       "correctAnswer": "X",
-      "answerExplanation": "성탄절 발표는 정부 지시가 아닌 쿠팡의 자체 결정이었다.",
-      "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      "answerExplanation": "경찰은 쿠팡과 협의한 적이 없다고 반박한 사실이다.",
+      "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
     },
     {
       "contentId": 3,
-      "question": "쿠팡은 유출 사고에 대한 공식 공문을 받은 후 정부와 협력하지 않았다.",
+      "question": "쿠팡은 정부 지시 없이 셀프 조사를 진행했다.",
       "correctAnswer": "X",
-      "answerExplanation": "쿠팡은 공식 공문을 받은 후 꾸준히 정부와 협력했다.",
-      "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      "answerExplanation": "쿠팡은 정부 지시에 의해 조사가 진행되었다고 해명했다.",
+      "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
     },
     {
       "contentId": 4,
-      "question": "쿠팡은 유출자의 노트북을 회수하지 않았다.",
-      "correctAnswer": "X",
-      "answerExplanation": "쿠팡은 유출자의 노트북도 회수했다고 밝혔다.",
-      "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      "question": "쿠팡은 조사 결과를 발표하며 정부와 공조했다고 강조했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "쿠팡은 조사 결과 발표 시 정부와의 공조를 강조한 사실이다.",
+      "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
     },
     {
       "contentId": 5,
-      "question": "쿠팡의 발표는 비판을 받지 않았다.",
-      "correctAnswer": "X",
-      "answerExplanation": "쿠팡의 발표는 '셀프 면죄부'라는 비판이 커지고 있다.",
-      "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
+      "question": "쿠팡의 발표로 인해 '셀프 조사 논란'이 일어났다.",
+      "correctAnswer": "O",
+      "answerExplanation": "쿠팡의 선제적 발표로 인해 '셀프 조사 논란'이 발생한 사실이다.",
+      "sourceUrl": "https://www.news1.kr/industry/distribution/6020559"
     }
   ]
 }

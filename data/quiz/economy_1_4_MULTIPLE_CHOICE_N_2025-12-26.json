@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K",
+    "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456",
     "contents": [
       {
         "contentId": 1,
-        "question": "국민권익위원회가 제안한 대출 제도 개선의 주요 내용은 무엇인가?",
+        "question": "삼천리그룹이 인수한 기업은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "신청 절차 간소화"
+            "text": "성경식품"
           },
           {
             "label": "B",
-            "text": "대출 한도 축소"
+            "text": "한경식품"
           },
           {
             "label": "C",
-            "text": "대출 금리 인상"
+            "text": "대경식품"
           },
           {
             "label": "D",
-            "text": "소득 기준 완화"
+            "text": "삼성식품"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "권익위는 부부 합산 소득 기준을 완화하도록 제안했다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "A",
+        "answerExplanation": "삼천리그룹은 성경식품을 인수하는 주식 매매 계약을 체결했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 2,
-        "question": "국토부가 권익위의 제안에 대해 보인 반응은 무엇인가?",
+        "question": "삼천리그룹이 성경식품 인수를 통해 강화하려는 부문은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "부분 수용"
+            "text": "금융 부문"
           },
           {
             "label": "B",
-            "text": "기조와 불일치"
+            "text": "교육 부문"
           },
           {
             "label": "C",
-            "text": "즉각 시행"
+            "text": "기술 부문"
           },
           {
             "label": "D",
-            "text": "적극 수용"
+            "text": "생활문화 부문"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "국토부는 제안이 집값 안정 기조와 맞지 않는다고 밝혔다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "D",
+        "answerExplanation": "삼천리그룹은 생활문화 부문 포트폴리오를 강화하려고 한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 3,
-        "question": "혼인신고를 미루는 신혼부부가 늘어난 이유는 무엇인가?",
+        "question": "삼천리그룹이 성경식품 인수를 통해 목표로 하는 것은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "주택 공급 부족"
+            "text": "기술 혁신"
           },
           {
             "label": "B",
-            "text": "소득 합산 기준"
+            "text": "인력 확충"
           },
           {
             "label": "C",
-            "text": "대출 금리 인하"
+            "text": "글로벌 경쟁력 제고"
           },
           {
             "label": "D",
-            "text": "세금 혜택 감소"
+            "text": "국내 시장 점유율 확대"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "혼인신고를 미루는 이유는 부부 합산 소득 기준 때문이다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "C",
+        "answerExplanation": "삼천리그룹은 글로벌 경쟁력을 제고하려고 한다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 4,
-        "question": "권익위가 제안한 유자녀 가구에 대한 혜택은 무엇인가?",
+        "question": "삼천리그룹이 성경식품 인수를 발표한 날짜는 언제인가?",
         "options": [
           {
             "label": "A",
-            "text": "가산금리 면제"
+            "text": "27일"
           },
           {
             "label": "B",
-            "text": "주택 보조금 지급"
+            "text": "28일"
           },
           {
             "label": "C",
-            "text": "대출 한도 증액"
+            "text": "26일"
           },
           {
             "label": "D",
-            "text": "소득세 감면"
+            "text": "25일"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "권익위는 유자녀 가구에 가산금리 면제를 제안했다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "C",
+        "answerExplanation": "삼천리그룹은 26일에 성경식품 인수를 발표했다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       },
       {
         "contentId": 5,
-        "question": "버팀목·디딤돌 대출의 소득 기준 문제는 무엇인가?",
+        "question": "삼천리그룹이 성경식품 인수를 통해 기대하는 효과는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "부부 기준 미달"
+            "text": "기술력 강화"
           },
           {
             "label": "B",
-            "text": "부부 기준 초과"
+            "text": "재무 안정성 확보"
           },
           {
             "label": "C",
-            "text": "개인 기준 초과"
+            "text": "인력 구조 조정"
           },
           {
             "label": "D",
-            "text": "개인 기준 미달"
+            "text": "외식사업 시너지 확대"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "버팀목·디딤돌 대출의 부부 합산 소득 기준이 개인 기준에 미달한다.",
-        "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQOKJ3K"
+        "correctAnswer": "D",
+        "answerExplanation": "삼천리그룹은 외식사업 시너지 확대를 기대하고 있다.",
+        "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=03407926642402456"
       }
     ]
   }

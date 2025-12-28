@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "I",
-    "sourceUrl": "https://biz.heraldcorp.com/article/10644379",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A",
     "contents": [
       {
         "contentId": 1,
-        "question": "향후 5년간 청년정책의 방향을 담은 계획은 무엇인가?",
-        "correctAnswer": "제2차 청년정책 기본계획",
-        "answerExplanation": "정부는 '제2차 청년정책 기본계획'을 확정했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레로 인해 유발된 연간 소비 지출 효과는 얼마인가?",
+        "correctAnswer": "6,630억 원",
+        "answerExplanation": "제주올레로 인한 연간 소비 지출 유발 효과가 6,630억 원에 달한다고 발표되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 2,
-        "question": "김민석 총리가 강조한 청년정책의 필요성은 무엇인가?",
-        "correctAnswer": "보편적 청년정책",
-        "answerExplanation": "김민석 총리는 보편적 청년정책의 필요성을 강조했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레의 지역경제 파급효과를 분석한 기관은 어디인가?",
+        "correctAnswer": "제주연구원",
+        "answerExplanation": "제주연구원의 '제주올레의 지역경제 파급효과 분석'에 따르면, 제주올레는 6,630억 원의 소비 지출을 유도한다고 분석되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 3,
-        "question": "청년 참여 통로 확대를 강조한 인물은 누구인가?",
-        "correctAnswer": "김민석",
-        "answerExplanation": "김민석 총리는 청년 참여 통로 확대를 강조했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레가 유발한 생산 유발 효과는 얼마인가?",
+        "correctAnswer": "1조 2,240억 원",
+        "answerExplanation": "제주올레는 6,630억 원의 소비 지출을 유도하며, 이를 통해 1조 2,240억 원의 생산 유발 효과를 가져온다고 분석되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 4,
-        "question": "청년들의 목소리를 직접 듣고 정책에 반영할 것을 당부받은 대상은 누구인가?",
-        "correctAnswer": "각 부처 장관",
-        "answerExplanation": "각 부처 장관에게 청년들의 목소리를 듣고 반영할 것을 당부했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레로 인해 창출된 고용 효과는 몇 명인가?",
+        "correctAnswer": "11만 7,000명",
+        "answerExplanation": "제주올레는 6,630억 원의 소비 지출을 유도하며, 11만 7,000명의 고용 창출 효과를 가져온다고 분석되었다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       },
       {
         "contentId": 5,
-        "question": "부처 간 이견 조정과 정책 사각지대 발굴을 위해 신설된 회의는 무엇인가?",
-        "correctAnswer": "청년정책 관계장관회의",
-        "answerExplanation": "국무총리가 주재하는 '청년정책 관계장관회의'를 신설했다.",
-        "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+        "question": "제주올레 이용객의 소비 지출이 주로 집중되는 분야는 무엇인가?",
+        "correctAnswer": "숙박, 식사, 지역 상권",
+        "answerExplanation": "소비는 주로 숙박, 식사, 지역 상권 이용에 집중되는 경향을 보였다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
       }
     ]
   }

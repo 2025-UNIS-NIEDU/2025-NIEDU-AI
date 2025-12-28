@@ -2,19 +2,44 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A",
+    "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A",
     "contents": [
       {
         "contentId": 1,
-        "question": "제주-칭다오 화물 직항로에 대한 오영훈 지사의 투자 결정은 어떤 장기적 목표를 반영하는가?",
+        "question": "충청북도가 중부내륙특별법에 따라 발전계획안을 제출한 주된 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "단기 수익 창출"
+            "text": "중앙정부의 요청"
           },
           {
             "label": "B",
-            "text": "미래 성장 기반"
+            "text": "예산 절감 필요"
+          },
+          {
+            "label": "C",
+            "text": "인구 감소 대응"
+          },
+          {
+            "label": "D",
+            "text": "지역 발전 촉진"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "충청북도는 중부내륙특별법에 따라 지역 발전을 촉진하기 위해 발전계획안을 제출하였다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
+      },
+      {
+        "contentId": 2,
+        "question": "충청북도의 발전계획안에 포함된 사회기반시설 확충의 주된 목적은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "교통 편의성 증대"
+          },
+          {
+            "label": "B",
+            "text": "주택 공급 확대"
           },
           {
             "label": "C",
@@ -25,109 +50,84 @@
             "text": "관광객 유치"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "화물 직항로에 대한 투자는 당장의 손실을 감수하고서라도 제주 미래 성장을 위한 기반을 마련하려는 장기적 목표를 반영한다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
-      },
-      {
-        "contentId": 2,
-        "question": "오영훈 지사가 국토교통부에 항공 수요 예측을 명확히 제시하라고 요구한 이유는 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "환경 보호"
-          },
-          {
-            "label": "B",
-            "text": "예산 절감"
-          },
-          {
-            "label": "C",
-            "text": "관광 활성화"
-          },
-          {
-            "label": "D",
-            "text": "정책 신뢰성 확보"
-          }
-        ],
-        "correctAnswer": "D",
-        "answerExplanation": "항공 수요 예측의 명확한 제시는 정책의 신뢰성을 확보하고 갈등 해소에 기여하려는 목적을 가진다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "correctAnswer": "A",
+        "answerExplanation": "사회기반시설 확충은 교통 편의성을 증대시켜 지역 발전을 도모하려는 목적을 가진다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 3,
-        "question": "환경영향평가 이후 위원회 운영 의도의 핵심을 갈등 해결 관점에서 어떻게 볼 수 있는가?",
+        "question": "행정안전부가 중부내륙 8개 시·도의 계획을 취합하는 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "예산확보 유도"
+            "text": "예산 절감"
           },
           {
             "label": "B",
-            "text": "정책지연 전략"
+            "text": "인구 증가 대응"
           },
           {
             "label": "C",
-            "text": "사법판단 대체"
+            "text": "정치적 안정"
           },
           {
             "label": "D",
-            "text": "증거기반 조정"
+            "text": "종합적 발전 도모"
           }
         ],
         "correctAnswer": "D",
-        "answerExplanation": "평가 결과 후 위원회 가동 언급은 근거 중심의 중재를 통해 갈등을 제도권 안으로 수렴하겠다는 신호다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "answerExplanation": "행정안전부는 종합적 발전을 도모하기 위해 8개 시·도의 계획을 취합한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 4,
-        "question": "조류충돌 조사와 수요예측 요구가 드러내는 정책 책임 배분의 방향은 무엇인가?",
+        "question": "충청북도의 발전계획안에 포함된 미래전략산업 성장동력 촉진의 의도는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "민간위탁 강화"
+            "text": "외국인 투자 유치"
           },
           {
             "label": "B",
-            "text": "중앙책임 명확"
+            "text": "장기적 경제 성장"
           },
           {
             "label": "C",
-            "text": "지방주도 확대"
+            "text": "기술 수출 확대"
           },
           {
             "label": "D",
-            "text": "학계자문 중심"
+            "text": "단기 수익 창출"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "국가기준 적용과 중앙의 수요 제시 요구는 핵심 판단 책임을 지방이 아닌 중앙에 두려는 취지다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "answerExplanation": "미래전략산업 성장동력 촉진은 장기적 경제 성장을 목표로 한다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       },
       {
         "contentId": 5,
-        "question": "칭다오 화물노선 손실 감수 발언이 시사하는 지역 경제 전략의 시간선은 무엇인가?",
+        "question": "충북 계획안이 실제 최종 확정되기 위한 핵심 관문은 무엇이라 볼 수 있는가?",
         "options": [
           {
             "label": "A",
-            "text": "수요즉시 창출"
+            "text": "내년 즉시집행"
           },
           {
             "label": "B",
-            "text": "중장기 포지션"
+            "text": "도 간 조정"
           },
           {
             "label": "C",
-            "text": "노선즉각 폐지"
+            "text": "위원회 심의"
           },
           {
             "label": "D",
-            "text": "단기수익 중시"
+            "text": "예타 면제"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "현 손실 감수 발언은 당장의 실적보다 장기 물류 인프라 축적을 겨냥한 투자 신호다.",
-        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
+        "correctAnswer": "C",
+        "answerExplanation": "8개 도 계획을 취합해 위원회 심의로 확정되므로 중앙 조정·심의가 최종 관문이다.",
+        "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443923&ref=A"
       }
     ]
   }

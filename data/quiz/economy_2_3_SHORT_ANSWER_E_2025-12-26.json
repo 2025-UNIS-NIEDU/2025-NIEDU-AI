@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "E",
-    "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630",
+    "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941",
     "contents": [
       {
         "contentId": 1,
-        "question": "사회적 책임과 공동체 의식을 강화하여 궁극적으로 조성하고자 했던 사회적 분위기는 무엇입니까?",
-        "correctAnswer": "건강한 사회",
-        "answerExplanation": "건강한 사회 조성은 공동체의 지속 가능성과 사회적 신뢰를 증진한다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "question": "개인정보 유출 사태에 대한 기업의 공식적 입장과 대응을 담은 문서는 무엇입니까?",
+        "correctAnswer": "입장문",
+        "answerExplanation": "쿠팡은 입장문을 통해 개인정보 유출 사태에 대한 공식 입장을 밝혔다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 2,
-        "question": "캠페인을 통해 국민과의 상호 이해와 협력을 증진하고자 형성하려 했던 것은 무엇입니까?",
-        "correctAnswer": "공감대",
-        "answerExplanation": "공감대 형성은 사회적 연대 강화와 공동 목표 달성을 촉진한다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "question": "개인정보 유출에 사용된 기기를 회수하여 제출한 수사 기관은 어디입니까?",
+        "correctAnswer": "경찰",
+        "answerExplanation": "쿠팡은 유출 기기를 경찰에 제출하여 수사 협조를 강화했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 3,
-        "question": "부산역 일대에서 지속 가능한 해양 생태계 보전을 목표로 캠페인을 주관한 기관은 어디입니까?",
-        "correctAnswer": "한국수산자원공단",
-        "answerExplanation": "한국수산자원공단은 해양 자원 보호와 지속 가능한 발전을 지향한다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "question": "개인정보 유출 사태 해결을 위해 협력한 공공 부문 주체는 누구입니까?",
+        "correctAnswer": "정부",
+        "answerExplanation": "쿠팡은 정부와의 협력을 통해 개인정보 유출 문제를 해결하려 했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 4,
-        "question": "캠페인에서 대중에게 전달된 자료로, 사회적 인식 변화를 촉진하기 위한 주요 수단은 무엇입니까?",
-        "correctAnswer": "리플릿",
-        "answerExplanation": "리플릿은 정보 전달과 인식 개선을 통해 사회적 변화를 유도한다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "question": "개인정보 유출 사태에서 책임을 인정하고 자백한 주체는 누구입니까?",
+        "correctAnswer": "유출자",
+        "answerExplanation": "쿠팡은 유출자의 자백을 통해 사건의 책임 소재를 명확히 했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       },
       {
         "contentId": 5,
-        "question": "캠페인에서 안내된 신고 채널은 직장 내 어떤 문제를 해결하기 위한 것입니까?",
-        "correctAnswer": "직장 내 괴롭힘",
-        "answerExplanation": "직장 내 괴롭힘 신고는 근로 환경 개선과 인권 보호를 지향한다.",
-        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2025122618154025630"
+        "question": "대규모 개인정보 유출 사태로 인해 정보 보안의 중요성이 부각된 기업은 어디입니까?",
+        "correctAnswer": "쿠팡",
+        "answerExplanation": "쿠팡은 개인정보 유출로 인해 정보 보안의 중요성을 재확인했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6448382?utm_medium=article&utm_campaign=20251226063941"
       }
     ]
   }

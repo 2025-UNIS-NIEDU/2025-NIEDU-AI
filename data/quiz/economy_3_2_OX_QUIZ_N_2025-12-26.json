@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "50대가 개인 투자용 국채 5년물을 가장 많이 샀다.",
+      "question": "오영훈 제주도지사는 기자간담회에서 제주 제2공항 찬반 갈등 해소를 위해 환경영향평가 결과가 나오면 위원회를 운영하겠다고 밝혔다.",
       "correctAnswer": "O",
-      "answerExplanation": "50대가 개인 투자용 국채 5년물을 가장 많이 산 것으로 나타났다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      "answerExplanation": "오영훈 지사가 위원회 운영을 언급한 사실이다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
     },
     {
       "contentId": 2,
-      "question": "젊은 나이일수록 만기가 긴 개인 투자용 국채를 선호하지 않는다.",
+      "question": "오영훈 제주도지사는 제주 제2공항 찬반 갈등 해소를 위해 환경영향평가 결과가 나오면 관련 협의체를 운영하지 않겠다고 밝혔다.",
       "correctAnswer": "X",
-      "answerExplanation": "젊은 나이일수록 만기가 긴 개인 투자용 국채를 선호하는 것으로 나타났다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      "answerExplanation": "오 지사는 협의체 운영을 하겠다고 명확히 밝혔다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
     },
     {
       "contentId": 3,
-      "question": "50대는 20·30·40대보다 개인 투자용 국채를 덜 선호한다.",
+      "question": "오영훈 제주도지사는 환경영향평가 쟁점인 조류 충돌 위험 조사를 정부 지침을 적용하지 않겠다고 말했다.",
       "correctAnswer": "X",
-      "answerExplanation": "50대가 개인 투자용 국채를 가장 많이 산 연령대이다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      "answerExplanation": "오 지사는 정부 지침을 적용하겠다고 언급했다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
     },
     {
       "contentId": 4,
-      "question": "10년물의 비중이 48%인 것은 50대가 차지했다.",
+      "question": "오영훈 제주도지사는 제주-중국 칭다오 화물 직항로에 대해 손실을 감수하더라도 투자를 해야 한다고 말했다.",
       "correctAnswer": "O",
-      "answerExplanation": "50대가 10년물의 비중을 48% 차지한 것으로 나타났다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      "answerExplanation": "오 지사가 손실을 감수하고 투자해야 한다고 언급한 사실이다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
     },
     {
       "contentId": 5,
-      "question": "20·30·40대는 전체의 64.7%를 차지하지 않는다.",
+      "question": "오영훈 제주도지사는 제주-중국 칭다오 화물 직항로에 대해 당장 손실을 감수하지 않더라도 투자해야 한다고 말했다.",
       "correctAnswer": "X",
-      "answerExplanation": "20·30·40대가 전체의 64.7%를 차지하는 것으로 나타났다.",
-      "sourceUrl": "https://www.sedaily.com/NewsView/2H1VQ6RLNH"
+      "answerExplanation": "오 지사는 당장 손실을 감수하더라도 투자해야 한다고 강조했다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8443818&ref=A"
     }
   ]
 }

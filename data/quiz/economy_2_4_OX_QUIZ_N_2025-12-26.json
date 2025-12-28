@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "쿠팡은 개인정보 유출과 관련해 자체 조사를 발표했다.",
+      "question": "쿠팡은 정부의 지시로 개인정보 유출 사태를 조사했다.",
       "correctAnswer": "O",
-      "answerExplanation": "쿠팡이 개인정보 유출과 관련해 자체 조사 결과를 발표한 사실이다.",
-      "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      "answerExplanation": "쿠팡이 정부의 지시에 따라 조사를 진행했다고 발표했다.",
+      "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
     },
     {
       "contentId": 2,
-      "question": "정혜경 의원은 쿠팡의 태도를 긍정적으로 평가했다.",
+      "question": "경찰은 쿠팡의 주장에 대해 협의한 적이 있다고 밝혔다.",
       "correctAnswer": "X",
-      "answerExplanation": "정혜경 의원은 쿠팡의 태도를 오만하다고 비판한 사실이다.",
-      "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      "answerExplanation": "경찰은 쿠팡의 주장에 대해 협의한 적이 없다고 반박했다.",
+      "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
     },
     {
       "contentId": 3,
-      "question": "쿠팡은 민관합동조사가 진행 중인 상황에서 발표를 했다.",
-      "correctAnswer": "O",
-      "answerExplanation": "쿠팡은 민관합동조사가 진행 중인 와중에 발표를 한 사실이다.",
-      "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      "question": "쿠팡은 자체 조사가 아닌 정부의 지시에 따라 조사를 진행하지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "쿠팡은 정부의 지시에 따라 조사를 진행했다고 발표했다.",
+      "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
     },
     {
       "contentId": 4,
-      "question": "정혜경 의원은 쿠팡의 발표를 진정성 있는 사과라고 말했다.",
-      "correctAnswer": "X",
-      "answerExplanation": "정혜경 의원은 쿠팡의 발표가 진정성 있는 사과가 아니라고 지적한 사실이다.",
-      "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      "question": "쿠팡은 16일에 정보 유출자의 데스크톱과 하드디스크 드라이브를 회수했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "쿠팡은 16일에 정보 유출자의 하드 드라이브를 회수했다고 밝혔다.",
+      "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
     },
     {
       "contentId": 5,
-      "question": "쿠팡은 정부의 지시에 따라 조사를 진행했다고 밝혔다.",
-      "correctAnswer": "O",
-      "answerExplanation": "쿠팡은 자체 조사 결과 발표에 대해 정부의 지시에 따라 조사를 진행했다고 설명한 사실이다.",
-      "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+      "question": "정부는 쿠팡이 하드 드라이브를 제출한 즉시 조사를 시작하지 않았다.",
+      "correctAnswer": "X",
+      "answerExplanation": "정부는 쿠팡이 하드 드라이브를 제출한 즉시 조사를 시작한 것으로 이해하고 있다.",
+      "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
     }
   ]
 }

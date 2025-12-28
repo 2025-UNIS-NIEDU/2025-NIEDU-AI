@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html",
+    "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m",
     "contents": [
       {
         "contentId": 1,
-        "question": "한 장관이 청년상인을 민생경제의 중요한 축으로 언급한 이유는 무엇인가?",
+        "question": "이 대표가 강조한 '창의적인 관광 콘텐츠 발굴'의 의도는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "수출 시장 확대"
+            "text": "지역 가치 증대"
           },
           {
             "label": "B",
-            "text": "고령화 문제 해결"
+            "text": "관광객 수 감소"
           },
           {
             "label": "C",
-            "text": "지역 소비 촉진"
+            "text": "외화 유출 방지"
           },
           {
             "label": "D",
-            "text": "소비 감소 유도"
+            "text": "기술 혁신 도입"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "청년상인은 지역 소비를 이끌며 수요를 확장해 민생경제의 중요한 축으로 작용한다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "correctAnswer": "A",
+        "answerExplanation": "창의적인 관광 콘텐츠 발굴은 지역의 고유한 가치를 증대시켜 관광 경쟁력을 강화하려는 의도를 담고 있다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 2,
-        "question": "경동시장이 청년에게 창업공간으로 평가받는 이유는 무엇인가?",
+        "question": "리컨벤션이 지역 관광자원과 마이스 산업을 융합한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "도전과 성장 기회"
+            "text": "관광객 유치 증대"
           },
           {
             "label": "B",
-            "text": "고정 고객층"
+            "text": "지역 인구 감소"
           },
           {
             "label": "C",
-            "text": "낮은 임대료"
+            "text": "기술 개발 촉진"
           },
           {
             "label": "D",
-            "text": "정부 보조금"
+            "text": "환경 보호 강화"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "경동시장은 청년에게 도전하고 성장할 수 있는 창업공간으로 평가받는다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "answerExplanation": "지역 관광자원과 마이스 산업의 융합은 차별화된 콘텐츠로 관광객 유치를 증대시키려는 전략적 이유가 있다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 3,
-        "question": "중기부가 청년의 지역 정착을 지원하는 정책을 추진하는 이유는 무엇인가?",
+        "question": "이 대표가 '국제협력'을 강조한 배경에는 어떤 목표가 있는가?",
         "options": [
           {
             "label": "A",
-            "text": "지역 경제 활성화"
+            "text": "관광 경쟁력 강화"
           },
           {
             "label": "B",
-            "text": "대기업 의존도 감소"
+            "text": "국내 시장 보호"
           },
           {
             "label": "C",
-            "text": "청년 실업률 증가"
+            "text": "기술 독점 확보"
           },
           {
             "label": "D",
-            "text": "해외 진출 장려"
+            "text": "외국인 노동자 증가"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "중기부는 청년이 지역에서 안정적으로 정착해 지역 경제 활성화를 도모하려 한다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "answerExplanation": "국제협력 강조는 글로벌 네트워크를 통해 대한민국의 관광 경쟁력을 강화하려는 목표를 반영한다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       },
       {
         "contentId": 4,
-        "question": "전통시장의 지속 가능성을 높이기 위한 방안으로 청년 유입이 강조된 이유는 무엇인가?",
+        "question": "리컨벤션이 25년간 기여한 '지역경제 활성화'의 주된 요인은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "문화적 다양성 증대"
+            "text": "환경 규제 완화"
           },
           {
             "label": "B",
-            "text": "젊은 세대 유입"
+            "text": "자원 수입 감소"
           },
           {
             "label": "C",
-            "text": "노동력 부족 해소"
+            "text": "고용 창출 확대"
           },
           {
             "label": "D",
-            "text": "기술 혁신 촉진"
-          }
-        ],
-        "correctAnswer": "B",
-        "answerExplanation": "젊은 세대의 유입은 전통시장의 지속 가능성을 높이는 미래자산으로 작용한다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
-      },
-      {
-        "contentId": 5,
-        "question": "중기부의 정책적 지원이 민생경제에 미칠 장기적 영향은 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "소득 불평등 심화"
-          },
-          {
-            "label": "B",
-            "text": "고용 불안정 심화"
-          },
-          {
-            "label": "C",
-            "text": "경제적 자립 강화"
-          },
-          {
-            "label": "D",
-            "text": "수출 의존도 증가"
+            "text": "기술 수출 증가"
           }
         ],
         "correctAnswer": "C",
-        "answerExplanation": "중기부의 정책적 지원은 청년의 지역 정착과 성장을 통해 경제적 자립을 강화할 것이다.",
-        "sourceUrl": "https://news.tvchosun.com/site/data/html_dir/2025/12/26/2025122690187.html"
+        "answerExplanation": "리컨벤션의 활동은 협력업체와의 동반성장을 통해 고용 창출을 확대하며 지역경제 활성화에 기여했다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
+      },
+      {
+        "contentId": 5,
+        "question": "이 대표가 '미래 산업'으로 관광산업을 언급한 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "단기 이익 추구"
+          },
+          {
+            "label": "B",
+            "text": "지속 가능 성장"
+          },
+          {
+            "label": "C",
+            "text": "자원 고갈 방지"
+          },
+          {
+            "label": "D",
+            "text": "기술 혁신 주도"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "관광산업을 미래 산업으로 언급한 것은 지역 가치와 인적 역량의 지속 가능한 성장을 목표로 하기 때문이다.",
+        "sourceUrl": "https://www.yna.co.kr/view/AKR20251226114800051?input=1195m"
       }
     ]
   }

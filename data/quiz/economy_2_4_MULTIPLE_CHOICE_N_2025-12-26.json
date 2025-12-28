@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998",
+    "sourceUrl": "https://www.khan.co.kr/article/202512261702001",
     "contents": [
       {
         "contentId": 1,
-        "question": "정혜경 의원이 쿠팡의 태도를 비판한 이유는 무엇인가?",
+        "question": "쿠팡이 개인정보 유출 사태를 조사한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "정부와의 협력 부족"
+            "text": "정부의 지시에 따라"
           },
           {
             "label": "B",
-            "text": "경쟁사와의 갈등"
+            "text": "경찰의 요청에 따라"
           },
           {
             "label": "C",
-            "text": "국민과 헌법 위에 군림"
+            "text": "고객의 요구에 따라"
           },
           {
             "label": "D",
-            "text": "기술적 오류 발생"
+            "text": "자체 결정에 따라"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "정혜경 의원은 쿠팡의 오만한 태도를 비판했다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡은 정부의 지시에 따라 개인정보 유출 사태를 조사했다고 발표했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
         "contentId": 2,
-        "question": "쿠팡이 개인정보 유출과 관련해 발표한 내용은 무엇인가?",
+        "question": "경찰이 쿠팡의 발표에 대해 반박한 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "자체 조사 결과"
+            "text": "조사에 착수했다"
           },
           {
             "label": "B",
-            "text": "정부의 공식 발표"
+            "text": "조사를 완료했다"
           },
           {
             "label": "C",
-            "text": "경쟁사의 조사 결과"
+            "text": "정보를 제공받았다"
           },
           {
             "label": "D",
-            "text": "국제 협력 보고서"
-          }
-        ],
-        "correctAnswer": "A",
-        "answerExplanation": "쿠팡은 자체 조사 결과를 발표했다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
-      },
-      {
-        "contentId": 3,
-        "question": "쿠팡의 발표에 대해 정혜경 의원이 지적한 문제는 무엇인가?",
-        "options": [
-          {
-            "label": "A",
-            "text": "기술적 오류 발생"
-          },
-          {
-            "label": "B",
-            "text": "정부와의 협력 부족"
-          },
-          {
-            "label": "C",
-            "text": "경쟁사와의 갈등"
-          },
-          {
-            "label": "D",
-            "text": "상황 축소 및 은폐"
+            "text": "협의한 적 없다"
           }
         ],
         "correctAnswer": "D",
-        "answerExplanation": "정혜경 의원은 쿠팡의 상황 축소 및 은폐를 지적했다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "answerExplanation": "경찰은 쿠팡과 협의한 적 없다고 반박했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
-        "contentId": 4,
-        "question": "쿠팡이 발표한 입장문에서 언급한 조사의 성격은 무엇인가?",
+        "contentId": 3,
+        "question": "과학기술정보통신부가 쿠팡의 발표에 대해 한 반박은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "단독 조사"
+            "text": "정보를 제공받았다"
           },
           {
             "label": "B",
-            "text": "공조 조사"
+            "text": "정부의 지시가 아니다"
           },
           {
             "label": "C",
-            "text": "국제 조사"
+            "text": "협의한 적 없다"
           },
           {
             "label": "D",
-            "text": "비공식 조사"
+            "text": "조사를 완료했다"
           }
         ],
         "correctAnswer": "B",
-        "answerExplanation": "쿠팡은 공조 조사였다고 입장문에서 설명했다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "answerExplanation": "과학기술정보통신부는 쿠팡의 발표가 일방적 주장이라고 반박했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       },
       {
-        "contentId": 5,
-        "question": "정혜경 의원이 쿠팡의 발표를 비판한 이유는 무엇인가?",
+        "contentId": 4,
+        "question": "쿠팡이 정부에 보고·제공한 것은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "국민 앞에 진정성 부족"
+            "text": "고객 정보"
           },
           {
             "label": "B",
-            "text": "경쟁사와의 갈등"
+            "text": "조사 보고서"
           },
           {
             "label": "C",
-            "text": "정부와의 협력 부족"
+            "text": "하드디스크 드라이브"
           },
           {
             "label": "D",
-            "text": "기술적 오류 발생"
+            "text": "보안 시스템"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "정혜경 의원은 쿠팡의 진정성 부족을 비판했다.",
-        "sourceUrl": "https://www.newsis.com/view/NISX20251226_0003455998"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡은 하드디스크 드라이브를 정부에 보고·제공했다고 밝혔다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
+      },
+      {
+        "contentId": 5,
+        "question": "쿠팡이 정보 유출자의 장비를 회수한 날짜는 언제인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "20일"
+          },
+          {
+            "label": "B",
+            "text": "16일"
+          },
+          {
+            "label": "C",
+            "text": "18일"
+          },
+          {
+            "label": "D",
+            "text": "26일"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "쿠팡은 16일에 정보 유출자의 장비를 회수했다고 밝혔다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202512261702001"
       }
     ]
   }

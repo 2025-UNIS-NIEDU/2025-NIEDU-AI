@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "정부는 청년 주거 불안 해소를 위해 '청년 친화 주택' 공급을 확대했다.",
+      "question": "흑백요리사2에 출연한 셰프들은 총 38인이었다.",
       "correctAnswer": "O",
-      "answerExplanation": "정부는 청년 주거 불안 해소를 위해 주택 공급을 확대한다고 밝혔다.",
-      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      "answerExplanation": "흑백요리사2에 출연한 셰프는 상위 38인이었다.",
+      "sourceUrl": "https://www.mk.co.kr/article/11588803"
     },
     {
       "contentId": 2,
-      "question": "2차 기본계획은 주거 환경 개선을 핵심 과제로 삼지 않았다.",
+      "question": "흑백요리사2에 출연한 셰프들이 운영하는 식당은 모두 서울에 있다.",
       "correctAnswer": "X",
-      "answerExplanation": "2차 기본계획에서는 주거 환경 개선을 핵심 과제로 삼았다고 한다.",
-      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      "answerExplanation": "흑백요리사2 셰프들이 운영하는 식당은 총 35곳 중 33곳이 서울에 있다.",
+      "sourceUrl": "https://www.mk.co.kr/article/11588803"
     },
     {
       "contentId": 3,
-      "question": "정부는 청년 주거비 지원을 43만 명 이하로 제한했다.",
+      "question": "흑백요리사2에 출연한 셰프들이 운영하는 식당 중 도산대로 상권에 위치한 곳은 5곳이다.",
       "correctAnswer": "X",
-      "answerExplanation": "정부는 43만 명 이상을 대상으로 주거비 지원을 실시한다고 밝혔다.",
-      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      "answerExplanation": "도산대로 상권에 위치한 식당은 7곳이다.",
+      "sourceUrl": "https://www.mk.co.kr/article/11588803"
     },
     {
       "contentId": 4,
-      "question": "청년주택드림대출은 최대 30년, 최저 연 2.4%이다.",
-      "correctAnswer": "X",
-      "answerExplanation": "청년주택드림대출은 최대 40년, 최저 연 2.4%로 제공된다.",
-      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      "question": "흑백요리사1에서 상위 셰프 40인이 운영하는 식당은 37곳이었다.",
+      "correctAnswer": "O",
+      "answerExplanation": "흑백요리사1에서 상위 셰프 40인이 운영하는 식당은 37곳이었다.",
+      "sourceUrl": "https://www.mk.co.kr/article/11588803"
     },
     {
       "contentId": 5,
-      "question": "청년 전용 버팀목 대출은 전세자금 지원을 위해 제공된다.",
-      "correctAnswer": "O",
-      "answerExplanation": "청년 전용 버팀목 대출은 전세자금 지원을 위해 지속 공급된다.",
-      "sourceUrl": "https://www.news1.kr/realestate/general/6020967"
+      "question": "올해 해방촌은 흑백요리사1에서 두 번째로 많은 식당이 위치한 상권이다.",
+      "correctAnswer": "X",
+      "answerExplanation": "올해 해방촌은 흑백요리사1에서 두 번째가 아닌 3위를 차지했다.",
+      "sourceUrl": "https://www.mk.co.kr/article/11588803"
     }
   ]
 }

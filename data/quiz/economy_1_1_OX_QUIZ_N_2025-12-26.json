@@ -4,38 +4,38 @@
   "contents": [
     {
       "contentId": 1,
-      "question": "정부는 향후 5년간 청년정책의 방향을 담은 기본계획을 확정했다.",
+      "question": "제주올레로 인한 소비지출 유발 효과는 연간 6천억 원이 넘는다.",
       "correctAnswer": "O",
-      "answerExplanation": "정부가 청년정책 기본계획을 확정했다고 보도되었다.",
-      "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      "answerExplanation": "연구 결과에 따르면 제주올레의 소비지출 유발 효과는 6천 630억 원이다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
     },
     {
       "contentId": 2,
-      "question": "김민석 총리는 청년정책 관계장관회의를 신설하지 않았다.",
+      "question": "제주올레는 연간 6천 630억 원의 소비 지출을 유발하지 않는다.",
       "correctAnswer": "X",
-      "answerExplanation": "김민석 총리는 청년정책 관계장관회의를 신설한다고 밝혔다.",
-      "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      "answerExplanation": "제주올레는 연간 6천 630억 원의 소비 지출을 유발한다고 분석되었다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
     },
     {
       "contentId": 3,
-      "question": "청년정책 기본계획은 2026년부터 2030년까지의 방향을 담고 있다.",
-      "correctAnswer": "O",
-      "answerExplanation": "기본계획은 2026~2030년 청년정책 방향을 담고 있다.",
-      "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      "question": "제주올레 이용객의 소비는 숙박과 식사, 지역 상권 이용에 집중되지 않는다.",
+      "correctAnswer": "X",
+      "answerExplanation": "제주올레 이용객의 소비는 숙박과 식사, 지역 상권 이용에 집중되는 경향이 있다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
     },
     {
       "contentId": 4,
-      "question": "각 부처 장관들은 청년들의 목소리를 듣지 말아야 한다.",
+      "question": "제주올레의 소비 지출 유발 효과는 1조 2천 240억 원이다.",
       "correctAnswer": "X",
-      "answerExplanation": "각 부처 장관들은 청년들의 목소리를 직접 들어야 한다고 당부했다.",
-      "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      "answerExplanation": "제주올레의 생산유발 효과는 1조 2천 240억 원으로, 소비 지출 효과는 다르다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
     },
     {
       "contentId": 5,
-      "question": "정부는 청년정책의 추진력과 실행력을 높이기 위해 관계장관회의를 신설했다.",
-      "correctAnswer": "O",
-      "answerExplanation": "관계장관회의 신설로 추진력과 실행력을 높이겠다고 밝혔다.",
-      "sourceUrl": "https://biz.heraldcorp.com/article/10644379"
+      "question": "제주올레 이용객의 소비는 고용 유발 효과와 관련이 없다.",
+      "correctAnswer": "X",
+      "answerExplanation": "제주올레의 소비는 11만 7천 명의 고용 유발 효과와 관련이 있다.",
+      "sourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8444018&ref=A"
     }
   ]
 }

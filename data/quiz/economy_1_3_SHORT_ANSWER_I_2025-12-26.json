@@ -2,42 +2,42 @@
   {
     "contentType": "SHORT_ANSWER",
     "level": "I",
-    "sourceUrl": "https://www.mk.co.kr/article/11588772",
+    "sourceUrl": "https://www.segye.com/newsView/20251226508540",
     "contents": [
       {
         "contentId": 1,
-        "question": "정부가 고령 치매환자의 재산을 관리하기 위해 도입하려는 제도는 무엇인가?",
-        "correctAnswer": "공공신탁",
-        "answerExplanation": "정부는 고령 치매환자의 재산을 공공기관이 관리하는 '공공신탁' 제도 도입을 추진하고 있다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "question": "벨기에 맥주 브랜드로 캠페인 영상을 공개한 곳은 어디인가?",
+        "correctAnswer": "스텔라 아르투아",
+        "answerExplanation": "스텔라 아르투아는 권성준 셰프가 출연한 캠페인 영상을 공개했다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 2,
-        "question": "공공신탁 제도의 시범사업이 시작될 예정인 시기는 언제인가?",
-        "correctAnswer": "내년",
-        "answerExplanation": "이 제도는 내년 시범사업을 시작으로 단계적으로 확대될 예정이다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "question": "캠페인 영상에 출연한 '흑백요리사' 시즌1 우승자는 누구인가?",
+        "correctAnswer": "권성준",
+        "answerExplanation": "권성준 셰프는 '흑백요리사' 시즌1의 우승자로 캠페인 영상에 출연했다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 3,
-        "question": "공공신탁 제도의 수탁기관으로 지정될 가능성이 높은 기관은 어디인가?",
-        "correctAnswer": "국민연금",
-        "answerExplanation": "국민연금이 수탁기관으로 지정될 가능성이 높다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "question": "캠페인 영상의 제목은 무엇인가?",
+        "correctAnswer": "셰프의 선택 편",
+        "answerExplanation": "캠페인 영상은 '셰프의 선택 편'으로 제작되었다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 4,
-        "question": "공공신탁 제도 도입의 주요 목표 중 하나는 무엇인가?",
-        "correctAnswer": "서민층 가입",
-        "answerExplanation": "수수료를 낮추어 서민층의 가입을 유도할 계획이다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "question": "캠페인 영상의 모티브가 된 장면은 무엇인가?",
+        "correctAnswer": "경연 장면",
+        "answerExplanation": "영상은 권성준 셰프의 경연 장면을 모티브로 제작되었다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       },
       {
         "contentId": 5,
-        "question": "정부가 기존 시스템을 개선하기 위해 도입에 속도를 내고 있는 제도는 무엇인가?",
-        "correctAnswer": "공공신탁",
-        "answerExplanation": "정부는 고액 자산가 중심으로 설계된 기존 시스템을 개선하기 위해 공공신탁 도입에 속도를 내고 있다.",
-        "sourceUrl": "https://www.mk.co.kr/article/11588772"
+        "question": "캠페인 영상에서 권성준 셰프가 발견한 맥주는 무엇인가?",
+        "correctAnswer": "스텔라 아르투아",
+        "answerExplanation": "권성준 셰프는 조리대에 놓인 스텔라 아르투아를 발견했다.",
+        "sourceUrl": "https://www.segye.com/newsView/20251226508540"
       }
     ]
   }

@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "N",
-    "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html",
+    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
     "contents": [
       {
         "contentId": 1,
-        "question": "신세계 그룹에서 유출된 정보는 무엇인가?",
+        "question": "쿠팡이 성탄절에 발표한 조사의 성격은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "마케팅 전략"
+            "text": "공동 연구 조사"
           },
           {
             "label": "B",
-            "text": "고객 개인정보"
+            "text": "국제 협력 조사"
           },
           {
             "label": "C",
-            "text": "재무 보고서"
+            "text": "자체 조사"
           },
           {
             "label": "D",
-            "text": "임직원 사원번호"
+            "text": "정부 주도 조사"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "신세계 그룹에서는 임직원 사원번호 등 개인정보가 유출되었다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡의 성탄절 발표는 정부 조사와 무관한 자체 조사였다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 2,
-        "question": "신세계 그룹은 사고 인지 후 어떤 조치를 취했는가?",
+        "question": "쿠팡이 유출자의 노트북을 회수한 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "신규 시스템 도입"
+            "text": "기술 개발 목적"
           },
           {
             "label": "B",
-            "text": "긴급 점검 및 차단"
+            "text": "고객 서비스 개선"
           },
           {
             "label": "C",
-            "text": "임직원 교육 강화"
+            "text": "정보 유출 확인"
           },
           {
             "label": "D",
-            "text": "고객 정보 삭제"
+            "text": "보안 시스템 업그레이드"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "신세계 그룹은 사고 인지 즉시 긴급 점검과 차단 조치를 시행했다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡은 유출자의 노트북을 회수하여 정보 유출을 확인했다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 3,
-        "question": "신세계 그룹은 정보 유출 사고를 어디에 신고했는가?",
+        "question": "쿠팡이 정부와 협력한 시점은 언제인가?",
         "options": [
           {
             "label": "A",
-            "text": "경찰청"
+            "text": "조사 일지 공개 후"
           },
           {
             "label": "B",
-            "text": "관계 기관"
+            "text": "노트북 회수 전"
           },
           {
             "label": "C",
-            "text": "소비자 보호원"
+            "text": "성탄절 이후"
           },
           {
             "label": "D",
-            "text": "국회"
+            "text": "공문 수령 후"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "신세계 그룹은 정보 유출 사고를 관계 기관에 신고했다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "D",
+        "answerExplanation": "쿠팡은 공문을 받은 후 정부와 협력했다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 4,
-        "question": "신세계 그룹은 유출된 정보 중 고객 정보에 대해 무엇을 확인했는가?",
+        "question": "쿠팡의 성탄절 발표에 대한 비판의 주된 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "유출이 확인됨"
+            "text": "정보 유출 은폐"
           },
           {
             "label": "B",
-            "text": "유출 여부 미확인"
+            "text": "정부의 지시 위반"
           },
           {
             "label": "C",
-            "text": "일부 유출 확인"
+            "text": "셀프 면죄부"
           },
           {
             "label": "D",
-            "text": "유출이 없는 것으로 확인"
+            "text": "고객 서비스 부족"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "신세계 그룹은 고객 정보 유출은 없는 것으로 확인했다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡의 발표는 '셀프 면죄부'라는 비판을 받았다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 5,
-        "question": "신세계 그룹은 앞으로 어떤 계획을 가지고 있는가?",
+        "question": "쿠팡이 공개한 조사 일지의 주요 내용은 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "인력 감축"
+            "text": "고객 불만 사항"
           },
           {
             "label": "B",
-            "text": "해외 진출 확대"
+            "text": "유출 정보의 수량"
           },
           {
             "label": "C",
-            "text": "신규 사업 추진"
+            "text": "정부의 조사 결과"
           },
           {
             "label": "D",
-            "text": "사고 원인 조사"
+            "text": "기술 개발 계획"
           }
         ],
-        "correctAnswer": "D",
-        "answerExplanation": "신세계 그룹은 정확한 사고 원인과 영향 범위에 관한 조사를 진행할 계획이다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "B",
+        "answerExplanation": "조사 일지에는 유출 정보의 수량이 포함되어 있다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       }
     ]
   }

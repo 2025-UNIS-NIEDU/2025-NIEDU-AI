@@ -2,132 +2,132 @@
   {
     "contentType": "MULTIPLE_CHOICE",
     "level": "I",
-    "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html",
+    "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655",
     "contents": [
       {
         "contentId": 1,
-        "question": "신세계 그룹이 개인정보 유출 사고 후 즉각적으로 취한 조치는 무엇인가?",
+        "question": "쿠팡의 성탄절 발표가 '셀프 면죄부'로 비판받는 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "임직원 해고"
+            "text": "정부 지시 불명확"
           },
           {
             "label": "B",
-            "text": "협력사 정보 삭제"
+            "text": "조사 일지 미공개"
           },
           {
             "label": "C",
-            "text": "시스템 점검 및 차단"
+            "text": "노트북 회수 실패"
           },
           {
             "label": "D",
-            "text": "고객 정보 공개"
+            "text": "유출 정보 과장"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "신세계 그룹은 사고 인지 즉시 시스템 점검과 차단 조치를 시행하여 추가 피해를 방지하려는 의도를 보였다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "A",
+        "answerExplanation": "쿠팡의 발표가 정부 조사와 무관한 자체 조사로 비판받는 것은 정부 지시의 불명확성 때문이다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 2,
-        "question": "신세계 그룹의 개인정보 유출 사고에서 고객 정보가 유출되지 않은 점이 시사하는 바는 무엇인가?",
+        "question": "쿠팡의 유출 정보 발표가 '기습'으로 평가받는 이유는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "고객 정보 보안 강화"
+            "text": "정보 과장"
           },
           {
             "label": "B",
-            "text": "고객 불만 증가"
+            "text": "노트북 미회수"
           },
           {
             "label": "C",
-            "text": "협력사 정보 무시"
+            "text": "정부 승인 미비"
           },
           {
             "label": "D",
-            "text": "임직원 정보 중요성"
+            "text": "예고 없는 발표"
           }
         ],
-        "correctAnswer": "A",
-        "answerExplanation": "고객 정보가 유출되지 않았다는 점은 고객 정보 보안이 상대적으로 잘 유지되고 있음을 시사한다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "D",
+        "answerExplanation": "쿠팡의 발표가 '기습'으로 평가받는 것은 예고 없이 이루어졌기 때문이다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 3,
-        "question": "신세계 그룹의 개인정보 유출 사고에서 임직원 정보 유출이 주는 사회적 함의는 무엇인가?",
+        "question": "셀프 면죄부 논란에 맞서 쿠팡이 내세운 주된 반박 근거는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "협력사 신뢰도 상승"
+            "text": "사법기관 확인"
           },
           {
             "label": "B",
-            "text": "내부 보안 취약성"
+            "text": "정부 지시 공문"
           },
           {
             "label": "C",
-            "text": "고객 신뢰도 하락"
+            "text": "유출 건수 발표"
           },
           {
             "label": "D",
-            "text": "경쟁사 이익 증가"
+            "text": "조사 일지 공개"
           }
         ],
-        "correctAnswer": "B",
-        "answerExplanation": "임직원 정보 유출은 신세계 그룹 내부의 보안 시스템이 취약하다는 사회적 함의를 내포한다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "D",
+        "answerExplanation": "2일 공문 수령 뒤 협력 일지를 공개해 독단 발표 이미지를 희석하려 한 조치다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 4,
-        "question": "사고 인지 직후 신세계가 우선 겨냥한 대응 목표는 무엇인가?",
+        "question": "정부 지시 언급의 불명확성이 함의하는 핵심 위험은 무엇이라 볼 수 있는가?",
         "options": [
           {
             "label": "A",
-            "text": "장기 인력 충원"
+            "text": "일원 지휘 체계"
           },
           {
             "label": "B",
-            "text": "클라우드 이전"
+            "text": "감독 주체 불분명"
           },
           {
             "label": "C",
-            "text": "확산 차단"
+            "text": "법적 근거 명확"
           },
           {
             "label": "D",
-            "text": "대외 홍보 강화"
+            "text": "상시 공조 제도"
           }
         ],
-        "correctAnswer": "C",
-        "answerExplanation": "긴급 점검과 차단을 즉시 시행해 피해 확산 억제가 최우선 과제임을 드러냈다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "correctAnswer": "B",
+        "answerExplanation": "지시 주체 불확정은 책임 귀속과 통제 경로를 모호하게 만드는 위험을 뜻한다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       },
       {
         "contentId": 5,
-        "question": "인트라넷 유출 정황이 시사하는 핵심 취약 지점은 무엇인가?",
+        "question": "유출 규모 판단의 신뢰도를 높이는 근거로 기사에서 가장 설득력 있는 요소는 무엇인가?",
         "options": [
           {
             "label": "A",
-            "text": "내부 접근 제어"
+            "text": "행위자 노트북 회수"
           },
           {
             "label": "B",
-            "text": "경계선 방어"
+            "text": "성탄절 자체 발표"
           },
           {
             "label": "C",
-            "text": "고객 정보 암호화"
+            "text": "선제 예방 대책"
           },
           {
             "label": "D",
-            "text": "전면 오프라인"
+            "text": "정부 확정 브리핑"
           }
         ],
         "correctAnswer": "A",
-        "answerExplanation": "내부 인트라넷에서 유출돼 외곽보다 내부 접근 통제가 핵심 취약으로 지목된다.",
-        "sourceUrl": "https://imnews.imbc.com/news/2025/econo/article/6788953_36737.html"
+        "answerExplanation": "회수된 노트북은 저장 범위를 검증해 유출 수치 판단의 신뢰도를 높여 준다.",
+        "sourceUrl": "https://www.ytn.co.kr/_ln/0102_202512261849402655"
       }
     ]
   }
