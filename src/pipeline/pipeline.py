@@ -40,6 +40,8 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger(__name__)
+logger.info(f"ENV_PATH={ENV_PATH} exists={ENV_PATH.exists()}")
+logger.info(f"OPENAI_API_KEY set: {'yes' if os.getenv('OPENAI_API_KEY') else 'no'}")
 
 def run_learning_pipeline():
     """
@@ -49,7 +51,9 @@ def run_learning_pipeline():
     """
     logger.info("=== 전체 학습 파이프라인 시작 ===")
 
+    logger.info("임베딩 모델 로딩 시작")
     embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+    logger.info("임베딩 모델 로딩 완료")
 
     # 코스 생성 파트
     logger.info("뉴스 수집 및 RAG 데이터 빌드 시작")
@@ -69,15 +73,41 @@ def run_learning_pipeline():
         logger.info(f"세션 처리 중 → {course_name} / {headline}")
 
         try:
+            logger.info("퀴즈 생성 시작: article_reading")
             generate_article_reading_quiz(session)
+            logger.info("퀴즈 생성 완료: article_reading")
+
+            logger.info("퀴즈 생성 시작: summary_reading")
             generate_summary_reading_quiz(session)
+            logger.info("퀴즈 생성 완료: summary_reading")
+
+            logger.info("퀴즈 생성 시작: term")
             generate_term_quiz(session)
+            logger.info("퀴즈 생성 완료: term")
+
+            logger.info("퀴즈 생성 시작: current_affairs")
             generate_current_affairs_quiz(session)
+            logger.info("퀴즈 생성 완료: current_affairs")
+
+            logger.info("퀴즈 생성 시작: ox")
             generate_ox_quiz(session)
+            logger.info("퀴즈 생성 완료: ox")
+
+            logger.info("퀴즈 생성 시작: multi_choice")
             generate_multi_choice_quiz(session)
+            logger.info("퀴즈 생성 완료: multi_choice")
+
+            logger.info("퀴즈 생성 시작: short")
             generate_short_quiz(session)
+            logger.info("퀴즈 생성 완료: short")
+
+            logger.info("퀴즈 생성 시작: completion")
             generate_completion_quiz(session)
+            logger.info("퀴즈 생성 완료: completion")
+
+            logger.info("퀴즈 생성 시작: reflect")
             generate_reflect_quiz(session)
+            logger.info("퀴즈 생성 완료: reflect")
         except Exception as e:
             logger.error(f"세션 처리 중 오류 발생 ({course_name}): {e}", exc_info=True)
             continue

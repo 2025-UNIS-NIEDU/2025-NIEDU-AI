@@ -26,3 +26,4 @@ requests==2.32.3
 python-dotenv==1.0.1
 PyYAML==6.0.3
 tqdm==4.67.1
+APScheduler==3.10.4
