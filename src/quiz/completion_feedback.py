@@ -16,7 +16,7 @@ class QuizRequest(BaseModel):
 
 class QuizResponse(BaseModel):
     contentId: int
-    AIscore: int          # 필드명 변경: score -> AIscore
+    AIScore: int          # 필드명 변경: score -> AIScore
     AIFeedback: str       # 필드명 변경: comment -> AIFeedback
 
 class KoreanQuizEvaluator:
@@ -178,6 +178,6 @@ class KoreanQuizEvaluator:
 
         return QuizResponse(
             contentId=request.contentId,
-            AIscore=total,
-            AIFeedback=combined_feedback
+            AIScore=total,
+            AIFeedback=combined_feedback,
         )
