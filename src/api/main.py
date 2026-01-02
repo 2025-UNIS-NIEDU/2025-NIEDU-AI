@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from src.api.endpoint.course_api import router as course_router
+from src.api.endpoint.quiz_api import router as quiz_router
 from src.pipeline.pipeline import run_learning_pipeline
 from datetime import datetime
 import asyncio
@@ -14,6 +15,7 @@ app = FastAPI(title="NIEDU AI Server")
 
 # 라우터 등록
 app.include_router(course_router)
+app.include_router(quiz_router)
 
 KST = pytz.timezone("Asia/Seoul")
 logger = logging.getLogger(__name__)
