@@ -1,10 +1,13 @@
 import os
 import json
 import asyncio
+import logging
 from typing import Tuple
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from pydantic import BaseModel
+
+logger = logging.getLogger(__name__)
 
 class QuizRequest(BaseModel):
     contentId: int
@@ -32,7 +35,9 @@ class KoreanQuizEvaluator:
                 messages=[{"role": "user", "content": prompt}],
                 response_format={"type": "json_object"},
             )
-            data = json.loads(res.choices[0].message.content)
+            raw_content = res.choices[0].message.content
+            logger.info("GPT raw response: %s", raw_content)
+            data = json.loads(raw_content)
             return data.get("score", 0), data.get("feedback", "평가 중 오류가 발생했습니다.")
         except Exception as e:
             print(f"API 호출 중 오류 발생: {e}")
