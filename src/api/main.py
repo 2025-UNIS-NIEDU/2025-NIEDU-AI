@@ -21,9 +21,9 @@ logger = logging.getLogger(__name__)
 scheduler: AsyncIOScheduler | None = None
 
 def _get_schedule_time():
-    """환경 변수로 스케줄 시간 지정 (기본: KST 01:00)."""
-    hour = int(os.getenv("PIPELINE_HOUR", "1"))
-    minute = int(os.getenv("PIPELINE_MINUTE", "0"))
+    """환경 변수로 스케줄 시간 지정 (기본: KST 22:30)."""
+    hour = int(os.getenv("PIPELINE_HOUR", "22"))
+    minute = int(os.getenv("PIPELINE_MINUTE", "30"))
     return hour, minute
 
 def _scheduler_listener(event):
