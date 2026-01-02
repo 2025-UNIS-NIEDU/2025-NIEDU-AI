@@ -50,6 +50,12 @@ jobs:
             DATASOURCE_URL=${{ secrets.DATASOURCE_URL }}
             DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }}
             DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }}
+            OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+            HUGGINGFACEHUB_API_TOKEN=${{ secrets.HUGGINGFACEHUB_API_TOKEN }}
+            GOOGLE_CSE_API_KEY=${{ secrets.GOOGLE_CSE_API_KEY }}
+            GOOGLE_CSE_CX_NEWS=${{ secrets.GOOGLE_CSE_CX_NEWS }}
+            GOOGLE_CSE_CX_GOV=${{ secrets.GOOGLE_CSE_CX_GOV }}
+            GOOGLE_CSE_CX_DICT=${{ secrets.GOOGLE_CSE_CX_DICT }}
             LOG_LEVEL=${{ secrets.LOG_LEVEL }}
             DEEPSEARCH_API_KEY=${{ secrets.DEEPSEARCH_API_KEY }}
             EOF
