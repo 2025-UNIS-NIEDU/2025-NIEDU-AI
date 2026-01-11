@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.khan.co.kr/article/202601112126005",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "쿠팡파이낸셜의 대출 금리가 논란이 된 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "긴 대출 기간"
+          },
+          {
+            "label": "B",
+            "text": "복잡한 절차"
+          },
+          {
+            "label": "C",
+            "text": "고금리 적용"
+          },
+          {
+            "label": "D",
+            "text": "낮은 대출 한도"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "쿠팡파이낸셜의 대출 금리는 저축은행 수준의 고금리로 논란이 되었으며, 이는 금융소비자법 위반 여부에 대한 검사의 배경이 된다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "2",
+        "question": "쿠팡파이낸셜의 대출 금리가 네이버파이낸셜보다 높은 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "금리 인하 정책"
+          },
+          {
+            "label": "B",
+            "text": "대출 한도 증가"
+          },
+          {
+            "label": "C",
+            "text": "신용등급 무관"
+          },
+          {
+            "label": "D",
+            "text": "자영업자 대상"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "쿠팡파이낸셜은 신용등급이 낮은 자영업자에게 대출을 쉽게 해주면서 높은 금리를 적용하여 논란이 되었다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "3",
+        "question": "강 의원이 쿠팡파이낸셜을 비판한 주된 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "금리 인하 실패"
+          },
+          {
+            "label": "B",
+            "text": "고객 서비스 개선"
+          },
+          {
+            "label": "C",
+            "text": "대출 상품 부족"
+          },
+          {
+            "label": "D",
+            "text": "이자 장사"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "강 의원은 쿠팡파이낸셜이 우월적 지위를 이용해 고금리로 이자 장사를 하고 있다고 비판했다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "4",
+        "question": "쿠팡파이낸셜·쿠팡페이 동시 검사가 겨냥한 가장 핵심 영업상 위험은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "수수료 체계 담합"
+          },
+          {
+            "label": "B",
+            "text": "결제서비스 안전성"
+          },
+          {
+            "label": "C",
+            "text": "고금리 영업 관행"
+          },
+          {
+            "label": "D",
+            "text": "대손충당금 부족"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "14.1% 고금리 논란으로 두 계열이 동시 검사되었고, 금리 영업 관행의 소비자보호 위반 위험을 겨냥한 것이다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "5",
+        "question": "네이버 대비 금리 격차를 설명하는 결정적 변수는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "앱 사용자 규모"
+          },
+          {
+            "label": "B",
+            "text": "차주 신용 분포"
+          },
+          {
+            "label": "C",
+            "text": "물류 운영 효율"
+          },
+          {
+            "label": "D",
+            "text": "광고 단가 구조"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "네이버보다 금리가 높고 저신용 자영업자 대상이어서 격차의 핵심 원인은 차주 신용구조로 설명된다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      }
+    ]
+  }
+]

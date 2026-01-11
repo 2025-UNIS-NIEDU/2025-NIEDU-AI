@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "더불어민주당 전라남도당은 2023년 12월 12일 오전 10시에 전라남도당에서 제2차 상무위원회를 개최할 예정이다. 이번 회의에서는 전라남도와 광주광역시의 통합을 인구 감소와 산업 정체 등 구조적 위기를 극복하기 위한 전략적 선택으로 규정할 계획이다. 회의 직후에는 통합 결의대회를 열어 통합 추진의 필요성과 원칙을 도민과 당원들에게 공식적으로 전달할 예정이다.",
+        "keywords": [
+          {
+            "word": "더불어민주당 전라남도당",
+            "isTopicWord": true
+          },
+          {
+            "word": "통합",
+            "isTopicWord": true
+          },
+          {
+            "word": "전라남도",
+            "isTopicWord": false
+          },
+          {
+            "word": "광주광역시",
+            "isTopicWord": false
+          },
+          {
+            "word": "상무위원회",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "전라남도와 광주광역시가 인구 감소와 산업 정체 등으로 인한 경제적 도전에 대응하기 위해 추진하는 통합의 근본적 이유는 무엇입니까?",
+        "correctAnswer": "구조적 위기",
+        "answerExplanation": "구조적 위기는 지역 경제의 지속 가능성을 위협하며 통합의 필요성을 강조한다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "2",
+        "question": "전라남도당이 지역 정책 방향성과 내부 의사결정을 논의하기 위해 개최할 예정인 회의는 무엇입니까?",
+        "correctAnswer": "상무위원회",
+        "answerExplanation": "상무위원회는 지역 정책의 방향성과 의사결정을 조율하는 자리다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "3",
+        "question": "전라남도당이 통합 추진의 필요성을 공식적으로 전달하기 위해 마련한 자리의 명칭은 무엇입니까?",
+        "correctAnswer": "결의대회",
+        "answerExplanation": "결의대회는 통합의 필요성을 강조하고 지역 사회의 지지를 모으는 자리다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "4",
+        "question": "전라남도당이 통합 추진의 필요성과 원칙을 전달하고자 하는 주요 대상은 누구입니까?",
+        "correctAnswer": "도민",
+        "answerExplanation": "도민은 지역 통합의 지지 기반으로서 정책 수용과 참여를 유도하는 대상이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "5",
+        "question": "전라남도와 광주광역시의 통합을 미래 발전을 위한 필수적 조치로 규정하는 접근 방식은 무엇입니까?",
+        "correctAnswer": "전략적 선택",
+        "answerExplanation": "전략적 선택은 지역 발전을 위한 장기적 비전과 계획을 반영한다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      }
+    ]
+  }
+]

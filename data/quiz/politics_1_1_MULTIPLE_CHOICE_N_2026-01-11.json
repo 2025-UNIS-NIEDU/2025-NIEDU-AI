@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://biz.heraldcorp.com/article/10653080",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "서왕진 조국혁신당 원내대표가 제안한 정치개혁 방안은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "단일 선거구제"
+          },
+          {
+            "label": "B",
+            "text": "비례대표제 확대"
+          },
+          {
+            "label": "C",
+            "text": "지역구 축소"
+          },
+          {
+            "label": "D",
+            "text": "3~5인 중대선거구제"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "서왕진 원내대표는 3~5인 중대선거구제를 제안했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "2",
+        "question": "서왕진 원내대표가 강조한 정치개혁의 유일한 길은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정치 자금 투명화"
+          },
+          {
+            "label": "B",
+            "text": "구태 정치 일소"
+          },
+          {
+            "label": "C",
+            "text": "정당 간 협력"
+          },
+          {
+            "label": "D",
+            "text": "선거제도 개편"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "서왕진 원내대표는 구태 정치 일소가 유일한 길이라 강조했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "3",
+        "question": "조국혁신당이 제안한 법안의 명칭은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "돈공천 추방 4법"
+          },
+          {
+            "label": "B",
+            "text": "정치개혁 3법"
+          },
+          {
+            "label": "C",
+            "text": "공정선거 5법"
+          },
+          {
+            "label": "D",
+            "text": "민생안정 2법"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "조국혁신당은 돈공천 추방 4법을 제안했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "4",
+        "question": "서왕진 원내대표가 기자회견을 연 장소는 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정당 회의실"
+          },
+          {
+            "label": "B",
+            "text": "청와대"
+          },
+          {
+            "label": "C",
+            "text": "국회 소통관"
+          },
+          {
+            "label": "D",
+            "text": "서울시청"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "서왕진 원내대표는 국회 소통관에서 기자회견을 열었다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "5",
+        "question": "서왕진 원내대표가 언급한 여당의 과업은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "위기 정치 극복"
+          },
+          {
+            "label": "B",
+            "text": "경제 성장 촉진"
+          },
+          {
+            "label": "C",
+            "text": "국방력 강화"
+          },
+          {
+            "label": "D",
+            "text": "교육 개혁 추진"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "서왕진 원내대표는 여당의 과업으로 위기 정치 극복을 언급했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      }
+    ]
+  }
+]

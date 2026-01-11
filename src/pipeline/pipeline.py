@@ -1,19 +1,15 @@
 # === src/pipeline/pipeline.py ===
 
-import sys, json, logging, os
+import sys, logging
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 
-# === 환경 변수 로드 ===
+# === 경로 설정 ===
 BASE_DIR = Path(__file__).resolve().parents[2]
+sys.path.append(str(BASE_DIR / "src"))
+
 ENV_PATH = BASE_DIR / ".env"
 load_dotenv(ENV_PATH, override=True)
-
-# --- 코스 생성 관련 ---
-from course.news_api import fetch_news
-from course.course_generator import generate_all_courses
-from course.course_refiner import refine_course_structure
 
 # --- 퀴즈 생성 관련 ---
 from quiz.select_session import select_session
@@ -30,43 +26,49 @@ from quiz.reflect import generate_reflect_quiz
 # --- Wrapper ---
 from wrapper.course_wrapper import build_course_packages
 
-from sentence_transformers import SentenceTransformer
-from datetime import datetime
-
 # === 로깅 설정 ===
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
+    format="%(asctime)s [%(levelname)s] %(message)s",
 )
 logger = logging.getLogger(__name__)
 
+
 def run_learning_pipeline():
-    """
-    전체 자동 학습 파이프라인
-    뉴스 → RAG → 코스 생성 → 정제 → 퀴즈 생성 → 패키징
-    (최종 JSON 패키지 반환)
-    """
-    logger.info("=== 전체 학습 파이프라인 시작 ===")
+    logger.info("=== START LEARNING PIPELINE ===")
 
-    embedding_model = SentenceTransformer("jhgan/ko-sroberta-multitask")
+    # fetch_news()
+    # generate_all_courses()
+    # refine_course_structure()
+    logger.info("Course generation step skipped (already exists)")
 
-    # 코스 생성 파트
-    logger.info("뉴스 수집 및 RAG 데이터 빌드 시작")
-    fetch_news()
-    generate_all_courses()
-    refine_course_structure()
-    logger.info("코스 생성 및 정제 완료")
+    logger.info("=== START QUIZ GENERATION (courseId=1, sessionId=1) ===")
 
-    # 퀴즈 생성
-    logger.info("=== 퀴즈 생성 단계 시작 ===")
-    all_sessions = select_session()
-    logger.info(f"총 {len(all_sessions)}개 세션을 처리합니다.")
+    sessions = select_session()
+    logger.info(f"총 세션 수: {len(sessions)}")
 
-    for session in all_sessions:
-        course_name = session.get("courseName", "")
-        headline = session.get("headline", "")
-        logger.info(f"세션 처리 중 → {course_name} / {headline}")
+    selected_by_topic = {}
+
+    for s in sessions:
+        if s.get("courseId") != 1:
+            continue
+        if s.get("sessionId") != 1:
+            continue
+
+        topic = s.get("topic")
+        if topic not in selected_by_topic:
+            selected_by_topic[topic] = s
+            logger.info(
+                f"선택됨 → topic={topic}, courseId=1, sessionId=1"
+            )
+
+    logger.info(f"총 퀴즈 생성 대상 세션 수: {len(selected_by_topic)}")
+
+    # --------------------------------------------------
+    # 3. 퀴즈 실제 생성
+    # --------------------------------------------------
+    for topic, session in selected_by_topic.items():
+        logger.info(f"퀴즈 생성 시작 → [{topic}] {session.get('headline')}")
 
         try:
             generate_article_reading_quiz(session)
@@ -78,21 +80,19 @@ def run_learning_pipeline():
             generate_short_quiz(session)
             generate_completion_quiz(session)
             generate_reflect_quiz(session)
-        except Exception as e:
-            logger.error(f"세션 처리 중 오류 발생 ({course_name}): {e}", exc_info=True)
-            continue
 
-    # 코스 + 퀴즈 통합 패키징
-    logger.info("=== 퀴즈 생성 완료 → 코스 패키징 시작 ===")
-    try:
-        package_data = build_course_packages()
-        logger.info("코스 패키징 완료")
-    except Exception as e:
-        logger.error(f"코스 패키징 중 오류 발생: {e}", exc_info=True)
-        package_data = None
+            logger.info(f"퀴즈 생성 완료 → [{topic}]")
 
-    logger.info("=== 전체 파이프라인 완료 ===")
-    return package_data
+        except Exception:
+            logger.exception(f"퀴즈 생성 실패 → [{topic}]")
+
+    # --------------------------------------------------
+    # 4. 패키징
+    # --------------------------------------------------
+    logger.info("=== START COURSE PACKAGING ===")
+    build_course_packages()
+    logger.info("=== PIPELINE PROCESS COMPLETED ===")
+
 
 if __name__ == "__main__":
     run_learning_pipeline()

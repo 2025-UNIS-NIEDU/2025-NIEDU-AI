@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "통합을 전략적 선택으로 본 규정의 핵심 의도는 단순 개편을 넘어 무엇을 겨냥한다는 뜻인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "선거지형 유리"
+          },
+          {
+            "label": "B",
+            "text": "행정비용 절감"
+          },
+          {
+            "label": "C",
+            "text": "지역상징 강화"
+          },
+          {
+            "label": "D",
+            "text": "인구·산업 위기 대응"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "통합을 위기 대응 전략으로 규정해 단순 행정개편을 넘어 구조 전환 의지를 드러낸다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "2",
+        "question": "회의 직후 열리는 결의대회의 대외 메시지 초점은 무엇이라고 해석할 수 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "재정지원 요구"
+          },
+          {
+            "label": "B",
+            "text": "추진일정 발표"
+          },
+          {
+            "label": "C",
+            "text": "반대여론 차단"
+          },
+          {
+            "label": "D",
+            "text": "필요성과 원칙"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "결의대회는 도민·당원에게 필요와 원칙을 공표해 추진의 공적 정당성을 축적하려는 장치다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "3",
+        "question": "상무위원회에서의 당론 의결이 갖는 정치적 성격을 가장 적절히 설명하는 것은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "중앙정부 요청"
+          },
+          {
+            "label": "B",
+            "text": "법제도 확정"
+          },
+          {
+            "label": "C",
+            "text": "당내 공식화"
+          },
+          {
+            "label": "D",
+            "text": "지방의회 결의"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "상무위 의결로 통합 추진 입장을 공식화해 당내 의사결정의 기준점을 세우려는 조치다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "4",
+        "question": "통합을 행정 절차가 아닌 전략으로 본 규정이 강조하는 변화의 성격은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "구조전환 지향"
+          },
+          {
+            "label": "B",
+            "text": "기관통합 위주"
+          },
+          {
+            "label": "C",
+            "text": "예산절감 우선"
+          },
+          {
+            "label": "D",
+            "text": "행정경계 조정"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "행정경계 조정보다 호남 대전환을 앞세워 구조적 문제 해결을 지향하는 변화임을 강조한다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "5",
+        "question": "해당 당부가 추진 정당성 확보를 위해 선택한 주요 수단은 무엇으로 볼 수 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "대중참여 결의"
+          },
+          {
+            "label": "B",
+            "text": "국회 법안 발의"
+          },
+          {
+            "label": "C",
+            "text": "비공개 간담"
+          },
+          {
+            "label": "D",
+            "text": "여론조사 우선"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "회의 뒤 결의대회로 도민·당원 참여를 모아 지지 기반을 넓혀 추진의 사회적 정당성을 보강한다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      }
+    ]
+  }
+]

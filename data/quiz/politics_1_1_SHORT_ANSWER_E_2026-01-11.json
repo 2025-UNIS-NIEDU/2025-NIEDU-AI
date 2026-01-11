@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "E",
+    "sourceUrl": "https://biz.heraldcorp.com/article/10653080",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "정치적 다양성과 대표성을 강화하기 위해 조국혁신당이 제안한 선거구제의 명칭은 무엇입니까?",
+        "correctAnswer": "중대선거구제",
+        "answerExplanation": "중대선거구제는 정치적 다양성을 확대해 대표성을 강화하려는 제도다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "2",
+        "question": "정치자금의 투명성과 공정성을 강화하기 위해 특별위원회에서 중요하게 논의되기를 바라는 법안은 무엇입니까?",
+        "correctAnswer": "돈공천 추방 4법",
+        "answerExplanation": "돈공천 추방 4법은 정치자금의 투명성을 높여 공정한 선거 문화를 지향한다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "3",
+        "question": "구태 정치의 종식을 목표로 하며 정치 체제의 근본적 변화를 추구하는 유일한 방법으로 강조된 개념은 무엇입니까?",
+        "correctAnswer": "정치개혁",
+        "answerExplanation": "정치개혁은 구태 정치의 종식을 통해 민주주의 발전을 지향한다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "4",
+        "question": "정치적 메시지 전달과 대중과의 소통 강화를 위해 서왕진 원내대표가 국회 소통관에서 개최한 공식 행사는 무엇입니까?",
+        "correctAnswer": "기자회견",
+        "answerExplanation": "기자회견은 대중과의 소통을 통해 정치적 메시지를 명확히 전달한다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "5",
+        "question": "정치적 위기 상황에서 여당의 새 원내사령탑에게 요구된, 당의 안정과 지속 가능성을 위한 핵심 과제는 무엇입니까?",
+        "correctAnswer": "위기 극복",
+        "answerExplanation": "위기 극복은 당의 안정과 지속 가능성을 확보하는 전략적 과제다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      }
+    ]
+  }
+]

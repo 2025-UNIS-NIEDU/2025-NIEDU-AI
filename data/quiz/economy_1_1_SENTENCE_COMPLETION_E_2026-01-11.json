@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "쿠팡파이낸셜의 '판매자 성장 대출'은 출시 반년 만에 ______",
+        "referenceAnswer": "약 182억원의 누적액을 기록한 것으로 나타났다."
+      },
+      {
+        "contentId": "2",
+        "question": "강 의원은 쿠팡이 자영업자에게 적용하는 금리가 ______",
+        "referenceAnswer": "사실상 저축은행 금리에 육박하고 있다고 주장했다."
+      },
+      {
+        "contentId": "3",
+        "question": "금감원은 쿠팡파이낸셜의 이자 장사에 대해 ______",
+        "referenceAnswer": "금융소비자법 등 위반 여부를 검사해야 한다."
+      }
+    ]
+  ]
+}

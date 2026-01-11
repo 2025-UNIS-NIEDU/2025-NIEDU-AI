@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://biz.heraldcorp.com/article/10653080",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "서왕진 원내대표가 강조한 정치개혁의 유일한 방법은 무엇인가?",
+        "correctAnswer": "정치개혁",
+        "answerExplanation": "서왕진 원내대표는 정치개혁이 구태 정치를 없앨 유일한 방법이라고 말했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "2",
+        "question": "조국혁신당이 제안한 선거구제의 명칭은 무엇인가?",
+        "correctAnswer": "중대선거구제",
+        "answerExplanation": "조국혁신당은 '3~5인 중대선거구제'를 제안했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "3",
+        "question": "서왕진 원내대표가 국회 소통관에서 개최한 행사는 무엇인가?",
+        "correctAnswer": "기자회견",
+        "answerExplanation": "서왕진 원내대표와 공동위원장들이 국회 소통관에서 기자회견을 열었다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "4",
+        "question": "정치개혁특별위원회에서 중요하게 논의되기를 바라는 법안은 무엇인가?",
+        "correctAnswer": "돈공천 추방 4법",
+        "answerExplanation": "서왕진 원내대표는 '돈공천 추방 4법'이 중요하게 논의되기를 바란다고 말했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "5",
+        "question": "서왕진 원내대표가 여당의 새 원내사령탑에게 요구한 것은 무엇인가?",
+        "correctAnswer": "위기 극복",
+        "answerExplanation": "서왕진 원내대표는 여당의 새 원내사령탑에게 위기를 극복해야 한다고 강조했다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      }
+    ]
+  }
+]

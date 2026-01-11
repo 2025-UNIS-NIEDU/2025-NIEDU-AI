@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.khan.co.kr/article/202601112126005",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "쿠팡파이낸셜이 출시한 대출 상품의 이름은 무엇인가?",
+        "correctAnswer": "판매자 성장 대출",
+        "answerExplanation": "쿠팡파이낸셜은 '판매자 성장 대출'을 출시하였다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "2",
+        "question": "쿠팡파이낸셜의 대출 상품 출시 후 누적 대출액은 얼마인가?",
+        "correctAnswer": "대출액",
+        "answerExplanation": "쿠팡파이낸셜은 누적 대출액 약 182억원을 기록하였다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "3",
+        "question": "네이버파이낸셜이 제공하는 대출 상품의 수는 몇 개인가?",
+        "correctAnswer": "대출 상품",
+        "answerExplanation": "네이버파이낸셜은 세 가지 대출 상품을 제공한다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "4",
+        "question": "쿠팡파이낸셜의 대출 금리에 대해 문제를 제기한 인물은 누구인가?",
+        "correctAnswer": "강민국 의원",
+        "answerExplanation": "강민국 의원은 쿠팡의 높은 금리를 문제 삼았다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      },
+      {
+        "contentId": "5",
+        "question": "쿠팡파이낸셜의 법 위반 여부를 검사해야 한다고 언급된 기관은 어디인가?",
+        "correctAnswer": "금융감독원",
+        "answerExplanation": "금융감독원이 쿠팡파이낸셜의 법 위반 여부를 검사해야 한다고 밝혔다.",
+        "sourceUrl": "https://www.khan.co.kr/article/202601112126005"
+      }
+    ]
+  }
+]

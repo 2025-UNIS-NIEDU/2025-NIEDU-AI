@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "이란의 마수드 페제쉬키안 대통령은 반정부 시위가 보름째 계속되는 11일 관리들이 시위자들의 주장을 경청할 것이라면서도 '폭도들이 ______",
+        "referenceAnswer": "전체 사회를 파괴하려 시도하고 있다'고 말했다."
+      },
+      {
+        "contentId": "2",
+        "question": "페제쉬키안 대통령의 발언은 시위 사태가 악화되면서 ______",
+        "referenceAnswer": "강경한 쪽으로 돌아선 신호를 나타냈다."
+      },
+      {
+        "contentId": "3",
+        "question": "대통령은 관리들의 보다 더 높은 의무는 일단의 폭도들이 ______",
+        "referenceAnswer": "사회 전체를 파괴하려는 것을 용납하지 않는 것이라고 강조했다."
+      }
+    ]
+  ]
+}

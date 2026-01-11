@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "더불어민주당 전남도당이 개최할 예정인 회의는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "운영위원회의"
+          },
+          {
+            "label": "B",
+            "text": "전략회의"
+          },
+          {
+            "label": "C",
+            "text": "정책위원회의"
+          },
+          {
+            "label": "D",
+            "text": "상무위원회의"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "전남도당은 제2차 상무위원회의를 열 예정이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "2",
+        "question": "전남도당이 전남·광주 통합을 규정한 방식은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "문화적 융합"
+          },
+          {
+            "label": "B",
+            "text": "호남 대전환의 전략적 선택"
+          },
+          {
+            "label": "C",
+            "text": "경제적 통합"
+          },
+          {
+            "label": "D",
+            "text": "행정구역 개편"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "전남도당은 통합을 호남 대전환의 전략적 선택으로 규정했다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "3",
+        "question": "전남도당이 통합 추진에 대한 입장을 확정할 계획인 장소는 어디인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "전남도당"
+          },
+          {
+            "label": "B",
+            "text": "광주도당"
+          },
+          {
+            "label": "C",
+            "text": "부산지부"
+          },
+          {
+            "label": "D",
+            "text": "서울본부"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "전남도당에서 통합 추진에 대한 입장을 확정할 예정이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "4",
+        "question": "전남도당이 통합 추진의 필요성을 밝힐 계획인 행사는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "통합 토론회"
+          },
+          {
+            "label": "B",
+            "text": "통합 설명회"
+          },
+          {
+            "label": "C",
+            "text": "통합 결의대회"
+          },
+          {
+            "label": "D",
+            "text": "통합 협의회"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "전남도당은 통합 결의대회를 통해 필요성을 밝힐 계획이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "5",
+        "question": "전남도당이 통합 추진을 통해 극복하려는 문제는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경제 불황"
+          },
+          {
+            "label": "B",
+            "text": "인구 감소와 산업 정체"
+          },
+          {
+            "label": "C",
+            "text": "정치적 갈등"
+          },
+          {
+            "label": "D",
+            "text": "문화적 차이"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "전남도당은 인구 감소와 산업 정체 문제를 극복하려 한다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      }
+    ]
+  }
+]

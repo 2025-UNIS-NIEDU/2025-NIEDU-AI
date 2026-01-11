@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "서왕진 원내대표는 정치개혁이 ______",
+        "referenceAnswer": "구태 정치를 일소할 유일한 길이라고 강조했다."
+      },
+      {
+        "contentId": "2",
+        "question": "조국혁신당은 '돈공천 추방 4법'을 ______",
+        "referenceAnswer": "정개특위에서 비중 있게 논의되길 바란다고 밝혔다."
+      },
+      {
+        "contentId": "3",
+        "question": "서왕진 원내대표는 여당의 새 원내사령탑에게 ______",
+        "referenceAnswer": "위기의 정치를 살리고 민생의 희망을 일궈낼 과업이 있다고 말했다."
+      }
+    ]
+  ]
+}
