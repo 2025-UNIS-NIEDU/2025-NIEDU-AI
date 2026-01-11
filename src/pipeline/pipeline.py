@@ -11,6 +11,11 @@ sys.path.append(str(BASE_DIR / "src"))
 ENV_PATH = BASE_DIR / ".env"
 load_dotenv(ENV_PATH, override=True)
 
+# --- 코스 생성 관련 ---
+from course.news_api import fetch_news
+from course.course_generator import generate_all_courses
+from course.course_refiner import refine_course_structure
+
 # --- 퀴즈 생성 관련 ---
 from quiz.select_session import select_session
 from quiz.article_reading import generate_article_reading_quiz
@@ -37,9 +42,9 @@ logger = logging.getLogger(__name__)
 def run_learning_pipeline():
     logger.info("=== START LEARNING PIPELINE ===")
 
-    # fetch_news()
-    # generate_all_courses()
-    # refine_course_structure()
+    fetch_news()
+    generate_all_courses()
+    refine_course_structure()
     logger.info("Course generation step skipped (already exists)")
 
     logger.info("=== START QUIZ GENERATION (courseId=1, sessionId=1) ===")
@@ -64,9 +69,6 @@ def run_learning_pipeline():
 
     logger.info(f"총 퀴즈 생성 대상 세션 수: {len(selected_by_topic)}")
 
-    # --------------------------------------------------
-    # 3. 퀴즈 실제 생성
-    # --------------------------------------------------
     for topic, session in selected_by_topic.items():
         logger.info(f"퀴즈 생성 시작 → [{topic}] {session.get('headline')}")
 
@@ -86,9 +88,6 @@ def run_learning_pipeline():
         except Exception:
             logger.exception(f"퀴즈 생성 실패 → [{topic}]")
 
-    # --------------------------------------------------
-    # 4. 패키징
-    # --------------------------------------------------
     logger.info("=== START COURSE PACKAGING ===")
     build_course_packages()
     logger.info("=== PIPELINE PROCESS COMPLETED ===")

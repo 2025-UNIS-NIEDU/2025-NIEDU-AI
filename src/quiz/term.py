@@ -125,7 +125,6 @@ def generate_term_quiz(selected_session=None):
     # ===  최소 2개 이상 보장 로직 추가 ===
     if not filtered_terms or len(filtered_terms) < 2:
         logger.warning(f"[{topic}] 필터링 결과 2개 미만 → 원본 일부 보강")
-        needed = 2 - len(filtered_terms)
         for t in terms:
             if t not in filtered_terms:
                 filtered_terms.append(t)

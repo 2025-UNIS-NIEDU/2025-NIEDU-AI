@@ -18,7 +18,6 @@ def generate_multi_choice_quiz(selected_session=None):
 
     # === 1️. 환경 변수 로드 ===
     load_dotenv(override=True)
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
     # === 2️. 세션 선택 ===
     if selected_session is None:
@@ -91,7 +90,7 @@ def generate_multi_choice_quiz(selected_session=None):
                 validated.append(cand)
         return validated
 
-    # === 8. 문제 생성 ===
+    # === 7. 문제 생성 ===
     def generate_all_quizzes(summary: str):
         logger.info(f"[{topic}] N·I단계 퀴즈 생성 중...")
 
@@ -113,73 +112,117 @@ def generate_multi_choice_quiz(selected_session=None):
 
         total_i = (validated_i + harder_i)[:5]
         
-        # === 현재 정답 배치 랜덤화 ===
-        def shuffle_options(q):
-            options = q.get("options", [])
-            correct_label = q.get("correctAnswer")
+        # === 8. 정답 라벨 균등 배열 생성 ===
+        total_questions = len(fact_n) + len(total_i)
 
-            if not options or not correct_label:
-                return q
+        balanced_labels = ["A","B","C","D"] * ((total_questions // 4) + 1)
+        random.shuffle(balanced_labels)
+        balanced_labels = balanced_labels[:total_questions]
 
-            # 정답 텍스트 확보
+        balanced_index = 0
+
+        # === 정답 위치 균등화 셔플 ===
+        def assign_balanced_label(q, forced_label):
+            options = q["options"]
+            correct_label = q["correctAnswer"]
+            
+            # 정답 텍스트 찾아서
             correct_text = next(
-                (opt["text"].strip() for opt in options if opt["label"] == correct_label),
-                None
-            )
-            if not correct_text:
-                return q
-
-            # 옵션 셔플
-            random.shuffle(options)
-
-            # 라벨 재부여
-            labels = ["A", "B", "C", "D"]
-            for idx, opt in enumerate(options):
-                opt["label"] = labels[idx]
-
-            # 새 정답 라벨
-            new_correct_label = next(
-                (opt["label"] for opt in options if opt["text"].strip() == correct_text),
-                None
+                opt["text"] for opt in options if opt["label"] == correct_label
             )
 
-            q["options"] = options
-            q["correctAnswer"] = new_correct_label
+            # 오답 텍스트
+            distractors = [opt["text"] for opt in options if opt["text"] != correct_text]
+            random.shuffle(distractors)
+
+            # 새 옵션 생성
+            labels = ["A","B","C","D"]
+            new_opts = []
+
+            for label in labels:
+                if label == forced_label:
+                    new_opts.append({"label": label, "text": correct_text})
+                else:
+                    new_opts.append({"label": label, "text": distractors.pop()})
+
+            q["options"] = new_opts
+            q["correctAnswer"] = forced_label
             return q
 
-        # === ★ N 단계 셔플 적용 ===
+        # N단계
         for q in fact_n:
-            shuffle_options(q)
+            forced_label = balanced_labels[balanced_index]
+            assign_balanced_label(q, forced_label)
+            balanced_index += 1
 
-        # === ★ I 단계 셔플 적용 ===
+        # I단계
         for q in total_i:
-            shuffle_options(q)
+            forced_label = balanced_labels[balanced_index]
+            assign_balanced_label(q, forced_label)
+            balanced_index += 1
 
         # contentId 재정렬
         for idx, q in enumerate(total_i, start=1):
-            q["contentId"] = str(idx)
+            q["contentId"] = idx
 
         return {"fact_n": fact_n, "inference_i": total_i}
 
-    # === 9. 출력 포맷 ===
+    # === 9. 출력 포맷 — LLM 안전 append 방식으로 변경 ===
     def format_quiz_output(data):
         formatted = []
+
         for level, key in [("N", "fact_n"), ("I", "inference_i")]:
             items = data.get(key, [])
-            cleaned = [{
-                "contentId": i.get("contentId"),
-                "question": i.get("question"),
-                "options": i.get("options"),
-                "correctAnswer": i.get("correctAnswer"),
-                "answerExplanation": i.get("answerExplanation"),
-                "sourceUrl": sourceUrl
-            } for i in items]
+            contents = []
+
+            for idx, item in enumerate(items, start=1):
+
+                # 안전 보정
+                question = item.get("question", "").strip()
+                options = item.get("options", [])
+                correct_label = item.get("correctAnswer", "").strip()
+                explanation = item.get("answerExplanation", "")
+
+                # --- 옵션 보정 ---
+                if not isinstance(options, list):
+                    options = []
+
+                # 옵션 4개 미만이면 채우기
+                while len(options) < 4:
+                    options.append({"label": None, "text": "보기를 찾을 수 없음"})
+
+                # --- 정답 보정 ---
+                # 이제 correct_text를 “보정된 options”에서 찾는다.
+                correct_text = None
+                for opt in item.get("options", []):
+                    if opt.get("label") == correct_label:
+                        correct_text = opt.get("text", "").strip()
+
+                new_correct_label = None
+                if correct_text:
+                    for opt in options:
+                        if opt["text"].strip() == correct_text:
+                            new_correct_label = opt["label"]
+                            break
+
+                # 정답이 없을 경우 → fallback 없음 → 그냥 None으로 둔다
+
+                contents.append({
+                    "contentId": idx,  
+                    "question": question or "",
+                    "options": options or "",
+                    "correctAnswer": new_correct_label or "",
+                    "answerExplanation": explanation or "",
+                    "sourceUrl": sourceUrl
+                })
+
             formatted.append({
                 "contentType": "MULTIPLE_CHOICE",
                 "level": level,
                 "sourceUrl": sourceUrl,
-                "contents": cleaned
+                "contents": contents
             })
+
         return formatted
 
     # === 10. 저장 ===

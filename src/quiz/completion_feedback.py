@@ -1,17 +1,50 @@
-from openai import OpenAI
-import os, json
-from pathlib import Path
+import os
+import json
+import asyncio
+import logging
+from typing import Tuple
 from dotenv import load_dotenv
-from datetime import datetime
+from openai import AsyncOpenAI
+from pydantic import BaseModel
 
-def generate_completion_feedback_quiz():
-    # === 환경 변수 ===
-    load_dotenv(override=True)
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    client = OpenAI(api_key=OPENAI_API_KEY)
+logger = logging.getLogger(__name__)
 
-    # === 1. 의미 평가 (60%) ===
-    def evaluate_meaning(answer: str, userAnswer: str):
+class QuizRequest(BaseModel):
+    contentId: int
+    referenceAnswer: str  
+    userAnswer: str
+
+class QuizResponse(BaseModel):
+    contentId: int
+    AIScore: int          # 필드명 변경: score -> AIScore
+    AIFeedback: str       # 필드명 변경: comment -> AIFeedback
+
+class KoreanQuizEvaluator:
+    def __init__(self):
+        load_dotenv(override=True)
+        self.client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.model_main = "gpt-4o"
+        self.model_grammar = "gpt-4o-mini"
+
+    async def _call_gpt_api(self, model: str, prompt: str) -> Tuple[int, str]:
+        """OpenAI API 호출 공통 메서드"""
+        try:
+            res = await self.client.chat.completions.create(
+                model=model,
+                temperature=0.0,
+                messages=[{"role": "user", "content": prompt}],
+                response_format={"type": "json_object"},
+            )
+            raw_content = res.choices[0].message.content
+            logger.info("GPT raw response: %s", raw_content)
+            data = json.loads(raw_content)
+            return data.get("score", 0), data.get("feedback", "평가 중 오류가 발생했습니다.")
+        except Exception as e:
+            print(f"API 호출 중 오류 발생: {e}")
+            return 0, "평가 시스템 통신 오류가 발생했습니다."
+
+    async def evaluate_meaning(self, answer: str, userAnswer: str) -> Tuple[int, str]:
+        """의미 평가 (60%) - 프롬프트 유지"""
         prompt = f"""
     당신은 뉴스 문장 평가 전문가이자 한국어 학습 피드백 코치입니다.
     학습자의 문장이 모범답안의 의미를 얼마나 잘 전달했는지를 평가해주세요.
@@ -24,9 +57,9 @@ def generate_completion_feedback_quiz():
     5. 완전히 반대되거나 왜곡된 경우에만 큰 감점을 적용합니다.  
 
     [평가 기준]  
-    1. 의미가 동일하거나 거의 동일 (핵심 주장 또는 방향성 일치): **90~100점**  
-    2. 핵심 방향은 같으나 표현이 간략하거나 일부 누락된 경우: **80~89점**  
-    3. 주제는 같으나 논리 방향이 약간 어긋남: **60~79점**  
+    1. 의미가 동일하거나 거의 동일 (핵심 주장 또는 방향성 일치): **90~100점** 
+    2. 핵심 방향은 같으나 표현이 간략하거나 일부 누락된 경우: **80~89점** 
+    3. 주제는 같으나 논리 방향이 약간 어긋남: **60~79점** 
     4. 핵심 의미가 다르거나 반대 의미로 표현됨: **0~59점**
 
     [멘트]
@@ -45,22 +78,10 @@ def generate_completion_feedback_quiz():
     "feedback": "100자 이내 피드백"
     }}
     """
-        try:
-            res = client.chat.completions.create(
-                model="gpt-4o",
-                temperature=0.0,
-                messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
-            )
-            data = json.loads(res.choices[0].message.content)
-            return data["score"], data["feedback"]
-        except Exception as e:
-            print("의미 평가 오류:", e)
-            return 0, "의미 평가 중 오류가 발생했습니다."
+        return await self._call_gpt_api(self.model_main, prompt)
 
-
-    # === 2. 맥락 평가 (30%) ===
-    def evaluate_context(answer: str, userAnswer: str):
+    async def evaluate_context(self, answer: str, userAnswer: str) -> Tuple[int, str]:
+        """맥락 평가 (30%) - 프롬프트 유지"""
         prompt = f"""
     당신은 뉴스 문맥 흐름 평가 전문가입니다.
     학습자의 문장이 기사 전후 흐름과 얼마나 자연스럽게 이어지는지를 평가하세요.
@@ -105,22 +126,10 @@ def generate_completion_feedback_quiz():
     "feedback": "100자 이내 피드백"
     }}
     """
-        try:
-            res = client.chat.completions.create(
-                model="gpt-4o",
-                temperature=0.0,
-                messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
-            )
-            data = json.loads(res.choices[0].message.content)
-            return data["score"], data["feedback"]
-        except Exception as e:
-            print("맥락 평가 오류:", e)
-            return 0, "맥락 평가 중 오류가 발생했습니다."
+        return await self._call_gpt_api(self.model_main, prompt)
 
-
-    # === 3. 문법 평가 (10%) ===
-    def evaluate_grammar(userAnswer: str):
+    async def evaluate_grammar(self, userAnswer: str) -> Tuple[int, str]:
+        """문법 평가 (10%) - 프롬프트 유지"""
         prompt = f"""
     너는 한국어 문장의 문법적 완성도를 평가하는 전문가야.
     아래 문장의 문법적 정확성과 어법의 자연스러움을 0~100점으로 평가해.
@@ -145,104 +154,30 @@ def generate_completion_feedback_quiz():
     [문장]
     {userAnswer}
     """
-        try:
-            res = client.chat.completions.create(
-                model="gpt-4o-mini",
-                temperature=0.0,
-                messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
-            )
-            data = json.loads(res.choices[0].message.content)
-            return data["score"], data["feedback"]
-        except Exception as e:
-            print("문법 평가 오류:", e)
-            return 0, "문법 평가 중 오류가 발생했습니다."
+        return await self._call_gpt_api(self.model_grammar, prompt)
 
-
-    # === 4. 총점 계산 및 출력 JSON 구성 ===
-    def evaluate_feedback(answer: str, userAnswer: str, question: str, contentId: int, level: str = "E"):
-        meaning_score, meaning_fb = evaluate_meaning(answer, userAnswer)
-        context_score, context_fb = evaluate_context(answer, userAnswer)
-        grammar_score, grammar_fb = evaluate_grammar(userAnswer)
-
-        # 가중치 적용
-        total = int(0.6 * meaning_score + 0.3 * context_score + 0.1 * grammar_score)
-
-        # 점수 십의 자리 단위
-        total = int(round(total / 10) * 10)
-
-        # comment 통합 (맨 앞에 기본멘트 추가)
-        comment = (
-            f"의미: {meaning_fb}\n"
-            f"맥락: {context_fb}\n"
-            f"문법: {grammar_fb}"
+    async def solve_feedback_quiz(self, request: QuizRequest) -> QuizResponse:
+        """최종 평가 실행 및 가중치 합산"""
+        
+        results = await asyncio.gather(
+            self.evaluate_meaning(request.referenceAnswer, request.userAnswer),
+            self.evaluate_context(request.referenceAnswer, request.userAnswer),
+            self.evaluate_grammar(request.userAnswer)
         )
 
-        # 🔹 리스트 없이 단일 객체 반환
-        return {
-            "contentId": contentId,
-            "question": question,
-            "userAnswer": userAnswer,
-            "score": total,
-            "comment": comment
-        }
-    
+        (m_score, m_fb), (c_score, c_fb), (g_score, g_fb) = results
 
-    # === 여러 문항 자동 평가 ===
-    if __name__ == "__main__":
-        topic = "politics"
-        courseId = "1"
-        sessionId = "1"
-        level = "E"
+        # 가중치 적용 (의미 60%, 맥락 30%, 문법 10%)
+        total = int(0.6 * m_score + 0.3 * c_score + 0.1 * g_score)
+        
+        # 십 단위 반올림
+        total = int(round(total / 10) * 10)
 
-        qa_list = [
-            {
-                "contentId": 1,
-                "question": "한국과 싱가포르가 ______",
-                "referenceAnswer": "전략적 동반자 관계를 수립했습니다.",
-                "userAnswer": "긴밀한 관계를 끊었습니다."  
-            },
-            {
-                "contentId": 2,
-                "question": "이재명 대통령은 정상회담 결과를 ______",
-                "referenceAnswer": "공동언론발표에서 설명했습니다.",
-                "userAnswer": "언론에서 발표했습니다."  
-            },
-            {
-                "contentId": 3,
-                "question": "웡 총리는 양국 관계의 훌륭한 상태를 ______",
-                "referenceAnswer": "점검하고 앞으로 더 나은 관계를 맺을 수 있음을 확인했습니다.",
-                "userAnswer": "점검하고 앞으로 더 나은 관계를 맺을 수 있음을 확인했습니다." 
-            }
-        ]
+        # 피드백 통합
+        combined_feedback = f"의미: {m_fb}\n맥락: {c_fb}\n문법: {g_fb}"
 
-        results = [
-            evaluate_feedback(q["referenceAnswer"], q["userAnswer"], q["question"], q["contentId"], level)
-            for q in qa_list
-        ]
-
-        final_output = {
-            "contentType": "COMPLETION_FEEDBACK",
-            "level": level,
-            "contents": results
-        }
-
-        print(json.dumps(final_output, ensure_ascii=False, indent=2))
-
-        # === 저장 ===
-        BASE_DIR = Path(__file__).resolve().parents[2]
-        SAVE_DIR = BASE_DIR / "data" / "quiz"
-        SAVE_DIR.mkdir(parents=True, exist_ok=True)
-
-        today = datetime.now().strftime("%Y-%m-%d")
-        file_name = f"{topic}_{courseId}_{sessionId}_FEEDBACK_{today}.json"
-        save_path = SAVE_DIR / file_name
-
-        with open(save_path, "w", encoding="utf-8") as f:
-            json.dump(final_output, f, ensure_ascii=False, indent=2)
-
-        print(f"결과 저장 완료: {save_path}")
-
-#  실행
-if __name__ == "__main__":
-    generate_completion_feedback_quiz()
+        return QuizResponse(
+            contentId=request.contentId,
+            AIScore=total,
+            AIFeedback=combined_feedback,
+        )
