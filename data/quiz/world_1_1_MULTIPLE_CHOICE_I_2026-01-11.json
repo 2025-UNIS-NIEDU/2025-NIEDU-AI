@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "페제쉬키안 대통령의 발언 변화는 어떤 정치적 의도를 내포하고 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "시위자 지지 확대"
+          },
+          {
+            "label": "B",
+            "text": "외교 관계 개선"
+          },
+          {
+            "label": "C",
+            "text": "경제 정책 변화"
+          },
+          {
+            "label": "D",
+            "text": "강경 대응 예고"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "페제쉬키안 대통령의 발언 변화는 시위 사태에 대한 강경 대응을 예고하며, 정부의 통제력을 강화하려는 정치적 의도를 드러낸다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "2",
+        "question": "페제쉬키안 대통령의 발언이 온건파에서 강경파로 전환된 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경제 위기 심화"
+          },
+          {
+            "label": "B",
+            "text": "외교 관계 개선"
+          },
+          {
+            "label": "C",
+            "text": "정당 간 합의"
+          },
+          {
+            "label": "D",
+            "text": "시위 사태 악화"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "시위 사태가 악화되면서 페제쉬키안 대통령의 발언이 온건파에서 강경파로 전환되었으며, 이는 정부의 통제력을 강화하려는 의도를 나타낸다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "3",
+        "question": "경청 약속과 '폭도' 규정의 병치는 궁극적으로 어떤 통치 방향을 시사하는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "이중 메시지"
+          },
+          {
+            "label": "B",
+            "text": "완화 국면 진입"
+          },
+          {
+            "label": "C",
+            "text": "질서 우선 기조"
+          },
+          {
+            "label": "D",
+            "text": "대화 중심 전환"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "경청 언급과 폭도 규정 병치가 질서 수호 우선의 통치 전환 신호로 기능한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "4",
+        "question": "시위가 보름째 이어진 시점의 발언 변화는 정부 대응의 무엇을 가리키는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "강경화 신호"
+          },
+          {
+            "label": "B",
+            "text": "중립 기조 유지"
+          },
+          {
+            "label": "C",
+            "text": "지방정부 자율"
+          },
+          {
+            "label": "D",
+            "text": "국회 중재 기대"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "보름째 악화된 국면에서 강경 표현이 늘어 통제 강화로의 대응 이동을 시사한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "5",
+        "question": "관리들의 '더 높은 의무' 강조는 어떤 가치의 우선순위를 제도적으로 정당화하는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "대화 무용론"
+          },
+          {
+            "label": "B",
+            "text": "사법 개혁 예고"
+          },
+          {
+            "label": "C",
+            "text": "국제 여론 의식"
+          },
+          {
+            "label": "D",
+            "text": "질서 유지 정당화"
+          }
+        ],
+        "correctAnswer": "D",
+        "answerExplanation": "더 높은 의무를 내세워 시위 억제와 사회 안정의 우위를 국가 책무로 정당화한다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      }
+    ]
+  }
+]

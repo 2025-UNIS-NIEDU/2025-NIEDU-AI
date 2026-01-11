@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "I",
+    "sourceUrl": "https://biz.heraldcorp.com/article/10653080",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "서왕진 원내대표가 '돈공천 추방 4법'을 제안한 주된 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "외교 관계 개선"
+          },
+          {
+            "label": "B",
+            "text": "문화 교류 증진"
+          },
+          {
+            "label": "C",
+            "text": "정치적 구태 일소"
+          },
+          {
+            "label": "D",
+            "text": "경제 성장 촉진"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "'돈공천 추방 4법' 제안은 정치개혁을 통해 정치적 구태를 일소하려는 의도를 보여준다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "2",
+        "question": "조국혁신당이 '3~5인 중대선거구제'를 제안한 배경에는 어떤 정치적 목표가 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "정당 간 협력 강화"
+          },
+          {
+            "label": "B",
+            "text": "정치적 다양성 확보"
+          },
+          {
+            "label": "C",
+            "text": "경제적 불평등 해소"
+          },
+          {
+            "label": "D",
+            "text": "국방력 증강"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "'3~5인 중대선거구제' 제안은 정치적 다양성을 확보하려는 목표를 담고 있다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "3",
+        "question": "서왕진 원내대표가 정개특위에서 제도적 대안을 논의하길 바라는 이유는 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "문화적 통합 촉진"
+          },
+          {
+            "label": "B",
+            "text": "군사적 협력 강화"
+          },
+          {
+            "label": "C",
+            "text": "정치적 안정성 확보"
+          },
+          {
+            "label": "D",
+            "text": "경제적 이익 창출"
+          }
+        ],
+        "correctAnswer": "C",
+        "answerExplanation": "정개특위에서의 논의는 정치적 안정성을 확보하려는 의도를 반영한다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "4",
+        "question": "조국혁신당이 정치개혁 구상을 발표한 주된 목적은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "군사력 증강"
+          },
+          {
+            "label": "B",
+            "text": "정치 신뢰 회복"
+          },
+          {
+            "label": "C",
+            "text": "경제 성장 촉진"
+          },
+          {
+            "label": "D",
+            "text": "문화 교류 확대"
+          }
+        ],
+        "correctAnswer": "B",
+        "answerExplanation": "정치개혁 구상 발표는 정치 신뢰를 회복하려는 목적을 담고 있다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      },
+      {
+        "contentId": "5",
+        "question": "서왕진 원내대표가 여당의 새 원내사령탑에게 기대하는 역할은 무엇인가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "위기 정치 극복"
+          },
+          {
+            "label": "B",
+            "text": "경제적 불평등 해소"
+          },
+          {
+            "label": "C",
+            "text": "문화적 다양성 증진"
+          },
+          {
+            "label": "D",
+            "text": "군사적 협력 강화"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "여당의 새 원내사령탑에게는 위기 정치를 극복하는 역할이 기대된다.",
+        "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+      }
+    ]
+  }
+]

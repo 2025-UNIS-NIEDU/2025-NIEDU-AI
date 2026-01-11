@@ -1,0 +1,917 @@
+{
+  "courses": [
+    {
+      "courseId": 1,
+      "topic": "국제",
+      "subTopic": "중동",
+      "subTags": [
+        "#갈등",
+        "#변화",
+        "#사회"
+      ],
+      "courseName": "이란 시위 : 사회 변화의 단면",
+      "courseDescription": "이 코스는 이란 시위의 사회적 맥락과 변화의 흐름을 탐구합니다. 이란의 시위는 단순한 불만 표출을 넘어 사회 구조와 정치 체제에 대한 근본적인 질문을 던지고 있습니다. 이는 국제 사회와의 관계 변화와도 연결되며, 이란 내부의 정치적, 사회적 갈등을 드러냅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "이란 온건파 대통령도 '폭도들이 사회전체 파괴하려해'…강경화",
+          "publishedAt": "2026-01-11T21:00:00",
+          "publisher": "뉴시스",
+          "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+          "summary": "김재영 기자 = 이란의 마수드 페제쉬키안 대통령은 반정부 시위가 보름째 계속되는 11일 관리들이 시위자들의 주장을 경청할 것이라면서도 '폭도들이 전체 사회를 파괴하려 시도하고 있다'고 말했다.\n\n경청이라는 단어에도 불구하고 이날 온건파로 분류되고 있는 페제쉬키안 대통령의 발언은 시위 사태가 악화되면서 강경한 쪽으로 돌아선 신호를 나타냈다.\n\n대통령은 곧 이어 \"그러나 관리들의 보다 더 높은 의무는 일단의 폭도들이 들고일어나서 사회 전체를 파괴하려는 것을 용납하지 않는 것\"이라고 강조했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661945745856663887/000-8dbcf6998bc292288f08cfc63993fbd3c457681a.jpg",
+          "quizzes": [
+            {
+              "level": "N",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 11월 11일, 이란의 마수드 페제쉬키안 대통령은 반정부 시위가 15일째 이어지는 가운데, 정부 관리들이 시위자들의 주장을 경청할 것이라고 말했다. 그러나 그는 '폭도들이 전체 사회를 파괴하려고 시도하고 있다'고 경고하며 강경한 입장을 밝혔다. 이어서 그는 관리들이 사회의 파괴 행위를 용납하지 말아야 한다고 강조했다.",
+                      "keywords": [
+                        {
+                          "word": "마수드 페제쉬키안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "반정부 시위",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "경청",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "입장",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "파괴",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "TERM_LEARNING",
+                  "contents": [
+                    {
+                      "terms": [
+                        {
+                          "termId": 1,
+                          "name": "반정부 시위",
+                          "definition": "반정부 시위는 정부의 정책이나 행동에 반대하여 시민들이 집단적으로 저항하는 행위를 말한다.",
+                          "exampleSentence": "이란의 마수드 페제쉬키안 대통령은 반정부 시위가 이어지는 가운데 폭도들의 사회 파괴 시도를 경고했다.",
+                          "additionalExplanation": "반정부 시위는 마치 친구들끼리 모여서 어떤 잘못된 규칙에 대해 이야기하고, 그 규칙을 바꾸자고 목소리를 내는 것과 비슷해요. 모두가 더 나은 상황을 원해서 힘을 모으는 거죠."
+                        },
+                        {
+                          "termId": 2,
+                          "name": "사회 파괴",
+                          "definition": "사회 파괴는 폭력적 행동이 사회의 구조와 질서를 해치는 것을 의미한다.",
+                          "exampleSentence": "이란의 페제쉬키안 대통령은 반정부 시위가 계속되는 가운데 폭도들이 사회를 파괴하려 하고 있다고 경고했다.",
+                          "additionalExplanation": "사회 파괴는 마치 잘 가꾸던 정원이 갑자기 잡초로 뒤덮이는 것과 같아요. 사람들이 서로 신뢰하지 않게 되면, 그 정원도 다시 아름답게 만들기 힘들어지죠."
+                        },
+                        {
+                          "termId": 3,
+                          "name": "온건파",
+                          "definition": "온건파는 사회의 안정과 질서를 중시하며, 극단적인 행동에 반대하는 정치적 입장을 의미한다.",
+                          "exampleSentence": "이란의 페제쉬키안 대통령은 온건파로 분류되지만, 최근 시위 사태에 대한 발언에서 강경한 입장을 드러냈다.",
+                          "additionalExplanation": "온건파는 마치 바람이 세지 않게 불고, 사람들을 편안하게 해주는 따뜻한 난로 같아요. 극단적인 입장 대신 중간에서 모두를 아우르려는 모습이죠."
+                        },
+                        {
+                          "termId": 4,
+                          "name": "강경파",
+                          "definition": "강경파는 사회의 질서를 유지하기 위해 폭력적 시위에 강력히 대응해야 한다고 주장하는 정치적 입장을 말한다.",
+                          "exampleSentence": "이란의 페제쉬키안 대통령은 반정부 시위에 대한 경청을 언급하면서도 강경파의 입장을 드러내며 폭도들의 행위를 강하게 비난했다.",
+                          "additionalExplanation": "\"강경파\"는 마치 고집 센 친구 같아요. 아무리 주변에서 다른 의견을 이야기해도, 자신이 생각하는 대로만 고집하는 경우를 말해요."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "CURRENT_AFFAIRS",
+                  "contents": [
+                    {
+                      "issue": "이란 대통령, 반정부 시위에 대한 강경 발언으로 논란",
+                      "cause": "이란의 마수드 페제쉬키안 대통령은 반정부 시위가 보름째 지속되는 가운데, 시위자들의 주장을 경청하겠다고 밝혔지만, 동시에 폭도들이 사회를 파괴하려 한다고 경고했다. 이는 시위가 격화되면서 정부의 입장이 더욱 강경해진 배경을 반영한다.",
+                      "circumstance": "이 과정에서 페제쉬키안 대통령은 온건파로 분류되지만, 시위 사태의 심각성을 강조하며 관리들의 의무를 언급했다. 이에 따라 정부 내에서는 시위에 대한 대응 방식에 대한 논의가 분분해지고, 강경파와 온건파 간의 갈등이 심화되고 있다.",
+                      "result": "결국 페제쉬키안 대통령의 발언은 시위에 대한 정부의 강경한 입장을 드러내며, 시위자들과의 대화 가능성을 희미하게 만들었다. 이로 인해 시위가 더욱 격화될 우려가 커졌다.",
+                      "effect": "이번 발언은 이란 사회 내에서 정부와 시민 간의 갈등이 심화될 수 있음을 시사하며, 향후 정부의 시위 대응 방식에 대한 재검토와 사회적 대화의 필요성을 일깨웠다."
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "OX_QUIZ",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이란의 페제쉬키안 대통령은 반정부 시위가 보름째 계속되고 있다고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "페제쉬키안 대통령은 반정부 시위가 보름째 계속되고 있다고 언급했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "페제쉬키안 대통령은 시위자들의 주장을 무시하겠다고 말했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "대통령은 시위자들의 주장을 경청하겠다고 밝혔다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "페제쉬키안 대통령은 폭도들이 사회를 보호해야 한다고 강조했다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "대통령은 폭도들이 사회를 파괴하려 한다고 경고했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "페제쉬키안 대통령은 관리들이 폭도들의 행동을 용납하지 말아야 한다고 말했다.",
+                      "correctAnswer": "O",
+                      "answerExplanation": "대통령은 관리들의 의무로 폭도들의 행동을 용납하지 말아야 한다고 강조했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "페제쉬키안 대통령은 시위가 악화되면서 온건한 입장을 유지하고 있다.",
+                      "correctAnswer": "X",
+                      "answerExplanation": "대통령은 시위 사태가 악화되면서 강경한 쪽으로 돌아선 신호를 보였다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이란의 마수드 페제쉬키안 대통령은 시위자들의 주장을 어떻게 하겠다고 했는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경청할 것"
+                        },
+                        {
+                          "label": "B",
+                          "text": "무시할 것"
+                        },
+                        {
+                          "label": "C",
+                          "text": "처벌할 것"
+                        },
+                        {
+                          "label": "D",
+                          "text": "지원할 것"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "대통령은 시위자들의 주장을 경청할 것이라고 말했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "마수드 페제쉬키안 대통령은 시위자들을 어떻게 표현했는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "폭도들"
+                        },
+                        {
+                          "label": "B",
+                          "text": "평화로운 시민"
+                        },
+                        {
+                          "label": "C",
+                          "text": "경제적 파트너"
+                        },
+                        {
+                          "label": "D",
+                          "text": "정치적 동맹"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "대통령은 시위자들을 '폭도들'이라고 표현했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "마수드 페제쉬키안 대통령의 발언은 어떤 신호를 나타냈는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "강경한 입장"
+                        },
+                        {
+                          "label": "B",
+                          "text": "무관심한 입장"
+                        },
+                        {
+                          "label": "C",
+                          "text": "온건한 입장"
+                        },
+                        {
+                          "label": "D",
+                          "text": "중립적 입장"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "대통령의 발언은 강경한 쪽으로 돌아선 신호를 나타냈다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "마수드 페제쉬키안 대통령은 관리들의 의무에 대해 무엇을 강조했는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "사회 파괴 용납 불가"
+                        },
+                        {
+                          "label": "B",
+                          "text": "국제 협력"
+                        },
+                        {
+                          "label": "C",
+                          "text": "경제 발전"
+                        },
+                        {
+                          "label": "D",
+                          "text": "시위자 지원"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "대통령은 사회 전체를 파괴하려는 것을 용납하지 않는 것이 관리들의 의무라고 강조했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이란에서 반정부 시위는 며칠째 계속되고 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "보름째"
+                        },
+                        {
+                          "label": "B",
+                          "text": "한 달째"
+                        },
+                        {
+                          "label": "C",
+                          "text": "이틀째"
+                        },
+                        {
+                          "label": "D",
+                          "text": "일주일째"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "반정부 시위는 보름째 계속되고 있다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "I",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661945745856663887/000-8dbcf6998bc292288f08cfc63993fbd3c457681a.jpg",
+                      "headline": "이란 온건파 대통령도 '폭도들이 사회전체 파괴하려해'…강경화",
+                      "publisher": "뉴시스",
+                      "publishedAt": "2026-01-11T21:00:00",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 11월 11일, 이란의 마수드 페제쉬키안 대통령은 반정부 시위가 15일째 이어지는 가운데, 정부 관리들이 시위자들의 주장을 경청할 것이라고 말했다. 그러나 그는 '폭도들이 전체 사회를 파괴하려고 시도하고 있다'고 경고하며 강경한 입장을 밝혔다. 이어서 그는 관리들이 사회의 파괴 행위를 용납하지 말아야 한다고 강조했다.",
+                      "keywords": [
+                        {
+                          "word": "마수드 페제쉬키안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "반정부 시위",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "사회",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "폭도",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "주장",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "MULTIPLE_CHOICE",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "페제쉬키안 대통령의 발언 변화는 어떤 정치적 의도를 내포하고 있는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "시위자 지지 확대"
+                        },
+                        {
+                          "label": "B",
+                          "text": "외교 관계 개선"
+                        },
+                        {
+                          "label": "C",
+                          "text": "경제 정책 변화"
+                        },
+                        {
+                          "label": "D",
+                          "text": "강경 대응 예고"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "페제쉬키안 대통령의 발언 변화는 시위 사태에 대한 강경 대응을 예고하며, 정부의 통제력을 강화하려는 정치적 의도를 드러낸다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "페제쉬키안 대통령의 발언이 온건파에서 강경파로 전환된 이유는 무엇인가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "경제 위기 심화"
+                        },
+                        {
+                          "label": "B",
+                          "text": "외교 관계 개선"
+                        },
+                        {
+                          "label": "C",
+                          "text": "정당 간 합의"
+                        },
+                        {
+                          "label": "D",
+                          "text": "시위 사태 악화"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "시위 사태가 악화되면서 페제쉬키안 대통령의 발언이 온건파에서 강경파로 전환되었으며, 이는 정부의 통제력을 강화하려는 의도를 나타낸다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "경청 약속과 '폭도' 규정의 병치는 궁극적으로 어떤 통치 방향을 시사하는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "이중 메시지"
+                        },
+                        {
+                          "label": "B",
+                          "text": "완화 국면 진입"
+                        },
+                        {
+                          "label": "C",
+                          "text": "질서 우선 기조"
+                        },
+                        {
+                          "label": "D",
+                          "text": "대화 중심 전환"
+                        }
+                      ],
+                      "correctAnswer": "C",
+                      "answerExplanation": "경청 언급과 폭도 규정 병치가 질서 수호 우선의 통치 전환 신호로 기능한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "시위가 보름째 이어진 시점의 발언 변화는 정부 대응의 무엇을 가리키는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "강경화 신호"
+                        },
+                        {
+                          "label": "B",
+                          "text": "중립 기조 유지"
+                        },
+                        {
+                          "label": "C",
+                          "text": "지방정부 자율"
+                        },
+                        {
+                          "label": "D",
+                          "text": "국회 중재 기대"
+                        }
+                      ],
+                      "correctAnswer": "A",
+                      "answerExplanation": "보름째 악화된 국면에서 강경 표현이 늘어 통제 강화로의 대응 이동을 시사한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "관리들의 '더 높은 의무' 강조는 어떤 가치의 우선순위를 제도적으로 정당화하는가?",
+                      "options": [
+                        {
+                          "label": "A",
+                          "text": "대화 무용론"
+                        },
+                        {
+                          "label": "B",
+                          "text": "사법 개혁 예고"
+                        },
+                        {
+                          "label": "C",
+                          "text": "국제 여론 의식"
+                        },
+                        {
+                          "label": "D",
+                          "text": "질서 유지 정당화"
+                        }
+                      ],
+                      "correctAnswer": "D",
+                      "answerExplanation": "더 높은 의무를 내세워 시위 억제와 사회 안정의 우위를 국가 책무로 정당화한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이란의 대통령은 누구인가?",
+                      "correctAnswer": "마수드 페제쉬키안",
+                      "answerExplanation": "2023년 11월 11일, 이란의 마수드 페제쉬키안 대통령은 반정부 시위에 대해 언급했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이란에서 15일째 이어지고 있는 시위는 무엇인가?",
+                      "correctAnswer": "반정부 시위",
+                      "answerExplanation": "반정부 시위가 15일째 이어지는 가운데, 대통령이 시위자들의 주장에 대해 언급했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "마수드 페제쉬키안 대통령이 경고한 사회적 행위는 무엇인가?",
+                      "correctAnswer": "사회 파괴",
+                      "answerExplanation": "대통령은 '폭도들이 전체 사회를 파괴하려고 시도하고 있다'고 경고했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "대통령이 시위자들의 주장을 어떻게 하겠다고 했는가?",
+                      "correctAnswer": "경청",
+                      "answerExplanation": "대통령은 정부 관리들이 시위자들의 주장을 경청할 것이라고 말했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "대통령이 강조한 정부 관리들의 태도는 무엇인가?",
+                      "correctAnswer": "강경한 입장",
+                      "answerExplanation": "대통령은 관리들이 사회의 파괴 행위를 용납하지 말아야 한다고 강조했다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "이번 시위 사태의 근본 원인은 무엇이라고 생각하는가?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "E",
+              "steps": [
+                {
+                  "stepOrder": 1,
+                  "contentType": "ARTICLE_READING",
+                  "contents": [
+                    {
+                      "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661945745856663887/000-8dbcf6998bc292288f08cfc63993fbd3c457681a.jpg",
+                      "headline": "이란 온건파 대통령도 '폭도들이 사회전체 파괴하려해'…강경화",
+                      "publisher": "뉴시스",
+                      "publishedAt": "2026-01-11T21:00:00",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 2,
+                  "contentType": "SUMMARY_READING",
+                  "contents": [
+                    {
+                      "summary": "2023년 11월 11일, 이란의 마수드 페제쉬키안 대통령은 반정부 시위가 15일째 이어지는 가운데, 정부 관리들이 시위자들의 주장을 경청할 것이라고 말했다. 그러나 그는 '폭도들이 전체 사회를 파괴하려고 시도하고 있다'고 경고하며 강경한 입장을 밝혔다. 이어서 그는 관리들이 사회의 파괴 행위를 용납하지 말아야 한다고 강조했다.",
+                      "keywords": [
+                        {
+                          "word": "마수드 페제쉬키안",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "반정부 시위",
+                          "isTopicWord": true
+                        },
+                        {
+                          "word": "이란",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "정부",
+                          "isTopicWord": false
+                        },
+                        {
+                          "word": "관리",
+                          "isTopicWord": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 3,
+                  "contentType": "SHORT_ANSWER",
+                  "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+                  "contents": [
+                    {
+                      "contentId": 1,
+                      "question": "이란 사회의 정치적 변화와 시민 참여의 확대를 촉진하는 최근의 대규모 사회적 움직임은 무엇입니까?",
+                      "correctAnswer": "반정부 시위",
+                      "answerExplanation": "반정부 시위는 정치적 개혁과 사회적 변화를 요구하는 시민의 목소리를 반영한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 2,
+                      "question": "이란 대통령이 사회 안정과 법 질서 유지를 위해 정부 관리들에게 요구한 태도는 무엇입니까?",
+                      "correctAnswer": "강경한 입장",
+                      "answerExplanation": "강경한 입장은 사회 안정과 법 질서 유지를 위한 정부의 의지를 반영한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 3,
+                      "question": "이란 대통령이 국가 안보와 사회 질서 유지를 위해 경고한 파괴적 사회 행위는 무엇입니까?",
+                      "correctAnswer": "사회 파괴",
+                      "answerExplanation": "사회 파괴는 국가 안보와 사회적 안정성을 위협하는 행위로 경고받았다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 4,
+                      "question": "이란 정부가 사회적 갈등 해소와 국민 통합을 위해 강조한 소통 방식은 무엇입니까?",
+                      "correctAnswer": "경청",
+                      "answerExplanation": "경청은 사회적 갈등 해소와 국민 통합을 위한 정부의 소통 방식이다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    },
+                    {
+                      "contentId": 5,
+                      "question": "이란의 정치적 방향성과 외교적 입지를 결정하는 최고 지도자는 누구입니까?",
+                      "correctAnswer": "마수드 페제쉬키안",
+                      "answerExplanation": "마수드 페제쉬키안은 이란의 정치적 안정과 외교적 전략을 주도한다.",
+                      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+                    }
+                  ]
+                },
+                {
+                  "stepOrder": 4,
+                  "contentType": "SENTENCE_COMPLETION",
+                  "contents": [
+                    [
+                      {
+                        "contentId": 1,
+                        "question": "이란의 마수드 페제쉬키안 대통령은 반정부 시위가 보름째 계속되는 11일 관리들이 시위자들의 주장을 경청할 것이라면서도 '폭도들이 ______",
+                        "referenceAnswer": "전체 사회를 파괴하려 시도하고 있다'고 말했다."
+                      },
+                      {
+                        "contentId": 2,
+                        "question": "페제쉬키안 대통령의 발언은 시위 사태가 악화되면서 ______",
+                        "referenceAnswer": "강경한 쪽으로 돌아선 신호를 나타냈다."
+                      },
+                      {
+                        "contentId": 3,
+                        "question": "대통령은 관리들의 보다 더 높은 의무는 일단의 폭도들이 ______",
+                        "referenceAnswer": "사회 전체를 파괴하려는 것을 용납하지 않는 것이라고 강조했다."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "stepOrder": 5,
+                  "contentType": "SESSION_REFLECTION",
+                  "contents": [
+                    {
+                      "question": "이란의 반정부 시위가 사회적 가치에 미친 영향은?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "sessionId": 2,
+          "headline": "이란, 시위대 강경진압에 사망자 116명…\"시신이 쌓여 있어\"",
+          "publishedAt": "2026-01-11T18:05:00",
+          "publisher": "MBN",
+          "sourceUrl": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5168004",
+          "summary": "이란 인터넷 차단돼 파악 어려우나, 시위 격화되는 것으로 보여 이란 검찰총장 \"시위 참여하면 사형할 것\" 이란에서 반정부 시위가 2주째 이어지면서 이란 당국이 강경 진압에 나서 사망자가 100명을 넘어선 것으로 파악됐습니다.\n\n그러면서 시위가 수도 테헤란과 북동부 마슈하드에서 이날 아침까지 이어졌다면서 보안군을 향해 총을 쏘는 것으로 추정되는 시위대의 모습을 반복적으로 방송했습니다.\n\n이란 당국은 시위에 가담하면 누구든 사형에 처할 것이라면서 강경 진압을 이어가고 있습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661901240864477792/000-a4be5c35d355b856db626f462bd0b2e4d0564b03.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "\"시신 쌓을 곳 없어 기도실까지\"…피로 물든 이란 '생지옥'",
+          "publishedAt": "2026-01-11T17:35:00",
+          "publisher": "한국경제",
+          "sourceUrl": "https://www.hankyung.com/article/2026011138377",
+          "summary": "트럼프 \"세게 때리겠다\"…군사 개입 시사 \"폭도들, 절대 안 물러서\"…강경한 이란 경제난으로 촉발된 이란의 반정부 시위가 14일째 이어지는 가운데, 도널드 트럼프 미국 대통령이 군사적 개입을 시사하며 중동 정세가 일촉즉발의 상황으로 치닫고 있다.\n\n미국이 이란의 시위대 유혈진압에 군사적으로 개입할 가능성을 내비치면서 미국의 중동 내 동맹국인 이스라엘은 경계 태세에 돌입했다.\n\n미국이 이란에 군사적 공격을 가하면 중동 내에서 미국에 가장 가까운 동맹국인 이스라엘이 보복 공격을 받을 가능성이 높기 때문이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661893656434577876/000-a87a9d075224fa13213a16e1b5e74ba2ff7b26a3.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "보수층까지 등돌린 신정체제 최대 위기···이란 당국, 실탄 사용 폭력 진압에 사망자 116명",
+          "publishedAt": "2026-01-11T16:55:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202601111655001",
+          "summary": "이란 경제난에서 촉발한 반정부 시위가 2주째 접어들며 격화하는 가운데, 이란 당국이 시위대를 향해 실탄을 발포하며 강경 진압에 나서면서 사망자 수가 116명으로 급증했다.\n\n트럼프 대통령은 이란 시위 격화 이후 시위대 유혈 진압시 미국이 군사적 개입을 할 수 있음을 시사해왔다.\n\n이란 정권이 반정부 시위와 미국 공격 위협이라는 초유의 내우외환 위기에 처한 가운데, 1979년 이란 이슬람혁명으로 축출된 팔레비 왕조의 마지막 왕세자 레자 팔레비의 귀환을 요구하는 목소리도 시위대 일부에서 나오고 있다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661884041290453321/000-7bd56e1d45a01134909fde6a100a17cd00f8acab.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "굶주린 이란 민심, 주말에도 격렬 시위…현재까지 65명 사망(종합)",
+          "publishedAt": "2026-01-11T11:52:00",
+          "publisher": "뉴스1",
+          "sourceUrl": "https://www.news1.kr/world/middleeast-africa/6035031",
+          "summary": "테헤란 등 이란 전역에서 시위…\"독재자에게 죽음을\" 구호 외쳐 김지완 이창규 기자 = 이란에서 경제난에 항의하는 반정부 시위가 커지는 가운데 이란 당국은 시위대에 더 강경 대응할 방침을 밝혔다.\n\n도널드 트럼프 미국 대통령도 이란에 무력 개입할 가능성을 내비치면서 긴장이 더 고조되고 있다.\n\n이 가운데 트럼프 대통령은 10일 트루스소셜을 통해 \"이란이 아마 그 어느 때보다도 자유를 바라고 있다\"며 \"미국은 도울 준비가 됐다\"고 개입 가능성을 내비쳤다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661807714537443891/000-0409dd24ac86b58b432a7984803b7548ea88e7c8.gif"
+        }
+      ]
+    },
+    {
+      "courseId": 2,
+      "topic": "국제",
+      "subTopic": "국제",
+      "subTags": [
+        "#변화",
+        "#불안",
+        "#인식"
+      ],
+      "courseName": "국제적 불안정성 : 사회적 인식 변화",
+      "courseDescription": "이 코스는 국제적 불안정성의 사회적 인식 변화를 탐구합니다. 최근의 자연재해, 정치적 갈등, 경제적 불확실성 등이 어떻게 사회적 시선과 문제의식에 영향을 미치는지를 살펴봅니다. 이러한 이슈들은 글로벌화된 세계에서 국가 간 관계와 사회적 인식을 재정립하는 데 중요한 역할을 합니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "호주 남동부 대형 산불에 사망자 발생…\"폭염에 통제불능\"",
+          "publishedAt": "2026-01-11T20:06:00",
+          "publisher": "이데일리",
+          "sourceUrl": "http://www.edaily.co.kr/news/newspath.asp?newsid=01954886645316736",
+          "summary": "호주 남동부 빅토리아주서 산불 닷새째 이어져 덥고 건조한 날씨 속 확산…당국, 사망자 확인 주 전역서 30건 이상의 화재…\"진압에 몇주 소요\"[이데일리 장영은 기자] 호주 남동부 빅토리아주에서 발생한 대형 산불이 닷새째 진화되지 않는 가운데 사망자까지 발생했다.\n\n기온이 40도를 넘는 폭염에 건조한 날씨가 이어지면서 산불 피해가 커지고 있다 .\n\n전문가들은 폭염과 강풍, 장기 가뭄이 겹치면서 호주 남동부가 구조적으로 대형 산불에 취약해지고 있다고 지적했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661931571491508442/000-92697ca2e97e01dc0cd408a10f99abf6322c6e71.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "미 국립초상화미술관도 트럼프 탄핵소추 기록 지워···백악관 또 요구했나",
+          "publishedAt": "2026-01-11T15:13:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202601111513001",
+          "summary": "도널드 트럼프 미국 행정부가 스미소니언 재단 산하 국립박물관을 향해 예산 삭감 압박을 넣고 있는 가운데 스미소니언 국립초상화미술관이 트럼프 대통령에 대한 탄핵소추 전시 기록을 없앴다.\n\n국립초상화미술관의 트럼프 대통령의 사진 및 설명 교체는 백악관이 스미소니언재단 산하 박물관을 향해 예산 지원을 중단하겠다고 위협한 지 다섯 달 만에 이뤄졌다.\n\n스미소니언 국립미국사박물관은 지난해 7월 상설 전시에서 트럼프 대통령에 대한 탄핵소추 설명을 지우기도 했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661858247608504574/000-84d0787af4cd8185fd376129e196ee21003af485.png"
+        },
+        {
+          "sessionId": 3,
+          "headline": "올해 들어서만 17명 사망… 인도, 살인 코끼리 한 마리에 몸살",
+          "publishedAt": "2026-01-11T15:01:09",
+          "publisher": "문화일보",
+          "sourceUrl": "https://www.munhwa.com/article/11559998",
+          "summary": "연합뉴스 인도 동부 정글에서 한 마리의 어린 수컷 코끼리가 올해 들어 최소 17명을 숨지게 하면서 인도 당국이 해당 코끼리 추적에 나섰다.\n\n인도 당국에 따르면 어린 어린 수컷 코끼리 한 마리는 올해 들어서만 차이바사, 콜한, 사란다 삼림 지역에서 12차례에 걸쳐 마을 주민을 공격해 17명을 죽이고 6명 이상에게 부상을 입혔다.\n\n스미타 판카지 지역 산림청장은 “코끼리는 밤이 되면 공격적으로 변해 집과 주민을 공격하며 낮에는 숲 깊숙이 숨는다”고 강조했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661855221820821703/000-cbff241158f0199e75a51f732b02ffb292bb116f.png"
+        },
+        {
+          "sessionId": 4,
+          "headline": "“자위대 활동 대폭 강화”…일, 안보 3문서에 ‘태평양 방위 강화’ 포함 추진",
+          "publishedAt": "2026-01-11T11:24:16",
+          "publisher": "한겨레",
+          "sourceUrl": "https://www.hani.co.kr/arti/international/international_general/1239031.html",
+          "summary": "다카이치 사나에 일본 정부가 중국 견제 등을 이유로 태평양 지역에서 자위대 활동 영역을 대폭 확대하는 방안을 추진하고 있다.\n\n일본 요미우리신문은 11일 “다카이치 정부가 올해 개정을 추진하는 안보 3문서 핵심 내용의 하나로 ‘태평양 방위 강화’를 앞세운다는 방침을 확정했다”고 여러 정부 관계자들의 말을 따 보도했다.\n\n일본 정부는 태평양을 둘러싼 지역에서 자위대 활동을 강화하기 위해 안보 3문서 가운데 주로 방위장비 조달과 비용 등에 관한 문서인 ‘방위력 정비 계획’에 ‘태평양 방위 강화’라는 문구를 명기한다는 방침이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661800630492205209/000-1a9357847787aec0ecdb9747415884e9aa782272.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "마두로 축출한 미 베네수 원유 통제 첫발…희석제 재공급",
+          "publishedAt": "2026-01-11T09:00:00",
+          "publisher": "SBS",
+          "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008399605",
+          "summary": "나프타는 중질유 생산 과정에 들어가는 필수재로, 이번 공급 재개는 도널드 트럼프 행정부가 베네수엘라 원유 이권을 장악하는 데 첫발을 떼는 중요한 이정표가 될 것으로 보입니다.\n\n지난해 5월 트럼프 행정부가 베네수엘라 압박용으로 사업 허가를 취소하자 미국, 유럽의 에너지 기업들의 나프타 수출이 끊기면서 베네수엘라는 러시아산 나프타에 의존해왔습니다.\n\n소식통들은 비톨을 비롯한 상품 거래 기업과 석유회사 셰브론 등이 베네수엘라 원유 생산이 늘어날 것에 대비해 나프타를 확보하는데 노력하고 있다고도 전했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661764205524685474/000-50e71665685ce134b59c5f60dcddc2f07131ce11.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 3,
+      "topic": "국제",
+      "subTopic": "중동",
+      "subTags": [
+        "#관계",
+        "#변화",
+        "#정세"
+      ],
+      "courseName": "중동 정세 : 국제 관계의 변화",
+      "courseDescription": "이 코스는 중동 지역의 정치적 긴장과 국제 관계의 변화를 탐구합니다. 이란의 경제난과 반정부 시위, 미국의 개입 가능성 등은 중동 정세에 큰 영향을 미치고 있으며, 이러한 변화는 국제 사회의 새로운 외교적 맥락과 연결됩니다. 중동의 불안정한 정세는 왜 중요한지, 그리고 국제 관계에 어떤 변화를 가져올지 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "이스라엘, 미국의 이란 개입 가능성에 경계태세 돌입",
+          "publishedAt": "2026-01-11T19:16:00",
+          "publisher": "MBC",
+          "sourceUrl": "https://imnews.imbc.com/news/2026/world/article/6792702_36925.html",
+          "summary": "미국이 이란의 시위대 유혈진압에 군사적으로 개입할 가능성을 내비친 가운데 이스라엘 정부가 안보 협의를 진행하며 고도의 경계 태세에 돌입했다고 로이터통신이 현지시간 11일 보도했습니다.\n\n이와 관련해 베냐민 네타냐후 이스라엘 총리는 마코 루비오 미 국무부 장관과 지난 10일 전화 통화를 하면서 미국의 이란 개입 가능성을 논의한 것으로 전해졌습니다.\n\n만약 미국이 이란을 공격하면 중동 내에서 미국에 가장 가까운 동맹국인 이스라엘이 이란으로부터 보복 공격을 받을 가능성이 있습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661919953458172261/000-1ab3b140629fc940d70f57e6c0b4e64eddb74608.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "경제난으로 촉발된 반정부 시위… 흔들리는 이란 신정체제",
+          "publishedAt": "2026-01-11T17:58:00",
+          "publisher": "부산일보",
+          "sourceUrl": "https://www.busan.com/view/busan/view.php?code=2026011117563666864",
+          "summary": "도널드 트럼프 미국 대통령은 “미국은 도울 준비가 됐다”며 이란에 군사 개입을 할 수 있다는 입장을 내비치면서 중동 정세가 다시 격동에 빠졌다.\n\n한편, 트럼프 대통령은 이란 반정부 시위에서 발생한 유혈사태에 책임을 물어 이란 정권을 겨냥한 군사작전을 고심하는 것으로 전해졌다.\n\n당국자들은 트럼프 대통령이 아직 최종 결정을 내리지 않았다고 전했지만 트럼프 대통령이 이란 체제의 시위 억압에 대응해 타격을 승인하는 방안을 진지하게 고민하고 있다고 전했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661899722190885041/000-70a64511d90eba942cfe5ce2e6e71de03a85a2f9.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "돌연 ‘2월 중의원 해산설’ 불지피는 다카이치 정부",
+          "publishedAt": "2026-01-11T16:04:00",
+          "publisher": "한겨레",
+          "sourceUrl": "https://www.hani.co.kr/arti/international/international_general/1239074.html",
+          "summary": "다카이치 사나에 일본 총리가 이르면 다음달 중의원 조기 해산 가능성을 언급한 것으로 알려지면서 파장이 일고 있다.\n\n하지만 지난 9일 일본 요미우리신문이 정부 관계자 말을 따 “다카이치 총리가 새해 정기국회 개회 직전에 중의원을 해산하는 방안을 검토하기 시작했다”며 “중의원 선거는 2월 상순에서 중순 사이에 실시될 가능성이 크다”고 전하면서 중의원 조기 해산론에 불을 지피기 시작했다.\n\n하지만 정기국회 개원과 동시에 중의원을 해산하고 선거를 치를 경우, 오는 4월께까지 예산안 처리가 미뤄져 다카이치 총리의 ‘민생 우선’ 공약과 정면으로 배치된다는 지적이 나온다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661870908547142212/000-950d08ec719ba47f63b0e362867cb27e26e776be.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "\"미국, 이란 공격 방안 예비 논의‥대규모 공습 선택지에\"",
+          "publishedAt": "2026-01-11T07:55:00",
+          "publisher": "MBC",
+          "sourceUrl": "https://imnews.imbc.com/news/2026/world/article/6792630_36925.html",
+          "summary": "미국 도널드 트럼프 대통령이 이란 반정부 시위 유혈 진압을 막기 위해 군사적으로 개입할 가능성을 내비친 가운데 미국 정부가 대규모 공습을 포함한 공격 방안을 검토 중인 것으로 전해졌습니다.\n\n미국 월스트리트저널은 현지시간 10일 정부 당국자들을 인용해 미국 정부가 트럼프 대통령의 위협을 실제 행동으로 이행해야 하게 될 경우에 대비해 이란 공격 방안을 두고 예비적 단계의 논의를 진행해왔다고 보도했습니다.\n\n또 다른 당국자도 어떤 군사적 행동에 나설 것인지에 관해 정부 내에서 합의가 이뤄진 것은 없으며, 공격 준비를 위해 군사 장비와 인력이 움직인 것도 아니라고 설명했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661748525962236021/000-f25fab6a96b7a83cb69e8fb6d2cfbe35658560c1.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "1,200조 원 규모...백악관 가려던 젤렌스키 '급변'",
+          "publishedAt": "2026-01-11T07:43:00",
+          "publisher": "YTN",
+          "sourceUrl": "https://www.ytn.co.kr/_ln/0134_202601110743550690",
+          "summary": "\"트럼프 미국 대통령과 젤렌스키 우크라이나 대통령이 1월 하순 스위스 다보스 포럼에서 만나 우크라이나 번영과 재건을 위해 합의할 예정이다\" 영국 일간 텔레그래프의 보도입니다.\n\n젤렌스키 대통령은 원래 곧 미국 백악관을 방문해 전후 경제 재건 계획과 안전보장 방안 등 2가지 합의를 한꺼번에 마무리하는 방안을 추진한 것으로 알려졌습니다.\n\n하지만 우크라이나를 지원하는 국가들의 모임인 '의지의 연합' 소속 유럽 국가 관계자들의 조언에 따라 젤렌스키가 계획을 바꿨다고 신문은 전했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661759154689282450/000-f47071747068678b844d354f8b538c3a8331740b.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 4,
+      "topic": "국제",
+      "subTopic": "국제",
+      "subTags": [
+        "#경제",
+        "#에너지",
+        "#정치"
+      ],
+      "courseName": "베네수엘라 원유 : 국제정치의 경제적 관점",
+      "courseDescription": "이 코스는 베네수엘라 원유를 둘러싼 국제정치의 경제적 관점을 탐구합니다. 베네수엘라의 원유 수익 통제와 관련된 미국의 정책 변화는 국제 경제와 정치의 복잡한 상호작용을 보여줍니다. 이러한 변화는 글로벌 경제 질서와 에너지 시장에 어떤 영향을 미치는지 살펴봅니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "트럼프, 베네수 원유 수익금 압류 금지 행정명령",
+          "publishedAt": "2026-01-11T18:57:00",
+          "publisher": "국민일보",
+          "sourceUrl": "https://www.kmib.co.kr/article/view.asp?arcid=1768121284&code=11141400",
+          "summary": "미국 원하는 대로 집행 못박아 백악관은 10일(현지시간) 도널드 트럼프 대통령이 미국 재무부 계좌에 예치된 베네수엘라 원유 수익을 법원이나 민간 채권 등에 의한 압류나 사법 절차로부터 보호하기 위해 국가 비상사태를 선포하는 행정명령에 서명했다고 밝혔다.\n\n행정명령은 원유 수익 자금이 베네수엘라 정부 자산임을 명시하면서도 민간인이나 기업 소유가 아니며, 미국 허가 없이는 어떤 방식으로든 사용할 수 없도록 했다.\n\n석유 기업들은 트럼프 대통령의 베네수엘라에 대한 1000억 달러 투자 독려에도 난색을 표했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661914388828918216/000-8039d04dc749e6ed1c7f340a5b4fea10d5212ee2.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "미 재무부, 이번주 베네수엘라 제재 추가 해제 가능성 시사…재정 지원도 검토",
+          "publishedAt": "2026-01-11T15:32:00",
+          "publisher": "한겨레",
+          "sourceUrl": "https://www.hani.co.kr/arti/international/america/1239064.html",
+          "summary": "로이터, 스콧 베선트 재무장관 인터뷰 미국 재무부가 이번 주 베네수엘라에 대한 추가 제재 해제 가능성을 시사하며 재정 지원 방안도 함께 검토하고 있다.\n\n10일(현지시각) 스콧 베선트 미국 재무장관은 로이터 통신과의 인터뷰에서 베네수엘라의 석유 판매를 원활하게 하기 위해 이르면 이번주 중으로 베네수엘라에 대한 추가 제재가 해제될 수 있다고 밝혔다.\n\n베선트 장관은 “판매 예정인 석유에 대해서 (이미) 제재를 해제하고 있다”며 “베네수엘라에 대한 추가 제재는 빠르면 이번주 중일 수 있다”고 밝혔다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661862818112213330/000-0a46b4c823974221a24d85dadb1938018894fb1c.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "‘베네수 원유수익 미국이 관리’ 못박았다…트럼프, 행정명령 서명",
+          "publishedAt": "2026-01-11T15:05:00",
+          "publisher": "동아일보",
+          "sourceUrl": "https://www.donga.com/news/Inter/article/all/20260111/133131728/1",
+          "summary": "도널드 트럼프 미국 대통령이 베네수엘라 원유 수익을 미 정부 계좌에 예치하고, 미 정부 승인 없인 이 자금에 대한 압류·강제집행 등을 금지하는 행정명령에 서명했다.\n\n사실상 베네수엘라 원유 수익을 미국이 관리, 통제하겠다는 의지를 노골적으로 못박은 것이다.\n\n행정명령은 이 예치 자금을 베네수엘라 정부의 재산이라면서도 “베네수엘라 정부를 대리해 미 국무장관이 결정하는 공공·정부·외교적 목적에 따른 주권적 처분이 있을 때까지 (미국이) 보관한다”고 했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661856228470558994/000-1622a9e927d85f2b20a3d47d512bf881f513b2b7.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "백악관 “베네수 석유 판매 수익금 미 재무부 계좌로···제3자 압류 금지”",
+          "publishedAt": "2026-01-11T13:09:00",
+          "publisher": "경향신문",
+          "sourceUrl": "https://www.khan.co.kr/article/202601111309001",
+          "summary": "백악관은 9일(현지시간) 트럼프 대통령이 미 재무부 계좌에 예치된 베네수엘라 석유 판매 수익금을 압류나 법원 명령, 유치권 행사 등으로부터 보호하는 행정명령에 서명했다고 밝혔다.\n\n백악관은 예치금이 압류되면 미국과 베네수엘라, 서반구가 불안정해질 수 있다고 주장하면서 트럼프 대통령이 국제비상경제권한법과 국가비상사태법에 근거해 이 같은 결정을 내렸다고 설명했다.\n\n트럼프 대통령은 같은 날 워싱턴 백악관에서 글로벌 에너지 기업 경영진과 만나 “어떤 석유 회사들이 (베네수엘라에) 들어갈지는 우리가 결정할 것”이라고 밝혔다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661826910763749870/000-ddf5c2d7e1672e1c0011eec6c82fb80bff8179e3.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "트럼프, 베네수 원유 수익 통제 행정명령…법원, 채권자 등 접근 차단",
+          "publishedAt": "2026-01-11T09:08:00",
+          "publisher": "국민일보",
+          "sourceUrl": "https://www.kmib.co.kr/article/view.asp?arcid=0029233387&code=61131111",
+          "summary": "트럼프, 미 석유기업 손실 보상 요구와 거리두기 도널드 트럼프 미국 대통령이 베네수엘라 원유 판매 수익금에 법원이나 민간 채권 등 제 3자의 접근을 차단하는 행정명령에 서명했다.\n\n백악관은 10일(현지시간) 트럼프 대통령이 미국 재무부 계좌에 예치된 베네수엘라 원유 수익을 압류나 사법 절차로부터 보호하기 위해 국가 비상사태를 선포하는 행정명령에 서명했다고 밝혔다.\n\n트럼프가 서명한 행정명령은 원유 수익 자금이 베네수엘라 정부의 자산으로 민간인이나 기업의 소유가 아니며, 트럼프 행정부의 허가 없이는 어떤 방식으로든 사용할 수 없다는 내용이 핵심이다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661766228034851235/000-ae89fb112796ec902c141438587da1ae82ff3207.jpg"
+        }
+      ]
+    },
+    {
+      "courseId": 5,
+      "topic": "국제",
+      "subTopic": "국제",
+      "subTags": [
+        "#갈등",
+        "#경계",
+        "#협력"
+      ],
+      "courseName": "국제 관계 : 갈등과 협력의 경계",
+      "courseDescription": "이 코스는 국제 사회에서 발생하는 갈등과 협력의 경계를 탐구합니다. 국가 간의 긴장과 협력은 세계 정치의 중요한 요소로, 이는 글로벌 안정과 변화의 맥락과 깊이 연결되어 있습니다. 국제 관계의 복잡성을 이해하는 것은 현대 사회에서 필수적입니다.",
+      "sessions": [
+        {
+          "sessionId": 1,
+          "headline": "아르헨 밀레이-브라질 룰라 갈등 격화 속 양국 관계 '최악'",
+          "publishedAt": "2026-01-11T16:28:00",
+          "publisher": "SBS",
+          "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008399918",
+          "summary": "▲ 룰라 브라질 대통령(왼쪽)과 밀레이 아르헨티나 대통령 베네수엘라에서 아르헨티나의 외교·영사 이해관계를 대리해 온 브라질이 해당 역할을 중단하기로 했습니다.\n\n아르헨티나 언론에 따르면 브라질 정부는 베네수엘라 카라카스에서 수행해 온 아르헨티나 외교·영사 대리 업무를 더 이상 맡지 않기로 결정했고, 이 역할은 이탈리아가 넘겨받게 됐습니다.\n\n브라질은 지난해 베네수엘라 정부가 마두로 대통령의 재선 결과를 인정하지 않은 아르헨티나의 외교관들을 추방한 이후 아르헨티나의 이해관계를 대리하며 양국 간 외교적 완충 역할을 해왔습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661876971795255512/000-b88f3508919edd74c9819559ddd32bc8362556af.jpg"
+        },
+        {
+          "sessionId": 2,
+          "headline": "미국, 베네수 체류 자국민에 즉시출국 권고…\"민병대 활동\"",
+          "publishedAt": "2026-01-11T15:47:00",
+          "publisher": "노컷뉴스",
+          "sourceUrl": "https://www.nocutnews.co.kr/news/6454445?utm_medium=article&utm_campaign=20260111034648",
+          "summary": "\"친 마두로 무장 민병대가 검문소 설치하고 차량 수색\" 베네수 외교부 \"위험 인식 만드려는 조작된 정보\" 반박 미국 정부가 베네수엘라 내에서 반미 성향의 민병대가 활동하고 있다며 자국민에게 즉시 출국할 것을 권고했다.\n\n대사관은 \"'콜렉티보'라는 무장 민병대가 검문소를 설치하고 차량을 수색해 미 시민권이나 미국 지지 증거를 확인한다는 보고가 있다\"며 \"도로를 이용할 때 경계를 늦추지 말고 각별히 주의하라\"고 경고했다.\n\n앞서 지난 3일 미국은 베네수엘라에 특수부대를 투입해 카라카스 안전가옥에 있던 니콜라스 마두로 베네수엘라 대통령 부부를 체포했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661866364337525204/000-1c406aa5f8849715dabd38bea8fe68e62b80c431.jpg"
+        },
+        {
+          "sessionId": 3,
+          "headline": "미국무부, 베네수엘라의 미국민들에 \"전원 즉각 철수\" 경고",
+          "publishedAt": "2026-01-11T10:12:00",
+          "publisher": "뉴시스",
+          "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472345",
+          "summary": "\"마두로 체포, 미국이송 후 더 위험한 상황 \"에 대비 경고 최고 4급의 \" 여행금지\"..테러 납치 살해 위험 [서울=뉴시스] 차미례 기자 = 미국 국무부 영사국이 10일(현지시간) 베네수엘라의 미국민들을 향해서 \"모든 베네수엘라 주재 미국인들 전원이 즉시 이 나라를 떠나야 한다\"고 경고했다.\n\n최근 미국 트럼프 정부는 1월 3일 새벽에 베네수엘라에서 대규모 군사 작전을 시작했고 니콜라스 마두로 대통령 내외를 강제로 체포해서 미국으로 이송했다.\n\n도널드 트럼프 미국 대통령이 베네수엘라 공습 및 니콜라스 마두로 대통령 체포 사실을 밝힌 이후로 미 국무부는 베네수엘라 내 미국인들에게 \"실내 대기\" 등 안전한 곳에 머무를 것을 권고했다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661782424566239684/000-ab3562d1436146f9c6dc4f3319cea88b94b3f52f.jpg"
+        },
+        {
+          "sessionId": 4,
+          "headline": "불의의 습격 당한 멕시코...트럼프 '지상 타격' 경고에 날벼락",
+          "publishedAt": "2026-01-11T09:49:00",
+          "publisher": "YTN",
+          "sourceUrl": "https://www.ytn.co.kr/_ln/0134_202601110949195494",
+          "summary": "클라우디아 셰인바움 멕시코 대통령이 마약 밀매 카르텔을 겨냥한 도널드 트럼프 미국 대통령의 군사작전 시사 발언에, 대화와 소통으로 안보 협력을 강화하겠다고 밝혔습니다.\n\n앞서 트럼프 대통령은 폭스뉴스 인터뷰에서 \"이제 카르텔과 관련해 지상 공격을 시작할 것\"이라며 \"카르텔이 멕시코를 운영하고 있다\"고 말했습니다.\n\n이를 두고 외신들은 베네수엘라 군사작전을 계기로 미국으로 마약을 밀반입하는 것으로 지목된 멕시코 카르텔의 지상 목표물까지 타격 범위를 확대할 수 있음을 암시하는 발언이라고 해석했습니다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661787483744113098/000-87107602b412800560fbd60c23add34e4e3aae9c.jpg"
+        },
+        {
+          "sessionId": 5,
+          "headline": "노벨위 “노벨상 나눠가질수 없다”…마차도 ‘트럼프 공유’ 불허",
+          "publishedAt": "2026-01-11T09:06:00",
+          "publisher": "디지털타임스",
+          "sourceUrl": "https://www.dt.co.kr/article/12039823",
+          "summary": "베네수엘라의 야권 지도자 마리아 코리나 마차도가 자신이 받은 노벨평화상을 도널드 트럼프 미국 대통령과 나누고 싶다고 발언한 데 대해 노벨위원회가 불허한다는 입장을 밝혔다.\n\n앞서 마차도는 지난 5일 폭스뉴스 인터뷰에서 트럼프 대통령에게 노벨평화상을 주는 것은 니콜라스 마두로 대통령 축출에 대한 베네수엘라 국민의 감사 표시가 될 것이라고 말했다.\n\n일각에서는 트럼프 대통령이 베네수엘라 차기 지도자로 마차도를 지지하지 않는 이유는 그가 노벨평화상 수상자이기 때문이라는 주장까지 나왔다.",
+          "thumbnailUrl": "https://ddi-cdn.deepsearch.com/news_thumbnail/world/2026/01/11/1661765721161601164/000-9fe54c0dc9348870ca42b585cb53c3b6a861ebe4.jpg"
+        }
+      ]
+    }
+  ]
+}

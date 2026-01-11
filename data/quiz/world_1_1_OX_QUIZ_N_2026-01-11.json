@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "이란의 페제쉬키안 대통령은 반정부 시위가 보름째 계속되고 있다고 말했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "페제쉬키안 대통령은 반정부 시위가 보름째 계속되고 있다고 언급했다.",
+      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+    },
+    {
+      "contentId": 2,
+      "question": "페제쉬키안 대통령은 시위자들의 주장을 무시하겠다고 말했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "대통령은 시위자들의 주장을 경청하겠다고 밝혔다.",
+      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+    },
+    {
+      "contentId": 3,
+      "question": "페제쉬키안 대통령은 폭도들이 사회를 보호해야 한다고 강조했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "대통령은 폭도들이 사회를 파괴하려 한다고 경고했다.",
+      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+    },
+    {
+      "contentId": 4,
+      "question": "페제쉬키안 대통령은 관리들이 폭도들의 행동을 용납하지 말아야 한다고 말했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "대통령은 관리들의 의무로 폭도들의 행동을 용납하지 말아야 한다고 강조했다.",
+      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+    },
+    {
+      "contentId": 5,
+      "question": "페제쉬키안 대통령은 시위가 악화되면서 온건한 입장을 유지하고 있다.",
+      "correctAnswer": "X",
+      "answerExplanation": "대통령은 시위 사태가 악화되면서 강경한 쪽으로 돌아선 신호를 보였다.",
+      "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+    }
+  ]
+}

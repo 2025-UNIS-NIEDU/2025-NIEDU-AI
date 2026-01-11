@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "서왕진 원내대표는 정치개혁이 구태 정치를 일소할 유일한 길이라고 말했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "서왕진 원내대표는 정치개혁이 구태 정치를 일소할 유일한 길이라고 언급했다.",
+      "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+    },
+    {
+      "contentId": 2,
+      "question": "서왕진 원내대표는 정치개혁이 필요하지 않다고 말했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "서왕진 원내대표는 정치개혁의 필요성을 강조했다.",
+      "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+    },
+    {
+      "contentId": 3,
+      "question": "서왕진 원내대표는 '돈공천 추방 4법'이 아닌 다른 대안을 제안했다.",
+      "correctAnswer": "X",
+      "answerExplanation": "서왕진 원내대표는 '돈공천 추방 4법'을 제안했다.",
+      "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+    },
+    {
+      "contentId": 4,
+      "question": "서왕진 원내대표는 정치개혁 구상과 향후 활동 방향을 발표했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "서왕진 원내대표는 정치개혁 구상과 향후 활동 방향을 발표했다.",
+      "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+    },
+    {
+      "contentId": 5,
+      "question": "서왕진 원내대표는 여당의 새 원내사령탑이 정치개혁을 추진해야 한다고 주장했다.",
+      "correctAnswer": "O",
+      "answerExplanation": "서왕진 원내대표는 여당의 새 원내사령탑의 막중한 과업으로 정치개혁을 언급했다.",
+      "sourceUrl": "https://biz.heraldcorp.com/article/10653080"
+    }
+  ]
+}

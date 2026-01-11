@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "I",
+    "contents": [
+      {
+        "summary": "2023년 11월 11일, 서왕진 조국혁신당 원내대표와 공동위원장들이 국회 소통관에서 기자회견을 열었다. 서왕진 원내대표는 여당의 새 원내사령탑에게 위기를 극복하고 민생의 희망을 일궈야 한다고 강조하며, 정치개혁이 '돈공천' 등 구태 정치를 없앨 유일한 방법이라고 말했다. 그는 조국혁신당이 제안한 '3~5인 중대선거구제'와 '돈공천 추방 4법'이 정치개혁특별위원회에서 중요하게 논의되기를 바란다고 덧붙였다.",
+        "keywords": [
+          {
+            "word": "서왕진",
+            "isTopicWord": true
+          },
+          {
+            "word": "정치개혁",
+            "isTopicWord": true
+          },
+          {
+            "word": "여당",
+            "isTopicWord": false
+          },
+          {
+            "word": "위기",
+            "isTopicWord": false
+          },
+          {
+            "word": "위원장",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

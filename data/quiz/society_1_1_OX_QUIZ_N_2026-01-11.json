@@ -1,0 +1,41 @@
+{
+  "contentType": "OX_QUIZ",
+  "level": "N",
+  "contents": [
+    {
+      "contentId": 1,
+      "question": "더불어민주당 전남도당은 오는 12일 오전 10시에 회의를 연다.",
+      "correctAnswer": "O",
+      "answerExplanation": "전남도당은 12일 오전 10시에 회의를 연다고 밝혔다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+    },
+    {
+      "contentId": 2,
+      "question": "전남·광주 통합 추진은 단순한 행정구역 개편이다.",
+      "correctAnswer": "X",
+      "answerExplanation": "전남·광주 통합은 단순한 행정구역 개편이 아니라고 명시되었다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+    },
+    {
+      "contentId": 3,
+      "question": "전남도당은 통합 추진에 대한 공식 입장을 확정하지 않을 예정이다.",
+      "correctAnswer": "X",
+      "answerExplanation": "전남도당은 통합 추진에 대한 공식 입장을 확정할 방침이다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+    },
+    {
+      "contentId": 4,
+      "question": "상무위원회의 직후에는 '전남·광주 통합 결의대회'가 열린다.",
+      "correctAnswer": "O",
+      "answerExplanation": "상무위원회의 직후에 통합 결의대회가 열린다고 밝혔다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+    },
+    {
+      "contentId": 5,
+      "question": "전남·광주 통합 추진은 인구 증가와 산업 발전을 위한 것이다.",
+      "correctAnswer": "X",
+      "answerExplanation": "통합 추진은 인구 감소와 산업 정체 극복을 위한 전략적 선택이다.",
+      "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+    }
+  ]
+}

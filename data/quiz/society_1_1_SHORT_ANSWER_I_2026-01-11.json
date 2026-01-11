@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "전라남도당이 개최할 예정인 회의의 명칭은 무엇인가?",
+        "correctAnswer": "상무위원회",
+        "answerExplanation": "전라남도당은 제2차 상무위원회를 개최할 예정이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "2",
+        "question": "전라남도와 광주광역시의 통합을 추진하는 이유는 무엇인가?",
+        "correctAnswer": "구조적 위기",
+        "answerExplanation": "통합은 인구 감소와 산업 정체 등 구조적 위기를 극복하기 위한 전략적 선택으로 규정된다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "3",
+        "question": "전라남도당이 통합 추진의 필요성을 전달할 자리의 명칭은 무엇인가?",
+        "correctAnswer": "결의대회",
+        "answerExplanation": "회의 직후 통합 결의대회를 열어 통합 추진의 필요성을 전달할 예정이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "4",
+        "question": "전라남도당이 통합을 규정하는 방식은 무엇인가?",
+        "correctAnswer": "전략적 선택",
+        "answerExplanation": "전라남도와 광주광역시의 통합은 전략적 선택으로 규정할 계획이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      },
+      {
+        "contentId": "5",
+        "question": "전라남도당이 통합 추진의 필요성을 전달할 대상은 누구인가?",
+        "correctAnswer": "도민",
+        "answerExplanation": "통합 추진의 필요성과 원칙을 도민과 당원들에게 공식적으로 전달할 예정이다.",
+        "sourceUrl": "https://www.nocutnews.co.kr/news/6454499?utm_medium=article&utm_campaign=20260111091751"
+      }
+    ]
+  }
+]

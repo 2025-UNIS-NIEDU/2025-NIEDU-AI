@@ -1,0 +1,23 @@
+{
+  "contentType": "SENTENCE_COMPLETION",
+  "level": "E",
+  "contents": [
+    [
+      {
+        "contentId": "1",
+        "question": "더불어민주당 전남도당은 오는 12일 제2차 상무위원회의에서 ______",
+        "referenceAnswer": "전남·광주 통합 추진에 대한 당론을 의결할 예정이다."
+      },
+      {
+        "contentId": "2",
+        "question": "전남도당은 전남·광주 통합을 구조적 위기를 극복하기 위한 ______",
+        "referenceAnswer": "'호남 대전환의 전략적 선택'으로 규정하고 있다."
+      },
+      {
+        "contentId": "3",
+        "question": "상무위원회의 직후에는 통합 추진의 필요성을 공식적으로 ______",
+        "referenceAnswer": "도민과 당원들에게 밝힐 계획이다."
+      }
+    ]
+  ]
+}

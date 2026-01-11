@@ -1,0 +1,134 @@
+[
+  {
+    "contentType": "MULTIPLE_CHOICE",
+    "level": "N",
+    "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "이란의 마수드 페제쉬키안 대통령은 시위자들의 주장을 어떻게 하겠다고 했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "경청할 것"
+          },
+          {
+            "label": "B",
+            "text": "무시할 것"
+          },
+          {
+            "label": "C",
+            "text": "처벌할 것"
+          },
+          {
+            "label": "D",
+            "text": "지원할 것"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령은 시위자들의 주장을 경청할 것이라고 말했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "2",
+        "question": "마수드 페제쉬키안 대통령은 시위자들을 어떻게 표현했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "폭도들"
+          },
+          {
+            "label": "B",
+            "text": "평화로운 시민"
+          },
+          {
+            "label": "C",
+            "text": "경제적 파트너"
+          },
+          {
+            "label": "D",
+            "text": "정치적 동맹"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령은 시위자들을 '폭도들'이라고 표현했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "3",
+        "question": "마수드 페제쉬키안 대통령의 발언은 어떤 신호를 나타냈는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "강경한 입장"
+          },
+          {
+            "label": "B",
+            "text": "무관심한 입장"
+          },
+          {
+            "label": "C",
+            "text": "온건한 입장"
+          },
+          {
+            "label": "D",
+            "text": "중립적 입장"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령의 발언은 강경한 쪽으로 돌아선 신호를 나타냈다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "4",
+        "question": "마수드 페제쉬키안 대통령은 관리들의 의무에 대해 무엇을 강조했는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "사회 파괴 용납 불가"
+          },
+          {
+            "label": "B",
+            "text": "국제 협력"
+          },
+          {
+            "label": "C",
+            "text": "경제 발전"
+          },
+          {
+            "label": "D",
+            "text": "시위자 지원"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "대통령은 사회 전체를 파괴하려는 것을 용납하지 않는 것이 관리들의 의무라고 강조했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "5",
+        "question": "이란에서 반정부 시위는 며칠째 계속되고 있는가?",
+        "options": [
+          {
+            "label": "A",
+            "text": "보름째"
+          },
+          {
+            "label": "B",
+            "text": "한 달째"
+          },
+          {
+            "label": "C",
+            "text": "이틀째"
+          },
+          {
+            "label": "D",
+            "text": "일주일째"
+          }
+        ],
+        "correctAnswer": "A",
+        "answerExplanation": "반정부 시위는 보름째 계속되고 있다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      }
+    ]
+  }
+]

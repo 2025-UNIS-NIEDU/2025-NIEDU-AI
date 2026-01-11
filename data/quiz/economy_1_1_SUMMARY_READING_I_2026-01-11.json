@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "I",
+    "contents": [
+      {
+        "summary": "쿠팡파이낸셜은 연평균 금리가 14.1%인 ‘판매자 성장 대출’을 출시한 지 반년 만에 누적 대출액 약 182억원을 기록하였다. 반면 경쟁업체인 네이버파이낸셜은 입점 사업자를 위해 세 가지 대출 상품을 제공하며 연평균 금리를 3.94%에서 12.4%로 설정하였다. 강민국 의원은 쿠팡이 신용등급이 낮은 자영업자에게 높은 금리를 적용하고 있다고 주장하며, 금융감독원이 쿠팡파이낸셜의 법 위반 여부를 철저히 검사해야 한다고 밝혔다.",
+        "keywords": [
+          {
+            "word": "강민국 의원",
+            "isTopicWord": true
+          },
+          {
+            "word": "판매자 성장 대출",
+            "isTopicWord": true
+          },
+          {
+            "word": "금리",
+            "isTopicWord": false
+          },
+          {
+            "word": "금융감독원",
+            "isTopicWord": false
+          },
+          {
+            "word": "신용등급",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]

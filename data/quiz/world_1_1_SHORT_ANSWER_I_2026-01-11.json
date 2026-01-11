@@ -1,0 +1,44 @@
+[
+  {
+    "contentType": "SHORT_ANSWER",
+    "level": "I",
+    "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627",
+    "contents": [
+      {
+        "contentId": "1",
+        "question": "이란의 대통령은 누구인가?",
+        "correctAnswer": "마수드 페제쉬키안",
+        "answerExplanation": "2023년 11월 11일, 이란의 마수드 페제쉬키안 대통령은 반정부 시위에 대해 언급했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "2",
+        "question": "이란에서 15일째 이어지고 있는 시위는 무엇인가?",
+        "correctAnswer": "반정부 시위",
+        "answerExplanation": "반정부 시위가 15일째 이어지는 가운데, 대통령이 시위자들의 주장에 대해 언급했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "3",
+        "question": "마수드 페제쉬키안 대통령이 경고한 사회적 행위는 무엇인가?",
+        "correctAnswer": "사회 파괴",
+        "answerExplanation": "대통령은 '폭도들이 전체 사회를 파괴하려고 시도하고 있다'고 경고했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "4",
+        "question": "대통령이 시위자들의 주장을 어떻게 하겠다고 했는가?",
+        "correctAnswer": "경청",
+        "answerExplanation": "대통령은 정부 관리들이 시위자들의 주장을 경청할 것이라고 말했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      },
+      {
+        "contentId": "5",
+        "question": "대통령이 강조한 정부 관리들의 태도는 무엇인가?",
+        "correctAnswer": "강경한 입장",
+        "answerExplanation": "대통령은 관리들이 사회의 파괴 행위를 용납하지 말아야 한다고 강조했다.",
+        "sourceUrl": "https://www.newsis.com/view/NISX20260111_0003472627"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "contentType": "SUMMARY_READING",
+    "level": "E",
+    "contents": [
+      {
+        "summary": "2023년 11월 11일, 이란의 마수드 페제쉬키안 대통령은 반정부 시위가 15일째 이어지는 가운데, 정부 관리들이 시위자들의 주장을 경청할 것이라고 말했다. 그러나 그는 '폭도들이 전체 사회를 파괴하려고 시도하고 있다'고 경고하며 강경한 입장을 밝혔다. 이어서 그는 관리들이 사회의 파괴 행위를 용납하지 말아야 한다고 강조했다.",
+        "keywords": [
+          {
+            "word": "마수드 페제쉬키안",
+            "isTopicWord": true
+          },
+          {
+            "word": "반정부 시위",
+            "isTopicWord": true
+          },
+          {
+            "word": "이란",
+            "isTopicWord": false
+          },
+          {
+            "word": "정부",
+            "isTopicWord": false
+          },
+          {
+            "word": "관리",
+            "isTopicWord": false
+          }
+        ]
+      }
+    ]
+  }
+]
